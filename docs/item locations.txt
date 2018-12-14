@@ -1,0 +1,276 @@
+---------------------------
+- 3-02  Upgrade Locations -
+---------------------------
+
+** LIFE CAPSULES **
+These will give a set Max HP boost, between 3 and 5, depending on the capsule.
+You will have 50 life if you find them all, 55 if you include the bonus
+capsule.  Some of these are possible to miss.
+
+ - First Cave: In plain sight as you descend toward the Polar Star, on the left
+wall.  +3 HP.
+
+ - Mimiga Village: Found in Yamanshita Farm on the top of Mimiga Village.  Head
+to the far right, it's in the small pool.  +3 HP.
+
+ - Egg Corridor: At the very beginning, you have to drop down to the left just
+as the Basil spark hits the wall then chase it so it extends its loop length.
++3 HP.
+
+ - Egg Corridor: Go through Cthulhu's Abode and out the top door.  Jump left.
++4 HP.
+
+ - Bushlands: Just past where you found Santa's Key, go east to a set of two
+horizontal rows of star blocks, jump on them and to the left.  +5 HP.
+
+ - Bushlands: In the Execution Chamber, the tall building with the skull on it
+to the right of Kazuma's shack.  +5 HP.
+
+ - Sand Zone: East of Curly's House and past the Sun Stones, it's in the top of
+the first thick pillar made up of star blocks.  Try not to blow up all the star
+blocks when fighting the Polishes to create a path and reach it.  +5 HP.
+
+ - Sand Zone: At the end of the hidden path behind a pawpad block on the far
+right wall between the Sun Stones and Jenka's house, behind a line of star
+blocks.  Found next to a chest containing one of Jenka's dogs.  +5 HP.
+
+ - Labyrinth: Nestled next to the left wall of the first room of the labyrinth
+when you're sent there, a ways up into the room.  +5 HP.
+
+ - Plantation: Sitting on a platform hanging from the far upper-left ceiling.
++4 HP.
+
+ - Plantation: Talk to the puppy that appears on the left platform just under
+the red skull signs on the top right section of the Plantation after Momorin's
+finished the rocket.  +5 HP.
+
+ - Sanctuary: Bonus life capsule.  Found in plain sight as you make your
+initial descent.  +5 HP.
+
+
+** MISSILE EXPANSIONS **
+These each give +5 Max Missile Launcher Ammo.  Your max ammo carries over to
+the Super Missile Launcher.  You'll have 30 missile ammo if you find them all,
+54(!!) with the bonus.
+
+ - Bushlands: To the left of the hut in the air above the shack where Kazuma's
+trapped.  Jump around the series of platforms around where the Save Point is
+between the Power Supply Room and Kazuma's shack to reach it.
+
+ - Bushlands: Inside the very hut that the previous expansion's sitting next
+to.  Opening it will trigger a fight with Kulala.
+
+ - Egg Corridor?: When you go back to the Egg Corridor later in the game,
+you'll find the eggs have hatched.  The dragon where Egg 12 used to be is quite
+pissed and will fervently guard the chest containing this expansion.
+
+ - Egg Corridor?: In the ruins of the Egg observation Room, in plain sight.
+Opening it will trigger a fight with The Sisters.
+
+ - Sanctuary: Bonus expansion.  Just before you fight the Heavy Press at the
+far west end of Blood-Stained Sanctuary B3, just past the pillar with 3 Deletes
+covering it, in the room filled with flying Butes and with a hanging platform
+with an arrow Bute on either side.  Above this platform is a single Star Block
+concealing a chest containing this massive expansion of 24 Misisles.
+
+
+
+
+
+** KEY ITEMS **
+
+ - Map System
+Allows you to press the - Button on the Wii Remote to bring up a map of the
+room you're in.  The map is tiny, doesn't show your current position and has a
+strange graphical glitch that makes the rightmost section of mose large areas
+unviewable, so it's of very little use except collectibility.
+
+ - Silver Locket
+An item found in the fishing hole to the west of Mimiga Village.  It triggers
+an event in the warehouse at the bottom right of the village.
+
+ - Arthur's Key
+Found at Arthur's grave in the Cemetary.  Use it to access Arthur's house, at
+the bottom-left of Mimiga Village.
+
+ - ID Card
+Found in Egg #06 in the Egg Corridor.  Use it in Egg #01 to open the barrier to
+the eastern edge of the Corridor.
+
+ - Santa's Key
+The key to Santa's house that he dropped to the east in the Bushlands.
+
+ - Rusty Key
+A key Kazuma found in the room he's stuck in.  Gives access to the Power
+Control Room in the Bushlands.
+
+ - Gum Key
+Another key conviniently located in Kazuma's captivity room.  It opens up the
+gum room in the very upper-right corner of the Bushlands.
+
+ - Jellyfish Juice
+A jar full of juice that you can find by defeating the huge jellyfish stuck in
+the ceiling a bit east of Santa's house that only appears after talking to
+Chako.  Use it to put out fireplace fires; it's also one of three components
+needed to create a bomb.  It's the only Key Item you can receive more than
+once, but you may only carry one at a time.
+
+ - Chako's Rouge
+Some red lipstick.  Obtained by examining Chako's fireplace before you obtain
+Jellyfish Jelly, causing her to walk up to you and explain some things, and
+then sleeping in her bed while she's standing there.  It has no use, other than
+proof that you really, really, REALLY like Mimigas, you scoundrel.
+
+ - Charcoal
+A lump of charcoal found by putting out the fireplace in Santa's house.  It's
+one of three components needed to create a bomb.
+
+ - Gum Base
+A stick of chewing gum found in the room in the very top-right corner of the
+Bushlands.  It's one of three components needed to create a bomb.
+
+ - Bomb
+A bomb crafted by Malco, in the Power Generator Room of the Bushlands.  Use it
+to blow open the door of the building Kazuma's trapped inside.
+
+ - Curly's Panties
+Found in a hidden alcove behind the wall in the bedroom of Curly Brace's house
+in the Sand Zone.  They have no use, other than proof that you really, really,
+REALLY like robots.  If you own both this and Chako's Rouge, you are officially
+the most envied man in Cave Story!  Okay, I made that up.
+
+ - Hajime
+A dog that stays in Curly Brace's bedroom in the Sand Zone.  One of Jenka's
+five missing dogs.  He's the leader of the bunch.. or so he claims.
+Arf!
+
+ - Mick
+One of Jenka's dogs.  He's supposedly an adept treasure hunter, and loves to
+sleep in treasure chests.  What he does with the contents is anyone's guess.
+Found in a chest at the end of a hidden path between the Sun Stones and Jenka's
+house.
+Woof woof!
+
+ - Shinobu
+Another of Jenka's dogs.  He has poor vision so he prefers to stay in dark
+places.  Found in an abandoned house at the end of a hidden road that begins in
+a false ceiling along the path to the Sand Zone warehouse.
+Bow wow wow!
+
+ - Kakeru
+Yet another dog of Jenka's.  He loves bones and has buried them all over the
+place.  You can find him at the end of the sand-bottomed section of the path
+toward the Sand Zone warehouse.
+Woof woof woof woof!
+
+ - Nene
+A beautiful dog, the only female of the group.  She sleeps all the time, and
+can be found taking one of her long naps at the very end of the lower path of
+the Sand Zone, right next to the warehouse.
+Wan...
+
+ - Life Pot
+Restores all of your HP when used.  It can only be used once, and there are
+only two in the entire game, so use wisely!
+
+ - Turbocharge
+If you chose to take the Machine Gun from Curly in the Sand Zone, then you can
+receive this for free from the Gaudi shopkeeper, Chaba, in the Labyrinth.  It
+speeds up the recovery rate of ammo for the Machine Gun.
+
+ - Clinic Key
+Opens the door to the Labyrinth Clinic, the building with the cross above it
+up and west from the Camp.  Obtained from Dr. Gero, the physician in the Camp.
+
+ - Arms Barrier
+Halves weapon EXP lost when you take damage.  Found the top part of the Camp,
+accessible via a hidden passageway in the ceiling in the large Labyrinth room
+from which you can access the normal Camp entrance and the Clinic nearby.
+Unless you took the Machine Gun, you'll have to come back to this area with the
+Booster to be able to reach it.
+
+ - Cure-All
+A pill found in the abandoned Clinic in the Labyrinth.  It supposedly has the
+ability to cure anything.  Give it to the Physician in the Labyrinth Camp.
+
+ - Booster v0.8
+A jetpack that can be equipped and unequipped from the inventory menu.  Once
+it's equipped, press and hold Jump while airborne to launch upward for a few
+moments.  Can only be used once in the air until you hit the ground again.
+Received in the Labyrinth, past the Clinic and Camp.
+
+ - Booster v2.0
+A powerful jetpack that allows you to move freely for a time at high speeds in
+midair if you press the jump button.  If you want this instead of the Booster
+v0.8, jump over the large gap in the Labyrinth room where Professor Booster
+falls down by leaping just at the red marker on the ground.  It's required if
+you wish to access the hidden, super-difficult Sanctuary area at the end of the
+game, but you may want to go for the normal ending with Booster v0.8 first.
+
+ - Tow Rope
+A tow cable found in the far lower-right corner of The Core (only appears if
+you didn't take the Booster v0.8).  It was used by the robots who came to the
+island years ago to carry downed comrades.
+
+ - Curly's Air Tank
+Given to you by Curly Brace after the events at the Core.  With it, you're
+automatically encased in a bubble whenever you enter water, giving you infinite
+air.
+
+ - Alien Medal
+Reward for defeating Ironhead (the boss of the Waterway) without taking any
+damage.  It's engraved with an image of Ikachan, the hero of a game named after
+himself that was Studio Pixel's previous work before Cave STory.
+
+ - Whimsical Star
+A trinket that you can receive from Chaba, the Gaudi shopkeep in the Labyrinth,
+if you talk to him with the Spur weapon in your posession.  It will cause small
+stars to float around you as a meagre shield when you charge the Spur to MAX.
+
+ - Teleporter Room Key
+This key is visible but unobtainable behind a cluster of instant-death spikes
+in the pools at the bottom of the Plantation.  You'll need to talk to Kanpachi,
+the fishing Mimiga, to help you get it.  Use it to unlock the room just west of
+where it was fished up.
+
+ - Sue's Letter
+You'll find this stuffed in your inventory after you wake up inside the jail.
+It's a leeter from Sue explaining a lot of what's been going on as far as the
+story that you've had to just piece together by this point.  It also contains
+the password to enter the Safe House on the Plantation.
+
+ - Mimiga Mask
+A head covering that looks just like a Mimiga.  Wearing it will allow you to
+speak to the Mimiga in the Plantation who aren't allowed to speak with humans.
+
+ - Broken Sprinkler
+A broken water sprinkler from the Plantation.  Useless by itself, but can be
+traded to Megane in the Plantation Rest Area.
+
+ - Sprinkler
+It's new... isn't it?  This can be taken back to Momorin in the Plantation Safe
+House to help complete her rocket.
+
+ - Controller
+A technologically impressive device that could only have been made by a master
+technician.  Too bad he's a big fat coward.  Obtained from Itoh after giving
+Momorin the Sprinkler.
+
+ - Mushroom Badge
+Useless item given to you by Ma Pignon in hopes you'll leave him alone.  I hope
+you know how to answer his questions correctly even if you want this garbage.
+
+ - Ma Pignon
+Mystical, ultra-rare mushroom that's said to restore people's memories.  Has a
+smart-aleck personality and is known to be a surprisingly potent combatant, as
+well.  Found in the small storage room above the Mimiga Cemetar.
+
+ - Mister Little
+This guy's very, very hard to see and has gotten himself very, very lost.  At
+the end of the game, you can find him wandering around the Mimiga Cemetary.
+It's said he is the proud owner of the world's most splendid gun.  Has a
+fascination with fine blades.
+
+ - Medal of the Red Ogre (aka Clay Figure Medal)
+Proof of the warrior who's finally able to put an end to the Red Ogre.  It's
+extremely heavy despite its size.
