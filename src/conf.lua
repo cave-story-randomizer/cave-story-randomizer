@@ -19,23 +19,22 @@ function love.conf(t)
   t.accelerometerjoystick = false
   t.gammacorrect = false
 
-  -- t.releases = {
-  --   -- This is the name of the zip archive which contains your game.
-  --   title = 'Cave Story Randomizer',
-  --   -- This is the name of your game's executable.
-  --   package = 'Cave Story Randomizer',
-  --   loveVersion = '11.1',
-  --   version = nil,
-  --   author = 'shru',
-  --   email = nil,
-  --   description = nil,
-  --   homepage = 'https://shru.itch.io/cave-story-randomizer',
-  --   -- MacOS needs this.
-  --   identifier = 'CaveStoryRandomizer',
-  --   excludeFileList = {
-  --     -- '.+%.ase',
-  --   },
-  --   compile = false,
-  --   releaseDirectory = 'releases',
-  -- }
+  t.releases = {
+    -- This is the name of the zip archive which contains your game.
+    title = 'Cave Story Randomizer',
+    -- This is the name of your game's executable.
+    package = 'Cave Story Randomizer',
+    loveVersion = '11.1',
+    version = nil,
+    author = 'shru',
+    email = nil,
+    description = nil,
+    homepage = 'https://shru.itch.io/cave-story-randomizer',
+    -- MacOS needs this.
+    identifier = 'CaveStoryRandomizer',
+    excludeFileList = {
+    },
+    compile = false,
+    releaseDirectory = 'releases',
+  }
 end
