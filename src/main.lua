@@ -20,26 +20,6 @@ function logNotice(...)  _log(3, 'NOTICE: ',  ...) end
 function logInfo(...)    _log(4, 'INFO: ',    ...) end
 function logDebug(...)   _log(5, 'DEBUG: ',   ...) end
 
-local ITEM_DATA = {
-  -- Weapons
-  wPolar = {
-    name = "Polar Star",
-    map = "Pole",
-    getText = "Got the =Polar Star=!",
-    command = "<AM+0002:0000",
-    displayCmd = "<GIT0002",
-  },
-  -- Items
-  iPanties = {
-    name = "Curly's Panties",
-    map = "CurlyS",
-    -- getText = "Found =Curly's Underwear=.",
-    getText = "Found =Curly's Panties=.",
-    command = "<IT+0035",
-    displayCmd = "<GIT1035",
-  },
-}
-
 local TSC_FILES = {
   'Pole.tsc',
 }
@@ -69,6 +49,11 @@ function love.directorydropped(path)
     -- decoded = stringReplace(decoded, ITEM_DATA.wPolar.getText, ITEM_DATA.iPanties.getText)
     -- decoded = stringReplace(decoded, ITEM_DATA.wPolar.displayCmd, ITEM_DATA.iPanties.displayCmd)
   end
+
+  local ItemDeck = require 'item_deck'
+  local itemDeck = ItemDeck()
+  print(Serpent.line(itemDeck:getWeapon()))
+  print(Serpent.line(itemDeck:getAny()))
 
   tscFiles['Pole.tsc']:writeTo('Testing.tsc')
 
