@@ -1,0 +1,34 @@
+image: shru/arch-love-release:heavy
+
+variables:
+  ITCHIO_USER: shru
+  ITCHIO_GAME: cave-story-randomizer
+  CHANNEL: $CI_COMMIT_REF_NAME
+
+stages:
+  - build
+
+build-depoy:
+  stage: build
+  script:
+    # I. Build
+    - cd src
+    # Overwrite dev.lua with prod.lua
+    - mv parameters/prod.lua parameters/dev.lua
+    # Remove excluded files, once love-release is fixed, this can be removed.
+    - find -name *.ase -delete
+    - love-release -W # -M (Skip MacOS for now, since broken after Love 11.)
+
+    # II. Release
+    - cd releases
+    - FILE=$(ls *-win64.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win64-$CHANNEL"
+    - FILE=$(ls *-win32.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win32-$CHANNEL"
+    # - FILE=$(ls *-macosx.zip) ; zip -ur "$FILE" "Cave Story Randomizer.app"  ;                                butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:osx-$CHANNEL"
+    # # Workaround for issue where butler renames *.love to *.zip.
+    # - FILE=$(ls *.love) ; mkdir love-file-dir ; mv "$FILE" love-file-dir
+    # - butler push love-file-dir "$ITCHIO_USER/$ITCHIO_GAME:linux-$CHANNEL"
+
+cache:
+  key: rocks
+  paths:
+    - src/rocks
