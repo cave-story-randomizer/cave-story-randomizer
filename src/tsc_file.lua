@@ -1,7 +1,11 @@
 local C = Class:extend()
 
--- local MODE_READ_BINARY = 'rb'
-local MODE_WRITE_BINARY = 'wb'
+-- https://www.lua.org/manual/5.1/manual.html#5.7
+-- w+: Update mode, all previous data is erased;
+-- b:  Binary mode, forces Windows to save with Unix endings.
+MODE_WRITE_ERASE_EXISTING = 'w+b'
+
+local ITEM_DATA = require 'database.items'
 
 function C:new(path)
   logInfo('reading TSC: ' .. path)
@@ -14,16 +18,61 @@ function C:new(path)
 
   assert(file:close())
   assert(file:release())
+
+  -- Determine set of items which can be replaced later.
+  self._unreplaced = {}
+  self._mapName = path:match("^.+/(.+)$")
+  for k, v in pairs(ITEM_DATA) do repeat
+    if (v.map .. '.tsc') ~= self._mapName then
+      break -- continue
+    end
+    local item = _.clone(v)
+    table.insert(self._unreplaced, item)
+  until true end
+  self._unreplaced = _.shuffle(self._unreplaced)
+end
+
+function C:hasUnreplacedItems()
+  return #self._unreplaced >= 1
+end
+
+local function _stringReplace(text, needle, replacement)
+  local i = text:find(needle, 1, true)
+  if i == nil then
+    logWarning(('Unable to replace "%s" with "%s"'):format(needle, replacement))
+    return text
+  end
+  local len = needle:len()
+  local j = i + len - 1
+  assert((i % 1 == 0) and (i > 0) and (i <= j), tostring(i))
+  assert((j % 1 == 0), tostring(j))
+  local a = text:sub(1, i - 1)
+  local b = text:sub(j + 1)
+  return a .. replacement .. b
+end
+
+function C:replaceItem(replacement)
+  assert(self:hasUnreplacedItems())
+  local original = table.remove(self._unreplaced)
+  self._text = _stringReplace(self._text, original.command, replacement.command)
+  self._text = _stringReplace(self._text, original.getText, replacement.getText)
+  self._text = _stringReplace(self._text, original.displayCmd, replacement.displayCmd)
+
+  local template = "[%s] %s -> %s"
+  logNotice(template:format(self._mapName, original.name, replacement.name))
 end
 
 function C:writeTo(path)
   local encoded = self:_codec(self._text, 'encode')
 
-  local tmpFile, err = io.open(path, MODE_WRITE_BINARY)
+  local filepath = lf.getSourceBaseDirectory() .. path
+  logInfo('writing TSC to: ' .. filepath)
+
+  local file, err = io.open(filepath, MODE_WRITE_ERASE_EXISTING)
   assert(err == nil, err)
-  tmpFile:write(encoded)
-  tmpFile:flush()
-  tmpFile:close()
+  file:write(encoded)
+  file:flush()
+  file:close()
 end
 
 function C:_codec(text, mode)
@@ -64,20 +113,6 @@ function C:_codec(text, mode)
   -- end
 
   return decoded
-end
-
-local function stringReplace(text, needle, replacement)
-  local i = text:find(needle, 1, true)
-  if i == nil then
-    return text
-  end
-  local len = needle:len()
-  local j = i + len - 1
-  assert((i % 1 == 0) and (i > 0) and (i <= j), tostring(i))
-  assert((j % 1 == 0), tostring(j))
-  local a = text:sub(1, i - 1)
-  local b = text:sub(j + 1)
-  return a .. replacement .. b
 end
 
 return C

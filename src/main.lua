@@ -1,5 +1,3 @@
-io.stdout:setvbuf("no")
-
 require 'lib.strict'
 
 Class   = require 'lib.classic'
@@ -8,7 +6,7 @@ Serpent = require 'lib.serpent'
 
 lf = love.filesystem
 
-local LOG_LEVEL = 5
+local LOG_LEVEL = 4
 local function _log(level, prefix, text, ...)
   if LOG_LEVEL >= level then
     print(prefix .. text, ...)
@@ -20,9 +18,16 @@ function logNotice(...)  _log(3, 'NOTICE: ',  ...) end
 function logInfo(...)    _log(4, 'INFO: ',    ...) end
 function logDebug(...)   _log(5, 'DEBUG: ',   ...) end
 
-local TSC_FILES = {
-  'Pole.tsc',
-}
+local TSC_FILES = {}
+do
+  local ITEM_DATA = require 'database.items'
+  for k, v in pairs(ITEM_DATA) do
+    local filename = v.map .. '.tsc'
+    if _.contains(TSC_FILES, filename) == false then
+      table.insert(TSC_FILES, filename)
+    end
+  end
+end
 
 -- function love.load()
 --   -- readPXM('Pole.pxm')
@@ -32,32 +37,42 @@ local TSC_FILES = {
 -- end
 
 function love.directorydropped(path)
-  -- Mount
-  assert(lf.mount(path, 'data'))
-  local items = lf.getDirectoryItems('/data')
+  -- Mount.
+  local mountPath = 'mounted-data'
+  assert(lf.mount(path, mountPath))
+  local items = lf.getDirectoryItems('/' .. mountPath)
   local containsStage = _.contains(items, 'Stage')
   assert(containsStage)
-  local dirStage = '/data/Stage'
+  local dirStage = '/' .. mountPath .. '/Stage'
 
   local tscFiles = {}
   for _, filename in ipairs(TSC_FILES) do
     local path = dirStage .. '/' .. filename
     local TscFile = require 'tsc_file'
     tscFiles[filename] = TscFile(path)
-
-    -- decoded = stringReplace(decoded, ITEM_DATA.wPolar.command, ITEM_DATA.iPanties.command)
-    -- decoded = stringReplace(decoded, ITEM_DATA.wPolar.getText, ITEM_DATA.iPanties.getText)
-    -- decoded = stringReplace(decoded, ITEM_DATA.wPolar.displayCmd, ITEM_DATA.iPanties.displayCmd)
   end
 
+  -- Create ItemDeck.
   local ItemDeck = require 'item_deck'
   local itemDeck = ItemDeck()
-  print(Serpent.line(itemDeck:getWeapon()))
-  print(Serpent.line(itemDeck:getAny()))
 
-  tscFiles['Pole.tsc']:writeTo('Testing.tsc')
+  -- Place random weapon in Hermit Gunsmith.
+  tscFiles['Pole.tsc']:replaceItem(itemDeck:getWeapon())
 
-  -- Unmount
+  -- Replace all items.
+  for _, tscFile in pairs(tscFiles) do
+    while tscFile:hasUnreplacedItems() do
+      tscFile:replaceItem(itemDeck:getAny())
+    end
+  end
+
+  -- Write modified files.
+  for filename, tscFile in pairs(tscFiles) do
+    local path = '/data/Stage/' .. filename
+    tscFile:writeTo(path)
+  end
+
+  -- Unmount.
   assert(lf.unmount(path))
 end
 
@@ -66,14 +81,3 @@ function love.keypressed(key)
     love.event.push('quit')
   end
 end
-
--- #0200
--- <KEY<FLJ1640:0201<FL+1640<SOU0022<CNP0200:0021:0000
--- <MSGOpened the chest.<NOD<GIT0002<AM+0002:0000<CLR
--- <CMU0010Got the =Polar Star=!<WAI0160<NOD<GIT0000<CLO<RMU
--- <MSG
--- From somewhere, a transmission...<FAO0004<NOD<TRA0018:0501:0002:0000
-
--- #0420
--- <KEY<DNP0420<MSG<GIT1035<IT+0035
--- Found Curly's Panties.<NOD<END
