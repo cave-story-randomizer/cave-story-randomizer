@@ -13,10 +13,6 @@ build-depoy:
   script:
     # I. Build
     - cd src
-    # Overwrite dev.lua with prod.lua
-    - mv parameters/prod.lua parameters/dev.lua
-    # Remove excluded files, once love-release is fixed, this can be removed.
-    - find -name *.ase -delete
     - love-release -W # -M (Skip MacOS for now, since broken after Love 11.)
 
     # II. Release
