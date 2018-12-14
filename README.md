@@ -1,2 +1,3 @@
-# cave-story-randomizer
+Cave Story Randomizer
+=====================
 

@@ -1,0 +1,557 @@
+Doukutsu Monogatari - TSC notes     (aka Cave Story)
+ by Kapow - 2006 April 24
+ additions by ShInInG PhAnToM - 2007 June 05
+ original: http://lotlot.net/misc/doukutsu/tsc.txt
+ updated: http://filespace.org/ShInInG_PhAnToM/TSC.TXT
+
+THANKS:
+  caveoholic and upthorn from gameflaws forums
+  robert vandiver, for unused TSC commands
+  supergodantman
+
+TSC COMMANDS   (@ = available but unused commands found through disassembly - currently untested)
+============
+<AE+         Arms Energy +          Refill ammo
+<AM+x:y      ArMs +                 Get weapon X, add Y to max ammo (just adds ammo if you have the weapon)
+<AM-x        ArMs -                 Lose weapon X
+<AMJx:y      ArMs Jump              Jump to event Y if you have weapon X
+<ANPx:y:z    Animate NPc            Animate npc X with method Y in direction Z [npc type determines Y values?]
+<BOAx        BOss Animate           Animate boss
+<BSLx        Boss [Script Load?]    Start a boss fight with npc X (npc flag 0200 must be set) (should work with anything that has HP)
+<CAT         [?]                  @ [same as SAT?]
+<CIL         Clear ILlustration     Clear illustration during credits (used after SIL)
+<CLO         CLOse                  Close the text box (used after MSG/MS2/MS3)
+<CLR         CLeaR                  Clear the text box (used after MSG/MS2/MS3)
+<CMPx:y:z    Change Map [P?]        Change map coords X:Y to tile Z
+<CMUx        Change MUsic           Change music to song X
+<CNPx:y:z    Change NPc             Change npc X to npc type Y with direction Z
+<CPS         Clear Prop. Sound      Stop propeller sound (used after SPS) (from helicopter cutscene after final battles)
+<CRE         CREdits                Roll credits
+<CSS         Clear Stream Sound     Stop stream sound (used after SSS) (from River area)
+<DNAx        [?]                    [something to do with bosses]
+<DNPx        Delete NPc             Npc X is removed completely
+<ECJx:y      [EC?] Jump           @ Jump to event Y if any npc with ID X is present
+<END         END                    End scripted event
+<EQ+x        EQuip +                Add X to equip flag bytes
+<EQ-x        EQuip -                Subtract X from equip flag bytes
+<ESC         ESCape                 Quit to title screen
+<EVEx        EVEnt                  Jump to event X (non-conditional)
+<FACx        FACe                   Show face X in text box
+<FAIx        FAde In                Fade in with direction X
+<FAOx        FAde Out               Fade out with direction X
+<FL+x        FLag +                 Set flag X
+<FL-x        FLag -                 Clear flag X
+<FLA         FLAsh                  Flash the screen
+<FLJx:y      FLag Jump              Jump to event Y if flag X is set
+<FMU         Fade MUsic             Fade the music to a low volume (good to use before CMU)
+<FOBx:y      Focus On Boss          [Focus view on boss X? why not use FON?], view movement takes Y ticks
+<FOMx        Focus On Me            Focus view on you (normal view), view movement takes X ticks (WARNING: speed 0000 crashes)
+<FONx:y      Focus On Npc           Focus view on npc X, view movement takes Y ticks
+<FRE         FREe                   Frees menu cursor [also used after ZAM for some reason?]
+<GITx        Graphic ITem           Show weapon/item X icon above text box - add 1000 to X for items - GIT0000 to hide
+<HMC         Hide My Character      Removes main character npc (use SMC after)
+<INI         INItialize             Resets memory and starts game from the beginning
+<INPx:y:z    [I?] NPc             @ Change npc X to npc type Y with direction Z with setting Flag 0x0100 [It seems that it setting the "No Player Damage" Flag and not the Costum 0x0100 Flag]
+<IT+x        ITem +                 Get item X
+<IT-x        ITem -                 Lose item X
+<ITJx:y      ITem Jump              Jump to event Y if you have item X
+<KEY         KEYlock                Hides status bars and locks out input to your character until END (used with MSG/MS2/MS3 and PRI)
+<LDP         LoaD Profile           Loads profile.dat into memory and starts game from save
+<LI+x        LIfe +                 Restore X amount of health
+<ML+x        Max Life +             Max health increased X amount
+<MLP         Map [LP?]              Display map
+<MM0         My Motion 0            Instantly halts your horizontal motion
+<MNA         [Map NAme?]            Displays name of current map
+<MNPx:y:z:w  Move NPc               Move npc X to coords Y:Z facing direction W
+<MOVx:y      MOVe                   Move you to coords X:Y
+<MP+x        [MaP ??]             @ [map-related]
+<MPJx        [MaP Jump?]            [Jump to event X if map exists for current area?  the single instance of this seems to be dummied out]
+<MS2         MeSsage 2              Open invisible text box at top of screen (text follows)
+<MS3         MeSsage 3              Open normal text box at top of screen (text follows)
+<MSG         MeSsaGe 1              Open normal text box (text follows)
+<MYBx        MY Bump                Knocks you back from direction X (0000 knocked right, 0002 knocked left, any other just hops in place)
+<MYDx        MY Direction           Make you face direction X
+<NCJx:y      [NpC?] Jump            Jump to event Y if any npc of type X is present
+<NOD         [Nod?                  Text box wait for button press (used after MSG/MS2/MS3)
+<NUM0000     [Number?]              Used to output Y from AM+ as text
+<PRI         [?]                    Hides status bars and freezes game action until KEY or END (used with MSG/MS2/MS3)
+<PS+x:y      [P? Slot?]             Set teleporter slot X to location Y
+<QUAx        QUAke                  Shake the screen for X ticks
+<RMU         Restore MUsic          Restore music playback [plays previous song?  or only works with some songs?]
+<SAT         Speed-up All Text      Instant text display on all messages until END (glitches scrolling text)
+<SILx        Show ILlustration      Show illustration during credits (use CIL after)
+<SK+x        SKipflag +             Set skipflag X (remains set until program exits, to avoid repeating cutscenes/dialogue after retrying)
+<SK-x        SKipflag -?          @ Clear skipflag
+<SKJx:y      SKipflag Jump          Jump to event Y if skipflag X is set
+<SLP         [Show? Location? P?]   Teleporter location menu
+<SMC         Show My Character      Restores main character npc (used after HMC)
+<SMPx:y      [?]                    [do something with npc X? - only used before and after the Omega fight]
+<SNPx:y:z:w  [Start?] NPc         @ Create npc type X at coords Y:Z with direction W
+<SOUx        SOUnd                  Play sound effect X
+<SPS         Start Prop. Sound      Start propeller sound (use CPS after) (from helicopter cutscene after final battles)
+<SSSx        Start Stream Sound     Start stream sound at pitch X (use CSS after) (from River area - normal pitch is 0400)
+<STC         Save Time Counted      Saves the current time to 290.rec
+<SVP         SaVe Profile           Save game
+<TAMx:y:z    Trade ArMs             Trade weapon X for weapon Y, set max ammo to Z (max ammo 0000 = no change) (GLITCH: first weapon 0000)
+<TRAx:y:z:w  TRAnsport              Load map X, run event Y, transport you to coords Z:W
+<TUR         [?]                    Instant text display [until what? CLR?] (used after MSG/MS2/MS3)
+<UNIx        [?]                    [0000 normal / 0001 zero-g movement, facing direction is locked (disables focus commands) (from Stream boss) / 0002 movement is locked, can still fire]
+<UNJx        [?] Jump?              [?]
+<WAIx        WAIt                   Pause script for X ticks
+<WAS         WAit until Standing    Pause script until your character touches the ground
+<XX1x        [?]                    [shows distant view of island?]
+<YNJx        Yes/No Jump            Ask yes or no, jump to event X if No
+<ZAM         Zero ArMs              All weapons drop to level 1
+
+Notes:
+ Invalid commands show an error message displaying the command before the game exits
+ The "jump if equipped" function is done with FLJ - an arbitrary flag is chosen, and every instance of EQ+/EQ- must also have the FL+/FL- command
+ The colon between parameters can be any character (it's ignored)
+
+
+
+
+
+CREDITS FORMAT (credit.tsc)
+==============
+[T]X  Text T with casts.pbm image X [on left?]
++X     [?]
+!X     [?]
+-X     [line has height X?]
+fX:Y  Jump to location Y if flag X is set
+jX    Jump to location X
+lX    Location X
+~      [switch to the left half of the screen?]
+/      [end?]
+<<<    [comment?]
+
+
+
+
+NPC FLAGS
+==============
+0x0001 - Solid
+0x0002 - No effect about Tile 44
+0x0004 - Invulnerable (Blink Sound)
+0x0008 - Ignore solid
+0x0010 - Bouncing at top
+0x0020 - Shootable
+0x0040 - Special Solid
+0x0080 - Rear and top attack power 0
+0x0100 - Costum
+0x0200 - Boss Flag
+0x0400 - ???
+0x0800 - Is visible if FlagID is set
+0x1000 - Costum
+0x2000 - Call on Event
+0x4000 - Is invisible if FlagID is set
+0x8000 - Show Damage Numbers
+
+
+
+
+
+COMMAND VALUES
+==============
+Maps (TRA)        Profile.dat byte 0x008 - for position, 0x011-012: distance from left,
+                  0x015-016: distance from top, 20h (32) per map tile (low byte first)
+0000 0        Credits
+0001 Pens1    Arthur's House - normal
+0002 Eggs     Egg Corridor
+0003 EggX     Egg No. 00 - normal
+0004 Egg6     Egg No. 06
+0005 EggR     Egg Observation Room
+0006 Weed     Grasstown
+0007 Santa    Santa's House
+0008 Chako    Chaco's House
+0009 MazeI    Labyrinth I (vertical starting room)
+0010 Sand     Sand Zone - normal
+0011 Mimi     Mimiga Village
+0012 Cave     First Cave
+0013 Start    Start Point
+0014 Barr     Shack (Mimiga Village)
+0015 Pool     Reservoir
+0016 Cemet    Graveyard
+0017 Plant    Yamashita Farm
+0018 Shelt    Shelter (Grasstown)
+0019 Comu     Assembly Hall (Mimiga Village)
+0020 MiBox    Save Point (Mimiga Village)
+0021 EgEnd1   Side Room (Egg Corridor)
+0022 Cthu     Cthulhu's Abode (Egg Corridor)
+0023 Egg1     Egg No. 01
+0024 Pens2    Arthur's House - Sue on computer
+0025 Malco    Power Room (Grasstown)
+0026 WeedS    Save Point (Grasstown)
+0027 WeedD    Execution Chamber (Grasstown)
+0028 Frog     Gum (Grasstown)
+0029 Curly    Sand Zone Residence
+0030 WeedB    Grasstown Hut
+0031 Stream   Main Artery (Waterway)
+0032 CurlyS   Small Room (Sand Zone)
+0033 Jenka1   Jenka's House - normal
+0034 Dark     Deserted House (Sand Zone)
+0035 Gard     Sand Zone Storehouse
+0036 Jenka2   Jenka's House - after Balrog attacks
+0037 SandE    Sand Zone - after boss fight
+0038 MazeH    Labyrinth H (sliding block room)
+0039 MazeW    Labyrinth W (main area w/shop, camp)
+0040 MazeO    Camp (Labyrinth)
+0041 MazeD    Clinic Ruins (Labyrinth)
+0042 MazeA    Labyrinth Shop
+0043 MazeB    Labyrinth B (booster)
+0044 MazeS    Boulder Chamber (Labyrinth)
+0045 MazeM    Labyrinth M (gaudi eggs)
+0046 Drain    Dark Place (Labyrinth)
+0047 Almond   Core (Labyrinth)
+0048 River    Waterway
+0049 Eggs2    Egg Corridor?
+0050 Cthu2    Cthulhu's Abode? (Egg Corridor?)
+0051 EggR2    Egg Observation Room?
+0052 EggX2    Egg No. 00 - hatched
+0053 Oside    Outer Wall
+0054 EgEnd2   Side Room (Egg Corridor?)
+0055 Itoh     Storehouse (Outer Wall)
+0056 Cent     Plantation
+0057 Jail1    Jail No. 1 (Plantation)
+0058 Momo     Hideout (Plantation)
+0059 Lounge   Rest Area (Plantation)
+0060 CentW    Teleporter (Plantation)
+0061 Jail2    Jail No. 2 (Plantation)
+0062 Blcny1   Balcony - normal
+0063 Priso1   Last Cave
+0064 Ring1    Throne Room (Balcony)
+0065 Ring2    The King's Table (Balcony)
+0066 Prefa1   Prefab House (Balcony) - normal
+0067 Priso2   Last Cave Hidden
+0068 Ring3    Black Space (Balcony)
+0069 Little   Little House (Outer Wall)
+0070 Blcny2   Balcony - after boss fights
+0071 Fall     Ending
+0072 Kings    Intro
+0073 Pixel    Waterway Cabin
+0074 e_Maze   Credits - Labyrinth
+0075 e_Jenk   Credits - Jenka's House
+0076 e_Malc   Credits - Power Room
+0077 e_Ceme   Credits - Graveyard
+0078 e_Sky    Credits - Sky
+0079 Prefa2   Prefab House (Balcony) - entrance to hell
+0080 Hell1    Sacred Ground B1
+0081 Hell2    Sacred Ground B2
+0082 Hell3    Sacred Ground B3
+0083 Mapi     Storage (Graveyard)
+0084 Hell4    Passage? - normal
+0085 Hell42   Passage? - from Sacred Ground B3
+0086 Statue   Statue Chamber (Plantation/Sacred Grounds)
+0087 Ballo1   Seal Chamber (Sacred Grounds) - normal
+0088 Ostep    Corridor (Sacred Grounds)
+0089 e_Labo   Credits - Laboratory
+0090 Pole     Hermit Gunsmith
+0091 Island    [map is totally blank - TSC is called right before good/best endings]
+0092 Ballo2   Seal Chamber (Sacred Grounds) - after boss fight
+0093 e_Blcn   Credits - Balcony
+0094 Clock    Clock Room (Outer Wall)
+
+
+
+Directions (FAI/FAO/MYD/MYB)    Profile.dat bytes 0x018 (your direction)
+0000 Left
+0001 Up [FAI/FAO only?]
+0002 Right
+0003 Down
+0004 Center [FAI/FAO only?]
+ NOTE: MYB is 0000 Right, 0002 Left (reversed)
+
+
+
+Focus speed (FOB/FOM/FON)
+0000 (CRASH - probably divide by zero error)
+0001 Instant
+0016 Fast
+0032 Medium
+0064 Slow
+ NOTE: Any value besides zero should work, these four are the only ones used normally
+
+
+
+Weapons (AM+/AM-/AMJ/GIT/TAM)    Profile.dat bytes 0x038-098 (every 4 bytes: weapon, level (1-3),
+                                 energy, max ammo (0 = infinite), current ammo) (every 20 bytes)
+0000  [nothing?]
+0001 Snake
+0002 Polar Star
+0003 Fireball
+0004 Machine Gun
+0005 Missile Launcher
+0006 Missiles (GIT only)
+0007 Bubbler
+0008  [nothing?]
+0009 Blade
+0010 Super Missile Launcher
+0011 Super Missiles (GIT only)
+0012 Nemesis
+0013 Spur
+
+
+
+Items (GIT/IT+/IT-/ITJ)    Profile.dat bytes 0x0D8-14C (every 4 bytes)
+0000  [nothing?]
+0001 Arthur's Key
+0002 Map System
+0003 Santa's Key
+0004 Silver Locket
+0005 Beast Fang
+0006 Life Capsule (GIT only)
+0007 ID Card
+0008 Jellyfish Juice
+0009 Rusty Key
+0010 Gum Key
+0011 Gum Base
+0012 Charcoal
+0013 Explosive
+0014 Puppy
+0015 Life Pot
+0016 Cure-All
+0017 Clinic Key
+0018 Booster 0.8
+0019 Arms Barrier
+0020 Turbocharge
+0021 Curly's Air Tank
+0022 Nikumaru Counter
+0023 Booster v2.0
+0024 Mimiga Mask
+0025 Teleporter Room Key
+0026 Sue's Letter
+0027 Controller
+0028 Broken Sprinkler
+0029 Sprinkler
+0030 Tow Rope
+0031 Clay Figure Medal
+0032 Little Man
+0033 Mushroom Badge
+0034 Ma Pignon
+0035 Curly's Underwear
+0036 Alien Medal
+0037 Chaco's Lipstick
+0038 Whimsical Star
+0039 Iron Bond
+
+
+
+Equip (EQ+/EQ-)        Profile.dat bytes 0x02C-02D (low byte first)
+0001 Booster v0.8 (ignored if v2.0 on)
+0002 Map System
+0004 Arms Barrier
+0008 Turbocharge
+0016 Curly's Air Tank
+0032 Booster v2.0
+0064 Mimiga Mask
+0128 Whimsical Star
+0256 Nikumaru Counter
+ NOTE: these are bitwise flags, the final value is the sum of the equipped items
+
+
+
+Faces (FAC)
+0000  [blank - does this set the text to normal width?]
+0001 Sue (smile)
+0002 Sue (frown)
+0003 Sue (angry)
+0004 Sue (hurt)
+0005 Balrog (normal)
+0006 Toroko (normal)
+0007 King
+0008 Toroko (angry)
+0009 Jack
+0010 Kazuma
+0011 Toroko (rage)
+0012 Igor
+0013 Jenka
+0014 Balrog (smile)
+0015 Misery (normal)
+0016 Misery (smile)
+0017 Booster (hurt)
+0018 Booster (normal)
+0019 Curly (smile)
+0020 Curly (frown)
+0021 Doctor
+0022 Momorin
+0023 Balrog (hurt)
+0024 Broken robot
+0025 Curly (?)
+0026 Misery (angry)
+0027 Human Sue
+0028 Itoh
+0029 Ballos
+
+
+
+Illustrations (SIL)
+0001 riding Sky Dragon
+0002 fighting Core
+0003 fighting Misery
+0004 Momorin's rocket
+0005 Outer Wall
+0006 fighting Ironhead
+0007 fighting Balrog (with missiles)
+0008 Clinic
+0009 King fighting the Doctor
+0010 Jenka with puppies
+0011 Curly with Mimiga children
+0012 riding Balrog
+0014 Hell
+0015 floating island (blue sky)
+0016 floating island (orange sky)
+0017 King, Jack, Sue
+0018 Ballos
+ NOTE: any other values (including 0013) show 0001
+
+
+
+Songs (CMU)        Profile.dat byte 0x00C
+0000 (none - silence)
+0001 Mischievous Robot   Egg Chamber
+0002 Safety              various homes
+0003 (no title)          game over
+0004 Gravity             boss battle
+0005 On To Grasstown     Grasstown
+0006 Meltdown 2          Sand Zone
+0007 Eyes of Flame       major boss battle
+0008 Gestation           First Cave, various small rooms
+0009 Mimiga Town         Mimiga Village
+0010 (no title)          get item
+0011 Balrog's Theme      Balrog cutscenes
+0012 Cemetary            Graveyard
+0013 Plant               Yamashita Farm
+0014 Pulse               Egg No. 00, Waterway Cabin, Arthur's House after Waterway
+0015 (no title)          boss defeated
+0016 (no title)          get life capsule
+0017 Tyrant              Doctor cutscenes
+0018 Run!                Balcony areas after boss fights
+0019 Jenka 1             Jenka's House, Labyrinth I & H (first two areas)
+0020 Labyrinth Fight     Labyrinth M (gaudi eggs)
+0021 Access              Shelter (Kazuma on computer)
+0022 Oppression          Core battle
+0023 Geothermal          Dark Place, Core, [Main Artery?]
+0024 Cave Story          title screen, Plantation
+0025 Moonsong            Outer Wall
+0026 Hero's End          bad ending
+0027 Scorching Back      Egg Corridor?
+0028 Quiet               Mimiga Village and homes after Waterway
+0029 Final Cave          Last Cave
+0030 Balcony             Balcony
+0031 Charge              Muscle Doctor battle
+0032 Last Battle         final battles
+0033 The Way Back Home   Credits
+0034 Zombie              before Undead Core battle, after Ballos battle
+0035 Break Down          Ending
+0036 Running Hell        Sacred Grounds
+0037 Jenka 2             Labyrinth W (main area w/shop, camp)
+0038 Living Waterway     Waterway
+0039 Seal Chamber        before Ballos battle
+0040 Toroko's Theme      Title Screen - Toroko
+0041 ["White"?]          Title Screen - King
+
+
+
+Sound Effects (SOU)
+0000 <nothing>
+0001  [blip]
+0002 Message typing
+0003 Bonk
+0004 Weapon switch
+0005  [?]
+0006  [critter hop?]
+0007  [nothing?]
+0008  [nothing?]
+0009  [nothing?]
+0010  [nothing?]
+0011 Door
+0012  [*plsh* - map tile change?]
+0013  [nothing?]
+0014 Get weapon energy
+0015  [click]
+0016 Take damage
+0017 Die
+0018  [menu?]
+0019  [nothing?]
+0020 Health/ammo refill
+0021  [bubble]
+0022 Click (chest, life capsule, unlock door)
+0023  [thud]
+0024  [tap - walking?]
+0025  [enemy killed?]
+0026  [loud thud - balrog?]
+0027 Level Up
+0028  [thump]
+0029 Teleport
+0030  [jump]
+0031 Invulnerable "ting"
+0032  [shot - polar star?]
+0033  [shot - fireball]
+0034  [shot - fireball bounce?]
+0035  [explosion (missiles?]
+0036  [nothing?]
+0037  [click]
+0038  [get item?]
+0039  [*bvng*]
+0040  [water?]
+0041  [water?]
+0042  [beep]
+0043 Computer beep (activate terminals, etc.)
+0044 Blast (blow up door to Shelt)
+0045 Weapon energy bounce
+0046  [*ftt*]
+0047  [?]
+0048  [shot - bubble pop?]
+0049  [shot - spur lv 1]
+0050  [enemy squeak]
+0051  [enemy take damage]
+0052  [large enemy take damage (roar)]
+0053  [enemy squeak-bblblbl]
+0054  [object shot (thud)]
+0055  [enemy squeak]
+0056  [splash]
+0057  [little damage sound]
+0058  [*chlk*]
+0059  [nothing?]
+0060  [spur charge - lower]
+0061  [spur charge - higher]
+0062 Shot - Spur lv 2
+0063 Shot - Spur lv 3
+0064 Shot - Spur max
+0065 Spur fully charged
+0066  [nothing?]
+0067  [nothing?]
+0068  [nothing?]
+0069  [nothing?]
+0070  [Sue hitting you while you're unconscious in Jail1]
+0071  [explosion]
+0072  [explosion]
+0073  [nothing?]
+0074  [nothing?]
+0075  [nothing?]
+0076  [nothing?]
+0077  [nothing?]
+0078  [nothing?]
+0079  [nothing?]
+0080  [nothing?]
+0081  [nothing?]
+0082  [nothing?]
+0083  [nothing?]
+0084  [nothing?]
+0085  [nothing?]
+0086  [nothing?]
+0087  [nothing?]
+0088  [nothing?]
+0089  [nothing?]
+0090  [nothing?]
+0091  [nothing?]
+0092  [nothing?]
+0093  [nothing?]
+0094  [nothing?]
+0095  [nothing?]
+0096  [nothing?]
+0097  [nothing?]
+0098  [nothing?]
+0099  [nothing?]
+
+http://spgardebiter.sp.funpic.de/CaveStory/FAQ/TSC.txt
