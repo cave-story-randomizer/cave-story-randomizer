@@ -36,11 +36,61 @@ function C:hasUnreplacedItems()
   return #self._unreplaced >= 1
 end
 
-local function _stringReplace(text, needle, replacement)
+function C:replaceItem(replacement)
+  assert(self:hasUnreplacedItems())
+  local original = table.remove(self._unreplaced)
+
+  local template = "[%s] %s -> %s"
+  logNotice(template:format(self._mapName, original.name, replacement.name))
+
+  -- Erase first, in case replace attribute would place some text that would match here...
+  if original.erase then
+    local erases = original.erase
+    if type(erases) == 'string' then
+      erases = {erases}
+    end
+    for _, erase in ipairs(erases) do
+      self._text = self:_stringReplace(self._text, erase, '')
+    end
+  end
+
+  self:_replaceAttribute(original, replacement, 'command')
+  self:_replaceAttribute(original, replacement, 'getText')
+  self:_replaceAttribute(original, replacement, 'displayCmd')
+  self:_replaceAttribute(original, replacement, 'music')
+end
+
+function C:_replaceAttribute(original, replacement, attribute)
+  local originalTexts = original[attribute]
+  if originalTexts == nil then
+    return
+  elseif type(originalTexts) == 'string' then
+    originalTexts = {originalTexts}
+  end
+
+  local replaceText = replacement[attribute] or ''
+  if type(replaceText) == 'table' then
+    replaceText = replaceText[1]
+  end
+
+  -- Loop through each possible original value until we successfully replace one.
+  for _, originalText in ipairs(originalTexts) do
+    local changed
+    self._text, changed = self:_stringReplace(self._text, originalText, replaceText)
+    if changed then
+      return
+    end
+  end
+
+  local template = 'Unable to replace original "%s" for %s.'
+  logWarning(template:format(attribute, original.name))
+end
+
+function C:_stringReplace(text, needle, replacement)
   local i = text:find(needle, 1, true)
   if i == nil then
-    logWarning(('Unable to replace "%s" with "%s"'):format(needle, replacement))
-    return text
+    -- logWarning(('Unable to replace "%s" with "%s"'):format(needle, replacement))
+    return text, false
   end
   local len = needle:len()
   local j = i + len - 1
@@ -48,18 +98,7 @@ local function _stringReplace(text, needle, replacement)
   assert((j % 1 == 0), tostring(j))
   local a = text:sub(1, i - 1)
   local b = text:sub(j + 1)
-  return a .. replacement .. b
-end
-
-function C:replaceItem(replacement)
-  assert(self:hasUnreplacedItems())
-  local original = table.remove(self._unreplaced)
-  self._text = _stringReplace(self._text, original.command, replacement.command)
-  self._text = _stringReplace(self._text, original.getText, replacement.getText)
-  self._text = _stringReplace(self._text, original.displayCmd, replacement.displayCmd)
-
-  local template = "[%s] %s -> %s"
-  logNotice(template:format(self._mapName, original.name, replacement.name))
+  return a .. replacement .. b, true
 end
 
 function C:writeTo(path)

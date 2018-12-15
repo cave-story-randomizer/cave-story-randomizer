@@ -6,7 +6,7 @@ Serpent = require 'lib.serpent'
 
 lf = love.filesystem
 
-local LOG_LEVEL = 4
+local LOG_LEVEL = 3
 local function _log(level, prefix, text, ...)
   if LOG_LEVEL >= level then
     print(prefix .. text, ...)
