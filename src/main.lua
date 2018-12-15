@@ -60,8 +60,9 @@ function love.directorydropped(path)
   local ItemDeck = require 'item_deck'
   local itemDeck = ItemDeck()
 
-  -- Place random weapon in Hermit Gunsmith.
-  tscFiles['Pole.tsc']:replaceItem(itemDeck:getWeapon())
+  -- Place random weapon in either First Cave or Hermit Gunsmith.
+  local firstArea = _.sample({'Cave.tsc', 'Pole.tsc'})
+  tscFiles[firstArea]:replaceItem(itemDeck:getWeapon())
 
   -- Replace all items.
   for _, tscFile in pairs(tscFiles) do
