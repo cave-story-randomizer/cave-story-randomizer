@@ -8,7 +8,7 @@ math.randomseed(seed)
 function love.conf(t)
   t.window = {
     title = "Cave Story Randomizer",
-    -- icon = 'icon.png',
+    icon = 'icon.png',
     width = 640,
     height = 480,
     resizable = false,
