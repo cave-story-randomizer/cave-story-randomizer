@@ -63,13 +63,11 @@ function C:replaceItem(replacement)
 end
 
 function C:writeTo(path)
-  local encoded = self:_codec(self._text, 'encode')
+  logInfo('writing TSC to: ' .. path)
 
-  local filepath = lf.getSourceBaseDirectory() .. path
-  logInfo('writing TSC to: ' .. filepath)
-
-  local file, err = io.open(filepath, MODE_WRITE_ERASE_EXISTING)
+  local file, err = io.open(path, MODE_WRITE_ERASE_EXISTING)
   assert(err == nil, err)
+  local encoded = self:_codec(self._text, 'encode')
   file:write(encoded)
   file:flush()
   file:close()

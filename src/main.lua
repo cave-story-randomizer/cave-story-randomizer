@@ -30,10 +30,14 @@ do
 end
 
 -- function love.load()
---   -- readPXM('Pole.pxm')
---   -- readTSC('Pole.tsc', 'Testing.tsc')
---   -- writeTSC('Testing.tsc')
---   -- readTSC('TestingEncoded.tsc', 'TestingDecoded.tsc')
+--   local sourcePath = lf.getSourceBaseDirectory()
+--   local info = lf.getInfo(sourcePath .. '/data')
+--   local items = lf.getDirectoryItems(sourcePath)
+--   print(Serpent.block(items))
+--   print(Serpent.block(info))
+--   if info == nil then
+--     print()
+--   end
 -- end
 
 function love.directorydropped(path)
@@ -66,9 +70,15 @@ function love.directorydropped(path)
     end
   end
 
+  local sourcePath = lf.getSourceBaseDirectory()
+
+  -- Create /data/Stage if it doesn't already exist.
+  local command = ('mkdir "%s"'):format(sourcePath .. '/data/Stage')
+  os.execute(command) -- HERE BE DRAGONS!!!
+
   -- Write modified files.
   for filename, tscFile in pairs(tscFiles) do
-    local path = '/data/Stage/' .. filename
+    local path = sourcePath .. '/data/Stage/' .. filename
     tscFile:writeTo(path)
   end
 
