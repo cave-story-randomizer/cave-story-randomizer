@@ -29,6 +29,18 @@ function lifeCapsule(t)
   }
 end
 
+function item(t)
+  assert(t.name and t.map and t.id and t.getText)
+  return {
+    name = t.name,
+    map = t.map,
+    getText = t.getText,
+    command = ("<IT+00%s"):format(t.id),
+    displayCmd = ("<GIT10%s"):format(t.id),
+    music = t.music or "<CMU0010"
+  }
+end
+
 return {
   -------------------
   -- WEAPONS --
@@ -69,6 +81,7 @@ return {
   -- lEggCorridorB = lifeCapsule({
   --   hp = 4,
   --   map = "Eggs",
+  --   label = "0401"
   -- }),
   lGrasstown = lifeCapsule({
     hp = 5,
@@ -118,16 +131,23 @@ return {
   -----------
   -- ITEMS --
   -----------
-  iPanties = {
+  iPanties = item({
     name = "Curly's Panties",
     map = "CurlyS",
+    id = "35",
     getText = {
       "Found =Curly's Panties=.",
       "Found =Curly's Underwear=.",
     },
-    command = "<IT+0035",
-    displayCmd = "<GIT1035",
-  },
+    music = "",
+  }),
+  iLifePot = item({
+    name = "Life Pot",
+    map = "Cent",
+    id = "15",
+    getText = "Got a =Life Pot=!",
+    label = "0450",
+  }),
 }
 
 --[[
@@ -188,6 +208,9 @@ Max health increased by 5!<NOD<END
 
 <KEY<DNP0420<MSG<GIT1035<IT+0035
 Found Curly's Panties.<NOD<END
+
+<CMU0010<GIT1015<IT+0015<GIT1015Got a =Life Pot=!<WAI0160<NOD<GIT0000<RMU<EVE0451
+<END
 
 -- TODO:
 

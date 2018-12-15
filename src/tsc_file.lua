@@ -62,7 +62,7 @@ end
 
 function C:_replaceAttribute(original, replacement, attribute)
   local originalTexts = original[attribute]
-  if originalTexts == nil then
+  if originalTexts == nil or originalTexts == '' then
     return
   elseif type(originalTexts) == 'string' then
     originalTexts = {originalTexts}
