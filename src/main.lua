@@ -29,17 +29,6 @@ do
   end
 end
 
--- function love.load()
---   local sourcePath = lf.getSourceBaseDirectory()
---   local info = lf.getInfo(sourcePath .. '/data')
---   local items = lf.getDirectoryItems(sourcePath)
---   print(Serpent.block(items))
---   print(Serpent.block(info))
---   if info == nil then
---     print()
---   end
--- end
-
 function love.directorydropped(path)
   -- Mount.
   local mountPath = 'mounted-data'
@@ -85,6 +74,7 @@ function love.directorydropped(path)
 
   -- Unmount.
   assert(lf.unmount(path))
+  print("\n")
 end
 
 function love.keypressed(key)

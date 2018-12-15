@@ -74,13 +74,16 @@ function C:_replaceAttribute(original, replacement, attribute)
   end
 
   -- Loop through each possible original value until we successfully replace one.
-  for _, originalText in ipairs(originalTexts) do
+  for _, originalText in ipairs(originalTexts) do repeat
+    if originalText == "" then
+      break -- continue
+    end
     local changed
     self._text, changed = self:_stringReplace(self._text, originalText, replaceText)
     if changed then
       return
     end
-  end
+  until true end
 
   local template = 'Unable to replace original "%s" for [%s] %s.'
   logWarning(template:format(attribute, original.map, original.name))

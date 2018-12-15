@@ -29,6 +29,22 @@ function lifeCapsule(t)
   }
 end
 
+function missiles(t)
+  assert(t.map)
+  return {
+    name = "Missiles",
+    map = t.map,
+    getText = {
+      "",
+      "Opened the treasure chest.<NOD", -- Normal case
+      "Opened the treasure chest.", -- WeedB (fight with Kulala.)
+    },
+    command = "<EVE0030",
+    displayCmd = "",
+    music = "",
+  }
+end
+
 function item(t)
   assert(t.name and t.map and t.id and t.getText)
   return {
@@ -128,6 +144,32 @@ return {
     label = "0400"
   }),
 
+  --------------
+  -- MISSILES --
+  --------------
+  mEggObservation = missiles({
+    map = "EggR",
+  }),
+  mGrasslands = missiles({
+    map = "Weed",
+  }),
+  mGrasslandsHut = missiles({
+    map = "WeedB",
+  }),
+  mEggRuined = missiles({
+    map = "Eggs2",
+  }),
+  mEggObservationRuined = missiles({
+    map = "EggR2",
+    label = "0302",
+  }),
+  -- !!!! Uses a unique script... will have to be crafty... !!!!
+  -- [Sanctuary] Bonus expansion.  Just before you fight the Heavy Press at the
+  -- far west end of Blood-Stained Sanctuary B3, just past the pillar with 3 Deletes
+  -- covering it, in the room filled with flying Butes and with a hanging platform
+  -- with an arrow Bute on either side.  Above this platform is a single Star Block
+  -- concealing a chest containing this massive expansion of 24 Misisles.
+
   -----------
   -- ITEMS --
   -----------
@@ -218,5 +260,17 @@ Found Curly's Panties.<NOD<END
 <PRI<FL+0102<SOU0022<DNP0401<CLR<CMU0016
 <MSG<GIT1006Got a =Life Capsule=!<WAI0160<NOD<RMU<ML+0004
 Max health increased by 4!<NOD<END
+
+-- Missiles
+
+#0300
+<PRI<FLJ0200:0001<FL+0200
+<SOU0022<CNP0300:0021:0000
+<MSGOpened the treasure chest.<NOD<CLR<EVE0030
+
+#0302
+<PRI<FLJ0218:0001<FL+0218
+<SOU0022<CNP0302:0021:0000
+<MSGOpened the treasure chest.<NOD<EVE0030
 
 ]]
