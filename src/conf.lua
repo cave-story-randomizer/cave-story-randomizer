@@ -2,9 +2,6 @@ if io then
   io.stdout:setvbuf("no")
 end
 
-local seed = os.time()
-math.randomseed(seed)
-
 function love.conf(t)
   t.window = {
     title = "Cave Story Randomizer",

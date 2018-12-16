@@ -1,10 +1,19 @@
 function weapon(t)
-  assert(t.name and t.map and t.id and t.ammo)
+  assert(t.name and t.map and t.id)
+  local ammo = t.ammo or "0000"
+  local names = t.name
+  if type(names) == 'string' then
+    names = {names}
+  end
+  local getText = {}
+  for _, name in ipairs(names) do
+    table.insert(getText, ("Got the =%s=!<WAI0160<NOD"):format(name))
+  end
   return {
-    name = t.name,
+    name = names[1],
     map = t.map,
-    getText = ("Got the =%s=!<WAI0160<NOD"):format(t.name),
-    command = ("<AM+00%s:%s"):format(t.id, t.ammo),
+    getText = getText,
+    command = ("<AM+00%s:%s"):format(t.id, ammo),
     displayCmd = ("<GIT00%s"):format(t.id),
     music = "<CMU0010",
     kind = "weapon",
@@ -58,17 +67,24 @@ function item(t)
 end
 
 return {
-  -------------------
+  -------------
   -- WEAPONS --
-  -------------------
+  -------------
   wPolarStar = weapon({
     name = "Polar Star",
     map = "Pole",
     id = "02",
-    ammo = "0000",
   }),
-  wBubbler = weapon({
-    name = "Bubbler",
+  wFireball = weapon({
+    name = "Fireball",
+    map = "Santa",
+    id = "03",
+  }),
+  wBubbline = weapon({
+    name = {
+      "Bubbline",
+      "Bubbler",
+    },
     map = "Comu",
     id = "07",
     ammo = "0100",
@@ -156,7 +172,7 @@ return {
   mGrasslandsHut = missiles({
     map = "WeedB",
   }),
-  mEggRuined = missiles({
+  mEggCorridorRuined = missiles({
     map = "Eggs2",
   }),
   mEggObservationRuined = missiles({
@@ -173,6 +189,8 @@ return {
   -----------
   -- ITEMS --
   -----------
+  --  - Map System
+  --  - Chako's Rouge
   iPanties = item({
     name = "Curly's Panties",
     map = "CurlyS",
@@ -183,6 +201,20 @@ return {
     },
     music = "",
   }),
+  --  - Turbocharge
+  -- If you chose to take the Machine Gun from Curly in the Sand Zone, then you can
+  -- receive this for free from the Gaudi shopkeeper, Chaba, in the Labyrinth.  It
+  -- speeds up the recovery rate of ammo for the Machine Gun.
+  --  - Arms Barrier
+  -- Halves weapon EXP lost when you take damage.  Found the top part of the Camp,
+  -- accessible via a hidden passageway in the ceiling in the large Labyrinth room
+  -- from which you can access the normal Camp entrance and the Clinic nearby.
+  -- Unless you took the Machine Gun, you'll have to come back to this area with the
+  -- Booster to be able to reach it.
+  --  - Whimsical Star
+  -- A trinket that you can receive from Chaba, the Gaudi shopkeep in the Labyrinth,
+  -- if you talk to him with the Spur weapon in your posession.  It will cause small
+  -- stars to float around you as a meagre shield when you charge the Spur to MAX.
   iLifePot = item({
     name = "Life Pot",
     map = "Cent",
@@ -194,9 +226,17 @@ return {
 
 --[[
 
+-- Weapons
+
 <KEY<FLJ1640:0201<FL+1640<SOU0022<CNP0200:0021:0000
 <MSGOpened the chest.<NOD<GIT0002<AM+0002:0000<CLR
 <CMU0010Got the =Polar Star=!<WAI0160<NOD<GIT0000<CLO<RMU
+
+#0500
+...
+Here, you can have this.<NOD<GIT0003<AM+0003:0000<CLR
+<CMU0010Got the =Fireball=!<WAI0160<NOD<RMU<GIT0000<CLRYou're looking for someone?<NOD
+
 
 #0301
 <KEY<GIT1008<MSGDo you want to use the
@@ -205,6 +245,8 @@ return {
 <MSGYou find something in the
 ashes...<NOD<CLR<GIT0007<AM+0007:0100
 <CMU0010Got the =Bubbler=!<WAI0160<NOD<CLO<RMU<DNP0300<END
+
+-- Life Capsules
 
 <PRI<SOU0022<DNP0400<CMU0016
 <MSG<GIT1006Got a =Life Capsule=!<WAI0160<NOD<RMU<ML+0003
