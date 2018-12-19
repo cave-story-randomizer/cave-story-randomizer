@@ -1,5 +1,7 @@
 require 'lib.strict'
 
+local VERSION = '0.1'
+
 Class   = require 'lib.classic'
 _       = require 'lib.moses'
 Serpent = require 'lib.serpent'
@@ -57,7 +59,7 @@ end
 
 local function _draw()
   lg.draw(background, 0, 0)
-  _print('Cave Story Randomizer v0.1.0', 0, 10)
+  _print('Cave Story Randomizer v' .. VERSION, 0, 10)
   _print('by shru', 0, 22)
   _print(status, 10, 65)
   _print('shru.itch.io', 10, 220, 'left')

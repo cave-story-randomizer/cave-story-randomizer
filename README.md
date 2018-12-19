@@ -4,11 +4,10 @@ Cave Story Randomizer
 Todo
 ----
 
-- Specifically replace first chest in Pole.tsc so that you always get a weapon.
 - Provide modified Cave.pxm. (When Bubbline or Fireball)
-- Trade Sequence Step A: Only weapons are acquired through trades.
 - Print Warning/Error Count
 - Supress Hell Music Error
+- Write log
 - Test Getting Super Missiles Before Missiles
 - Trade Sequence Step B: Require random obtainable weapon, instead of always polar star and fireball.
 - Randomize Booster v0.8 / v2.0

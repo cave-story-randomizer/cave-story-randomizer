@@ -27,6 +27,7 @@ function C:new(path)
       break -- continue
     end
     local item = _.clone(v)
+    item.key = k
     table.insert(self._unreplaced, item)
   until true end
   self._unreplaced = _.shuffle(self._unreplaced)
@@ -38,11 +39,27 @@ end
 
 function C:replaceItem(replacement)
   assert(self:hasUnreplacedItems())
-  local original = table.remove(self._unreplaced)
+  local key = self._unreplaced[#self._unreplaced].key
+  self:replaceSpecificItem(key, replacement)
+end
 
+function C:replaceSpecificItem(originalKey, replacement)
+  -- Fetch item with key matching originalKey.
+  local original
+  for index, item in ipairs(self._unreplaced) do
+    if item.key == originalKey then
+      original = item
+      table.remove(self._unreplaced, index)
+      break
+    end
+  end
+  assert(original, 'No unreplaced item with key: ' .. originalKey)
+
+  -- Log change
   local template = "[%s] %s -> %s"
   logNotice(template:format(self._mapName, original.name, replacement.name))
 
+  -- Replace before
   if original.replaceBefore then
     for needle, replacement in pairs(original.replaceBefore) do
       self._text = self:_stringReplace(self._text, needle, replacement)
@@ -60,6 +77,7 @@ function C:replaceItem(replacement)
     end
   end
 
+  -- Replace attributes.
   self:_replaceAttribute(original, replacement, 'command')
   self:_replaceAttribute(original, replacement, 'getText')
   self:_replaceAttribute(original, replacement, 'displayCmd')

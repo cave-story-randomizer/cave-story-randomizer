@@ -72,11 +72,19 @@ function C:_shuffleItems(tscFiles)
   local itemDeck = ItemDeck()
 
   -- Place random weapon in either First Cave or Hermit Gunsmith.
-  local firstArea = _.sample({'Cave.tsc', 'Pole.tsc'})
-  firstArea = 'Cave.tsc' -- TEMP until we specifically place weapon in chest in Pole.tsc, see TODO
-  tscFiles[firstArea]:replaceItem(itemDeck:getWeapon())
+  local firstArea, firstItemKey = unpack(_.sample({
+    {'Cave.tsc', 'lFirstCave'},
+    {'Pole.tsc', 'wPolarStar'},
+  }))
+  tscFiles[firstArea]:replaceSpecificItem(firstItemKey, itemDeck:getWeapon())
 
-  -- Replace all items.
+  -- Replace all weapon trades with random weapons
+  tscFiles['Curly.tsc']:replaceSpecificItem('wMachineGun', itemDeck:getWeapon())
+  tscFiles['MazeA.tsc']:replaceSpecificItem('wSnake', itemDeck:getWeapon())
+  tscFiles['Pole.tsc']:replaceSpecificItem('wSpur', itemDeck:getWeapon())
+  tscFiles['Little.tsc']:replaceSpecificItem('wNemesis', itemDeck:getWeapon())
+
+  -- Replace the rest of the items.
   for _, tscFile in pairs(tscFiles) do
     while tscFile:hasUnreplacedItems() do
       tscFile:replaceItem(itemDeck:getAny())
