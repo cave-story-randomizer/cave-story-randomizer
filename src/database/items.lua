@@ -11,6 +11,11 @@ function weapon(t)
     table.insert(getText, ("Got the =%s=.<WAI0160<NOD"):format(name)) -- Blade
     table.insert(getText, ("=%s= complete!<WAI0160<NOD"):format(name)) -- Snake
     table.insert(getText, ("=Polar Star= became the =%s=!"):format(name)) -- Spur
+    -- Cave Story+
+    table.insert(getText, ("Obtained the %s!<WAI0160<NOD"):format(name))
+    table.insert(getText, ("Obtained the %s.<WAI0160<NOD"):format(name))
+    table.insert(getText, ("%s is completed!<WAI0160<NOD"):format(name)) -- Snake
+    table.insert(getText, ("The Polar Star is now the %s!"):format(name)) -- Spur
   end
   return {
     name = names[1],
@@ -32,6 +37,8 @@ function equipment(t)
     getText = {
       ("Got the =%s=!<WAI0160<NOD"):format(t.name),
       ("Got the =%s=!<WAI0160"):format(t.name), -- Whimsical Star
+      -- Cave Story+
+      ("Obtained the %s.<WAI0160<NOD"):format(t.name),
     },
     command = {
       ("<IT+00%s<EQ+%s"):format(t.id, t.equipMask), -- Replacement
@@ -57,6 +64,8 @@ function item(t)
     table.insert(getText, ("Got a =%s=!<WAI0160<NOD"):format(name)) -- Life Pot
     table.insert(getText, ("Found =%s=.<NOD"):format(name)) -- Curly's Panties
     table.insert(getText, ".....") -- Chako's Rouge
+    -- Cave Story+
+    table.insert(getText, ("Found %s.<NOD"):format(name)) -- Curly's Panties
   end
   return {
     name = names[1],
@@ -79,11 +88,18 @@ function lifeCapsule(t)
       ("Got a =Life Capsule=!<WAI0160<NOD\n\r Max health increased by %d!"):format(t.hp),
       "Got a =Life Capsule=!<WAI0160<NOD", -- erase the extra wait for most things.
       "Got a =Life Capsule=!<NOD", -- Hell1 capsule does not have waiting period for some reason.
+      -- Cave Story+
+      ("Obtained a Life Capsule.<WAI0160<NOD\n\r Max health increased by %d!"):format(t.hp),
+      "Obtained a Life Capsule.<WAI0160<NOD", -- erase the extra wait for most things.
+      "Obtained a Life Capsule.<NOD", -- Hell1 capsule does not have waiting period for some reason.
     },
     command = ("<ML+000%d"):format(t.hp),
     displayCmd = "<GIT1006",
     music = t.music or "<CMU0016",
-    erase = ("Max health increased by %d!<NOD"):format(t.hp),
+    erase = {
+      ("Max health increased by %d!<NOD"):format(t.hp),
+      ("Max life increased by %d.<NOD"):format(t.hp), -- Cave Story+
+    },
   }
 end
 
@@ -194,7 +210,7 @@ local data = {
     equipMask = "0128",
     label = "0404",
   }),
-  eWhimsicalStar = equipment({
+  eArmsBarrier = equipment({
     name = "Arms Barrier",
     map = "MazeO",
     id = "19",
@@ -333,6 +349,8 @@ local data = {
     getText = {
       "Got the =Super Missile Launcher=!<WAI0160<NOD", -- Gameplay text
       "Your Missiles have been powered up!<WAI0160<NOD", -- Actual text
+      -- Cave Story+
+      "Missiles are powered up!<WAI0160<NOD", -- Actual text
     },
     -- <AM+0005:0005 - Give the missile launcher and 5 ammo, just in case we don't have it yet.
     --                 We need to give ammo because the missiles fire infinitely when max ammo is 0.

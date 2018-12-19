@@ -49,6 +49,13 @@ function C:_mountDirectory(path)
     dirStage = dirStage .. '/data'
   end
 
+  -- For Cave Story+
+  local items = lf.getDirectoryItems(dirStage)
+  local containsBase = _.contains(items, 'base')
+  if containsBase then
+    dirStage = dirStage .. '/base'
+  end
+
   local items = lf.getDirectoryItems(dirStage)
   local containsStage = _.contains(items, 'Stage')
   if containsStage then
