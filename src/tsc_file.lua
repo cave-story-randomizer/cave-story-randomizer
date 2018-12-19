@@ -103,8 +103,9 @@ function C:_replaceAttribute(original, replacement, attribute)
     end
   until true end
 
+  local logMethod = (attribute == 'command') and logError or logWarning
   local template = 'Unable to replace original "%s" for [%s] %s.'
-  logWarning(template:format(attribute, original.map, original.name))
+  logMethod(template:format(attribute, original.map, original.name))
 end
 
 function C:_stringReplace(text, needle, replacement)

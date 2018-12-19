@@ -4,9 +4,6 @@ Cave Story Randomizer
 Todo
 ----
 
-- Print Warning/Error Count
-- Supress Hell Music Error
-- Write log
 - Support Cave Story+
 - Missiles should only replace items which are not part of cutscenes.
 - Trade Sequence Step B: Require random obtainable weapon, instead of always polar star and fireball.

@@ -21,6 +21,7 @@ local WEAPONS_WHICH_CAN_NOT_BREAK_BLOCKS = {
 }
 
 function C:randomize(path)
+  resetLog()
   local success, dirStage = self:_mountDirectory(path)
   if not success then
     return "Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?"
@@ -32,12 +33,9 @@ function C:randomize(path)
   if canNotBreakBlocks then
     self:_copyModifiedFirstCave()
   end
+  self:_writeLog()
   self:_unmountDirectory(path)
-  return [[Randomized data successfully created!
-
-Next overwrite the files in your copy of Cave Story with the versions in the newly created "data" folder. Don't forget to save a backup of the originals!
-
-Then play and have a fun!]]
+  return self:_getStatusMessage()
 end
 
 function C:_mountDirectory(path)
@@ -125,9 +123,31 @@ function C:_copyModifiedFirstCave()
   U.writeFile(cavePxmPath, data)
 end
 
+function C:_writeLog()
+  local path = lf.getSourceBaseDirectory() .. '/data/log.txt'
+  local data = getLogText()
+  U.writeFile(path, data)
+  print("\n")
+end
+
 function C:_unmountDirectory(path)
   assert(lf.unmount(path))
-  print("\n")
+end
+
+function C:_getStatusMessage()
+  local warnings, errors = countLogWarningsAndErrors()
+  local line1
+  if warnings == 0 and errors == 0 then
+    line1 = "Randomized data successfully created!"
+  elseif warnings ~= 0 and errors == 0 then
+    line1 = ("Randomized data was created with %d warning(s)."):format(warnings)
+  else
+    return ("Encountered %d error(s) and %d warning(s) when randomizing data!"):format(errors, warnings)
+  end
+  local line2 = "Next overwrite the files in your copy of Cave Story with the versions in the newly created \"data\" folder. Don't forget to save a backup of the originals!"
+  local line3 = "Then play and have a fun!"
+  local status = ("%s\n\n%s\n\n%s"):format(line1, line2, line3)
+  return status
 end
 
 return C

@@ -82,7 +82,7 @@ function lifeCapsule(t)
     },
     command = ("<ML+000%d"):format(t.hp),
     displayCmd = "<GIT1006",
-    music = "<CMU0016",
+    music = t.music or "<CMU0016",
     erase = ("Max health increased by %d!<NOD"):format(t.hp),
   }
 end
@@ -304,6 +304,7 @@ local data = {
   lHell = lifeCapsule({
     hp = 5,
     map = "Hell1",
+    music = "",
     label = "0400"
   }),
 
