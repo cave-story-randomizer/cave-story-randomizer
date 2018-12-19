@@ -73,6 +73,7 @@ function C:_shuffleItems(tscFiles)
 
   -- Place random weapon in either First Cave or Hermit Gunsmith.
   local firstArea = _.sample({'Cave.tsc', 'Pole.tsc'})
+  firstArea = 'Cave.tsc' -- TEMP until we specifically place weapon in chest in Pole.tsc, see TODO
   tscFiles[firstArea]:replaceItem(itemDeck:getWeapon())
 
   -- Replace all items.

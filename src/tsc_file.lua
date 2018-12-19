@@ -43,6 +43,12 @@ function C:replaceItem(replacement)
   local template = "[%s] %s -> %s"
   logNotice(template:format(self._mapName, original.name, replacement.name))
 
+  if original.replaceBefore then
+    for needle, replacement in pairs(original.replaceBefore) do
+      self._text = self:_stringReplace(self._text, needle, replacement)
+    end
+  end
+
   -- Erase first, in case replace attribute would place some text that would match here...
   if original.erase then
     local erases = original.erase

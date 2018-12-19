@@ -664,3 +664,78 @@ Big thanks to all the people I got much of this research from!
       0xFD: Null [Unused]
       0xFE: Null [Unused]
       0xFF: Null [Unused]
+
+Weapons (AM+/AM-/AMJ/GIT/TAM)    Profile.dat bytes 0x038-098 (every 4 bytes: weapon, level (1-3),
+                                 energy, max ammo (0 = infinite), current ammo) (every 20 bytes)
+0000  [nothing?]
+0001 Snake
+0002 Polar Star
+0003 Fireball
+0004 Machine Gun
+0005 Missile Launcher
+0006 Missiles (GIT only)
+0007 Bubbler
+0008  [nothing?]
+0009 Blade
+0010 Super Missile Launcher
+0011 Super Missiles (GIT only)
+0012 Nemesis
+0013 Spur
+
+
+
+Items (GIT/IT+/IT-/ITJ)    Profile.dat bytes 0x0D8-14C (every 4 bytes) [Add 1000 to GIT?]
+0000  [Blank - Clears box in GIT]
+0001 Arthur's Key
+0002 Map System
+0003 Santa's Key
+0004 Silver Locket
+0005 Beast Fang
+0006 Life Capsule (GIT only)
+0007 ID Card
+0008 Jellyfish Juice
+0009 Rusty Key
+0010 Gum Key
+0011 Gum Base
+0012 Charcoal
+0013 Explosive
+0014 Puppy
+0015 Life Pot
+0016 Cure-All
+0017 Clinic Key
+0018 Booster 0.8
+0019 Arms Barrier
+0020 Turbocharge
+0021 Curly's Air Tank
+0022 Nikumaru Counter
+0023 Booster v2.0
+0024 Mimiga Mask
+0025 Teleporter Room Key
+0026 Sue's Letter
+0027 Controller
+0028 Broken Sprinkler
+0029 Sprinkler
+0030 Tow Rope
+0031 Clay Figure Medal
+0032 Little Man
+0033 Mushroom Badge
+0034 Ma Pignon
+0035 Curly's Underwear
+0036 Alien Medal
+0037 Chaco's Lipstick
+0038 Whimsical Star
+0039 Iron Bond
+
+
+
+Equip (EQ+/EQ-)        Profile.dat bytes 0x02C-02D (low byte first)
+0001 Booster v0.8 (ignored if v2.0 on)
+0002 Map System
+0004 Arms Barrier
+0008 Turbocharge
+0016 Curly's Air Tank
+0032 Booster v2.0
+0064 Mimiga Mask
+0128 Whimsical Star
+0256 Nikumaru Counter
+ NOTE: these are bitwise flags, the final value is the sum of the equipped items

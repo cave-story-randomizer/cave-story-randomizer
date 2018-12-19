@@ -8,6 +8,9 @@ function weapon(t)
   local getText = {}
   for _, name in ipairs(names) do
     table.insert(getText, ("Got the =%s=!<WAI0160<NOD"):format(name))
+    table.insert(getText, ("Got the =%s=.<WAI0160<NOD"):format(name)) -- Blade
+    table.insert(getText, ("=%s= complete!<WAI0160<NOD"):format(name)) -- Snake
+    table.insert(getText, ("=Polar Star= became the =%s=!"):format(name)) -- Spur
   end
   return {
     name = names[1],
@@ -17,6 +20,7 @@ function weapon(t)
     displayCmd = ("<GIT00%s"):format(t.id),
     music = "<CMU0010",
     kind = "weapon",
+    replaceBefore = t.replaceBefore,
   }
 end
 
@@ -54,6 +58,27 @@ function missiles(t)
   }
 end
 
+function equipment(t)
+  assert(t.name and t.map and t.id and t.equipMask)
+  return {
+    name = t.name,
+    map = t.map,
+    getText = {
+      ("Got the =%s=!<WAI0160<NOD"):format(t.name),
+      ("Got the =%s=!<WAI0160"):format(t.name), -- Whimsical Star
+    },
+    command = {
+      ("<IT+00%s<EQ+%s"):format(t.id, t.equipMask), -- Replacement
+      ("<IT+00%s"):format(t.id, t.equipMask), -- Needle
+    },
+    displayCmd = ("<GIT10%s"):format(t.id),
+    music = "<CMU0010",
+    -- Just erase <EQ+, since it's not always placed right after <IT+
+    -- We will add it again with command.
+    erase = ("<EQ+%s"):format(t.equipMask),
+  }
+end
+
 function item(t)
   assert(t.name and t.map and t.id and t.getText)
   return {
@@ -88,6 +113,75 @@ return {
     map = "Comu",
     id = "07",
     ammo = "0100",
+  }),
+  wMachineGun = weapon({
+    name = "Machine Gun",
+    map = "Curly",
+    id = "04",
+    ammo = "0100",
+    replaceBefore = {
+      ["<TAM0002:"] = "<AM-0002<AM+",
+    },
+    label = "0415",
+  }),
+  wBlade = weapon({
+    name = "Blade",
+    map = "Gard",
+    id = "09",
+    label = "0601",
+  }),
+  wSnake = weapon({
+    name = "Snake",
+    map = "MazeA",
+    id = "01",
+    replaceBefore = {
+      ["<TAM0002:"] = "<AM-0002<AM+",
+    },
+    label = "0401",
+  }),
+  wSpur = weapon({
+    name = "Spur",
+    map = "Pole",
+    id = "13",
+    replaceBefore = {
+      ["<TAM0002:"] = "<AM-0002<AM+",
+    },
+    label = "0302",
+  }),
+  wNemesis = weapon({
+    name = "Nemesis",
+    map = "Little",
+    id = "12",
+    replaceBefore = {
+      ["<TAM0009:"] = "<AM-0009<AM+",
+    },
+    label = "0200",
+  }),
+  -- Super Missile Launcher
+
+  ---------------
+  -- EQUIPMENT --
+  ---------------
+  eTurbocharge = equipment({
+    name = "Turbocharge",
+    map = "MazeA",
+    id = "20",
+    equipMask = "0008",
+    label = "0402",
+  }),
+  eWhimsicalStar = equipment({
+    name = "Whimsical Star",
+    map = "MazeA",
+    id = "38",
+    equipMask = "0128",
+    label = "0404",
+  }),
+  eWhimsicalStar = equipment({
+    name = "Arms Barrier",
+    map = "MazeO",
+    id = "19",
+    equipMask = "0004",
+    label = "0400",
   }),
 
   -------------------
@@ -201,20 +295,6 @@ return {
     },
     music = "",
   }),
-  --  - Turbocharge
-  -- If you chose to take the Machine Gun from Curly in the Sand Zone, then you can
-  -- receive this for free from the Gaudi shopkeeper, Chaba, in the Labyrinth.  It
-  -- speeds up the recovery rate of ammo for the Machine Gun.
-  --  - Arms Barrier
-  -- Halves weapon EXP lost when you take damage.  Found the top part of the Camp,
-  -- accessible via a hidden passageway in the ceiling in the large Labyrinth room
-  -- from which you can access the normal Camp entrance and the Clinic nearby.
-  -- Unless you took the Machine Gun, you'll have to come back to this area with the
-  -- Booster to be able to reach it.
-  --  - Whimsical Star
-  -- A trinket that you can receive from Chaba, the Gaudi shopkeep in the Labyrinth,
-  -- if you talk to him with the Spur weapon in your posession.  It will cause small
-  -- stars to float around you as a meagre shield when you charge the Spur to MAX.
   iLifePot = item({
     name = "Life Pot",
     map = "Cent",
@@ -237,7 +317,6 @@ return {
 Here, you can have this.<NOD<GIT0003<AM+0003:0000<CLR
 <CMU0010Got the =Fireball=!<WAI0160<NOD<RMU<GIT0000<CLRYou're looking for someone?<NOD
 
-
 #0301
 <KEY<GIT1008<MSGDo you want to use the
 =Jellyfish Juice=?<YNJ0000<CLO<GIT0000
@@ -245,6 +324,79 @@ Here, you can have this.<NOD<GIT0003<AM+0003:0000<CLR
 <MSGYou find something in the
 ashes...<NOD<CLR<GIT0007<AM+0007:0100
 <CMU0010Got the =Bubbler=!<WAI0160<NOD<CLO<RMU<DNP0300<END
+
+#0415
+<KEY<MSG<FAC0019Oh, wow.<NOD<CLRThat Polar Star of yours
+is in awful shape.<NOD
+Do you want to trade
+it for my machine gun?<YNJ0420<FL+0563<FAC0000<CLR
+<TAM0002:0004:0100<GIT0002Handed over the =Polar Star=.<NOD<CLR
+<CMU0010<GIT0004Got the =Machine Gun=!<WAI0160<NOD<RMU<CLO
+<FAO0004<TRA0029:0090:0012:0009
+
+#0601
+<KEY<FL-0621<DNP0505<AM+0009:0000
+<MSG<GIT0009<CMU0010
+Got the =Blade=.<WAI0160<NOD<RMU<END
+
+#0400
+<KEY<FLJ0721:0410<MSGHey there.<NOD<CLRThis is the Labyrinth Shop!<NOD
+But, sad to say, we got
+burgled a while back,<NOD
+and there's nothing to sell
+right now.<NOD
+Sorry 'bout that...<NOD<CLO<AMJ0002:0401<AMJ0013:0404<EVE0402
+#0401
+<KEY<MSGHm?<NOD<CLRHey, you've got something
+pretty spiffy there.<NOD<CLRA Polar Star and a Fireball,
+unless I miss my guess.<NOD<CLRCan I take a quick look at them?<YNJ0403<CLO
+<AM-0003
+<WAI0020<MSG<GIT0002Handed over the Polar Star.<NOD
+<GIT0003Handed over the Fireball.<NOD<GIT0000<CLR
+<SOU0044Hoho!<NOD<CLR<FL+0721<GIT0001<CLR
+<TAM0002:0001:0000<CMU0010=Snake= complete!<WAI0160<NOD<RMU<END
+#0402
+<KEY<FL+0721<MSG*sigh*<NOD<CLRHere. How about this?<NOD<CLR<GIT1020<CLR
+<CMU0010<IT+0020<EQ+0008Got the =Turbocharge=!<WAI0160<NOD<RMU<GIT0000<CLRYou can have it for free.<NOD
+I don't see any money on you,
+anyway.<NOD<END
+#0403
+<KEY<MSG<CLRYou're missing out!<NOD<END
+#0404
+<KEY<FL+0721<MSG*sigh*<NOD<CLRHere. How about this?<NOD<CLR<GIT1038<CLR
+<CMU0010<IT+0038Got the =Whimsical Star=!<WAI0160<EQ+0128<FL+0722<NOD<RMU<GIT0000<CLRJust a decoration, I'm afraid,<NOD
+but you've already got the
+strongest weapon, so what
+else can I do?<NOD<END
+
+#0302
+...
+You can keep this gun.<NOD<CMU0000<FAO0001
+After I finish it, of course.<NOD<CLO
+<WAI0150<FAI0001
+<FLA<WAI0050<TAM0002:0013:0000<FL+1644<FL+0303<MSG
+<CMU0010<MSG<GIT0013
+=Polar Star= became the =Spur=!<SMC<DNP0210<WAI0160<NOD<CMU0008<END
+
+#0200
+...
+if that isn't a fine-
+looking blade you've got
+there.<NOD
+Care to trade it for my fabulous
+gun?<YNJ0201<FL+1372<CLR
+<TAM0009:0012:0000<GIT0009Gave him the =Blade=.<NOD<CLR
+<CMU0010<GIT0012Got the =Nemesis=!<WAI0160<NOD<RMU<END
+#0201
+<PRI<MSGReally? Too bad.<NOD<END
+
+
+-- Equipment
+
+#0400
+<KEY<FLJ0705:0001<FL+0705<SOU0022<CNP0400:0021:0000
+<MSGOpened the treasure chest.<NOD<GIT1019<IT+0019<EQ+0004<CLR
+<CMU0010Got the =Arms Barrier=!<WAI0160<NOD<RMU<END
 
 -- Life Capsules
 
