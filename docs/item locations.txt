@@ -48,6 +48,7 @@ finished the rocket.  +5 HP.
 initial descent.  +5 HP.
 
 
+
 ** MISSILE EXPANSIONS **
 These each give +5 Max Missile Launcher Ammo.  Your max ammo carries over to
 the Super Missile Launcher.  You'll have 30 missile ammo if you find them all,
@@ -74,6 +75,89 @@ with an arrow Bute on either side.  Above this platform is a single Star Block
 concealing a chest containing this massive expansion of 24 Misisles.
 
 
+
+-----------------
+- 3-01  Weapons -
+-----------------
+
+ - Polar Star
+You find this weapon at the very beginning of the game.  It's not the strongest
+weapon, but it's definitely one of the easiest to use and useful in a wide
+variety of situations.  Keep it when Curly asks you to trade in the Sand Zone
+if you want the Snake or Spur weapons later.
+
+ - Machine Gun
+Given to you by Curly Brace if you trade her the Polar Star.  Keep the Polar
+Star when she asks you by choosing "No" if you want the Snake or Spur later in
+the game.  The Machine Gun is still an excellent weapon, though, and perfect
+for your first time through the game as it's not only the easiest Polar Star
+trade-off weapon to obtain but Level 3 allows you to float upwards in the
+air as long as you have ammo, vastly increasing your mobility.  It has an ammo
+count of 100 but auto-recharges, and the recharge rate vastly skyrockets once
+you get the Turbocharge key item which only works with the Machine Gun.
+
+ - Snake
+Obtained by keeping the Polar Star when Curly asks you to trade and then giving
+both the Polar Star and Fireball weapons to Chaba (the Gaudi shopkeep in the
+Labyrinth) when you reach him.  It's unique in that it's the only weapon in the
+game capable of passing through walls.  It's very similar to the Wave Beam in
+early Metroid games.
+
+ - Spur
+Unique weapon considered by many to be the ultimate weapon in the game, and it
+probably should be considering how long you have to keep the Polar Star if you
+want this.  You'll need to get the Booster 2.0 and fly back into the very first
+area of the game--before the Mimiga Village--and revisit the hermit weaponsmith
+with your original Polar Star to earn the Spur.  Instead of levelling up
+through crystals, it "gains levels" the longer you keep the shot button held
+down, and is the only weapon that has a different effect at MAX level compared
+to Level 3.
+
+ - Missile Launcher
+You recieve this early in the game, in the Egg Corridor.  It's the only weapon
+with limited ammo that doesn't automatically replenish, but it's also very
+powerful.  Easy to use, mostly works like a longer-ranged and more powerful
+version of the Polar Star.
+
+ - Super Missile Launcher
+Found in the Boulder Chamber, this is an upgrade to your Missile Launcher which
+basically makes every aspect of it better, though it takes a bit more EXP to
+level up.  Besides raw damage, the most noticeable upgrade from the standard
+Missile Launcher is the velocity of the missiles, or the speed at which they
+travel across the screen.  Also, the missiles launched by this weapon are gold
+in color.
+
+ - Fireball
+Given to you by Santa (the Mimiga with a strange name, not the Christmas guy)
+in the Bushlands for helping him get back into his house.  This can be a decent
+alternative to the Polar Star or Machine Gun early in the game, as it's the
+only weapon other than the Polar Star you'll find with truly unlimited ammo for
+awhile.  It shoots balls of plasma that bounce around along the ground, great
+for grounded enemies and for use around slopes, and its rapidity mixed with its
+good power for its point in the game makes it good against many bosses.
+
+ - Bubbline (aka Bubbler)
+A very unique hidden weapon obtainable by taking a Jelly Juice jar back to the
+assembly hall in Mimiga Village and putting out the fireplace there.  It's
+called the Bubbler in the English fan-translation of the PC version of Cave
+Story.  It has a lot of potential use at Level 3 but is otherwise pretty under-
+whelming.  It has an ammo supply of 100 which regenerates on its own slowly.
+
+ - Blade
+Very powerful weapon given to you by King at a certain point in the story.  Its
+rapidity is very low (except for rapid releases of Level 1 or 2 shots in a
+strong enemy or boss's face) and it has a short range, but the damage is huge
+and it has infinite ammo.
+
+ - Nemesis
+Special weapon of great strength that can be obtained by trading King's Blade
+to Mister Little.  The weapon is unique in that levelling it up outright causes
+it to weaken in every possible way, and it only takes 1 exp to level it up both
+levels.  Luckily, this also means that taking a hit from just about anything
+will guarantee resetting it to Level 1, at which point it's at its strongest.
+Overall, it's probably a more similar weapon to the Polar Star than anything
+else, even the weapons that you actually trade the Polar Star for.  Infinite
+ammo.
 
 
 
