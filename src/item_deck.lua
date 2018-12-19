@@ -11,10 +11,15 @@ function C:new()
 end
 
 local function _filterAny(item) return true end
+local function _filterAnyExceptMissiles(item) return item.kind ~= "missiles" end
 local function _filterWeapon(item) return item.kind == "weapon" end
 
 function C:getAny()
   return self:_getItem(_filterAny)
+end
+
+function C:getAnyExceptMissiles()
+  return self:_getItem(_filterAnyExceptMissiles)
 end
 
 function C:getWeapon()

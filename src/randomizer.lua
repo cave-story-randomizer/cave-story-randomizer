@@ -92,12 +92,31 @@ function C:_shuffleItems(tscFiles)
   }))
   local firstWeapon = itemDeck:getWeapon()
   tscFiles[firstArea]:replaceSpecificItem(firstItemKey, firstWeapon)
+  -- First cutscene won't play if missiles go in polar star chest.
+  if firstArea == 'Cave.tsc' then
+    tscFiles['Pole.tsc']:replaceSpecificItem('wPolarStar', itemDeck:getAnyExceptMissiles())
+  end
 
   -- Replace all weapon trades with random weapons
   tscFiles['Curly.tsc']:replaceSpecificItem('wMachineGun', itemDeck:getWeapon())
   tscFiles['MazeA.tsc']:replaceSpecificItem('wSnake', itemDeck:getWeapon())
   tscFiles['Pole.tsc']:replaceSpecificItem('wSpur', itemDeck:getWeapon())
   tscFiles['Little.tsc']:replaceSpecificItem('wNemesis', itemDeck:getWeapon())
+
+  -- Replace items which are part of elaborate events.
+  -- Missiles jump to a global event, so shouldn't be used here.
+  local items = {
+    {'Santa.tsc', 'wFireball'},
+    {'Chako.tsc', 'iChakosRouge'},
+    {'MazeA.tsc', 'eTurbocharge'},
+    {'MazeA.tsc', 'eWhimsicalStar'},
+    {'Cent.tsc', 'lPlantationA'},
+    {'Cent.tsc', 'iLifePot'},
+  }
+  for _, t in ipairs(items) do
+    local file, itemKey = unpack(t)
+    tscFiles[file]:replaceSpecificItem(itemKey, itemDeck:getAnyExceptMissiles())
+  end
 
   -- Replace the rest of the items.
   for _, tscFile in pairs(tscFiles) do

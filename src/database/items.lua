@@ -39,6 +39,7 @@ function equipment(t)
       ("Got the =%s=!<WAI0160"):format(t.name), -- Whimsical Star
       -- Cave Story+
       ("Obtained the %s.<WAI0160<NOD"):format(t.name),
+      ("Obtained the %s.<WAI0160"):format(t.name), -- Whimsical Star
     },
     command = {
       ("<IT+00%s<EQ+%s"):format(t.id, t.equipMask), -- Replacement
@@ -74,6 +75,7 @@ function item(t)
     command = ("<IT+00%s"):format(t.id),
     displayCmd = ("<GIT10%s"):format(t.id),
     music = t.music or "<CMU0010",
+    kind = "missiles",
     replaceBefore = t.replaceBefore,
   }
 end
