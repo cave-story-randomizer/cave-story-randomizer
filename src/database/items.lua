@@ -46,14 +46,26 @@ function equipment(t)
 end
 
 function item(t)
-  assert(t.name and t.map and t.id and t.getText)
+  assert(t.name and t.map and t.id)
+  local names = t.name
+  if type(names) == 'string' then
+    names = {names}
+  end
+  local getText = {}
+  for _, name in ipairs(names) do
+    table.insert(getText, ("Got the =%s=!<WAI0160<NOD"):format(name)) -- Replacement
+    table.insert(getText, ("Got a =%s=!<WAI0160<NOD"):format(name)) -- Life Pot
+    table.insert(getText, ("Found =%s=.<NOD"):format(name)) -- Curly's Panties
+    table.insert(getText, ".....") -- Chako's Rouge
+  end
   return {
-    name = t.name,
+    name = names[1],
     map = t.map,
-    getText = t.getText,
+    getText = getText,
     command = ("<IT+00%s"):format(t.id),
     displayCmd = ("<GIT10%s"):format(t.id),
-    music = t.music or "<CMU0010"
+    music = t.music or "<CMU0010",
+    replaceBefore = t.replaceBefore,
   }
 end
 
@@ -162,6 +174,13 @@ return {
   ---------------
   -- EQUIPMENT --
   ---------------
+  eMapSystem = equipment({
+    name = "Map System",
+    map = "Mimi",
+    id = "02",
+    equipMask = "0002",
+    label = "0200",
+  }),
   eTurbocharge = equipment({
     name = "Turbocharge",
     map = "MazeA",
@@ -187,23 +206,35 @@ return {
   -----------
   -- ITEMS --
   -----------
-  --  - Map System
-  --  - Chako's Rouge
+  iChakosRouge = item({
+    name = "Chako's Rouge",
+    name = {
+      "Chako's Rouge",
+      "Chaco's Lipstick", -- Probably doesn't matter, since no text?
+    },
+    map = "Chako",
+    id = "37",
+    music = "",
+    label = "0211",
+    replaceBefore = {
+      -- Display Item.
+      [".....<IT+0037<NOD"] = "<GIT1037.....<IT+0037",
+    },
+  }),
   iPanties = item({
-    name = "Curly's Panties",
+    name = "",
+    name = {
+      "Curly's Panties",
+      "Curly's Underwear",
+    },
     map = "CurlyS",
     id = "35",
-    getText = {
-      "Found =Curly's Panties=.",
-      "Found =Curly's Underwear=.",
-    },
     music = "",
   }),
   iLifePot = item({
     name = "Life Pot",
     map = "Cent",
     id = "15",
-    getText = "Got a =Life Pot=!",
     label = "0450",
   }),
 
@@ -391,12 +422,33 @@ gun?<YNJ0201<FL+1372<CLR
 <PRI<MSGReally? Too bad.<NOD<END
 
 
+
 -- Equipment
+
+#0200
+<PRI<FLJ0322:0201<FL+0322<SOU0022<CNP0200:0021:0000
+<MSGOpened the chest.<NOD<GIT1002<IT+0002<EQ+0002<CLR
+<CMU0010Got the =Map System=!<WAI0160<NOD<RMU<EVE0201
 
 #0400
 <KEY<FLJ0705:0001<FL+0705<SOU0022<CNP0400:0021:0000
 <MSGOpened the treasure chest.<NOD<GIT1019<IT+0019<EQ+0004<CLR
 <CMU0010Got the =Arms Barrier=!<WAI0160<NOD<RMU<END
+
+
+
+-- Items
+
+-- Chako's Rouge
+#0211
+<KEY<MSG
+Do you want to rest?<YNJ0000<FAO0004<CMU0000<WAI0020<CLR.....<IT+0037<NOD<CLO
+<MNP0300:0012:0006:0000<ANP0300:0010:0000
+<WAI0050
+<LI+1000<SOU0020<MYD0002<MSG
+Health restored.<NOD<CLO<RMU<FAI0004<END
+
+
 
 -- Life Capsules
 
