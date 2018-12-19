@@ -103,7 +103,7 @@ function missiles(t)
   }
 end
 
-return {
+local data = {
   -------------
   -- WEAPONS --
   -------------
@@ -326,7 +326,7 @@ return {
     map = "EggR2",
     label = "0302",
   }),
-  wSuperMissileLauncher = {
+  mSuperMissileLauncher = {
     name = "Super Missile Launcher",
     map = "MazeS",
     getText = {
@@ -349,6 +349,12 @@ return {
   -- with an arrow Bute on either side.  Above this platform is a single Star Block
   -- concealing a chest containing this massive expansion of 24 Misisles.
 }
+
+for k, t in pairs(data) do
+  t.key = k
+end
+
+return data
 
 --[[
 

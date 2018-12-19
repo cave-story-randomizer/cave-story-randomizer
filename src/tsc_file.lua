@@ -1,10 +1,5 @@
 local C = Class:extend()
 
--- https://www.lua.org/manual/5.1/manual.html#5.7
--- w+: Update mode, all previous data is erased;
--- b:  Binary mode, forces Windows to save with Unix endings.
-MODE_WRITE_ERASE_EXISTING = 'w+b'
-
 local ITEM_DATA = require 'database.items'
 
 function C:new(path)
@@ -27,7 +22,6 @@ function C:new(path)
       break -- continue
     end
     local item = _.clone(v)
-    item.key = k
     table.insert(self._unreplaced, item)
   until true end
   self._unreplaced = _.shuffle(self._unreplaced)
@@ -130,13 +124,8 @@ end
 
 function C:writeTo(path)
   logInfo('writing TSC to: ' .. path)
-
-  local file, err = io.open(path, MODE_WRITE_ERASE_EXISTING)
-  assert(err == nil, err)
   local encoded = self:_codec(self._text, 'encode')
-  file:write(encoded)
-  file:flush()
-  file:close()
+  U.writeFile(path, encoded)
 end
 
 function C:_codec(text, mode)

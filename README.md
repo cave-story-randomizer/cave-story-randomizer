@@ -4,7 +4,6 @@ Cave Story Randomizer
 Todo
 ----
 
-- Provide modified Cave.pxm. (When Bubbline or Fireball)
 - Print Warning/Error Count
 - Supress Hell Music Error
 - Write log

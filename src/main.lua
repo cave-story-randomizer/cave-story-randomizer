@@ -10,6 +10,8 @@ Terebi  = require 'lib.terebi'
 lf = love.filesystem
 lg = love.graphics
 
+U = require 'util'
+
 local LOG_LEVEL = 3
 local function _log(level, prefix, text, ...)
   if LOG_LEVEL >= level then

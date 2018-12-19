@@ -14,6 +14,12 @@ do
   end
 end
 
+local WEAPONS_WHICH_CAN_NOT_BREAK_BLOCKS = {
+  'wBubbline',
+  'wFireball',
+  'wSnake',
+}
+
 function C:randomize(path)
   local success, dirStage = self:_mountDirectory(path)
   if not success then
@@ -21,8 +27,11 @@ function C:randomize(path)
   end
   self:_seedRngesus()
   local tscFiles = self:_createTscFiles(dirStage)
-  self:_shuffleItems(tscFiles)
+  local canNotBreakBlocks = self:_shuffleItems(tscFiles)
   self:_writeModifiedData(tscFiles)
+  if canNotBreakBlocks then
+    self:_copyModifiedFirstCave()
+  end
   self:_unmountDirectory(path)
   return [[Randomized data successfully created!
 
@@ -76,7 +85,8 @@ function C:_shuffleItems(tscFiles)
     {'Cave.tsc', 'lFirstCave'},
     {'Pole.tsc', 'wPolarStar'},
   }))
-  tscFiles[firstArea]:replaceSpecificItem(firstItemKey, itemDeck:getWeapon())
+  local firstWeapon = itemDeck:getWeapon()
+  tscFiles[firstArea]:replaceSpecificItem(firstItemKey, firstWeapon)
 
   -- Replace all weapon trades with random weapons
   tscFiles['Curly.tsc']:replaceSpecificItem('wMachineGun', itemDeck:getWeapon())
@@ -90,6 +100,8 @@ function C:_shuffleItems(tscFiles)
       tscFile:replaceItem(itemDeck:getAny())
     end
   end
+
+  return _.contains(WEAPONS_WHICH_CAN_NOT_BREAK_BLOCKS, firstWeapon.key)
 end
 
 function C:_writeModifiedData(tscFiles)
@@ -104,6 +116,13 @@ function C:_writeModifiedData(tscFiles)
     local path = sourcePath .. '/data/Stage/' .. filename
     tscFile:writeTo(path)
   end
+end
+
+function C:_copyModifiedFirstCave()
+  local cavePxmPath = lf.getSourceBaseDirectory() .. '/data/Stage/Cave.pxm'
+  local data = lf.read('database/Cave.pxm')
+  assert(data)
+  U.writeFile(cavePxmPath, data)
 end
 
 function C:_unmountDirectory(path)
