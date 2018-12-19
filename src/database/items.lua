@@ -53,7 +53,7 @@ function item(t)
   end
   local getText = {}
   for _, name in ipairs(names) do
-    table.insert(getText, ("Got the =%s=!<WAI0160<NOD"):format(name)) -- Replacement
+    table.insert(getText, ("Got =%s=!<WAI0160<NOD"):format(name)) -- Replacement
     table.insert(getText, ("Got a =%s=!<WAI0160<NOD"):format(name)) -- Life Pot
     table.insert(getText, ("Found =%s=.<NOD"):format(name)) -- Curly's Panties
     table.insert(getText, ".....") -- Chako's Rouge
@@ -169,7 +169,6 @@ return {
     },
     label = "0200",
   }),
-  -- Super Missile Launcher
 
   ---------------
   -- EQUIPMENT --
@@ -232,7 +231,7 @@ return {
     music = "",
   }),
   iLifePot = item({
-    name = "Life Pot",
+    name = "a Life Pot",
     map = "Cent",
     id = "15",
     label = "0450",
@@ -327,6 +326,22 @@ return {
     map = "EggR2",
     label = "0302",
   }),
+  wSuperMissileLauncher = {
+    name = "Super Missile Launcher",
+    map = "MazeS",
+    getText = {
+      "Got the =Super Missile Launcher=!<WAI0160<NOD", -- Gameplay text
+      "Your Missiles have been powered up!<WAI0160<NOD", -- Actual text
+    },
+    command = "<AM-0005<AM+0010:0000",
+    displayCmd = "<GIT0010",
+    music = "<CMU0010",
+    replaceBefore = {
+      ["<FLJ0201:0201"] = "<EVE0201", -- Skip check which ensures you already have the missiles.
+      ["<TAM0005:"] = "<AM-0005<AM+",
+    },
+    label = "0201", -- Also 0200...
+  }
   -- !!!! Uses a unique script... will have to be crafty... !!!!
   -- [Sanctuary] Bonus expansion.  Just before you fight the Heavy Press at the
   -- far west end of Blood-Stained Sanctuary B3, just past the pillar with 3 Deletes
@@ -399,6 +414,16 @@ anyway.<NOD<END
 but you've already got the
 strongest weapon, so what
 else can I do?<NOD<END
+
+#0200
+<PRI<FLJ0201:0201<MSGA charm has been placed on it.
+It won't open...<NOD<END
+#0201
+<FLJ0766:0001<FL+0766<FL-0765<FL+0202
+<SOU0022<CNP0200:0021:0000
+<MSGOpened the treasure chest.<NOD<CLR<TAM0005:0010:0000
+<CMU0010<GIT0010Your Missiles have been powered up!<WAI0160<NOD<RMU<END
+
 
 #0302
 ...
