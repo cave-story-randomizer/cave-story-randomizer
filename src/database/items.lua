@@ -24,6 +24,39 @@ function weapon(t)
   }
 end
 
+function equipment(t)
+  assert(t.name and t.map and t.id and t.equipMask)
+  return {
+    name = t.name,
+    map = t.map,
+    getText = {
+      ("Got the =%s=!<WAI0160<NOD"):format(t.name),
+      ("Got the =%s=!<WAI0160"):format(t.name), -- Whimsical Star
+    },
+    command = {
+      ("<IT+00%s<EQ+%s"):format(t.id, t.equipMask), -- Replacement
+      ("<IT+00%s"):format(t.id, t.equipMask), -- Needle
+    },
+    displayCmd = ("<GIT10%s"):format(t.id),
+    music = "<CMU0010",
+    -- Just erase <EQ+, since it's not always placed right after <IT+
+    -- We will add it again with command.
+    erase = ("<EQ+%s"):format(t.equipMask),
+  }
+end
+
+function item(t)
+  assert(t.name and t.map and t.id and t.getText)
+  return {
+    name = t.name,
+    map = t.map,
+    getText = t.getText,
+    command = ("<IT+00%s"):format(t.id),
+    displayCmd = ("<GIT10%s"):format(t.id),
+    music = t.music or "<CMU0010"
+  }
+end
+
 function lifeCapsule(t)
   assert(t.hp and t.map)
   return {
@@ -55,39 +88,6 @@ function missiles(t)
     command = "<EVE0030",
     displayCmd = "",
     music = "",
-  }
-end
-
-function equipment(t)
-  assert(t.name and t.map and t.id and t.equipMask)
-  return {
-    name = t.name,
-    map = t.map,
-    getText = {
-      ("Got the =%s=!<WAI0160<NOD"):format(t.name),
-      ("Got the =%s=!<WAI0160"):format(t.name), -- Whimsical Star
-    },
-    command = {
-      ("<IT+00%s<EQ+%s"):format(t.id, t.equipMask), -- Replacement
-      ("<IT+00%s"):format(t.id, t.equipMask), -- Needle
-    },
-    displayCmd = ("<GIT10%s"):format(t.id),
-    music = "<CMU0010",
-    -- Just erase <EQ+, since it's not always placed right after <IT+
-    -- We will add it again with command.
-    erase = ("<EQ+%s"):format(t.equipMask),
-  }
-end
-
-function item(t)
-  assert(t.name and t.map and t.id and t.getText)
-  return {
-    name = t.name,
-    map = t.map,
-    getText = t.getText,
-    command = ("<IT+00%s"):format(t.id),
-    displayCmd = ("<GIT10%s"):format(t.id),
-    music = t.music or "<CMU0010"
   }
 end
 
@@ -182,6 +182,29 @@ return {
     id = "19",
     equipMask = "0004",
     label = "0400",
+  }),
+
+  -----------
+  -- ITEMS --
+  -----------
+  --  - Map System
+  --  - Chako's Rouge
+  iPanties = item({
+    name = "Curly's Panties",
+    map = "CurlyS",
+    id = "35",
+    getText = {
+      "Found =Curly's Panties=.",
+      "Found =Curly's Underwear=.",
+    },
+    music = "",
+  }),
+  iLifePot = item({
+    name = "Life Pot",
+    map = "Cent",
+    id = "15",
+    getText = "Got a =Life Pot=!",
+    label = "0450",
   }),
 
   -------------------
@@ -279,29 +302,6 @@ return {
   -- covering it, in the room filled with flying Butes and with a hanging platform
   -- with an arrow Bute on either side.  Above this platform is a single Star Block
   -- concealing a chest containing this massive expansion of 24 Misisles.
-
-  -----------
-  -- ITEMS --
-  -----------
-  --  - Map System
-  --  - Chako's Rouge
-  iPanties = item({
-    name = "Curly's Panties",
-    map = "CurlyS",
-    id = "35",
-    getText = {
-      "Found =Curly's Panties=.",
-      "Found =Curly's Underwear=.",
-    },
-    music = "",
-  }),
-  iLifePot = item({
-    name = "Life Pot",
-    map = "Cent",
-    id = "15",
-    getText = "Got a =Life Pot=!",
-    label = "0450",
-  }),
 }
 
 --[[

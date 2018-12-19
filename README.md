@@ -4,7 +4,8 @@ Cave Story Randomizer
 Todo
 ----
 
-- Add all items.
+- Randomize the rest of the items.
+- Randomize the super missiles upgrade.
 - Specifically replace first chest in Pole.tsc so that you always get a weapon.
 - Provide modified Cave.pxm. (When Bubbline or Fireball)
 - Trade Sequence Step A: Only weapons are acquired through trades.
