@@ -75,7 +75,6 @@ function item(t)
     command = ("<IT+00%s"):format(t.id),
     displayCmd = ("<GIT10%s"):format(t.id),
     music = t.music or "<CMU0010",
-    kind = "missiles",
     replaceBefore = t.replaceBefore,
   }
 end
@@ -126,6 +125,7 @@ function missiles(t)
     replaceBefore = {
       ["<EVE0030"] = "<CMU0010<GIT0006*MISSILE_TEXT*<RMU<EVE0030<END",
     },
+    kind = "missiles",
   }
 end
 
