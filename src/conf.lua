@@ -5,7 +5,7 @@ end
 function love.conf(t)
   t.window = {
     title = "Cave Story Randomizer",
-    icon = 'icon.png',
+    icon = 'assets/icon.png',
     width = 640,
     height = 480,
     resizable = false,

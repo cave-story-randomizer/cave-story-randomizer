@@ -19,9 +19,11 @@ Issues
 
 Bugs
 ----
-- Broken Egg Observation Room (Log/Included)
 - Sleeping with Chaco seemed to do nothing
 - Jellyfish juice box told me I got a life capsule, then it said "Max HP increased by 5! Max HP increased by 3!" and then gave me the juice and my HP was actually the same. It's doing this every time I get the juice.
+- Jenka gave me a life pot, but since I already had one, nothing happened. It even stayed in the same spot, instead of moving to the front.
+- King died to give me a health capsule. The boss music resumed after I took it.
+- btw, teleporter room key also caused the music glitch.
 
 Credits
 -------

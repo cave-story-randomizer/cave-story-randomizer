@@ -232,10 +232,9 @@ local data = {
   -- ITEMS --
   -----------
   iChakosRouge = item({
-    name = "Chako's Rouge",
     name = {
-      "Chako's Rouge",
-      "Chaco's Lipstick", -- Probably doesn't matter, since no text?
+      "Chaco's Lipstick",
+      "Chako's Rouge", -- Probably doesn't matter, since no text?
     },
     map = "Chako",
     id = "37",
@@ -247,7 +246,6 @@ local data = {
     },
   }),
   iPanties = item({
-    name = "",
     name = {
       "Curly's Panties",
       "Curly's Underwear",
