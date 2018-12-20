@@ -14,11 +14,20 @@ build:
   script:
     - cd src
     - love-release -W
+  cache:
+    key: build-cache
+    paths:
+    - src/releases/
 
 release:
   stage: release
   when: manual
   script:
-    - cd src/releases
+    - ls -l
+    - cd src
+    - ls -l
+    - cd releases
     - FILE=$(ls *-win32.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win32-$CHANNEL"
     # - FILE=$(ls *-win64.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win64-$CHANNEL"
+  cache:
+    key: build-cache
