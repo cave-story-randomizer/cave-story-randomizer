@@ -28,8 +28,10 @@ function C:randomize(path)
   end
   self:_seedRngesus()
   local tscFiles = self:_createTscFiles(dirStage)
+  -- self:_writePlaintext(tscFiles)
   local canNotBreakBlocks = self:_shuffleItems(tscFiles)
   self:_writeModifiedData(tscFiles)
+  -- self:_writePlaintext(tscFiles)
   if canNotBreakBlocks then
     self:_copyModifiedFirstCave()
   end
@@ -80,6 +82,20 @@ function C:_createTscFiles(dirStage)
     tscFiles[filename] = TscFile(path)
   end
   return tscFiles
+end
+
+function C:_writePlaintext(tscFiles)
+  local sourcePath = lf.getSourceBaseDirectory()
+
+  -- Create /data/Plaintext if it doesn't already exist.
+  local command = ('mkdir "%s"'):format(sourcePath .. '/data/Plaintext')
+  os.execute(command) -- HERE BE DRAGONS!!!
+
+  -- Write modified files.
+  for filename, tscFile in pairs(tscFiles) do
+    local path = sourcePath .. '/data/Plaintext/' .. filename
+    tscFile:writePlaintextTo(path)
+  end
 end
 
 function C:_shuffleItems(tscFiles)

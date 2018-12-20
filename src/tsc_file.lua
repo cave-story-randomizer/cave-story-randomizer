@@ -127,6 +127,11 @@ function C:_stringReplace(text, needle, replacement)
   return a .. replacement .. b, true
 end
 
+function C:writePlaintextTo(path)
+  logInfo('writing Plaintext TSC to: ' .. path)
+  U.writeFile(path, self._text)
+end
+
 function C:writeTo(path)
   logInfo('writing TSC to: ' .. path)
   local encoded = self:_codec(self._text, 'encode')
