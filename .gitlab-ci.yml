@@ -17,7 +17,7 @@ build-depoy:
 
     # II. Release
     - cd releases
-    - FILE=$(ls *-win64.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win64-$CHANNEL"
+    # - FILE=$(ls *-win64.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win64-$CHANNEL"
     - FILE=$(ls *-win32.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win32-$CHANNEL"
     # - FILE=$(ls *-macosx.zip) ; zip -ur "$FILE" "Cave Story Randomizer.app"  ;                                butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:osx-$CHANNEL"
     # # Workaround for issue where butler renames *.love to *.zip.

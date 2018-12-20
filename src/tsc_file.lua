@@ -90,6 +90,10 @@ function C:_replaceAttribute(original, replacement, attribute)
   if type(replaceText) == 'table' then
     replaceText = replaceText[1]
   end
+  -- Fix: After collecting Curly's Panties or Chako's Rouge, music would go silent.
+  if attribute == 'music' and replaceText == '' then
+    replaceText = "<CMU0010"
+  end
 
   -- Loop through each possible original value until we successfully replace one.
   for _, originalText in ipairs(originalTexts) do repeat

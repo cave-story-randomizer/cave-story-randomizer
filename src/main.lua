@@ -14,7 +14,6 @@ U = require 'util'
 
 local LOG_LEVEL, _logCounts, _logLines = 3, nil, nil
 local function _log(level, prefix, text, ...)
-
   if LOG_LEVEL >= level then
     local text = prefix .. text
     print(text, ...)

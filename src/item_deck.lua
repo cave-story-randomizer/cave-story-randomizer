@@ -22,6 +22,11 @@ function C:getAnyExceptMissiles()
   return self:_getItem(_filterAnyExceptMissiles)
 end
 
+function C:getByKey(key)
+  local filterByKey = function(item) return item.key == key end
+  return self:_getItem(filterByKey)
+end
+
 function C:getWeapon()
   return self:_getItem(_filterWeapon)
 end
