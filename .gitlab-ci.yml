@@ -6,28 +6,16 @@ variables:
   CHANNEL: $CI_COMMIT_REF_NAME
 
 stages:
-  - build
-  - release
+  - build-release
 
-build:
-  stage: build
-  script:
-    - cd src
-    - love-release -W
-  cache:
-    key: build-cache
-    paths:
-    - src/releases/
-
-release:
-  stage: release
+build-and-release:
+  stage: build-release
   when: manual
   script:
-    - ls -l
+    # I - Build
     - cd src
-    - ls -l
+    - love-release -W
+    # II - Release to itch.io
     - cd releases
     - FILE=$(ls *-win32.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win32-$CHANNEL"
     # - FILE=$(ls *-win64.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win64-$CHANNEL"
-  cache:
-    key: build-cache
