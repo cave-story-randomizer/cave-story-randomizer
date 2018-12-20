@@ -7,24 +7,18 @@ variables:
 
 stages:
   - build
+  - release
 
-build-depoy:
+build:
   stage: build
   script:
-    # I. Build
     - cd src
-    - love-release -W # -M (Skip MacOS for now, since broken after Love 11.)
+    - love-release -W
 
-    # II. Release
-    - cd releases
-    # - FILE=$(ls *-win64.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win64-$CHANNEL"
+release:
+  stage: release
+  when: manual
+  script:
+    - cd src/releases
     - FILE=$(ls *-win32.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win32-$CHANNEL"
-    # - FILE=$(ls *-macosx.zip) ; zip -ur "$FILE" "Cave Story Randomizer.app"  ;                                butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:osx-$CHANNEL"
-    # # Workaround for issue where butler renames *.love to *.zip.
-    # - FILE=$(ls *.love) ; mkdir love-file-dir ; mv "$FILE" love-file-dir
-    # - butler push love-file-dir "$ITCHIO_USER/$ITCHIO_GAME:linux-$CHANNEL"
-
-cache:
-  key: rocks
-  paths:
-    - src/rocks
+    # - FILE=$(ls *-win64.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win64-$CHANNEL"
