@@ -111,13 +111,21 @@ function missiles(t)
     name = "Missiles",
     map = t.map,
     getText = {
-      "",
-      "Opened the treasure chest.<NOD", -- Normal case
-      "Opened the treasure chest.", -- WeedB (fight with Kulala.)
+      "", -- Doesn't have getText in untouched map script.
+      "*MISSILE_TEXT*",
     },
     command = "<EVE0030",
-    displayCmd = "",
-    music = "",
+    displayCmd = {
+      "", -- Doesn't use GIT in untouched map script.
+      "<GIT0006",
+    },
+    music = {
+      "", -- Doesn't use Music in untouched map script.
+      "<CMU0010",
+    },
+    replaceBefore = {
+      ["<EVE0030"] = "<CMU0010<GIT0006*MISSILE_TEXT*<RMU<EVE0030<END",
+    },
   }
 end
 
