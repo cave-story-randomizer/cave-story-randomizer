@@ -64,9 +64,11 @@ function item(t)
     table.insert(getText, ("Got =%s=!<WAI0160<NOD"):format(name)) -- Replacement
     table.insert(getText, ("Got a =%s=!<WAI0160<NOD"):format(name)) -- Life Pot
     table.insert(getText, ("Found =%s=.<NOD"):format(name)) -- Curly's Panties
+    table.insert(getText, ("Got the =%s=.<WAI0160<NOD"):format(name)) -- Clay Figure Medal
     table.insert(getText, ".....") -- Chako's Rouge
     -- Cave Story+
     table.insert(getText, ("Found %s.<NOD"):format(name)) -- Curly's Panties
+    table.insert(getText, ("Obtained the %s.<WAI0160<NOD"):format(name)) -- Clay Figure Medal
   end
   return {
     name = names[1],
@@ -260,6 +262,30 @@ local data = {
     id = "15",
     label = "0450",
   }),
+  iAlienMedal = item({
+    name = "Alien Medal",
+    map = "Stream",
+    id = "36",
+    label = "1011",
+    replaceBefore = {
+      ["<IT+0036"] = "<CMU0010<GIT1036Got =Alien Medal=!<WAI0160<NOD<RMU<IT+0036<END",
+    }
+  }),
+  iClayFigureMedal = item({
+    name = {
+      "Clay Figure Medal",
+      "Medal of the Red Ogre",
+    },
+    map = "Priso2",
+    id = "31",
+    label = "0251",
+    replaceBefore = {
+      -- Remove achievement trigger which appears in Cave Story+.
+      ["<ACH0041"] = "",
+    }
+  }),
+
+
 
   -------------------
   -- LIFE CAPSULES --

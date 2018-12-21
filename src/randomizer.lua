@@ -126,6 +126,7 @@ function C:_shuffleItems(tscFiles)
     {'Chako.tsc', 'iChakosRouge'},
     {'MazeA.tsc', 'eTurbocharge'},
     {'MazeA.tsc', 'eWhimsicalStar'},
+    {'Stream.tsc', 'iAlienMedal'},
     {'Cent.tsc', 'lPlantationA'},
     {'Cent.tsc', 'iLifePot'},
   }
