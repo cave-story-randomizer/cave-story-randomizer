@@ -1,4 +1,5 @@
-image: shru/arch-love-release:heavy
+# image: shru/arch-love-release:heavy
+image: asmfreak/love-release:latest
 
 variables:
   ITCHIO_USER: shru
