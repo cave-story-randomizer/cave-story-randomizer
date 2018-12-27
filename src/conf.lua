@@ -21,7 +21,7 @@ function love.conf(t)
     title = 'Cave Story Randomizer',
     -- This is the name of your game's executable.
     package = 'Cave Story Randomizer',
-    loveVersion = '11.1',
+    loveVersion = '11.2',
     version = nil,
     author = 'shru',
     email = nil,

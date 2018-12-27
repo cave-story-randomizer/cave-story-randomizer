@@ -12,7 +12,9 @@ Todo
 Issues
 ------
 
-- Random Mimiga in top left of Plantation seemingly gave +3? Probably a substition error with Life Capsule.
+- [Speedrun] Random Mimiga in top left of Plantation seemingly gave +3? Probably a substition error with Life Capsule. https://youtu.be/PYhd9zhFdAk?t=5280
+- [Speedrun] Snake in sisters fight https://youtu.be/PYhd9zhFdAk?t=4769
+- [Speedrun] Best Ending events: Timer room and Curly's bed in plantation.
 - Collecting the Super Missile Launcher increases your maximum missiles by 5. This does not normally happen.
 - 3 Life Capsules can not be replaced because they appear on maps with 2 capsules. Need label-aware replace.
 - Hell Missile Upgrade uses a unique script and won't be easy to replace.
