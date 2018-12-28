@@ -268,7 +268,7 @@ local data = {
     id = "36",
     label = "1011",
     replaceBefore = {
-      ["<IT+0036"] = "<CMU0010<GIT1036Got =Alien Medal=!<WAI0160<NOD<RMU<IT+0036<END",
+      ["<IT+0036"] = "<CMU0010<GIT1036Got =Alien Medal=!<WAI0160<NOD<RMU<IT+0036",
     }
   }),
   iClayFigureMedal = item({

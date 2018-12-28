@@ -19,6 +19,7 @@ Issues
 - 3 Life Capsules can not be replaced because they appear on maps with 2 capsules. Need label-aware replace.
 - Hell Missile Upgrade uses a unique script and won't be easy to replace.
 - Trading back the Nemesis for the Blade almost certainly will be weird.
+- Ikachan Medal aquisition happens in black screen, so it doesn't make sense to show text box as it makes the player have to mash through blackness.
 
 Bugs
 ----
