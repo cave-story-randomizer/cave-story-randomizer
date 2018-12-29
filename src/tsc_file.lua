@@ -234,14 +234,6 @@ function C:_codec(text, mode)
   end
   local decoded = table.concat(chars)
 
-  -- local t = {}
-  -- decoded:gsub(".",function(c) table.insert(t,c) end)
-  -- local near = 7
-  -- for i = encodingCharPosition - near, encodingCharPosition + near do
-  --   local c = t[i]
-  --   logDebug(i, c, c:byte())
-  -- end
-
   return decoded
 end
 

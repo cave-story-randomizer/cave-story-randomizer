@@ -36,7 +36,7 @@ function C:randomize(path)
   -- self:_writePlaintext(tscFiles)
   local canNotBreakBlocks = self:_shuffleItems(tscFiles)
   self:_writeModifiedData(tscFiles)
-  -- self:_writePlaintext(tscFiles)
+  self:_writePlaintext(tscFiles)
   if canNotBreakBlocks then
     self:_copyModifiedFirstCave()
   end

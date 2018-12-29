@@ -18,5 +18,6 @@ build-and-release:
     - love-release -W
     # II - Release to itch.io
     - cd releases
-    - FILE=$(ls *-win32.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win32-$CHANNEL"
-    # - FILE=$(ls *-win64.zip) ; butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win64-$CHANNEL"
+    - FILE=$(ls *-win32.zip) ;
+      zip -d "$FILE" "*/lovec.exe" "*/changes.txt" "*/readme.txt" "*.ico" ;
+      butler push "$FILE" "$ITCHIO_USER/$ITCHIO_GAME:win32-$CHANNEL"
