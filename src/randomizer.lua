@@ -22,6 +22,7 @@ local WEAPONS_WHICH_CAN_NOT_BREAK_BLOCKS = {
 
 function C:randomize(path)
   resetLog()
+  logNotice('=== Cave Story Randomizer v' .. VERSION .. ' ===')
   local success, dirStage = self:_mountDirectory(path)
   if not success then
     return "Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?"

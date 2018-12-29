@@ -2,6 +2,12 @@ local C = Class:extend()
 
 local ITEM_DATA = require 'database.items'
 
+local OPTIONAL_REPLACES = {
+  'Max health increased by ',
+  'Max life increased by ',
+  '<ACH0041', -- Cave Story+ only, trigger achievement.
+}
+
 function C:new(path)
   logInfo('reading TSC: ' .. path)
 
@@ -53,21 +59,26 @@ function C:replaceSpecificItem(originalKey, replacement)
   local template = "[%s] %s -> %s"
   logNotice(template:format(self._mapName, original.name, replacement.name))
 
-  -- Replace before
+  -- Replace before.
   if original.replaceBefore then
     for needle, replacement in pairs(original.replaceBefore) do
-      self._text = self:_stringReplace(self._text, needle, replacement)
-    end
-  end
+      local wasChanged
+      self._text, wasChanged = self:_stringReplace(self._text, needle, replacement, original.label)
 
-  -- Erase first, in case replace attribute would place some text that would match here...
-  if original.erase then
-    local erases = original.erase
-    if type(erases) == 'string' then
-      erases = {erases}
-    end
-    for _, erase in ipairs(erases) do
-      self._text = self:_stringReplace(self._text, erase, '')
+      -- Log error if replace was not optional.
+      if wasChanged == false then
+        local wasOptional = false
+        for _, pattern in ipairs(OPTIONAL_REPLACES) do
+          if needle:find(pattern, 1, true) then
+            wasOptional = true
+            break
+          end
+        end
+        if wasOptional == false then
+          local template = 'Unable to replace [%s] "%s" with "%s".'
+          logError(template:format(original.map, needle, replacement))
+        end
+      end
     end
   end
 
@@ -101,7 +112,7 @@ function C:_replaceAttribute(original, replacement, attribute)
       break -- continue
     end
     local changed
-    self._text, changed = self:_stringReplace(self._text, originalText, replaceText)
+    self._text, changed = self:_stringReplace(self._text, originalText, replaceText, original.label)
     if changed then
       return
     end
@@ -112,10 +123,15 @@ function C:_replaceAttribute(original, replacement, attribute)
   logMethod(template:format(attribute, original.map, original.name))
 end
 
-function C:_stringReplace(text, needle, replacement)
-  local i = text:find(needle, 1, true)
+function C:_stringReplace(text, needle, replacement, label)
+  local pStart, pEnd = self:_getLabelPositionRange(label)
+  local i = text:find(needle, pStart, true)
   if i == nil then
     -- logWarning(('Unable to replace "%s" with "%s"'):format(needle, replacement))
+    return text, false
+  elseif i > pEnd then
+    -- This is totally normal and can be ignored.
+    -- logDebug(('Found "%s", but was outside of label.'):format(needle, replacement))
     return text, false
   end
   local len = needle:len()
@@ -125,6 +141,57 @@ function C:_stringReplace(text, needle, replacement)
   local a = text:sub(1, i - 1)
   local b = text:sub(j + 1)
   return a .. replacement .. b, true
+end
+
+function C:_getLabelPositionRange(label)
+  local labelStart, labelEnd
+
+  -- Recursive shit for when label is a table...
+  if type(label) == 'table' then
+    labelStart, labelEnd = math.huge, 0
+    for _, _label in ipairs(label) do
+      local _start, _end = self:_getLabelPositionRange(_label)
+      labelStart = math.min(labelStart, _start)
+      labelEnd   = math.max(labelEnd,   _end)
+    end
+    return labelStart, labelEnd
+  end
+
+  assert(type(label) == 'string')
+  assert(#label == 4)
+  assert(tonumber(label) >= 1)
+  assert(tonumber(label) <= 9999)
+
+  local i = 1
+  local labelPattern = "#%d%d%d%d\r\n"
+  while true do
+    local j = self._text:find(labelPattern, i)
+    if j == nil then
+      break
+    end
+    i = j + 1
+
+    if labelStart then
+      labelEnd = j - 1
+      break
+    end
+
+    local _label = self._text:sub(j + 1, j + 4)
+    if label == _label then
+      labelStart = j
+    end
+  end
+
+  if labelStart == nil then
+    logError("Could not find label: " .. label)
+    labelStart = 1
+  end
+
+  if labelEnd == nil then
+    labelEnd = #self._text
+  end
+
+  return labelStart, labelEnd
 end
 
 function C:writePlaintextTo(path)
