@@ -20,6 +20,10 @@ local WEAPONS_WHICH_CAN_NOT_BREAK_BLOCKS = {
   'wSnake',
 }
 
+function C:new()
+  self._isCaveStoryPlus = false
+end
+
 function C:randomize(path)
   resetLog()
   logNotice('=== Cave Story Randomizer v' .. VERSION .. ' ===')
@@ -57,6 +61,7 @@ function C:_mountDirectory(path)
   local containsBase = _.contains(items, 'base')
   if containsBase then
     dirStage = dirStage .. '/base'
+    self._isCaveStoryPlus = true
   end
 
   local items = lf.getDirectoryItems(dirStage)
@@ -147,31 +152,47 @@ function C:_shuffleItems(tscFiles)
 end
 
 function C:_writeModifiedData(tscFiles)
-  local sourcePath = lf.getSourceBaseDirectory()
-
-  -- Create /data/Stage if it doesn't already exist.
-  local command = ('mkdir "%s"'):format(sourcePath .. '/data/Stage')
-  os.execute(command) -- HERE BE DRAGONS!!!
-
-  -- Write modified files.
+  local basePath = self:_getWritePathStage()
   for filename, tscFile in pairs(tscFiles) do
-    local path = sourcePath .. '/data/Stage/' .. filename
+    local path = basePath .. '/' .. filename
     tscFile:writeTo(path)
   end
 end
 
 function C:_copyModifiedFirstCave()
-  local cavePxmPath = lf.getSourceBaseDirectory() .. '/data/Stage/Cave.pxm'
+  local cavePxmPath = self:_getWritePathStage() .. '/Cave.pxm'
   local data = lf.read('database/Cave.pxm')
   assert(data)
   U.writeFile(cavePxmPath, data)
 end
 
 function C:_writeLog()
-  local path = lf.getSourceBaseDirectory() .. '/data/log.txt'
+  local path = self:_getWritePath() .. '/log.txt'
   local data = getLogText()
   U.writeFile(path, data)
   print("\n")
+end
+
+function C:_getWritePath()
+  return select(1, self:_getWritePaths())
+end
+
+function C:_getWritePathStage()
+  return select(2, self:_getWritePaths())
+end
+
+function C:_getWritePaths()
+  if self._writePath == nil then
+    local sourcePath = lf.getSourceBaseDirectory()
+    self._writePath = sourcePath .. '/data'
+    self._writePathStage = (self._isCaveStoryPlus)
+      and (self._writePath .. '/base/Stage')
+      or  (self._writePath .. '/Stage')
+    -- Create /data(/base)/Stage if it doesn't already exist.
+    local command = ('mkdir "%s"'):format(self._writePathStage)
+    os.execute(command) -- HERE BE DRAGONS!!!
+  end
+  return self._writePath, self._writePathStage
 end
 
 function C:_unmountDirectory(path)

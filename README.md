@@ -4,7 +4,6 @@ Cave Story Randomizer
 Todo
 ----
 
-- Generate correct directory structure for Cave Story+.
 - Remove Love files... lovec.exe, readme, etc.
 - Trade Sequence Step B: Require random obtainable weapon, instead of always polar star and fireball.
 - Randomize Booster v0.8 / v2.0

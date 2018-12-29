@@ -72,6 +72,7 @@ function item(t)
     table.insert(getText, ".....") -- Chako's Rouge
     -- Cave Story+
     table.insert(getText, ("Found %s.<NOD"):format(name)) -- Curly's Panties
+    table.insert(getText, ("Obtained a %s.<WAI0160<NOD"):format(name)) -- Life Po
     table.insert(getText, ("Obtained the %s.<WAI0160<NOD"):format(name)) -- Clay Figure Medal
   end
   return {

@@ -38,7 +38,7 @@ function resetLog()
 end
 resetLog()
 
-local randomizer = require 'randomizer'()
+local Randomizer = require 'randomizer'
 local background
 local font
 local screen
@@ -54,6 +54,7 @@ function love.load()
 end
 
 function love.directorydropped(path)
+  local randomizer = Randomizer()
   status = randomizer:randomize(path)
 end
 
