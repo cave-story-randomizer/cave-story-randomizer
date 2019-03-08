@@ -21,11 +21,7 @@
 <PRI<MSGIt won't open!<NOD<END
 
 #0200
-<PRI<FLJ1564:0101<FLJ2400:0201<FL+2400<SOU0022<CNP0200:0021:0000<EVE0202
-#0201
-<PRI<MSGSomething's written here...<NOD<CLR<TURSo long as you retain your spirit
-of exploration, surely you shall
-find your way out. This I believe.<NOD<END
+<PRI<FLJ1564:0101<FLJ2400:0001<FL+2400<SOU0022<CNP0200:0021:0000<EVE0202
 #0202
 <MSG<TUR<GIT1033<IT+0033Got the =Mushroom Badge=!<WAI0025<NOD<END
 
