@@ -1,5 +1,5 @@
 local data = {
-    firstCave1 = {
+    firstCave1 = { -- locations available at the absolute beginning of the game. can't be returned to, but can't be left without obtaining both items
         connections = {
             mimigaVillage = {{"weaponSN"}}
         },
@@ -14,10 +14,9 @@ local data = {
                 map = "Pole",
                 event = "#0402"
             }
-        },
-        events = {}
+        }
     },
-    firstCave2 = {
+    firstCave2 = { -- locations available on the return trip to first cave
         connections = {
             mimigaVillage = {{"weaponSN"}}
         },
@@ -27,12 +26,11 @@ local data = {
                 map = "Pole",
                 event = "#0303"
             }
-        },
-        events = {}
+        }
     }
     mimigaVillage = {
         connections = {
-            firstCave2 = {{"weaponSN", "machineGun"}, {"weaponSN", "booster1"}},
+            firstCave2 = {{"weaponSN", "flight"}},
             arthur = {{"arthursKey"}}
         },
         locations = {
@@ -56,29 +54,33 @@ local data = {
                 map = "Comu",
                 event = "#0303"
             },
+            mrLittle = { -- guaranteed to have the little man item, for simplicity's sake (more of an escort quest than fetch quest imo)
+                requirements = {{"locket"}},
+                map = "Cemet",
+                event = "#0301"
+            },
             graveyard = {
                 requirements = {{"locket"}},
                 map = "Cemet",
                 event = "#0301"
             },
-            mushroom = {
-                requirements = {{"locket", "eventCurly", "machineGun"}, {"locket", "eventCurly", "booster1"}},
+            mushroom = { -- placed in a chest, can't open unless curly has been saved
+                requirements = {{"locket", "eventCurly", "flight"}},
                 map = "Mapi",
                 event = "#0202"
             },
-            maPignon = {
-                requirements = {{"locket", "mushroomBadge", "weapon", "booster1"}, {"locket", "mushroomBadge", "machineGun"}},
+            maPignon = { -- no need to check the mushroom badge, just need to have it
+                requirements = {{"locket", "mushroomBadge", "weaponBoss", "flight"}},
                 map = "Mapi",
                 event = "#0501"
             }
-        },
-        events = {}
+        }
     }
     arthur = {
         connections = {
             mimigaVillage = {{"arthursKey"}},
             eggCorridor1 = {},
-            eggCorridor2 = {{"eventCore"}, --also unlocks if you have access to the teleporter between grasstown and plantation, but that's logically redundant
+            eggCorridor2 = {{"eventCore"}, -- also unlocks if you have access to the teleporter between grasstown and plantation, but that's logically redundant
             grasstownWest = {},
             upperSandZone = {{"weaponSN"}},
             labyrinthB = {},
@@ -120,14 +122,14 @@ local data = {
         },
         events = {
             eventSue = {
-                requirements = {{"idCard", "weapon"}}
+                requirements = {{"idCard", "weaponBoss"}}
             }
         }
     },
     grasstownWest = {
         connections = {
             arthur = {},
-            grasstownEast = {{"juice"}, {"booster1"}, {"machineGun"}}
+            grasstownEast = {{"juice"}, {"flight"}} -- can also sequence break over with a damage boost!
         },
         locations = {
             keySpot = {
@@ -156,16 +158,15 @@ local data = {
                 event = "#6969"
             },
             kulala = {
-                requirements = {{"santaKey", "weapon"}, {"fireball"}},
+                requirements = {{"santaKey", "weaponBoss"}, {"fireball"}},
                 map = "Weed",
                 event = "0000"
             }
-        },
-        events = {}
+        }
     },
     grasstownEast = {
         connections = {
-            grasstownWest = {{"eventFans"}, {"machineGun"}, {"booster1"}},
+            grasstownWest = {{"eventFans"}, {"flight"}},
             plantation = {{"bomb", "weaponSN"}}
         },
         locations = {
@@ -185,17 +186,17 @@ local data = {
                 event = "#0000"
             },
             outsideHut = {
-                requirements = {{"eventFans"}, {"machineGun"}, {"booster1"}},
+                requirements = {{"eventFans"}, {"flight"}},
                 map = "Weed",
                 event = "#0000"
             },
             hutChest = {
-                requirements = {{"eventFans"}, {"machineGun"}, {"booster1"}},
+                requirements = {{"eventFans"}, {"flight"}},
                 map = "WeedB",
                 event = "#0000"
             },
             gumChest = {
-                requirements = {{"eventFans", "gumKey", "weapon"}, {"machineGun", "gumKey"}, {"booster1", "gumKey", "weapon"}},
+                requirements = {{"eventFans", "gumKey", "weaponBoss"}, {"flight", "gumKey", "weaponBoss"}},
                 map = "Frog",
                 event = "#0000"
             },
@@ -207,7 +208,7 @@ local data = {
         },
         events = {
             eventFans = {
-                requirements = {{"rustyKey", "weapon"}}
+                requirements = {{"rustyKey", "weaponBoss"}}
             }
         }
     },
@@ -247,7 +248,7 @@ local data = {
     lowerSandZone = {
         connections = {
             upperSandZone = {{"eventOmega"}},
-            labyrinthW = {{"puppies", "weapon"}, {"booster1"}, {"machineGun"}}
+            labyrinthW = {{"puppy1", "puppy2", "puppy3", "puppy4", "puppy5", "weaponBoss"}, {"flight"}}
         },
         locations = {
             chestPup = {
@@ -276,22 +277,21 @@ local data = {
                 event = "#0000"
             },
             jenka = {
-                requirements = {{"puppies"}},
+                requirements = {{"puppy1", "puppy2", "puppy3", "puppy4", "puppy5"}},
                 map = "Jenka1",
                 event = "#0000"
             },
             king = {
-                requirements = {{"puppies", "weapon"}},
+                requirements = {{"puppy1", "puppy2", "puppy3", "puppy4", "puppy5", "weaponBoss"}},
                 map = "Gard",
                 event = "#0000"
             }
-        },
-        events = {}
+        }
     },
     labyrinthB = {
         connections = {
-            labyrinthW = {{"machineGun"}, {"booster1", "weapon"}},
-            boulder = {{"machineGun"}, {"booster1"}},
+            labyrinthW = {{"flight", "weaponBoss"}},
+            boulder = {{"flight"}},
             arthur = {}
         },
         locations = {
@@ -300,19 +300,18 @@ local data = {
                 map = "MazeB",
                 event = "#0000"
             }
-        },
-        events = {}
+        }
     },
     labyrinthW = {
         connections = {
             lowerSandZone = {},
-            labyrinthB = {{"weapon"}},
+            labyrinthB = {{"weaponBoss"}},
             boulder = {},
-            labyrinthM = {{"machineGun"}, {"booster1"}}
+            labyrinthM = {{"flight"}}
         },
         locations = {
             critterCapsule = {
-                requirements = {{"weapon"}},
+                requirements = {{"weaponBoss"}},
                 map = "MazeI",
                 event = "#0000"
             },
@@ -332,7 +331,7 @@ local data = {
                 event = "#0000"
             },
             armsBarrier = {
-                requirements = {{"machineGun"}, {"booster1"}},
+                requirements = {{"flight"}},
                 map = "MazeO",
                 event = "#0000"
             },
@@ -342,45 +341,39 @@ local data = {
                 event = "#0000"
             },
             puuBlack = {
-                requirements = {{"clinicKey", "weapon"}},
+                requirements = {{"clinicKey", "weaponBoss"}},
                 map = "MazeD",
                 event = "#0000"
             }
-        },
-        events = {}
+        }
     },
     boulder = {
         connections = {
             labyrinthB = {},
             labyrinthW = {},
-            labyrinthM = {{"cureAll", "weapon"}}
+            labyrinthM = {{"cureAll", "weaponBoss"}}
         },
         locations = {
             boulderChest = {
-                requirements = {{"cureAll", "weapon"}},
+                requirements = {{"cureAll", "weaponBoss"}},
                 map = "MazeS",
                 event = "#0000"
             }
-        },
-        events = {}
+        }
     },
     labyrinthM = {
         connections = {
             labyrinthW = {},
-            boulder = {{"cureAll", "weapon"}},
+            boulder = {{"cureAll", "weaponBoss"}},
             darkPlace = {}
         },
-        locations = {},
-        events = {}
     },
     darkPlace = {
         connections = {
             waterway = {{"airTank"}},
             core = {{"cureAll"}},
             labyrinthM = {}
-        },
-        locations = {},
-        events = {}
+        }
     },
     core = {
         connections = {
@@ -400,7 +393,7 @@ local data = {
         },
         events = {
             eventCore = {
-                requirements = {{"weapon"}}
+                requirements = {{"weaponBoss"}}
             }
         }
     },
@@ -429,22 +422,21 @@ local data = {
         },
         locations = {
             dragonChest = {
-                requirements = {{"weapon"}},
+                requirements = {{"weaponBoss"}},
                 map = "Eggs2",
                 event = "#0000"
             },
             sisters = {
-                requirements = {{"weapon"}},
+                requirements = {{"weaponBoss"}},
                 map = "EggR2",
                 event = "#0000"
             }
-        },
-        events = {}
+        }
     },
     outerWall = {
         connections = {
             eggCorridor2 = {{"bomb"}},
-            plantation = {{"machineGun"}, {"booster1"}}
+            plantation = {{"flight"}}
         },
         locations = {
             clock = {
@@ -452,20 +444,19 @@ local data = {
                 map = "Clock",
                 event = "#0000"
             },
-            mrLittle = {
-                requirements = {{"locket", "machineGun"}, {"locket", "booster1"}},
+            littleHouse = {
+                requirements = {{"little", "flight"}},
                 map = "Little",
                 event = "#0000"
             }
-        },
-        events = {}
+        }
     },
     plantation = {
         connections = {
             arthur = {{"teleportKey"}},
             outerWall = {},
             grasstownEast = {{"bomb", "weaponSN"}},
-            lastCave = {{"eventRocket", "booster2", "weapon"}}
+            lastCave = {{"eventRocket", "booster2", "weaponBoss"}}
         },
         locations = {
             kanpachi = {
@@ -494,7 +485,7 @@ local data = {
                 event = "#0000"
             },
             topCapsule = {
-                requirements = {{"machineGun", "booster1"}},
+                requirements = {{"flight"}},
                 map = "Cent",
                 event = "#0000"
             },
@@ -526,8 +517,7 @@ local data = {
                 map = "Priso2",
                 event = "#0000",
             }
-        },
-        events = {}
+        }
     },
     balcony = {
         connections = {

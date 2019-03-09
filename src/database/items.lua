@@ -422,6 +422,275 @@ local data = {
   -- concealing a chest containing this massive expansion of 24 Missiles.
 }
 
+function an_item(t) 
+  return t
+end
+
+function arms(t)
+  return an_item(t)
+end
+
+function inventory(t)
+  return an_item(t)
+end
+
+function life_capsule(health)
+  return an_item({
+    name = "Life Capsule",
+    script = ("<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+%04d\n\rMax health increased by %s!<WAI0025<NOD<END"):format(health, health)
+  })
+end
+
+function missile_expansion()
+  return an_item({
+    name = "Missile Expansion",
+    script = "<EVE0030"
+  })
+end
+
+local data2 = {
+  -------------
+  -- WEAPONS --
+  -------------
+  polarStar = arms({
+    name = "Polar Star",
+    script = "<SOU0022<MSG<TUR<GIT0002<AM+0002:0000\n\rGot the =Polar Star=!<WAI0025<NOD<END",
+    attributes = {"weaponBoss", "weaponSN"}
+  }),
+  spur = arms({
+    name = "Spur",
+    script = "",
+    attributes = {"weaponBoss", "weaponSN", "polarStar"}
+  }),
+  missileLauncher = arms({
+    name = "Missile Launcher",
+    script = "<EVE0030",
+    attributes = {"weaponSN"} -- i ain't gonna force someone to kill the core with only missiles or something
+  }),
+  superMissileLauncher = arms({
+    name = "Super Missile Launcher",
+    script = "",
+    attributes = {"weaponSN", "missileLauncher"}
+  }),
+  fireball = arms({
+    name = "Fireball",
+    script = "",
+    attributes = {"weaponBoss"}
+  }),
+  snake = arms({
+    name = "Snake",
+    script = "",
+    attributes = {"weaponBoss", "fireball"} -- fireball -> snake is progressive much like polar star -> spur
+  }),
+  bubbler = arms({
+    name = "Bubbler",
+    script = "",
+    attributes = {"weaponBoss", "weaponSN"} -- have fun grinding to lv3 to get out of the first cave :)
+  }),
+  machineGun = arms({
+    name = "Machine Gun",
+    script = "",
+    attributes = {"weaponBoss", "flight"}
+  }),
+  blade = arms({
+    name = "Blade",
+    script = "",
+    attributes = {"weaponBoss", "weaponSN"}
+  }),
+  nemesis = arms({
+    name = "Nemesis",
+    script = "",
+    attributes = {"weaponBoss", "weaponSN"}
+  }),
+
+  ---------------
+  -- INVENTORY --
+  ---------------
+  mapSystem = {
+    name = "Map System",
+    script = ""
+  },
+  locket = {
+    name = "Silver Locket",
+    script = ""
+  },
+  arthurKey = {
+    name = "Arthur's Key",
+    script = ""
+  },
+  idCard = {
+    name = "ID Card",
+    script = ""
+  },
+  santaKey = {
+    name = "Santa's Key",
+    script = ""
+  },
+  lipstick = {
+    name = "Chaco's Lipstick",
+    script = ""
+  },
+  juice = {
+    name = "Jellyfish Juice",
+    script = ""
+  },
+  charcoal = {
+    name = "Charcoal",
+    script = ""
+  },
+  rustyKey = {
+    name = "Rusty Key",
+    script = ""
+  },
+  gumKey = {
+    name = "Gum Key",
+    script = ""
+  },
+  gumBase = {
+    name = "Gum Base",
+    script = ""
+  },
+  bomb = {
+    name = "Bomb",
+    script = ""
+  },
+  panties = {
+    name = "Curly's Panties",
+    script = ""
+  },
+  puppy1 = {
+    name = "Hajime",
+    script = ""
+  },
+  puppy2 = {
+    name = "Kakeru",
+    script = ""
+  },
+  puppy3 = {
+    name = "Mick",
+    script = ""
+  },
+  puppy4 = {
+    name = "Nene",
+    script = ""
+  },
+  puppy5 = {
+    name = "Shinobu",
+    script = ""
+  },
+  lifepot = {
+    name = "Life Pot",
+    script = ""
+  },
+  turbocharge = {
+    name = "Turbocharge",
+    script = ""
+  },
+  clinicKey = {
+    name = "Clinic Key",
+    script = ""
+  },
+  armsBarrier = {
+    name = "Arms Barrier",
+    script = ""
+  },
+  cureAll = {
+    name = "Cure-All",
+    script = ""
+  },
+  booster1 = {
+    name = "Booster 0.8",
+    script = "",
+    attributes = {"flight"}
+  },
+  booster2 = {
+    name = "Booster 2.0",
+    script = "",
+    attributes = {"flight", "booster1"}
+  },
+  towRope = {
+    name = "Tow Rope",
+    script = ""
+  },
+  airTank = {
+    name = "Curly's Air Tank",
+    script = ""
+  },
+  alienMedal = {
+    name = "Alien Medal",
+    script = ""
+  },
+  whimsicalStar = {
+    name = "Whimsical Star",
+    script = ""
+  },
+  nikumaru = {
+    name = "Nikumaru Counter",
+    script = ""
+  },
+  teleportKey = {
+    name = "Teleporter Room Key",
+    script = ""
+  },
+  letter = {
+    name = "Sue's Letter",
+    script = ""
+  },
+  mask = {
+    name = "Mimiga Mask",
+    script = ""
+  },
+  brokenSprinkler = {
+    name = "Broken Sprinkler",
+    script = ""
+  },
+  newSprinkler = {
+    name = "Sprinkler",
+    script = ""
+  },
+  controller = {
+    name = "Controller",
+    script = ""
+  },
+  mushroomBadge = {
+    name = "Mushroom Badge",
+    script = ""
+  },
+  maPignon = {
+    name = "Ma Pignon",
+    script = ""
+  },
+  little = {
+    name = "Little Man",
+    script = ""
+  },
+  ironBond = {
+    name = "Iron Bond",
+    script = ""
+  },
+
+  -------------------
+  -- LIFE CAPSULES --
+  -------------------
+  capsule3A = life_capsule(3), -- First Cave
+  capsule3B = life_capsule(3), -- Yamashita Farm
+  capsule3C = life_capsule(3), -- Egg Corridor (Basil)
+  capsule4A = life_capsule(4), -- Egg Corridor (Cthulhu)
+  capsule5A = life_capsule(5), -- Grasstown
+  capsule5B = life_capsule(5), -- Execution Chamber
+  capsule5C = life_capsule(5), -- Sand Zone (Upper)
+  capsule5D = life_capsule(5), -- Sand Zone (Lower)
+  capsule5E = life_capsule(5), -- Labyrinth
+  capsule5F = life_capsule(5), -- Plantation (West)
+  capsule4B = life_capsule(4), -- Plantation (Puppy)
+  capsule5G = life_capsule(5), -- Sacred Grounds
+
+  --------------
+  -- MISSILES --
+  --------------
+
+}
+
 for k, t in pairs(data) do
   t.key = k
 end
