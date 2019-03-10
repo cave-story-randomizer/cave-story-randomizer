@@ -1,0 +1,14 @@
+200->700 Santa key
+305->701 Capsule
+202->702 Jelly
+500->501 Santa
+300->302 Charcoal
+211 Lipstick
+
+230->800 Rusty key
+236->801 Gum key
+304->305 Execution capsule
+300 Grasstown hut
+302 West of hut
+200->300 Gum chest
+312->350 MALCO bomb
