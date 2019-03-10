@@ -1,5 +1,6 @@
 local ItemDeck = require 'item_deck'
 local TscFile  = require 'tsc_file'
+local WorldGraph = require 'database.locations'
 
 local C = Class:extend()
 
@@ -13,12 +14,6 @@ do
     end
   end
 end
-
-local WEAPONS_WHICH_CAN_NOT_BREAK_BLOCKS = {
-  'wBubbline',
-  'wFireball',
-  'wSnake',
-}
 
 function C:new()
   self._isCaveStoryPlus = false
@@ -106,49 +101,27 @@ end
 
 function C:_shuffleItems(tscFiles)
   local itemDeck = ItemDeck()
+  local worldGraph = WorldGraph()
 
-  -- Place random weapon in either First Cave or Hermit Gunsmith.
-  local firstArea, firstItemKey = unpack(_.sample({
-    {'Cave.tsc', 'lFirstCave'},
-    {'Pole.tsc', 'wPolarStar'},
-  }))
-  local firstWeapon = itemDeck:getWeapon()
-  tscFiles[firstArea]:replaceSpecificItem(firstItemKey, firstWeapon)
-  -- First cutscene won't play if missiles go in polar star chest.
-  if firstArea == 'Cave.tsc' then
-    tscFiles['Pole.tsc']:replaceSpecificItem('wPolarStar', itemDeck:getAnyExceptMissiles())
+  -- first, place puppies in the sand zone
+  for i=1, 5 do
+    local puppy = itemDeck:getAnyByAttributes({"puppy"})
+    local puppySpot = worldGraph:getAnyByRegion({"lowerSandZone", "upperSandZone"})
+
+    placeItem(puppySpot, puppy)
   end
 
-  -- Replace all weapon trades with random weapons
-  tscFiles['Curly.tsc']:replaceSpecificItem('wMachineGun', itemDeck:getWeapon())
-  tscFiles['MazeA.tsc']:replaceSpecificItem('wSnake', itemDeck:getWeapon())
-  tscFiles['Pole.tsc']:replaceSpecificItem('wSpur', itemDeck:getWeapon())
-  tscFiles['Little.tsc']:replaceSpecificItem('wNemesis', itemDeck:getWeapon())
+  -- next, place weapon at hermit gunsmith and random item in first cave
+  placeItem(worldGraph:get("gunsmithChest"), itemDeck:getAnyByAttributes({"weaponSN"}))
+  placeItem(worldGraph:get("firstCapsule"), itemDeck:getAny())
 
-  -- Replace items which are part of elaborate events.
-  -- Missiles jump to a global event, so shouldn't be used here.
-  local items = {
-    {'Santa.tsc', 'wFireball'},
-    {'Chako.tsc', 'iChakosRouge'},
-    {'MazeA.tsc', 'eTurbocharge'},
-    {'MazeA.tsc', 'eWhimsicalStar'},
-    {'Stream.tsc', 'iAlienMedal'},
-    {'Cent.tsc', 'lPlantationA'},
-    {'Cent.tsc', 'iLifePot'},
-  }
-  for _, t in ipairs(items) do
-    local file, itemKey = unpack(t)
-    tscFiles[file]:replaceSpecificItem(itemKey, itemDeck:getAnyExceptMissiles())
+  -- for now, just implementing a forward fill - will do a better fill later
+  while itemDeck:remaining() > 0 do
+    local location = worldGraph:getAnyAccessible(itemDeck:getPlacedItems())  
+    local item = itemDeck:getAny()
+
+    tscFiles[location.map]:placeItem(location.event, item.script)
   end
-
-  -- Replace the rest of the items.
-  for _, tscFile in pairs(tscFiles) do
-    while tscFile:hasUnreplacedItems() do
-      tscFile:replaceItem(itemDeck:getAny())
-    end
-  end
-
-  return _.contains(WEAPONS_WHICH_CAN_NOT_BREAK_BLOCKS, firstWeapon.key)
 end
 
 function C:_writeModifiedData(tscFiles)

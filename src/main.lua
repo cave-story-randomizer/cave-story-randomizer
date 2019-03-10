@@ -30,7 +30,7 @@ function countLogWarningsAndErrors()
   return _logCounts[2], _logCounts[1]
 end
 function getLogText()
-  return table.concat(_logLines, "\n")
+  return table.concat(_logLines, "\n\r")
 end
 function resetLog()
   _logCounts = {0, 0, 0, 0, 0}
