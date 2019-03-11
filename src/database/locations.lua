@@ -135,32 +135,32 @@ local data = {
             keySpot = {
                 requirements = {},
                 map = "Weed",
-                event = "#0000"
+                event = "#0700"
             },
             jellyCapsule = {
                 requirements = {},
                 map = "Weed",
-                event = "#0000"
+                event = "#0701"
             },
             santa = {
                 requirements = {{"santaKey"}},
                 map = "Santa",
-                event = "#0000"
+                event = "#0501"
             },
             charcoal = {
                 requirements = {{"santaKey", "juice"}},
                 map = "Santa",
-                event = "#0000"
+                event = "#0302"
             }
             chaco = {
-                requirements = {{"santaKey"}, {"fireball"}},
+                requirements = {{"santaKey"}},
                 map = "Chako",
-                event = "#6969"
+                event = "#0211"
             },
             kulala = {
-                requirements = {{"santaKey", "weaponBoss"}, {"fireball"}},
+                requirements = {{"santaKey", "weaponBoss"}},
                 map = "Weed",
-                event = "0000"
+                event = "0702"
             }
         }
     },
@@ -173,37 +173,37 @@ local data = {
             kazuma1 = {
                 requirements = {},
                 map = "Weed",
-                event = "#0000"
+                event = "#0800"
             },
             kazuma2 = {
                 requirements = {{"eventFans"}},
                 map = "Weed",
-                event = "#0000"
+                event = "#0801"
             },
             execution = {
                 requirements = {{"weaponSN"}},
                 map = "WeedD",
-                event = "#0000"
+                event = "#0305"
             },
             outsideHut = {
                 requirements = {{"eventFans"}, {"flight"}},
                 map = "Weed",
-                event = "#0000"
+                event = "#0302"
             },
             hutChest = {
                 requirements = {{"eventFans"}, {"flight"}},
                 map = "WeedB",
-                event = "#0000"
+                event = "#0300"
             },
             gumChest = {
                 requirements = {{"eventFans", "gumKey", "weaponBoss"}, {"flight", "gumKey", "weaponBoss"}},
                 map = "Frog",
-                event = "#0000"
+                event = "#0300"
             },
             malco = {
                 requirements = {{"eventFans", "juice", "charcoal", "gum"}},
                 map = "Malco",
-                event = "#0000"
+                event = "#0350"
             }
         },
         events = {

@@ -8,27 +8,31 @@ function C:new()
     local item = _.clone(v)
     table.insert(self._left, item)
   end
+  self._placed = {}
 end
 
 local function _filterAny(item) return true end
-local function _filterAnyExceptMissiles(item) return item.kind ~= "missiles" end
-local function _filterWeapon(item) return item.kind == "weapon" end
 
 function C:getAny()
   return self:_getItem(_filterAny)
 end
 
-function C:getAnyExceptMissiles()
-  return self:_getItem(_filterAnyExceptMissiles)
+function C:getAnyByAttribute(attribute)
+  function _filterAnyByAttribute(item, attribute)
+    for k, v in pairs(item.attributes) do
+      if v == attribute then return true
+    end
+    return false
+  end
+  return self:_getItem(_filterAnyByAttribute)
 end
 
-function C:getByKey(key)
-  local filterByKey = function(item) return item.key == key end
-  return self:_getItem(filterByKey)
+function C:placeAny()
+  return self:place(self:getAny())
 end
 
-function C:getWeapon()
-  return self:_getItem(_filterWeapon)
+function C:placeAnyByAttribute(attributes)
+  return self:place(self:getAnyByAttribute(attributes))
 end
 
 function C:_getItem(filterFn)
@@ -46,9 +50,20 @@ function C:_getItem(filterFn)
   -- Select an item.
   local selected = _.sample(applicable)
   local index = indexMap[selected]
-  table.remove(self._left, index)
 
-  return selected
+  return selected, index
+end
+
+function C:place(item, index)
+  table.remove(self._left, index)
+  table.insert(self._placed, item)
+  return item
+end
+
+function C:getPlacedItems(item)
+  local placed = {table.unpack(self._placed)} -- clone the table
+  if(item) then table.insert(placed, item) end
+  return placed
 end
 
 return C
