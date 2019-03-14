@@ -67,11 +67,9 @@ get out.<NOD<END
 <PRI<FAO0000<TRA0012:0090:0055:0009
 
 #0111
-<KEY<FL+0327<FL+0443<MSG<FAC0009What?!<NOD
-Toroko's been kidnapped?<NOD
-Oh, no!<NOD
-I've got to tell King
-right away!<NOD<CLO
+<KEY<FL+0327<FL+0443<MSG<TUR<FAC0009What?!
+Toroko's been kidnapped?
+Oh, no!<NOD<CLO
 <MYD0000
 <ANP0111:0008:0000<WAI0208
 <ANP0111:0000:0002<WAI0010

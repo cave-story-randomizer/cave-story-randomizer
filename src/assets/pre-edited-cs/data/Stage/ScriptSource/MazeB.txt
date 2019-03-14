@@ -26,7 +26,7 @@ goes for now.
   2003/09/27 Studio Pixel<NOD<END
 
 #0200
-<EVE0201
+<EVE0201<CMP0002:0021:0000<CMP0003:0021:0000
 #0201
 <KEY<MSGDo you want to go to Arthur's
 house?<YNJ0000<CLO
