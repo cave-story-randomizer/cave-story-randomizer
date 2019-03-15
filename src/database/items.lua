@@ -31,48 +31,48 @@ local data = {
   -------------
   polarStar = weapon({
     name = "Polar Star",
-    script = "<SOU0022<MSG<TUR<GIT0002<AM+0002:0000\n\rGot the =Polar Star=!<WAI0025<NOD<END",
+    script = "<EVE0002",
     attributes = {"weaponBoss", "weaponSN"}
   }),
   spur = weapon({
     name = "Spur",
-    script = "",
+    script = "<EVE0002",
     attributes = {"weaponBoss", "weaponSN", "polarStar"}
   }),
   missileLauncher = missiles(),
   superMissileLauncher = weapon({
     name = "Super Missile Launcher",
-    script = "",
+    script = "<EVE0033",
     attributes = {"weaponSN", "missileLauncher"}
   }),
   fireball = weapon({
     name = "Fireball",
-    script = "",
+    script = "<EVE0004",
     attributes = {"weaponBoss"}
   }),
   snake = weapon({
     name = "Snake",
-    script = "",
-    attributes = {"weaponBoss", "fireball"} -- fireball -> snake is progressive much like polar star -> spur
+    script = "<EVE0005",
+    attributes = {"weaponBoss"}
   }),
   bubbler = weapon({
     name = "Bubbler",
-    script = "",
+    script = "<EVE0007",
     attributes = {"weaponBoss", "weaponSN"} -- have fun grinding to lv3 to get out of the first cave :)
   }),
   machineGun = weapon({
     name = "Machine Gun",
-    script = "",
+    script = "<EVE0008",
     attributes = {"weaponBoss", "flight"}
   }),
   blade = weapon({
     name = "Blade",
-    script = "",
+    script = "<EVE0009",
     attributes = {"weaponBoss", "weaponSN"}
   }),
   nemesis = weapon({
     name = "Nemesis",
-    script = "",
+    script = "<EVE0010",
     attributes = {"weaponBoss", "weaponSN"}
   }),
 
@@ -81,170 +81,170 @@ local data = {
   ---------------
   mapSystem = {
     name = "Map System",
-    script = ""
+    script = "<EVE0052"
   },
   locket = {
     name = "Silver Locket",
-    script = ""
+    script = "<EVE0054"
   },
   arthurKey = {
     name = "Arthur's Key",
-    script = ""
+    script = "<EVE0051"
   },
   idCard = {
     name = "ID Card",
-    script = ""
+    script = "<EVE0057"
   },
   santaKey = {
     name = "Santa's Key",
-    script = ""
+    script = "<EVE0053"
   },
   lipstick = {
     name = "Chaco's Lipstick",
-    script = ""
+    script = "<EVE0087"
   },
   juice = {
     name = "Jellyfish Juice",
-    script = ""
+    script = "<EVE0058"
   },
   charcoal = {
     name = "Charcoal",
-    script = ""
+    script = "<EVE0062"
   },
   rustyKey = {
     name = "Rusty Key",
-    script = ""
+    script = "<EVE0039"
   },
   gumKey = {
     name = "Gum Key",
-    script = ""
+    script = "<EVE0060"
   },
   gumBase = {
     name = "Gum Base",
-    script = ""
+    script = "<EVE0061"
   },
   bomb = {
     name = "Bomb",
-    script = ""
+    script = "<EVE0063"
   },
   panties = {
     name = "Curly's Panties",
-    script = ""
+    script = "<EVE0085"
   },
   puppy1 = {
     name = "Hajime",
-    script = "",
+    script = "<EVE0064",
     attributes = {"puppy"}
   },
   puppy2 = {
     name = "Kakeru",
-    script = "",
+    script = "<EVE0064",
     attributes = {"puppy"}
   },
   puppy3 = {
     name = "Mick",
-    script = "",
+    script = "<EVE0064",
     attributes = {"puppy"}
   },
   puppy4 = {
     name = "Nene",
-    script = "",
+    script = "<EVE0064",
     attributes = {"puppy"}
   },
   puppy5 = {
     name = "Shinobu",
-    script = "",
+    script = "<EVE0064",
     attributes = {"puppy"}
   },
   lifepot = {
     name = "Life Pot",
-    script = ""
+    script = "<EVE0065"
   },
   turbocharge = {
     name = "Turbocharge",
-    script = ""
+    script = "<EVE0070"
   },
   clinicKey = {
     name = "Clinic Key",
-    script = ""
+    script = "<EVE0067"
   },
   armsBarrier = {
     name = "Arms Barrier",
-    script = ""
+    script = "<EVE0069"
   },
   cureAll = {
     name = "Cure-All",
-    script = ""
+    script = "<EVE0066"
   },
   booster1 = {
     name = "Booster 0.8",
-    script = "",
+    script = "<EVE0068",
     attributes = {"flight"}
   },
   booster2 = {
     name = "Booster 2.0",
-    script = "",
+    script = "<EVE0073",
     attributes = {"flight", "booster1"}
   },
   towRope = {
     name = "Tow Rope",
-    script = ""
+    script = "<EVE0080"
   },
   airTank = {
     name = "Curly's Air Tank",
-    script = ""
+    script = "<EVE0071"
   },
   alienMedal = {
     name = "Alien Medal",
-    script = ""
+    script = "<EVE0086"
   },
   whimsicalStar = {
     name = "Whimsical Star",
-    script = ""
+    script = "<EVE0088"
   },
   nikumaru = {
     name = "Nikumaru Counter",
-    script = ""
+    script = "<EVE0072"
   },
   teleportKey = {
     name = "Teleporter Room Key",
-    script = ""
+    script = "<EVE0075"
   },
   letter = {
     name = "Sue's Letter",
-    script = ""
+    script = "<EVE0076"
   },
   mask = {
     name = "Mimiga Mask",
-    script = ""
+    script = "<EVE0074"
   },
   brokenSprinkler = {
     name = "Broken Sprinkler",
-    script = ""
+    script = "<EVE0078"
   },
   newSprinkler = {
     name = "Sprinkler",
-    script = ""
+    script = "<EVE0079"
   },
   controller = {
     name = "Controller",
-    script = ""
+    script = "<EVE0077"
   },
   mushroomBadge = {
     name = "Mushroom Badge",
-    script = ""
+    script = "<EVE0083"
   },
   maPignon = {
     name = "Ma Pignon",
-    script = ""
+    script = "<EVE0084"
   },
   little = {
     name = "Little Man",
-    script = ""
+    script = "<EVE0082"
   },
   ironBond = {
     name = "Iron Bond",
-    script = ""
+    script = "<EVE0089"
   },
 
   -------------------
@@ -272,7 +272,7 @@ local data = {
   missileD = missiles(), -- Egg Observation Room?
   missileHell = weapon({
     name = "Missile Expansion",
-    script = "",
+    script = "<EVE0035",
     attributes = {"weaponSN", "missileLauncher"}
   })
 }
