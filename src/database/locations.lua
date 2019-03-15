@@ -298,7 +298,7 @@ local data = {
             fallenBooster = {
                 requirements = {},
                 map = "MazeB",
-                event = "#0000"
+                event = "#0502"
             }
         }
     },
@@ -313,37 +313,37 @@ local data = {
             critterCapsule = {
                 requirements = {{"weaponBoss"}},
                 map = "MazeI",
-                event = "#0000"
+                event = "#0301"
             },
             turboChaba = {
                 requirements = {{"machineGun"}},
                 map = "MazeA",
-                event = "#0000"
+                event = "#0502"
             },
             snakeChaba = {
                 requirements = {{"polarStar", "fireball"}},
                 map = "MazeA",
-                event = "#0000"
+                event = "#0512"
             },
             whimChaba = {
                 requirements = {{"spur"}},
                 map = "MazeA",
-                event = "#0000"
+                event = "#0522"
             },
             armsBarrier = {
                 requirements = {{"flight"}},
                 map = "MazeO",
-                event = "#0000"
+                event = "#0401"
             },
             physician = {
                 requirements = {},
                 map = "MazeO",
-                event = "#0000"
+                event = "#0305"
             },
             puuBlack = {
                 requirements = {{"clinicKey", "weaponBoss"}},
                 map = "MazeD",
-                event = "#0000"
+                event = "#0401"
             }
         }
     },
@@ -357,7 +357,7 @@ local data = {
             boulderChest = {
                 requirements = {{"cureAll", "weaponBoss"}},
                 map = "MazeS",
-                event = "#0000"
+                event = "#0202"
             }
         }
     },
@@ -383,12 +383,12 @@ local data = {
             ropeSpot = {
                 requirements = {},
                 map = "Almond",
-                event = "#0000"
+                event = "#0243"
             },
             curlyCorpse = {
                 requirements = {{"eventCore"},
                 map = "Almond",
-                event = "#0000"
+                event = "#1111"
             }
         },
         events = {
@@ -405,8 +405,8 @@ local data = {
         locations = {
             ironhead = {
                 requirements = {{"weaponSN"}},
-                map = "Stream",
-                event = "#0000"
+                map = "Pool",
+                event = "#0412"
             }
         },
         events = {
@@ -424,12 +424,12 @@ local data = {
             dragonChest = {
                 requirements = {{"weaponBoss"}},
                 map = "Eggs2",
-                event = "#0000"
+                event = "#0321"
             },
             sisters = {
                 requirements = {{"weaponBoss"}},
                 map = "EggR2",
-                event = "#0000"
+                event = "#0303"
             }
         }
     },
@@ -442,12 +442,12 @@ local data = {
             clock = {
                 requirements = {}, --eventCurly? works like that in vanilla
                 map = "Clock",
-                event = "#0000"
+                event = "#0300"
             },
             littleHouse = {
                 requirements = {{"little", "flight"}},
                 map = "Little",
-                event = "#0000"
+                event = "#0204"
             }
         }
     },
@@ -462,42 +462,47 @@ local data = {
             kanpachi = {
                 requirements = {},
                 map = "Cent",
-                event = "#0000"
+                event = "#0268"
             },
             jail1 = {
                 requirements = {{"teleportKey"}},
                 map = "Jail1",
-                event = "#0000"
+                event = "#0301"
             },
             momorin = {
                 requirements = {{"letter", "booster1"}},
                 map = "Momo",
-                event = "#0000"
+                event = "#0201"
             },
             sprinkler = {
                 requirements = {{"mask"}},
                 map = "Cent",
-                event = "#0000"
+                event = "#0417"
             },
             megane = {
                 requirements = {{"brokenSprinkler", "mask"}},
                 map = "lounge",
-                event = "#0000"
+                event = "#0204"
+            },
+            itoh = {
+                requirements = {{"letter"}},
+                map = "Itoh",
+                event = "#0405"
             },
             topCapsule = {
                 requirements = {{"flight"}},
                 map = "Cent",
-                event = "#0000"
+                event = "#0501"
             },
             plantPup = {
                 requirements = {{"eventRocket"}},
                 map = "Cent",
-                event = "#0000"
+                event = "#0452"
             },
             curlyShroom = {
                 requirements = {{"eventCurly", "maPignon"}},
                 map = "Cent",
-                event = "#0000"
+                event = "#0324"
             }
         },
         events = {
@@ -515,7 +520,7 @@ local data = {
             redDemon = {
                 requirements = {},
                 map = "Priso2",
-                event = "#0000",
+                event = "#0300",
             }
         }
     },
@@ -527,12 +532,12 @@ local data = {
             hellCapsule = {
                 requirements = {},
                 map = "Hell1",
-                event = "#0000"
+                event = "#0401"
             },
             hellChest = {
                 requirements = {},
                 map = "Hell3",
-                event = "#0000"
+                event = "#0400"
             }
         },
         events = {
