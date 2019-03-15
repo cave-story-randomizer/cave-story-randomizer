@@ -105,22 +105,32 @@ function C:_shuffleItems(tscFiles)
 
   -- first, place puppies in the sand zone
   for i=1, 5 do
-    local puppy = itemDeck:getAnyByAttributes({"puppy"})
+    local puppy = itemDeck:placeAnyByAttributes({"puppy"})
     local puppySpot = worldGraph:getAnyByRegion({"lowerSandZone", "upperSandZone"})
 
     placeItem(puppySpot, puppy)
   end
 
   -- next, place weapon at hermit gunsmith and random item in first cave
-  placeItem(worldGraph:get("gunsmithChest"), itemDeck:getAnyByAttributes({"weaponSN"}))
-  placeItem(worldGraph:get("firstCapsule"), itemDeck:getAny())
+  placeItem(worldGraph:get("gunsmithChest"), itemDeck:placeAnyByAttributes({"weaponSN"}))
+  placeItem(worldGraph:get("firstCapsule"), itemDeck:placeAny())
 
   -- for now, just implementing a forward fill - will do a better fill later
   while itemDeck:remaining() > 0 do
     local location = worldGraph:getAnyAccessible(itemDeck:getPlacedItems())  
-    local item = itemDeck:getAny()
+    local item, itemIndex
 
-    tscFiles[location.map]:placeItem(location.event, item.script)
+    while ~location do
+      item, itemIndex = itemDeck:getAnyByAttributes({"progression"})
+      location = worldGraph:getAnyAccessible(itemDeck:getPlacedItems(item))
+    end
+
+    if ~item then
+      item, itemIndex = itemDeck:getAny()
+    end
+    itemDeck:place(item, itemIndex)
+
+    tscFiles[location.map]:placeItem(location.event, itemData.item.script)
   end
 end
 
