@@ -17,26 +17,15 @@
 
 #0200
 <PRI
-<FLJ1373:0206
 <FLJ1372:0202
-<EVE0204
-
-#0201
-<PRI<MSGReally? Too bad.<NOD<END
+<EVE0203
 
 #0202
 <PRI<MSGAh, it's good to be back.<NOD<END
 #0203
-<PRI<FL-1372<MSG
-All right, I'll give your sword
-back.<NOD
-But you've got to give me my
-fabulous gun back as well.<NOD<TAM0012:0009:0000<CLR
-<GIT0012Gave him the =Nemesis=.<NOD<CLR
-<CMU0010<GIT0009Got back the =Blade=!<WAI0160<NOD<RMU<END
-
+<FL+1372<EVE0204
 #0204
-<MSG<TUR<AM+0012:0000<GIT0012Got the =Nemesis=!<WAI0025<NOD<END
+<EVE0010
 
 #0210
 <PRI<FLJ1370:0211<FL+1371

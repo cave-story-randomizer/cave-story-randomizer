@@ -18,6 +18,5 @@
 <PRI<DNP0304<SOU0022<EVE0305
 
 #0305
-<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0005
-Max health increased by 5!<WAI0025<NOD<END
+<EVE0014
 

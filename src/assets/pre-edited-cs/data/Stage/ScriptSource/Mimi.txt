@@ -28,7 +28,7 @@
 <MSGLocked.<NOD<END
 #0101
 <SOU0022<GIT1001<FL+0324<FL+0441
-<MSGUsed =Arthur's Key=.<NOD<GIT0000<CLO<EVE0102
+<MSG<TURUsed =Arthur's Key=.<NOD<GIT0000<CLO<EVE0102
 #0102
 <SOU0011<CNP0100:0000:0000<FAO0004<TRA0001:0094:0017:0008
 
@@ -89,7 +89,7 @@ Oh, no!<NOD<CLO
 of exploration, surely you shall
 find your way out. This I believe.<NOD<END
 #0202
-<MSG<TUR<GIT1002<IT+0002<EQ+0002Got the =Map System=!<WAI0025<NOD<END
+<EVE0052
 
 #0300
 #0301

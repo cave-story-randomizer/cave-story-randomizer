@@ -57,6 +57,4 @@ Got the =Beast Fang=.<WAI0160<NOD<CLO
 <PRI<DNP0400<EVE0401
 
 #0401
-<SOU0022<MSG<TUR<GIT1006Got a =Life Capsule=!<WAI0025<NOD<ML+0003
-Max health increased by 3!<NOD<END
-
+<EVE0012

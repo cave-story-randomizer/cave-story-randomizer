@@ -35,8 +35,6 @@ is when its hatch opens.<NOD<END
 Here, let me refill your health.<NOD<CLO<LI+1000<SOU0020
 <ITJ0016:0302
 <FLJ0700:0301<FL+0700<WAI0050<EVE0305
-
-<GIT1017<IT+0017Got the =Clinic Key=.<NOD<GIT0000<END
 #0301
 <KEY<MSGThe clinic isn't too far.<NOD
 Go look for some medicine that
@@ -54,7 +52,7 @@ She'll be back in action in
 no time.<NOD
 All thanks to you, of course.<NOD<END
 #0305
-<MSG<TUR<GIT1017<IT+0017Got the =Clinic Key=.<NOD<WAI0025<END
+<EVE0067
 
 #0310
 <FLJ0704:0313
@@ -104,12 +102,8 @@ anytime soon...<NOD<END
 now what?<NOD<CLRGuess I'm just going
 to sit here and rot...<NOD<END
 #0322
-<KEY<MSG<FAC0020This is the legendary
-Labyrinth.<NOD
-I don't know who made it,
-but it's apparently the
-trash heap of the island.<NOD<CLRThere's only one way
-out.<NOD
+<KEY<MSG<FAC0020<TURThere's only one way
+out of the Labyrinth.<NOD
 You have to get past
 the giant rock in the
 Boulder Chamber.<NOD<CLRI'd go with you,<NOD
@@ -121,6 +115,5 @@ your way...<NOD<FL+0760<FL+0703<END
 #0400
 <KEY<FLJ0705:0001<FL+0705<SOU0022<CNP0400:0021:0000<EVE0401
 #0401
-<MSG<TUR<GIT1019<IT+0019<EQ+0004
-<CMU0010Got the =Arms Barrier=!<WAI0025<NOD<END
+<EVE0069
 

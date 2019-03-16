@@ -40,31 +40,8 @@
 
 
 #0200
-<FLJ0159:0205
-<FLJ0158:0204
-<FLJ0157:0203
-<FLJ0325:0202
-<FLJ0154:0201
-<KEY<MSGWords light up the screen...<NOD<CLR<TUR"...If I have to, though,
-I really will..."<NOD<FLJ0153:0000<CLR<MSGDo you want to permit
-teleportation to the Egg Corridor?<YNJ0000<CLRPermission granted to access Egg
-Corridor.<NOD<FL+0153<PS+0001:6001<END
-#0201
-<KEY<MSGWords light up the screen...<NOD<CLR
-<TURConnecting to Grasstown...<NOD<END
-#0202
-<KEY<MSG<TUR
-Connected to Grasstown.<NOD<END
-#0203
-<KEY<MSG<TUR
-Enter command.<NOD<END
-#0204
-<KEY<MSG<TUR
-Connected to Sand Zone.<NOD<END
-#0205
-<KEY<MSGWords light up the screen...<NOD<CLR<TUR
-Head for the Egg Corridor
-                        --Kazuma<NOD<END
+<END -- todo computer
+
 #0210
 <KEY<MSGFlowers...?<NOD<END
 
@@ -73,7 +50,8 @@ Head for the Egg Corridor
 #0303
 
 #0500
-<KEY<MSGA teleporter.<NOD<SLP<NOD<END
+<PS+0001:6001<PS+0002:6002<PS+0003:6003<PS+0004:6004<PS+0005:6005
+<KEY<SAT<MSGA teleporter.<NOD<SLP<NOD<END
 
 #0600
 <FLJ0325:0601
@@ -245,35 +223,14 @@ I beg you...<NOD<END
 <MSG
 <FAC0018.....<NOD<CLO<FAC0000
 <ANP0650:0000:0002<WAI0050
-<MSG<FAC0018Only you, I see...<NOD<CLR...The Doctor has acquired
-the red flowers.<NOD<CLR...The island's Mimigas
-have all fallen into his
-hands.<NOD<CLRSo the tragedy has become
-inevitable...<NOD<CLRI should have allowed
-at least Sue to escape
-when I had the chance...<NOD<CLO<FAC0000
+<MSG<TUR<FAC0018Only you, I see...<NOD<CLO<FAC0000
 <ANP0650:0003:0002<WAI0022
 <ANP0650:0005:0002
-<IT+0023<FL+0744<FL+0162<GIT1023
-<MSG
-Got the =Booster v2.0=.<WAI0030<NOD<CLO<GIT0000
+<FL+0744<FL+0162
 <ANP0650:0000:0002
-<MSG<FAC0018Please heed my last
-request.<NOD<CLRIf you see Sue again,<NOD
-I want you to take her
-and flee this island.<NOD<CLRThat girl is Sakamoto's
-daughter,<NOD
-and she never wanted to
-come here in the first
-place.<NOD
-But we couldn't leave the
-child all alone,<NOD
-so she had no choice but
-to come along with us.<NOD<CLR
-I beg you.<NOD<CLRTake that girl with you
-and flee.<NOD<CLO
-<FL-0160<FL+0161<FL+0741<PS+0004:6004<END
-
+<FL-0160<FL+0161<FL+0741<EVE0652
+#0652
+<EVE0073
 
 #0660
 <KEY<FLJ1020:0661<MSG<FAC0018Take Sue with you and
@@ -294,7 +251,7 @@ blame.<NOD<END
 <PRI<MSGDo you want to go to the
 Egg Corridor?<YNJ0000<CLO
 <KEY<CNP0300:0111:0002<HMC<WAI0060<ANP0500:0001:0000
-<WAI0100<FAO0004<FLJ0159:6011<TRA0002:0099:0005:0006
+<WAI0100<FLJ0159:6011<EVE6010
 #6002
 <PRI<MSGDo you want to go to Grasstown?<YNJ0000<CLO
 <KEY<CNP0300:0111:0002<HMC<WAI0060<ANP0500:0001:0000
@@ -317,6 +274,8 @@ Plantation?<YNJ0000<CLO
 <KEY<CNP0300:0111:0002<HMC<WAI0060<ANP0500:0001:0000
 <WAI0100<FAO0004<TRA0060:0099:0009:0009
 
+#6010
+<KEY<FAO0004<TRA0002:0099:0005:0006
 #6011
-<KEY<TRA0049:0099:0007:0006
+<KEY<MSGRuined?<YNJ6010<FAO0004<TRA0049:0099:0007:0006
 

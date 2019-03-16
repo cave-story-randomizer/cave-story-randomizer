@@ -27,7 +27,7 @@ shield...<NOD<END
 <SOU0022<CNP0300:0021:0000<EVE0301
 
 #0301
-<EVE0030 -- TODO: missile launcher stuff
+<EVE0030
 
 
 #0500

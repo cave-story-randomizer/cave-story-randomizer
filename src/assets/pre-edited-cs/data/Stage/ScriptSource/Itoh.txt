@@ -71,6 +71,5 @@ stranded little man.<NOD<END
 <KEY<MSG<FAC0028Give Ms. Sakamoto my
 regards.<NOD<END
 #0405
-<PRI<MSG<TUR<GIT1027<IT+0027
-Got the =Controller=!<WAI0025<NOD<END
+<EVE0077
 

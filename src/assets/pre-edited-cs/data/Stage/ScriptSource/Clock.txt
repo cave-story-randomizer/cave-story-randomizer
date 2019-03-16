@@ -25,4 +25,4 @@ determination. Glory to all
 zealous challengers!<NOD<END
 
 #0300
-<KEY<MSG<TUR<GIT1022<IT+0022Got the =Nikumaru Counter=!<WAI0025<NOD<END
+<EVE0072

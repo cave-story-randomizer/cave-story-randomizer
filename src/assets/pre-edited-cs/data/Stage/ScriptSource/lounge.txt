@@ -38,8 +38,7 @@ Looks like we had just enough
 sprinklers...<NOD<END
 
 #0204
-<PRI<MSG<TUR<GIT1029<IT+0029
-Got the =Sprinkler=!<WAI0025<NOD<END
+<EVE0079
 
 
 #0210
@@ -80,7 +79,7 @@ Like that's supposed to scare me.<NOD<END
 <MSGI'm so exhausted...<NOD<END
 
 #0250
-<KEY<MYB0000<MSGOh, hey.<NOD<CLRHaven't we met before?<NOD
+<SAT<KEY<MYB0000<MSGOh, hey.<NOD<CLRHaven't we met before?<NOD
 Yeah, back at the Mimiga
 village.<NOD
 Someone called "Misery" snatched

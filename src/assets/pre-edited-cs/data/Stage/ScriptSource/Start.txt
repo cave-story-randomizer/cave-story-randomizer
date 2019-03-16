@@ -17,7 +17,7 @@
 
 
 #0200
-<TRA0013:0091:0010:0008 -- easier to do this than to deal with changing the actual start event
+<EVE0091 -- easier to do this than to deal with changing the actual start event
 
 #1000
 <END

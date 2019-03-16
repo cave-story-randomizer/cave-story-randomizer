@@ -27,13 +27,13 @@
 for me?<NOD<CLR
 Yeah, you're right,<NOD
 I ain't been home in a while.<NOD
-Arright, time to go.<NOD<GIT1032<DNP0200<IT+0032<CLRYou're gonna take me there,
-of course?<NOD<END
+Arright, time to go.<NOD<GIT1032<DNP0200<CLRYou're gonna take me there,
+of course?<NOD<EVE0082
 
 #0300
 <CNP0300:0000:0000<FLJ0390:0302<FL+0390<EVE0301
 #0301
-<MSG<TUR<GIT1001<IT+0001Found =Arthur's Key=!<WAI0025<NOD<CLO<END
+<EVE0051
 
 #0302
 <PRI<MSGArthur's grave.<NOD

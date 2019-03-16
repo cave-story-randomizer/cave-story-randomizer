@@ -30,7 +30,7 @@
 <PRI<MSG<TURA sign?<NOD<END
 
 #0400
-<KEY<FLJ0960:0401<MSG<TUR<FAC0010If you're going to
+<KEY<MSG<TUR<FAC0010If you're going to
 look for the core,
 you'd best hurry.<NOD<END
 #0401

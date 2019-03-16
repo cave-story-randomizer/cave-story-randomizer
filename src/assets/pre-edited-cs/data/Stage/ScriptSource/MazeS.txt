@@ -28,29 +28,21 @@
 
 
 #0200
-<PRI<FLJ0201:0201<MSGA charm has been placed on it.
-It won't open...<NOD<END
+<PRI<EVE0201
 #0201
 <FLJ0766:0001<FL+0766<FL-0765<FL+0202
 <SOU0022<CNP0200:0021:0000<EVE0202
 #0202
-<MSG<TUR<TAM0005:0010:0000
-<GIT0010Your Missiles have been powered up!<WAI0025<NOD<END
+<EVE0033
 
 #0300
 <KEY
 <FLJ0764:0303
 <FLJ0762:0302
 <FLJ0761:0301
-<FL+0761<MSG<FAC0019Aha!<NOD
+<FL+0761<SAT<MSG<FAC0019Aha!<NOD
 I was wondering when
-you'd show up.<NOD<CLRIf we can just get this
-big rock out of the way,
-we can get to the exit.<NOD<CLRRumor has it, though,
-that a monster nest lies
-just beyond...<NOD
-So ya better be ready
-for that.<NOD<CLRAnyway, let's get this
+you'd show up.<NOD<CLRLet's get this
 thing out of the way.<NOD
 You hold that side.<NOD<CLO
 <ANP0300:0020:0000<END
@@ -82,7 +74,7 @@ Defeated Balrog!<WAI0140<NOD<CLO<FAC0000
 <KEY
 <MNP0320:0000:0000:0000
 <MYD0002<MYD0003
-<MSG<FAC0019Ready? Push!<NOD<CLO<FAC0000
+<SAT<MSG<FAC0019Ready? Push!<NOD<CLO<FAC0000
 <ANP0300:0020:0000<WAI0050<MSGRRRRGH!<NOD<CLO<FAC0000
 <CNP0510:0334:0000
 <CNP0511:0334:0002<WAI0100
@@ -93,23 +85,12 @@ I'm not sure the
 two of us are strong
 enough...<NOD<FAC0000<CLO
 <WAI0050
-<MSGHuzzah!<CMU0000<NOD<CLO
+<MSG<FAC0014Huzzah!<CMU0000<NOD<CLO
 <CNP0310:0009:0002<WAI0100
 <CNP0310:0012:0002
 <ANP0310:0030:0002<CMU0011
 <MYD0000
-<MSG<FAC0019You!<NOD<CLR<FAC0014Hohoho!<NOD<CLRYou're alive, I see!<NOD<CLRNot only that, you're
-trying to get out of
-the Labyrinth!<NOD<CLRShouldn't you be staying
-put like good little
-robots?<NOD<CLRYou can't stand up to
-my master any more than
-I can, you know.<NOD<CLRFine, then!<NOD
-I'll just put a stop
-to this!<NOD<CLRHope you don't mind
-being iron scraps!<NOD<CLR<FAC0019Just who we were looking
-for!<NOD
-Take the middle,
+<MSG<FAC0019Take the middle,
 will you?<NOD<FAC0000<CLO<CMU0000
 <WAI0100
 <ANP0310:0060:0002<WAI0048
@@ -156,11 +137,8 @@ more toward the end?<NOD<CLO
 <SMC<CMU0008<CNP0330:0012:0002<ANP0300:0000:0002
 <MNP0320:0000:0000:0000
 <FAI0004
-<MSG<FAC0005You win...<NOD<CLRI'll move the rock
-for you.<NOD
-But remember...<NOD<ANP0330:0000:0000<CLRDon't tell ANYONE
-that I helped you.<NOD<CLR<FAC0019Your secret's safe
-with us!<NOD<FAC0000<CLO
+<SAT<MSG<FAC0005You win...<NOD<CLRI'll move the rock
+for you.<NOD<NOD<ANP0330:0000:0000<CLO
 <ANP0330:0060:0000<WAI0040
 <ANP0330:0050:0002<WAI0020
 <MYD0003<ANP0300:0020:0000
@@ -171,12 +149,8 @@ with us!<NOD<FAC0000<CLO
 <ANP0500:0020:0000<MYD0002<MSG
 <FAC0023Gaaaahhhh!!!<WAI0050<CLO<FAC0000
 <ANP0330:0000:0002
-<WAI0100<MSG<FAC0005Now, remember.<ANP0300:0000:0000<NOD
-Don't tell a soul
+<WAI0100<MSG<FAC0005<ANP0300:0000:0000Don't tell a soul
 that I helped you.<NOD<CLR<FAC0019We won't!<NOD<CLO<FAC0000<ANP0330:0010:0000
 <WAI0160<CNP0200:0015:0002<WAI0040
-<MSG<FAC0019I don't think he's
-really that bad of a
-guy.<NOD<CLO
 <FL+0781<FL+0765<CNP0016:0016:0002<END
 

@@ -48,7 +48,7 @@ a Mimiga just like us.<NOD<END
 <DNP0300<EVE0301
 
 #0301
-<MSG<TUR<GIT1004<IT+0004Got the =Silver Locket=.<WAI0025<NOD<CLO<END
+<EVE0054
 
 
 #0400

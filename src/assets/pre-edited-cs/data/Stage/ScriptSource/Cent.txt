@@ -280,23 +280,7 @@ again...?<NOD<END
 <PRI<FLJ1034:0380<MSG<FAC0022<FL+1034Did you have a good
 rest?<NOD<CLRThe rocket's all done.<NOD<CLRYou'll be able to take
 down the Doctor, right?<NOD
-I believe in you.<NOD<CLRTake this with you...<NOD<CLO<FAC0000<FLJ0162:0371
-<IT+0018<GIT1018
-<CMU0010<MSG
-Got the Booster v0.8.<WAI0160<NOD<RMU<CLO
-<GIT0000<EVE0375
-
-#0371
-<IT+0023<GIT1023
-<CMU0010<MSG
-Got the Booster v2.0.<WAI0160<NOD<RMU<CLO
-<GIT0000<EVE0375
-
-#0375
-<PRI<MSG<FAC0022You won't be needing
-this anymore.<NOD<CLO<FAC0000
-<MSG<GIT1024<IT-0024<EQ-0064<FL-1020
-=Mimiga Mask= taken.<NOD<CLO<GIT0000<EVE0380
+I believe in you.<NOD<EVE0380
 
 #0380
 <PRI<MSG<FAC0022Directly above us is a
@@ -341,8 +325,7 @@ My tail wags only for you!<NOD
 Oh, yeah, and tell Curly I
 said hi!<NOD<END
 #0452
-<PRI<MSG<TUR<GIT1006Got a =Life Capsule=!
-Max health increased by 5!<WAI0025<NOD<END
+<EVE0014
 
 #0460
 <PRI<MSG<TURWatch out for Gunfish! (Note:
@@ -362,8 +345,7 @@ do so at their own risk.)<NOD<END
 #0500
 <PRI<SOU0022<DNP0500<EVE0501
 #0501
-<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0004
-Max health increased by 4!<WAI0025<NOD<END
+<EVE0013
 
 
 #1200

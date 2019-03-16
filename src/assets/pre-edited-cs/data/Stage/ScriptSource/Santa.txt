@@ -26,18 +26,18 @@ One touch means instant death!<NOD<END
 #0300
 <ITJ0008:0301
 <KEY<MSG<TUR*Crackle* *Snap!*<NOD<FLJ0242:0000
-The ??? burns fiercely.<NOD<END
+The fire burns fiercely.<NOD<END
 #0301
 <KEY<ANP0300:0010:0000<WAI0030<DNP0300<FLJ0242:0000<FL+0242<EVE0302
 
 #0302
-<MSG<TUR<GIT1012<IT+0012Got the =Charcoal=.<WAI0025<NOD<END
+<EVE0062
 
 #0500
 <FLJ0240:0502
 <KEY<FL+0241<FL+0240<EVE0501
 #0501
-<MSG<TUR<GIT0003<AM+0003:0000Got the =Fireball=!<WAI0025<NOD<END
+<EVE0004
 #0502
 <KEY<MSG<TURYou can get to the inner part of
 Grasstown by passing through the
