@@ -2,7 +2,7 @@
 #0090
 <MNA<CMU0008<FAI0000<END
 #0091
-<MNA<CMU0008<FAI0001<END
+<KEY<MNA<CMU0008<FAI0001<END
 #0092
 <MNA<CMU0008<FAI0002<END
 #0093
@@ -17,6 +17,7 @@
 
 
 #0200
+<FL+0430<TRA0013:0091:0010:0008
 <EVE0091 -- easier to do this than to deal with changing the actual start event
 
 #1000
