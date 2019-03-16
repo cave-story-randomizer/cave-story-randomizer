@@ -26,7 +26,7 @@
 
 #0900
 <DNP0900
-<KEY<MYD0002<MSGPlease kill my master.<NOD
+<KEY<MYD0002<SAT<MSGPlease kill my master.<NOD
 That is the only way Misery
 can be freed...<NOD
 ...The only way to avoid a
