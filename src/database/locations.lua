@@ -90,7 +90,7 @@ local data = {
             risenBooster = {
                 requirements = {{"eventCore"}},
                 map = "Pens1",
-                event = "#0000"
+                event = "#0652"
             }
         }
     },
@@ -188,12 +188,12 @@ local data = {
             outsideHut = {
                 requirements = {{"eventFans"}, {"flight"}},
                 map = "Weed",
-                event = "#0302"
+                event = "#0303"
             },
             hutChest = {
                 requirements = {{"eventFans"}, {"flight"}},
                 map = "WeedB",
-                event = "#0300"
+                event = "#0301"
             },
             gumChest = {
                 requirements = {{"eventFans", "gumKey", "weaponBoss"}, {"flight", "gumKey", "weaponBoss"}},
@@ -254,7 +254,7 @@ local data = {
             chestPup = {
                 requirements = {},
                 map = "Sand",
-                event = "#0000"
+                event = "#0421"
             },
             pupCapsule = {
                 requirements = {},
@@ -264,27 +264,27 @@ local data = {
             darkPup = {
                 requirements = {},
                 map = "Dark",
-                event = "#0000"
+                event = "#0401"
             },
             runPup = {
                 requirements = {},
                 map = "Sand",
-                event = "#0000"
+                event = "#0422"
             },
-            storehousePup = {
+            sleepyPup = {
                 requirements = {},
                 map = "Sand",
-                event = "#0000"
+                event = "#0421"
             },
             jenka = {
-                requirements = {{"puppy1", "puppy2", "puppy3", "puppy4", "puppy5"}},
-                map = "Jenka1",
-                event = "#0000"
+                requirements = {{"puppy:5"}},
+                map = "Jenka2",
+                event = "#0221"
             },
             king = {
-                requirements = {{"puppy1", "puppy2", "puppy3", "puppy4", "puppy5", "weaponBoss"}},
+                requirements = {{"puppy:5", "weaponBoss"}},
                 map = "Gard",
-                event = "#0000"
+                event = "#0602"
             }
         }
     },
@@ -321,12 +321,12 @@ local data = {
                 event = "#0502"
             },
             snakeChaba = {
-                requirements = {{"polarStar", "fireball"}},
+                requirements = {{"fireball"}},
                 map = "MazeA",
                 event = "#0512"
             },
             whimChaba = {
-                requirements = {{"spur"}},
+                requirements = {{"polarStar:2"}},
                 map = "MazeA",
                 event = "#0522"
             },
@@ -456,7 +456,7 @@ local data = {
             arthur = {{"teleportKey"}},
             outerWall = {},
             grasstownEast = {{"bomb", "weaponSN"}},
-            lastCave = {{"eventRocket", "booster2", "weaponBoss"}}
+            lastCave = {{"eventRocket", "booster:2", "weaponBoss"}}
         },
         locations = {
             kanpachi = {
@@ -507,7 +507,7 @@ local data = {
         },
         events = {
             eventRocket = {
-                requirements = {{"newSprinkler", "booster1", "controller"}}
+                requirements = {{"newSprinkler", "booster", "controller"}}
             }
         }
     },

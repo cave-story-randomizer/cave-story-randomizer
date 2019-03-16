@@ -10,10 +10,22 @@ function inventory(t)
   return item(t)
 end
 
-function lifeCapsule(health)
+function lifeCapsule3()
   return item({
     name = "Life Capsule",
-    script = ("<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+%04d\n\rMax health increased by %s!<WAI0025<NOD<END"):format(health, health)
+    script = "<EVE0012"
+  })
+end
+function lifeCapsule4()
+  return item({
+    name = "Life Capsule",
+    script = "<EVE0013"
+  })
+end
+function lifeCapsule5()
+  return item({
+    name = "Life Capsule",
+    script = "<EVE0014"
   })
 end
 
@@ -250,18 +262,18 @@ local data = {
   -------------------
   -- LIFE CAPSULES --
   -------------------
-  capsule3A = lifeCapsule(3), -- First Cave
-  capsule3B = lifeCapsule(3), -- Yamashita Farm
-  capsule3C = lifeCapsule(3), -- Egg Corridor (Basil)
-  capsule4A = lifeCapsule(4), -- Egg Corridor (Cthulhu)
-  capsule5A = lifeCapsule(5), -- Grasstown
-  capsule5B = lifeCapsule(5), -- Execution Chamber
-  capsule5C = lifeCapsule(5), -- Sand Zone (Upper)
-  capsule5D = lifeCapsule(5), -- Sand Zone (Lower)
-  capsule5E = lifeCapsule(5), -- Labyrinth
-  capsule5F = lifeCapsule(5), -- Plantation (West)
-  capsule4B = lifeCapsule(4), -- Plantation (Puppy)
-  capsule5G = lifeCapsule(5), -- Sacred Grounds
+  capsule3A = lifeCapsule3(), -- First Cave
+  capsule3B = lifeCapsule3(), -- Yamashita Farm
+  capsule3C = lifeCapsule3(), -- Egg Corridor (Basil)
+  capsule4A = lifeCapsule4(), -- Egg Corridor (Cthulhu)
+  capsule5A = lifeCapsule5(), -- Grasstown
+  capsule5B = lifeCapsule5(), -- Execution Chamber
+  capsule5C = lifeCapsule5(), -- Sand Zone (Upper)
+  capsule5D = lifeCapsule5(), -- Sand Zone (Lower)
+  capsule5E = lifeCapsule5(), -- Labyrinth
+  capsule5F = lifeCapsule5(), -- Plantation (West)
+  capsule4B = lifeCapsule4(), -- Plantation (Puppy)
+  capsule5G = lifeCapsule5(), -- Sacred Grounds
 
   --------------
   -- MISSILES --
