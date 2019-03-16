@@ -219,7 +219,7 @@ anything and everything...<WAI9999<END
 <FLJ0742:7018
 <KEY<MSGPush the jump button again in
 midair to fly even higher.<NOD<CLR
-Do you want to equip it?<YNJ0000<EQ+0001<FL+0742<EQ-0032<FL-0743<MSG
+Do you want to equip it?<YNJ0000<EQ+0001<EQ-0064<FL-1020<FL+0742<EQ-0032<FL-0743<MSG
 Booster equipped.<NOD<WAI0003<FRE<EVE5018
 #6019
 <MSG<TURWhen you take damage, the amount
@@ -237,7 +237,7 @@ You can't see any buttons.<WAI9999<END
 <FLJ0743:7023
 <KEY<MSGPush the jump button in midair and
 you can move in any direction.<NOD<CLR
-Do you want to equip it?<YNJ0000<EQ+0032<FL+0743<EQ-0001<FL-0742<MSG
+Do you want to equip it?<YNJ0000<EQ+0032<EQ-0064<FL-1020<FL+0743<EQ-0001<FL-0742<MSG
 Equipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
 #6024
 <FLJ1020:7024

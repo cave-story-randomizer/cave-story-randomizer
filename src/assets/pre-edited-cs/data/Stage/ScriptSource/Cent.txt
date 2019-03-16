@@ -19,7 +19,7 @@
 <KEY<SOU0011<ANP0115:0000:0002<FAO0002<TRA0057:0092:0003:0002
 
 #0120
-<PRI<FLJ1105:0122<MSGWhat's the password?<NOD<FLJ1024:0121<END
+<PRI<FLJ1105:0122<MSGWhat's the password?<NOD<ITJ0026:0121<END
 #0121
 <MSG
 "Litagano Motscoud".<NOD<CLO
@@ -127,8 +127,7 @@ days in no time.<NOD<CLR...I mean, we will, won't we?<NOD<END
 <PRI
 <ITJ0029:0254
 <FLJ1029:0253
-<FLJ1028:0252
-<FLJ1020:0251
+<FLJ1020:0252
 <PRI<MSGMan, these sprinklers just...<NOD<CLRWhoops.
 Not supposed to talk to humans.<NOD<END
 
@@ -181,16 +180,13 @@ up with something around here...<NOD<CLRMan, I'm hungry...<NOD<END
 #0265
 <PRI
 <FLJ1022:0267
-<FLJ1035:0266
-<MSGIt's a bucket. Fish go here
-once they've been caught.<NOD<END
+<EVE0266
 
 #0266
 <PRI<FL+1022
 <MSGPeered into the bucket.<NOD
 Looking closely, you can see
-something down at the bottom.<NOD<CLR<GIT1025<IT+0025<CLR
-<CMU0010Got the =Teleporter Room Key=.<WAI0160<NOD<RMU<END
+something down at the bottom.<NOD<CLR<EVE0075
 #0267
 <PRI<MSGNothing in here anymore...<NOD<END
 

@@ -163,7 +163,7 @@ the other robots...<NOD<CLO
 to meet that gunsmith...<NOD<END
 
 #0518
-<MSG<TUR<AM+0004:0000<GIT0004
+<MSG<TUR<AM+0004:0100<GIT0004
 Got the =Machine Gun=!<WAI0025<NOD<END
 
 #0520

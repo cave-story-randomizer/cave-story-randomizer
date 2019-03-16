@@ -64,7 +64,7 @@ doesn't it?<NOD<END
 <ANP0310:0000:0000
 <MYD0000<DNP0301<SMC<END
 #0310
-<KEY<EVE0310
+<KEY<EVE0311
 <KEY<MSGA teleporter.<NOD<CLRIt has no power.<NOD<END
 #0311
 <CNP0300:0111:0002<HMC<WAI0060<ANP0310:0001:0000
@@ -107,7 +107,7 @@ it is anymore, but that's all
 right!<NOD<END
 
 #0500
-<KEY<AMJ0004:0501<MYB0000<MSG<TURHEY!!!<WAI0050<NOD
+<KEY<AMJ0004:0501<MYB0002<SOU0052<MSG<TURHEY!!!<WAI0100<NOD
 That chest is mine!<NOD<CLR
 <MSGShow me a <GIT0004 =Machine Gun= and I'll
 let you have what's inside.<NOD<END
@@ -117,7 +117,7 @@ let you have what's inside.<NOD<END
 <KEY<MSG<TUR<GIT1020<IT+0020<EQ+0008Got the =Turbocharge=!<WAI0025<NOD<END
 
 #0510
-<KEY<AMJ0003:0511<MYB0000<MSG<TURHEY!!!<WAI0050<NOD
+<KEY<AMJ0003:0511<MYB0002<SOU0052<MSG<TURHEY!!!<WAI0100<NOD
 That chest is mine!<NOD<CLR
 <MSGShow me a <GIT0003=Fireball= and I'll let
 you have what's inside.<NOD<END
@@ -127,7 +127,7 @@ you have what's inside.<NOD<END
 <KEY<MSG<TUR<GIT0001<AM+0001:0000Got the =Snake=!<WAI0025<NOD<END
 
 #0520
-<KEY<AMJ0013:0521<MYB0000<MSG<TURHEY!!!<WAI0050<NOD
+<KEY<AMJ0013:0521<MYB0002<SOU0052<MSG<TURHEY!!!<WAI0100<NOD
 That chest is mine!<NOD<CLR
 <MSGShow me a <GIT0013=Spur= and I'll let you
 have what's inside.<NOD<END

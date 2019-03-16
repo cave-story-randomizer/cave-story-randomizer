@@ -67,6 +67,5 @@ a Mimiga just like us.<NOD<END
 #0411
 <FLJ2404:0000<FL+2404<EVE0412
 #0412
-<KEY<MSG<TUR<GIT1036
-Got the =Alien Medal=!<WAI0025<NOD<END
+<EVE0086
 

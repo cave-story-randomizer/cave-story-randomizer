@@ -186,7 +186,7 @@ local data = {
                 event = "#0305"
             },
             outsideHut = {
-                requirements = {{"eventFans"}, {"flight"}},
+                requirements = {},
                 map = "Weed",
                 event = "#0303"
             },
