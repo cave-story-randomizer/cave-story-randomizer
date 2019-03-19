@@ -1,15 +1,14 @@
-local ItemDeck = require 'item_deck'
+local Items = require 'database.items'
 local TscFile  = require 'tsc_file'
-local WorldGraph = require 'database.locations'
+local WorldGraph = require 'database.world_graph'
 
 local C = Class:extend()
 
 local TSC_FILES = {}
 do
-  local ITEM_DATA = require 'database.items'
-  for k, v in pairs(ITEM_DATA) do
-    local filename = v.map .. '.tsc'
-    if _.contains(TSC_FILES, filename) == false then
+  for location in ipairs(WorldGraph():getLocations()) do
+    local filename = location.map .. '.tsc'
+    if not _.contains(TSC_FILES, filename) then
       table.insert(TSC_FILES, filename)
     end
   end
@@ -17,6 +16,8 @@ end
 
 function C:new()
   self._isCaveStoryPlus = false
+  self.itemDeck = Items()
+  self.worldGraph = WorldGraph(itemDeck)
 end
 
 function C:randomize(path)
@@ -29,12 +30,9 @@ function C:randomize(path)
   self:_seedRngesus()
   local tscFiles = self:_createTscFiles(dirStage)
   -- self:_writePlaintext(tscFiles)
-  local canNotBreakBlocks = self:_shuffleItems(tscFiles)
-  self:_writeModifiedData(tscFiles)
+  self:_shuffleItems(tscFiles)
+  -- self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
-  if canNotBreakBlocks then
-    self:_copyModifiedFirstCave()
-  end
   self:_writeLog()
   self:_unmountDirectory(path)
   return self:_getStatusMessage()
@@ -100,37 +98,43 @@ function C:_writePlaintext(tscFiles)
 end
 
 function C:_shuffleItems(tscFiles)
-  local itemDeck = ItemDeck()
-  local worldGraph = WorldGraph()
+  -- first fill puppies
+  local puppies = self.itemDeck:getItemsByAttribute("puppy")
+  local sandZone = _.shuffle(self.worldGraph:getLocationsByRegion("upperSandZone", "lowerSandZone"))
+  self:_fastFillItems(puppies, sandZone)
 
-  -- first, place puppies in the sand zone
-  for i=1, 5 do
-    local puppy = itemDeck:placeAnyByAttributes({"puppy"})
-    local puppySpot = worldGraph:getAnyByRegion({"lowerSandZone", "upperSandZone"})
+  local mandatory = _.shuffle(self.itemDeck:getMandatoryItems())
+  local optional = _.shuffle(self.itemDeck:getOptionalItems())
 
-    placeItem(puppySpot, puppy)
+  -- next fill hell chests, which cannot have mandatory items
+  self:_fastFillItems(optional, self.worldGraph:getLocationsByRegion("endgame"))
+
+  self:_fillItems(mandatory, _.shuffle(self.worldGraph:getEmptyLocations()))
+  self:_fastFillItems(optional, _.shuffle(self.worldGraph:getEmptyLocations()))
+
+  worldGraph:writeItems()
+end
+
+function C:_fillItems(items, locations)
+  local itemsLeft = _.clone(items)
+  assert(#items <= #locations, 'Trying to fill more items than there are locations!')
+
+  for item in ipairs(items) do
+    local assumed = self.worldGraph:collect(_.remove(itemsLeft, item))
+    local fillable = _.filter(locations, function(location, assumed) do
+      return not location:hasItem() and location:canAccess(assumed) end)
+    assert(#fillable > 0, 'No available locations!')
+    fillable[1]:setItem(item)
   end
+end
 
-  -- next, place weapon at hermit gunsmith and random item in first cave
-  placeItem(worldGraph:get("gunsmithChest"), itemDeck:placeAnyByAttributes({"weaponSN"}))
-  placeItem(worldGraph:get("firstCapsule"), itemDeck:placeAny())
-
-  -- for now, just implementing a forward fill - will do a better fill later
-  while itemDeck:remaining() > 0 do
-    local location = worldGraph:getAnyAccessible(itemDeck:getPlacedItems())  
-    local item, itemIndex
-
-    while ~location do
-      item, itemIndex = itemDeck:getAnyByAttributes({"progression"})
-      location = worldGraph:getAnyAccessible(itemDeck:getPlacedItems(item))
+function C:_fastFillItems(items, locations)
+  for location in ipairs(locations) do
+    if not location:hasItem() then
+      local item = _.pop(items)
+      if item == nil then break end -- no items left to place, but there are still locations open
+      location:setItem(item)
     end
-
-    if ~item then
-      item, itemIndex = itemDeck:getAny()
-    end
-    itemDeck:place(item, itemIndex)
-
-    tscFiles[location.map]:placeItem(location.event, itemData.item.script)
   end
 end
 

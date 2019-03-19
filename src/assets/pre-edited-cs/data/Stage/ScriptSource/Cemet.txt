@@ -28,7 +28,9 @@ for me?<NOD<CLR
 Yeah, you're right,<NOD
 I ain't been home in a while.<NOD
 Arright, time to go.<NOD<GIT1032<DNP0200<CLRYou're gonna take me there,
-of course?<NOD<EVE0082
+of course?<NOD<EVE0202
+#0202
+<EVE0082
 
 #0300
 <CNP0300:0000:0000<FLJ0390:0302<FL+0390<EVE0301

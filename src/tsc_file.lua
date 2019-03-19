@@ -1,8 +1,8 @@
 local C = Class:extend()
 
-local ITEM_DATA = require 'database.items'
+-- local ITEM_DATA = require 'database.items'
 
-local OPTIONAL_REPLACES = {
+-- local OPTIONAL_REPLACES = {
   'Max health increased by ',
   'Max life increased by ',
   '<ACH0041', -- Cave Story+ only, trigger achievement.
@@ -35,6 +35,11 @@ end
 
 function C:hasUnreplacedItems()
   return #self._unreplaced >= 1
+end
+
+function C:placeItemAtLocation(script, event)
+  local labelStart = self:_getLabelPositionRange(event)
+  self:_stringReplace(self._text, "<EVE$%d%d%d%d", script, event)
 end
 
 function C:replaceItem(replacement)
