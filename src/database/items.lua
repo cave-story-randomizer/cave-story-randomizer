@@ -316,8 +316,11 @@ local function _itemData()
 
   for k, t in pairs(data) do
     t.key = k
+    t.attributes = t.attributes or {}
     table.insert(t.attributes, k)
   end
+
+  return data
 end
 
 local C = Class:extend()

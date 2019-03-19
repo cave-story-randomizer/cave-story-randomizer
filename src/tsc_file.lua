@@ -2,7 +2,7 @@ local C = Class:extend()
 
 -- local ITEM_DATA = require 'database.items'
 
--- local OPTIONAL_REPLACES = {
+local OPTIONAL_REPLACES = {
   'Max health increased by ',
   'Max life increased by ',
   '<ACH0041', -- Cave Story+ only, trigger achievement.

@@ -6,7 +6,7 @@ local C = Class:extend()
 
 local TSC_FILES = {}
 do
-  for location in ipairs(WorldGraph():getLocations()) do
+  for location in ipairs(WorldGraph(Items()):getLocations()) do
     local filename = location.map .. '.tsc'
     if not _.contains(TSC_FILES, filename) then
       table.insert(TSC_FILES, filename)
@@ -121,8 +121,10 @@ function C:_fillItems(items, locations)
 
   for item in ipairs(items) do
     local assumed = self.worldGraph:collect(_.remove(itemsLeft, item))
-    local fillable = _.filter(locations, function(location, assumed) do
-      return not location:hasItem() and location:canAccess(assumed) end)
+    local fillable = {}
+    for location in ipairs(locations) do
+      if not location:hasItem() and location:canAccess(assumed) then table.insert(fillable, location) end
+    end
     assert(#fillable > 0, 'No available locations!')
     fillable[1]:setItem(item)
   end
