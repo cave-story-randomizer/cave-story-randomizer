@@ -1,8 +1,12 @@
 data/*
 notes/*
 
-src/assets/pre-edited-cs/window\.rect
+pre-edited-cs/Config\.dat
 
-src/assets/pre-edited-cs/Profile\.dat
+pre-edited-cs/Doukutsu\.exe\.blbkp
 
-src/assets/pre-edited-cs/Doukutsu\.exe\.blbkp
+pre-edited-cs/Profile\.dat
+
+pre-edited-cs/window\.rect
+
+pre-edited-cs/Profile\.dat\.bkp
