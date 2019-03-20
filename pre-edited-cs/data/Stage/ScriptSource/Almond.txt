@@ -85,8 +85,7 @@ ERROR<NOD<END
 <PRI<MSGIt's tangled up.
 You can't get it loose...<NOD<END
 #0243
-<PRI<MSG<TUR<GIT1030<IT+0030
-Got the =Tow Rope=.<WAI0025<NOD<END
+<EVE0080
 
 #0250
 #0251

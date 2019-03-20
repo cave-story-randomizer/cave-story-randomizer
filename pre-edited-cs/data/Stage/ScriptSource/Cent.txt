@@ -186,9 +186,11 @@ up with something around here...<NOD<CLRMan, I'm hungry...<NOD<END
 <PRI<FL+1022
 <MSGPeered into the bucket.<NOD
 Looking closely, you can see
-something down at the bottom.<NOD<CLR<EVE0075
+something down at the bottom.<NOD<CLR<EVE0268
 #0267
 <PRI<MSGNothing in here anymore...<NOD<END
+#0268
+<EVE0075
 
 #0299
 <PRI<MSG.....<NOD<END
@@ -250,8 +252,7 @@ Jammed it into Curly's mouth.<NOD<CLR<CLO<WAI0050<EQ-0064<WAI0050
 <PRI<EQ+0064<EVE0324
 
 #0324
-<PRI<MSG<TUR<GIT1039
-<IT+0039Got the =Iron Bond=!<WAI0025<NOD<END
+<EVE0089
 
 
 #0325
@@ -307,8 +308,7 @@ at a frightening rate.<NOD<END
 #0416
 <PRI<DNP0415<FL-1028<EVE0417
 #0417
-<MSG<TUR<GIT1028<IT+0028
-Got the =Broken Sprinkler=.<WAI0025<NOD<END
+<EVE0078
 
 
 #0450

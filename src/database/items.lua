@@ -31,7 +31,8 @@ end
 local function event(n)
   return {
     name = "Event: " .. n,
-    attributes = {"event"}
+    attributes = {"event"},
+    placed = true
   }
 end
 
@@ -73,7 +74,7 @@ local function _itemData()
     bubbler = {
       name = "Bubbler",
       script = "<EVE0007",
-      attributes = {"weaponBoss", "weaponSN", "nonProgressive"} -- have fun grinding to lv3 to get out of the first cave :)
+      attributes = {"weaponBoss", "weaponSN", "nonProgressive"}
     },
     machineGun = {
       name = "Machine Gun",
@@ -265,11 +266,17 @@ local function _itemData()
     mrLittle = {
       name = "Little Man",
       script = "<EVE0082",
-      attributes = {"event"}
+      attributes = {"event"},
+      placed = true
     },
     ironBond = {
       name = "Iron Bond",
       script = "<EVE0089"
+    },
+    clayMedal = {
+      name = "Clay Figure Medal",
+      script = "<EVE0081",
+      attributes = {"nonProgressive"}
     },
 
     -------------------
@@ -314,13 +321,16 @@ local function _itemData()
     eventRocket = event("Built Rocket")
   }
 
+  local array = {}
   for k, t in pairs(data) do
     t.key = k
+    t.placed = t.placed or false
     t.attributes = t.attributes or {}
     table.insert(t.attributes, k)
+    table.insert(array, t)
   end
 
-  return data
+  return array
 end
 
 local C = Class:extend()
@@ -330,17 +340,19 @@ function C:new()
 end
 
 function C:getByKey(key)
-  for k, v in ipairs(self.itemData) do
-    if k == key then return v end
-  end
+  return _.filter(self.itemData, function(k,v) return v.key == key end)[1]
+end
+
+function C:_getItems(filterFn)
+  return _.filter(self.itemData, filterFn)
+end
+
+function C:getItems()
+  return self:_getItems(function(k,v) return true end)
 end
 
 function C:getItemsByAttribute(attribute)
-  local items = {}
-  for item in ipairs(self.itemData) do
-    if _.contains(item.attributes, attribute) then table.insert(items, item) end
-  end
-  return items
+  return self:_getItems(function(k,v) return _.contains(v.attributes, attribute) end)
 end
 
 function C:getEvents()
@@ -352,7 +364,23 @@ function C:getOptionalItems()
 end
 
 function C:getMandatoryItems()
-  return _.difference(self.items, _.union(self:getOptionalItems(), self:getEvents()))
+  return self:_getItems(function(k,v)
+    return not (_.contains(v.attributes, "event") or _.contains(v.attributes, "nonProgressive") or _.contains(v.attributes, "puppy"))
+  end)
+end
+
+function C:getMandatory()
+  return self:_getItems(function(k,v) return not _.contains(v.attributes, "nonProgressive") end)
+end
+
+function C:getUnplacedItems()
+  return self:_getItems(function(k,v) return not v.placed end)
+end
+
+function C:unplacedString()
+  local s = "\r\nUnplaced items:"
+  for k,v in pairs(self:getUnplacedItems()) do s = s .. "\r\n" .. v.name end
+  return s
 end
   
 return C

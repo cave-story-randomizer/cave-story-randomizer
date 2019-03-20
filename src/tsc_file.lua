@@ -21,6 +21,7 @@ function C:new(path)
   assert(file:release())
 
   -- Determine set of items which can be replaced later.
+  --[[
   self._unreplaced = {}
   self._mapName = path:match("^.+/(.+)$")
   for k, v in pairs(ITEM_DATA) do repeat
@@ -31,15 +32,23 @@ function C:new(path)
     table.insert(self._unreplaced, item)
   until true end
   self._unreplaced = _.shuffle(self._unreplaced)
+  ]]
 end
 
 function C:hasUnreplacedItems()
   return #self._unreplaced >= 1
 end
 
-function C:placeItemAtLocation(script, event)
-  local labelStart = self:_getLabelPositionRange(event)
-  self:_stringReplace(self._text, "<EVE$%d%d%d%d", script, event)
+function C:placeItemAtLocation(item, location)
+  local template = '[%s] "%s" -> "%s"'
+  logNotice(template:format(location.map, location.name, item.name))
+
+  local wasChanged
+  self._text, wasChanged = self:_stringReplace(self._text, "<EVE....", item.script, location.event)
+  if not wasChanged then
+    local template = 'Unable to place [%s] "%s" at "%s".'
+    logError(template:format(location.map, item.name, location.name))
+  end
 end
 
 function C:replaceItem(replacement)
@@ -130,13 +139,13 @@ end
 
 function C:_stringReplace(text, needle, replacement, label)
   local pStart, pEnd = self:_getLabelPositionRange(label)
-  local i = text:find(needle, pStart, true)
+  local i = text:find(needle, pStart)
   if i == nil then
-    -- logWarning(('Unable to replace "%s" with "%s"'):format(needle, replacement))
+    logNotice(('Unable to replace "%s" with "%s"'):format(needle, replacement))
     return text, false
   elseif i > pEnd then
     -- This is totally normal and can be ignored.
-    -- logDebug(('Found "%s", but was outside of label.'):format(needle, replacement))
+    logNotice(('Found "%s", but was outside of label.'):format(needle, replacement))
     return text, false
   end
   local len = needle:len()
@@ -188,7 +197,7 @@ function C:_getLabelPositionRange(label)
   end
 
   if labelStart == nil then
-    logError("Could not find label: " .. label)
+    logError(("%s: Could not find label: %s"):format(self.mapName, label))
     labelStart = 1
   end
 

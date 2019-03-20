@@ -7,27 +7,28 @@ function C:new(worldGraph, name)
 end
 
 function C:canAccess(items)
-  return self.requirements == nil or self.requirements(items)
+  return self.requirements == nil or self.requirements(self, items)
 end
 
 function C:getLocation(key)
   return self.locations[key]
 end
 
-function C:getLocations()
-  return self.locations
+function C:getLocations(filterFn)
+  filterFn = filterFn or function(k,v) return true end
+  return _.filter(self.locations, filterFn)
 end
 
 function C:getEmptyLocations()
-  return _.filter(self.locations, function(k,v) return not v:hasItem() end)
+  return self:getLocations(function(k,v) return v.item == nil end)
 end
 
 function C:getFilledLocations()
-  return _.filter(self.locations, function(k,v) return v:hasItem() end)
+  return self:getLocations(function(k,v) return v.item ~= nil end)
 end
 
 function C:writeItems(tscFiles)
-  for location in ipairs(self.locations) do location:writeItem(tscFiles) end
+  for key, location in pairs(self.locations) do location:writeItem(tscFiles) end
 end
 
 return C

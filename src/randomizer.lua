@@ -6,10 +6,12 @@ local C = Class:extend()
 
 local TSC_FILES = {}
 do
-  for location in ipairs(WorldGraph(Items()):getLocations()) do
-    local filename = location.map .. '.tsc'
-    if not _.contains(TSC_FILES, filename) then
-      table.insert(TSC_FILES, filename)
+  for key, location in ipairs(WorldGraph(Items()):getLocations()) do
+    if location.map ~= nil and location.event ~= nil then
+      local filename = location.map
+      if not _.contains(TSC_FILES, filename) then
+        table.insert(TSC_FILES, filename)
+      end
     end
   end
 end
@@ -17,7 +19,7 @@ end
 function C:new()
   self._isCaveStoryPlus = false
   self.itemDeck = Items()
-  self.worldGraph = WorldGraph(itemDeck)
+  self.worldGraph = WorldGraph(self.itemDeck)
 end
 
 function C:randomize(path)
@@ -31,7 +33,7 @@ function C:randomize(path)
   local tscFiles = self:_createTscFiles(dirStage)
   -- self:_writePlaintext(tscFiles)
   self:_shuffleItems(tscFiles)
-  -- self:_writeModifiedData(tscFiles)
+  self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
   self:_writeLog()
   self:_unmountDirectory(path)
@@ -77,8 +79,9 @@ end
 function C:_createTscFiles(dirStage)
   local tscFiles = {}
   for _, filename in ipairs(TSC_FILES) do
-    local path = dirStage .. '/' .. filename
+    local path = dirStage .. '/' .. filename .. '.tsc'
     tscFiles[filename] = TscFile(path)
+    tscFiles[filename].mapName = filename
   end
   return tscFiles
 end
@@ -92,58 +95,65 @@ function C:_writePlaintext(tscFiles)
 
   -- Write modified files.
   for filename, tscFile in pairs(tscFiles) do
-    local path = sourcePath .. '/data/Plaintext/' .. filename
+    local path = sourcePath .. '/data/Plaintext/' .. filename .. '.txt'
     tscFile:writePlaintextTo(path)
   end
 end
 
 function C:_shuffleItems(tscFiles)
+  local l, i = #self.worldGraph:getLocations(), #self.itemDeck:getItems()
+  assert(l == i, ("Locations: %d\r\nItems: %d"):format(l, i)) 
   -- first fill puppies
-  local puppies = self.itemDeck:getItemsByAttribute("puppy")
-  local sandZone = _.shuffle(self.worldGraph:getLocationsByRegion("upperSandZone", "lowerSandZone"))
-  self:_fastFillItems(puppies, sandZone)
+  self:_fastFillItems(self.itemDeck:getItemsByAttribute("puppy"), _.shuffle(self.worldGraph:getPuppySpots()))
 
-  local mandatory = _.shuffle(self.itemDeck:getMandatoryItems())
-  local optional = _.shuffle(self.itemDeck:getOptionalItems())
+  local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems()))
+  local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems()))
 
   -- next fill hell chests, which cannot have mandatory items
-  self:_fastFillItems(optional, self.worldGraph:getLocationsByRegion("endgame"))
+  self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
 
-  self:_fillItems(mandatory, _.shuffle(self.worldGraph:getEmptyLocations()))
+  self:_fillItems(mandatory, _.shuffle(_.reverse(self.worldGraph:getEmptyLocations())))
   self:_fastFillItems(optional, _.shuffle(self.worldGraph:getEmptyLocations()))
 
-  worldGraph:writeItems()
+  assert(#self.worldGraph:getEmptyLocations() == 0, self.worldGraph:emptyString() .. "\r\n" .. self.itemDeck:unplacedString())
+  self.worldGraph:writeItems(tscFiles)
 end
 
-function C:_fillItems(items, locations)
-  local itemsLeft = _.clone(items)
-  assert(#items <= #locations, 'Trying to fill more items than there are locations!')
+function C:_fillItems(items, locations, baseItems)
+  local itemsLeft
+  if baseItems ~= nil then
+    itemsLeft = _.union(items, baseItems)
+  else
+    itemsLeft = _.clone(items)
+  end
+  assert(#items <= #locations, string.format("Trying to fill more items than there are locations! Items: %d Locations: %d", #items, #locations))
 
-  for item in ipairs(items) do
+  for key, item in ipairs(items) do
     local assumed = self.worldGraph:collect(_.remove(itemsLeft, item))
-    local fillable = {}
-    for location in ipairs(locations) do
-      if not location:hasItem() and location:canAccess(assumed) then table.insert(fillable, location) end
-    end
-    assert(#fillable > 0, 'No available locations!')
+
+    local fillable = _.filter(locations, function(k,v) return not v:hasItem() and v:canAccess(assumed) end)
+    local empty = _.filter(locations, function(k,v) return not v:hasItem() end)
+    assert(#fillable > 0, "No available locations!")
+    assert(item ~= nil, "No item found!")
     fillable[1]:setItem(item)
   end
 end
 
 function C:_fastFillItems(items, locations)
-  for location in ipairs(locations) do
-    if not location:hasItem() then
-      local item = _.pop(items)
-      if item == nil then break end -- no items left to place, but there are still locations open
-      location:setItem(item)
-    end
+  --assert(#items > 0, ("Items: %d Locations: %d"):format(#items, #locations))
+  for key, location in ipairs(locations) do
+    local item = items[#items]
+    table.remove(items)
+    --assert(item ~= nil, ("Items: %d Locations: %d"):format(#items, key))
+    if item == nil then break end -- no items left to place, but there are still locations open
+    location:setItem(item)
   end
 end
 
 function C:_writeModifiedData(tscFiles)
   local basePath = self:_getWritePathStage()
   for filename, tscFile in pairs(tscFiles) do
-    local path = basePath .. '/' .. filename
+    local path = basePath .. '/' .. filename .. '.tsc'
     tscFile:writeTo(path)
   end
 end
