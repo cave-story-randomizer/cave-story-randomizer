@@ -126,15 +126,17 @@ function C:_fillItems(items, locations)
   assert(#items <= #locations, string.format("Trying to fill more items than there are locations! Items: %d Locations: %d", #items, #locations))
 
   local itemsLeft = _.clone(items)
-  for key, item in ipairs(items) do
-    local assumed = self.worldGraph:collect(_.remove(itemsLeft, item))
-
+  repeat
+    local item = _.pop(itemsLeft)
+    local assumed = self.worldGraph:collect(itemsLeft)
+    
     local fillable = _.filter(locations, function(k,v) return not v:hasItem() and v:canAccess(assumed) end)
     local empty = _.filter(locations, function(k,v) return not v:hasItem() end)
-    assert(#fillable > 0, "No available locations!")
+    assert(#fillable > 0, ("No available locations for %s! Items left: %d"):format(item.name, #itemsLeft))
     assert(item ~= nil, "No item found!")
+    logDebug(("Placing %s at %s"):format(item.name, fillable[1].name))
     fillable[1]:setItem(item)
-  end
+  until #itemsLeft == 0
 end
 
 function C:_fastFillItems(items, locations)

@@ -494,7 +494,7 @@ function worldGraph:writeItems(tscFiles)
 end
 
 function worldGraph:collect(preCollectedItems)
-  local collected = preCollectedItems or {}
+  local collected = _.clone(preCollectedItems) or {}
   assert(collected ~= nil)
   local availableLocations = self:getFilledLocations()
 
@@ -515,6 +515,9 @@ function worldGraph:collect(preCollectedItems)
     end
   until foundItems == 0
 
+  --[[local s = "Collected items: "
+  for k,v in ipairs(collected) do s = s .. v.name .. ", " end
+  logDebug(s)]]
   return collected
 end
 

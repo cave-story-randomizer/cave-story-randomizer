@@ -44,12 +44,12 @@ local function _itemData()
     polarStar1 = {
       name = "Polar Star",
       script = "<EVE0002",
-      attributes = {"weaponBoss", "weaponSN", "polarStar"}
+      attributes = {"weaponBoss", "weaponSN", "polarStar", "mandatory"}
     },
     polarStar2 = {
       name = "Polar Star",
       script = "<EVE0002",
-      attributes = {"weaponBoss", "weaponSN", "polarStar"}
+      attributes = {"weaponBoss", "weaponSN", "polarStar", "mandatory"}
     },
     missileLauncher = {
       name = "Missile Launcher",
@@ -64,7 +64,7 @@ local function _itemData()
     fireball = {
       name = "Fireball",
       script = "<EVE0004",
-      attributes = {"weaponBoss"}
+      attributes = {"weaponBoss", "mandatory"}
     },
     snake = {
       name = "Snake",
@@ -79,12 +79,12 @@ local function _itemData()
     machineGun = {
       name = "Machine Gun",
       script = "<EVE0008",
-      attributes = {"weaponBoss", "flight"}
+      attributes = {"weaponBoss", "flight", "mandatory"}
     },
     blade = {
       name = "Blade",
       script = "<EVE0009",
-      attributes = {"weaponBoss", "weaponSN"}
+      attributes = {"weaponBoss", "weaponSN", "mandatory"}
     },
     nemesis = {
       name = "Nemesis",
@@ -102,19 +102,23 @@ local function _itemData()
     },
     locket = {
       name = "Silver Locket",
-      script = "<EVE0054"
+      script = "<EVE0054",
+      attributes = {"mandatory"}
     },
     arthurKey = {
       name = "Arthur's Key",
-      script = "<EVE0051"
+      script = "<EVE0051",
+      attributes = {"mandatory"}
     },
     idCard = {
       name = "ID Card",
-      script = "<EVE0057"
+      script = "<EVE0057",
+      attributes = {"mandatory"}
     },
     santaKey = {
       name = "Santa's Key",
-      script = "<EVE0053"
+      script = "<EVE0053",
+      attributes = {"mandatory"}
     },
     lipstick = {
       name = "Chaco's Lipstick",
@@ -123,27 +127,33 @@ local function _itemData()
     },
     juice = {
       name = "Jellyfish Juice",
-      script = "<EVE0058"
+      script = "<EVE0058",
+      attributes = {"mandatory"}
     },
     charcoal = {
       name = "Charcoal",
-      script = "<EVE0062"
+      script = "<EVE0062",
+      attributes = {"mandatory"}
     },
     rustyKey = {
       name = "Rusty Key",
-      script = "<EVE0039"
+      script = "<EVE0039",
+      attributes = {"mandatory"}
     },
     gumKey = {
       name = "Gum Key",
-      script = "<EVE0060"
+      script = "<EVE0060",
+      attributes = {"mandatory"}
     },
     gumBase = {
       name = "Gum Base",
-      script = "<EVE0061"
+      script = "<EVE0061",
+      attributes = {"mandatory"}
     },
     bomb = {
       name = "Bomb",
-      script = "<EVE0063"
+      script = "<EVE0063",
+      attributes = {"mandatory"}
     },
     panties = {
       name = "Curly's Panties",
@@ -187,7 +197,8 @@ local function _itemData()
     },
     clinicKey = {
       name = "Clinic Key",
-      script = "<EVE0067"
+      script = "<EVE0067",
+      attributes = {"mandatory"}
     },
     armsBarrier = {
       name = "Arms Barrier",
@@ -196,25 +207,28 @@ local function _itemData()
     },
     cureAll = {
       name = "Cure-All",
-      script = "<EVE0066"
+      script = "<EVE0066",
+      attributes = {"mandatory"}
     },
     booster1 = {
       name = "Booster",
       script = "<EVE0068",
-      attributes = {"flight", "booster"}
+      attributes = {"flight", "booster", "mandatory"}
     },
     booster2 = {
       name = "Booster",
       script = "<EVE0068",
-      attributes = {"flight", "booster"}
+      attributes = {"flight", "booster", "mandatory"}
     },
     towRope = {
       name = "Tow Rope",
-      script = "<EVE0080"
+      script = "<EVE0080",
+      attributes = {"mandatory"}
     },
     airTank = {
       name = "Curly's Air Tank",
-      script = "<EVE0071"
+      script = "<EVE0071",
+      attributes = {"mandatory"}
     },
     alienMedal = {
       name = "Alien Medal",
@@ -233,35 +247,43 @@ local function _itemData()
     },
     teleportKey = {
       name = "Teleporter Room Key",
-      script = "<EVE0075"
+      script = "<EVE0075",
+      attributes = {"mandatory"}
     },
     letter = {
       name = "Sue's Letter",
-      script = "<EVE0076"
+      script = "<EVE0076",
+      attributes = {"mandatory"}
     },
     mask = {
       name = "Mimiga Mask",
-      script = "<EVE0074"
+      script = "<EVE0074",
+      attributes = {"mandatory"}
     },
     brokenSprinkler = {
       name = "Broken Sprinkler",
-      script = "<EVE0078"
+      script = "<EVE0078",
+      attributes = {"mandatory"}
     },
     newSprinkler = {
       name = "Sprinkler",
-      script = "<EVE0079"
+      script = "<EVE0079",
+      attributes = {"mandatory"}
     },
     controller = {
       name = "Controller",
-      script = "<EVE0077"
+      script = "<EVE0077",
+      attributes = {"mandatory"}
     },
     mushroomBadge = {
       name = "Mushroom Badge",
-      script = "<EVE0083"
+      script = "<EVE0083",
+      attributes = {"mandatory"}
     },
     maPignon = {
       name = "Ma Pignon",
-      script = "<EVE0084"
+      script = "<EVE0084",
+      attributes = {"mandatory"}
     },
     mrLittle = {
       name = "Little Man",
@@ -271,7 +293,8 @@ local function _itemData()
     },
     ironBond = {
       name = "Iron Bond",
-      script = "<EVE0089"
+      script = "<EVE0089",
+      attributes = {"mandatory"}
     },
     clayMedal = {
       name = "Clay Figure Medal",
@@ -364,9 +387,7 @@ function C:getOptionalItems()
 end
 
 function C:getMandatoryItems()
-  return self:_getItems(function(k,v)
-    return not (_.contains(v.attributes, "event") or _.contains(v.attributes, "nonProgressive") or _.contains(v.attributes, "puppy"))
-  end)
+  return self:getItemsByAttribute("mandatory")
 end
 
 function C:getMandatory()
