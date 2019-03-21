@@ -446,8 +446,8 @@ function worldGraph:getLocations()
 end
 
 function worldGraph:getPuppySpots()
-  local locations = self.locationsArray(self.regions.upperSandZone:getLocations())
-  for k, location in pairs(self.regions.lowerSandZone:getLocations()) do
+  local locations = self.locationsArray(self.regions.upperSandZone:getEmptyLocations())
+  for k, location in pairs(self.regions.lowerSandZone:getEmptyLocations()) do
     if k ~= "jenka" and k ~= "king" and k ~= "eventToroko" then  
       table.insert(locations, location)
     end

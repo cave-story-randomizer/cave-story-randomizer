@@ -102,13 +102,14 @@ end
 
 function C:_shuffleItems(tscFiles)
   local l, i = #self.worldGraph:getLocations(), #self.itemDeck:getItems()
-  assert(l == i, ("Locations: %d\r\nItems: %d"):format(l, i)) 
+  assert(l == i, ("Locations: %d\r\nItems: %d"):format(l, i))
+ 
   -- first fill puppies
   self:_fastFillItems(self.itemDeck:getItemsByAttribute("puppy"), _.shuffle(self.worldGraph:getPuppySpots()))
 
   local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems()))
   local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems()))
-
+  
   -- next fill hell chests, which cannot have mandatory items
   self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
 
@@ -119,15 +120,11 @@ function C:_shuffleItems(tscFiles)
   self.worldGraph:writeItems(tscFiles)
 end
 
-function C:_fillItems(items, locations, baseItems)
-  local itemsLeft
-  if baseItems ~= nil then
-    itemsLeft = _.union(items, baseItems)
-  else
-    itemsLeft = _.clone(items)
-  end
+function C:_fillItems(items, locations)
+  assert(#items > 0, ("No items provided! Trying to fill %s locations."):format(#locations))
   assert(#items <= #locations, string.format("Trying to fill more items than there are locations! Items: %d Locations: %d", #items, #locations))
 
+  local itemsLeft = _.clone(items)
   for key, item in ipairs(items) do
     local assumed = self.worldGraph:collect(_.remove(itemsLeft, item))
 
@@ -140,11 +137,10 @@ function C:_fillItems(items, locations, baseItems)
 end
 
 function C:_fastFillItems(items, locations)
-  --assert(#items > 0, ("Items: %d Locations: %d"):format(#items, #locations))
+  assert(#items > 0, ("No items provided! Attempting to fast fill %s locations."):format(#locations))
+
   for key, location in ipairs(locations) do
-    local item = items[#items]
-    table.remove(items)
-    --assert(item ~= nil, ("Items: %d Locations: %d"):format(#items, key))
+    local item = _.pop(items)
     if item == nil then break end -- no items left to place, but there are still locations open
     location:setItem(item)
   end
