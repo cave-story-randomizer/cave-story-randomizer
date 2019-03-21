@@ -101,9 +101,6 @@ function C:_writePlaintext(tscFiles)
 end
 
 function C:_shuffleItems(tscFiles)
-  local l, i = #self.worldGraph:getLocations(), #self.itemDeck:getItems()
-  assert(l == i, ("Locations: %d\r\nItems: %d"):format(l, i))
- 
   -- first fill puppies
   self:_fastFillItems(self.itemDeck:getItemsByAttribute("puppy"), _.shuffle(self.worldGraph:getPuppySpots()))
 
@@ -116,7 +113,7 @@ function C:_shuffleItems(tscFiles)
   self:_fillItems(mandatory, _.shuffle(_.reverse(self.worldGraph:getEmptyLocations())))
   self:_fastFillItems(optional, _.shuffle(self.worldGraph:getEmptyLocations()))
 
-  assert(#self.worldGraph:getEmptyLocations() == 0, self.worldGraph:emptyString() .. "\r\n" .. self.itemDeck:unplacedString())
+  --assert(#self.worldGraph:getEmptyLocations() == 0, self.worldGraph:emptyString() .. "\r\n" .. self.itemDeck:unplacedString())
   self.worldGraph:writeItems(tscFiles)
   self.worldGraph:logLocations()
 end
@@ -131,11 +128,12 @@ function C:_fillItems(items, locations)
     local assumed = self.worldGraph:collect(itemsLeft)
     
     local fillable = _.filter(locations, function(k,v) return not v:hasItem() and v:canAccess(assumed) end)
-    local empty = _.filter(locations, function(k,v) return not v:hasItem() end)
-    assert(#fillable > 0, ("No available locations for %s! Items left: %d"):format(item.name, #itemsLeft))
-    assert(item ~= nil, "No item found!")
-    logDebug(("Placing %s at %s"):format(item.name, fillable[1].name))
-    fillable[1]:setItem(item)
+    if #fillable > 0 then
+      logDebug(("Placing %s at %s"):format(item.name, fillable[1].name))
+      fillable[1]:setItem(item)
+    else
+      logError(("No available locations for %s! Items left: %d"):format(item.name, #itemsLeft))
+    end
   until #itemsLeft == 0
 end
 

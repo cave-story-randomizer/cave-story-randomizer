@@ -17,7 +17,8 @@ end
 
 function C:canAccess(items)
   if not self.region:canAccess(items) then return false end
-  return self.requirements == nil or self.requirements(self, items)
+  if self.requirements == nil then return true end
+  return self.requirements(self, items)
 end
 
 function C:hasItem()
@@ -31,7 +32,10 @@ end
 
 function C:writeItem(tscFiles, item)
   item = item or self.item
-  assert(self.item ~= nil, self.name)
+  if item == nil then
+    logError("No item at " .. self.name)
+    return
+  end
   if self.map == nil or self.event == nil or item.script == nil then return end
   tscFiles[self.map]:placeItemAtLocation(item, self)
 end

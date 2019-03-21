@@ -7,7 +7,8 @@ function C:new(worldGraph, name)
 end
 
 function C:canAccess(items)
-  return self.requirements == nil or self.requirements(self, items)
+  if self.requirements == nil then return true end
+  return self.requirements(self, items)
 end
 
 function C:getLocation(key)
