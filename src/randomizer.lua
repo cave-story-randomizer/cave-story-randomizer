@@ -118,6 +118,7 @@ function C:_shuffleItems(tscFiles)
 
   assert(#self.worldGraph:getEmptyLocations() == 0, self.worldGraph:emptyString() .. "\r\n" .. self.itemDeck:unplacedString())
   self.worldGraph:writeItems(tscFiles)
+  self.worldGraph:logLocations()
 end
 
 function C:_fillItems(items, locations)
@@ -165,7 +166,6 @@ function C:_writeLog()
   local path = self:_getWritePath() .. '/log.txt'
   local data = getLogText()
   U.writeFile(path, data)
-  print("\n")
 end
 
 function C:_getWritePath()

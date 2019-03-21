@@ -40,9 +40,6 @@ function C:hasUnreplacedItems()
 end
 
 function C:placeItemAtLocation(item, location)
-  local template = '[%s] "%s" -> "%s"'
-  logNotice(template:format(location.map, location.name, item.name))
-
   local wasChanged
   self._text, wasChanged = self:_stringReplace(self._text, "<EVE....", item.script, location.event)
   if not wasChanged then

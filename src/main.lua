@@ -13,7 +13,7 @@ lg = love.graphics
 U = require 'util'
 
 
-local LOG_LEVEL, _logCounts, _logLines = 3, nil, nil
+local LOG_LEVEL, _logCounts, _logLines = 4, nil, nil
 local function _log(level, prefix, text, ...)
   if LOG_LEVEL >= level then
     local text = prefix .. text
@@ -25,16 +25,17 @@ end
 function logError(...)   _log(1, 'ERROR: ',   ...) end
 function logWarning(...) _log(2, 'WARNING: ', ...) end
 function logNotice(...)  _log(3, 'NOTICE: ',  ...) end
-function logInfo(...)    _log(4, 'INFO: ',    ...) end
-function logDebug(...)   _log(5, 'DEBUG: ',   ...) end
+function logSpoiler(...) _log(4, 'SPOILER: ', ...) end
+function logInfo(...)    _log(5, 'INFO: ',    ...) end
+function logDebug(...)   _log(6, 'DEBUG: ',   ...) end
 function countLogWarningsAndErrors()
   return _logCounts[2], _logCounts[1]
 end
 function getLogText()
-  return table.concat(_logLines, "\n\r")
+  return table.concat(_logLines, "\r\n")
 end
 function resetLog()
-  _logCounts = {0, 0, 0, 0, 0}
+  _logCounts = {0, 0, 0, 0, 0, 0}
   _logLines = {}
 end
 resetLog()
