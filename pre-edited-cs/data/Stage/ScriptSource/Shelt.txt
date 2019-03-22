@@ -29,7 +29,6 @@
 It doesn't look like it's
 working at the moment...<NOD<END
 #0103
-<PRI<MSGGo to the Plantation?<YNJ0000<CLO
 <KEY<CNP0300:0111:0002<HMC<WAI0060<ANP0102:0001:0000
 <WAI0100<FAO0004<TRA0061:0099:0007:0013
 
