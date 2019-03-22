@@ -55,11 +55,11 @@ going to fall!<NOD<END
 #0300
 <ITJ0039:0302<EVE0301
 #0301
-<KEY<MYB0000<MSG<FAC0021I won't break this barrier
+<KEY<MYB0002<MSG<FAC0021I won't break this barrier
 until you bring me Sue from
 the Egg Corridor as well as
 the <GIT1039=Iron Bond=!
 #0302
 <FLJ2800:0303<EVE0301
 #0303
-<KEY<FLA<DNA0013<SOU0035<WAI0025<END
+<KEY<FLA<DNA0013<DNP0300<SOU0035<WAI0025<END
