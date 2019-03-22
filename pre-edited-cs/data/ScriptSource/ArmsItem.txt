@@ -333,7 +333,7 @@ Surely you will meet again one day...<WAI9999<END
 
 #7018
 <KEY<MSGDo you want to remove it?<YNJ0000<EQ-0001<FL-0742<MSG
-Deequipped Booster.<NOD<WAI0003<FRE<EVE5018
+Deequipped Booster v0.8.<NOD<WAI0003<FRE<EVE5018
 #7023
 <KEY<MSGDo you want to remove it?<YNJ0000<EQ-0032<FL-0743<MSG
 Deequipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
