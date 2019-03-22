@@ -84,7 +84,7 @@ from Curly?<YNJ0000<CLO
 <FL+1442<FAO0001<CMU0000<WAI0200<FAI0001
 <WAI0150<MSG<FAC0020
 Ooohh...<NOD<CLR<CMU0014<FAC0025.....<NOD<CLR<ANP0260:0001:0002<FAC0019You're alive!<NOD<CLROh, I'm so glad...<NOD<CLR<FAC0025I didn't think we were
-going to make it.<NOD
+going to make it.<NOD<CLR
 Once you fell unconscious,
 I couldn't think of any
 other way...<NOD<CLRLooks like my air tank

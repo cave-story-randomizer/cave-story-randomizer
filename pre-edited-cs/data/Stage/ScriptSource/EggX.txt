@@ -31,8 +31,8 @@ blowing in...<NOD<END
 <FL+0120<FL+0105<FL+0154<FL+0155<FL+0329<FL+0106<FL+2800
 <SAT<MSG...Ergh.<NOD<CLO
 <MYB0002<WAI0050<MYD0002
-<WAI0050<MSG<ANP0200:0005:0002<FAC0001Oh!<NOD<MYD0003<CLRLook! It's...I think
-it's Number 00!<NOD<CLRThis egg could be our
+<WAI0050<MSG<ANP0200:0005:0002<FAC0001Oh!<NOD<MYD0003<CLRLook! It's...
+I think it's Number 00!<NOD<CLRThis egg could be our
 ticket off this island!<NOD<CLO<FAC0000<MYD0002
 <ANP0200:0003:0002<WAI0030
 <ANP0200:0005:0002<WAI0050
@@ -45,11 +45,11 @@ hear!<NOD<CLO<WAI0050<SOU0043<WAI0020<FAC0000
 <MSG<FAC0002Well, crud.<NOD<FAC0001<CLO
 <ANP0200:0003:0000<WAI0126
 <ANP0200:0000:0002<WAI0020
-<MSG<MYD0000...Did you get lost?<NOD<CLRThat's okay.<NOD
+<MSG<MYD0000Did you get lost?<NOD<CLRThat's okay.<NOD<CLR
 I'll let you come
-with me.<NOD
+with me.<NOD<CLR
 We can get off this
-dump together.<NOD
+dump together.<NOD<CLR
 In return, you're
 gonna help me.<NOD<CLO
 <ANP0200:0005:0002<WAI0020

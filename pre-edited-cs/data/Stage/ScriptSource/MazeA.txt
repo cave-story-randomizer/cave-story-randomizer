@@ -73,8 +73,9 @@ doesn't it?<NOD<END
 
 #0400
 <KEY<FLJ0721:0410<MSGHey there.<NOD<CLRThis is the Labyrinth Shop!<NOD
-See those chests over there?<NOD Show mesome cool weapons and you can have
-what's inside.<NOD<END
+See those chests over there?<NOD Show
+me some cool weapons and you can
+have what's inside.<NOD<END
 #0401
 <KEY<MSGHm?<NOD<CLRHey, you've got something
 pretty spiffy there.<NOD<CLRA Polar Star and a Fireball,
