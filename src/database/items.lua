@@ -42,12 +42,12 @@ local function _itemData()
     -- WEAPONS --
     -------------
     polarStar1 = {
-      name = "Polar Star 1",
+      name = "Polar Star",
       script = "<EVE0002",
       attributes = {"weaponBoss", "weaponSN", "polarStar", "mandatory"}
     },
     polarStar2 = {
-      name = "Polar Star 2",
+      name = "Polar Star",
       script = "<EVE0002",
       attributes = {"weaponBoss", "weaponSN", "polarStar", "mandatory"}
     },
@@ -211,12 +211,12 @@ local function _itemData()
       attributes = {"mandatory"}
     },
     booster1 = {
-      name = "Booster 1",
+      name = "Booster",
       script = "<EVE0068",
       attributes = {"flight", "booster", "mandatory"}
     },
     booster2 = {
-      name = "Booster 2",
+      name = "Booster",
       script = "<EVE0068",
       attributes = {"flight", "booster", "mandatory"}
     },

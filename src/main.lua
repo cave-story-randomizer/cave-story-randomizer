@@ -1,6 +1,6 @@
 require 'lib.strict'
 
-VERSION = '0.8'
+VERSION = '0.8A'
 
 Class   = require 'lib.classic'
 _       = require 'lib.moses'
@@ -80,9 +80,9 @@ local function _draw()
   lg.draw(background, 0, 0)
   _print('Cave Story Randomizer [Open Mode] v' .. VERSION, 0, 10)
   _print('by shru and duncathan', 0, 22)
+  _print('(@shruuu and @duncathan_salt)', 0, 34)
   _print(status, 10, 65)
-  _print('shru.itch.io', 10, 220, 'left')
-  _print('@shruuu', 10, 220, 'right')
+  _print('Original randomizer:\r\nshru.itch.io/cave-story-randomizer', 10, 200, 'left')
 end
 
 function love.draw()

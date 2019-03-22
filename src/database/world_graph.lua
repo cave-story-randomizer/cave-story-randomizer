@@ -453,6 +453,13 @@ function worldGraph:getPuppySpots()
   }
 end
 
+function worldGraph:getFirstCaveSpots()
+  return {
+    self.regions.firstCave.locations.firstCapsule,
+    self.regions.firstCave.locations.gunsmithChest
+  }
+end
+
 function worldGraph:getHellSpots()
   return self.locationsArray(self.regions.endgame:getLocations())
 end
