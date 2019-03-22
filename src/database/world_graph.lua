@@ -347,7 +347,7 @@ function plantation:new(worldGraph)
     jail1 = Location("Jail no. 1", "Jail1", "0301", self),
     momorin = Location("Chivalry Sakamoto's Wife", "Momo", "0201", self),
     sprinkler = Location("Broken Sprinkler", "Cent", "0417", self),
-    megane = Location("Megane", "lounge", "0204", self),
+    megane = Location("Megane", "Lounge", "0204", self),
     itoh = Location("Itoh", "Itoh", "0405", self),
     plantCeiling = Location("Plantation Platforming Spot", "Cent", "0501", self),
     plantPup = Location("Plantation Puppy", "Cent", "0452", self),
