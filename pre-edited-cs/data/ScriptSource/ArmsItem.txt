@@ -46,36 +46,26 @@ Hold down the button to
 fire a laser.<WAI9999<END
 
 #1100
-<MSG<TURHajime<WAI9999<END
+<MSG<TURPuppy<WAI9999<END
 #1101
-<MSG<TURMick<WAI9999<END
+<MSG<TURPuppies<WAI9999<END
 #1102
-<MSG<TURShinobu<WAI9999<END
+<MSG<TURPuppies<WAI9999<END
 #1103
-<MSG<TURKakeru<WAI9999<END
+<MSG<TURPuppies<WAI9999<END
 #1104
-<MSG<TURNene<WAI9999<END
+<MSG<TURPuppies<WAI9999<END
 
 #1200
-<MSG<TURJenka's pet and leader of the dogs.
-While searching for his brothers, he
-got lost and was taken in by Curly.<WAI9999<END
+<MSG<TURJenka's pet dog.<WAI9999<END
 #1201
-<MSG<TURJenka's pet. Loves treasure-hunting.
-Or treasure *chests*, rather, and
-recently has taken up sleeping in them.<WAI9999<END
+<MSG<TURJenka's pet dogs. You have found 2.<WAI9999<END
 #1202
-<MSG<TURJenka's pet. Loves dark places. Due
-to poor eyesight, he roams the darkness
-using his wild instincts alone.<WAI9999<END
+<MSG<TURJenka's pet dogs. You have found 3.<WAI9999<END
 #1203
-<MSG<TURJenka's pet. Adores bones and has
-buried them in countless places,
-most of which are by now forgotten.<WAI9999<END
+<MSG<TURJenka's pet dogs. You have found 4.<WAI9999<END
 #1204
-<MSG<TURJenka's pet. Spends most of her time
-asleep, but her dreams have been
-known to portend the future.<WAI9999<END
+<MSG<TURJenka's pet dogs. You have found 5!<WAI9999<END
 
 #5000
 <MSG<TURNo item.<WAI9999<END
@@ -106,11 +96,11 @@ known to portend the future.<WAI9999<END
 #5013
 <MSG<TURExplosive<WAI9999<END
 #5014
-<FLJ3000:1100
-<FLJ3001:1101
-<FLJ3002:1102
-<FLJ3003:1103
-<FLJ3004:1104
+<FLJ5001:1100
+<FLJ5002:1101
+<FLJ5003:1102
+<FLJ5004:1103
+<FLJ5005:1104
 <MSG<TURPuppy<WAI9999<END
 #5015
 <MSG<TURLife Pot<WAI9999<END
