@@ -103,9 +103,11 @@ end
 function C:_shuffleItems(tscFiles)
   -- first fill puppies
   self:_fastFillItems(self.itemDeck:getItemsByAttribute("puppy"), _.shuffle(self.worldGraph:getPuppySpots()))
+  -- then fill one of the first cave spots with a weapon that can break blocks
+  _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
 
-  local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems()))
-  local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems()))
+  local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems(true)))
+  local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems(true)))
   
   -- next fill hell chests, which cannot have mandatory items
   self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))

@@ -374,20 +374,21 @@ function C:getItems()
   return self:_getItems(function(k,v) return true end)
 end
 
-function C:getItemsByAttribute(attribute)
-  return self:_getItems(function(k,v) return _.contains(v.attributes, attribute) end)
+function C:getItemsByAttribute(attribute, onlyUnplaced)
+  onlyUnplaced = onlyUnplaced or false
+  return self:_getItems(function(k,v) return _.contains(v.attributes, attribute) and not (onlyUnplaced and v.placed) end)
 end
 
 function C:getEvents()
   return self:getItemsByAttribute("event")
 end
 
-function C:getOptionalItems()
-  return self:getItemsByAttribute("nonProgressive")
+function C:getOptionalItems(onlyUnplaced)
+  return self:getItemsByAttribute("nonProgressive", onlyUnplaced)
 end
 
-function C:getMandatoryItems()
-  return self:getItemsByAttribute("mandatory")
+function C:getMandatoryItems(onlyUnplaced)
+  return self:getItemsByAttribute("mandatory", onlyUnplaced)
 end
 
 function C:getMandatory()
