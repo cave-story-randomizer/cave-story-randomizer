@@ -137,7 +137,7 @@ local function _itemData()
     },
     rustyKey = {
       name = "Rusty Key",
-      script = "<EVE0039",
+      script = "<EVE0059",
       attributes = {"mandatory"}
     },
     gumKey = {
