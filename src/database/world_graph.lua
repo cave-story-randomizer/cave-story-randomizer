@@ -335,7 +335,7 @@ function outerWall:new(worldGraph)
     return false
   end
 
-  self.locations.littleHouse.requirements = function(self, items) return _has(items, "flight") end
+  self.locations.littleHouse.requirements = function(self, items) return _has(items, "flight") and _has(items, "blade") end
 end
 
 local plantation = Region:extend()

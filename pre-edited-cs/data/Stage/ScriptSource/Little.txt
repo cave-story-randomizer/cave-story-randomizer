@@ -18,14 +18,20 @@
 #0200
 <PRI
 <FLJ1372:0202
-<EVE0203
+<AMJ0009:0203
+<EVE0205
 
 #0202
-<PRI<MSGAh, it's good to be back.<NOD<END
+<PRI<MSG<TURAh, it's good to be back.<NOD<END
 #0203
 <FL+1372<EVE0204
 #0204
 <EVE0010
+#0205
+<PRI<MSG<TURYou know, I'd just love to see
+something sharp.<NOD
+<CLR<GIT0009I'll give you a little something
+if you can show me a =Blade=!<NOD<END
 
 #0210
 <PRI<FLJ1370:0211<FL+1371
