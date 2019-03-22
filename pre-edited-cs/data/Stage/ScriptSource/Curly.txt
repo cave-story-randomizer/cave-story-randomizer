@@ -158,9 +158,12 @@ the other robots...<NOD<CLO
 <EVE0515
 
 #0515
-<AMJ0002:0518<AMJ0013:0518
+<AMJ0002:0517<AMJ0013:0517
 <MSG<FAC0019<TUROne day, I'd really like
 to meet that gunsmith...<NOD<END
+
+#0517
+<FL+0563<EVE0518
 
 #0518
 <EVE0008
