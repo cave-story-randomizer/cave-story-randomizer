@@ -110,7 +110,7 @@ right!<NOD<END
 #0500
 <KEY<AMJ0004:0501<MYB0002<SOU0052<MSG<TURHEY!!!<WAI0100<NOD
 That chest is mine!<NOD<CLR
-<MSGShow me a <GIT0004 =Machine Gun= and I'll
+<MSGShow me a <GIT0004=Machine Gun= and I'll
 let you have what's inside.<NOD<END
 #0501
 <KEY<FLJ2500:0001<FL+2500<SOU0022<CNP0500:0021:0000<EVE0502

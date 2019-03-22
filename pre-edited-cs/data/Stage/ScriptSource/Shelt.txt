@@ -17,10 +17,14 @@
 <MYD0000<DNP0301<SMC<END
 
 #0100
-<PRI<FLJ0523:0105<FAO0004<TRA0006:0094:0217:0016
+<PRI<FLJ0520:0105
+<ITJ0013:0104
+<MSG<TURThe door is rusted shut.<NOD
+<GIT1013You could knock it down with some
+=Explosives=...<NOD<END
 #0101
 #0102
-<KEY<FLJ0524:0103
+<KEY<EVE0103
 <MSGA teleporter.<NOD
 It doesn't look like it's
 working at the moment...<NOD<END
@@ -29,8 +33,15 @@ working at the moment...<NOD<END
 <KEY<CNP0300:0111:0002<HMC<WAI0060<ANP0102:0001:0000
 <WAI0100<FAO0004<TRA0061:0099:0007:0013
 
+#0104
+<PRI<FL+0521<FL+0522<IT-0013
+<MSG<TUR<GIT1013Set the =Explosive=.<WAI0025<NOD<CLO
+<QUA0030<SOU0044
+<FAO0004<FL+0520<FL-0522<FL+0523<FL+0525<FL+0226<FL+0227<TRA0006:0600:0217:0016
+
 #0105
-<PRI<FAO0004
+<FAO0004<TRA0006:0094:0217:0016
+
 
 
 #0200
@@ -40,7 +51,7 @@ working at the moment...<NOD<END
 
 #0210
 #0220
-<KEY<FLJ0524:0221<MSG<TURThis teleporter is currently
+<KEY<EVE0221<MSG<TURThis teleporter is currently
 unavailable.<NOD<END
 #0221
 <KEY<MSG<TURTeleportation to "Plantation" is

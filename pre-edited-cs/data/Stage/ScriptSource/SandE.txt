@@ -21,8 +21,7 @@
 <MSG<FAC0015So you're alive.<NOD<FAC0000<CLO
 <ANP0601:0013:0000<WAI0050<CNP0601:0082:0000
 <MSG<FAC0015You remind me of the
-one back then.<NOD<CLR
-A tough little robot
+one back then.<NOD<CLRA tough little robot
 just like you...<NOD<CLRI can see confronting
 you directly just makes
 things complicated.<NOD<CLR

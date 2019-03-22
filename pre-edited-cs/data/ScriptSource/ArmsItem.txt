@@ -209,7 +209,8 @@ anything and everything...<WAI9999<END
 <FLJ0742:7018
 <KEY<MSGPush the jump button again in
 midair to fly even higher.<NOD<CLR
-Do you want to equip it?<YNJ0000<EQ+0001<EQ-0064<FL-1020<FL+0742<EQ-0032<FL-0743<MSG
+Do you want to equip it?
+<YNJ0000<EQ+0001<EQ-0064<FL-1020<FL+0742<EQ-0032<FL-0743<MSG
 Booster equipped.<NOD<WAI0003<FRE<EVE5018
 #6019
 <MSG<TURWhen you take damage, the amount
@@ -227,14 +228,15 @@ You can't see any buttons.<WAI9999<END
 <FLJ0743:7023
 <KEY<MSGPush the jump button in midair and
 you can move in any direction.<NOD<CLR
-Do you want to equip it?<YNJ0000<EQ+0032<EQ-0064<FL-1020<FL+0743<EQ-0001<FL-0742<MSG
+Do you want to equip it?
+<YNJ0000<EQ+0032<EQ-0064<FL-1020<FL+0743<EQ-0001<FL-0742<MSG
 Equipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
 #6024
 <FLJ1020:7024
 <KEY<MSG<TURCan't be worn with a Booster.
 It's a bit big...<NOD
-Do you want to equip
-it?<YNJ0000<EQ+0064<EQ-0033<FL-0742<FL-0743<FL+1020<WAI0003<FRE<EVE5024
+Do you want to equip it?
+<YNJ0000<EQ+0064<EQ-0033<FL-0742<FL-0743<FL+1020<WAI0003<FRE<EVE5024
 #6025
 <MSG<TURA key fished out by a certain
 Mimiga.<WAI9999<END
@@ -322,17 +324,21 @@ Surely you will meet again one day...<WAI9999<END
 <MLP<END
 
 #7018
-<KEY<MSGDo you want to remove it?<YNJ0000<EQ-0001<FL-0742<MSG
+<KEY<MSGDo you want to remove it?
+<YNJ0000<EQ-0001<FL-0742<MSG
 Deequipped Booster v0.8.<NOD<WAI0003<FRE<EVE5018
 #7023
-<KEY<MSGDo you want to remove it?<YNJ0000<EQ-0032<FL-0743<MSG
+<KEY<MSGDo you want to remove it?
+<YNJ0000<EQ-0032<FL-0743<MSG
 Deequipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
 
 #7024
-<KEY<MSG<TURDo you want to remove it?<YNJ0000<EQ-0064<FL-1020<MSG
+<KEY<MSG<TURDo you want to remove it?
+<YNJ0000<EQ-0064<FL-1020<MSG
 Deequipped Mimiga Mask.<NOD<WAI0003<FRE<EVE5024
 
 #7038
-<KEY<MSGDo you want to remove it?<YNJ0000<EQ-0128<FL-0722<MSG
+<KEY<MSGDo you want to remove it?
+<YNJ0000<EQ-0128<FL-0722<MSG
 Deequipped the Whimsical Star.<NOD<WAI0003<FRE<EVE5038
 
