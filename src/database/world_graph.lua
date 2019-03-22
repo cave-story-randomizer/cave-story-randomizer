@@ -121,8 +121,8 @@ local grasstownEast = Region:extend()
 function grasstownEast:new(worldGraph)
   grasstownEast.super.new(self, worldGraph, "Grasstown (East)")
   self.locations = {
-    kazuma1 = Location("Kazuma (Rusty Key)", "Weed", "0800", self),
-    kazuma2 = Location("Kazuma (Gum Key)", "Weed", "0801", self),
+    kazuma1 = Location("Kazuma Crack", "Weed", "0800", self),
+    kazuma2 = Location("Kazuma Chest", "Weed", "0801", self),
     execution = Location("Execution Chamber", "WeedD", "0305", self),
     outsideHut = Location("Grasstown East Chest", "Weed", "0303", self),
     hutChest = Location("Grasstown Hut", "WeedB", "0301", self),
