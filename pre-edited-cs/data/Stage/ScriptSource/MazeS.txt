@@ -80,8 +80,7 @@ Defeated Balrog!<WAI0140<NOD<CLO<FAC0000
 <CNP0511:0334:0002<WAI0100
 <MSG<FAC0020.....<NOD<CLO<FAC0000
 <ANP0300:0000:0000<WAI0050<MYD0002
-<MSG<FAC0025It hasn't moved one bit.<NOD<CLR
-I'm not sure the
+<MSG<FAC0025It hasn't moved one bit.<NOD<CLRI'm not sure the
 two of us are strong
 enough...<NOD<FAC0000<CLO
 <WAI0050
