@@ -103,11 +103,9 @@ now what?<NOD<CLRGuess I'm just going
 to sit here and rot...<NOD<END
 #0322
 <KEY<SAT<MSG<FAC0020There's only one way
-out of the Labyrinth.<NOD<CLR
-You have to get past
+out of the Labyrinth.<NOD<CLRYou have to get past
 the giant rock in the
-Boulder Chamber.<NOD<CLRI'd go with you,<NOD<CLR
-but with the state I'm
+Boulder Chamber.<NOD<CLRI'd go with you,<NOD<CLRbut with the state I'm
 in, I'd just get in
 your way...<NOD<FL+0760<FL+0703<END
 
