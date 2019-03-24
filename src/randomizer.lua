@@ -29,6 +29,7 @@ function C:randomize(path)
   if not success then
     return "Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?"
   end
+  
   self:_seedRngesus()
   local tscFiles = self:_createTscFiles(dirStage)
   -- self:_writePlaintext(tscFiles)
@@ -71,8 +72,16 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seed = tostring(os.time())
-  math.randomseed(seed)
+  local seedfile, bytes= lf.read(lf.getSourceBaseDirectory() + "seed.txt", 9);
+  local seed = ""
+  if seedfile == nil then
+      logNotice('Okay, no seed file, generate new') 
+      seed = tostring(os.time())
+      math.randomseed(seed)
+  else
+      logNotice('Gathered seed from file')
+      seed = seedfile
+  end
   logNotice(('Offering seed "%s" to RNGesus'):format(seed))
 end
 
