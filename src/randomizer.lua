@@ -72,15 +72,15 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seedfile, bytes= lf.read(lf.getSourceBaseDirectory() + "seed.txt", 9);
+  local seedfile, bytes= lf.read(lf.getSourceBaseDirectory() + "seed.txt",10);
   local seed = ""
   if seedfile == nil then
-      logNotice('Okay, no seed file, generate new') 
-      seed = tostring(os.time())
-      math.randomseed(seed)
+    logNotice('Okay, no seed file, generate new') 
+    seed = tostring(os.time())
+    math.randomseed(seed)
   else
-      logNotice('Gathered seed from file')
-      seed = seedfile
+    logNotice('Gathered seed from file')
+    seed = seedfile
   end
   logNotice(('Offering seed "%s" to RNGesus'):format(seed))
 end
