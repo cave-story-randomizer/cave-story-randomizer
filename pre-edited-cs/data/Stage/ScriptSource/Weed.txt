@@ -153,7 +153,7 @@ door down...<NOD<END
 #0236
 <PRI<FLJ0223:0001<ITJ0009:0237
 <MSG<TURIt's locked.<NOD
-<GIT1009Looks like a =Rusty Key= would fit.<WAI0025<NOD
+<GIT1009Looks like a =Rusty Key= would fit.<WAI0025<NOD<END
 #0237
 <PRI<FL+0223
 <SOU0022<CNP0236:0021:0000<EVE0801
