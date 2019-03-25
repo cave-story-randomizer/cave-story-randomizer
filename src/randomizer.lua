@@ -72,7 +72,7 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seed_from_file = io.open(lf.getSourceBaseDirectory() + "seed.txt"):read('*10')
+  local seed_from_file = io.open(lf.getSourceBaseDirectory() .. "seed.txt"):read('*10')
   local seed = ""
   if seed_from_file == nil or string.len(seed_from_file) < 10 then
     logWarning('Seed from file doesnt exists or seems to be invalid, generate a new') 
