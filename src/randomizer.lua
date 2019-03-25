@@ -78,11 +78,11 @@ function C:_seedRngesus()
   if seedfile == nil or bytes < 10 then
     logWarning('Seed from file doesn' t exists or seems to be invalid, generate a new') 
     seed = tostring(os.time())
-    math.randomseed(seed)
   else
     logNotice('Gathered the seed from file "seed.txt"')
     seed = seedfile
   end
+  math.randomseed(seed)
   logNotice(('Offering seed "%s" to RNGesus'):format(seed))
 end
 
