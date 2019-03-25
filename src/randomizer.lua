@@ -72,24 +72,23 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seedfile, bytes= lf.read(lf.getSourceBaseDirectory() + "seed.txt",10);
+  local seed_from_file = io.open(lf.getSourceBaseDirectory() + "seed.txt"):read('*10')
   local seed = ""
-  seedfile = tonumber(seedfile) 
-  if seedfile == nil or bytes < 10 then
-    logWarning('Seed from file doesn' t exists or seems to be invalid, generate a new') 
+  if seed_from_file == nil or string.len(seed_from_file) < 10 then
+    logWarning('Seed from file doesnt exists or seems to be invalid, generate a new') 
     seed = tostring(os.time())
   else
     logNotice('Gathered the seed from file "seed.txt"')
-    seed = seedfile
+    seed = seed_from_file
   end
   math.randomseed(seed)
-  logNotice(('Offering seed "%s" to RNGesus'):format(seed))
+  logNotice(('Offering seed "%s" to RNGesus' ):format(seed))
 end
 
 function C:_createTscFiles(dirStage)
   local tscFiles = {}
   for _, filename in ipairs(TSC_FILES) do
-    local path = dirStage .. '/' .. filename .. '.tsc'
+    local path = dirStage .. '/' .. filename .. ".tsc"
     tscFiles[filename] = TscFile(path)
     tscFiles[filename].mapName = filename
   end

@@ -22,7 +22,7 @@ function C:new(path)
 
   -- Determine set of items which can be replaced later.
   --[[
-  self._unreplaced = {}
+  self._unreplaced = {} 
   self._mapName = path:match("^.+/(.+)$")
   for k, v in pairs(ITEM_DATA) do repeat
     if (v.map .. '.tsc') ~= self._mapName then
@@ -32,7 +32,7 @@ function C:new(path)
     table.insert(self._unreplaced, item)
   until true end
   self._unreplaced = _.shuffle(self._unreplaced)
-  ]]
+  ]] 
 end
 
 function C:hasUnreplacedItems()
