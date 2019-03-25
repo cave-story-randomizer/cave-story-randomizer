@@ -74,12 +74,13 @@ end
 function C:_seedRngesus()
   local seedfile, bytes= lf.read(lf.getSourceBaseDirectory() + "seed.txt",10);
   local seed = ""
-  if seedfile == nil then
-    logNotice('Okay, no seed file, generate new') 
+  seedfile = tonumber(seedfile) 
+  if seedfile == nil or bytes < 10 then
+    logWarning('Seed from file doesn' t exists or seems to be invalid, generate a new') 
     seed = tostring(os.time())
     math.randomseed(seed)
   else
-    logNotice('Gathered seed from file')
+    logNotice('Gathered the seed from file "seed.txt"')
     seed = seedfile
   end
   logNotice(('Offering seed "%s" to RNGesus'):format(seed))
