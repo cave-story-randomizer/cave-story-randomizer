@@ -72,7 +72,7 @@ end
 
 function C:_seedRngesus()
   local seed = tostring(os.time())
-  math.randomseed(seed)
+  love.math.setRandomSeed(seed)
   logNotice(('Offering seed "%s" to RNGesus'):format(seed))
 end
 
