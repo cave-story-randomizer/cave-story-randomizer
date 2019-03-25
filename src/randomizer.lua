@@ -16,6 +16,16 @@ do
   end
 end
 
+local function mkdir(path)
+    local mkdir_str
+    if package.config:sub(1,1) == '\\' then -- Windows
+      mkdir_str = 'mkdir "%s"'
+    else -- *nix
+      mkdir_str = "mkdir -p '%s'"
+    end
+    os.execute(mkdir_str:format(path)) -- HERE BE DRAGONS!!!	
+end
+
 function C:new()
   self._isCaveStoryPlus = false
   self.itemDeck = Items()
@@ -90,8 +100,7 @@ function C:_writePlaintext(tscFiles)
   local sourcePath = lf.getSourceBaseDirectory()
 
   -- Create /data/Plaintext if it doesn't already exist.
-  local command = ('mkdir "%s"'):format(sourcePath .. '/data/Plaintext')
-  os.execute(command) -- HERE BE DRAGONS!!!
+  mkdir(sourcePath .. '/data/Plaintext')
 
   -- Write modified files.
   for filename, tscFile in pairs(tscFiles) do
@@ -186,8 +195,7 @@ function C:_getWritePaths()
       and (self._writePath .. '/base/Stage')
       or  (self._writePath .. '/Stage')
     -- Create /data(/base)/Stage if it doesn't already exist.
-    local command = ('mkdir "%s"'):format(self._writePathStage)
-    os.execute(command) -- HERE BE DRAGONS!!!
+    mkdir(self._writePathStage)
   end
   return self._writePath, self._writePathStage
 end
