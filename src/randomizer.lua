@@ -72,14 +72,20 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seed_from_file = io.open(lf.getSourceBaseDirectory() .. "seed.txt"):read('*10')
-  local seed = ""
-  if seed_from_file == nil or string.len(seed_from_file) < 10 then
-    logWarning('Seed from file doesnt exists or seems to be invalid, generate a new') 
+  local seed = io.open(lf.getSourceBaseDirectory() .. "/seed.txt")
+  if seed == nil then
+    logNotice('Seed from file doesnt exists, generate a new') 
     seed = tostring(os.time())
   else
-    logNotice('Gathered the seed from file "seed.txt"')
-    seed = seed_from_file
+    logNotice('Gathering the seed from file "seed.txt"')
+    seed = seed:read('*n')
+  end
+  if seed == nil then
+	logWarning('Seed from file is invalid, generate a new') 
+    seed = tostring(os.time())
+  elseif string.len(seed) < 10 then
+	logWarning('Seed is too short, generate a new')
+	seed = tostring(os.time())
   end
   math.randomseed(seed)
   logNotice(('Offering seed "%s" to RNGesus' ):format(seed))
