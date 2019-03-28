@@ -97,7 +97,7 @@ function C:_seedRngesus()
 	logWarning('Seed is too short, generate a new')
 	seed = tostring(os.time())
   end
-  math.randomseed(seed)
+  love.math.setRandomSeed(seed)
   logNotice(('Offering seed "%s" to RNGesus' ):format(seed))
   end
 
