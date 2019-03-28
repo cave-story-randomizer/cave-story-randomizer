@@ -91,15 +91,15 @@ function C:_seedRngesus()
     seed = seed:read('*n')
   end
   if seed == nil then
-	logWarning('Seed from file is invalid, generate a new') 
+    logWarning('Seed from file is invalid, generate a new') 
     seed = tostring(os.time())
   elseif string.len(seed) < 10 then
-	logWarning('Seed is too short, generate a new')
-	seed = tostring(os.time())
+    logWarning('Seed is too short, generate a new')
+    seed = tostring(os.time())
   end
   love.math.setRandomSeed(seed)
   logNotice(('Offering seed "%s" to RNGesus' ):format(seed))
-  end
+end
 
 function C:_createTscFiles(dirStage)
   local tscFiles = {}
