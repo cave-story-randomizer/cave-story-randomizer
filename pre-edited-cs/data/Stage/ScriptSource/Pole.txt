@@ -30,15 +30,15 @@
 
 
 #0300
-<KEY<MSG*snore*<NOD<END
+<KEY<MSG<TUR*snore*<NOD<END
 
 #0301
-<FLJ1644:0304
+<SAT<FLJ1644:0304<AMJ0002:0302<AMJ0013:0302
 <KEY<MSGYou haven't seen the gun I made,
-have you?<NOD<AMJ0002:0302<AMJ0013:0302<END -- double arms jumps rn because i'd like polar star/spur to be progressive
+have you?<NOD<END -- double arms jumps rn because i'd like polar star/spur to be progressive
 
 #0302
-<KEY<FLA<WAI0050<FL+1644<FL+0303<EVE0303
+<KEY<FL+1644<FL+0303<EVE0303
 
 #0303
 <EVE0002
