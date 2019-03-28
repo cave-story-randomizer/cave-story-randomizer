@@ -19,11 +19,12 @@
 
 
 #0200
+<SAT
 <ITJ0008:0202
-<KEY<MSG<TURBeyond the flickering flames,
+<KEY<MSGBeyond the flickering flames,
 you spy a hole.<NOD<FLJ0241:0201<END
 #0201
-<CLR<MSG<TURThe flames are in the way and
+<CLR<MSGThe flames are in the way and
 you can't get past...<NOD<CLO
 <FL+0261<FL+0263<EVE0301
 #0202
@@ -39,20 +40,20 @@ you can't get past...<NOD<CLO
 
 
 #0300
-<ITJ0008:0302
-<FLJ0261:0301
+<SAT
+<FLJ2430:0302
 <FLJ0241:0303
-<KEY<MSG<TURHello there!
+<KEY<MSGHello there!
 Have you met Santa,
 the scaredy-cat?<NOD<END
 #0301
-<KEY<MSG<TURTo put out the flames, you
+<KEY<MSG<GIT1008To put out the flames, you
 need =Jellyfish Juice=.<NOD<END
 #0302
-<KEY<MSG<TURYou got the =Jellyfish Juice=?!
+<KEY<MSGYou took out their queen?!
 Amazing!<NOD<END
 #0303
-<KEY<MSG<TURGoodness, that's a dangerous
-item you've got there.
-Are you a traveler?<NOD<END
+<FL+0261<FL+0263
+<KEY<MSGGoodness, I wish someone would get
+rid of all those jellies outside...<NOD<END
 
