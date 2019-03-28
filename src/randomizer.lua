@@ -39,6 +39,7 @@ function C:randomize(path)
   if not success then
     return "Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?"
   end
+  
   self:_seedRngesus()
   local tscFiles = self:_createTscFiles(dirStage)
   -- self:_writePlaintext(tscFiles)
@@ -81,15 +82,29 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seed = tostring(os.time())
+  local seed = io.open(lf.getSourceBaseDirectory() .. "/seed.txt")
+  if seed == nil then
+    logNotice('Seed from file doesnt exists, generate a new') 
+    seed = tostring(os.time())
+  else
+    logNotice('Gathering the seed from file "seed.txt"')
+    seed = seed:read('*n')
+  end
+  if seed == nil then
+    logWarning('Seed from file is invalid, generate a new') 
+    seed = tostring(os.time())
+  elseif string.len(seed) < 10 then
+    logWarning('Seed is too short, generate a new')
+    seed = tostring(os.time())
+  end
   love.math.setRandomSeed(seed)
-  logNotice(('Offering seed "%s" to RNGesus'):format(seed))
+  logNotice(('Offering seed "%s" to RNGesus' ):format(seed))
 end
 
 function C:_createTscFiles(dirStage)
   local tscFiles = {}
   for _, filename in ipairs(TSC_FILES) do
-    local path = dirStage .. '/' .. filename .. '.tsc'
+    local path = dirStage .. '/' .. filename .. ".tsc"
     tscFiles[filename] = TscFile(path)
     tscFiles[filename].mapName = filename
   end
