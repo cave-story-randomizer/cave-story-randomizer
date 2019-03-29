@@ -20,15 +20,7 @@
 
 #0200
 <PRI
-<FLJ1371:0201
-<MSGYeah? Whaddaya want?<NOD<END
-#0201
-<PRI<MSGYou say my wife's lookin'
-for me?<NOD<CLR
-Yeah, you're right,<NOD
-I ain't been home in a while.<NOD
-Arright, time to go.<NOD<GIT1032<DNP0200<CLRYou're gonna take me there,
-of course?<NOD<EVE0202
+<EVE0202
 #0202
 <EVE0082
 
