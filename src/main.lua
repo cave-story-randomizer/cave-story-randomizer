@@ -1,6 +1,6 @@
 require 'lib.strict'
 
-VERSION = '0.8A'
+VERSION = '0.8B'
 
 Class   = require 'lib.classic'
 _       = require 'lib.moses'
