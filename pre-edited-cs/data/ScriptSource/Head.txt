@@ -27,7 +27,7 @@ with the =Snake= and vice-versa
 at the computer in Arthur's House.<WAI0050<NOD<FL+2802<END
 
 #0007
-<PRI<MSG<TUR<GIT0007<AM+0007:0100
+<PRI<MSG<TUR<GIT0007<AM+0007:0100<FL+2820
 Got the =Bubbler=!<WAI0025<NOD<END
 
 #0008

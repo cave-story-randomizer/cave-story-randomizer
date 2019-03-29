@@ -19,6 +19,7 @@
 <PRI
 <FLJ1372:0202
 <AMJ0009:0203
+<FLJ2811:0203
 <EVE0205
 
 #0202
@@ -28,10 +29,10 @@
 #0204
 <EVE0010
 #0205
-<PRI<MSG<TURYou know, I'd just love to see
-something sharp.<NOD
+<PRI<MSG<TURYou know, I just love to see
+sharp things.<NOD
 <CLR<GIT0009I'll give you a little something
-if you can show me a =Blade=!<NOD<END
+if you own a =Blade=!<NOD<END
 
 #0210
 <PRI<FLJ1370:0211<FL+1371
