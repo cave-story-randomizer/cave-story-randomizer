@@ -1,6 +1,5 @@
 #0000
 <FRE<WAI9999<END
-
 #1000
 <MSG<TURNo weapon.<WAI9999<END
 #1001
@@ -44,7 +43,6 @@ For advanced players.<WAI9999<END
 <MSG<TUR- Spur -
 Hold down the button to
 fire a laser.<WAI9999<END
-
 #1100
 <MSG<TURPuppy<WAI9999<END
 #1101
@@ -55,7 +53,6 @@ fire a laser.<WAI9999<END
 <MSG<TURPuppies<WAI9999<END
 #1104
 <MSG<TURPuppies<WAI9999<END
-
 #1200
 <MSG<TURJenka's pet dog.<WAI9999<END
 #1201
@@ -66,7 +63,6 @@ fire a laser.<WAI9999<END
 <MSG<TURJenka's pet dogs. You have found 4.<WAI9999<END
 #1204
 <MSG<TURJenka's pet dogs. You have found 5!<WAI9999<END
-
 #5000
 <MSG<TURNo item.<WAI9999<END
 #5001
@@ -152,7 +148,6 @@ fire a laser.<WAI9999<END
 <MSG<TURWhimsical Star<WAI9999<END
 #5039
 <MSG<TURIron Bond<WAI9999<END
-
 #6000
 <MSG<TURNo item.<WAI9999<END
 #6001
@@ -160,7 +155,7 @@ fire a laser.<WAI9999<END
 It was hidden near Arthur's
 gravestone.<WAI9999<END
 #6002
-<PRI<EVE7002<MPJ7002<MSGNo data for this floor.<NOD<CLR<END
+<PRI<EVE7002
 #6003
 <MSG<TURThe key to Santa's house.<WAI9999<END
 #6004
@@ -219,8 +214,12 @@ of weapon energy lost will be halved.<WAI9999<END
 <MSG<TURIncreases the rate at which the
 machine gun replenishes ammo.<WAI9999<END
 #6021
-<MSG<TURYou can breathe underwater with
-this. Curly used to use it.<WAI9999<END
+<FLJ2900:7021
+<KEY<MSG<TURYou can breathe underwater with
+this. Curly used to use it.<NOD<CLR
+Do you want to equip it?
+<YNJ0000<EQ+0016<FL+2900<MSG
+Equipped Curly's Air Tank.<NOD<WAI0003<FRE<EVE5021
 #6022
 <MSG<TURA fully automatic stopwatch.
 You can't see any buttons.<WAI9999<END
@@ -289,7 +288,6 @@ Pride of Itoh, the cowardly man.<WAI9999<END
 #6031
 <MSG<TURSmall and profoundly heavy.
 It has no use.<WAI9999<END
-
 #6032
 <MSG<TURHey! We there yet?<WAI9999<END
 #6033
@@ -319,26 +317,25 @@ Equipped the Whimsical Star.<NOD<WAI0003<FRE<EVE5038
 <MSG<TURYour tie to Curly Brace, the only
 warrior you would trust your back to.
 Surely you will meet again one day...<WAI9999<END
-
 #7002
 <MLP<END
-
 #7018
 <KEY<MSGDo you want to remove it?
 <YNJ0000<EQ-0001<FL-0742<MSG
 Deequipped Booster v0.8.<NOD<WAI0003<FRE<EVE5018
+#7021
+<KEY<MSGDo you want to remove it?
+<YNJ0000<EQ-0016<FL-2900<MSG
+Deequipped Curly's Air Tank.<NOD<WAI0003<FRE<EVE5021
 #7023
 <KEY<MSGDo you want to remove it?
 <YNJ0000<EQ-0032<FL-0743<MSG
 Deequipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
-
 #7024
 <KEY<MSG<TURDo you want to remove it?
 <YNJ0000<EQ-0064<FL-1020<MSG
 Deequipped Mimiga Mask.<NOD<WAI0003<FRE<EVE5024
-
 #7038
 <KEY<MSGDo you want to remove it?
 <YNJ0000<EQ-0128<FL-0722<MSG
 Deequipped the Whimsical Star.<NOD<WAI0003<FRE<EVE5038
-

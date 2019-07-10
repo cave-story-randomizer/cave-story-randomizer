@@ -174,7 +174,12 @@ function upperSandZone:new(worldGraph)
     return self.world.regions.arthur:canAccess(items)
   end
 
-  self.locations.curly.requirements = function(self, items) return _has(items, "polarStar") end
+  self.locations.curly.requirements = function(self, items)
+    return _has(items, "polarStar") and _has(items, "weaponBoss")
+  end
+  
+  self.locations.panties.requirements = function(self, items) return _has(items, "weaponBoss") end
+  self.locations.curlyPup.requirements = function(self, items) return _has(items, "weaponBoss") end
   
   self.locations.eventOmega.requirements = function(self, items) return _has(items, "weaponBoss") end
   self.locations.eventOmega:setItem(self.world.items:getByKey("eventOmega"))
@@ -223,7 +228,7 @@ function labyrinthW:new(worldGraph)
   self.requirements = function(self, items)
     if not self.world.regions.arthur:canAccess(items) then return false end
     if _has(items, "eventToroko") and self.world.regions.lowerSandZone:canAccess(items) then return true end
-    if _has(items, "flight") and self.world.regions.labyrinthB:canAccess(items) then return true end
+    if _has(items, "flight") and _has(items, "weaponBoss") and self.world.regions.labyrinthB:canAccess(items) then return true end
     return false
   end
 
@@ -363,7 +368,7 @@ function plantation:new(worldGraph)
     return false
   end
 
-  self.locations.jail1.requirements = function(self, items) return _has(items, "letter") end
+  self.locations.jail1.requirements = function(self, items) return _has(items, "letter") and _has(items, "teleportKey") end
   self.locations.momorin.requirements = function(self, items) return _has(items, "letter") and _has(items, "booster") end
   self.locations.sprinkler.requirements = function(self, items) return _has(items, "mask") end
   self.locations.megane.requirements = function(self, items) return _has(items, "brokenSprinkler") and _has(items, "mask") end
