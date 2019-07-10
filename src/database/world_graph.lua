@@ -359,6 +359,7 @@ function plantation:new(worldGraph)
     if not self.world.regions.arthur:canAccess(items) then return false end
     if _has(items, "teleportKey") then return true end
     if self.world.regions.outerWall:canAccess(items) then return true end
+    if _has(items, "bomb") and _has(items, "weaponSN") and self.world.regions.grasstownEast:canAccess(items) then return true end
     return false
   end
 
@@ -511,7 +512,7 @@ function worldGraph:collect(preCollectedItems)
         table.insert(_i, i)
       end
     end
-    for i, v in ipairs(_i) do table.remove(availableLocations, i) end
+    for i = #_i, 1, -1 do table.remove(availableLocations, _i[i]) end
 
     foundItems = #accessible
     for i, location in ipairs(accessible) do

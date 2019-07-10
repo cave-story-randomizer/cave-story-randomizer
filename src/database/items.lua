@@ -24,7 +24,7 @@ local function missiles()
   return {
     name = "Missile Expansion",
     script = "<EVE0030",
-    attributes = {"missileLauncher", "nonProgressive"}
+    attributes = {"weapon", "missileLauncher", "nonProgressive"}
   }
 end
 
@@ -44,52 +44,52 @@ local function _itemData()
     polarStar1 = {
       name = "Polar Star",
       script = "<EVE0002",
-      attributes = {"weaponBoss", "weaponSN", "polarStar", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "polarStar", "mandatory"}
     },
     polarStar2 = {
       name = "Polar Star",
       script = "<EVE0002",
-      attributes = {"weaponBoss", "weaponSN", "polarStar", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "polarStar", "mandatory"}
     },
     missileLauncher = {
       name = "Missile Launcher",
       script = "<EVE0030",
-      attributes = {"weaponSN", "nonProgressive"}
+      attributes = {"weapon", "weaponSN", "nonProgressive"}
     },
     superMissileLauncher = {
       name = "Super Missile Launcher",
       script = "<EVE0033",
-      attributes = {"weaponSN", "missileLauncher", "nonProgressive"}
+      attributes = {"weapon", "weaponSN", "missileLauncher", "nonProgressive"}
     },
     fireball = {
       name = "Fireball",
       script = "<EVE0004",
-      attributes = {"weaponBoss", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "mandatory"}
     },
     snake = {
       name = "Snake",
       script = "<EVE0005",
-      attributes = {"weaponBoss", "nonProgressive"}
+      attributes = {"weapon", "weaponBoss", "nonProgressive"}
     },
     bubbler = {
       name = "Bubbler",
       script = "<EVE0007",
-      attributes = {"weaponBoss", "nonProgressive"}
+      attributes = {"weapon", "weaponBoss", "nonProgressive"}
     },
     machineGun = {
       name = "Machine Gun",
       script = "<EVE0008",
-      attributes = {"weaponBoss", "weaponSN", "flight", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "flight", "mandatory"}
     },
     blade = {
       name = "Blade",
       script = "<EVE0009",
-      attributes = {"weaponBoss", "weaponSN", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "mandatory"}
     },
     nemesis = {
       name = "Nemesis",
       script = "<EVE0010",
-      attributes = {"weaponBoss", "weaponSN", "nonProgressive"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "nonProgressive"}
     },
 
     ---------------
@@ -328,7 +328,7 @@ local function _itemData()
     missileHell = {
       name = "Missile Expansion",
       script = "<EVE0035",
-      attributes = {"missileLauncher", "nonProgressive"}
+      attributes = {"weapon", "missileLauncher", "nonProgressive"}
     },
 
     ------------
