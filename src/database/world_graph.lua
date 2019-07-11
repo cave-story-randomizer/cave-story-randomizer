@@ -141,7 +141,7 @@ function grasstownEast:new(worldGraph)
     return false
   end
 
-  self.locations.kazuma2.requirements = function(self, items) return _has(items, "eventFans") end
+  self.locations.kazuma2.requirements = function(self, items) return _has(items, "rustyKey") end
   self.locations.execution.requirements = function(self, items) return _has(items, "weaponSN") end
   self.locations.hutChest.requirements = function(self, items) return _has(items, "eventFans") or _has(items, "flight") end
   self.locations.gumChest.requirements = function(self, items)
@@ -150,7 +150,7 @@ function grasstownEast:new(worldGraph)
     end
     return false
   end
-  self.locations.malco.requirements = function(self, items) return _has(items, "eventFans") and _has(items, "juice") and _has(items, "charcoal") and _has(items, "gum") end
+  self.locations.malco.requirements = function(self, items) return _has(items, "eventFans") and _has(items, "juice") and _has(items, "charcoal") and _has(items, "gumBase") end
   
   self.locations.eventFans.requirements = function(self, items) return _has(items, "rustyKey") and _has(items, "weaponBoss") end
   self.locations.eventFans:setItem(self.world.items:getByKey("eventFans"))
@@ -376,7 +376,7 @@ function plantation:new(worldGraph)
   self.locations.curlyShroom.requirements = function(self, items) return _has(items, "eventCurly") and _has(items, "maPignon") end
 
   self.locations.eventRocket.requirements = function(self, items)
-    return _has(items, "letter") and _has(items, "booster") and _has(items, "controller") and _has(items, "sprinkler")
+    return _has(items, "letter") and _has(items, "booster") and _has(items, "controller") and _has(items, "newSprinkler")
   end
   self.locations.eventRocket:setItem(self.world.items:getByKey("eventRocket"))
 end
