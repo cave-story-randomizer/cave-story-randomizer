@@ -192,8 +192,8 @@ and such.<WAI9999<END
 <FLJ3004:1204
 <MSG<TURJenka's pet dog.<WAI9999<END
 #6015
-<KEY<MSGThis will restore your life,
-but only once. Will you use it?<YNJ0000<LI+1000<SOU0020<IT-0015<MSG
+<KEY<MSG<TURThis will restore your life,
+but only once. Will you use it?<YNJ0000<LI+1000<SOU0020<IT-0015<MSG<TUR
 Life restored.<FRE<WAI9999<END
 #6016
 <MSG<TURApparently this cures
@@ -202,10 +202,10 @@ anything and everything...<WAI9999<END
 <MSG<TURIt says "Labyrinth Clinic".<WAI9999<END
 #6018
 <FLJ0742:7018
-<KEY<MSGPush the jump button again in
+<KEY<MSG<TURPush the jump button again in
 midair to fly even higher.<NOD<CLR
 Do you want to equip it?
-<YNJ0000<EQ+0001<EQ-0064<FL-1020<FL+0742<EQ-0032<FL-0743<MSG
+<YNJ0000<EQ+0001<EQ-0064<FL-1020<FL+0742<EQ-0032<FL-0743<MSG<TUR
 Booster equipped.<NOD<WAI0003<FRE<EVE5018
 #6019
 <MSG<TURWhen you take damage, the amount
@@ -218,29 +218,30 @@ machine gun replenishes ammo.<WAI9999<END
 <KEY<MSG<TURYou can breathe underwater with
 this. Curly used to use it.<NOD<CLR
 Do you want to equip it?
-<YNJ0000<EQ+0016<FL+2900<MSG
+<YNJ0000<EQ+0016<FL+2900<MSG<TUR
 Equipped Curly's Air Tank.<NOD<WAI0003<FRE<EVE5021
 #6022
 <MSG<TURA fully automatic stopwatch.
 You can't see any buttons.<WAI9999<END
 #6023
 <FLJ0743:7023
-<KEY<MSGPush the jump button in midair and
+<KEY<MSG<TURPush the jump button in midair and
 you can move in any direction.<NOD<CLR
 Do you want to equip it?
-<YNJ0000<EQ+0032<EQ-0064<FL-1020<FL+0743<EQ-0001<FL-0742<MSG
+<YNJ0000<EQ+0032<EQ-0064<FL-1020<FL+0743<EQ-0001<FL-0742<MSG<TUR
 Equipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
 #6024
 <FLJ1020:7024
 <KEY<MSG<TURCan't be worn with a Booster.
 It's a bit big...<NOD
 Do you want to equip it?
-<YNJ0000<EQ+0064<EQ-0033<FL-0742<FL-0743<FL+1020<WAI0003<FRE<EVE5024
+<YNJ0000<EQ+0064<EQ-0033<FL-0742<FL-0743<FL+1020<MSG<TUR
+Equipped the Mimiga Mask.<NOD<WAI0003<FRE<EVE5024
 #6025
 <MSG<TURA key fished out by a certain
 Mimiga.<WAI9999<END
 #6026
-<KEY<MSGWill you read it?<YNJ0000<MSG<TUR
+<KEY<MSG<TURWill you read it?<YNJ0000<MSG<TUR
 This is Sue.<NOD<CLRI don't believe I ever told
 you much about all of us.<NOD<CLRWe came to this island from
 the surface on a research trip.<NOD<CLRProf. Booster was on our
@@ -275,7 +276,7 @@ cell, look for the hideout hidden
 in the plantation.<NOD<CLRIf my mother is yet safe,
 she'll be there, coming up
 with a counterplan.<NOD<CLRPlease. Help my mother.<NOD<CLRThe password is
-"Litagano Motscoud".<NOD<CLR<FL+1024<FRE<MSGThe letter ends here...<WAI9999<END
+"Litagano Motscoud".<NOD<CLR<FL+1024<FRE<MSG<TURThe letter ends here...<WAI9999<END
 #6027
 <MSG<TURNecessary to make a rocket.
 Pride of Itoh, the cowardly man.<WAI9999<END
@@ -308,10 +309,10 @@ alien. It has no use.<WAI9999<END
 <MSG<TURRed lipstick.
 It has no use.<WAI9999<END
 #6038
-<KEY<MSGA little trinket you got from
+<KEY<MSG<TURA little trinket you got from
 Chaba in the labyrinth.
 A whimsical star.<NOD<FLJ0722:7038<CLR
-Will you equip it?<YNJ0000<EQ+0128<FL+0722<MSG
+Will you equip it?<YNJ0000<EQ+0128<FL+0722<MSG<TUR
 Equipped the Whimsical Star.<NOD<WAI0003<FRE<EVE5038
 #6039
 <MSG<TURYour tie to Curly Brace, the only
@@ -320,22 +321,22 @@ Surely you will meet again one day...<WAI9999<END
 #7002
 <MLP<END
 #7018
-<KEY<MSGDo you want to remove it?
-<YNJ0000<EQ-0001<FL-0742<MSG
+<KEY<MSG<TURDo you want to remove it?
+<YNJ0000<EQ-0001<FL-0742<MSG<TUR
 Deequipped Booster v0.8.<NOD<WAI0003<FRE<EVE5018
 #7021
-<KEY<MSGDo you want to remove it?
-<YNJ0000<EQ-0016<FL-2900<MSG
+<KEY<MSG<TURDo you want to remove it?
+<YNJ0000<EQ-0016<FL-2900<MSG<TUR
 Deequipped Curly's Air Tank.<NOD<WAI0003<FRE<EVE5021
 #7023
-<KEY<MSGDo you want to remove it?
-<YNJ0000<EQ-0032<FL-0743<MSG
+<KEY<MSG<TURDo you want to remove it?
+<YNJ0000<EQ-0032<FL-0743<MSG<TUR
 Deequipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
 #7024
 <KEY<MSG<TURDo you want to remove it?
-<YNJ0000<EQ-0064<FL-1020<MSG
-Deequipped Mimiga Mask.<NOD<WAI0003<FRE<EVE5024
+<YNJ0000<EQ-0064<FL-1020<MSG<TUR
+Deequipped the Mimiga Mask.<NOD<WAI0003<FRE<EVE5024
 #7038
-<KEY<MSGDo you want to remove it?
-<YNJ0000<EQ-0128<FL-0722<MSG
+<KEY<MSG<TURDo you want to remove it?
+<YNJ0000<EQ-0128<FL-0722<MSG<TUR
 Deequipped the Whimsical Star.<NOD<WAI0003<FRE<EVE5038
