@@ -362,7 +362,7 @@ function plantation:new(worldGraph)
     if not self.world.regions.arthur:canAccess(items) then return false end
     if _has(items, "teleportKey") then return true end
     if self.world.regions.outerWall:canAccess(items) then return true end
-    if _has(items, "eventKazuma") and _has(items, "weaponSN") and self.world.regions.grasstownEast:canAccess(items) then return true end
+    if _has(items, "eventKazuma") and _has(items, "weaponSN") then return true end
     return false
   end
 
@@ -508,18 +508,23 @@ function worldGraph:collect(preCollectedItems)
 
   local foundItems = 0
   repeat
-    local accessible, _i = {}, {}
-    for i, location in ipairs(availableLocations) do
+    foundItems = 0
+    -- Collect accessible items and remove those locations from the table
+    -- (to prevent double-collecting, which is bad for Polar Star/Booster)
+    local j, n = 1, #availableLocations
+    for i = 1, n do
+      local location = availableLocations[i]
       if location:canAccess(collected) then
-        table.insert(accessible, location)
-        table.insert(_i, i)
+        table.insert(collected, location.item)
+        foundItems = foundItems + 1
+        availableLocations[i] = nil
+      else
+        if j ~= i then
+          availableLocations[j] = availableLocations[i]
+          availableLocations[i] = nil
+        end
+        j = j + 1
       end
-    end
-    for i = #_i, 1, -1 do table.remove(availableLocations, _i[i]) end
-
-    foundItems = #accessible
-    for i, location in ipairs(accessible) do
-      table.insert(collected, location.item)
     end
   until foundItems == 0
 
