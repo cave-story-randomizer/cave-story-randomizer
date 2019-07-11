@@ -174,9 +174,7 @@ function upperSandZone:new(worldGraph)
     return self.world.regions.arthur:canAccess(items)
   end
 
-  self.locations.curly.requirements = function(self, items)
-    return _has(items, "polarStar") and _has(items, "weaponBoss")
-  end
+  self.locations.curly.requirements = function(self, items) return _has(items, "polarStar") end
   
   self.locations.panties.requirements = function(self, items) return _has(items, "weaponBoss") end
   self.locations.curlyPup.requirements = function(self, items) return _has(items, "weaponBoss") end
@@ -364,11 +362,11 @@ function plantation:new(worldGraph)
     if not self.world.regions.arthur:canAccess(items) then return false end
     if _has(items, "teleportKey") then return true end
     if self.world.regions.outerWall:canAccess(items) then return true end
-    if _has(items, "bomb") and _has(items, "weaponSN") and self.world.regions.grasstownEast:canAccess(items) then return true end
+    if _has(items, "eventKazuma") and _has(items, "weaponSN") and self.world.regions.grasstownEast:canAccess(items) then return true end
     return false
   end
 
-  self.locations.jail1.requirements = function(self, items) return _has(items, "letter") and _has(items, "teleportKey") end
+  self.locations.jail1.requirements = function(self, items) return _has(items, "teleportKey") end
   self.locations.momorin.requirements = function(self, items) return _has(items, "letter") and _has(items, "booster") end
   self.locations.sprinkler.requirements = function(self, items) return _has(items, "mask") end
   self.locations.megane.requirements = function(self, items) return _has(items, "brokenSprinkler") and _has(items, "mask") end
@@ -391,7 +389,7 @@ function lastCave:new(worldGraph)
     redDemon = Location("Red Demon Boss", "Priso2", "0300", self)
   }
 
-  self.requirements = function(self, items) return _has(items, "eventRocket") and _has(items, "weaponBoss") and _count(items, booster, 2) end
+  self.requirements = function(self, items) return _has(items, "eventRocket") and _has(items, "weaponBoss") and _count(items, "booster", 2) end
 end
 
 local endgame = Region:extend()
