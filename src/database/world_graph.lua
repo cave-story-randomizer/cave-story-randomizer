@@ -141,7 +141,7 @@ function grasstownEast:new(worldGraph)
     return false
   end
 
-  self.locations.kazuma2.requirements = function(self, items) return _has(items, "eventFans") end
+  self.locations.kazuma2.requirements = function(self, items) return _has(items, "rustyKey") end
   self.locations.execution.requirements = function(self, items) return _has(items, "weaponSN") end
   self.locations.hutChest.requirements = function(self, items) return _has(items, "eventFans") or _has(items, "flight") end
   self.locations.gumChest.requirements = function(self, items)
@@ -150,7 +150,7 @@ function grasstownEast:new(worldGraph)
     end
     return false
   end
-  self.locations.malco.requirements = function(self, items) return _has(items, "eventFans") and _has(items, "juice") and _has(items, "charcoal") and _has(items, "gum") end
+  self.locations.malco.requirements = function(self, items) return _has(items, "eventFans") and _has(items, "juice") and _has(items, "charcoal") and _has(items, "gumBase") end
   
   self.locations.eventFans.requirements = function(self, items) return _has(items, "rustyKey") and _has(items, "weaponBoss") end
   self.locations.eventFans:setItem(self.world.items:getByKey("eventFans"))
@@ -175,6 +175,9 @@ function upperSandZone:new(worldGraph)
   end
 
   self.locations.curly.requirements = function(self, items) return _has(items, "polarStar") end
+  
+  self.locations.panties.requirements = function(self, items) return _has(items, "weaponBoss") end
+  self.locations.curlyPup.requirements = function(self, items) return _has(items, "weaponBoss") end
   
   self.locations.eventOmega.requirements = function(self, items) return _has(items, "weaponBoss") end
   self.locations.eventOmega:setItem(self.world.items:getByKey("eventOmega"))
@@ -223,7 +226,7 @@ function labyrinthW:new(worldGraph)
   self.requirements = function(self, items)
     if not self.world.regions.arthur:canAccess(items) then return false end
     if _has(items, "eventToroko") and self.world.regions.lowerSandZone:canAccess(items) then return true end
-    if _has(items, "flight") and self.world.regions.labyrinthB:canAccess(items) then return true end
+    if _has(items, "flight") and _has(items, "weaponBoss") and self.world.regions.labyrinthB:canAccess(items) then return true end
     return false
   end
 
@@ -359,10 +362,11 @@ function plantation:new(worldGraph)
     if not self.world.regions.arthur:canAccess(items) then return false end
     if _has(items, "teleportKey") then return true end
     if self.world.regions.outerWall:canAccess(items) then return true end
+    if _has(items, "eventKazuma") and _has(items, "weaponSN") then return true end
     return false
   end
 
-  self.locations.jail1.requirements = function(self, items) return _has(items, "letter") end
+  self.locations.jail1.requirements = function(self, items) return _has(items, "teleportKey") end
   self.locations.momorin.requirements = function(self, items) return _has(items, "letter") and _has(items, "booster") end
   self.locations.sprinkler.requirements = function(self, items) return _has(items, "mask") end
   self.locations.megane.requirements = function(self, items) return _has(items, "brokenSprinkler") and _has(items, "mask") end
@@ -372,7 +376,7 @@ function plantation:new(worldGraph)
   self.locations.curlyShroom.requirements = function(self, items) return _has(items, "eventCurly") and _has(items, "maPignon") end
 
   self.locations.eventRocket.requirements = function(self, items)
-    return _has(items, "letter") and _has(items, "booster") and _has(items, "controller") and _has(items, "sprinkler")
+    return _has(items, "letter") and _has(items, "booster") and _has(items, "controller") and _has(items, "newSprinkler")
   end
   self.locations.eventRocket:setItem(self.world.items:getByKey("eventRocket"))
 end
@@ -385,7 +389,7 @@ function lastCave:new(worldGraph)
     redDemon = Location("Red Demon Boss", "Priso2", "0300", self)
   }
 
-  self.requirements = function(self, items) return _has(items, "eventRocket") and _has(items, "weaponBoss") and _count(items, booster, 2) end
+  self.requirements = function(self, items) return _has(items, "eventRocket") and _has(items, "weaponBoss") and _count(items, "booster", 2) end
 end
 
 local endgame = Region:extend()
@@ -504,18 +508,23 @@ function worldGraph:collect(preCollectedItems)
 
   local foundItems = 0
   repeat
-    local accessible, _i = {}, {}
-    for i, location in ipairs(availableLocations) do
+    foundItems = 0
+    -- Collect accessible items and remove those locations from the table
+    -- (to prevent double-collecting, which is bad for Polar Star/Booster)
+    local j, n = 1, #availableLocations
+    for i = 1, n do
+      local location = availableLocations[i]
       if location:canAccess(collected) then
-        table.insert(accessible, location)
-        table.insert(_i, i)
+        table.insert(collected, location.item)
+        foundItems = foundItems + 1
+        availableLocations[i] = nil
+      else
+        if j ~= i then
+          availableLocations[j] = availableLocations[i]
+          availableLocations[i] = nil
+        end
+        j = j + 1
       end
-    end
-    for i, v in ipairs(_i) do table.remove(availableLocations, i) end
-
-    foundItems = #accessible
-    for i, location in ipairs(accessible) do
-      table.insert(collected, location.item)
     end
   until foundItems == 0
 

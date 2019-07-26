@@ -15,6 +15,17 @@ function love.conf(t)
   t.identity = 'CaveStoryRandomizer'
   t.accelerometerjoystick = false
   t.gammacorrect = false
+  
+  t.modules.audio = false
+  t.modules.data = false
+  t.modules.joystick = false
+  t.modules.physics = false
+  t.modules.sound = false
+  t.modules.system = false
+  t.modules.thread = false
+  t.modules.timer = false
+  t.modules.touch = false
+  t.modules.video = false
 
   t.releases = {
     -- This is the name of the zip archive which contains your game.
