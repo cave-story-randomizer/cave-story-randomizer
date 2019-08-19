@@ -25,6 +25,11 @@
 <KEY<MSGIt won't open.<NOD<END
 
 #0110
+<KEY<FLJ0780:0111<MSG"Danger!" signs are plastered
+all over the door.<NOD
+It's probably not a good idea
+to enter alone...<NOD<END
+#0111
 <KEY<SOU0011<ANP0110:0000:0002<FAO0002<TRA0047:0092:0004:0017
 
 #0120
