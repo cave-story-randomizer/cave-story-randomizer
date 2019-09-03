@@ -19,7 +19,7 @@ Got the =Fireball=!<WAI0025<NOD<CLR
 Got the =Snake=!<WAI0025<NOD<CLR
 <FLJ2801:0006<FL+2801<AM+0001:0000<END
 #0006
-<PRI<MSGYou may trade the =Fireball=
+<PRI<MSG<TURYou may trade the =Fireball=
 with the =Snake= and vice-versa
 at the computer in Arthur's House.<WAI0050<NOD<FL+2802<END
 #0007
@@ -39,7 +39,7 @@ Got the =Blade=!<WAI0025<NOD<CLR
 Got the =Nemesis=!<WAI0025<NOD<CLR
 <FLJ2810:0011<FL+2810<AM+0012:0000<END
 #0011
-<PRI<MSGYou may trade the =Nemesis=
+<PRI<MSG<TURYou may trade the =Nemesis=
 with the =Blade= and vice-versa
 at the computer in Arthur's House.<WAI0050<NOD<FL+2811<END
 #0012
