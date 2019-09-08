@@ -45,7 +45,7 @@ the doorway.<NOD<END
 
 
 #0330
-<PRI<FLJ0782:0331<MSGYou see a button.<NOD<SOU0043<CLR<MSGPressed it.<NOD<CLO
+<PRI<FLJ0782:0331<SOU0043<MSG<TURYou pressed a button.<NOD<CLO
 <FL+0782
 <WAI0050
 <SOU0071
