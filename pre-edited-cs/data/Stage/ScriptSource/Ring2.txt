@@ -38,22 +38,16 @@
 <KEY
 <FLJ1272:0204
 <FLJ1270:0202
-<FLJ1271:0201<MSGOh, it's Mr. Traveler.<NOD<FLJ1020:0205<CLRDid you come to rescue me?<NOD<END
+<FLJ1271:0201<MSG<TUROh, it's Mr. Traveler.<NOD<FLJ1020:0205<CLRDid you come to rescue me?<NOD<END
 #0201
 <PRI<MSGYou can do it!<NOD<END
 #0202
-<KEY<MSGYou did it!<NOD<CLRI feel like a princess.<NOD<CLR
-Sue?<NOD<CLROooh, I know her.<NOD
-That girl looks like a Mimiga,
-but she's really a human, isn't
-she?<NOD
-My eyes can't be fooled.<NOD
-Anyway, she's not here.<NOD<CLO
-<FL+1272<END
+<FL+1272
+<EVE0204
 #0203
 #0204
-<KEY<MSGYou're so strong!<NOD
-Almost like the great hero Arthur.<NOD<FLJ1274:0000<FL+1274<CLRTee-hee!...<NOD<CLO
+<KEY<MSG<TURYou're so strong!
+Almost like the great hero Arthur.<NOD<FLJ1274:0000<FL+1274<CLO
 <ANP0250:0010:0005
 <ANP0251:0010:0005
 <ANP0252:0010:0005
@@ -103,8 +97,7 @@ good, wasn't he.<NOD<END
 
 #0410
 <KEY<FON0410:0016<ANP0410:0500:0004<WAI0050
-<CMU0000<MS3Gyaaahhh!<MYB0410<NOD<CLRThe...<WAI0020the power...<WAI0020<CLR
-I can't control it!!!<NOD<CLO
+<CMU0000<MYB0410
 <WAI0050<CNP0420:0267:0004<WAI0100
 <FOM0016
 <ANP0420:0007:0004<BSL0420<DNP0410<FL-1270<CMU0031<END
@@ -112,9 +105,9 @@ I can't control it!!!<NOD<CLO
 #0420
 <KEY<FON0420:0016<FL+1270
 <ANP0420:0500:0004<WAI0100
-<MS3Aaaiiggghh!!<MYB0420<NOD<CLO
+<MYB0420
 <ANP0420:0510:0004<WAI0450<CMU0015
-<FOM0016<ANP0420:0520:0000<MS3
+<FOM0016<ANP0420:0520:0000<MS3<TUR
 Defeated the Doctor!<WAI0140<NOD<CMU0000<CLO
 <FON0450:0016<WAI0050
 <CMP0003:0009:0021<SOU0012<WAI0020
@@ -133,27 +126,9 @@ Defeated the Doctor!<WAI0140<NOD<CMU0000<CLO
 #0502
 <CMU0017<MYD0002
 <CMP0003:0013:0021
-<MS3<FAC0021<ANP0400:0010:0000Mwah-hah-hah...<NOD<CLR
-Finally, it is complete.<NOD<CLO<FAC0000
 <WAI0020<ANP0400:0020:0000<WAI0030
-<MS3<FAC0021Administering red flowers
-to a Mimiga causes it to
-fly into a violent rage...<NOD<CLRThe reason for this, in
-fact, is quite simple.<NOD<CLRThe flowers contain not
-only a substance to draw
-out one's latent powers,<NOD<CLRbut also one to crush
-one's very faculties of
-reason.<NOD<CLRIt is this that I have
-successfully extracted
-and concentrated.<NOD<CLRYou can see it in the
-form of this...<NOD<CLO<FAC0000
 <WAI0020<DNP0401<ANP0400:0040:0000<WAI0020
-<MS3<FAC0021...Red Crystal.<WAI0030<NOD<CLRAnd unlike the flowers,
-this Crystal will affect
-humans as well.<NOD<CLR<ANP0400:0050:0000Ho-ho-hoh...<NOD<CLRIt is wondrous!<NOD<CLRDo you understand the
-splendor of this?
-Do you?!<NOD<CLRI doubt you do!<NOD<CLRThen allow me to
-explain it...<NOD<CLRIn a special lecture!!<NOD<CLO
+<ANP0400:0050:0000
 <CNP0410:0263:0000<WAI0005
 <ANP0410:0002:0000<WAI0050
 <CMP0003:0013:0021<DNP0400
