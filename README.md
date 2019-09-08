@@ -1,6 +1,6 @@
 # Cave Story Randomizer [Open Mode]
 
-The Cave Story Randomizer shuffles the location of every item in Cave Story, creating a new experience each time you play! The randomizer has logic in place to ensure that you can always reach every item and finish the game. Get started by heading to the [releases page](https://gitlab.com/duncathan/cave-story-randomizer/tags) and downloading the most recent version! If you find yourself stuck, wanting to talk about the hilarious location you found the panties in, or just plain enjoying the game please consider joining our [official Discord server](https://discord.gg/7zUdPEn) and hanging out!
+The Cave Story Randomizer shuffles the location of every item in Cave Story, creating a new experience each time you play! The randomizer has logic in place to ensure that you can always reach every item and finish the game. Get started by heading to the [releases page](https://github.com/cave-story-randomizer/cave-story-randomizer/releases) and downloading the most recent version! If you find yourself stuck, wanting to talk about the hilarious location you found the panties in, or just plain enjoying the game please consider joining our [official Discord server](https://discord.gg/7zUdPEn) and hanging out!
 
 ## Main differences
 Note that there are a few key differences from the vanilla game in order to improve the playing experience:
