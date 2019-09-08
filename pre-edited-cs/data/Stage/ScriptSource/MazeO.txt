@@ -36,7 +36,7 @@ Here, let me refill your health.<NOD<CLO<LI+1000<SOU0020
 <ITJ0016:0302
 <FLJ0700:0301<FL+0700<WAI0050<EVE0305
 #0301
-<KEY<MSGThe clinic isn't too far.<NOD
+<KEY<MSG<TURThe clinic isn't too far.
 Go look for some medicine that
 looks usable.<NOD<END
 #0302

@@ -40,75 +40,36 @@
 <KEY<DNP0500<DNP0441<MYD0002
 <CMP0002:0014:0021
 <CMP0003:0014:0021
-<CMP0003:0015:0021<MS3
-That's far enough!!<WAI0020<NOD<CLO
+<CMP0003:0015:0021
 <CNP0400:0067:0000<WAI0100
 <ANP0400:0013:0000<WAI0050
 <CNP0400:0082:0000<WAI0004
 <ANP0400:0030:0000<WAI0050
 <CNP0410:0280:0000<WAI0100
 <DNP0440
-<MS3<FAC0026If you value her life,
-step away from the core.<NOD<CLO<FAC0000
-<MYB0002<WAI0050<MS3<FAC0016Hmph!<NOD<CLRSo even a robot can
-care for the life of
-another.<NOD<CLRYou really are different
-from the others who came
-here so many years ago.<NOD<CLR<FAC0015I never dreamed you
-would defeat the new
-king...<NOD<CLR...Well, so be it.<NOD<CLRLet me offer you a deal.<NOD<CLRYou can die together
-with the island,<NOD<CLRor you can leave and
-forget you ever came...<NOD<CLRIf you promise to leave
-at once, I can guarantee
-this girl's life.<NOD<CLR
-Otherwise...<WAI0050<CLO<FAC0000
+<MYB0002<WAI0050
 <QUA0100<WAI0030
-<MS3?<NOD<CLO
-<MS2
-You shall not escape...<NOD<CLO
-<MS3<FAC0015Who goes there?!<NOD<CLO
 <CNP0420:0281:0000<WAI0002
 <ANP0420:0010:0000
-<MS2<CMU0034*chuckle*...<NOD
-Have you really forgotten
-the voice of your master?...<NOD<CLO
+<CMU0034
 <CNP0430:0257:0000<WAI0050
-<ANP0400:0000:0002<MS3
-<FAC0015!!<NOD<CLO<FAC0000
-<MS2Hoh-hoh-hoh...<NOD<CNP0410:0042:0000<CLRThe power of the Red Crystal
-is wondrous indeed.<NOD
-It fills me even now...<NOD<ANP0410:0000:0002<CLRMy body may be wrecked,<ANP0410:0020:0000
-but my consciousness has never
-been more distinct.<NOD<CLRIt feels as if I have become
-a superman!<NOD<CLO
-<MS3<FAC0026You...<NOD<CLO
-<MS2
-.....<NOD<CLRWhat's wrong, Misery?<NOD
-Does my form frighten you?<NOD<CLO
-<MS3<FAC0026Grr!<NOD<CLRAre you not dead?<NOD
-Begone!!<NOD<CLO<FAC0000
+<ANP0400:0000:0002
+<CNP0410:0042:0000<WAI0010
+<ANP0410:0000:0002<WAI0050
+<ANP0410:0020:0000
 <ANP0400:0040:0002<WAI0100
-<MS2Tut-tut-tut...<NOD<CLRA fool who would forget
-her own master does not
-deserve free will.<NOD<CLRMisery.<NOD
-You will be my puppet
-until the day you die.<NOD<CLO
 <MNP0420:0030:0013:0000<WAI0100
 <ANP0400:0050:0002
-<MS3<FAC0026
-Gwaaahhhh!!<NOD<CLO<FAC0000
 <CNP0400:0283:0002<WAI0050
 <ANP0400:0010:0002<WAI0100
-<MS3<FAC0002Um...<NOD<MYD0000<CLRLet's get out of here.<NOD<CLO<FAC0000
+<MYD0000
 <ANP0410:0015:0002<WAI0002
 <ANP0410:0000:0000<WAI0020<MYD0000
 <ANP0410:0003:0000<WAI0032
 <ANP0410:0000:0002<WAI0030
-<MS3<FAC0002
-Huh...?<ANP0410:0017:0002<NOD<CLO<FAC0000
+<ANP0410:0017:0002
 <CNP0410:0284:0002<WAI0050<DNP0430
-<MS2Hwah-hah-hah...<MYD0002<NOD<WAI0100<CLR<BOA0015You're not leaving this
-place alive!!<NOD<CLO
+<MYD0002<WAI0100<BOA0015
 <BSL0000<BOA0020
 <CMU0032
 <MNP0420:0028:0018:0000<ANP0420:0020:0000<WAI0050
@@ -129,15 +90,10 @@ place alive!!<NOD<CLO
 <ANP0451:0000:0000<WAI0050
 <SOU0035<CMU0018
 <ANP0451:0000:0002
-<MS3<FAC0001
-Oh no...<NOD<CLO<FAC0000
+<WAI0010
 <ANP0451:0003:0000<WAI0020
 <ANP0451:0000:0000<WAI0020
 <DNP0450<SMC
-<MS3<FAC0002The island's starting to
-collapse!<NOD<CLRIt won't be long before
-this place crumbles, too!<NOD<CLRWe've gotta get out of
-here!<NOD<CLO
 <ANP0451:0030:0000<WAI0100<DNP0451
 <FL+1273<FL+1341<FL+1390<FL+1391<FL+1392
 <FL-1031<FL-1032

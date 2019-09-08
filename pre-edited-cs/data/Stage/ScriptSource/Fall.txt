@@ -36,59 +36,59 @@ Now, let's go home.<NOD<CLO
 <CNP0230:0356:0002
 <DNP0220<WAI0200
 <FAI0001
-<MSG<FAC0005<FL+2000<FL+1460Phew!<NOD<CLRThat...was close.<NOD<CLR<FAC0019I thought I was scrap
+<MSG<FAC0005<FL+2000<FL+1460Phew!<WAI0050<CLRThat...was close.<WAI0050<CLR<FAC0019I thought I was scrap
 metal this time for
-sure...<NOD
+sure...<WAI0050
 Looks like we owe
-you another one.<NOD<CLO<FAC0000<WAI0050
-<MSG<FAC0005Nah, don't thank me.<NOD
+you another one.<WAI0050<CLO<FAC0000<WAI0050
+<MSG<FAC0005Nah, don't thank me.<WAI0050
 I was just doing what
-Misery asked me to do.<NOD<CLR<FAC0025Misery? You mean,
-that witch?<NOD<CLR
-<FAC0005That's right.<NOD<CLR<FAC0025I thought she hated
-our guts.<NOD
+Misery asked me to do.<WAI0050<CLR<FAC0025Misery? You mean,
+that witch?<WAI0050<CLR
+<FAC0005That's right.<WAI0050<CLR<FAC0025I thought she hated
+our guts.<WAI0050
 Heck, I thought YOU
-hated our guts...<NOD<CLR<FAC0005You beat Ballos, right?<NOD<CLRWhen you did that,
-it lifted our curse.<NOD
+hated our guts...<WAI0050<CLR<FAC0005You beat Ballos, right?<WAI0050<CLRWhen you did that,
+it lifted our curse.<WAI0050
 Now neither of us has
 to take orders from
-anyone!<NOD<CLR<FAC0019I thought you guys were
-just jerks,<NOD
+anyone!<WAI0050<CLR<FAC0019I thought you guys were
+just jerks,<WAI0050
 but I guess it was all
-the Crown's fault!<NOD<CLR<FAC0005Well, you reap what
-you sow.<NOD
+the Crown's fault!<WAI0050<CLR<FAC0005Well, you reap what
+you sow.<WAI0050
 After all, Misery's the
 one who had him make the
-crown in the first place.<NOD<CLR<FAC0025Huh.<NOD
-You don't say.<NOD<CLR<FAC0005I do say.<NOD<CLO<FAC0000
+crown in the first place.<WAI0050<CLR<FAC0025Huh.<WAI0050
+You don't say.<WAI0050<CLR<FAC0005I do say.<WAI0050<CLO<FAC0000
 <WAI0150
-<MSG<FAC0005So!<NOD<CLR
-<FAC0025So?<NOD<CLR<FAC0005So what are you going
-to do now?<NOD
+<MSG<FAC0005So!<WAI0050<CLR
+<FAC0025So?<WAI0050<CLR<FAC0005So what are you going
+to do now?<WAI0050
 I can take you anywhere
-you like.<NOD<CLR<FAC0019Hmm, you're right...<NOD<CLROur mission is over,
+you like.<WAI0050<CLR<FAC0019Hmm, you're right...<WAI0050<CLROur mission is over,
 and now I just want to
-live out my days<NOD
+live out my days<WAI0050
 somewhere where I can
 relax and enjoy a
-beautiful view...<NOD<CLO<FAC0000
-<WAI0100<MSG<FAC0005Uh, you know...<NOD<CLR
-<FAC0025Hm?<NOD<CLR<FAC0005...Would it be all right
-if I joined you there?<NOD<CLR
-<FAC0019Sure!<NOD
+beautiful view...<WAI0050<CLO<FAC0000
+<WAI0100<MSG<FAC0005Uh, you know...<WAI0050<CLR
+<FAC0025Hm?<WAI0050<CLR<FAC0005...Would it be all right
+if I joined you there?<WAI0050<CLR
+<FAC0019Sure!<WAI0050
 Let's live the three
-of us together!<NOD<CLR
-<FAC0014Really?!<NOD<CLR<FAC0019I'll let you pick the
-spot.<NOD
+of us together!<WAI0050<CLR
+<FAC0014Really?!<WAI0050<CLR<FAC0019I'll let you pick the
+spot.<WAI0050
 Just find us a good
-place, okay?<NOD<CLR
-<FAC0014You got it!!<NOD<CLRAll right then,
-<ANP0230:0020:0002h<WAI0010a<WAI0010n<WAI0010g<WAI0010 <WAI0010o<WAI0010n<WAI0010 <WAI0010t<WAI0010i<WAI0010g<WAI0010h<WAI0010t<WAI0010!!<NOD<CLO<FAC0000
+place, okay?<WAI0050<CLR
+<FAC0014You got it!!<WAI0050<CLRAll right then,
+<ANP0230:0020:0002h<WAI0010a<WAI0010n<WAI0010g<WAI0010 <WAI0010o<WAI0010n<WAI0010 <WAI0010t<WAI0010i<WAI0010g<WAI0010h<WAI0010t<WAI0010!!<WAI0050<CLO<FAC0000
 <KEY<FAO0004<HMC<ITJ0032:0121<TRA0000:0100:0001:0015
 
 #0121
 <KEY<WAI0100<MSG<GIT1032...Aren't you forgetting
-something?<NOD<TRA0000:0100:0001:0015
+something?<WAI0150<TRA0000:0100:0001:0015
 
 #0200
 #0210
