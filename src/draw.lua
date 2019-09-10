@@ -8,6 +8,9 @@ local status
 
 local C = Class:extend()
 
+local layout = Luigi(require 'layout')
+layout:setStyle(require 'style')
+
 function C:setup()
   Terebi.initializeLoveDefaults()
   screen = Terebi.newScreen(320, 240, 2)
@@ -38,6 +41,7 @@ end
 
 function C:draw()
   screen:draw(_draw)
+  layout:show()
 end
 
 function C:setStatus(text)
