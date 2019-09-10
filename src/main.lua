@@ -4,9 +4,6 @@ VERSION = '0.8B'
 
 Class   = require 'lib.classic'
 _       = require 'lib.moses'
-Serpent = require 'lib.serpent'
-Terebi  = require 'lib.terebi'
-Luigi   = require 'lib.luigi.layout'
 
 lf = love.filesystem
 lg = love.graphics

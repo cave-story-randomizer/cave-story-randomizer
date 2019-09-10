@@ -1,3 +1,6 @@
+local Terebi  = require 'lib.terebi'
+local Luigi   = require 'lib.luigi.layout'
+
 local background
 local font
 local screen
