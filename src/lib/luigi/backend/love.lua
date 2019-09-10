@@ -5,9 +5,9 @@ local Hooker = require(ROOT .. 'hooker')
 
 local Backend = {}
 
-Backend.isMac = function ()
-    return love.system.getOS() == 'OS X'
-end
+--Backend.isMac = function ()
+--    return love.system.getOS() == 'OS X'
+--end
 
 Backend.run = function () end
 
@@ -35,9 +35,9 @@ Backend.drawRectangle = love.graphics.rectangle
 
 Backend.print = love.graphics.print
 
-Backend.getClipboardText = love.system.getClipboardText
+--Backend.getClipboardText = love.system.getClipboardText
 
-Backend.setClipboardText = love.system.setClipboardText
+--Backend.setClipboardText = love.system.setClipboardText
 
 Backend.getMousePosition = love.mouse.getPosition
 
@@ -49,7 +49,7 @@ Backend.getWindowSize = function ()
     return love.graphics.getWidth(), love.graphics.getHeight()
 end
 
-Backend.getTime = love.timer.getTime
+--Backend.getTime = love.timer.getTime
 
 Backend.isKeyDown = love.keyboard.isDown
 
