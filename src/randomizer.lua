@@ -38,6 +38,10 @@ function C:setPath(path)
   csdirectory = path
 end
 
+function C:ready()
+  return csdirectory ~= nil
+end
+
 function C:randomize()
   resetLog()
   logNotice('=== Cave Story Randomizer v' .. VERSION .. ' ===')

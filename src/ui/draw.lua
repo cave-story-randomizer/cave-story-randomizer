@@ -20,8 +20,12 @@ layout.twitter.text = '(@shruuu and @duncathan_salt)'
 layout.footer.text = 'Original randomizer:\r\nshru.itch.io/cave-story-randomizer'
 
 layout.go:onPress(function()
-  C:setStatus(Randomizer:randomize())
-  Randomizer:new()
+  if Randomizer:ready() then
+    C:setStatus(Randomizer:randomize())
+    Randomizer:new()
+  else
+    C:setStatus("No Cave Story folder found!\r\nDrag and drop your Cave Story folder here.")
+  end
 end)
 
 function C:draw()
