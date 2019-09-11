@@ -1,44 +1,58 @@
 return { id = 'window',
   { flow = 'y',
-    { height = 360 },
-    { flow = 'x',
+    {
+      type = 'panel',
+      id = 'header',
+      height = 100,
+      style = 'panel',
+      align = 'top center',
+      { height = 10 },
+      { id = 'version', text = "" },
+      { id = 'author', text = ""  },
+      { id = 'twitter', text = "" },
+      { height = 10 }
+    },
+    {
+      type = 'panel',
+      id = 'status',
+      height = 260,
+      style = 'panel',
+      align = 'top center',
+      margin = 24,
+      wrap = true,
+    },
+    { 
+      flow = 'x',
+      height = '40',
       { width = false },
+      --[[
       {
         type = 'button',
-        id = 'exampleButton',
-        text = 'Press me!',
+        id = 'settings',
+        text = 'Settings',
         width = 100,
         height = 32,
       },
       {
         type = 'button',
-        id = 'exampleButton2',
-        text = 'Press me',
+        id = 'go',
+        text = 'Randomize',
         width = 100,
         height = 32,
       },
-      {
-        type = 'button',
-        id = 'exampleButton3',
-        text = 'Press me',
-        width = 100,
-        height = 32,
-      },
-      {
-        type = 'button',
-        id = 'exampleButton4',
-        text = 'Press me',
-        width = 100,
-        height = 32,
-      },
-      {
-        type = 'button',
-        id = 'exampleButton5',
-        text = 'Press me',
-        width = 100,
-        height = 32,
-      },
+      ]]
       { width = false }
+    },
+    {
+      flow = 'x',
+      { width = 20 },
+      {
+        type = 'panel',
+        id = 'footer',
+        height = 80,
+        style = 'panel',
+        align = 'centre left',
+      }
     }
   }
 }
