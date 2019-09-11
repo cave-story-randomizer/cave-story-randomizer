@@ -25,7 +25,6 @@ return { id = 'window',
       flow = 'x',
       height = '40',
       { width = false },
-      --[[
       {
         type = 'button',
         id = 'settings',
@@ -40,7 +39,6 @@ return { id = 'window',
         width = 100,
         height = 32,
       },
-      ]]
       { width = false }
     },
     {

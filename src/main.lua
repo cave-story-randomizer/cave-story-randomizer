@@ -12,16 +12,36 @@ U = require 'util'
 
 require 'log'
 
-local Randomizer = require 'randomizer'
-local Screen = require 'draw'
+local random = require 'randomizer'
+local settings = require 'settings'
+Randomizer = random()
+Screen = require 'ui.draw'
+Settings = settings()
+
+local csdirectory
 
 function love.load()
   Screen:setup()
+  Settings:init()
+  if Settings.settings.csdirectory ~= "" then
+    Screen:setStatus("Cave Story folder found!")
+    Randomizer:setPath(Settings.settings.csdirectory)
+  else
+    Screen:setStatus("Drag and drop your Cave Story folder here.")
+  end
 end
 
 function love.directorydropped(path)
-  local randomizer = Randomizer()
-  Screen:setStatus(randomizer:randomize(path))
+  local success = Randomizer:_mountDirectory(path)
+  Randomizer:_unmountDirectory(path)
+  if success then
+    Settings.settings.csdirectory = path
+    Settings:update()
+    Randomizer:setPath(path)
+    Screen:setStatus("Cave Story folder updated!")
+  else
+    Screen:setStatus("Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?")
+  end
 end
 
 function love.keypressed(key)

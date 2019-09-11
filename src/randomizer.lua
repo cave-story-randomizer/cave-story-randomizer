@@ -16,6 +16,8 @@ do
   end
 end
 
+local csdirectory
+
 local function mkdir(path)
     local mkdir_str
     if package.config:sub(1,1) == '\\' then -- Windows
@@ -32,10 +34,14 @@ function C:new()
   self.worldGraph = WorldGraph(self.itemDeck)
 end
 
-function C:randomize(path)
+function C:setPath(path)
+  csdirectory = path
+end
+
+function C:randomize()
   resetLog()
   logNotice('=== Cave Story Randomizer v' .. VERSION .. ' ===')
-  local success, dirStage = self:_mountDirectory(path)
+  local success, dirStage = self:_mountDirectory(csdirectory)
   if not success then
     return "Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?"
   end
@@ -47,7 +53,7 @@ function C:randomize(path)
   self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
   self:_writeLog()
-  self:_unmountDirectory(path)
+  self:_unmountDirectory(csdirectory)
   return self:_getStatusMessage()
 end
 
