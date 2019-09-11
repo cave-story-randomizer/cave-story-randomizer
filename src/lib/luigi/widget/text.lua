@@ -199,14 +199,14 @@ local function copyRangeToClipboard (self)
     local text = self.value
     local first, last = getRange(self)
     if last >= first + 1 then
-        --Backend.setClipboardText(text:sub(first + 1, last))
+        Backend.setClipboardText(text:sub(first + 1, last))
     end
 end
 
 local function pasteFromClipboard (self)
     trimRange(self)
     local text = self.value
-    local pasted = '' --or Backend.getClipboardText()
+    local pasted = Backend.getClipboardText() or ''
     local first, last = getRange(self)
     local left = text:sub(1, first) .. pasted
     local index = #left
@@ -230,39 +230,39 @@ end
 
 -- check command (gui) key, only on Mac.
 local isCommandPressed
---if Backend.isMac() then
---    isCommandPressed = function ()
---        return Backend.isKeyDown('lgui', 'rgui')
---    end
---else
+if Backend.isMac() then
+    isCommandPressed = function ()
+        return Backend.isKeyDown('lgui', 'rgui')
+    end
+else
     isCommandPressed = function ()
         return false
     end
---end
+end
 
 -- check command (gui) key on Mac and ctrl key everywhere else.
 local isCommandOrCtrlPressed
---if Backend.isMac() then
---    isCommandOrCtrlPressed = function ()
---        return Backend.isKeyDown('lgui', 'rgui')
---    end
---else
+if Backend.isMac() then
+    isCommandOrCtrlPressed = function ()
+        return Backend.isKeyDown('lgui', 'rgui')
+    end
+else
     isCommandOrCtrlPressed = function ()
         return Backend.isKeyDown('lctrl', 'rctrl')
     end
---end
+end
 
 -- check option (alt) key on Mac and ctrl key everywhere else.
 local isOptionOrCtrlPressed
---if Backend.isMac() then
---    isOptionOrCtrlPressed = function ()
---        return Backend.isKeyDown('lalt', 'ralt')
---    end
---else
+if Backend.isMac() then
+    isOptionOrCtrlPressed = function ()
+        return Backend.isKeyDown('lalt', 'ralt')
+    end
+else
     isOptionOrCtrlPressed = function ()
         return Backend.isKeyDown('lctrl', 'rctrl')
     end
---end
+end
 
 -- Special keys.
 local function createDefaultKeyActions (self)
@@ -418,10 +418,10 @@ This color is used to indicate the selected range of text.
             Backend.setColor(self.highlight or defaultHighlight)
             Backend.drawRectangle('fill', startX, y, width, height)
             -- draw cursor selection
-            --if Backend.getTime() % 2 < 1.75 then
-            --    Backend.setColor(color)
-            --    Backend.drawRectangle('fill', endX, y, 1, height)
-            --end
+            if Backend.getTime() % 2 < 1.75 then
+                Backend.setColor(color)
+                Backend.drawRectangle('fill', endX, y, 1, height)
+            end
         else
             Backend.setColor { color[1], color[2], color[3],
                 (color[4] or 256) / 8 }

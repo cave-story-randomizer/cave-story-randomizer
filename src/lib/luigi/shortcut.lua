@@ -8,7 +8,7 @@ local Backend = require(ROOT .. 'backend')
 
 local Shortcut = {}
 
---local isMac = Backend.isMac()
+local isMac = Backend.isMac()
 
 local ALT = 1
 local CTRL = 2
@@ -16,10 +16,10 @@ local SHIFT = 4
 local GUI = 8
 
 function Shortcut.appliesToPlatform (value)
-    --if isMac and value:match '%f[%a]win%-'
-    --or not isMac and value:match '%f[%a]mac%-' then
-    --    return false
-    --end
+    if isMac and value:match '%f[%a]win%-'
+    or not isMac and value:match '%f[%a]mac%-' then
+        return false
+    end
     return true
 end
 
