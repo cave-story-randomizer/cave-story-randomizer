@@ -37,10 +37,10 @@ local function recursiveWrite(path, name)
   lf.createDirectory(name)
   for i,v in ipairs(filesTable) do
     local file = path..'/'..v
-    if lf.isFile(file) then
+    if lf.getInfo(file, 'file') ~= nil then
       local n
       lf.write(name..'/'..v, lf.read(file))
-    elseif lf.isDirectory(file) then
+    elseif lf.getInfo(file, 'directory') ~= nil then
       recursiveWrite(file, name..'/'..v)
     end
   end
