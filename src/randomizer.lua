@@ -32,6 +32,7 @@ function C:new()
   self._isCaveStoryPlus = false
   self.itemDeck = Items()
   self.worldGraph = WorldGraph(self.itemDeck)
+  self.customseed = nil
 end
 
 function C:setPath(path)
@@ -50,7 +51,7 @@ function C:randomize()
     return "Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?"
   end
   
-  self:_seedRngesus()
+  local seed = self:_seedRngesus()
   local tscFiles = self:_createTscFiles(dirStage)
   -- self:_writePlaintext(tscFiles)
   self:_shuffleItems(tscFiles)
@@ -58,7 +59,7 @@ function C:randomize()
   self:_writePlaintext(tscFiles)
   self:_writeLog()
   self:_unmountDirectory(csdirectory)
-  return self:_getStatusMessage()
+  return self:_getStatusMessage(seed)
 end
 
 function C:_mountDirectory(path)
@@ -92,6 +93,8 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
+  local seed = self.customseed or tostring(os.time())
+  --[[
   local seed = io.open(lf.getSourceBaseDirectory() .. "/seed.txt")
   if seed == nil then
     logNotice('Seed from file doesnt exists, generate a new') 
@@ -107,8 +110,10 @@ function C:_seedRngesus()
     logWarning('Seed is too short, generate a new')
     seed = tostring(os.time())
   end
+  ]]
   love.math.setRandomSeed(seed)
   logNotice(('Offering seed "%s" to RNGesus' ):format(seed))
+  return seed
 end
 
 function C:_createTscFiles(dirStage)
@@ -229,11 +234,11 @@ function C:_unmountDirectory(path)
   assert(lf.unmount(path))
 end
 
-function C:_getStatusMessage()
+function C:_getStatusMessage(seed)
   local warnings, errors = countLogWarningsAndErrors()
   local line1
   if warnings == 0 and errors == 0 then
-    line1 = "Randomized data successfully created!"
+    line1 = ("Randomized data successfully created!\nSeed: %d"):format(seed)
   elseif warnings ~= 0 and errors == 0 then
     line1 = ("Randomized data was created with %d warning(s)."):format(warnings)
   else
@@ -241,7 +246,7 @@ function C:_getStatusMessage()
   end
   local line2 = "Next overwrite the files in your copy of Cave Story with the versions in the newly created \"data\" folder. Don't forget to save a backup of the originals!"
   local line3 = "Then play and have a fun!"
-  local status = ("%s\n\n%s\n\n%s"):format(line1, line2, line3)
+  local status = ("%s\n%s\n\n%s"):format(line1, line2, line3)
   return status
 end
 
