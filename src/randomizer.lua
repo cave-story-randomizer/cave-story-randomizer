@@ -16,6 +16,8 @@ do
   end
 end
 
+local csdirectory
+
 local function mkdir(path)
     local mkdir_str
     if package.config:sub(1,1) == '\\' then -- Windows
@@ -30,25 +32,34 @@ function C:new()
   self._isCaveStoryPlus = false
   self.itemDeck = Items()
   self.worldGraph = WorldGraph(self.itemDeck)
+  self.customseed = nil
 end
 
-function C:randomize(path)
+function C:setPath(path)
+  csdirectory = path
+end
+
+function C:ready()
+  return csdirectory ~= nil
+end
+
+function C:randomize()
   resetLog()
   logNotice('=== Cave Story Randomizer v' .. VERSION .. ' ===')
-  local success, dirStage = self:_mountDirectory(path)
+  local success, dirStage = self:_mountDirectory(csdirectory)
   if not success then
     return "Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?"
   end
   
-  self:_seedRngesus()
+  local seed = self:_seedRngesus()
   local tscFiles = self:_createTscFiles(dirStage)
   -- self:_writePlaintext(tscFiles)
   self:_shuffleItems(tscFiles)
   self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
   self:_writeLog()
-  self:_unmountDirectory(path)
-  return self:_getStatusMessage()
+  self:_unmountDirectory(csdirectory)
+  return self:_getStatusMessage(seed)
 end
 
 function C:_mountDirectory(path)
@@ -82,23 +93,17 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seed = io.open(lf.getSourceBaseDirectory() .. "/seed.txt")
+  local seed = self.customseed or os.time()
+  seed = tonumber(seed) or tonumber(seed, 36) -- convert alphanumeric strings to numbers
+  local seedstring = self.customseed or tostring(seed)
   if seed == nil then
-    logNotice('Seed from file doesnt exists, generate a new') 
-    seed = tostring(os.time())
-  else
-    logNotice('Gathering the seed from file "seed.txt"')
-    seed = seed:read('*n')
-  end
-  if seed == nil then
-    logWarning('Seed from file is invalid, generate a new') 
-    seed = tostring(os.time())
-  elseif string.len(seed) < 10 then
-    logWarning('Seed is too short, generate a new')
-    seed = tostring(os.time())
+    seed = os.time()
+    seedstring = ('%d ("%s" was invalid)'):format(seed, self.customseed)
   end
   love.math.setRandomSeed(seed)
-  logNotice(('Offering seed "%s" to RNGesus' ):format(seed))
+  
+  logNotice(('Offering seed "%s" to RNGesus' ):format(seedstring))
+  return seedstring
 end
 
 function C:_createTscFiles(dirStage)
@@ -219,11 +224,11 @@ function C:_unmountDirectory(path)
   assert(lf.unmount(path))
 end
 
-function C:_getStatusMessage()
+function C:_getStatusMessage(seed)
   local warnings, errors = countLogWarningsAndErrors()
   local line1
   if warnings == 0 and errors == 0 then
-    line1 = "Randomized data successfully created!"
+    line1 = ("Randomized data successfully created!\nSeed: %s"):format(seed)
   elseif warnings ~= 0 and errors == 0 then
     line1 = ("Randomized data was created with %d warning(s)."):format(warnings)
   else
@@ -231,7 +236,7 @@ function C:_getStatusMessage()
   end
   local line2 = "Next overwrite the files in your copy of Cave Story with the versions in the newly created \"data\" folder. Don't forget to save a backup of the originals!"
   local line3 = "Then play and have a fun!"
-  local status = ("%s\n\n%s\n\n%s"):format(line1, line2, line3)
+  local status = ("%s\n%s\n\n%s"):format(line1, line2, line3)
   return status
 end
 
