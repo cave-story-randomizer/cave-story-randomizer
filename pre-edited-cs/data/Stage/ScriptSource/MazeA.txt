@@ -108,7 +108,7 @@ it is anymore, but that's all
 right!<NOD<END
 
 #0500
-<KEY<AMJ0004:0501<MYB0002<SOU0052<MSG<TURHEY!!!<WAI0100<NOD
+<KEY<AMJ0004:0501<MYB0002<SOU0052<QUA0100<MSG<TURHEY!!!<WAI0100<NOD
 That chest is mine!<NOD<CLR
 <MSGShow me a <GIT0004=Machine Gun= and I'll
 let you have what's inside.<NOD<END
@@ -118,7 +118,7 @@ let you have what's inside.<NOD<END
 <EVE0070
 
 #0510
-<KEY<AMJ0003:0511<FLJ2802:0511<MYB0002<SOU0052<MSG<TURHEY!!!<WAI0100<NOD
+<KEY<AMJ0003:0511<FLJ2802:0511<MYB0002<SOU0052<QUA0100<MSG<TURHEY!!!<WAI0100<NOD
 That chest is mine!<NOD<CLR
 <MSGIf you own a <GIT0003=Fireball= I'll let
 you have what's inside.<NOD<END
@@ -128,7 +128,7 @@ you have what's inside.<NOD<END
 <EVE0005
 
 #0520
-<KEY<AMJ0013:0521<MYB0002<SOU0052<MSG<TURHEY!!!<WAI0100<NOD
+<KEY<AMJ0013:0521<MYB0002<SOU0052<QUA0100<MSG<TURHEY!!!<WAI0100<NOD
 That chest is mine!<NOD<CLR
 <MSGShow me a <GIT0013=Spur= and I'll let you
 have what's inside.<NOD<END

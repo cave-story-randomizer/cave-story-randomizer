@@ -17,8 +17,8 @@
 
 #0096
 <MSG<TURYou feel a black wind blow
-through you.
-All weapons dropped to Level 1!<NOD<CLO
+through you.<NOD
+All weapons dropped to Level 1!<NOD<WAI0003<CLO
 <FRE<MNA<CMU0036<FAI0003<END
 
 
@@ -51,7 +51,7 @@ Welcome to Hell!<NOD<END
 
 
 #0500
-<KEY<FL-1531<FL+1532
+<KEY<FL-1531<FL+1532<WAI0010
 <CNP0500:0259:0000<END
 
 
