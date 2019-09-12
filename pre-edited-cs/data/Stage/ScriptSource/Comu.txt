@@ -78,8 +78,8 @@ but he was a true hero.<NOD<END
 
 
 #0300
-<ITJ0008:0301
-<KEY<MSG*Crackle* *Snap!*<NOD<FLJ0442:0000<CLRYou see something lying
+<KEY<ITJ0008:0301
+<MSG*Crackle* *Snap!*<NOD<FLJ0442:0000<CLRYou see something lying
 beyond the flames.<NOD<END
 #0301
 <ANP0300:0010:0000<WAI0030<FLJ0442:0302<FL+0442<DNP0300<EVE0303
