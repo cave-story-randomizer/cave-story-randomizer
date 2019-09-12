@@ -38,8 +38,9 @@
 <FLJ1103:0212
 <FLJ1100:0206
 <ITJ0018:0202<ITJ0023:0202
-<MSG<TURIf only I knew how a Booster
-works...<NOD<END
+<MSG<TUR<FAC0022What I need right now
+is a Booster.<NOD<CLRNow, who would have one
+of those...<NOD<END
 #0201
 <EVE0074
 #0202
