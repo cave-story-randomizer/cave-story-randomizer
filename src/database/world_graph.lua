@@ -42,9 +42,7 @@ function mimigaVillage:new(worldGraph)
   end
 
   self.locations.assembly.requirements = function(self, items) return _has(items, "juice") end
-  self.locations.mrLittle.requirements = function(self, items)
-    return _has(items, "locket") and self.region.world.regions.outerWall.locations.littleHouse:canAccess(items)
-  end
+  self.locations.mrLittle.requirements = function(self, items) return _has(items, "locket") end
   self.locations.grave.requirements = function(self, items) return _has(items, "locket") end
   self.locations.mushroomChest.requirements = function(self, items)
     return _has(items, "flight") and _has(items, "locket") and _has(items, "eventCurly")
