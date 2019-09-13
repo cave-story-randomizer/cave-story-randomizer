@@ -45,8 +45,8 @@ I learned in that notebook...<NOD<END
 in dust...<NOD<FLJ1441:0223<FLJ1445:0222<END
 #0222
 <KEY<MSG<TUR
-Do you want to open the notebook?<YNJ0000<FL+1441<CLR
-<CMU0010Learned how to treat flooded
+Do you want to open the notebook?<YNJ0000<FL+1441
+<CLR<CMU0010Learned how to treat flooded
 robots!<WAI0160<NOD<RMU<END
 #0223
 <KEY<MSGNothing else here appears
@@ -74,7 +74,10 @@ like she's still alive.<NOD<END
 <KEY<MSG<TURDo you want to drain the water
 from Curly?<YNJ0000<CLO
 <FL+1442<FAO0001<CMU0000<WAI0100<FAI0001
-<CMU0014<ANP0260:0001:0002<ANP0260:0001:0000
+<WAI0080
+<CMU0014<ANP0260:0001:0002<WAI0050<ANP0260:0001:0000
+<WAI0050
+<MSG<TURShe fell sound asleep.<NOD
 <END
 #0254
 <KEY<CNP0260:0259:0000<FL+0836<FL+1042<FL-1440<FL+1444<WAI0010<END
