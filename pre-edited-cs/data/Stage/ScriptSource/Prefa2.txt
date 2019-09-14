@@ -11,7 +11,7 @@
 <MNA<CMU0000<FAI0004<END
 
 #0100
-<PRI<MSGYou're stuck...<NOD<END
+<PRI<MSG<TURYou're stuck...<NOD<END
 <ANP0100:0000:0002<SOU0011<FAO0004<TRA0062:0094:0079:0073
 
 #0110
@@ -26,12 +26,12 @@
 
 
 #0200
-<PRI<MSGIf you'd like to give up,
+<PRI<MSG<TURIf you'd like to give up,
 I can give you back a little time.<NOD<CLRDo you want to give up?<YNJ0000<CLO
 <FL+1390<FL+1391<FL+1392<CMU0000<FAO0001<WAI0100
 <TRA0070:0310:0118:0062
 
 #0250
-<PRI<MSG
+<PRI<MSG<TUR
 The bed's all crooked...<NOD<END
 
