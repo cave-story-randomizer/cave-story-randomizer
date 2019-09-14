@@ -214,9 +214,9 @@ function C:_getWritePaths()
     self._writePathStage = (self._isCaveStoryPlus)
       and (self._writePath .. '/base/Stage')
       or  (self._writePath .. '/Stage')
-    -- Create /data(/base)/Stage if it doesn't already exist.
-    mkdir(self._writePathStage)
   end
+  -- Create /data(/base)/Stage if it doesn't already exist.
+  mkdir(self._writePathStage)
   return self._writePath, self._writePathStage
 end
 
