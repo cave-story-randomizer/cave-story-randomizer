@@ -26,12 +26,12 @@
 
 #0500
 <DNP0500<MYD0002
-<KEY<MSGWelcome.<NOD<CLR
+<KEY<MSG<TURWelcome.<NOD<CLR
 <FAC0029I am Ballos.<NOD
 <CLRLong, long have I waited...<NOD<CLRWaited for the one who
 would finally subdue my
 magic's fury...<NOD<CLRNow, kill me!<NOD
-Or I--<NODshall kill YOU!!<NOD<CLO
+Or--<NOD<CLRI shall kill YOU!!<NOD<CLO
 <CMU0004
 <ANP0402:0100:0900<FON0402:0016
 <BSL0900<ANP0900:0010:0000<END
