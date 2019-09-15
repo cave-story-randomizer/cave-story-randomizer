@@ -17,7 +17,6 @@ function love.conf(t)
   t.gammacorrect = false
   
   t.modules.audio = false
-  t.modules.data = false
   t.modules.joystick = false
   t.modules.physics = false
   t.modules.sound = false
