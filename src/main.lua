@@ -7,6 +7,7 @@ _       = require 'lib.moses'
 
 lf = love.filesystem
 lg = love.graphics
+ld = love.data
 
 U = require 'util'
 

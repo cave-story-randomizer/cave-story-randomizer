@@ -93,14 +93,12 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seed = self.customseed or os.time()
-  seed = tonumber(seed) or tonumber(seed, 36) -- convert alphanumeric strings to numbers
-  local seedstring = self.customseed or tostring(seed)
-  if seed == nil then
-    seed = os.time()
-    seedstring = ('%d ("%s" was invalid)'):format(seed, self.customseed)
-  end
-  love.math.setRandomSeed(seed)
+  local seedstring = self.customseed or tostring(os.time())
+  local seed = ld.encode('string', 'hex', ld.hash('sha256', seedstring))
+  local s1 = tonumber(seed:sub(-8,  -1), 16) -- first 32 bits (from right)
+  local s2 = tonumber(seed:sub(-16, -9), 16) -- next 32 bits
+
+  love.math.setRandomSeed(s1, s2)
   
   logNotice(('Offering seed "%s" to RNGesus' ):format(seedstring))
   return seedstring
