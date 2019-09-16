@@ -23,8 +23,9 @@
 #0200
 <FLJ2406:0001<FLJ1564:0101<FLJ1042:0201
 <KEY<MYB0002<WAI0020
-<MSGHey.<NOD That chest's only for people
-with amnesia.<NOD Who needs it, right?<NOD<CLO<END
+<MSG<TURHey.<NOD
+That chest's only for people
+with amnesia.<NOD<CLRWho needs it, right?<NOD<CLO<END
 #0201
 <PRI<FLJ2406:0001<FL+2406<SOU0022<CNP0200:0021:0000<EVE0202
 #0202

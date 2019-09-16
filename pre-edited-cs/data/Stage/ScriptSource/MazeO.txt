@@ -31,7 +31,7 @@ is when its hatch opens.<NOD<END
 
 
 #0300
-<KEY<MSG<TURI'm a physician.<NOD
+<KEY<MSG<TURI'm a physician.
 Here, let me refill your health.<NOD<CLO<LI+1000<SOU0020
 <ITJ0016:0302
 <FLJ0700:0301<FL+0700<WAI0050<EVE0305
@@ -43,10 +43,10 @@ looks usable.<NOD<END
 <KEY<MSG<IT-0016<FL+0702<FL+0760<FL+0703
 <GIT1016<TURHanded over the =Cure-All=.<NOD<END
 #0303
-<KEY<MSGMany thanks.<NOD
+<KEY<MSG<TURMany thanks.
 Just let me handle the rest.<NOD<END
 #0304
-<KEY<MSGLooks like the medicine's
+<KEY<MSG<TURLooks like the medicine's
 working.<NOD
 She'll be back in action in
 no time.<NOD
@@ -58,47 +58,33 @@ All thanks to you, of course.<NOD<END
 <FLJ0704:0313
 <FLJ0702:0312
 <FLJ0701:0311
-<KEY<MSGI'm a nurse.<NOD
+<KEY<MSG<TURI'm a nurse.<NOD
 I used to work in the old
 clinic nearby,<NOD
 but it was seized by ghosts,
 and I fled here.<NOD<END
 #0311
-<KEY<MSGAre you a friend of hers?<NOD
+<KEY<MSG<TURAre you a friend of hers?<NOD
 If you care about her, I'd
 advise you to do as the doctor
 says.<NOD<END
 #0312
-<KEY<MSGGood job.<NOD
+<KEY<MSG<TURGood job.
 You didn't see any ghosts,
 did you?<NOD<END
 #0313
-<KEY<MSGOh, did you come to check
+<KEY<MSG<TUROh, did you come to check
 up on that girl?<NOD<CLRShe went off towards the
 "Boulder Chamber".<NOD<END
 
 #0320
 <FLJ0702:0322
 <FLJ0701:0321<FL+0701
-<KEY<MSG<FAC0019Oh, hey!<NOD<CLRHaven't seen YOU in
+<KEY<MSG<TUR<FAC0019Oh, hey!<NOD<CLRHaven't seen YOU in
 a while.<NOD
-You're looking good!<NOD<CLRThat witch tossed you
-down here too, eh?<NOD
-Same as me!<NOD<CLR<FAC0020So you weren't able to
-beat them after all...<NOD
-I'd actually had my hopes
-for you, but...<NOD<CLRAnd me, I tried.
-Oh, I tried.<NOD
-And just look where it
-got me.<NOD<CLR.....<NOD<CLRAnd all for nothing.<NOD
-In the end, I couldn't
-save any of those
-children.<NOD
-The shape I'm in now,
-I won't be leaving
-anytime soon...<NOD<END
+You're looking good!<NOD<END
 #0321
-<KEY<MSG<FAC0020I survived, yeah, but
+<KEY<MSG<TUR<FAC0020I survived, yeah, but
 now what?<NOD<CLRGuess I'm just going
 to sit here and rot...<NOD<END
 #0322

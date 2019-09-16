@@ -94,24 +94,22 @@ It's severely damaged.<NOD<END
 #0257
 #0258
 #0300
-<KEY<MSG<FAC0019Weird place, eh?<NOD
+<KEY<MSG<TUR<FAC0019Weird place, eh?
 I wonder if this was
 some sort of base.<NOD<END
 #0301
-<KEY<FLJ0823:0302<MSG<FAC0025This shutter's only
+<KEY<FLJ0823:0302<MSG<TUR<FAC0025This shutter's only
 made it halfway open.<NOD<CLRLooks like it's caught
 on something...<NOD<END
 #0302
-<KEY<MSG<FAC0019Just shutter after
-shutter.<NOD
-All this security makes
+<KEY<MSG<TUR<FAC0019Just shutter after
+shutter.<NOD<CLRAll this security makes
 me wonder just what's down
-here.<NOD
-Don't you think?<NOD<END
+here.<NOD<END
 #0304
 <PRI<MSGI...<NOD<END
 #0305
-<PRI<MSGKnocked out?<NOD<END
+<PRI<MSG<TURKnocked out?<NOD<END
 #0306
 <PRI<MSG<TURThere is no reply...<NOD<ITJ0030:0307<END
 #0307

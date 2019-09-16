@@ -38,16 +38,8 @@
 #0104
 <FLJ0327:0112
 <FLJ0360:0111
-<KEY<MSG<FAC0009I'm Jack,<NOD
-the number-two around here.<NOD<CLRThis door leads to the
-Mimiga graveyard, where the
-hero Arthur lies.<NOD<CLROh, what am I doing,
-you ask?<NOD<CLRWell, mushrooms have
-been springing up in the
-graveyard,<NOD
-so I'm guarding the door
-to make sure they don't
-get out.<NOD<END
+<KEY<MSG<TUR<FAC0009I'm Jack,
+the number-two around here.<NOD<END
 
 #0105
 <KEY<FLJ0360:0106<SOU0011<ANP0105:0000:0002<EVE0106
