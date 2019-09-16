@@ -45,8 +45,7 @@ good time.<NOD<GIT1015<IT+0015<CLR
 need another one.<NOD<END
 #0232
 <KEY<MSG<TUR<FAC0013Even a witch like me
-grows old and frail...<NOD
-All I can do now is
+grows old and frail...<NOD<CLRAll I can do now is
 place my faith in you...<NOD<END
 
 #0300
