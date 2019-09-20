@@ -132,14 +132,13 @@ wasn't just an old legend!<NOD<CLRHeh-heh-heh...<NOD<CLRBloom, little flowers...
 Truth be told, I'm getting
 a bit sick of farming.<NOD<END
 #0260
-<PRI
+<PRI<SAT
 <FLJ1023:0263
 <FLJ1022:0262
 <FLJ1035:0261
 <FL+1035
-<MSGOh, hey, it's you.<NOD<CLRI caught something weird
+<MSGI caught something weird
 just now.<NOD
-You can have it, if you want.<NOD
 It's in the bucket there.<NOD<END
 #0261
 <PRI<MSGIt's in the bucket there.<NOD<END
@@ -156,7 +155,7 @@ up with something around here...<NOD<CLRMan, I'm hungry...<NOD<END
 <FL+1022
 <EVE0268
 #0267
-<PRI<MSGNothing in here anymore...<NOD<END
+<PRI<MSG<TURNothing in here anymore...<NOD<END
 #0268
 <EVE0075
 #0299
