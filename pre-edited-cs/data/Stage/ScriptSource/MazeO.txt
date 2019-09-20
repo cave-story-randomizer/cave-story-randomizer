@@ -36,6 +36,8 @@ Here, let me refill your health.<NOD<CLO<LI+1000<SOU0020
 <ITJ0016:0302
 <FLJ0700:0301<FL+0700<WAI0050<EVE0305
 #0301
+<FLJ0704:0304
+<FLJ0702:0303
 <KEY<MSG<TURThe clinic isn't too far.
 Go look for some medicine that
 looks usable.<NOD<END
@@ -47,8 +49,7 @@ looks usable.<NOD<END
 Just let me handle the rest.<NOD<END
 #0304
 <KEY<MSG<TURLooks like the medicine's
-working.<NOD
-She'll be back in action in
+working.<NOD<CLRShe'll be back in action in
 no time.<NOD
 All thanks to you, of course.<NOD<END
 #0305
@@ -60,12 +61,10 @@ All thanks to you, of course.<NOD<END
 <FLJ0701:0311
 <KEY<MSG<TURI'm a nurse.<NOD
 I used to work in the old
-clinic nearby,<NOD
-but it was seized by ghosts,
+clinic nearby,<NOD<CLRbut it was seized by ghosts,
 and I fled here.<NOD<END
 #0311
-<KEY<MSG<TURAre you a friend of hers?<NOD
-If you care about her, I'd
+<KEY<MSG<TURAre you a friend of hers?<NOD<CLRIf you care about her, I'd
 advise you to do as the doctor
 says.<NOD<END
 #0312
