@@ -294,8 +294,8 @@ Weapons (AM+/AM-/AMJ/GIT/TAM)    Profile.dat bytes 0x038-098 (every 4 bytes: wea
 
 
 
-Items (GIT/IT+/IT-/ITJ)    Profile.dat bytes 0x0D8-14C (every 4 bytes)
-0000  [nothing?]
+Items (GIT/IT+/IT-/ITJ)    Profile.dat bytes 0x0D8-14C (every 4 bytes) [Add 1000 to GIT?]
+0000  [Blank - Clears box in GIT]
 0001 Arthur's Key
 0002 Map System
 0003 Santa's Key
