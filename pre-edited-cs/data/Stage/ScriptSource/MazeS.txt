@@ -99,19 +99,18 @@ TO ME?!<NOD
 
 
 #0500
-<KEY
+<KEY<SAT
 <FLJ0762:0502
 <FLJ0761:0501
 <MSGIt's a massive, heavy rock.<NOD
 From behind it, you can feel
-a wind blowing.<NOD
-It looks like it would take
+a wind blowing.<NOD<CLRIt looks like it would take
 at least two people to move
 it, though.<NOD<END
 #0501
 <KEY<WAI0010
 <ANP0300:0000:0000
-<MSG<TUR<FAC0020Could you hold it
+<MSG<FAC0020Could you hold it
 more toward the end?<NOD<CLO
 <ANP0300:0020:0000<END
 #0502

@@ -29,7 +29,7 @@
 <PRI
 <FLJ1023:0137
 <ITJ0025:0136
-<MSGIt says "No Entry".<NOD
+<MSG<TURIt says "No Entry".<NOD
 And it's locked.<NOD<END
 #0136
 <SOU0022<MSG<TUR<GIT1025Used the =Teleporter Room Key=.<NOD<CLO<IT-0025
@@ -55,49 +55,46 @@ here...<NOD<END
 <PRI<FLJ1020:0201
 <EVE0299
 #0201
-<PRI<MSGThe surface dwellers are planning
+<PRI<MSG<TURThe surface dwellers are planning
 an attack on us, so we're raising
-red flowers to prepare.<NOD
-If what the Doctor says is
+red flowers to prepare.<NOD<CLRIf what the Doctor says is
 true, these flowers better
 bloom fast, or else.<NOD<END
 #0210
 <PRI<FLJ1020:0211
 <EVE0299
 #0211
-<PRI<MSGWith the red flowers on our
+<PRI<MSG<TURWith the red flowers on our
 side, those killer robots'll be
-a piece of cake!<NOD
-Bloom away, my crimson dainties!<NOD<END
+a piece of cake!<NOD<CLRBloom away, my crimson dainties!<NOD<END
 #0220
 <PRI<FLJ1020:0221
 <EVE0299
 #0221
-<PRI<MSGLong live the Doctor!<NOD<END
+<PRI<MSG<TURLong live the Doctor!<NOD<END
 #0230
 <PRI<FLJ1020:0231
 <EVE0299
 #0231
-<PRI<MSGGet to work!<NOD<END
+<PRI<MSG<TURGet to work!<NOD<END
 #0240
 <PRI
 <FLJ1037:0242
 <FLJ1020:0241
 <EVE0299
 #0241
-<PRI<FL+1037<MSGOho.<NOD<CLRYou're new here, aren't ya.<NOD
-I bet you're still confused,
+<PRI<FL+1037<MSG<TUROho.<NOD<CLRYou're new here, aren't ya.<NOD
+<CLRI bet you're still confused,
 being picked up and dropped
 here all of a sudden.<NOD<CLRWell, just remember.<NOD
 Don't try anything funny.<NOD
-If you run away and get
+<CLRIf you run away and get
 caught, they'll throw you
-in prison.<NOD
-As long as you just tend to
+in prison.<NOD<CLRAs long as you just tend to
 the flowers, you'll be safe,
 and you'll get to eat.<NOD<END
 #0242
-<PRI<MSGHow's the work goin'?<NOD<CLRWith any luck, we'll be
+<PRI<MSG<TURHow's the work goin'?<NOD<CLRWith any luck, we'll be
 back to our long, relaxing
 days in no time.<NOD<CLR...I mean, we will, won't we?<NOD<END
 #0250
@@ -105,29 +102,29 @@ days in no time.<NOD<CLR...I mean, we will, won't we?<NOD<END
 <ITJ0029:0254
 <FLJ1029:0253
 <FLJ1020:0252
-<PRI<MSGMan, these sprinklers just...<NOD<CLRWhoops.
+<PRI<MSG<TURMan, these sprinklers just...<NOD<CLRWhoops.
 Not supposed to talk to humans.<NOD<END
 #0251
-<PRI<MSGThese sprinklers are handy, but
+<PRI<MSG<TURThese sprinklers are handy, but
 they sure break all the time.<NOD<END
 #0252
-<PRI<FL+1029<MSGIt busted again!<NOD<CLR.....<NOD<CLRHey, you.
+<PRI<FL+1029<MSG<TURIt busted again!<NOD<CLR.....<NOD<CLRHey, you.
 You're the new guy, right?<NOD
-Go take that busted sprinkler
+<CLRGo take that busted sprinkler
 in and exchange it for a new
 one.<NOD<END
 #0253
-<PRI<MSGHurry it up! The flower buds
+<PRI<MSG<TURHurry it up! The flower buds
 are getting parched.<NOD
-Go take that busted sprinkler
+<CLRGo take that busted sprinkler
 in and exchange it for a new
 one.<NOD<END
 #0254
-<PRI<MSGIt's the red flowers that
+<PRI<MSG<TURIt's the red flowers that
 make us powerful warriors!<NOD
-We Mimigas had this ferocity
+<CLRWe Mimigas had this ferocity
 in us all along.<NOD
-So the time we fought the robots
+<CLRSo the time we fought the robots
 wasn't just an old legend!<NOD<CLRHeh-heh-heh...<NOD<CLRBloom, little flowers...<NOD
 Truth be told, I'm getting
 a bit sick of farming.<NOD<END
@@ -165,7 +162,7 @@ up with something around here...<NOD<CLRMan, I'm hungry...<NOD<END
 #0300
 #0301
 #0310
-<PRI
+<PRI<SAT
 <FLJ1045:0313
 <FLJ1041:0311
 <FLJ1044:0312
@@ -177,26 +174,25 @@ happened...<NOD<END
 #0311
 <PRI<MSGFound this one lying in the
 spring.<NOD
-Says she doesn't even remember
+<CLRSays she doesn't even remember
 who she is...<NOD<CLRJust a piece of junk, I guess.<NOD<FL+1044<EVE0312
 #0312
 <PRI<MSGNow that you mention it...<NOD
 There's a certain kind of
-mushroom, I'm told,<NOD
-that brings back memories
+mushroom, I'm told,<NOD<CLRthat brings back memories
 when you eat it...<NOD
 Wonder if it'd work on her?<NOD<END
 #0313
 <PRI<MSGWhat's that?
 Her memories are back?<NOD
-Pfft. Liked it better the
+<CLRPfft. Liked it better the
 old way.<NOD<END
 #0320
-<PRI
+<PRI<SAT
 <FLJ1046:0325
 <FLJ1045:0324
 <FLJ1020:0321
-<FL+1041<MSG<TUR<FAC0025Who... are you...?<NOD<ITJ0034:0322<END
+<FL+1041<MSG<FAC0025Who... are you...?<NOD<ITJ0034:0322<END
 #0321
 <PRI<MSG<FAC0025Oh...<NOD
 You're so cute...<NOD<CLRDon't go too far.<NOD
@@ -217,42 +213,34 @@ Jammed it into Curly's mouth.<NOD<CLR<CLO<WAI0050<EQ-0064<WAI0050
 switch?<YNJ0000<CLO
 <ANP0350:0010:0000<END
 #0360
-<PRI<MSG<FAC0028I'm back!<NOD<CLRNo use in hiding
-anymore, you know?<NOD
-And anyway, the rocket
+<PRI<MSG<TUR<FAC0028I'm back!<NOD<CLRNo use in hiding
+anymore, you know?<NOD<CLRAnd anyway, the rocket
 couldn't be finished
-without me here!<NOD<CLRBy the way...<NOD<CLRIf you defeat the Doctor,<NOD
-do you think I'll be
+without me here!<NOD<CLRBy the way...<NOD<CLRIf you defeat the Doctor,<NOD<CLRdo you think I'll be
 able to become a human
 again...?<NOD<END
 #0370
-<PRI<FLJ1034:0380<MSG<FAC0022<FL+1034Did you have a good
+<PRI<SAT<FLJ1034:0380<MSG<FAC0022<FL+1034Did you have a good
 rest?<NOD<CLRThe rocket's all done.<NOD<CLRYou'll be able to take
 down the Doctor, right?<NOD
-I believe in you.<NOD<EVE0380
+I believe in you.<NOD<END
 #0380
 <PRI<MSG<FAC0022Directly above us is a
-path to the throne room.<NOD
-You should be able to
+path to the throne room.<NOD<CLRYou should be able to
 get there using the
-rocket.<NOD<CLRThe Mimigas are gone
-from the plantation.<NOD<CLR...In other words,
-he may already be using
-the red flowers.<NOD<CLRGo on.<NOD<CLRRide the rocket up
-to the Doctor's throne
-room. Hurry!<NOD<END
+rocket.<NOD<END
 #0400
-<PRI<FLJ1102:0401<MSGIt's spewing out water
+<PRI<FLJ1102:0401<MSG<TURIt's spewing out water
 at a frightening rate.<NOD<END
 #0401
-<PRI<MSGHey! We need that here!<NOD<END
+<PRI<MSG<TURHey! We need that here!<NOD<END
 #0410
-<PRI<FLJ1102:0411<MSGIt's spewing out water
+<PRI<FLJ1102:0411<MSG<TURIt's spewing out water
 at a frightening rate.<NOD<END
 #0411
-<PRI<MSGHey! We need that here!<NOD<END
+<PRI<MSG<TURHey! We need that here!<NOD<END
 #0415
-<PRI<FLJ2407:0001<FLJ1020:0416<MSGHey!
+<PRI<FLJ2407:0001<FLJ1020:0416<MSG<TURHey!
 Don't touch that, human!<NOD<END
 #0416
 <PRI<FLJ2407:0001<FL+2407<SOU0022<CNP0415:0021:0000<EVE0417
@@ -262,10 +250,9 @@ Don't touch that, human!<NOD<END
 <PRI<FLJ1040:0451<FL+1040<MSG<TURLong time no arf!<NOD<CLR<ITJ0015:0452
 <GIT1015<IT+0015Got a =Life Pot=!<WAI0025<NOD<GIT0000<EVE0452
 #0451
-<PRI<MSGSo you're going to fight
+<PRI<MSG<TURSo you're going to fight
 the Doctor? Good luck!
-My tail wags only for you!<NOD
-Oh, yeah, and tell Curly I
+My tail wags only for you!<NOD<CLROh, yeah, and tell Curly I
 said hi!<NOD<END
 #0452
 <EVE0014
