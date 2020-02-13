@@ -324,7 +324,11 @@ local function _itemData()
     missileA = missiles(), -- Grasstown
     missileB = missiles(), -- Grasstown Hut
     missileC = missiles(), -- Egg Corridor?
-    missileD = missiles(), -- Egg Observation Room?
+    missileD = {           -- Egg Observation Room? (arbitrarily making this a second Super Missile chest)
+      name = "Super Missile Launcher",
+      script = "<EVE0033",
+      attributes = {"weapon", "missileLauncher", "nonProgressive"}
+    }, 
     missileHell = {
       name = "Missile Expansion",
       script = "<EVE0035",
