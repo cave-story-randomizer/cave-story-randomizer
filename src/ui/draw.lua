@@ -29,14 +29,14 @@ layout.go:onPress(function()
       Randomizer.customseed = settings.customseed.value
     end
 
-    if settings.bad.value then
-      Randomizer.game = "gameBadEnd"
-    elseif settings.norm.value then
+    --if settings.bad.value then
+    --  Randomizer.game = "gameBadEnd"
+    if settings.norm.value then
       Randomizer.game = "gameNormalEnd"
     elseif settings.boss.value then
       Randomizer.game = "gameAllBosses"
     else
-      Randomizer.game = "game"
+      Randomizer.game = "gameBestEnd"
     end
 
     Randomizer.puppy = settings.puppy.value
