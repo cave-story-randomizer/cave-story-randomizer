@@ -33,6 +33,7 @@ function C:new()
   self.itemDeck = Items()
   self.worldGraph = WorldGraph(self.itemDeck)
   self.customseed = nil
+  self.puppy = false
 end
 
 function C:setPath(path)
@@ -93,14 +94,12 @@ function C:_mountDirectory(path)
 end
 
 function C:_seedRngesus()
-  local seed = self.customseed or os.time()
-  seed = tonumber(seed) or tonumber(seed, 36) -- convert alphanumeric strings to numbers
-  local seedstring = self.customseed or tostring(seed)
-  if seed == nil then
-    seed = os.time()
-    seedstring = ('%d ("%s" was invalid)'):format(seed, self.customseed)
-  end
-  love.math.setRandomSeed(seed)
+  local seedstring = self.customseed or tostring(os.time())
+  local seed = ld.encode('string', 'hex', ld.hash('sha256', seedstring))
+  local s1 = tonumber(seed:sub(-8,  -1), 16) -- first 32 bits (from right)
+  local s2 = tonumber(seed:sub(-16, -9), 16) -- next 32 bits
+
+  love.math.setRandomSeed(s1, s2)
   
   logNotice(('Offering seed "%s" to RNGesus' ):format(seedstring))
   return seedstring
@@ -130,13 +129,22 @@ function C:_writePlaintext(tscFiles)
 end
 
 function C:_shuffleItems(tscFiles)
-  -- first fill puppies
-  self:_fastFillItems(self.itemDeck:getItemsByAttribute("puppy"), _.shuffle(self.worldGraph:getPuppySpots()))
-  -- then fill one of the first cave spots with a weapon that can break blocks
-  _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
-
   local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems(true)))
   local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems(true)))
+  local puppies = _.compact(_.shuffle(self.itemDeck:getItemsByAttribute("puppy")))
+
+  if not self.puppy then
+    -- first fill puppies
+    self:_fastFillItems(puppies, _.shuffle(self.worldGraph:getPuppySpots()))
+  else
+    -- for puppysanity, shuffle puppies in with the mandatory items
+    mandatory = _.shuffle(_.append(mandatory, puppies))
+  end
+
+    -- then fill one of the first cave spots with a weapon that can break blocks
+  _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
+
+  
   
   -- next fill hell chests, which cannot have mandatory items
   self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
@@ -214,9 +222,9 @@ function C:_getWritePaths()
     self._writePathStage = (self._isCaveStoryPlus)
       and (self._writePath .. '/base/Stage')
       or  (self._writePath .. '/Stage')
-    -- Create /data(/base)/Stage if it doesn't already exist.
-    mkdir(self._writePathStage)
   end
+  -- Create /data(/base)/Stage if it doesn't already exist.
+  mkdir(self._writePathStage)
   return self._writePath, self._writePathStage
 end
 

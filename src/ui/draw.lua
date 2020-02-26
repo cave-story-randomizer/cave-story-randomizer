@@ -28,6 +28,7 @@ layout.go:onPress(function()
     if settings.seedselect.value and settings.customseed.value ~= "" then
       Randomizer.customseed = settings.customseed.value
     end
+    Randomizer.puppy = settings.puppy.value
     C:setStatus(Randomizer:randomize())
     Randomizer:new()
   else

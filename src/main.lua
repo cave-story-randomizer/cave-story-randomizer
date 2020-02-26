@@ -7,6 +7,7 @@ _       = require 'lib.moses'
 
 lf = love.filesystem
 lg = love.graphics
+ld = love.data
 
 U = require 'util'
 
@@ -46,10 +47,23 @@ local function recursiveWrite(path, name)
   end
 end
 
+local function recursivelyDelete( item )
+  if lf.getInfo( item , "directory" ) then
+      for _, child in ipairs( lf.getDirectoryItems( item )) do
+          recursivelyDelete( item .. '/' .. child )
+          lf.remove( item .. '/' .. child )
+      end
+  elseif lf.getInfo( item ) then
+      lf.remove( item )
+  end
+  lf.remove( item )
+end
+
 function love.directorydropped(path)
   local success = Randomizer:_mountDirectory(path)
   --Randomizer:_unmountDirectory(path)
   if success then
+    recursivelyDelete('csdata') -- completely clear the folder, in case of user error :)
     recursiveWrite('mounted-data', 'csdata')
     Settings.settings.csdirectory = 'csdata'
     Settings:update()
