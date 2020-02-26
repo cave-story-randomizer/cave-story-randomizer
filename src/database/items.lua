@@ -43,6 +43,7 @@ local function gameMode(n, eve)
     placed = true,
     script = eve
   }
+end
 
 local function _itemData()
   local data = {
