@@ -36,13 +36,13 @@ if you own a =Blade=!<NOD<END
 
 #0210
 <PRI<FLJ1370:0211<FL+1371
-<MSGNow where did that man run
+<MSG<TURNow where did that man run
 off to...<NOD<CLRYou haven't seen my husband,
 have you?<NOD<END
 #0211
-<PRI<MSGThank you for your help.<NOD<END
+<PRI<MSG<TURThank you for your help.<NOD<END
 #0220
-<PRI<MSGWho're you, mister?<NOD<END
+<PRI<MSG<TURWho're you, mister?<NOD<END
 
 #0500
 <KEY<CNP0250:<FAI0000<END

@@ -19,8 +19,10 @@
 
 #0200
 <SAT<KEY<MYD0000<ANP0400:0030:0000
+<MSG<FAC0014Catch you later!<NOD<CLR
+<FAC0013Wait!!<NOD<CLO
 <ANP0400:0030:0002<WAI0030
-<ANP0400:0010:0002<FL+0595<FL+0278<CMU0019<END
+<ANP0400:0010:0002<FL+0595<FL+0278<WAI0100<CMU0019<END
 
 #0220
 <SAT<KEY
@@ -33,22 +35,17 @@
 <EVE0065
 
 #0230
-<KEY<FLJ0830:0231<MSG<FAC0013Please!<NOD
-You must stop them!<NOD<CLRThey plan to enrage the
-Mimigas and release them
-onto the surface!<NOD<END
+<KEY<FLJ0830:0231<MSG<TUR<FAC0013Please!
+You must stop them!<NOD<END
 #0231
 <KEY<ITJ0015:0232
-<MSG<FAC0013Ah, you come at a
+<MSG<TUR<FAC0013Ah, you come at a
 good time.<NOD<GIT1015<IT+0015<CLR
 <FAC0000Received a =Life Pot=!<WAI0030<NOD<GIT0000<CLR<FAC0013Come back if you ever
-need another one.<NOD
-It's the least this
-old woman can do...<NOD<END
+need another one.<NOD<END
 #0232
-<KEY<MSG<FAC0013Even a witch like me
-grows old and frail...<NOD
-All I can do now is
+<KEY<MSG<TUR<FAC0013Even a witch like me
+grows old and frail...<NOD<CLRAll I can do now is
 place my faith in you...<NOD<END
 
 #0300
