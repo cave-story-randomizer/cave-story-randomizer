@@ -28,6 +28,17 @@ layout.go:onPress(function()
     if settings.seedselect.value and settings.customseed.value ~= "" then
       Randomizer.customseed = settings.customseed.value
     end
+
+    if settings.bad.value then
+      Randomizer.game = "gameBadEnd"
+    else if settings.norm.value then
+      Randomizer.game = "gameNormalEnd"
+    else if settings.boss.value then
+      Randomizer.game = "gameAllBosses"
+    else
+      Randomizer.game = "gameBestEnd"
+    end
+
     Randomizer.puppy = settings.puppy.value
     C:setStatus(Randomizer:randomize())
     Randomizer:new()

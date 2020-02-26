@@ -34,6 +34,7 @@ function C:new()
   self.worldGraph = WorldGraph(self.itemDeck)
   self.customseed = nil
   self.puppy = false
+  self.game = ""
 end
 
 function C:setPath(path)
@@ -128,7 +129,14 @@ function C:_writePlaintext(tscFiles)
   end
 end
 
+function C:getGameMode()
+  return {self.itemDeck:getByKey(self.game)}
+end
+
 function C:_shuffleItems(tscFiles)
+  -- place the game mode scripts in Start Point
+  self:_fastFillItems(self:getGameMode(), self.worldGraph:getGameModeSpot())
+
   local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems(true)))
   local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems(true)))
   local puppies = _.compact(_.shuffle(self.itemDeck:getItemsByAttribute("puppy")))
@@ -143,8 +151,6 @@ function C:_shuffleItems(tscFiles)
 
     -- then fill one of the first cave spots with a weapon that can break blocks
   _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
-
-  
   
   -- next fill hell chests, which cannot have mandatory items
   self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
