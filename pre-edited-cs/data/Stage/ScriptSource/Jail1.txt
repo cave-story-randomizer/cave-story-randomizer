@@ -21,23 +21,12 @@
 
 
 #0200
-<KEY
+<KEY<SAT
 <FLJ1081:0202
 <FLJ1080:0201
 <MSG*Chomp chomp*...<NOD<CLR!<NOD<CLO
 <MYB0000<ANP0200:0002:0004<WAI0030<MYD0000<FL+1080<FL-1025<FL+1026
-<MSGOh, look who's awake.<NOD<CLRThought you might be dead.
-You didn't flinch no matter
-how many times Sue smacked you.<NOD<CLRThis is the jail.<NOD
-Those who try to defy the Doctor
-get thrown in here.<NOD
-To be subjects for his
-experiments...<NOD<CLR...That's what Sue said.<NOD<CLRYou a friend of hers?<NOD
-You're a bit too late.<NOD
-She used to be in here with us.<NOD<CLRShe was caring for you the
-whole time.<NOD
-But just a little while ago,
-they came and took her away.<NOD<EVE0209
+<MSGOh, look who's awake.<NOD<CLRThought you might be dead.<NOD<EVE0209
 
 #0201
 <MSG<FL+1081Oh yeah.<NOD<CLRJust before they hauled her off,

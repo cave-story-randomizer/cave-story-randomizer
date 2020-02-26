@@ -28,13 +28,11 @@ So we've always gotta have lots
 of new ones ready.<NOD<END
 
 #0202
-<KEY<MSG<TUR<FL+1121<NOD<CLR<GIT1028<IT-0028Handed over the =Broken
+<KEY<MSG<TUR<FL+1121<GIT1028<IT-0028Handed over the =Broken
 Sprinkler=.<NOD<DNP0280<EVE0204
 
 #0203
-<KEY<MSGI hear they're almost done
-growing the last seed!<NOD
-Looks like we had just enough
+<KEY<MSG<TURLooks like we had just enough
 sprinklers...<NOD<END
 
 #0204

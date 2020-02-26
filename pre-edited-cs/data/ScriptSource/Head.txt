@@ -95,10 +95,10 @@ Got the last =Puppy=!<WAI0025<NOD<END
 <GIT0005Got the =Missile Launcher=!<WAI0025<NOD<END
 #0031
 <PRI<AM+0005:0005<MSG<TUR
-<GIT0006Max missiles increased by 5!<NOD<END
+<GIT0006Max missiles increased by 5!<WAI0025<NOD<END
 #0032
 <PRI<AM+0010:0005<MSG<TUR
-<GIT0011Max missiles increased by 5!<NOD<END
+<GIT0011Max missiles increased by 5!<WAI0025<NOD<END
 #0033
 <AMJ0005:0034<EVE0030
 #0034

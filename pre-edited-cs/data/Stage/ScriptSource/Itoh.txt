@@ -19,7 +19,8 @@
 
 #0200
 <KEY<FL+1000<FL+1025<FL+1038<MYD0002<WAI0020
-<ANP0400:0010:0000
+<ANP0400:0010:0000<MSG<TUR
+Uwah!<NOD<CLO
 <ANP0400:0020:0000<WAI0050<END
 
 #0400
@@ -29,37 +30,15 @@
 <FLJ1002:0402
 <FLJ1001:0401<FL+1001<FL+1038
 <ANP0400:0010:0000
-<MSGEyaahh!<MYB0002<NOD<CLRDon't kill me!<NOD
-I'm a human! I just got
-magically turned into
-a Mimiga! I'm human!<NOD<CLRHuh?<NOD<CLR.....<NOD<CLR<ANP0400:0000:0000<FAC0028What's this?
-You're not one of those
-killer robots?<NOD
-Well, you scared the
-pants off me, jumping
-out like that!<NOD<CLRYou wouldn't be that
-savior, would you?<NOD<END
+<MSG<TUREyaahh!<MYB0002<NOD<ANP0400:0000:0000<END
 
 
 #0401
 <KEY<FL+1002
-<MSG<FAC0028I'm Itoh, one of the
-humans who came to this
-island to do research.<NOD
-That witch Misery turned
-me into this...<NOD
-I managed to get away,
-but...just look at me.<NOD<CLRAnd now I'm stuck here!<NOD<CLRYou climbed up from the
-outside, didn't you.<NOD
-I'm an engineer of
-considerable talent,<NOD
-but I'm deathly afraid
-of heights...<NOD<CLROh, woe, woe is me...<NOD<CLRI never should've come
-to this island in the
-first place.<NOD<END
+<MSG<TUR<FAC0028Oh, woe, woe is me...<NOD<END
 
 #0402
-<KEY<MSG<FAC0028No, no, surely you have
+<KEY<MSG<TUR<FAC0028No, no, surely you have
 no use for such a pathetic,
 stranded little man.<NOD<END
 
@@ -67,7 +46,7 @@ stranded little man.<NOD<END
 #0403
 <KEY<MSG<FL+1003<EVE0405
 #0404
-<KEY<MSG<FAC0028Give Ms. Sakamoto my
+<KEY<MSG<TUR<FAC0028Give Ms. Sakamoto my
 regards.<NOD<END
 #0405
 <EVE0077
