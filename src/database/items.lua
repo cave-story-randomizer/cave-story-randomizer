@@ -36,6 +36,14 @@ local function event(n)
   }
 end
 
+local function gameMode(n, eve)
+  return {
+    name = "Game Mode: " .. n,
+    attributes = {"gamemode"},
+    placed = true,
+    script = eve
+  }
+
 local function _itemData()
   local data = {
     -------------
@@ -345,7 +353,15 @@ local function _itemData()
     eventToroko = event("Defeated Toroko+"),
     eventCore = event("Defeated the Core"),
     eventCurly = event("Saved Curly"),
-    eventRocket = event("Built Rocket")
+    eventRocket = event("Built Rocket"),
+
+    ----------------
+    -- GAME MODES --
+    ----------------
+    gameBadEnd = gameMode("Bad Ending", "<FL+6003<EVE0091"),
+    gameNormalEnd = gameMode("Normal Ending", "<FL+6000<EVE0091"),
+    gameBestEnd = gameMode("Best Ending", "<FL+6001<EVE0091"),
+    gameAllBosses = gameMode("All Bosses", "<FL+6002<EVE0091")
   }
 
   local array = {}
