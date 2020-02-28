@@ -23,26 +23,15 @@ function C:loadSettings(puppy, obj, seed)
   settings.puppy.value = puppy
 
   if obj == "objBadEnd" or obj == 1 then
-    settings.bad.value = true
-    settings.norm.value = false
-    settings.boss.value = false
-    settings.best.value = false
+    settings.objective.index = 1
   elseif obj == "objNormalEnd" or obj == 2 then
-    settings.bad.value = false
-    settings.norm.value = true
-    settings.boss.value = false
-    settings.best.value = false
+    settings.objective.index = 2
   elseif obj == "objAllBosses" or obj == 3 then
-    settings.bad.value = false
-    settings.norm.value = false
-    settings.boss.value = true
-    settings.best.value = false
+    settings.objective.index = 4
   else
-    settings.bad.value = false
-    settings.norm.value = false
-    settings.boss.value = false
-    settings.best.value = true
+    settings.objective.index = 3
   end
+  settings.objective.value = "override"
 
   if seed ~= nil then
     settings.customseed.value = seed or ""
@@ -65,15 +54,7 @@ layout.go:onPress(function()
       Randomizer.customseed = settings.customseed.value:gsub("^%s*(.-)%s*$", "%1") -- trim any leading/trailing whitespace
     end
 
-    if settings.bad.value then
-      Randomizer.obj = "objBadEnd"
-    elseif settings.norm.value then
-      Randomizer.obj = "objNormalEnd"
-    elseif settings.boss.value then
-      Randomizer.obj = "objAllBosses"
-    else
-      Randomizer.obj = "objBestEnd"
-    end
+    Randomizer.obj = settings.objective.value
 
     Randomizer.puppy = settings.puppy.value
     C:setStatus(Randomizer:randomize())
