@@ -446,6 +446,10 @@ function worldGraph:getObjectiveSpot()
   return {self.regions.firstCave.locations.objective}
 end
 
+function worldGraph:getMALCO()
+  return {self.regions.grasstownEast.locations.malco}
+end
+
 function worldGraph:getPuppySpots()
   return {
     self.regions.upperSandZone.locations.curly,

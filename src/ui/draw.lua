@@ -29,9 +29,9 @@ layout.go:onPress(function()
       Randomizer.customseed = settings.customseed.value
     end
 
-    --if settings.bad.value then
-    --  Randomizer.obj = "objBadEnd"
-    if settings.norm.value then
+    if settings.bad.value then
+      Randomizer.obj = "objBadEnd"
+    elseif settings.norm.value then
       Randomizer.obj = "objNormalEnd"
     elseif settings.boss.value then
       Randomizer.obj = "objAllBosses"

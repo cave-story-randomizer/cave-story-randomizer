@@ -13,7 +13,7 @@ return { style = 'dialog',
     },
     {
       { type = 'label', text = 'Objective' },
-      -- { type = 'radio', group = 'objective', text = 'Bad ending', id = 'bad' },
+      { type = 'radio', group = 'objective', text = 'Bad ending', id = 'bad' },
       { type = 'radio', group = 'objective', text = 'Normal ending', id = 'norm'},
       { type = 'radio', group = 'objective', text = 'Best ending', id = 'best', value = true },
       { type = 'radio', group = 'objective', text = 'All bosses', id = 'boss' },

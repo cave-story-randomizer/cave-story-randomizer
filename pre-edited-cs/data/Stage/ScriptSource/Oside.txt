@@ -34,10 +34,16 @@ An expert hacker could open it.<NOD<END
 <PRI<MSG<TURA sign?<NOD<END
 
 #0400
+<FLJ6003:0401
 <KEY<MSG<TUR<FAC0010If you're going to
 look for the core,
 you'd best hurry.<NOD<END
 #0401
+<FLJ6108:0402
+<KEY<MSG<TUR<FAC0010With the core still
+around, there's no 
+reason to fly anywhere.<NOD<END
+#0402
 <KEY<CLO<FON0410:0016<WAI0050
 <CNP0420:0150:0000<HMC
 <ANP0400:0003:0000<WAI0032
