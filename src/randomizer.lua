@@ -136,29 +136,37 @@ end
 function C:_shuffleItems(tscFiles)
   -- place the objective scripts in Start Point
   self:_fastFillItems(self:getObjective(), self.worldGraph:getObjectiveSpot())
+  
+  -- first, fill one of the first cave spots with a weapon that can break blocks
+  _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
 
   local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems(true)))
   local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems(true)))
   local puppies = _.compact(_.shuffle(self.itemDeck:getItemsByAttribute("puppy")))
 
   if not self.puppy then
-    -- first fill puppies
+    -- then fill puppies, for normal gameplay
     self:_fastFillItems(puppies, _.shuffle(self.worldGraph:getPuppySpots()))
   else
     -- for puppysanity, shuffle puppies in with the mandatory items
     mandatory = _.shuffle(_.append(mandatory, puppies))
+    puppies = {}
   end
-
-    -- then fill one of the first cave spots with a weapon that can break blocks
-  _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
   
   -- next fill hell chests, which cannot have mandatory items
   self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
 
+  -- place mandatory items with assume fill
   self:_fillItems(mandatory, _.shuffle(_.reverse(self.worldGraph:getEmptyLocations())))
+
+  -- place optional items with a simple random fill
+  local opt = #optional
+  local loc = #self.worldGraph:getEmptyLocations()
+  if opt > loc then
+    logWarning(("Trying to fill more optional items than there are locations! Items: %d Locations: %d"):format(opt, loc))
+  end
   self:_fastFillItems(optional, _.shuffle(self.worldGraph:getEmptyLocations()))
 
-  --assert(#self.worldGraph:getEmptyLocations() == 0, self.worldGraph:emptyString() .. "\r\n" .. self.itemDeck:unplacedString())
   self.worldGraph:writeItems(tscFiles)
   self.worldGraph:logLocations()
 end
