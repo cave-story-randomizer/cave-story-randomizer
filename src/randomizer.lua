@@ -34,7 +34,7 @@ function C:new()
   self.worldGraph = WorldGraph(self.itemDeck)
   self.customseed = nil
   self.puppy = false
-  self.game = ""
+  self.obj = ""
 end
 
 function C:setPath(path)
@@ -129,13 +129,13 @@ function C:_writePlaintext(tscFiles)
   end
 end
 
-function C:getGameMode()
-  return {self.itemDeck:getByKey(self.game)}
+function C:getObjective()
+  return {self.itemDeck:getByKey(self.obj)}
 end
 
 function C:_shuffleItems(tscFiles)
-  -- place the game mode scripts in Start Point
-  self:_fastFillItems(self:getGameMode(), self.worldGraph:getGameModeSpot())
+  -- place the objective scripts in Start Point
+  self:_fastFillItems(self:getObjective(), self.worldGraph:getObjectiveSpot())
 
   local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems(true)))
   local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems(true)))

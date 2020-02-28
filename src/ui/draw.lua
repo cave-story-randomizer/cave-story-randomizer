@@ -30,13 +30,13 @@ layout.go:onPress(function()
     end
 
     --if settings.bad.value then
-    --  Randomizer.game = "gameBadEnd"
+    --  Randomizer.obj = "objBadEnd"
     if settings.norm.value then
-      Randomizer.game = "gameNormalEnd"
+      Randomizer.obj = "objNormalEnd"
     elseif settings.boss.value then
-      Randomizer.game = "gameAllBosses"
+      Randomizer.obj = "objAllBosses"
     else
-      Randomizer.game = "gameBestEnd"
+      Randomizer.obj = "objBestEnd"
     end
 
     Randomizer.puppy = settings.puppy.value

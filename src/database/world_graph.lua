@@ -16,7 +16,7 @@ function firstCave:new(worldGraph)
     firstCapsule = Location("First Cave Life Capsule", "Cave", "0401", self),
     gunsmithChest = Location("Hermit Gunsmith Chest", "Pole", "0202", self),
     gunsmith = Location("Tetsuzou", "Pole", "0303", self),
-    gameMode = Location("Game Mode Setup Script", "Start", "0201", self)
+    objective = Location("Objective", "Start", "0201", self)
   }
 
   self.locations.gunsmith.requirements = function(self, items)
@@ -442,8 +442,8 @@ function worldGraph:getLocations()
   return locations
 end
 
-function worldGraph:getGameModeSpot()
-  return {self.regions.firstCave.locations.gameMode}
+function worldGraph:getObjectiveSpot()
+  return {self.regions.firstCave.locations.objective}
 end
 
 function worldGraph:getPuppySpots()
