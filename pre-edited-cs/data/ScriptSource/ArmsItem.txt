@@ -206,7 +206,7 @@ anything and everything...<WAI9999<END
 <KEY<MSG<TURPush the jump button again in
 midair to fly even higher.<NOD<CLR
 Do you want to equip it?
-<YNJ0000<EQ+0001<EQ-0064<FL-1020<FL+0742<EQ-0032<FL-0743<MSG<TUR
+<YNJ0000<EQ+0001<FL+0742<EQ-0032<FL-0743<MSG<TUR
 Booster equipped.<NOD<WAI0003<FRE<EVE5018
 #6019
 <MSG<TURWhen you take damage, the amount
@@ -229,14 +229,13 @@ You can't see any buttons.<WAI9999<END
 <KEY<MSG<TURPush the jump button in midair and
 you can move in any direction.<NOD<CLR
 Do you want to equip it?
-<YNJ0000<EQ+0032<EQ-0064<FL-1020<FL+0743<EQ-0001<FL-0742<MSG<TUR
+<YNJ0000<EQ+0032<FL+0743<EQ-0001<FL-0742<MSG<TUR
 Equipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
 #6024
 <FLJ1020:7024
-<KEY<MSG<TURCan't be worn with a Booster.
-It's a bit big...<NOD
+<KEY<MSG<TURIt's a bit big...<NOD
 Do you want to equip it?
-<YNJ0000<EQ+0064<EQ-0033<FL-0742<FL-0743<FL+1020<MSG<TUR
+<YNJ0000<EQ+0064<FL+1020<MSG<TUR
 Equipped the Mimiga Mask.<NOD<WAI0003<FRE<EVE5024
 #6025
 <MSG<TURA key fished out by a certain
