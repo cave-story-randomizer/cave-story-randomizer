@@ -54,6 +54,8 @@ layout.twitter.text = '(@shruuu and @duncathan_salt)'
 layout.footer.text = 'Original randomizer:\r\nshru.itch.io/cave-story-randomizer'
 
 layout.go:onPress(function()
+  Randomizer:new()
+  
   if Randomizer:ready() then
     if settings.seedselect.value and settings.customseed.value ~= "" then
       Randomizer.customseed = settings.customseed.value
@@ -71,7 +73,8 @@ layout.go:onPress(function()
 
     Randomizer.puppy = settings.puppy.value
     C:setStatus(Randomizer:randomize())
-    Randomizer:new()
+
+    layout.sharecode.text = "Copy Sharecode"
   else
     C:setStatus("No Cave Story folder found!\r\nDrag and drop your Cave Story folder here.")
   end
@@ -85,6 +88,13 @@ end)
 settings.closeButton:onPress(function()
   settings:hide()
   layout:show()
+end)
+
+layout.sharecode:onPress(function()
+  if Randomizer.sharecode ~= "" then
+    love.system.setClipboardText(Randomizer.sharecode)
+    layout.sharecode.text = "Copied!"
+  end
 end)
 
 settings.customseed:onChange(function()
