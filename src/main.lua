@@ -22,8 +22,9 @@ Settings = settings()
 local csdirectory
 
 function love.load()
-  Screen:setup()
   Settings:init()
+  Screen:setup()
+
   if Settings.settings.csdirectory ~= "" then
     Screen:setStatus("Cave Story folder found!")
     Randomizer:setPath(Settings.settings.csdirectory)

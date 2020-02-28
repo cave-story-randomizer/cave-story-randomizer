@@ -12,6 +12,30 @@ layout:setTheme(require 'lib.luigi.theme.dark')
 settings:setTheme(require 'lib.luigi.theme.dark')
 
 function C:setup()
+  settings.puppy.value = Settings.settings.puppy
+  local obj = Settings.settings.obj
+  if obj == "objBadEnd" then
+    settings.bad.value = true
+    settings.norm.value = false
+    settings.boss.value = false
+    settings.best.value = false
+  elseif obj == "objNormalEnd" then
+    settings.bad.value = false
+    settings.norm.value = true
+    settings.boss.value = false
+    settings.best.value = false
+  elseif obj == "objAllBosses" then
+    settings.bad.value = false
+    settings.norm.value = false
+    settings.boss.value = true
+    settings.best.value = false
+  else
+    settings.bad.value = false
+    settings.norm.value = false
+    settings.boss.value = false
+    settings.best.value = true
+  end
+
   background = lg.newImage('assets/background.png')
   self:draw()
   layout:show()

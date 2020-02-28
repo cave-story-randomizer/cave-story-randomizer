@@ -61,6 +61,9 @@ function C:randomize()
   self:_writePlaintext(tscFiles)
   self:_writeLog()
   self:_unmountDirectory(csdirectory)
+
+  self:_updateSettings()
+
   return self:_getStatusMessage(seed)
 end
 
@@ -252,6 +255,12 @@ end
 
 function C:_unmountDirectory(path)
   assert(lf.unmount(path))
+end
+
+function C:_updateSettings()
+  Settings.settings.puppy = self.puppy
+  Settings.settings.obj = self.obj
+  Settings:update()
 end
 
 function C:_getStatusMessage(seed)
