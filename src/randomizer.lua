@@ -305,24 +305,39 @@ function C:_updateSettings()
   Settings.settings.puppy = self.puppy
   Settings.settings.obj = self.obj
   Settings.settings.mychar = self.mychar
+  Settings.settings.spawn = self.worldGraph.spawn
   Settings:update()
 end
 
 function C:_updateSharecode(seed)
   local settings = 0 -- 0b00000000
-  -- 0bXXXXXPOO
+  -- 0bXXXSSPOO
   -- P: single bit used for puppysanity
   -- O: two bits used for objective
+  -- S: two bits used for spawn location
   -- X: unused
 
+  -- bitshift intervals
+  local obj = 0
+  local pup = 2
+  local spn = 3
+
   if self.obj == "objBadEnd" then
-    settings = bit.bor(settings, 1)
+    settings = bit.bor(settings, bit.blshift(1, obj))
   elseif self.obj == "objNormalEnd" then
-    settings = bit.bor(settings, 2)
+    settings = bit.bor(settings, bit.blshift(2, obj))
   elseif self.obj == "objAllBosses" then
-    settings = bit.bor(settings, 3)
+    settings = bit.bor(settings, bit.blshift(3, obj))
   end
-  if self.puppy then settings = bit.bor(settings, 4) end
+  if self.puppy then settings = bit.bor(settings, bit.blshift(1, pup)) end
+
+  if self.worldGraph:StartPoint() then
+    settings = bit.bor(settings, bit.blshift(0, spn))
+  elseif self.worldGraph:Arthur() then
+    settings = bit.bor(settings, bit.blshift(1, spn))
+  elseif self.worldGraph:Camp() then
+    settings = bit.bor(settings, bit.blshift(2, spn))
+  end
 
   if #seed < 20 then
     seed = seed .. (" "):rep(20-#seed)

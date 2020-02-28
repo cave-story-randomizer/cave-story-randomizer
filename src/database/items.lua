@@ -88,17 +88,17 @@ local function _itemData()
     machineGun = {
       name = "Machine Gun",
       script = "<EVE0008",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "flight", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "flight", "mandatory", "weaponStrong"}
     },
     blade = {
       name = "Blade",
       script = "<EVE0009",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "mandatory", "weaponStrong"}
     },
     nemesis = {
       name = "Nemesis",
       script = "<EVE0010",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "nonProgressive"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "nonProgressive", "weaponStrong"}
     },
 
     ---------------

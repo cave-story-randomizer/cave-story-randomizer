@@ -273,7 +273,7 @@ function labyrinthB:new(worldGraph)
     if self.world:StartPoint() or self.world:Arthur() then
       return self.world.regions.arthur:canAccess(items)
     elseif self.world:Camp() then
-      return self.world.regions.labyrinthB:canAccess(items) and _has("weaponBoss")
+      return self.world.regions.labyrinthW:canAccess(items) and _has(items, "weaponBoss")
     end
   end
 end
@@ -488,6 +488,10 @@ end
 
 function worldGraph:getMALCO()
   return {self.regions.grasstownEast.locations.malco}
+end
+
+function worldGraph:getDrGero()
+  return {self.regions.labyrinthW.locations.physician}
 end
 
 function worldGraph:getPuppySpots()

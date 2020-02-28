@@ -12,7 +12,7 @@ layout:setTheme(require 'lib.luigi.theme.dark')
 settings:setTheme(require 'lib.luigi.theme.dark')
 
 function C:setup()
-  self:loadSettings(Settings.settings.puppy, Settings.settings.obj, nil, Settings.settings.mychar)
+  self:loadSettings(Settings.settings.puppy, Settings.settings.obj, nil, Settings.settings.mychar, Settings.settings.spawn)
 
   background = lg.newImage('assets/background.png')
   self:draw()
@@ -56,11 +56,11 @@ function C:loadSettings(puppy, obj, seed, mychar, spawn)
   end
   settings.mychar.value = "override"
 
-  if spawn == "Start Point" then
+  if spawn == "Start Point" or spawn == 0 then
     settings.spawn.index = 1
-  elseif spawn == "Arthur's House" then
+  elseif spawn == "Arthur's House" or spawn == 1 then
     settings.spawn.index = 2
-  elseif spawn == "Camp" then
+  elseif spawn == "Camp" or spawn == 2 then
     settings.spawn.index = 3
   end
   settings.spawn.value = "override"
@@ -129,8 +129,9 @@ settings.importshare:onPress(function()
     settings.importshare.text = "Sharecode Imported"
     local pup = bit.band(sharesettings, 4) ~= 0
     local obj = bit.band(sharesettings, 3)
+    local spn = bit.brshift(bit.band(sharesettings, 24), 3)
     seed = seed:gsub("^%s*(.-)%s*$", "%1") -- trim any leading or trailing whitespace
-    Screen:loadSettings(pup, obj, seed)
+    Screen:loadSettings(pup, obj, seed, nil, spn)
   else
     settings.importshare.text = "Invalid Sharecode!"
   end
