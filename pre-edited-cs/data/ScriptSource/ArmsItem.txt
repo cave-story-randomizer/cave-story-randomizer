@@ -360,7 +360,7 @@ Will you check it?<YNJ8200<CLR
 #8003
 <FLJ6103:8103
 <KEY<MSG<TURBalfrog:
-    Undefeated<NOD<EVE8004
+    Undefeated<NOD<EVE8012
 #8004
 <FLJ6104:8104
 <KEY<MSG<TUROmega:
@@ -368,7 +368,7 @@ Will you check it?<YNJ8200<CLR
 #8005
 <FLJ6105:8105
 <KEY<MSG<TURToroko+:
-    Undefeated<NOD<EVE8006
+    Undefeated<NOD<EVE8013
 #8006
 <FLJ6106:8106
 <KEY<MSG<TURMonster X:
@@ -388,11 +388,23 @@ Will you check it?<YNJ8200<CLR
 #8010
 <FLJ6110:8110
 <KEY<MSG<TURThe Sisters:
-    Undefeated<NOD<EVE8011
+    Undefeated<NOD<EVE8014
 #8011
 <FLJ6111:8111
 <KEY<MSG<TURRed Demon:
     Undefeated<NOD<FRE<WAI9999<END
+#8012
+<FLJ6112:8112
+<KEY<MSG<TURCurly Brace:
+    Undefeated<NOD<EVE8004
+#8013
+<FLJ6113:8113
+<KEY<MSG<TURPuu Black:
+    Undefeated<NOD<EVE8006
+#8014
+<FLJ6114:8114
+<KEY<MSG<TURMa Pignon:
+    Undefeated<NOD<EVE8011
 
 #8100
 <KEY<MSG<TURBalrog 1:
@@ -405,13 +417,13 @@ Will you check it?<YNJ8200<CLR
     Defeated<NOD<EVE8003
 #8103
 <KEY<MSG<TURBalfrog:
-    Defeated<NOD<EVE8004
+    Defeated<NOD<EVE8012
 #8104
 <KEY<MSG<TUROmega:
     Defeated<NOD<EVE8005
 #8105
 <KEY<MSG<TURToroko+:
-    Defeated<NOD<EVE8006
+    Defeated<NOD<EVE8013
 #8106
 <KEY<MSG<TURMonster X:
     Defeated<NOD<EVE8007
@@ -426,10 +438,19 @@ Will you check it?<YNJ8200<CLR
     Defeated<NOD<EVE8010
 #8110
 <KEY<MSG<TURThe Sisters:
-    Defeated<NOD<EVE8011
+    Defeated<NOD<EVE8014
 #8111
 <KEY<MSG<TURRed Demon:
     Defeated<NOD<FRE<WAI9999<END
+#8112
+<KEY<MSG<TURCurly Brace:
+    Defeated<NOD<EVE8004
+#8113
+<KEY<MSG<TURPuu Black:
+    Defeated<NOD<EVE8006
+#8114
+<KEY<MSG<TURMa Pignon:
+    Defeated<NOD<EVE8011
 
 #8200
 <FRE<EVE5005
