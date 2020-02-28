@@ -12,19 +12,27 @@ layout:setTheme(require 'lib.luigi.theme.dark')
 settings:setTheme(require 'lib.luigi.theme.dark')
 
 function C:setup()
-  settings.puppy.value = Settings.settings.puppy
-  local obj = Settings.settings.obj
-  if obj == "objBadEnd" then
+  self:loadSettings(Settings.settings.puppy, Settings.settings.obj)
+
+  background = lg.newImage('assets/background.png')
+  self:draw()
+  layout:show()
+end
+
+function C:loadSettings(puppy, obj, seed)
+  settings.puppy.value = puppy
+
+  if obj == "objBadEnd" or obj == 1 then
     settings.bad.value = true
     settings.norm.value = false
     settings.boss.value = false
     settings.best.value = false
-  elseif obj == "objNormalEnd" then
+  elseif obj == "objNormalEnd" or obj == 2 then
     settings.bad.value = false
     settings.norm.value = true
     settings.boss.value = false
     settings.best.value = false
-  elseif obj == "objAllBosses" then
+  elseif obj == "objAllBosses" or obj == 3 then
     settings.bad.value = false
     settings.norm.value = false
     settings.boss.value = true
@@ -36,9 +44,7 @@ function C:setup()
     settings.best.value = true
   end
 
-  background = lg.newImage('assets/background.png')
-  self:draw()
-  layout:show()
+  settings.customseed.value = seed or ""
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -79,6 +85,13 @@ end)
 settings.closeButton:onPress(function()
   settings:hide()
   layout:show()
+end)
+
+settings.customseed:onChange(function()
+  if #settings.customseed.value > 20 then
+    settings.customseed.value = settings.customseed.value:sub(1, 20)
+  end
+  settings.seedcount.text = ("%s/20"):format(#settings.customseed.value)
 end)
 
 function C:draw()

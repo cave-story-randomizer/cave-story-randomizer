@@ -12,6 +12,7 @@ ld = love.data
 U = require 'util'
 
 require 'log'
+require 'lib.bit'
 
 local random = require 'randomizer'
 local settings = require 'settings'

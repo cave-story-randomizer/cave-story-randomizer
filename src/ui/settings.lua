@@ -5,7 +5,7 @@ return { style = 'dialog',
       { type = 'label', text = 'Seed' },
       {
         { type = 'radio', group = 'seed', text = 'Use random seed', value = true },
-        { flow = 'y', { type = 'radio', group = 'seed', text = 'Use custom seed', id = 'seedselect'}, { type = 'text', id = 'customseed', width = 150 }, {height = false} }
+        { flow = 'y', { type = 'radio', group = 'seed', text = 'Use custom seed', id = 'seedselect'}, {{ type = 'text', id = 'customseed', width = 200}, flow = 'x', { type = 'label', id = 'seedcount' }}, {height = false} }
       },
       { type = 'label', text = 'Randomization Options' },
       { type = 'check', value = false, id = 'puppy', text = "Puppysanity"},

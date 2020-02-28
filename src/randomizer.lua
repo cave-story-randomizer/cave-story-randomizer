@@ -35,6 +35,7 @@ function C:new()
   self.customseed = nil
   self.puppy = false
   self.obj = ""
+  self.sharecode = ""
 end
 
 function C:setPath(path)
@@ -53,7 +54,11 @@ function C:randomize()
     return "Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?"
   end
   
+  self:_logSettings()
+
   local seed = self:_seedRngesus()
+  self:_updateSharecode(seed)
+
   local tscFiles = self:_createTscFiles(dirStage)
   -- self:_writePlaintext(tscFiles)
   self:_shuffleItems(tscFiles)
@@ -64,7 +69,7 @@ function C:randomize()
 
   self:_updateSettings()
 
-  return self:_getStatusMessage(seed)
+  return self:_getStatusMessage(seed, self.sharecode)
 end
 
 function C:_mountDirectory(path)
@@ -257,17 +262,57 @@ function C:_unmountDirectory(path)
   assert(lf.unmount(path))
 end
 
+function C:_logSettings()
+  local obj = "Best Ending"
+  if self.obj == "objBadEnd" then
+    obj = "Bad Ending"
+  elseif self.obj == "objNormalEnd" then
+    obj = "Normal Ending"
+  elseif self.obj == "objAllBosses" then
+    obj = "All Bosses"
+  end
+
+  local puppy = self.puppy and ", Puppysanity" or ""
+  logNotice(("Game settings: %s"):format(obj .. puppy))
+end
+
 function C:_updateSettings()
   Settings.settings.puppy = self.puppy
   Settings.settings.obj = self.obj
   Settings:update()
 end
 
-function C:_getStatusMessage(seed)
+function C:_updateSharecode(seed)
+  local settings = 0 -- 0b00000000
+  -- 0bXXXXXPOO
+  -- P: single bit used for puppysanity
+  -- O: two bits used for objective
+  -- X: unused
+
+  if self.obj == "objBadEnd" then
+    settings = bit.bor(settings, 1)
+  elseif self.obj == "objNormalEnd" then
+    settings = bit.bor(settings, 2)
+  elseif self.obj == "objAllBosses" then
+    settings = bit.bor(settings, 3)
+  end
+  if self.puppy then settings = bit.bor(settings, 4) end
+
+  if #seed < 20 then
+    seed = seed .. (" "):rep(20-#seed)
+  end
+
+  local packed = love.data.pack("data", "sB", seed, settings)
+  self.sharecode = love.data.encode("string", "base64", packed)
+
+  logNotice(("Sharecode: %s"):format(self.sharecode))
+end
+
+function C:_getStatusMessage(seed, sharecode)
   local warnings, errors = countLogWarningsAndErrors()
   local line1
   if warnings == 0 and errors == 0 then
-    line1 = ("Randomized data successfully created!\nSeed: %s"):format(seed)
+    line1 = ("Randomized data successfully created!\nSeed: %s\nSharecode: %s"):format(seed, sharecode)
   elseif warnings ~= 0 and errors == 0 then
     line1 = ("Randomized data was created with %d warning(s)."):format(warnings)
   else
@@ -275,7 +320,7 @@ function C:_getStatusMessage(seed)
   end
   local line2 = "Next overwrite the files in your copy of Cave Story with the versions in the newly created \"data\" folder. Don't forget to save a backup of the originals!"
   local line3 = "Then play and have a fun!"
-  local status = ("%s\n%s\n\n%s"):format(line1, line2, line3)
+  local status = ("%s\n%s\n%s"):format(line1, line2, line3)
   return status
 end
 
