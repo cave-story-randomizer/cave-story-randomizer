@@ -12,19 +12,27 @@ layout:setTheme(require 'lib.luigi.theme.dark')
 settings:setTheme(require 'lib.luigi.theme.dark')
 
 function C:setup()
-  settings.puppy.value = Settings.settings.puppy
-  local obj = Settings.settings.obj
-  if obj == "objBadEnd" then
+  self:loadSettings(Settings.settings.puppy, Settings.settings.obj)
+
+  background = lg.newImage('assets/background.png')
+  self:draw()
+  layout:show()
+end
+
+function C:loadSettings(puppy, obj, seed)
+  settings.puppy.value = puppy
+
+  if obj == "objBadEnd" or obj == 1 then
     settings.bad.value = true
     settings.norm.value = false
     settings.boss.value = false
     settings.best.value = false
-  elseif obj == "objNormalEnd" then
+  elseif obj == "objNormalEnd" or obj == 2 then
     settings.bad.value = false
     settings.norm.value = true
     settings.boss.value = false
     settings.best.value = false
-  elseif obj == "objAllBosses" then
+  elseif obj == "objAllBosses" or obj == 3 then
     settings.bad.value = false
     settings.norm.value = false
     settings.boss.value = true
@@ -36,9 +44,11 @@ function C:setup()
     settings.best.value = true
   end
 
-  background = lg.newImage('assets/background.png')
-  self:draw()
-  layout:show()
+  if seed ~= nil then
+    settings.customseed.value = seed or ""
+    settings.seedselect.value = true
+    settings.seedrandom.value = false
+  end
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -48,9 +58,11 @@ layout.twitter.text = '(@shruuu and @duncathan_salt)'
 layout.footer.text = 'Original randomizer:\r\nshru.itch.io/cave-story-randomizer'
 
 layout.go:onPress(function()
+  Randomizer:new()
+
   if Randomizer:ready() then
     if settings.seedselect.value and settings.customseed.value ~= "" then
-      Randomizer.customseed = settings.customseed.value
+      Randomizer.customseed = settings.customseed.value:gsub("^%s*(.-)%s*$", "%1") -- trim any leading/trailing whitespace
     end
 
     if settings.bad.value then
@@ -65,7 +77,8 @@ layout.go:onPress(function()
 
     Randomizer.puppy = settings.puppy.value
     C:setStatus(Randomizer:randomize())
-    Randomizer:new()
+
+    layout.sharecode.text = "Copy Sharecode"
   else
     C:setStatus("No Cave Story folder found!\r\nDrag and drop your Cave Story folder here.")
   end
@@ -79,6 +92,43 @@ end)
 settings.closeButton:onPress(function()
   settings:hide()
   layout:show()
+  settings.sharecode.value = ""
+end)
+
+layout.sharecode:onPress(function()
+  if Randomizer.sharecode ~= "" then
+    love.system.setClipboardText(Randomizer.sharecode)
+    layout.sharecode.text = "Copied!"
+  end
+end)
+
+settings.customseed:onChange(function()
+  if #settings.customseed.value > 20 then
+    settings.customseed.value = settings.customseed.value:sub(1, 20)
+  end
+  settings.seedcount.text = ("%s/20"):format(#settings.customseed.value)
+end)
+
+settings.importshare:onPress(function()
+  local success, seed, sharesettings = pcall(function()
+    local packed = love.data.decode("data", "base64", settings.sharecode.value)
+    local seed, settings = love.data.unpack("sB", packed)
+    return seed, settings
+  end)
+
+  if success then 
+    settings.importshare.text = "Sharecode Imported"
+    local pup = bit.band(sharesettings, 4) ~= 0
+    local obj = bit.band(sharesettings, 3)
+    seed = seed:gsub("^%s*(.-)%s*$", "%1") -- trim any leading or trailing whitespace
+    Screen:loadSettings(pup, obj, seed)
+  else
+    settings.importshare.text = "Invalid Sharecode!"
+  end
+end)
+
+settings.sharecode:onChange(function()
+  settings.importshare.text = "Import Sharecode"
 end)
 
 function C:draw()
