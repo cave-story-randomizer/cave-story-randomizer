@@ -44,7 +44,11 @@ function C:loadSettings(puppy, obj, seed)
     settings.best.value = true
   end
 
-  settings.customseed.value = seed or ""
+  if seed ~= nil then
+    settings.customseed.value = seed or ""
+    settings.seedselect.value = true
+    settings.seedrandom.value = false
+  end
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -55,10 +59,10 @@ layout.footer.text = 'Original randomizer:\r\nshru.itch.io/cave-story-randomizer
 
 layout.go:onPress(function()
   Randomizer:new()
-  
+
   if Randomizer:ready() then
     if settings.seedselect.value and settings.customseed.value ~= "" then
-      Randomizer.customseed = settings.customseed.value
+      Randomizer.customseed = settings.customseed.value:gsub("^%s*(.-)%s*$", "%1") -- trim any leading/trailing whitespace
     end
 
     if settings.bad.value then
@@ -88,6 +92,7 @@ end)
 settings.closeButton:onPress(function()
   settings:hide()
   layout:show()
+  settings.sharecode.value = ""
 end)
 
 layout.sharecode:onPress(function()
@@ -102,6 +107,28 @@ settings.customseed:onChange(function()
     settings.customseed.value = settings.customseed.value:sub(1, 20)
   end
   settings.seedcount.text = ("%s/20"):format(#settings.customseed.value)
+end)
+
+settings.importshare:onPress(function()
+  local success, seed, sharesettings = pcall(function()
+    local packed = love.data.decode("data", "base64", settings.sharecode.value)
+    local seed, settings = love.data.unpack("sB", packed)
+    return seed, settings
+  end)
+
+  if success then 
+    settings.importshare.text = "Sharecode Imported"
+    local pup = bit.band(sharesettings, 4) ~= 0
+    local obj = bit.band(sharesettings, 3)
+    seed = seed:gsub("^%s*(.-)%s*$", "%1") -- trim any leading or trailing whitespace
+    Screen:loadSettings(pup, obj, seed)
+  else
+    settings.importshare.text = "Invalid Sharecode!"
+  end
+end)
+
+settings.sharecode:onChange(function()
+  settings.importshare.text = "Import Sharecode"
 end)
 
 function C:draw()

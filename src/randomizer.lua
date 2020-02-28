@@ -151,8 +151,6 @@ function C:_shuffleItems(tscFiles)
   -- place the bomb on MALCO for bad end
   if self.obj == "objBadEnd" then
     self.worldGraph:getMALCO()[1]:setItem(self.itemDeck:getByKey("bomb"))
-  else
-    logWarning(self.obj)
   end
 
 
