@@ -362,7 +362,7 @@ local function _itemData()
     gameBadEnd = gameMode("Bad Ending", "<FL+6003<EVE0091"),
     gameNormalEnd = gameMode("Normal Ending", "<FL+6000<EVE0091"),
     gameBestEnd = gameMode("Best Ending", "<FL+6001<EVE0091"),
-    gameAllBosses = gameMode("All Bosses", "<FL+6002<EVE0091")
+    gameAllBosses = gameMode("All Bosses", "<FL+6002<IT+0005<EVE0091")
   }
 
   local array = {}
