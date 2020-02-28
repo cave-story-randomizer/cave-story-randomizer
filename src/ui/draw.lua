@@ -12,43 +12,49 @@ layout:setTheme(require 'lib.luigi.theme.dark')
 settings:setTheme(require 'lib.luigi.theme.dark')
 
 function C:setup()
-  self:loadSettings(Settings.settings.puppy, Settings.settings.obj)
+  self:loadSettings(Settings.settings.puppy, Settings.settings.obj, nil, Settings.settings.mychar)
 
   background = lg.newImage('assets/background.png')
   self:draw()
   layout:show()
 end
 
-function C:loadSettings(puppy, obj, seed)
+function C:loadSettings(puppy, obj, seed, mychar)
   settings.puppy.value = puppy
 
   if obj == "objBadEnd" or obj == 1 then
-    settings.bad.value = true
-    settings.norm.value = false
-    settings.boss.value = false
-    settings.best.value = false
+    settings.objective.index = 1
   elseif obj == "objNormalEnd" or obj == 2 then
-    settings.bad.value = false
-    settings.norm.value = true
-    settings.boss.value = false
-    settings.best.value = false
+    settings.objective.index = 2
   elseif obj == "objAllBosses" or obj == 3 then
-    settings.bad.value = false
-    settings.norm.value = false
-    settings.boss.value = true
-    settings.best.value = false
+    settings.objective.index = 4
   else
-    settings.bad.value = false
-    settings.norm.value = false
-    settings.boss.value = false
-    settings.best.value = true
+    settings.objective.index = 3
   end
+  settings.objective.value = "override"
 
   if seed ~= nil then
     settings.customseed.value = seed or ""
     settings.seedselect.value = true
     settings.seedrandom.value = false
   end
+
+  if mychar == "assets/myChar/Quote.bmp" then
+    settings.mychar.index = 1
+  elseif mychar == "assets/myChar/Curly.bmp" then
+    settings.mychar.index = 2
+  elseif mychar == "assets/myChar/Sue.bmp" then
+    settings.mychar.index = 3
+  elseif mychar == "assets/myChar/Toroko.bmp" then
+    settings.mychar.index = 4
+  elseif mychar == "assets/myChar/King.bmp" then
+    settings.mychar.index = 5
+  elseif mychar == "assets/myChar/Kanpachi.bmp" then
+    settings.mychar.index = 6
+  elseif mychar == "assets/myChar/Frog.bmp" then
+    settings.mychar.index = 7
+  end
+  settings.mychar.value = "override"
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -65,17 +71,10 @@ layout.go:onPress(function()
       Randomizer.customseed = settings.customseed.value:gsub("^%s*(.-)%s*$", "%1") -- trim any leading/trailing whitespace
     end
 
-    if settings.bad.value then
-      Randomizer.obj = "objBadEnd"
-    elseif settings.norm.value then
-      Randomizer.obj = "objNormalEnd"
-    elseif settings.boss.value then
-      Randomizer.obj = "objAllBosses"
-    else
-      Randomizer.obj = "objBestEnd"
-    end
-
+    Randomizer.obj = settings.objective.value
     Randomizer.puppy = settings.puppy.value
+    Randomizer.mychar = settings.mychar.value
+
     C:setStatus(Randomizer:randomize())
 
     layout.sharecode.text = "Copy Sharecode"

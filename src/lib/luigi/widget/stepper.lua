@@ -102,5 +102,11 @@ Contains the index in `items` of the item being displayed.
         if self.flow == 'x' then increment() else decrement() end
     end)
 
+    self:onChange(function (event)
+        if self.value == "override" then
+            updateValue()
+        end
+    end)
+
     updateValue()
 end
