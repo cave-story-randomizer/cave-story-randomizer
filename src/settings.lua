@@ -11,7 +11,7 @@ end
 function C:setDefaults()
   self.settings.csdirectory = nil
   self.settings.puppy = false
-  self.settings.obj = ""
+  self.settings.obj = "objBestEnd"
   self:update()
 end
 
