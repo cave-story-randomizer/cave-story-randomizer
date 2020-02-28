@@ -24,8 +24,8 @@ function C:serialize()
 
   line = line .. ("csdirectory = [[%s]],\r\n  "):format(self.settings.csdirectory or "")
   line = line .. ("puppy = %s,\r\n  "):format(self.settings.puppy)
-  line = line .. ("obj = %q,\r\n  "):format(self.settings.obj)
-  line = line .. ("mychar = %q,\r\n  "):format(self.settings.mychar)
+  line = line .. ("obj = %q,\r\n  "):format(self.settings.obj or "")
+  line = line .. ("mychar = %q,\r\n  "):format(self.settings.mychar or "")
   
   line = line .. "\r\n}"
   return line
