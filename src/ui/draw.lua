@@ -12,14 +12,14 @@ layout:setTheme(require 'lib.luigi.theme.dark')
 settings:setTheme(require 'lib.luigi.theme.dark')
 
 function C:setup()
-  self:loadSettings(Settings.settings.puppy, Settings.settings.obj)
+  self:loadSettings(Settings.settings.puppy, Settings.settings.obj, nil, Settings.settings.mychar)
 
   background = lg.newImage('assets/background.png')
   self:draw()
   layout:show()
 end
 
-function C:loadSettings(puppy, obj, seed)
+function C:loadSettings(puppy, obj, seed, mychar)
   settings.puppy.value = puppy
 
   if obj == "objBadEnd" or obj == 1 then
@@ -38,6 +38,23 @@ function C:loadSettings(puppy, obj, seed)
     settings.seedselect.value = true
     settings.seedrandom.value = false
   end
+
+  if mychar == "assets/myChar/Quote.bmp" then
+    settings.mychar.index = 1
+  elseif mychar == "assets/myChar/Curly.bmp" then
+    settings.mychar.index = 2
+  elseif mychar == "assets/myChar/Sue.bmp" then
+    settings.mychar.index = 3
+  elseif mychar == "assets/myChar/Toroko.bmp" then
+    settings.mychar.index = 4
+  elseif mychar == "assets/myChar/King.bmp" then
+    settings.mychar.index = 5
+  elseif mychar == "assets/myChar/Kanpachi.bmp" then
+    settings.mychar.index = 6
+  elseif mychar == "assets/myChar/Frog.bmp" then
+    settings.mychar.index = 7
+  end
+  settings.mychar.value = "override"
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -55,8 +72,9 @@ layout.go:onPress(function()
     end
 
     Randomizer.obj = settings.objective.value
-
     Randomizer.puppy = settings.puppy.value
+    Randomizer.mychar = settings.mychar.value
+
     C:setStatus(Randomizer:randomize())
 
     layout.sharecode.text = "Copy Sharecode"

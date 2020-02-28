@@ -36,6 +36,7 @@ function C:new()
   self.puppy = false
   self.obj = ""
   self.sharecode = ""
+  self.mychar = ""
 end
 
 function C:setPath(path)
@@ -65,6 +66,7 @@ function C:randomize()
   self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
   self:_writeLog()
+  self:_copyMyChar()
   self:_unmountDirectory(csdirectory)
 
   self:_updateSettings()
@@ -235,6 +237,12 @@ function C:_writeLog()
   U.writeFile(path, data)
 end
 
+function C:_copyMyChar()
+  local path = self:_getWritePath() .. '/myChar.bmp'
+  local data = lf.read(self.mychar)
+  U.writeFile(path, data)
+end
+
 function C:_getWritePath()
   return select(1, self:_getWritePaths())
 end
@@ -277,6 +285,7 @@ end
 function C:_updateSettings()
   Settings.settings.puppy = self.puppy
   Settings.settings.obj = self.obj
+  Settings.settings.mychar = self.mychar
   Settings:update()
 end
 
