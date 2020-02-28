@@ -20,6 +20,16 @@ return { style = 'dialog',
           { text = "Best ending", value = "objBestEnd" },
           { text = "All bosses", value = "objAllBosses"}
         },
+        { type = 'label', text = 'Player Sprite', minheight = 32 },
+        { type = 'stepper', id = 'mychar', align = 'middle left', height = 48, width = 200,
+          { text = "  Quote", value = "Quote.bmp", icon = "assets/icon/Quote.png" },
+          { text = "  Curly", value = "Curly.bmp", icon = "assets/icon/Curly.png" },
+          { text = "  Sue", value = "Sue.bmp", icon = "assets/icon/Sue.png" },
+          { text = "  Toroko", value = "Toroko.bmp", icon = "assets/icon/Toroko.png" },
+          { text = "  King", value = "King.bmp", icon = "assets/icon/King.png" },
+          { text = "  Kanpachi", value = "Kanpachi.bmp", icon = "assets/icon/Kanpachi.png" },
+          { text = "  Frog", value = "Frog.bmp", icon = "assets/icon/Frog.png" }
+        }
       },
     },
     {
