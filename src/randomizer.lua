@@ -37,6 +37,7 @@ function C:new()
   self.obj = ""
   self.sharecode = ""
   self.mychar = ""
+  self.spawn = ""
 end
 
 function C:setPath(path)

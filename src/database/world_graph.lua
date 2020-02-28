@@ -409,6 +409,7 @@ local worldGraph = Class:extend()
 
 function worldGraph:new(items)
   self.items = items
+  self.order = 0
 
   self.regions = {
     firstCave = firstCave(self),
@@ -550,7 +551,15 @@ function worldGraph.locationsArray(locations)
 end
 
 function worldGraph:logLocations()
-  for k,r in pairs(self.regions) do
+  local array = {}
+  for k,v in pairs(self.regions) do
+    table.insert(array, v)
+  end
+  local function sort(a,b)
+    return a.order < b.order
+  end
+
+  for k,r in ipairs(_.sort(array,sort)) do
     if next(r.locations) then
       logSpoiler("")
       logSpoiler("Region: " .. r.name)
