@@ -19,7 +19,7 @@ function C:setup()
   layout:show()
 end
 
-function C:loadSettings(puppy, obj, seed, mychar)
+function C:loadSettings(puppy, obj, seed, mychar, spawn)
   settings.puppy.value = puppy
 
   if obj == "objBadEnd" or obj == 1 then
@@ -55,6 +55,15 @@ function C:loadSettings(puppy, obj, seed, mychar)
     settings.mychar.index = 7
   end
   settings.mychar.value = "override"
+
+  if spawn == "Start Point" then
+    settings.spawn.index = 1
+  elseif spawn == "Arthur's House" then
+    settings.spawn.index = 2
+  elseif spawn == "Camp" then
+    settings.spawn.index = 3
+  end
+  settings.spawn.value = "override"
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -74,6 +83,7 @@ layout.go:onPress(function()
     Randomizer.obj = settings.objective.value
     Randomizer.puppy = settings.puppy.value
     Randomizer.mychar = settings.mychar.value
+    Randomizer.worldGraph.spawn = settings.spawn.value
 
     C:setStatus(Randomizer:randomize())
 

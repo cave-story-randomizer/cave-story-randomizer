@@ -144,18 +144,26 @@ function C:getObjective()
 end
 
 function C:_shuffleItems(tscFiles)
-  local obj = self:getObjective()
-  obj.name = obj.name .. (", %s"):format(worldGraph.spawn)
-  obj.script = obj.script .. worldGraph:getSpawnScript()
+  -- ensure unique randomization between settings with the same seed
+  local function shuffle(t)
+    if self.obj == "objBadEnd" then return _.shuffle(_.shuffle(t)) end
+    if self.obj == "objNormalEnd" then return _.shuffle(_.shuffle(_.shuffle(t))) end
+    if self.obj == "objAllBosses" then return _.shuffle(_.shuffle(_.shuffle(_.shuffle(t)))) end
+    return _.shuffle(t)
+  end
+
+  local obj = self:getObjective()[1]
+  obj.name = obj.name .. (", %s"):format(self.worldGraph.spawn)
+  obj.script = obj.script .. self.worldGraph:getSpawnScript()
   -- place the objective scripts in Start Point
-  self:_fastFillItems(self:getObjective(), self.worldGraph:getObjectiveSpot())
+  self:_fastFillItems({obj}, self.worldGraph:getObjectiveSpot())
 
   if self.worldGraph:StartPoint() then
     -- first, fill one of the first cave spots with a weapon that can break blocks
-    _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
+    _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
   elseif self.worldGraph:Camp() then
     -- give Dr. Gero a strong weapon... you'll need it
-    self.worldGraph:getDrGero()[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponStrong"))[1])
+    self.worldGraph:getDrGero()[1]:setItem(shuffle(self.itemDeck:getItemsByAttribute("weaponStrong"))[1])
   end
 
   -- place the bomb on MALCO for bad end
@@ -163,24 +171,24 @@ function C:_shuffleItems(tscFiles)
     self.worldGraph:getMALCO()[1]:setItem(self.itemDeck:getByKey("bomb"))
   end
 
-  local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems(true)))
-  local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems(true)))
-  local puppies = _.compact(_.shuffle(self.itemDeck:getItemsByAttribute("puppy")))
+  local mandatory = _.compact(shuffle(self.itemDeck:getMandatoryItems(true)))
+  local optional = _.compact(shuffle(self.itemDeck:getOptionalItems(true)))
+  local puppies = _.compact(shuffle(self.itemDeck:getItemsByAttribute("puppy")))
 
   if not self.puppy then
     -- then fill puppies, for normal gameplay
-    self:_fastFillItems(puppies, _.shuffle(self.worldGraph:getPuppySpots()))
+    self:_fastFillItems(puppies, shuffle(self.worldGraph:getPuppySpots()))
   else
     -- for puppysanity, shuffle puppies in with the mandatory items
-    mandatory = _.shuffle(_.append(mandatory, puppies))
+    mandatory = shuffle(_.append(mandatory, puppies))
     puppies = {}
   end
   
   -- next fill hell chests, which cannot have mandatory items
-  self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
+  self:_fastFillItems(optional, shuffle(self.worldGraph:getHellSpots()))
 
   -- place mandatory items with assume fill
-  self:_fillItems(mandatory, _.shuffle(_.reverse(self.worldGraph:getEmptyLocations())))
+  self:_fillItems(mandatory, shuffle(_.reverse(self.worldGraph:getEmptyLocations())))
 
   -- place optional items with a simple random fill
   local opt = #optional
@@ -188,7 +196,7 @@ function C:_shuffleItems(tscFiles)
   if opt > loc then
     logWarning(("Trying to fill more optional items than there are locations! Items: %d Locations: %d"):format(opt, loc))
   end
-  self:_fastFillItems(optional, _.shuffle(self.worldGraph:getEmptyLocations()))
+  self:_fastFillItems(optional, shuffle(self.worldGraph:getEmptyLocations()))
 
   self.worldGraph:writeItems(tscFiles)
   self.worldGraph:logLocations()
@@ -276,6 +284,8 @@ function C:_unmountDirectory(path)
 end
 
 function C:_logSettings()
+  -- these random calls are a hacky way to make sure that
+  -- randomization changes between seeds if settings change
   local obj = "Best Ending"
   if self.obj == "objBadEnd" then
     obj = "Bad Ending"
@@ -285,8 +295,10 @@ function C:_logSettings()
     obj = "All Bosses"
   end
 
+  local spawn = (", %s"):format(self.worldGraph.spawn)
+
   local puppy = self.puppy and ", Puppysanity" or ""
-  logNotice(("Game settings: %s"):format(obj .. puppy))
+  logNotice(("Game settings: %s"):format(obj .. spawn .. puppy))
 end
 
 function C:_updateSettings()

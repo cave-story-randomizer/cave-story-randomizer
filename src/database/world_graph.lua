@@ -20,9 +20,9 @@ function firstCave:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    if world:StartPoint() then
+    if self.world:StartPoint() then
       return true
-    else
+    elseif self.world:Arthur() or self.world:Camp() then
       return _has(items, "flight") and self.world.regions.mimigaVillage:canAccess(items)
     end
   end
