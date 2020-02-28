@@ -76,7 +76,7 @@ fire a laser.<WAI9999<END
 #5005
 <MSG<TURBeast Fang<WAI9999<END
 #5006
-<MSG<TURLife Capsule<WAI9999<END
+<MSG<TURIronhead's Heart<WAI9999<END
 #5007
 <MSG<TURID Card<WAI9999<END
 #5008
@@ -168,7 +168,7 @@ like it's been treasured for years.<WAI9999<END
 Yamashita Farm. Is its owner still
 alive...?<WAI9999<END
 #6006
-<MSG<TURA life capsule.<WAI9999<END
+<MSG<TURDelivered to you by a strange squid.<WAI9999<END
 #6007
 <MSG<TURAn ID Card found in Egg No. 06.<WAI9999<END
 #6008
