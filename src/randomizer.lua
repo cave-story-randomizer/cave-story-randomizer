@@ -37,7 +37,6 @@ function C:new()
   self.obj = ""
   self.sharecode = ""
   self.mychar = ""
-  self.spawn = ""
 end
 
 function C:setPath(path)
@@ -145,17 +144,24 @@ function C:getObjective()
 end
 
 function C:_shuffleItems(tscFiles)
+  local obj = self:getObjective()
+  obj.name = obj.name .. (", %s"):format(worldGraph.spawn)
+  obj.script = obj.script .. worldGraph:getSpawnScript()
   -- place the objective scripts in Start Point
   self:_fastFillItems(self:getObjective(), self.worldGraph:getObjectiveSpot())
 
-  -- first, fill one of the first cave spots with a weapon that can break blocks
-  _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
+  if self.worldGraph:StartPoint() then
+    -- first, fill one of the first cave spots with a weapon that can break blocks
+    _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
+  elseif self.worldGraph:Camp() then
+    -- give Dr. Gero a strong weapon... you'll need it
+    self.worldGraph:getDrGero()[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponStrong"))[1])
+  end
 
   -- place the bomb on MALCO for bad end
   if self.obj == "objBadEnd" then
     self.worldGraph:getMALCO()[1]:setItem(self.itemDeck:getByKey("bomb"))
   end
-
 
   local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems(true)))
   local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems(true)))

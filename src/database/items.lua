@@ -359,10 +359,10 @@ local function _itemData()
     ----------------
     -- GAME MODES --
     ----------------
-    objBadEnd = objective("Bad Ending", "<FL+6003<EVE0091"),
-    objNormalEnd = objective("Normal Ending", "<FL+6000<EVE0091"),
-    objBestEnd = objective("Best Ending", "<FL+6001<EVE0091"),
-    objAllBosses = objective("All Bosses", "<FL+6002<IT+0005<EVE0091")
+    objBadEnd = objective("Bad Ending", "<FL+6003"),
+    objNormalEnd = objective("Normal Ending", "<FL+6000"),
+    objBestEnd = objective("Best Ending", "<FL+6001"),
+    objAllBosses = objective("All Bosses", "<FL+6002<IT+0005")
   }
 
   local array = {}

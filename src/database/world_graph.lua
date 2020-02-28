@@ -16,8 +16,16 @@ function firstCave:new(worldGraph)
     firstCapsule = Location("First Cave Life Capsule", "Cave", "0401", self),
     gunsmithChest = Location("Hermit Gunsmith Chest", "Pole", "0202", self),
     gunsmith = Location("Tetsuzou", "Pole", "0303", self),
-    objective = Location("Objective", "Start", "0201", self)
+    objective = Location("Game Settings", "Start", "0201", self)
   }
+
+  self.requirements = function(self, items)
+    if world:StartPoint() then
+      return true
+    else
+      return _has(items, "flight") and self.world.regions.mimigaVillage:canAccess(items)
+    end
+  end
 
   self.locations.gunsmith.requirements = function(self, items)
     return _has(items, "flight") and _has(items, "polarStar") and _has(items, "eventCore") and self.region.world.regions.mimigaVillage:canAccess(items)
@@ -39,7 +47,11 @@ function mimigaVillage:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    return _has(items, "weaponSN")
+    if self.world:StartPoint() then
+      return _has(items, "weaponSN")
+    elseif self.world:Camp() or self.world:Arthur() then
+      return _has(items, "arthurKey") and self.world.regions.arthur:canAccess(items) or self.world.regions.waterway:canAccess(items)
+    end
   end
 
   self.locations.assembly.requirements = function(self, items) return _has(items, "juice") end
@@ -70,8 +82,13 @@ function arthur:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    if _has(items, "arthurKey") and _has(items, "weaponSN") then return true end
-    return false
+    if self.world:StartPoint() then
+      return _has(items, "arthurKey") and _has(items, "weaponSN")
+    elseif self.world:Camp() then
+      return self.world.regions.labyrinthB:canAccess(items)
+    elseif self.world:Arthur() then
+      return true
+    end
   end
 
   self.locations.risenBooster.requirements = function(self, items) return _has(items, "eventCore") end
@@ -170,7 +187,7 @@ function upperSandZone:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    return self.world.regions.arthur:canAccess(items)
+    return self.world.regions.arthur:canAccess(items) and _has(items, "weaponSN")
   end
 
   self.locations.curly.requirements = function(self, items) return _has(items, "polarStar") end
@@ -197,7 +214,11 @@ function lowerSandZone:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    return _has(items, "eventOmega") and self.world.regions.upperSandZone:canAccess(items)
+    if self.world:StartPoint() or self.world:Arthur() then
+      return _has(items, "eventOmega") and self.world.regions.upperSandZone:canAccess(items)
+    elseif self.world:Camp() then
+      return self.world.regions.labyrinthW:canAccess(items)
+    end
   end
 
   self.locations.jenka.requirements = function(self, items) return _count(items, "puppy", 5) end
@@ -223,10 +244,14 @@ function labyrinthW:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    if not self.world.regions.arthur:canAccess(items) then return false end
-    if _has(items, "eventToroko") and self.world.regions.lowerSandZone:canAccess(items) then return true end
-    if _has(items, "flight") and _has(items, "weaponBoss") and self.world.regions.labyrinthB:canAccess(items) then return true end
-    return false
+    if self.world:StartPoint() or self.world:Arthur() then
+      if not self.world.regions.arthur:canAccess(items) then return false end
+      if _has(items, "eventToroko") and self.world.regions.lowerSandZone:canAccess(items) then return true end
+      if _has(items, "flight") and _has(items, "weaponBoss") and self.world.regions.labyrinthB:canAccess(items) then return true end
+      return false
+    elseif self.world:Camp() then
+      return true
+    end
   end
 
   self.locations.mazeCapsule.requirements = function(self, items) return _has(items, "weapon") end
@@ -245,7 +270,11 @@ function labyrinthB:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    return self.world.regions.arthur:canAccess(items)
+    if self.world:StartPoint() or self.world:Arthur() then
+      return self.world.regions.arthur:canAccess(items)
+    elseif self.world:Camp() then
+      return self.world.regions.labyrinthB:canAccess(items) and _has("weaponBoss")
+    end
   end
 end
 
@@ -292,7 +321,6 @@ function waterway:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    if not self.world.regions.arthur:canAccess(items) then return false end
     if _has(items, "airTank") and _has(items, "weaponBoss") and self.world.regions.labyrinthM:canAccess(items) then return true end
     return false
   end
@@ -410,6 +438,7 @@ local worldGraph = Class:extend()
 function worldGraph:new(items)
   self.items = items
   self.order = 0
+  self.spawn = ""
 
   self.regions = {
     firstCave = firstCave(self),
@@ -431,6 +460,16 @@ function worldGraph:new(items)
     lastCave = lastCave(self),
     endgame = endgame(self)
   }
+end
+
+function worldGraph:StartPoint() return self.spawn == "Start Point" end
+function worldGraph:Arthur() return self.spawn == "Arthur's House" end
+function worldGraph:Camp() return self.spawn == "Camp" end
+
+function worldGraph:getSpawnScript()
+  if self:StartPoint() then return "<FL+6200<EVE0091" end
+  if self:Arthur() then return "<FL+6201<TRA0001:0094:0008:0004" end
+  if self:Camp() then return "<FL+6202<TRA0040:0094:0014:0009" end
 end
 
 function worldGraph:getLocations()
