@@ -34,6 +34,7 @@ function C:new()
   self.worldGraph = WorldGraph(self.itemDeck)
   self.customseed = nil
   self.puppy = false
+  self.obj = ""
 end
 
 function C:setPath(path)
@@ -60,6 +61,9 @@ function C:randomize()
   self:_writePlaintext(tscFiles)
   self:_writeLog()
   self:_unmountDirectory(csdirectory)
+
+  self:_updateSettings()
+
   return self:_getStatusMessage(seed)
 end
 
@@ -128,9 +132,24 @@ function C:_writePlaintext(tscFiles)
   end
 end
 
+function C:getObjective()
+  return {self.itemDeck:getByKey(self.obj)}
+end
+
 function C:_shuffleItems(tscFiles)
+  -- place the objective scripts in Start Point
+  self:_fastFillItems(self:getObjective(), self.worldGraph:getObjectiveSpot())
+
   -- first, fill one of the first cave spots with a weapon that can break blocks
   _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(_.shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
+
+  -- place the bomb on MALCO for bad end
+  if self.obj == "objBadEnd" then
+    self.worldGraph:getMALCO()[1]:setItem(self.itemDeck:getByKey("bomb"))
+  else
+    logWarning(self.obj)
+  end
+
 
   local mandatory = _.compact(_.shuffle(self.itemDeck:getMandatoryItems(true)))
   local optional = _.compact(_.shuffle(self.itemDeck:getOptionalItems(true)))
@@ -236,6 +255,12 @@ end
 
 function C:_unmountDirectory(path)
   assert(lf.unmount(path))
+end
+
+function C:_updateSettings()
+  Settings.settings.puppy = self.puppy
+  Settings.settings.obj = self.obj
+  Settings:update()
 end
 
 function C:_getStatusMessage(seed)

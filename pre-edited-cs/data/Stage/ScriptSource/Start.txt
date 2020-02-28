@@ -17,8 +17,9 @@
 
 
 #0200
-<KEY<FL+0430
-<EVE0091 -- easier to do this than to deal with changing the actual start event
+<KEY<FL+0430<EVE0201
+#0201
+<EVE0091
 
 #1000
 <END

@@ -36,6 +36,15 @@ local function event(n)
   }
 end
 
+local function objective(n, eve)
+  return {
+    name = n,
+    attributes = {"objective"},
+    placed = true,
+    script = eve
+  }
+end
+
 local function _itemData()
   local data = {
     -------------
@@ -345,7 +354,15 @@ local function _itemData()
     eventToroko = event("Defeated Toroko+"),
     eventCore = event("Defeated the Core"),
     eventCurly = event("Saved Curly"),
-    eventRocket = event("Built Rocket")
+    eventRocket = event("Built Rocket"),
+
+    ----------------
+    -- GAME MODES --
+    ----------------
+    objBadEnd = objective("Bad Ending", "<FL+6003<EVE0091"),
+    objNormalEnd = objective("Normal Ending", "<FL+6000<EVE0091"),
+    objBestEnd = objective("Best Ending", "<FL+6001<EVE0091"),
+    objAllBosses = objective("All Bosses", "<FL+6002<IT+0005<EVE0091")
   }
 
   local array = {}

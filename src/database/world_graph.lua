@@ -15,7 +15,8 @@ function firstCave:new(worldGraph)
   self.locations = {
     firstCapsule = Location("First Cave Life Capsule", "Cave", "0401", self),
     gunsmithChest = Location("Hermit Gunsmith Chest", "Pole", "0202", self),
-    gunsmith = Location("Tetsuzou", "Pole", "0303", self)
+    gunsmith = Location("Tetsuzou", "Pole", "0303", self),
+    objective = Location("Objective", "Start", "0201", self)
   }
 
   self.locations.gunsmith.requirements = function(self, items)
@@ -439,6 +440,14 @@ function worldGraph:getLocations()
     end
   end
   return locations
+end
+
+function worldGraph:getObjectiveSpot()
+  return {self.regions.firstCave.locations.objective}
+end
+
+function worldGraph:getMALCO()
+  return {self.regions.grasstownEast.locations.malco}
 end
 
 function worldGraph:getPuppySpots()

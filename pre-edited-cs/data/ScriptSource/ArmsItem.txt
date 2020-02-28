@@ -76,7 +76,7 @@ fire a laser.<WAI9999<END
 #5005
 <MSG<TURBeast Fang<WAI9999<END
 #5006
-<MSG<TURLife Capsule<WAI9999<END
+<MSG<TURIronhead's Heart<WAI9999<END
 #5007
 <MSG<TURID Card<WAI9999<END
 #5008
@@ -163,11 +163,12 @@ gravestone.<WAI9999<END
 From the condition it's in, it looks
 like it's been treasured for years.<WAI9999<END
 #6005
+<FLJ6002:8000
 <MSG<TURA sharp fang found at the
 Yamashita Farm. Is its owner still
 alive...?<WAI9999<END
 #6006
-<MSG<TURA life capsule.<WAI9999<END
+<MSG<TURDelivered to you by a strange squid.<WAI9999<END
 #6007
 <MSG<TURAn ID Card found in Egg No. 06.<WAI9999<END
 #6008
@@ -340,3 +341,117 @@ Deequipped the Mimiga Mask.<NOD<WAI0003<FRE<EVE5024
 <KEY<MSG<TURDo you want to remove it?
 <YNJ0000<EQ-0128<FL-0722<MSG<TUR
 Deequipped the Whimsical Star.<NOD<WAI0003<FRE<EVE5038
+
+#8000
+<KEY<MSG<TURKeeps a record of which bosses you
+have defeated on your journey.
+Will you check it?<YNJ8200<CLR
+<FLJ6100:8100
+<KEY<MSG<TURBalrog 1:
+    Undefeated<NOD<EVE8001
+#8001
+<FLJ6101:8101
+<KEY<MSG<TURIgor:
+    Undefeated<NOD<EVE8002
+#8002
+<FLJ6102:8102
+<KEY<MSG<TURBalrog 2:
+    Undefeated<NOD<EVE8003
+#8003
+<FLJ6103:8103
+<KEY<MSG<TURBalfrog:
+    Undefeated<NOD<EVE8012
+#8004
+<FLJ6104:8104
+<KEY<MSG<TUROmega:
+    Undefeated<NOD<EVE8005
+#8005
+<FLJ6105:8105
+<KEY<MSG<TURToroko+:
+    Undefeated<NOD<EVE8013
+#8006
+<FLJ6106:8106
+<KEY<MSG<TURMonster X:
+    Undefeated<NOD<EVE8007
+#8007
+<FLJ6107:8107
+<KEY<MSG<TURBalrog 3:
+    Undefeated<NOD<EVE8008
+#8008
+<FLJ6108:8108
+<KEY<MSG<TURThe Core:
+    Undefeated<NOD<EVE8009
+#8009
+<FLJ6109:8109
+<KEY<MSG<TURIronhead:
+    Undefeated<NOD<EVE8010
+#8010
+<FLJ6110:8110
+<KEY<MSG<TURThe Sisters:
+    Undefeated<NOD<EVE8014
+#8011
+<FLJ6111:8111
+<KEY<MSG<TURRed Demon:
+    Undefeated<NOD<FRE<WAI9999<END
+#8012
+<FLJ6112:8112
+<KEY<MSG<TURCurly Brace:
+    Undefeated<NOD<EVE8004
+#8013
+<FLJ6113:8113
+<KEY<MSG<TURPuu Black:
+    Undefeated<NOD<EVE8006
+#8014
+<FLJ6114:8114
+<KEY<MSG<TURMa Pignon:
+    Undefeated<NOD<EVE8011
+
+#8100
+<KEY<MSG<TURBalrog 1:
+    Defeated<NOD<EVE8001
+#8101
+<KEY<MSG<TURIgor:
+    Defeated<NOD<EVE8002
+#8102
+<KEY<MSG<TURBalrog 2:
+    Defeated<NOD<EVE8003
+#8103
+<KEY<MSG<TURBalfrog:
+    Defeated<NOD<EVE8012
+#8104
+<KEY<MSG<TUROmega:
+    Defeated<NOD<EVE8005
+#8105
+<KEY<MSG<TURToroko+:
+    Defeated<NOD<EVE8013
+#8106
+<KEY<MSG<TURMonster X:
+    Defeated<NOD<EVE8007
+#8107
+<KEY<MSG<TURBalrog 3:
+    Defeated<NOD<EVE8008
+#8108
+<KEY<MSG<TURThe Core:
+    Defeated<NOD<EVE8009
+#8109
+<KEY<MSG<TURIronhead:
+    Defeated<NOD<EVE8010
+#8110
+<KEY<MSG<TURThe Sisters:
+    Defeated<NOD<EVE8014
+#8111
+<KEY<MSG<TURRed Demon:
+    Defeated<NOD<FRE<WAI9999<END
+#8112
+<KEY<MSG<TURCurly Brace:
+    Defeated<NOD<EVE8004
+#8113
+<KEY<MSG<TURPuu Black:
+    Defeated<NOD<EVE8006
+#8114
+<KEY<MSG<TURMa Pignon:
+    Defeated<NOD<EVE8011
+
+#8200
+<FRE<EVE5005
+
