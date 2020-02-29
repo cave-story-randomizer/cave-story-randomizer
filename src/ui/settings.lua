@@ -32,9 +32,9 @@ return { style = 'dialog',
         },
         { type = 'label', text = 'Spawn Location', minheight = 32 },
         { type = 'stepper', id = 'spawn', align = 'middle left', height = 48, width = 200,
-          { text = "Start Point", value = "Start Point" },
-          { text = "Arthur's House", value = "Arthur's House" },
-          { text = "Camp", value = "Camp" }
+          { text = "  Start\r\n  Point", value = "Start Point", icon = "assets/icon/StartPoint2.png" },
+          { text = "  Arthur's\r\n  House", value = "Arthur's House", icon = "assets/icon/Arthur2.png" },
+          { text = "  Camp", value = "Camp", icon = "assets/icon/Camp.png" }
         }
       },
     },
