@@ -163,7 +163,9 @@ function C:_shuffleItems(tscFiles)
     _.shuffle(self.worldGraph:getFirstCaveSpots())[1]:setItem(shuffle(self.itemDeck:getItemsByAttribute("weaponSN"))[1])
   elseif self.worldGraph:Camp() then
     -- give Dr. Gero a strong weapon... you'll need it
-    self.worldGraph:getDrGero()[1]:setItem(shuffle(self.itemDeck:getItemsByAttribute("weaponStrong"))[1])
+    self.worldGraph:getCamp()[1]:setItem(shuffle(self.itemDeck:getItemsByAttribute("weaponStrong"))[1])
+    -- and some HP once you fight your way past the first few enemies
+    self.worldGraph:getCamp()[2]:setItem(self.itemDeck:getByKey("capsule5G"))
   end
 
   -- place the bomb on MALCO for bad end

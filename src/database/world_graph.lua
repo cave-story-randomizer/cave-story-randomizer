@@ -258,7 +258,7 @@ function labyrinthW:new(worldGraph)
   self.locations.turboChaba.requirements = function(self, items) return _has(items, "machineGun") end
   self.locations.snakeChaba.requirements = function(self, items) return _has(items, "fireball") end
   self.locations.whimChaba.requirements = function(self, items) return _count(items, "polarStar", 2) end
-  self.locations.campChest.requirements = function(self, items) return _has(items, "flight") end
+  self.locations.campChest.requirements = function(self, items) return _has(items, "flight") or self.world:Camp() end
   self.locations.puuBlack.requirements = function(self, items) return _has(items, "clinicKey") and _has(items, "weaponBoss") end
 end
 
@@ -490,8 +490,8 @@ function worldGraph:getMALCO()
   return {self.regions.grasstownEast.locations.malco}
 end
 
-function worldGraph:getDrGero()
-  return {self.regions.labyrinthW.locations.physician}
+function worldGraph:getCamp()
+  return {self.regions.labyrinthW.locations.physician, self.regions.labyrinthW.locations.campChest}
 end
 
 function worldGraph:getPuppySpots()
