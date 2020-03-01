@@ -29,6 +29,12 @@ return { style = 'dialog',
           { text = "  King", value = "assets/myChar/King.bmp", icon = "assets/icon/King.png" },
           { text = "  Kanpachi", value = "assets/myChar/Kanpachi.bmp", icon = "assets/icon/Kanpachi.png" },
           { text = "  Frog", value = "assets/myChar/Frog.bmp", icon = "assets/icon/Frog.png" }
+        },
+        { type = 'label', text = 'Spawn Location', minheight = 32 },
+        { type = 'stepper', id = 'spawn', align = 'middle left', height = 48, width = 200,
+          { text = "  Start\r\n  Point", value = "Start Point", icon = "assets/icon/StartPoint2.png" },
+          { text = "  Arthur's\r\n  House", value = "Arthur's House", icon = "assets/icon/Arthur2.png" },
+          { text = "  Camp", value = "Camp", icon = "assets/icon/Camp.png" }
         }
       },
     },

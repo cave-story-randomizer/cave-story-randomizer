@@ -12,14 +12,14 @@ layout:setTheme(require 'lib.luigi.theme.dark')
 settings:setTheme(require 'lib.luigi.theme.dark')
 
 function C:setup()
-  self:loadSettings(Settings.settings.puppy, Settings.settings.obj, nil, Settings.settings.mychar)
+  self:loadSettings(Settings.settings.puppy, Settings.settings.obj, nil, Settings.settings.mychar, Settings.settings.spawn)
 
   background = lg.newImage('assets/background.png')
   self:draw()
   layout:show()
 end
 
-function C:loadSettings(puppy, obj, seed, mychar)
+function C:loadSettings(puppy, obj, seed, mychar, spawn)
   settings.puppy.value = puppy
 
   if obj == "objBadEnd" or obj == 1 then
@@ -55,6 +55,15 @@ function C:loadSettings(puppy, obj, seed, mychar)
     settings.mychar.index = 7
   end
   settings.mychar.value = "override"
+
+  if spawn == "Start Point" or spawn == 0 then
+    settings.spawn.index = 1
+  elseif spawn == "Arthur's House" or spawn == 1 then
+    settings.spawn.index = 2
+  elseif spawn == "Camp" or spawn == 2 then
+    settings.spawn.index = 3
+  end
+  settings.spawn.value = "override"
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -74,6 +83,7 @@ layout.go:onPress(function()
     Randomizer.obj = settings.objective.value
     Randomizer.puppy = settings.puppy.value
     Randomizer.mychar = settings.mychar.value
+    Randomizer.worldGraph.spawn = settings.spawn.value
 
     C:setStatus(Randomizer:randomize())
 
@@ -119,8 +129,9 @@ settings.importshare:onPress(function()
     settings.importshare.text = "Sharecode Imported"
     local pup = bit.band(sharesettings, 4) ~= 0
     local obj = bit.band(sharesettings, 3)
+    local spn = bit.brshift(bit.band(sharesettings, 24), 3)
     seed = seed:gsub("^%s*(.-)%s*$", "%1") -- trim any leading or trailing whitespace
-    Screen:loadSettings(pup, obj, seed)
+    Screen:loadSettings(pup, obj, seed, nil, spn)
   else
     settings.importshare.text = "Invalid Sharecode!"
   end

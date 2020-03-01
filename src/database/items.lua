@@ -78,7 +78,7 @@ local function _itemData()
     snake = {
       name = "Snake",
       script = "<EVE0005",
-      attributes = {"weapon", "weaponBoss", "nonProgressive"}
+      attributes = {"weapon", "weaponBoss", "nonProgressive", "weaponStrong"}
     },
     bubbler = {
       name = "Bubbler",
@@ -88,17 +88,17 @@ local function _itemData()
     machineGun = {
       name = "Machine Gun",
       script = "<EVE0008",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "flight", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "flight", "mandatory", "weaponStrong"}
     },
     blade = {
       name = "Blade",
       script = "<EVE0009",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "mandatory", "weaponStrong"}
     },
     nemesis = {
       name = "Nemesis",
       script = "<EVE0010",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "nonProgressive"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "nonProgressive", "weaponStrong"}
     },
 
     ---------------
@@ -359,10 +359,10 @@ local function _itemData()
     ----------------
     -- GAME MODES --
     ----------------
-    objBadEnd = objective("Bad Ending", "<FL+6003<EVE0091"),
-    objNormalEnd = objective("Normal Ending", "<FL+6000<EVE0091"),
-    objBestEnd = objective("Best Ending", "<FL+6001<EVE0091"),
-    objAllBosses = objective("All Bosses", "<FL+6002<IT+0005<EVE0091")
+    objBadEnd = objective("Bad Ending", "<FL+6003"),
+    objNormalEnd = objective("Normal Ending", "<FL+6000"),
+    objBestEnd = objective("Best Ending", "<FL+6001"),
+    objAllBosses = objective("All Bosses", "<FL+6002<IT+0005")
   }
 
   local array = {}

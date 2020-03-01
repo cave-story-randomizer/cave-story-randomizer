@@ -69,3 +69,7 @@ a Mimiga just like us.<NOD<END
 #0412
 <EVE0086
 
+#0500
+<KEY<MSG<TURGo back to the labyrinth?<YNJ0000
+<PRI<FAO0004<TRA0046:0094:0008:0009
+

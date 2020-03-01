@@ -4,6 +4,8 @@ function C:new(worldGraph, name)
   self.locations = {}
   self.world = worldGraph
   self.name = name
+  self.order = worldGraph.order
+  worldGraph.order = worldGraph.order + 1
 end
 
 function C:canAccess(items)
