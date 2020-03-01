@@ -24,7 +24,7 @@ function C:setup()
   self:loadObjective(Settings.settings.obj)
   self:loadMyChar(Settings.settings.mychar)
   self:loadSpawn(Settings.settings.spawn)
-  self:loadSeqSettings(Settings.settings.dboosts)
+  self:loadSeqSettings(Settings.settings.seqbreaks, Settings.settings.dboosts)
 
   background = lg.newImage('assets/background.png')
   self:draw()
@@ -86,15 +86,18 @@ function C:loadSpawn(spawn)
   settings.spawn.value = "override"
 end
 
-function C:loadSeqSettings(seq)
-  sequence.cthulhu.value = seq.cthulhu
-  sequence.chaco.value = seq.chaco
-  sequence.paxChaco.value = seq.paxChaco
-  sequence.flightlessHut.value = seq.flightlessHut
-  sequence.camp.value = seq.camp
-  sequence.sisters.value = seq.sisters
-  sequence.plantation.value = seq.plantation
-  sequence.rocket.value = seq.rocket
+function C:loadSeqSettings(breaks, seq)
+  if breaks then settings.seqbreak.value = breaks end
+  if breaks or breaks == nil then
+    sequence.cthulhu.value = seq.cthulhu
+    sequence.chaco.value = seq.chaco
+    sequence.paxChaco.value = seq.paxChaco
+    sequence.flightlessHut.value = seq.flightlessHut
+    sequence.camp.value = seq.camp
+    sequence.sisters.value = seq.sisters
+    sequence.plantation.value = seq.plantation
+    sequence.rocket.value = seq.rocket
+  end
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -151,11 +154,11 @@ settings.seqButton:onPress(function()
 end)
 
 sequence.allOn:onPress(function()
-  Screen:loadSeqSettings(_.map(Settings.settings.dboosts, function(k,v) return true end))
+  Screen:loadSeqSettings(nil, _.map(Settings.settings.dboosts, function(k,v) return true end))
 end)
 
 sequence.allOff:onPress(function()
-  Screen:loadSeqSettings(_.map(Settings.settings.dboosts, function(k,v) return false end))
+  Screen:loadSeqSettings(nil, _.map(Settings.settings.dboosts, function(k,v) return false end))
 end)
 
 sequence.close:onPress(function()
@@ -178,18 +181,29 @@ settings.customseed:onChange(function()
 end)
 
 settings.importshare:onPress(function()
-  local success, seed, sharesettings = pcall(function()
+  local success, seed, sharesettings, seq = pcall(function()
     local packed = love.data.decode("data", "base64", settings.sharecode.value)
-    local seed, settings = love.data.unpack("sB", packed)
-    return seed, settings
+    local seed, settings, seq = love.data.unpack("sBB", packed)
+    assert(#seed == 20)
+    return seed, settings, seq
   end)
 
   if success then 
     settings.importshare.text = "Sharecode Imported"
-    Screen:loadPuppy(bit.band(sharesettings, 4) ~= 0) -- settings & (0b00000001 << 2)
-    Screen:loadObjective(bit.band(sharesettings, 3)) -- settings & 0b00000011
-    Screen:loadSpawn(bit.brshift(bit.band(sharesettings, 24), 3)) -- (settings & 0b00011000) >> 3
+    Screen:loadPuppy(bit.band(sharesettings, 1) ~= 0) -- settings & 0b00000001
+    Screen:loadObjective(bit.brshift(bit.band(sharesettings, 14), 1)) -- (settings & 0b00001110) >> 1
+    Screen:loadSpawn(bit.brshift(bit.band(sharesettings, 112), 4)) -- (settings & 0b01110000) >> 4
     Screen:loadSeed(seed:gsub("^%s*(.-)%s*$", "%1")) -- trim any leading or trailing whitespace
+    Screen:loadSeqSettings(bit.band(sharesettings, 128) ~= 0, { -- (settings & 0b10000000)
+      cthulhu = bit.band(seq, 1) ~= 0,
+      chaco = bit.band(seq, 2) ~= 0,
+      paxChaco = bit.band(seq, 4) ~= 0,
+      flightlessHut = bit.band(seq, 8) ~= 0,
+      camp = bit.band(seq, 16) ~= 0,
+      sisters = bit.band(seq, 32) ~= 0,
+      plantation = bit.band(seq, 64) ~= 0,
+      rocket = bit.band(seq, 128) ~= 0
+    })
   else
     settings.importshare.text = "Invalid Sharecode!"
   end
