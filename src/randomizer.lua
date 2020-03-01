@@ -155,6 +155,7 @@ function C:_shuffleItems(tscFiles)
   local obj = self:getObjective()[1]
   obj.name = obj.name .. (", %s"):format(self.worldGraph.spawn)
   obj.script = obj.script .. self.worldGraph:getSpawnScript()
+  if self.worldGraph.seqbreak and self.worldGraph.dboosts.rocket.enabled then obj.script = "<FL+6400" .. obj.script end
   -- place the objective scripts in Start Point
   self:_fastFillItems({obj}, self.worldGraph:getObjectiveSpot())
 
