@@ -6,22 +6,36 @@ local C = Class:extend()
 
 local layout = Luigi(require 'ui.main')
 local settings = Luigi(require 'ui.settings')
-layout:setStyle(require 'ui.style')
-settings:setStyle(require 'ui.style')
-layout:setTheme(require 'lib.luigi.theme.dark')
-settings:setTheme(require 'lib.luigi.theme.dark')
+local sequence = Luigi(require 'ui.sequence')
+
+local style = require 'ui.style'
+local theme = require 'lib.luigi.theme.dark'
+
+layout:setStyle(style)
+settings:setStyle(style)
+sequence:setStyle(style)
+
+layout:setTheme(theme)
+settings:setTheme(theme)
+sequence:setTheme(theme)
 
 function C:setup()
-  self:loadSettings(Settings.settings.puppy, Settings.settings.obj, nil, Settings.settings.mychar, Settings.settings.spawn)
+  self:loadPuppy(Settings.settings.puppy)
+  self:loadObjective(Settings.settings.obj)
+  self:loadMyChar(Settings.settings.mychar)
+  self:loadSpawn(Settings.settings.spawn)
+  self:loadSeqSettings(Settings.settings.seqbreaks, Settings.settings.dboosts)
 
   background = lg.newImage('assets/background.png')
   self:draw()
   layout:show()
 end
 
-function C:loadSettings(puppy, obj, seed, mychar, spawn)
+function C:loadPuppy(puppy)
   settings.puppy.value = puppy
+end
 
+function C:loadObjective(obj)
   if obj == "objBadEnd" or obj == 1 then
     settings.objective.index = 1
   elseif obj == "objNormalEnd" or obj == 2 then
@@ -32,13 +46,17 @@ function C:loadSettings(puppy, obj, seed, mychar, spawn)
     settings.objective.index = 3
   end
   settings.objective.value = "override"
+end
 
+function C:loadSeed(seed)
   if seed ~= nil then
     settings.customseed.value = seed or ""
     settings.seedselect.value = true
     settings.seedrandom.value = false
   end
+end
 
+function C:loadMyChar(mychar)
   if mychar == "assets/myChar/Quote.bmp" then
     settings.mychar.index = 1
   elseif mychar == "assets/myChar/Curly.bmp" then
@@ -55,7 +73,9 @@ function C:loadSettings(puppy, obj, seed, mychar, spawn)
     settings.mychar.index = 7
   end
   settings.mychar.value = "override"
+end
 
+function C:loadSpawn(spawn)
   if spawn == "Start Point" or spawn == 0 then
     settings.spawn.index = 1
   elseif spawn == "Arthur's House" or spawn == 1 then
@@ -64,6 +84,20 @@ function C:loadSettings(puppy, obj, seed, mychar, spawn)
     settings.spawn.index = 3
   end
   settings.spawn.value = "override"
+end
+
+function C:loadSeqSettings(breaks, seq)
+  if breaks then settings.seqbreak.value = breaks end
+  if breaks or breaks == nil then
+    sequence.cthulhu.value = seq.cthulhu
+    sequence.chaco.value = seq.chaco
+    sequence.paxChaco.value = seq.paxChaco
+    sequence.flightlessHut.value = seq.flightlessHut
+    sequence.camp.value = seq.camp
+    sequence.sisters.value = seq.sisters
+    sequence.plantation.value = seq.plantation
+    sequence.rocket.value = seq.rocket
+  end
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
@@ -85,6 +119,16 @@ layout.go:onPress(function()
     Randomizer.mychar = settings.mychar.value
     Randomizer.worldGraph.spawn = settings.spawn.value
 
+    Randomizer.worldGraph.seqbreak = settings.seqbreak.value
+    Randomizer.worldGraph.dboosts.cthulhu.enabled = sequence.cthulhu.value
+    Randomizer.worldGraph.dboosts.chaco.enabled = sequence.chaco.value
+    Randomizer.worldGraph.dboosts.paxChaco.enabled = sequence.paxChaco.value
+    Randomizer.worldGraph.dboosts.flightlessHut.enabled = sequence.flightlessHut.value
+    Randomizer.worldGraph.dboosts.camp.enabled = sequence.camp.value
+    Randomizer.worldGraph.dboosts.sisters.enabled = sequence.sisters.value
+    Randomizer.worldGraph.dboosts.plantation.enabled = sequence.plantation.value
+    Randomizer.worldGraph.dboosts.rocket.enabled = sequence.rocket.value
+
     C:setStatus(Randomizer:randomize())
 
     layout.sharecode.text = "Copy Sharecode"
@@ -104,6 +148,24 @@ settings.closeButton:onPress(function()
   settings.sharecode.value = ""
 end)
 
+settings.seqButton:onPress(function()
+  sequence:show()
+  settings:hide()
+end)
+
+sequence.allOn:onPress(function()
+  Screen:loadSeqSettings(nil, _.map(Settings.settings.dboosts, function(k,v) return true end))
+end)
+
+sequence.allOff:onPress(function()
+  Screen:loadSeqSettings(nil, _.map(Settings.settings.dboosts, function(k,v) return false end))
+end)
+
+sequence.close:onPress(function()
+  sequence:hide()
+  settings:show()
+end)
+
 layout.sharecode:onPress(function()
   if Randomizer.sharecode ~= "" then
     love.system.setClipboardText(Randomizer.sharecode)
@@ -119,19 +181,29 @@ settings.customseed:onChange(function()
 end)
 
 settings.importshare:onPress(function()
-  local success, seed, sharesettings = pcall(function()
+  local success, seed, sharesettings, seq = pcall(function()
     local packed = love.data.decode("data", "base64", settings.sharecode.value)
-    local seed, settings = love.data.unpack("sB", packed)
-    return seed, settings
+    local seed, settings, seq = love.data.unpack("sBB", packed)
+    assert(#seed == 20)
+    return seed, settings, seq
   end)
 
   if success then 
     settings.importshare.text = "Sharecode Imported"
-    local pup = bit.band(sharesettings, 4) ~= 0
-    local obj = bit.band(sharesettings, 3)
-    local spn = bit.brshift(bit.band(sharesettings, 24), 3)
-    seed = seed:gsub("^%s*(.-)%s*$", "%1") -- trim any leading or trailing whitespace
-    Screen:loadSettings(pup, obj, seed, nil, spn)
+    Screen:loadPuppy(bit.band(sharesettings, 1) ~= 0) -- settings & 0b00000001
+    Screen:loadObjective(bit.brshift(bit.band(sharesettings, 14), 1)) -- (settings & 0b00001110) >> 1
+    Screen:loadSpawn(bit.brshift(bit.band(sharesettings, 112), 4)) -- (settings & 0b01110000) >> 4
+    Screen:loadSeed(seed:gsub("^%s*(.-)%s*$", "%1")) -- trim any leading or trailing whitespace
+    Screen:loadSeqSettings(bit.band(sharesettings, 128) ~= 0, { -- (settings & 0b10000000)
+      cthulhu = bit.band(seq, 1) ~= 0,
+      chaco = bit.band(seq, 2) ~= 0,
+      paxChaco = bit.band(seq, 4) ~= 0,
+      flightlessHut = bit.band(seq, 8) ~= 0,
+      camp = bit.band(seq, 16) ~= 0,
+      sisters = bit.band(seq, 32) ~= 0,
+      plantation = bit.band(seq, 64) ~= 0,
+      rocket = bit.band(seq, 128) ~= 0
+    })
   else
     settings.importshare.text = "Invalid Sharecode!"
   end

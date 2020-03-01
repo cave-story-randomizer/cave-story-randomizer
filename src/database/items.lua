@@ -2,21 +2,21 @@ local function lifeCapsule3()
   return {
     name = "Life Capsule",
     script = "<EVE0012",
-    attributes = {"nonProgressive"}
+    attributes = {"nonProgressive", "hp3"}
   }
 end
 local function lifeCapsule4()
   return {
     name = "Life Capsule",
     script = "<EVE0013",
-    attributes = {"nonProgressive"}
+    attributes = {"nonProgressive", "hp4"}
   }
 end
 local function lifeCapsule5()
   return {
     name = "Life Capsule",
     script = "<EVE0014",
-    attributes = {"nonProgressive"}
+    attributes = {"nonProgressive", "hp5"}
   }
 end
 
@@ -107,7 +107,7 @@ local function _itemData()
     mapSystem = {
       name = "Map System",
       script = "<EVE0052",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "map"}
     },
     locket = {
       name = "Silver Locket",

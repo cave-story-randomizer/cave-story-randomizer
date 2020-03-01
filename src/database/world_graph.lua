@@ -5,8 +5,16 @@ function _has(items, attribute)
   return _count(items, attribute, 1)
 end
 
+function _num(items, attribute)
+  return #_.filter(items, function(k,v) return _.contains(v.attributes, attribute) end)
+end
+
 function _count(items, attribute, num)
-  return #_.filter(items, function(k,v) return _.contains(v.attributes, attribute) end) >= num
+  return _num(items, attribute) >= num
+end
+
+function _hp(items, hp)
+  return 3 + (_num(items, "hp3") * 3) + (_num(items, "hp4") * 4) + (_num(items, "hp5") * 5)
 end
 
 local firstCave = Region:extend()
@@ -83,7 +91,7 @@ function arthur:new(worldGraph)
 
   self.requirements = function(self, items)
     if self.world:StartPoint() then
-      return _has(items, "arthurKey") and _has(items, "weaponSN")
+      return _has(items, "arthurKey") and _has(items, "weaponSN") and self.world.regions.mimigaVillage:canAccess(items)
     elseif self.world:Camp() then
       return self.world.regions.labyrinthB:canAccess(items)
     elseif self.world:Arthur() then
@@ -107,7 +115,7 @@ function eggCorridor1:new(worldGraph)
 
   self.requirements = function(self, items) return self.world.regions.arthur:canAccess(items) end
 
-  self.locations.cthulhu.requirements = function(self, items) return _has(items, "weaponSN") or _has(items, "flight") end
+  self.locations.cthulhu.requirements = function(self, items) return _has(items, "weaponSN") or _has(items, "flight") or self.region.world:_dboost(items, 'cthulhu') end
   self.locations.eventSue.requirements = function(self, items) return _has(items, "idCard") and _has(items, "weaponBoss") end
   self.locations.eventSue:setItem(self.world.items:getByKey("eventSue"))
 end
@@ -151,7 +159,7 @@ function grasstownEast:new(worldGraph)
 
   self.requirements = function(self, items)
     if not self.world.regions.arthur:canAccess(items) then return false end
-    if _has(items, "flight") or _has(items, "juice") then
+    if _has(items, "flight") or _has(items, "juice") or (self.world:_dboost(items, 'chaco') and _has(items, "weapon")) or self.world:_dboost(items, 'paxChaco') then
       if self.world.regions.grasstownWest:canAccess(items) then return true end
     end
     if _has(items, "eventKazuma") and _has(items, "weaponSN") and self.world.regions.plantation:canAccess(items) then return true end
@@ -160,7 +168,7 @@ function grasstownEast:new(worldGraph)
 
   self.locations.kazuma2.requirements = function(self, items) return _has(items, "rustyKey") end
   self.locations.execution.requirements = function(self, items) return _has(items, "weaponSN") end
-  self.locations.hutChest.requirements = function(self, items) return _has(items, "eventFans") or _has(items, "flight") end
+  self.locations.hutChest.requirements = function(self, items) return _has(items, "eventFans") or _has(items, "flight") or self.region.world:_dboost(items, 'flightlessHut') end
   self.locations.gumChest.requirements = function(self, items)
     if _has(items, "gumKey") and _has(items, "weaponBoss") then
       if _has(items, "eventFans") or _has(items, "flight") then return true end
@@ -259,7 +267,7 @@ function labyrinthW:new(worldGraph)
   self.locations.turboChaba.requirements = function(self, items) return _has(items, "machineGun") end
   self.locations.snakeChaba.requirements = function(self, items) return _has(items, "fireball") end
   self.locations.whimChaba.requirements = function(self, items) return _count(items, "polarStar", 2) end
-  self.locations.campChest.requirements = function(self, items) return _has(items, "flight") or self.region.world:Camp() end
+  self.locations.campChest.requirements = function(self, items) return _has(items, "flight") or self.region.world:Camp() or self.region.world:_dboost(items, 'camp') end
   self.locations.puuBlack.requirements = function(self, items) return _has(items, "clinicKey") and _has(items, "weaponBoss") end
 end
 
@@ -347,7 +355,7 @@ function eggCorridor2:new(worldGraph)
   end
 
   self.locations.dragonChest.requirements = function(self, items) return _has(items, "weaponSN") or _has(items, "eventCore") end
-  self.locations.sisters.requirements = function(self, items) return _has(items, "weaponBoss") end
+  self.locations.sisters.requirements = function(self, items) return _has(items, "weaponBoss") or (self.region.world:_dboost(items, 'sisters') and _has(items, "flight")) end
 end
 
 local outerWall = Region:extend()
@@ -399,7 +407,7 @@ function plantation:new(worldGraph)
   self.locations.sprinkler.requirements = function(self, items) return _has(items, "mask") end
   self.locations.megane.requirements = function(self, items) return _has(items, "brokenSprinkler") and _has(items, "mask") end
   self.locations.itoh.requirements = function(self, items) return _has(items, "letter") end
-  self.locations.plantCeiling.requirements = function(self, items) return _has(items, "flight") end
+  self.locations.plantCeiling.requirements = function(self, items) return _has(items, "flight") or self.region.world:_dboost(items, 'plantation') end
   self.locations.plantPup.requirements = function(self, items) return _has(items, "eventRocket") end
   self.locations.curlyShroom.requirements = function(self, items) return _has(items, "eventCurly") and _has(items, "maPignon") end
 
@@ -417,7 +425,7 @@ function lastCave:new(worldGraph)
     redDemon = Location("Red Demon Boss", "Priso2", "0300", self)
   }
 
-  self.requirements = function(self, items) return _has(items, "eventRocket") and _has(items, "weaponBoss") and _count(items, "booster", 2) end
+  self.requirements = function(self, items) return _has(items, "weaponBoss") and _count(items, "booster", 2) and (_has(items, "eventRocket") or (self.world:_dboost(items, 'rocket') and _has(items, "machineGun"))) end
 end
 
 local endgame = Region:extend()
@@ -441,6 +449,20 @@ function worldGraph:new(items)
   self.order = 0
   self.spawn = ""
 
+  self.seqbreak = false
+  self.dboosts = {
+    cthulhu = {hp = 3, enabled = true},
+    chaco = {hp = 5, enabled = true},
+    paxChaco = {hp = 10, enabled = true},
+    flightlessHut = {hp = 3, enabled = true},
+    -- revChaco = {hp = 3, enabled = true},
+    -- paxRevChaco = {hp = 8, enabled = true},
+    camp = {hp = 9, enabled = true},
+    sisters = {hp = 0, enabled = true},
+    plantation = {hp = 15, enabled = true},
+    rocket = {hp = 3, enabled = true},
+  }
+
   self.regions = {
     firstCave = firstCave(self),
     mimigaVillage = mimigaVillage(self),
@@ -461,6 +483,10 @@ function worldGraph:new(items)
     lastCave = lastCave(self),
     endgame = endgame(self)
   }
+end
+
+function worldGraph:_dboost(items, key)
+  return (self.seqbreak or self.dboosts[key].enabled) and _hp(items) > self.dboosts[key].hp
 end
 
 function worldGraph:StartPoint() return self.spawn == "Start Point" end

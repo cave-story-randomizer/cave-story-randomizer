@@ -16,9 +16,9 @@ require 'lib.bit'
 
 local random = require 'randomizer'
 local settings = require 'settings'
+Settings = settings()
 Randomizer = random()
 Screen = require 'ui.draw'
-Settings = settings()
 
 local csdirectory
 

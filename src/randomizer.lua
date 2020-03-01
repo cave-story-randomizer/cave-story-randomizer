@@ -308,21 +308,24 @@ function C:_updateSettings()
   Settings.settings.obj = self.obj
   Settings.settings.mychar = self.mychar
   Settings.settings.spawn = self.worldGraph.spawn
+  Settings.settings.seqbreaks = self.worldGraph.seqbreak
+  Settings.settings.dboosts = _.map(self.worldGraph.dboosts, function(k,v) return v.enabled end)
   Settings:update()
 end
 
 function C:_updateSharecode(seed)
   local settings = 0 -- 0b00000000
-  -- 0bXXXSSPOO
   -- P: single bit used for puppysanity
-  -- O: two bits used for objective
-  -- S: two bits used for spawn location
-  -- X: unused
+  -- O: three bits used for objective
+  -- S: three bits used for spawn location
+  -- B: single bit used for sequence breaks
+  -- 0bBSSSOOOP
 
   -- bitshift intervals
-  local obj = 0
-  local pup = 2
-  local spn = 3
+  local obj = 1
+  local pup = 0
+  local spn = 4
+  local brk = 7
 
   if self.obj == "objBadEnd" then
     settings = bit.bor(settings, bit.blshift(1, obj))
@@ -341,11 +344,24 @@ function C:_updateSharecode(seed)
     settings = bit.bor(settings, bit.blshift(2, spn))
   end
 
+  local seq = 0
+  if self.worldGraph.seqbreak then
+    settings = bit.bor(settings, bit.blshift(1, brk)) 
+    if self.worldGraph.dboosts.cthulhu.enabled then seq = bit.bor(seq, 1) end
+    if self.worldGraph.dboosts.chaco.enabled then seq = bit.bor(seq, 2) end
+    if self.worldGraph.dboosts.paxChaco.enabled then seq = bit.bor(seq, 4) end
+    if self.worldGraph.dboosts.flightlessHut.enabled then seq = bit.bor(seq, 8) end
+    if self.worldGraph.dboosts.camp.enabled then seq = bit.bor(seq, 16) end
+    if self.worldGraph.dboosts.sisters.enabled then seq = bit.bor(seq, 32) end
+    if self.worldGraph.dboosts.plantation.enabled then seq = bit.bor(seq, 64) end
+    if self.worldGraph.dboosts.rocket.enabled then seq = bit.bor(seq, 128) end
+  end
+
   if #seed < 20 then
     seed = seed .. (" "):rep(20-#seed)
   end
 
-  local packed = love.data.pack("data", "sB", seed, settings)
+  local packed = love.data.pack("data", "sBB", seed, settings, seq)
   self.sharecode = love.data.encode("string", "base64", packed)
 
   logNotice(("Sharecode: %s"):format(self.sharecode))
