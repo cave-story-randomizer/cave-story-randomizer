@@ -78,7 +78,7 @@ local function _itemData()
     snake = {
       name = "Snake",
       script = "<EVE0005",
-      attributes = {"weapon", "weaponBoss", "nonProgressive"}
+      attributes = {"weapon", "weaponBoss", "nonProgressive", "weaponStrong"}
     },
     bubbler = {
       name = "Bubbler",
