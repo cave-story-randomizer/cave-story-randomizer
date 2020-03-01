@@ -37,7 +37,6 @@ function C:new()
   self.obj = ""
   self.sharecode = ""
   self.mychar = ""
-  self.seqbreak = false
 end
 
 function C:setPath(path)
@@ -309,6 +308,8 @@ function C:_updateSettings()
   Settings.settings.obj = self.obj
   Settings.settings.mychar = self.mychar
   Settings.settings.spawn = self.worldGraph.spawn
+  Settings.settings.seqbreaks = self.worldGraph.seqbreak
+  Settings.settings.dboosts = _.map(self.worldGraph.dboosts, function(k,v) return v.enabled end)
   Settings:update()
 end
 

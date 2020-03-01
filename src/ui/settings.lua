@@ -6,11 +6,22 @@ return { style = 'dialog',
         { type = 'label', text = 'Seed', minheight = 32 },
         {
           { type = 'radio', group = 'seed', text = 'Use random seed', value = true, id = 'seedrandom', minheight = 27 },
-          { flow = 'y', { type = 'radio', group = 'seed', text = 'Use custom seed', id = 'seedselect', minheight = 27 }, {{ type = 'text', id = 'customseed', width = 200, minheight = 32}, flow = 'x', { type = 'label', id = 'seedcount' }} }
+          { flow = 'y', { type = 'radio', group = 'seed', text = 'Use custom seed', id = 'seedselect', minheight = 27 }, 
+            {
+              flow = 'x',
+              { type = 'text', id = 'customseed', width = 200, minheight = 32},
+              { type = 'label', id = 'seedcount' }
+            }
+          }
         },
         { type = 'label', text = 'Randomization Options', minheight = 32 },
         { type = 'check', value = false, id = 'puppy', text = "Puppysanity", minheight = 27 },
-        { height = 64 },
+        { flow = 'x', 
+          { type = 'check', value = false, id = 'seqbreak', text = "Sequence breaks", minheight = 32, width =  170},
+          { type = 'button', style = 'dialogButton', text = "Modify", id = 'seqButton', width = 70, align = 'center' },
+          { width = false }
+        },
+        { height = 'auto' },
       },
       {
         { type = 'label', text = 'Objective', minheight = 32 },
