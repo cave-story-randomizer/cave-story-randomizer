@@ -107,6 +107,7 @@ function eggCorridor1:new(worldGraph)
 
   self.requirements = function(self, items) return self.world.regions.arthur:canAccess(items) end
 
+  self.locations.cthulhu.requirements = function(self, items) return _has(items, "weaponSN") or _has(items, "flight") end
   self.locations.eventSue.requirements = function(self, items) return _has(items, "idCard") and _has(items, "weaponBoss") end
   self.locations.eventSue:setItem(self.world.items:getByKey("eventSue"))
 end
@@ -345,7 +346,7 @@ function eggCorridor2:new(worldGraph)
     return false
   end
 
-  self.locations.dragonChest.requirements = function(self, items) return _has(items, "weapon") end
+  self.locations.dragonChest.requirements = function(self, items) return _has(items, "weaponSN") or _has(items, "eventCore") end
   self.locations.sisters.requirements = function(self, items) return _has(items, "weaponBoss") end
 end
 
