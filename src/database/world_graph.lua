@@ -495,8 +495,8 @@ function worldGraph:Camp() return self.spawn == "Camp" end
 
 function worldGraph:getSpawnScript()
   if self:StartPoint() then return "<FL+6200<EVE0091" end
-  if self:Arthur() then return "<FL+6201<FL+0301<FL+0302<TRA0001:0094:0008:0004" end
-  if self:Camp() then return "<FL+6202<FL+0301<FL+0302<TRA0040:0094:0014:0009" end
+  if self:Arthur() then return "<FL+6201<FL+0301<FL+0302<FL+1641<FL+1642<TRA0001:0094:0008:0004" end
+  if self:Camp() then return "<FL+6202<FL+0301<FL+0302<FL+1641<FL+1642<TRA0040:0094:0014:0009" end
 end
 
 function worldGraph:getLocations()
