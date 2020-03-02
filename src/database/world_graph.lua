@@ -31,7 +31,7 @@ function firstCave:new(worldGraph)
     if self.world:StartPoint() then
       return true
     elseif self.world:Arthur() or self.world:Camp() then
-      return _has(items, "flight") and self.world.regions.mimigaVillage:canAccess(items)
+      return _has(items, "flight") and _has(items, "weaponSN") and self.world.regions.mimigaVillage:canAccess(items)
     end
   end
 
