@@ -1,6 +1,7 @@
 local Items = require 'database.items'
 local TscFile  = require 'tsc_file'
 local WorldGraph = require 'database.world_graph'
+local Music = require 'database.music'
 
 local C = Class:extend()
 
@@ -12,6 +13,12 @@ do
       if not _.contains(TSC_FILES, filename) then
         table.insert(TSC_FILES, filename)
       end
+    end
+  end
+  for key, cue in pairs(Music():getCues()) do
+    local filename = cue.map
+    if not _.contains(TSC_FILES, filename) then
+      table.insert(TSC_FILES, filename)
     end
   end
 end
@@ -32,6 +39,8 @@ function C:new()
   self._isCaveStoryPlus = false
   self.itemDeck = Items()
   self.worldGraph = WorldGraph(self.itemDeck)
+  self.music = Music()
+
   self.customseed = nil
   self.puppy = false
   self.obj = ""
@@ -61,8 +70,10 @@ function C:randomize()
   self:_updateSharecode(seed)
 
   local tscFiles = self:_createTscFiles(dirStage)
-  -- self:_writePlaintext(tscFiles)
+  
   self:_shuffleItems(tscFiles)
+  self.music:randomize(tscFiles)
+
   self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
   self:_writeLog()
