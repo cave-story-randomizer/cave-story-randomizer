@@ -603,7 +603,7 @@ end
 function worldGraph:getHintableLocations(obj)
   local locations = {}
   for k, location in pairs(_.shuffle(self:getFilledLocations(true))) do
-    if obj == "objBadEnd" and location.item.name == "Rusty Key" or location.item.name == "ID Card" then 
+    if (obj == "objBadEnd" and location.item.name == "Rusty Key") or (obj ~= "objBadEnd" and location.item.name == "ID Card") then 
       table.insert(locations, 1, location) -- put that item on the top to guarantee a hint for it
     else
       table.insert(locations, location)
