@@ -3,7 +3,7 @@ return { style = 'dialog',
   { style = 'dialogBody', padding = 24, flow = 'x',
     {
       { type = 'label', text = 'Type of randomization' },
-      { type = 'radio', group = 'music', text = 'Shuffle', id = 'shuffle', value = true, minheight = 27 },
+      { type = 'radio', group = 'music', text = 'Shuffle', id = 'shuffle', minheight = 27 },
       { type = 'radio', group = 'music', text = 'Random', id = 'random', minheight = 27 },
       { type = 'radio', group = 'music', text = 'Chaos', id = 'chaos', minheight = 27 },
       { type = 'label', text = 'Other settings' },

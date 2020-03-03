@@ -31,7 +31,10 @@ function C:getDefaults()
       sisters = true,
       plantation = true,
       rocket = true
-    }
+    },
+    musicShuffle = false,
+    musicBeta = false,
+    musicFlavor = "Shuffle"
   }
 end
 
@@ -48,18 +51,21 @@ function C:serialize()
     return line .. "}"
   end
 
-  local line = "return {\r\n  "
-
-  line = line .. ("csdirectory = [[%s]],\r\n  "):format(self.settings.csdirectory or "")
-  line = line .. ("puppy = %s,\r\n  "):format(self.settings.puppy)
-  line = line .. ("obj = %q,\r\n  "):format(self.settings.obj or "")
-  line = line .. ("mychar = %q,\r\n  "):format(self.settings.mychar or "")
-  line = line .. ("spawn = %q,\r\n  "):format(self.settings.spawn or "")
+  local line = "return {\r\n"
+  local tab = "  "
+  line = line .. tab .. ("csdirectory = [[%s]],\r\n"):format(self.settings.csdirectory or "")
+  line = line .. tab .. ("puppy = %s,\r\n"):format(self.settings.puppy)
+  line = line .. tab .. ("obj = %q,\r\n"):format(self.settings.obj or "")
+  line = line .. tab .. ("mychar = %q,\r\n"):format(self.settings.mychar or "")
+  line = line .. tab .. ("spawn = %q,\r\n"):format(self.settings.spawn or "")
   local dboost = dboosts()
-  line = line .. ("seqbreaks = %s,\r\n  "):format(self.settings.seqbreaks)
-  line = line .. ("dboosts = %s,\r\n  "):format(dboost)
+  line = line .. tab .. ("seqbreaks = %s,\r\n"):format(self.settings.seqbreaks)
+  line = line .. tab .. ("dboosts = %s,\r\n"):format(dboost)
+  line = line .. tab .. ("musicShuffle = %s,\r\n"):format(self.settings.musicShuffle)
+  line = line .. tab .. ("musicBeta = %s,\r\n"):format(self.settings.musicBeta)
+  line = line .. tab .. ("musicFlavor = %q\r\n"):format(self.settings.musicFlavor)
   
-  return line .. "\r\n}"
+  return line .. "}"
 end
 
 function C:getSettings()

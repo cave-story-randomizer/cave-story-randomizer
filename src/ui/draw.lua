@@ -28,6 +28,7 @@ function C:setup()
   self:loadMyChar(Settings.settings.mychar)
   self:loadSpawn(Settings.settings.spawn)
   self:loadSeqSettings(Settings.settings.seqbreaks, Settings.settings.dboosts)
+  self:loadMusicSettings(Settings.settings.musicShuffle, Settings.settings.musicBeta, Settings.settings.musicFlavor)
 
   background = lg.newImage('assets/background.png')
   self:draw()
@@ -101,6 +102,14 @@ function C:loadSeqSettings(breaks, seq)
     sequence.plantation.value = seq.plantation
     sequence.rocket.value = seq.rocket
   end
+end
+
+function C:loadMusicSettings(shuffle, beta, flavor)
+  settings.music.value = shuffle
+  music.beta.value = beta
+  if flavor == "Shuffle" then music.shuffle.value = true end
+  if flavor == "Random" then music.random.value = true end
+  if flavor == "Chaos" then music.random.value = true end
 end
 
 layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION

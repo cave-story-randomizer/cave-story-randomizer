@@ -323,6 +323,9 @@ function C:_updateSettings()
   Settings.settings.spawn = self.worldGraph.spawn
   Settings.settings.seqbreaks = self.worldGraph.seqbreak
   Settings.settings.dboosts = _.map(self.worldGraph.dboosts, function(k,v) return v.enabled end)
+  Settings.settings.musicShuffle = self.shuffleMusic
+  Settings.settings.musicBeta = self.music.betaEnabled
+  Settings.settings.musicFlavor = self.music.flavor
   Settings:update()
 end
 
