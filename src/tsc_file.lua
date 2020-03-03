@@ -19,20 +19,6 @@ function C:new(path)
 
   assert(file:close())
   assert(file:release())
-
-  -- Determine set of items which can be replaced later.
-  --[[
-  self._unreplaced = {}
-  self._mapName = path:match("^.+/(.+)$")
-  for k, v in pairs(ITEM_DATA) do repeat
-    if (v.map .. '.tsc') ~= self._mapName then
-      break -- continue
-    end
-    local item = _.clone(v)
-    table.insert(self._unreplaced, item)
-  until true end
-  self._unreplaced = _.shuffle(self._unreplaced)
-  ]]
 end
 
 function C:hasUnreplacedItems()
@@ -48,103 +34,51 @@ function C:placeItemAtLocation(item, location)
   end
 end
 
-function C:replaceItem(replacement)
-  assert(self:hasUnreplacedItems())
-  local key = self._unreplaced[#self._unreplaced].key
-  self:replaceSpecificItem(key, replacement)
+function C:placeSongAtCue(songid, event, map, originalid)
+  local wasChanged
+  self._text, wasChanged = self:_stringReplace(self._text, "<CMU" .. originalid, "<CMU" .. songid, event, {"<CMU0015", "<CMU0000"})
+  if not wasChanged then
+    local template = "Unable to replace [%s] event #%s's music cue with %q."
+    logWarning(template:format(map, event, songid))
+  end
 end
 
-function C:replaceSpecificItem(originalKey, replacement)
-  -- Fetch item with key matching originalKey.
-  local original
-  for index, item in ipairs(self._unreplaced) do
-    if item.key == originalKey then
-      original = item
-      table.remove(self._unreplaced, index)
-      break
+function C:_stringReplace(text, needle, replacement, label, overrides)
+  overrides = overrides or {}
+  local pStart, pEnd = self:_getLabelPositionRange(label)
+
+  local i, o = -1, -1
+  while(o <= i) do
+    o = nil
+    i = text:find(needle, pStart)
+
+    if i == nil then
+      logDebug(('Unable to replace "%s" with "%s"'):format(needle, replacement))
+      return text, false
+    elseif i > pEnd then
+      -- This is totally normal and can be ignored.
+      logDebug(('Found "%s", but was outside of label.'):format(needle, replacement))
+      return text, false
     end
-  end
-  assert(original, 'No unreplaced item with key: ' .. originalKey)
 
-  -- Log change
-  local template = "[%s] %s -> %s"
-  logNotice(template:format(self._mapName, original.name, replacement.name))
-
-  -- Replace before.
-  if original.replaceBefore then
-    for needle, replacement in pairs(original.replaceBefore) do
-      local wasChanged
-      self._text, wasChanged = self:_stringReplace(self._text, needle, replacement, original.label)
-
-      -- Log error if replace was not optional.
-      if wasChanged == false then
-        local wasOptional = false
-        for _, pattern in ipairs(OPTIONAL_REPLACES) do
-          if needle:find(pattern, 1, true) then
-            wasOptional = true
-            break
-          end
-        end
-        if wasOptional == false then
-          local template = 'Unable to replace [%s] "%s" with "%s".'
-          logError(template:format(original.map, needle, replacement))
+    -- find the earliest occurence of an override
+    for k,v in ipairs(overrides) do
+      local over = text:find(v, pStart)
+      if over ~= nil then
+        if o ~= nil then
+          o = math.min(o, over)
+        else
+          o = over
         end
       end
     end
+
+    -- no overrides found
+    if o == nil then break end
+
+    pStart = o+1
   end
 
-  -- Replace attributes.
-  self:_replaceAttribute(original, replacement, 'command')
-  self:_replaceAttribute(original, replacement, 'getText')
-  self:_replaceAttribute(original, replacement, 'displayCmd')
-  self:_replaceAttribute(original, replacement, 'music')
-end
-
-function C:_replaceAttribute(original, replacement, attribute)
-  local originalTexts = original[attribute]
-  if originalTexts == nil or originalTexts == '' then
-    return
-  elseif type(originalTexts) == 'string' then
-    originalTexts = {originalTexts}
-  end
-
-  local replaceText = replacement[attribute] or ''
-  if type(replaceText) == 'table' then
-    replaceText = replaceText[1]
-  end
-  -- Fix: After collecting Curly's Panties or Chako's Rouge, music would go silent.
-  if attribute == 'music' and replaceText == '' then
-    replaceText = "<CMU0010"
-  end
-
-  -- Loop through each possible original value until we successfully replace one.
-  for _, originalText in ipairs(originalTexts) do repeat
-    if originalText == "" then
-      break -- continue
-    end
-    local changed
-    self._text, changed = self:_stringReplace(self._text, originalText, replaceText, original.label)
-    if changed then
-      return
-    end
-  until true end
-
-  local logMethod = (attribute == 'command') and logError or logWarning
-  local template = 'Unable to replace original "%s" for [%s] %s.'
-  logMethod(template:format(attribute, original.map, original.name))
-end
-
-function C:_stringReplace(text, needle, replacement, label)
-  local pStart, pEnd = self:_getLabelPositionRange(label)
-  local i = text:find(needle, pStart)
-  if i == nil then
-    logNotice(('Unable to replace "%s" with "%s"'):format(needle, replacement))
-    return text, false
-  elseif i > pEnd then
-    -- This is totally normal and can be ignored.
-    logNotice(('Found "%s", but was outside of label.'):format(needle, replacement))
-    return text, false
-  end
   local len = needle:len()
   local j = i + len - 1
   assert((i % 1 == 0) and (i > 0) and (i <= j), tostring(i))
@@ -170,7 +104,7 @@ function C:_getLabelPositionRange(label)
 
   assert(type(label) == 'string')
   assert(#label == 4)
-  assert(tonumber(label) >= 1)
+  assert(tonumber(label) >= 0)
   assert(tonumber(label) <= 9999)
 
   local i = 1

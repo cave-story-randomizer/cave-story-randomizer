@@ -1,6 +1,7 @@
 local Items = require 'database.items'
 local TscFile  = require 'tsc_file'
 local WorldGraph = require 'database.world_graph'
+local Music = require 'database.music'
 
 local C = Class:extend()
 
@@ -12,6 +13,12 @@ do
       if not _.contains(TSC_FILES, filename) then
         table.insert(TSC_FILES, filename)
       end
+    end
+  end
+  for key, cue in pairs(Music():getCues()) do
+    local filename = cue.map
+    if not _.contains(TSC_FILES, filename) then
+      table.insert(TSC_FILES, filename)
     end
   end
 end
@@ -32,11 +39,14 @@ function C:new()
   self._isCaveStoryPlus = false
   self.itemDeck = Items()
   self.worldGraph = WorldGraph(self.itemDeck)
+  self.music = Music()
+
   self.customseed = nil
   self.puppy = false
   self.obj = ""
   self.sharecode = ""
   self.mychar = ""
+  self.shuffleMusic = false
 end
 
 function C:setPath(path)
@@ -61,8 +71,10 @@ function C:randomize()
   self:_updateSharecode(seed)
 
   local tscFiles = self:_createTscFiles(dirStage)
-  -- self:_writePlaintext(tscFiles)
+
   self:_shuffleItems(tscFiles)
+  if self.shuffleMusic then self.music:shuffleMusic(tscFiles) end
+
   self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
   self:_writeLog()
@@ -311,6 +323,9 @@ function C:_updateSettings()
   Settings.settings.spawn = self.worldGraph.spawn
   Settings.settings.seqbreaks = self.worldGraph.seqbreak
   Settings.settings.dboosts = _.map(self.worldGraph.dboosts, function(k,v) return v.enabled end)
+  Settings.settings.musicShuffle = self.shuffleMusic
+  Settings.settings.musicBeta = self.music.betaEnabled
+  Settings.settings.musicFlavor = self.music.flavor
   Settings:update()
 end
 
