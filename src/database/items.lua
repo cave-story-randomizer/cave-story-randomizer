@@ -119,7 +119,7 @@ local function _itemData()
       name = "Map System",
       script = "<EVE0052",
       attributes = {"nonProgressive", "map"},
-      hints = {"the Map System", "a map"}
+      hints = {"the Map System", "a map", "an electronic device"}
     },
     locket = {
       name = "Silver Locket",
@@ -137,7 +137,7 @@ local function _itemData()
       name = "ID Card",
       script = "<EVE0057",
       attributes = {"mandatory"},
-      hints = {"the ID Card", "a Mimiga's item"}
+      hints = {"the ID Card", "an electronic device"}
     },
     santaKey = {
       name = "Santa's Key",
@@ -324,7 +324,7 @@ local function _itemData()
       name = "Controller",
       script = "<EVE0077",
       attributes = {"mandatory"},
-      hints = {"the Controller", "a rocket component"}
+      hints = {"the Controller", "a rocket component", "an electronic device"}
     },
     mushroomBadge = {
       name = "Mushroom Badge",
