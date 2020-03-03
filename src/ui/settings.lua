@@ -21,6 +21,11 @@ return { style = 'dialog',
           { type = 'button', style = 'dialogButton', text = "Modify", id = 'seqButton', width = 70, align = 'center' },
           { width = false }
         },
+        { flow = 'x',
+          { type = 'check', value = false, id = 'music', text = "Randomize music", minheight = 32, width = 170},
+          { type = 'button', style = 'dialogButton', text = "Modify", id = 'musicButton', width = 70, align = 'center' },
+          { width = false }
+        },
         { height = 'auto' },
       },
       {

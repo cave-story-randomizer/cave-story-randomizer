@@ -46,6 +46,7 @@ function C:new()
   self.obj = ""
   self.sharecode = ""
   self.mychar = ""
+  self.shuffleMusic = false
 end
 
 function C:setPath(path)
@@ -70,9 +71,9 @@ function C:randomize()
   self:_updateSharecode(seed)
 
   local tscFiles = self:_createTscFiles(dirStage)
-  
+
   self:_shuffleItems(tscFiles)
-  self.music:randomize(tscFiles)
+  if self.shuffleMusic then self.music:shuffleMusic(tscFiles) end
 
   self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)

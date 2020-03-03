@@ -178,6 +178,7 @@ function music:new()
   self.betaEnabled = false
   self.songs = songs
   self.cues = cues
+  self.flavor = "Shuffle"
 end
 
 local _isValid =  function(key, song, self)
@@ -192,8 +193,14 @@ function music:getCues()
   return self.cues
 end
 
+function music:shuffleMusic(tscFiles)
+  if self.flavor == "Shuffle" then self:_shuffle(tscFiles) end
+  if self.flavor == "Random" then self:_random(tscFiles) end
+  if self.flavor == "Chaos" then self:_chaos(tscFiles) end
+end
+
 -- SHUFFLE songs: every cue with a given song becomes the same, new song
-function music:shuffle(tscFiles)
+function music:_shuffle(tscFiles)
   local shuffled = self:getShuffledSongs()
 
   local idmap = _.map(self.songs, function (k,v)
@@ -209,11 +216,20 @@ function music:shuffle(tscFiles)
 end
 
 -- RANDOMIZE songs: any cue can play any song
-function music:randomize(tscFiles)
+function music:_random(tscFiles)
   for k,cue in pairs(self.cues) do
     cue.songid = self:getShuffledSongs()[1].id
   end
   self:writeCues(tscFiles)
+end
+
+-- CHAOTICALLY RANDOMIZE songs: nearly any <CMU can play any song
+function music:_chaos(tscFiles)
+  for k,cue in pairs(self.cues) do
+    for k,event in ipairs(cue.events) do
+      tscFiles[cue.map]:placeSongAtCue(self:getShuffledSongs()[1].id, event, cue.map, cue.default)
+    end
+  end
 end
 
 function music:writeCues(tscFiles)

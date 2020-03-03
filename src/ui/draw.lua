@@ -7,6 +7,7 @@ local C = Class:extend()
 local layout = Luigi(require 'ui.main')
 local settings = Luigi(require 'ui.settings')
 local sequence = Luigi(require 'ui.sequence')
+local music = Luigi(require 'ui.music')
 
 local style = require 'ui.style'
 local theme = require 'lib.luigi.theme.dark'
@@ -14,10 +15,12 @@ local theme = require 'lib.luigi.theme.dark'
 layout:setStyle(style)
 settings:setStyle(style)
 sequence:setStyle(style)
+music:setStyle(style)
 
 layout:setTheme(theme)
 settings:setTheme(theme)
 sequence:setTheme(theme)
+music:setTheme(theme)
 
 function C:setup()
   self:loadPuppy(Settings.settings.puppy)
@@ -106,6 +109,14 @@ layout.twitter.text = '(@shruuu and @duncathan_salt)'
 
 layout.footer.text = 'Original randomizer:\r\nshru.itch.io/cave-story-randomizer'
 
+music.panel.text = [[Shuffle: remap every song to a new song. For example, all instances of Mischievous Robot become Pulse. Songs may remap to themselves.
+
+Random: remap every cue to a new song. For example, entering the Egg Corridor by any means plays Meltdown 2.
+
+Chaos: remap every <CMU to a new song. For example, teleporting to the Egg Corridor plays Charge, but entering Egg Corridor from Cthulhu's Abode plays Run!
+
+Beta music: include Wind Fortress, Halloween 2, People of the Root, Pier Walk, and Snoopy Cake in the potential songs. Only compatible with the included Doukutsu.exe - no other platforms.]]
+
 layout.go:onPress(function()
   Randomizer:new()
 
@@ -128,6 +139,12 @@ layout.go:onPress(function()
     Randomizer.worldGraph.dboosts.sisters.enabled = sequence.sisters.value
     Randomizer.worldGraph.dboosts.plantation.enabled = sequence.plantation.value
     Randomizer.worldGraph.dboosts.rocket.enabled = sequence.rocket.value
+
+    Randomizer.shuffleMusic = settings.music.value
+    Randomizer.music.betaEnabled = music.beta.value
+    if music.shuffle.value then Randomizer.music.flavor = "Shuffle" end
+    if music.random.value then Randomizer.music.flavor = "Random" end
+    if music.chaos.value then Randomizer.music.flavor = "Chaos" end
 
     C:setStatus(Randomizer:randomize())
 
@@ -153,6 +170,11 @@ settings.seqButton:onPress(function()
   settings:hide()
 end)
 
+settings.musicButton:onPress(function()
+  music:show()
+  settings:hide()
+end)
+
 sequence.allOn:onPress(function()
   Screen:loadSeqSettings(nil, _.map(Settings.settings.dboosts, function(k,v) return true end))
 end)
@@ -163,6 +185,11 @@ end)
 
 sequence.close:onPress(function()
   sequence:hide()
+  settings:show()
+end)
+
+music.close:onPress(function()
+  music:hide()
   settings:show()
 end)
 
