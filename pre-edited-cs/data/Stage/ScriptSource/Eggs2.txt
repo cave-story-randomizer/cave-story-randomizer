@@ -56,9 +56,7 @@ house?<YNJ0000<CLO<FL+0159
 <ANP0201:0000:0002<END
 
 #0210
-<PRI<MSG<TURThere was this huge explosion!
-When I came to, it all looked
-like this.<NOD<END
+<EVE0000
 
 #0300
 #0301

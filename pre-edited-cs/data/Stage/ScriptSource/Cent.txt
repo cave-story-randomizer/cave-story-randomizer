@@ -162,15 +162,7 @@ up with something around here...<NOD<CLRMan, I'm hungry...<NOD<END
 #0300
 #0301
 #0310
-<PRI<SAT
-<FLJ1045:0313
-<FLJ1041:0311
-<FLJ1044:0312
-<MSGA man from the surface, the
-Doctor, is using the Mimigas to
-cultivate red flowers.<NOD<CLRThis isn't the first time
-this sort of thing has
-happened...<NOD<END
+<EVE0000
 #0311
 <PRI<MSGFound this one lying in the
 spring.<NOD

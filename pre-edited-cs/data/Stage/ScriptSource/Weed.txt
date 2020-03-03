@@ -94,9 +94,7 @@ the door.<NOD<END
 <PRI<DNP0200<FL+0210<EVE0700
 
 #0201
-<PRI<FLJ0228:0207<FL+0228<MSG<TUROho. A soldier from the surface?
-I thought the war was over
-already.<NOD<CLR<TURWell, whatever.<NOD<CLO<EVE0207
+<EVE0000
 
 
 
@@ -109,17 +107,7 @@ already.<NOD<CLR<TURWell, whatever.<NOD<CLO<EVE0207
 <CNP0202:0001:0000<END
 
 #0205
-<FLJ0481:0206
-<PRI<MSG<TURThe fans aren't running.<NOD
-Someone's cut the power to
-this area.<NOD<CLR
-<TURIf you want to get them working
-again, you'll have to find the
-Power Room.<NOD<END
-#0206
-<PRI<MSG<TURLet me give you a tip.<NOD<CLR<TURIf you hold the jump button
-while a fan blows you around,
-you'll fly even higher.<NOD<END
+<EVE0000
 
 #0207
 <PRI<MSG<TURIf you're going on ahead,

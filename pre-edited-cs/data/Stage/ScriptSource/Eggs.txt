@@ -44,10 +44,7 @@ house?<YNJ0000<CLO
 #0111
 <PRI<DNP0110<FAO0004<TRA0021:0094:0010:0009
 #0200
-<PRI<MSGI'd watch out if I were you.<NOD
-That white thing on the
-bottom?<NOD
-One touch and POW, it's over.<NOD<END
+<EVE0000
 #0300
 #0301
 #0400

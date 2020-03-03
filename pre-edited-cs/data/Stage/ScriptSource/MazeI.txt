@@ -42,7 +42,7 @@
 <DNP0204<DNP0205
 <FOM0032<WAI0100
 <FOM0016
-<DNP0500<DNP0502<MYD0000<END
+<MYD0000<END
 
 #0403
 <KEY<MSGThe door is open.<NOD<END
@@ -51,23 +51,12 @@
 
 
 #0500
-<PRI<MSGI bet Misery tossed you
-down here.<NOD
-You poor thing...<NOD
-This is the island's trash heap.<NOD
-Once you get in,
-you never get out...<NOD<END
+<EVE0000
 
 #0501
 
 #0502
-<PRI<MSGThe switch that opens this
-door is supposed to be up top
-somewhere.<NOD
-But the footing's tricky up
-there.<NOD
-I fell over and over again
-until I broke my legs.<NOD<END
+<EVE0000
 
 #0503
 <PRI<MSGThere is no reply.<NOD<END

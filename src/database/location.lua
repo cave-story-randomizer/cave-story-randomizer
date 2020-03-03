@@ -1,10 +1,11 @@
 local C = Class:extend()
 
-function C:new(name, map, event, region)
+function C:new(name, map, event, region, hints)
   self.name = name
   self.map = map
   self.event = event
   self.region = region
+  self.hintList = hints or {}
 end
 
 function C:fill(item, items)
@@ -38,6 +39,10 @@ function C:writeItem(tscFiles, item)
   end
   if self.map == nil or self.event == nil or item.script == nil then return end
   tscFiles[self.map]:placeItemAtLocation(item, self)
+end
+
+function C:getHint()
+  return _.append(self.region.hintList, self.hintList), self.item.hints
 end
 
 return C
