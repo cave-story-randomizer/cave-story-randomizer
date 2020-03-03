@@ -212,6 +212,7 @@ function C:_shuffleItems(tscFiles)
     logWarning(("Trying to fill more optional items than there are locations! Items: %d Locations: %d"):format(opt, loc))
   end
   self:_fastFillItems(optional, shuffle(self.worldGraph:getEmptyLocations()))
+  self:_generateHints()
 
   self.worldGraph:writeItems(tscFiles)
   self.worldGraph:logLocations()
@@ -243,6 +244,13 @@ function C:_fastFillItems(items, locations)
     local item = _.pop(items)
     if item == nil then break end -- no items left to place, but there are still locations open
     location:setItem(item)
+  end
+end
+
+function C:_generateHints()
+  local toHint = _.shuffle(self.worldGraph:getHintableLocations(self.obj))
+  for k, hintLocation in ipairs(_.shuffle(self.worldGraph:getHintLocations())) do
+    hintLocation.item = self.worldGraph.items:createHint(_.pop(toHint))
   end
 end
 

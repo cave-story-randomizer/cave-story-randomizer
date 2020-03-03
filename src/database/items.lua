@@ -2,21 +2,24 @@ local function lifeCapsule3()
   return {
     name = "Life Capsule",
     script = "<EVE0012",
-    attributes = {"nonProgressive", "hp3"}
+    attributes = {"nonProgressive", "hp3", "helpful"},
+    hints = {"a Life Capsule", "some health", "a little HP"}
   }
 end
 local function lifeCapsule4()
   return {
     name = "Life Capsule",
     script = "<EVE0013",
-    attributes = {"nonProgressive", "hp4"}
+    attributes = {"nonProgressive", "hp4", "helpful"},
+    hints = {"a Life Capsule", "some health", "some decent HP"}
   }
 end
 local function lifeCapsule5()
   return {
     name = "Life Capsule",
     script = "<EVE0014",
-    attributes = {"nonProgressive", "hp5"}
+    attributes = {"nonProgressive", "hp5", "helpful"},
+    hints = {"a Life Capsule", "some health", "a lot of HP"}
   }
 end
 
@@ -24,14 +27,14 @@ local function missiles()
   return {
     name = "Missile Expansion",
     script = "<EVE0030",
-    attributes = {"weapon", "missileLauncher", "nonProgressive"}
+    attributes = {"weapon", "missileLauncher", "nonProgressive", "helpful"},
   }
 end
 
 local function event(n)
   return {
     name = "Event: " .. n,
-    attributes = {"event"},
+    attributes = {"event", "abstract"},
     placed = true
   }
 end
@@ -39,7 +42,7 @@ end
 local function objective(n, eve)
   return {
     name = n,
-    attributes = {"objective"},
+    attributes = {"objective", "abstract"},
     placed = true,
     script = eve
   }
@@ -53,52 +56,60 @@ local function _itemData()
     polarStar1 = {
       name = "Polar Star",
       script = "<EVE0002",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "polarStar", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "polarStar", "mandatory"},
+      hints = {"the gunsmith's pride"}
     },
     polarStar2 = {
       name = "Polar Star",
       script = "<EVE0002",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "polarStar", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "polarStar", "mandatory"},
+      hints = {"the gunsmith's pride"}
     },
     missileLauncher = {
       name = "Missile Launcher",
       script = "<EVE0030",
-      attributes = {"weapon", "weaponSN", "nonProgressive"}
+      attributes = {"weapon", "weaponSN", "nonProgressive", "helpful"},
     },
     superMissileLauncher = {
       name = "Super Missile Launcher",
       script = "<EVE0033",
-      attributes = {"weapon", "weaponSN", "missileLauncher", "nonProgressive"}
+      attributes = {"weapon", "weaponSN", "missileLauncher", "nonProgressive", "helpful"},
     },
     fireball = {
       name = "Fireball",
       script = "<EVE0004",
-      attributes = {"weapon", "weaponBoss", "mandatory"}
+      attributes = {"weapon", "weaponBoss", "mandatory"},
+      hints = {"the Fireball"}
     },
     snake = {
       name = "Snake",
       script = "<EVE0005",
-      attributes = {"weapon", "weaponBoss", "nonProgressive", "weaponStrong"}
+      attributes = {"weapon", "weaponBoss", "nonProgressive", "weaponStrong", "helpful"},
+      hints = {"the Snake"}
     },
     bubbler = {
       name = "Bubbler",
       script = "<EVE0007",
-      attributes = {"weapon", "weaponBoss", "nonProgressive"}
+      attributes = {"weapon", "weaponBoss", "nonProgressive", "helpful"},
+      hints = {"the Bubbler"}
     },
     machineGun = {
       name = "Machine Gun",
       script = "<EVE0008",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "flight", "mandatory", "weaponStrong"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "flight", "mandatory", "weaponStrong"},
+      hints = {"the Machine Gun"}
     },
     blade = {
       name = "Blade",
       script = "<EVE0009",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "mandatory", "weaponStrong"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "mandatory", "weaponStrong"},
+      hints = {"the Blade"}
     },
     nemesis = {
       name = "Nemesis",
       script = "<EVE0010",
-      attributes = {"weapon", "weaponBoss", "weaponSN", "nonProgressive", "weaponStrong"}
+      attributes = {"weapon", "weaponBoss", "weaponSN", "nonProgressive", "weaponStrong", "helpful"},
+      hints = {"the Nemesis"}
     },
 
     ---------------
@@ -107,67 +118,80 @@ local function _itemData()
     mapSystem = {
       name = "Map System",
       script = "<EVE0052",
-      attributes = {"nonProgressive", "map"}
+      attributes = {"nonProgressive", "map"},
+      hints = {"the Map System", "a map"}
     },
     locket = {
       name = "Silver Locket",
       script = "<EVE0054",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Silver Locket", "some fishy jewelry", "a Mimiga's item"}
     },
     arthurKey = {
       name = "Arthur's Key",
       script = "<EVE0051",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"Arthur's Key", "a key", "a Mimiga's item"}
     },
     idCard = {
       name = "ID Card",
       script = "<EVE0057",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the ID Card", "a Mimiga's item"}
     },
     santaKey = {
       name = "Santa's Key",
       script = "<EVE0053",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"Santa's Key", "a key", "a Mimiga's item"}
     },
     lipstick = {
       name = "Chaco's Lipstick",
       script = "<EVE0087",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "useless"},
+      hints = {"Chaco's Lipstick", "some lipstick", "a Mimiga's item", "a lewd item"}
     },
     juice = {
       name = "Jellyfish Juice",
       script = "<EVE0058",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"some Jellyfish Juice", "a bomb ingredient"}
     },
     charcoal = {
       name = "Charcoal",
       script = "<EVE0062",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"some charcoal", "a bomb ingredient"}
     },
     rustyKey = {
       name = "Rusty Key",
       script = "<EVE0059",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Rusty Key", "a key"}
     },
     gumKey = {
       name = "Gum Key",
       script = "<EVE0060",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Gum Key", "a key"}
     },
     gumBase = {
       name = "Gum Base",
       script = "<EVE0061",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"some gum", "a bomb ingredient"}
     },
     bomb = {
       name = "Bomb",
       script = "<EVE0063",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"a bomb"}
     },
     panties = {
       name = "Curly's Panties",
       script = "<EVE0085",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "useless"},
+      hints = {"a pair of panties", "a lewd item"}
     },
     puppy1 = {
       name = "Hajime",
@@ -197,102 +221,122 @@ local function _itemData()
     lifepot = {
       name = "Life Pot",
       script = "<EVE0065",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "helpful"},
+      hints = {"a Life Pot", "some medicine"}
     },
     turbocharge = {
       name = "Turbocharge",
       script = "<EVE0070",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "helpful"},
+      hints = {"the Turbocharge"}
     },
     clinicKey = {
       name = "Clinic Key",
       script = "<EVE0067",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Clinic Key", "a key"}
     },
     armsBarrier = {
       name = "Arms Barrier",
       script = "<EVE0069",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "helpful"},
+      hints = {"the Arms Barrier"}
     },
     cureAll = {
       name = "Cure-All",
       script = "<EVE0066",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Cure-All", "some medicine"}
     },
     booster1 = {
       name = "Booster",
       script = "<EVE0068",
-      attributes = {"flight", "booster", "mandatory"}
+      attributes = {"flight", "booster", "mandatory"},
+      hints = {"a Booster", "a rocket component"}
     },
     booster2 = {
       name = "Booster",
       script = "<EVE0068",
-      attributes = {"flight", "booster", "mandatory"}
+      attributes = {"flight", "booster", "mandatory"},
+      hints = {"a Booster", "a rocket component"}
     },
     towRope = {
       name = "Tow Rope",
       script = "<EVE0080",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Tow Rope"}
     },
     airTank = {
       name = "Curly's Air Tank",
       script = "<EVE0071",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"an air tank"}
     },
     alienMedal = {
       name = "Alien Medal",
       script = "<EVE0086",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "useless"},
+      hints = {"the Alien Medal", "a badge of victory"}
     },
     whimsicalStar = {
       name = "Whimsical Star",
       script = "<EVE0088",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "helpful"},
+      hints = {"the Whimsical Star"}
     },
     nikumaru = {
       name = "Nikumaru Counter",
       script = "<EVE0072",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive"},
+      hints = {"the Nikumaru Counter"}
     },
     teleportKey = {
       name = "Teleporter Room Key",
       script = "<EVE0075",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Teleporter Room Key", "a key"}
     },
     letter = {
       name = "Sue's Letter",
       script = "<EVE0076",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"Sue's Letter", "a Mimiga's item"}
     },
     mask = {
       name = "Mimiga Mask",
       script = "<EVE0074",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Mimiga Mask"}
     },
     brokenSprinkler = {
       name = "Broken Sprinkler",
       script = "<EVE0078",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Broken Sprinkler", "a sprinkler"}
     },
     newSprinkler = {
       name = "Sprinkler",
       script = "<EVE0079",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Sprinkler", "a sprinkler", "a rocket component"}
     },
     controller = {
       name = "Controller",
       script = "<EVE0077",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Controller", "a rocket component"}
     },
     mushroomBadge = {
       name = "Mushroom Badge",
       script = "<EVE0083",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Mushroom Badge", "a badge of victory"}
     },
     maPignon = {
       name = "Ma Pignon",
       script = "<EVE0084",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"Ma Pignon", "a living being"}
     },
     mrLittle = {
       name = "Little Man",
@@ -303,12 +347,14 @@ local function _itemData()
     ironBond = {
       name = "Iron Bond",
       script = "<EVE0089",
-      attributes = {"mandatory"}
+      attributes = {"mandatory"},
+      hints = {"the Iron Bond"}
     },
     clayMedal = {
       name = "Clay Figure Medal",
       script = "<EVE0081",
-      attributes = {"nonProgressive"}
+      attributes = {"nonProgressive", "useless"},
+      hints = {"the Clay Figure Medal", "a badge of victory"}
     },
 
     -------------------
@@ -336,12 +382,12 @@ local function _itemData()
     missileD = {           -- Egg Observation Room? (arbitrarily making this a backup Super Missile chest)
       name = "Missile Expansion (Super Missile alt)",
       script = "<EVE0038",
-      attributes = {"weapon", "missileLauncher", "nonProgressive"}
+      attributes = {"weapon", "missileLauncher", "nonProgressive", "helpful"}
     }, 
     missileHell = {
       name = "Missile Expansion",
       script = "<EVE0035",
-      attributes = {"weapon", "missileLauncher", "nonProgressive"}
+      attributes = {"weapon", "missileLauncher", "nonProgressive", "helpful"}
     },
 
     ------------
@@ -365,6 +411,18 @@ local function _itemData()
     objAllBosses = objective("All Bosses", "<FL+6002<IT+0005")
   }
 
+  local hintArray = {
+    mandatory = {"a required item"},
+    puppy = {"a required item", "a puppy", "a living being"},
+    helpful = {"a helpful item"},
+    useless = {"a useless item"},
+    weapon = {"a weapon"},
+    weaponSN = {"a weapon that breaks blocks"},
+    weaponStrong = {"a strong weapon"},
+    flight = {"a pair of wings", "a method of flight", "flight"},
+    missileLauncher = {"a Missile upgrade"}
+  }
+
   local array = {}
   for k, t in pairs(data) do
     t.key = k
@@ -372,10 +430,19 @@ local function _itemData()
     t.attributes = t.attributes or {}
     table.insert(t.attributes, k)
     table.insert(array, t)
+
+    t.hints = t.hints or {}
+    for k,v in ipairs(t.attributes) do
+      for k2,v2 in ipairs(hintArray[v] or {}) do
+        table.insert(t.hints, v2)
+      end
+    end
   end
 
   return array
 end
+
+
 
 local C = Class:extend()
 
@@ -424,6 +491,43 @@ function C:unplacedString()
   local s = "\r\nUnplaced items:"
   for k,v in pairs(self:getUnplacedItems()) do s = s .. "\r\n" .. v.name end
   return s
+end
+
+function C:createHint(l)
+  local function pick(t) return t[love.math.random(#t)] end
+
+  local location, item = l:getHint()
+  local starts = {"I hear that ", "Rumour has it, ", "They say "}
+  local mids = {" can be found ", " is ", " is hidden "}
+  local message = (pick(starts) or "") .. (pick(item) or "") .. (pick(mids) or "") .. (pick(location) or "") .. "."
+
+  local MSGBOXLIMIT = 42
+  local PATTERN = " [^ ]*$"
+  local line1, line2, line3 = "", "", ""
+
+  local split = 1
+  line1 = message:sub(split, split+MSGBOXLIMIT)
+
+  if line1:find(PATTERN) then
+    line1 = line1:sub(1, line1:find(PATTERN))
+    split = line1:find(PATTERN)+split
+    line2 = "\r\n" .. message:sub(split, split+MSGBOXLIMIT)
+
+    if line2:find(PATTERN) then
+      line2 = line2:sub(1, line2:find(PATTERN))
+      split = line2:find(PATTERN)+split
+      line3 = "\r\n" .. message:sub(split, split+MSGBOXLIMIT)
+    end
+  end
+
+  local s = "<PRI<MSG<TUR" .. line1 .. line2 .. line3 .. "<NOD<END"
+
+  return {
+    name = ("%q [%s] [%s]"):format(message, l.item.name, l.name),
+    atrributes = {"hint", "abstract"},
+    placed = true,
+    script = s
+  }
 end
   
 return C
