@@ -211,16 +211,60 @@ couldn't be finished
 without me here!<NOD<CLRBy the way...<NOD<CLRIf you defeat the Doctor,<NOD<CLRdo you think I'll be
 able to become a human
 again...?<NOD<END
+
+Momorin tells you if you're ready for the throne room
 #0370
-<PRI<SAT<FLJ1034:0380<MSG<FAC0022<FL+1034Did you have a good
-rest?<NOD<CLRThe rocket's all done.<NOD<CLRYou'll be able to take
-down the Doctor, right?<NOD
-I believe in you.<NOD<END
-#0380
-<PRI<MSG<FAC0022Directly above us is a
+<PRI<SAT<MSG<FAC0022Are you ready to head to the
+throne room? Let's see...<NOD<EVE0371
+
+Check for Sue
+#0371
+<PRI<MSG<FAC0022Looks like you still need to
+save my daughter.<NOD<CLR<ITJ0007:0372<GIT1007
+<MSG<FAC0022<GIT1007You still need to find the
+=ID Card=.<NOD<CLR
+<FLJ6001:0374<FLJ6002:0374<EVE0399
+#0372
+<PRI<MSG<FAC0022<GIT1007Good, you've found the
+=ID Card=.<NOD<CLR
+<FLJ6001:0374<FLJ6002:0374<EVE0399
+#0373
+<PRI<MSG<FAC0022Looks like you've already
+saved my daughter.<NOD
+<FLJ6001:0374<FLJ6002:0374<EVE0399
+
+Check for Booster 2.0
+#0374
+<ITJ0023:0375
+<PRI<MSG<FAC0022<GIT1023You still need to find the
+=Booster 2.0=.<NOD<EVE0376
+#0375
+<PRI<MSG<FAC0022<GIT1023Good, you've found the
+=Booster 2.0=.<NOD<EVE0376
+
+Check for Iron Bond
+#0376
+<ITJ0039:0377
+<PRI<MSG<FAC0022<GIT1039You still need to find the
+=Iron Bond=.<NOD<FLJ6002:0378<EVE0399
+#0377
+<PRI<MSG<FAC0022<GIT1039Good, you've found the
+=Iron Bond=.<NOD<FLJ6002:0378<EVE0399
+
+Mention Beast Fang
+#0378
+<PRI<MSG<FAC0022<GIT1005Have you defeated all of the
+bosses? Take a look at your
+=Beast Fang= to be sure.<NOD<EVE0399
+
+Final message
+#0399
+<PRI<MSG<FAC0022And that's all.<NOD
+<CLRDirectly above us is a
 path to the throne room.<NOD<CLRYou should be able to
 get there using the
 rocket.<NOD<END
+
 #0400
 <PRI<FLJ1102:0401<MSG<TURIt's spewing out water
 at a frightening rate.<NOD<END
