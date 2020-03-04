@@ -3,7 +3,7 @@ return {
     background = {0,0,0,0},
     font = 'assets/monogram_extended.ttf',
     size = 32,
-    color = {255,255,255},
+    color = {1,1,1},
   },
   button = {
     align = 'center middle',

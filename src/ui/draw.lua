@@ -112,11 +112,24 @@ function C:loadMusicSettings(shuffle, beta, flavor)
   if flavor == "Chaos" then music.random.value = true end
 end
 
-layout.version.text = 'Cave Story Randomizer [Open Mode] v' .. VERSION
-layout.author.text  = 'by shru and duncathan'
-layout.twitter.text = '(@shruuu and @duncathan_salt)'
+layout.version.text = 'Cave Story Randomizer v' .. VERSION
+layout.author.text  = 'by duncathan'
+layout.twitter.text = '(@duncathan_salt)'
 
-layout.footer.text = 'Original randomizer:\r\nshru.itch.io/cave-story-randomizer'
+layout.linktext.text = 'Join our Discord server!'
+layout.footerlink:onEnter(function()
+  layout.linktext.color = {0.8,0.8,0.8} -- #CCCCCC
+  layout.linkicon.icon = 'assets/icon/linkgrey.png'
+end)
+layout.footerlink:onLeave(function()
+  layout.linktext.color = {1,1,1} -- #FFFFFF
+  layout.linkicon.icon = 'assets/icon/link.png'
+end)
+layout.footerlink:onPress(function()
+  love.system.openURL("https://discord.gg/7zUdPEn")
+end)
+
+layout.footershru.text = 'Original randomizer by @shruuu'
 
 music.panel.text = [[Shuffle: remap every song to a new song. For example, all instances of Mischievous Robot become Pulse. Songs may remap to themselves.
 

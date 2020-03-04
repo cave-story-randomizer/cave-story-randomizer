@@ -53,13 +53,25 @@ return { id = 'window',
     },
     {
       flow = 'x',
+      height = 120,
       { width = 20 },
       {
-        type = 'panel',
-        id = 'footer',
-        height = 80,
-        style = 'transpanel',
-        align = 'centre left',
+        {
+          type = 'panel',
+          id = 'footershru',
+          height = 32,
+          style = 'transpanel',
+          align = 'top left'
+        },
+        { flow = 'x', 
+          type = 'panel',
+          id = 'footerlink',
+          height = 32,
+          style = 'transpanel',
+          align = 'top left',
+          { id = 'linktext', width = 310, icon = 'assets/icon/discord.png' },
+          { id = 'linkicon', icon = 'assets/icon/link.png'}
+        },
       }
     }
   }
