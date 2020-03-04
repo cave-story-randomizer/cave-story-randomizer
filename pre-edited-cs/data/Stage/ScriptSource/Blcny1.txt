@@ -67,7 +67,7 @@ Normal ending, flag 6000
 #0302
 <FLJ6001:0401<FLJ6002:0401<EVE0600 Keep checking if it's best end or all bosses
 #0303
-<FLJ6001:0403<FLJ6002:0514
+<FLJ6001:0404<FLJ6002:0517
 <KEY<FON0300:0016<MYB0002<MSG<FAC0021<TURBring me Sue from the Egg
 Corridor!<NOD<CLROnly then will I break this
 barrier.<NOD<FOM0008<END
@@ -80,7 +80,7 @@ Best ending, flag 6001
 #0403
 <FLJ6002:0501<EVE0600 Keep checking if it's all bosses
 #0404
-<FLJ6002:0514
+<FLJ6002:0517
 <KEY<FON0300:0016<MYB0002<MSG<FAC0021<TURBring me Sue from the Egg
 Corridor, the =Iron Bond=,
 and the =Booster 2.0=!<NOD<CLROnly then will I break this
