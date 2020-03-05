@@ -1,3 +1,120 @@
+#00-0
+<END
+7 bit incrementer using 7 half adders
+
+yes i just implemented a full on logic circuit in tsc using negative event numbers in order to count how many items the player collected. just wait until i have to parse it in the god forsaken credits using credit tsc
+
+A B | S C
+---------
+0 0 | 0 0
+0 1 | 1 0
+1 0 | 1 0
+1 1 | 0 1
+
+Flags
+-------
+1 |4001
+2 |4002
+4 |4003
+8 |4004
+16|4005
+32|4006
+64|4007
+C |4100
+
+First bit: A = XXX1, B = 1
+A==0 : A=1, B=0 (change both)
+#00.'
+<FLJ4001:00.(<FL+4001<FL-4100<EVE00.)
+A==1 : A=0, B=1 (change both)
+#00.(
+<FL-4001<FL+4100<EVE00.)
+
+Second bit: A = XXX2, B = 1XX1
+#00.)
+<FLJ4002:00.*<FLJ4100:00.+<EVE00.-
+A==0, B==0 : A=0, B=0 (no change)
+#00.*
+<FLJ4100:00.,<EVE00.-
+A==1, B==0 : A=1, B=0 (no change)
+#00.+
+<FL+4002<FL-4100<EVE00.-
+A==0, B==1 : A=1, B=0 (change both)
+#00.,
+<FL-4002<EVE00.-
+A==1, B==1 : A=0, B=1 (unset A)
+
+Third bit: A = XXX3, B = 1XX1
+#00.-
+<FLJ4003:00..<FLJ4100:00./<EVE00/'
+A==0, B==0 : A=0, B=0 (no change)
+#00..
+<FLJ4100:00.0<EVE00/'
+A==1, B==0 : A=1, B=0 (no change)
+#00./
+<FL+4003<FL-4100<EVE00/'
+A==0, B==1 : A=1, B=0 (change both)
+#00.0
+<FL-4003<EVE00/'
+A==1, B==1 : A=0, B=1 (unset A)
+
+Fourth bit: A = XXX4, B = 1XXX
+#00/'
+<FLJ4004:00/(<FLJ4100:00/)<EVE00/+
+A==0, B==0 : A=0, B=0 (no change)
+#00/(
+<FLJ4100:00/*<EVE00/+
+A==1, B==0 : A=1, B=0 (no change)
+#00/)
+<FL+4004<FL-4100<EVE00/+
+A==0, B==1 : A=1, B=0 (change both)
+#00/*
+<FL-4004<EVE00/+
+A==1, B==1 : A=0, B=1 (unset A)
+
+Fifth bit: A = XXX5, B = 1XXX
+#00/+
+<FLJ4005:00/,<FLJ4100:00/-<EVE00//
+A==0, B==0 : A=0, B=0 (no change)
+#00/,
+<FLJ4100:00/.<EVE00//
+A==1, B==0 : A=1, B=0 (no change)
+#00/-
+<FL+4005<FL-4100<EVE00//
+A==0, B==1 : A=1, B=0 (change both)
+#00/.
+<FL-4005<EVE00//
+A==1, B==1 : A=0, B=1 (unset A)
+
+Sixth bit: A = XXX6, B = 1XXX
+#00//
+<FLJ4006:00/0<FLJ4100:000'<EVE000)
+A==0, B==0 : A=0, B=0 (no change)
+#00/0
+<FLJ4100:000(<EVE000)
+A==1, B==0 : A=1, B=0 (no change)
+#000'
+<FL+4006<FL-4100<EVE000)
+A==0, B==1 : A=1, B=0 (change both)
+#000(
+<FL-4006<EVE000)
+A==1, B==1 : A=0, B=1 (unset A)
+
+Seventh bit: A = XXX7, B = 1XXX
+#000)
+<FLJ4007:000*<FLJ4100:000+<EVE000/
+A==0, B==0 : A=0, B=0 (no change)
+#000*
+<FLJ4100:000,<EVE000/
+A==1, B==0 : A=1, B=0 (no change)
+#000+
+<FL+4007<FL-4100<EVE000/
+A==0, B==1 : A=1, B=0 (change both)
+#000,
+<FL-4007<EVE000/
+A==1, B==1 : A=0, B=1 (unset A)
+#000/
+<KEY<MSG<TURincremented<END
 #0000
 <END
 #0001
@@ -51,6 +168,10 @@ Max health increased by 4!<WAI0025<NOD<END
 #0014
 <PRI<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0005
 Max health increased by 5!<WAI0025<NOD<END
+
+#0015
+<EVE00.' Shortcut to increment the item counter. much easier than remembering that ridiculous event number
+
 #0016
 <PRI<MSG<TUR
 Do you want to save?<YNJ0000<FL+0431<SVP<CLRGame saved.<NOD<END
