@@ -369,7 +369,7 @@ function outerWall:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    if not self.world.regions.arthur:canAccess(items) then return false end
+    if not self.world.regions.arthur:canAccess(items) and (_has(items, "weapon") or _hp(items) >= 9 or _has(items, "flight")) then return false end
     if _has(items, "eventKazuma") and _has(items, "flight") and _has(items, "eventCore") then return true end
     if _has(items, "teleportKey") and self.world.regions.plantation:canAccess(items) then return true end
     return false
