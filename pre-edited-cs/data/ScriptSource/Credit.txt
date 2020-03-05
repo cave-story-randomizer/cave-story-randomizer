@@ -1,3 +1,4 @@
+f6003:0400
 +0192
 [  = CAST =  ]0000
 -0320
@@ -297,11 +298,29 @@ l0300
 [Shih Tzu  ]0123-0040
 [Gideon Zhi]0124-0040
 [And many others]0000-0040
+-0100
+j0400
+l0400
++0040
+[= Randomizer Credits =]0000-0032
++0048
+-0032
+[Head Dev]0000-0016
+[  duncathan salt]0112-0040
+[Original Rando Author]0000-0016
+[  shru]0113-0040
+[Contributor]0000-0016
+[  periwinkle]0114-0040
+[Contributor]0000-0016
+[  Velosareon]0115-0040
+[Contributor]0000-0016
+[  Robin]0116-0040
+[And many others]0000-0040
 -0063
 [Thank you very much.]0129-0032
 -0240
-+0120
-[Cave Story ~ The End]0000
++0070
+[Cave Story Randomizer ~ The End]0000
 -0280
 /
 

@@ -63,9 +63,7 @@ assault?<WAI0200<CLR<FAO0002Either way, it made no
 difference to you.<WAI0200<CLRTogether, deep in the heart
 of the mountains, far from
 the Doctor's reach,<WAI0200<CLRyou and Kazuma quietly lived
-out the rest of your days...<WAI0200<CLR<CMU0026
-<TUR                - The End -<WAI9999
-<END
+out the rest of your days...<WAI0200<CLR<CMU0026<TRA0095:0100:0001:0001
 
 
 #0410
