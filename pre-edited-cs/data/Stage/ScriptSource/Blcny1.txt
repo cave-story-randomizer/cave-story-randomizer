@@ -65,9 +65,9 @@ Normal ending, flag 6000
 #0301
 <FLJ2800:0302<EVE0303 Check for Sue being saved
 #0302
-<FLJ6001:0401<FLJ6002:0401<EVE0600 Keep checking if it's best end or all bosses
+<FLJ6001:0401<FLJ6002:0401<FLJ6004:0401<EVE0600 Keep checking if it's best end or all bosses
 #0303
-<FLJ6001:0404<FLJ6002:0517
+<FLJ6001:0404<FLJ6002:0517<FLJ6004:0552
 <KEY<FON0300:0016<MYB0002<MSG<FAC0021<TURBring me Sue from the Egg
 Corridor!<NOD<CLROnly then will I break this
 barrier.<NOD<FOM0008<END
@@ -78,9 +78,9 @@ Best ending, flag 6001
 #0402
 <ITJ0023:0403<EVE0404 Check for Booster 2.0
 #0403
-<FLJ6002:0501<EVE0600 Keep checking if it's all bosses
+<FLJ6002:0501<FLJ6004:0501<EVE0600 Keep checking if it's all bosses
 #0404
-<FLJ6002:0517
+<FLJ6002:0517<FLJ6004:0552
 <KEY<FON0300:0016<MYB0002<MSG<FAC0021<TURBring me Sue from the Egg
 Corridor, the =Iron Bond=,
 and the =Booster 2.0=!<NOD<CLROnly then will I break this
@@ -118,12 +118,29 @@ All bosses, flag 6002
 #0515
 <FLJ6114:0516<EVE0517 Ma Pignon
 #0516
+<FLJ6004:0550
 <EVE0600
 #0517
+<FLJ6004:0552
 <KEY<FON0300:0016<MYB0002
 <MSG<FAC0021<TURYou must defeat all of my
 boss monsters before facing
 me here, and:<NOD<CLR
+Bring me Sue from the Egg
+Corridor, the =Iron Bond=,
+and the =Booster 2.0=!<NOD<CLROnly then will I break this
+barrier.<NOD<FOM0008<END
+
+100%, flag 6004
+#0550
+<FLJ4007:0551<EVE0552 Check for bit 7 (64)
+#0551
+<FLJ4002<0600<EVE0552 Check for bit 2 (2) for a total of 66 items
+#0552
+<KEY<FON0300:0016<MYB0002
+<MSG<FAC0021<TURYou must collect all items
+and defeat all bosses before
+facing me here, and:<NOD<CLR
 Bring me Sue from the Egg
 Corridor, the =Iron Bond=,
 and the =Booster 2.0=!<NOD<CLROnly then will I break this

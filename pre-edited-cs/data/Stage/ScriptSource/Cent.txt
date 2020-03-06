@@ -225,15 +225,15 @@ Check for Sue
 save my daughter.<NOD<CLR<ITJ0007:0372<GIT1007
 <MSG<FAC0022<GIT1007You still need to find the
 =ID Card=.<NOD<CLR
-<FLJ6001:0374<FLJ6002:0374<EVE0399
+<FLJ6001:0374<FLJ6002:0374<FLJ6004:0374<EVE0399
 #0372
 <PRI<MSG<FAC0022<GIT1007Good, you've found the
 =ID Card=.<NOD<CLR
-<FLJ6001:0374<FLJ6002:0374<EVE0399
+<FLJ6001:0374<FLJ6002:0374<FLJ6004:0374<EVE0399
 #0373
 <PRI<MSG<FAC0022Looks like you've already
 saved my daughter.<NOD
-<FLJ6001:0374<FLJ6002:0374<EVE0399
+<FLJ6001:0374<FLJ6002:0374<FLJ6004:0374<EVE0399
 
 Check for Booster 2.0
 #0374
@@ -248,16 +248,23 @@ Check for Iron Bond
 #0376
 <ITJ0039:0377
 <PRI<MSG<FAC0022<GIT1039You still need to find the
-=Iron Bond=.<NOD<FLJ6002:0378<EVE0399
+=Iron Bond=.<NOD<FLJ6002:0378<FLJ6004:0378<EVE0399
 #0377
 <PRI<MSG<FAC0022<GIT1039Good, you've found the
-=Iron Bond=.<NOD<FLJ6002:0378<EVE0399
+=Iron Bond=.<NOD<FLJ6002:0378<FLJ6004:0378<EVE0399
 
 Mention Beast Fang
 #0378
 <PRI<MSG<FAC0022<GIT1005Have you defeated all of the
 bosses? Take a look at your
-=Beast Fang= to be sure.<NOD<EVE0399
+=Beast Fang= to be sure.<NOD<FLJ6004:0379<EVE0399
+
+Mention Map System
+#0379
+<PRI<MSG<FAC0022Have you found all of the
+items? You'll need 66 to
+enter the throne room.<NOD<CLR<GIT1002A =Map System= can
+tell you.<NOD<EVE0399
 
 Bad Ending
 #0380
@@ -363,14 +370,25 @@ Skip Red Demon
 #1315
 <FLJ6113:1316<EVE1399
 #1316
-<FLJ6114:0151<EVE1399
+<FLJ6114:0317<EVE1399
+Open door if All Bosses else check items 
+#1317
+<FLJ6002:0151<EVE1318
+#1318
+<FLJ4007:1319<EVE1399
+Open door if item count 66, if 65 check red demon item
+#1319
+<FLJ4002:0151<FLJ4001:1320<EVE1399
+Open door if red demon item not collected
+#1320
+<FLJ1320:1399<EVE0151
 
 #1399
 <FLJ1320:1400
 <PRI<MSGIt's still too early to come
-here...
-Enter anyway?<YNJ0000<EVE0151
+here... unless you seek the demon'sprize. Enter anyway?<YNJ0000<EVE0151
 
 #1400
 <PRI<MSGIt's still too early to come
-here... unless you seek the demon'sprize. Enter anyway?<YNJ0000<EVE0151
+here...
+Enter anyway?<YNJ0000<EVE0151
