@@ -359,6 +359,8 @@ function C:_updateSharecode(seed)
     settings = bit.bor(settings, bit.blshift(2, obj))
   elseif self.obj == "objAllBosses" then
     settings = bit.bor(settings, bit.blshift(3, obj))
+  elseif self.obj == "obj100Percent" then
+    settings = bit.bor(settings, bit.blshift(4, obj))
   end
   if self.puppy then settings = bit.bor(settings, bit.blshift(1, pup)) end
 

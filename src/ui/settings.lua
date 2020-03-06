@@ -33,7 +33,8 @@ return { style = 'dialog',
           { text = "Bad ending", value = "objBadEnd" },
           { text = "Normal ending", value = "objNormalEnd" },
           { text = "Best ending", value = "objBestEnd" },
-          { text = "All bosses", value = "objAllBosses"}
+          { text = "All bosses", value = "objAllBosses" },
+          { text = "100%", value = "obj100Percent" }
         },
         { type = 'label', text = 'Player Sprite', minheight = 32 },
         { type = 'stepper', id = 'mychar', align = 'middle left', height = 48, width = 200,

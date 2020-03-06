@@ -67,6 +67,8 @@ function C:loadObjective(obj)
     settings.objective.index = 2
   elseif obj == "objAllBosses" or obj == 3 then
     settings.objective.index = 4
+  elseif obj == "obj100Percent" or obj == 4 then
+    settings.objective.index = 5
   else
     settings.objective.index = 3
   end

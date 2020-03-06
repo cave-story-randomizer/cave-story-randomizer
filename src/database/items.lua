@@ -409,7 +409,8 @@ local function _itemData()
     objBadEnd = objective("Bad Ending", "<FL+6003"),
     objNormalEnd = objective("Normal Ending", "<FL+6000"),
     objBestEnd = objective("Best Ending", "<FL+6001"),
-    objAllBosses = objective("All Bosses", "<FL+6002<IT+0005")
+    objAllBosses = objective("All Bosses", "<FL+6002<IT+0005"),
+    obj100Percent = objective("100%", "<FL+6004<IT+0005")
   }
 
   local hintArray = {
