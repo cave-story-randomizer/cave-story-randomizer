@@ -48,7 +48,7 @@ function mimigaVillage:new(worldGraph)
     reservoir = Location("Reservoir", "Pool", "0301", self, {"underwater"}),
     mapChest = Location("Mimiga Village Chest", "Mimi", "0202", self),
     assembly = Location("Assembly Hall Fireplace", "Comu", "0303", self, {"in a fireplace"}),
-    mrLittle = Location("Mr. Little (Graveyard)", "Cemet", "0202", self),
+    mrLittle = Location("Mr. Little (Graveyard)", "Cemet", "0202", self, {"in the Graveyard", "with a very little man, hiding in the grass"}),
     grave = Location("Arthur's Grave", "Cemet", "0301", self, {"with a fallen hero..", "in the Graveyard"}),
     mushroomChest = Location("Storage? Chest", "Mapi", "0202", self, {"in the Graveyard"}),
     maPignon = Location("Ma Pignon Boss", "Mapi", "0501", self, {"behind a boss", "behind Ma Pignon", "in the Graveyard"})
@@ -79,7 +79,7 @@ function mimigaVillage:new(worldGraph)
     return false
   end
 
-  self.locations.mrLittle:setItem(self.world.items:getByKey("mrLittle"))
+  --self.locations.mrLittle:setItem(self.world.items:getByKey("mrLittle"))
 end
 
 local arthur = Region:extend()

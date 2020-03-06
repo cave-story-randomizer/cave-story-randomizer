@@ -341,8 +341,9 @@ local function _itemData()
     mrLittle = {
       name = "Little Man",
       script = "<EVE0082",
-      attributes = {"event"},
-      placed = true
+      attributes = {"mandatory"},
+      hints = {"Mr Little", "a living being"}
+      --placed = true
     },
     ironBond = {
       name = "Iron Bond",
