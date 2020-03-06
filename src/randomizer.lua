@@ -202,6 +202,9 @@ function C:_shuffleItems(tscFiles)
   -- next fill hell chests, which cannot have mandatory items
   self:_fastFillItems(optional, shuffle(self.worldGraph:getHellSpots()))
 
+  -- add map system AFTER filling hell chests so that it gets placed somewhere accessible in every objective
+  optional = _.append(optional, self.itemDeck:getByKey("mapSystem"))
+
   -- place mandatory items with assume fill
   self:_fillItems(mandatory, shuffle(_.reverse(self.worldGraph:getEmptyLocations())))
 
