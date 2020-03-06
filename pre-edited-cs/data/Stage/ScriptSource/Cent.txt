@@ -219,6 +219,7 @@ throne room? Let's see...<NOD<EVE0371
 
 Check for Sue
 #0371
+<FLJ6003:0380
 <FLJ2800:0373
 <PRI<MSG<FAC0022Looks like you still need to
 save my daughter.<NOD<CLR<ITJ0007:0372<GIT1007
@@ -257,6 +258,12 @@ Mention Beast Fang
 <PRI<MSG<FAC0022<GIT1005Have you defeated all of the
 bosses? Take a look at your
 =Beast Fang= to be sure.<NOD<EVE0399
+
+Bad Ending
+#0380
+<PRI<MSG<FAC0022Seems you won't be able to
+enter the throne room. Are
+you after that demon?<NOD<EVE0399
 
 Final message
 #0399
@@ -359,6 +366,11 @@ Skip Red Demon
 <FLJ6114:0151<EVE1399
 
 #1399
+<FLJ1320:1400
 <PRI<MSGIt's still too early to come
 here...
 Enter anyway?<YNJ0000<EVE0151
+
+#1400
+<PRI<MSGIt's still too early to come
+here... unless you seek the demon'sprize. Enter anyway?<YNJ0000<EVE0151
