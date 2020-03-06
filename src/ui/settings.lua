@@ -61,6 +61,7 @@ return { style = 'dialog',
   },
   { style = 'dialogFoot',
     {},
+    { style = 'dialogButton', id = 'randoButton', text = 'Random Settings',  width = 120 },
     { style = 'dialogButton', id = 'closeButton', text = 'Close' }
   }
 }

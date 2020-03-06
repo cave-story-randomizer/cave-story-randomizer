@@ -35,6 +35,27 @@ function C:setup()
   layout:show()
 end
 
+settings.randoButton:onPress(function()
+  local function fifty() return love.math.random(2) == 2 end
+  Screen:loadPuppy(fifty())
+  Screen:loadObjective(love.math.random(4)-1)
+  settings.seedselect.value = false
+  settings.seedrandom.value = true
+  Screen:loadMyChar(love.math.random(7))
+  Screen:loadSpawn(love.math.random(3)-1)
+  Screen:loadSeqSettings(fifty(), {
+  cthulhu = fifty(),
+  chaco = fifty(),
+  paxChaco = fifty(),
+  flightlessHut = fifty(),
+  camp = fifty(),
+  sisters = fifty(),
+  plantation = fifty(),
+  rocket = fifty()
+  })
+  Screen:loadMusicSettings(fifty(), fifty(), love.math.random(3))
+end)
+
 function C:loadPuppy(puppy)
   settings.puppy.value = puppy
 end
@@ -61,7 +82,9 @@ function C:loadSeed(seed)
 end
 
 function C:loadMyChar(mychar)
-  if mychar == "assets/myChar/Quote.bmp" then
+  if type(mychar) == "number" then
+    settings.mychar.index = mychar
+  elseif mychar == "assets/myChar/Quote.bmp" then
     settings.mychar.index = 1
   elseif mychar == "assets/myChar/Curly.bmp" then
     settings.mychar.index = 2
@@ -91,7 +114,7 @@ function C:loadSpawn(spawn)
 end
 
 function C:loadSeqSettings(breaks, seq)
-  if breaks then settings.seqbreak.value = breaks end
+  if breaks ~= nil then settings.seqbreak.value = breaks end
   if breaks or breaks == nil then
     sequence.cthulhu.value = seq.cthulhu
     sequence.chaco.value = seq.chaco
@@ -107,9 +130,21 @@ end
 function C:loadMusicSettings(shuffle, beta, flavor)
   settings.music.value = shuffle
   music.beta.value = beta
-  if flavor == "Shuffle" then music.shuffle.value = true end
-  if flavor == "Random" then music.random.value = true end
-  if flavor == "Chaos" then music.random.value = true end
+  if flavor == "Shuffle" or flavor == 1 then 
+    music.shuffle.value = true
+    music.random.value = false
+    music.chaos.value = false
+  end
+  if flavor == "Random" or flavor == 2 then 
+    music.shuffle.value = false
+    music.random.value = true 
+    music.chaos.value = false
+  end
+  if flavor == "Chaos" or flavor == 3 then 
+    music.shuffle.value = false
+    music.random.value = false
+    music.chaos.value = true
+  end
 end
 
 layout.version.text = 'Cave Story Randomizer v' .. VERSION
