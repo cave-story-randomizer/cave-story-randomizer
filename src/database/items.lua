@@ -493,14 +493,7 @@ function C:unplacedString()
   return s
 end
 
-function C:createHint(l)
-  local function pick(t) return t[love.math.random(#t)] end
-
-  local location, item = l:getHint()
-  local starts = {"I hear that ", "Rumour has it, ", "They say "}
-  local mids = {" can be found ", " is ", " is hidden "}
-  local message = (pick(starts) or "") .. (pick(item) or "") .. (pick(mids) or "") .. (pick(location) or "") .. "."
-
+local function _hint(message, l)
   local MSGBOXLIMIT = 42
   local PATTERN = " [^ ]*$"
   local line1, line2, line3 = "", "", ""
@@ -528,6 +521,21 @@ function C:createHint(l)
     placed = true,
     script = s
   }
+end
+
+function C:createHint(l)
+  local function pick(t) return t[love.math.random(#t)] end
+
+  local location, item = l:getHint()
+  local starts = {"I hear that ", "Rumour has it, ", "They say "}
+  local mids = {" can be found ", " is ", " is hidden "}
+  local message = (pick(starts) or "") .. (pick(item) or "") .. (pick(mids) or "") .. (pick(location) or "") .. "."
+
+  return _hint(message, l)
+end
+
+function C:prebuiltHint(l)
+  return _hint(l:getPrebuiltHint(), l)
 end
   
 return C

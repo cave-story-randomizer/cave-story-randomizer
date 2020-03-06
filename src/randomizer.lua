@@ -252,6 +252,8 @@ function C:_generateHints()
   for k, hintLocation in ipairs(_.shuffle(self.worldGraph:getHintLocations())) do
     hintLocation.item = self.worldGraph.items:createHint(_.pop(toHint))
   end
+  self.worldGraph.hintregion.locations.mrsLittle.item = self.worldGraph.items:prebuiltHint(self.worldGraph.regions.outerWall.locations.littleHouse)
+  self.worldGraph.hintregion.locations.malco.item = self.worldGraph.items:prebuiltHint(self.worldGraph.regions.grasstownEast.locations.malco)
 end
 
 function C:_writeModifiedData(tscFiles)

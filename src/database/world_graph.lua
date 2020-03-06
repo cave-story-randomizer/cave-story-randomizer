@@ -176,7 +176,8 @@ function grasstownEast:new(worldGraph)
     return false
   end
   self.locations.malco.requirements = function(self, items) return _has(items, "eventFans") and _has(items, "juice") and _has(items, "charcoal") and _has(items, "gumBase") end
-  
+  self.locations.malco.getPrebuiltHint = function(self) return ("BUT ALL I KNOW HOW TO DO IS MAKE %s..."):format(self.item.hints[love.math.random(#self.item.hints)]:upper()) end
+
   self.locations.eventFans.requirements = function(self, items) return _has(items, "rustyKey") and _has(items, "weaponBoss") end
   self.locations.eventFans:setItem(self.world.items:getByKey("eventFans"))
 
@@ -376,6 +377,7 @@ function outerWall:new(worldGraph)
   end
 
   self.locations.littleHouse.requirements = function(self, items) return _has(items, "flight") and _has(items, "blade") and _has(items, "mrLittle") end
+  self.locations.littleHouse.getPrebuiltHint = function(self) return ("He was exploring the island with %s..."):format(self.item.hints[love.math.random(#self.item.hints)]) end
 end
 
 local plantation = Region:extend()
@@ -455,8 +457,14 @@ function hintRegion:new(worldGraph)
     bluebotEgg = Location("Blue Robot (Egg Corridor)", "Eggs", "0200", self),
     bluebotEgg2 = Location("Blue Robot (Egg Corridor?)", "Eggs2", "0210", self),
     bluebotMaze = Location("Blue Robot (Labyrinth I #1)", "MazeI", "0500", self),
-    bluebotMaze2 = Location("Blue Robot (Labyrinth I #2)", "MazeI", "0502", self)
+    bluebotMaze2 = Location("Blue Robot (Labyrinth I #2)", "MazeI", "0502", self),
+    mrsLittle = Location("Mrs. Little", "Little", "0212", self),
+    malco = Location("MALCO", "Malco", "0306", self)
   }
+
+  -- they'll appear as filled so they get left out of the regular hints
+  self.locations.mrsLittle.item = {}
+  self.locations.malco.item = {}
 end
 
 local worldGraph = Class:extend()
@@ -605,11 +613,13 @@ function worldGraph:getHintableLocations(obj)
   for k, location in pairs(_.shuffle(self:getFilledLocations(true))) do
     if (obj == "objBadEnd" and location.item.name == "Rusty Key") or (obj ~= "objBadEnd" and location.item.name == "ID Card") then 
       table.insert(locations, 1, location) -- put that item on the top to guarantee a hint for it
+    elseif location:getPrebuiltHint() ~= nil then
+      -- do nothing
     else
       table.insert(locations, location)
     end
   end
-  return _.slice(locations, 1, 8)
+  return _.slice(locations, 1, #self:getHintLocations())
 end
 
 function worldGraph:writeItems(tscFiles)

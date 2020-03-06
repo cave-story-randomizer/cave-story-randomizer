@@ -45,4 +45,8 @@ function C:getHint()
   return _.append(self.region.hintList, self.hintList), self.item.hints
 end
 
+function C:getPrebuiltHint()
+  return nil
+end
+
 return C
