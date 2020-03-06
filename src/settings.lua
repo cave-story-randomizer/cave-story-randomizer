@@ -11,6 +11,10 @@ function C:init()
       self.settings[k] = self.settings[k] or v
     end
   end
+  -- check for out of date CS folder
+  if self.settings.csversion < CSVERSION then
+    self.settings.csdirectory = nil
+  end
   self:update()
 end
 
@@ -34,7 +38,8 @@ function C:getDefaults()
     },
     musicShuffle = false,
     musicBeta = false,
-    musicFlavor = "Shuffle"
+    musicFlavor = "Shuffle",
+    csversion = 0
   }
 end
 
@@ -53,7 +58,7 @@ function C:serialize()
 
   local line = "return {\r\n"
   local tab = "  "
-  line = line .. tab .. ("csdirectory = [[%s]],\r\n"):format(self.settings.csdirectory or "")
+  line = line .. tab .. ("csdirectory = %q,\r\n"):format(self.settings.csdirectory or "")
   line = line .. tab .. ("puppy = %s,\r\n"):format(self.settings.puppy)
   line = line .. tab .. ("obj = %q,\r\n"):format(self.settings.obj or "")
   line = line .. tab .. ("mychar = %q,\r\n"):format(self.settings.mychar or "")
@@ -63,7 +68,8 @@ function C:serialize()
   line = line .. tab .. ("dboosts = %s,\r\n"):format(dboost)
   line = line .. tab .. ("musicShuffle = %s,\r\n"):format(self.settings.musicShuffle)
   line = line .. tab .. ("musicBeta = %s,\r\n"):format(self.settings.musicBeta)
-  line = line .. tab .. ("musicFlavor = %q\r\n"):format(self.settings.musicFlavor)
+  line = line .. tab .. ("musicFlavor = %q,\r\n"):format(self.settings.musicFlavor)
+  line = line .. tab .. ("csversion = %s,\r\n"):format(self.settings.csversion)
   
   return line .. "}"
 end

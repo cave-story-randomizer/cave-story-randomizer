@@ -1,6 +1,7 @@
 require 'lib.strict'
 
 VERSION = '0.8C'
+CSVERSION = 1
 
 Class   = require 'lib.classic'
 _       = require 'lib.moses'
@@ -26,8 +27,8 @@ function love.load()
   Settings:init()
   Screen:setup()
 
-  if Settings.settings.csdirectory ~= "" then
-    Screen:setStatus("Cave Story folder found!")
+  if Settings.settings.csdirectory == "csdata" then
+    Screen:setStatus("Cave story folder found!")
     Randomizer:setPath(Settings.settings.csdirectory)
   else
     Screen:setStatus("Drag and drop your Cave Story folder here.")
@@ -62,15 +63,23 @@ local function recursivelyDelete( item )
 end
 
 function love.directorydropped(path)
-  local success = Randomizer:_mountDirectory(path)
+  local success, dirStage = Randomizer:_mountDirectory(path)
+  local csversion = lf.read(dirStage .. '/_version.txt') or "0"
+  csversion = tonumber(csversion)
   --Randomizer:_unmountDirectory(path)
   if success then
-    recursivelyDelete('csdata') -- completely clear the folder, in case of user error :)
-    recursiveWrite('mounted-data', 'csdata')
-    Settings.settings.csdirectory = 'csdata'
-    Settings:update()
-    Randomizer:setPath('csdata')
-    Screen:setStatus("Cave Story folder updated!")
+    if csversion >= CSVERSION then
+      recursivelyDelete('csdata') -- completely clear the folder, in case of user error :)
+      recursiveWrite('mounted-data', 'csdata')
+
+      Settings.settings.csdirectory = 'csdata'
+      Settings.settings.csversion = csversion
+      Settings:update()
+      Randomizer:setPath('csdata')
+      Screen:setStatus("Cave Story folder updated!")
+    else
+      Screen:setStatus("Invalid Cave Story folder!\n\nMake sure you're using an up to date version of the randomizer's included Cave Story folder.")
+    end
   else
     Screen:setStatus("Could not find \"data\" subfolder.\n\nMaybe try dropping your Cave Story \"data\" folder in directly?")
   end
