@@ -501,12 +501,12 @@ local function _hint(message, l)
   local split = 1
   line1 = message:sub(split, split+MSGBOXLIMIT)
 
-  if line1:find(PATTERN) then
+  if line1:find(PATTERN) and #message > MSGBOXLIMIT then
     line1 = line1:sub(1, line1:find(PATTERN))
     split = line1:find(PATTERN)+split
     line2 = "\r\n" .. message:sub(split, split+MSGBOXLIMIT)
 
-    if line2:find(PATTERN) then
+    if line2:find(PATTERN) and #message > MSGBOXLIMIT*2 then
       line2 = line2:sub(1, line2:find(PATTERN))
       split = line2:find(PATTERN)+split
       line3 = "\r\n" .. message:sub(split, split+MSGBOXLIMIT)
