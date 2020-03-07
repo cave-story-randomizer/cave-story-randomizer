@@ -7,4 +7,4 @@ zip -9 -r "${P}.love" .
 sudo xvfb-run --server-args="-screen 0 1024x768x24" love "${P}.love" --daily
 body=$(cat daily.txt)
 echo $body
-curl -H "Content-Type: application/json" -X POST -d $body $WEBHOOK
+curl -H "Content-Type: application/json" -X POST -d "$body" "$WEBHOOK"
