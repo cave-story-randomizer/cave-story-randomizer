@@ -28,11 +28,10 @@ function love.load(args)
 
   if args[1] == "--daily" then
     love.window.close()
-    print(Randomizer:generateDaily())
+    U.writeFile("daily.txt", Randomizer:generateDaily())
     love.event.quit()
     return
   end
-
   Screen:setup()
 
   if Settings.settings.csdirectory == "csdata" then
