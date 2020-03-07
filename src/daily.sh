@@ -6,6 +6,11 @@ P="csrando"
 LV="11.2" # love version
 LZ="https://bitbucket.org/rude/love/downloads/love-${LV}-win32.zip"
 
+if [! TRAVIS_EVENT_TYPE -eq "cron"]
+then
+  exit
+fi
+
 ##### build #####
 mkdir "target"
 
