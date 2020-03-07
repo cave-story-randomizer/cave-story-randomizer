@@ -14,7 +14,8 @@ before_install:
   - sudo apt-get -y install love
 
 script:
-  - ./daily.sh
+  - sudo chmod u+r+x daily.sh
+  - sudo ./daily.sh
 
 env:
   global:
