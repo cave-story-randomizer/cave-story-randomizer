@@ -1,7 +1,16 @@
 language: bash
 image: shru/arch-love-release:latest
 
-script: "./daily.sh"
+script:
+  - P="csrando"
+  - mkdir "target"
+  - cp -r src target	
+  - cd target/src
+  - "love-release -D -p ${P}"
+  - cd releases
+  - {$P.deb} --daily
+  - read -r body <daily.txt
+  - curl -H "Content-Type: application/json" -X POST -d "${body}" "${WEBHOOK}"
 
 env:
   global:
