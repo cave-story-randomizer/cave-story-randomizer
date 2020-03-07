@@ -26,12 +26,13 @@ local csdirectory
 function love.load(args)
   Settings:init()
 
-  if true then
+  if args[1] == "--daily" then
     love.window.close()
-    U.writeFile("daily.txt", Randomizer:generateDaily())
+    print(Randomizer:generateDaily())
     love.event.quit()
     return
   end
+
   Screen:setup()
 
   if Settings.settings.csdirectory == "csdata" then

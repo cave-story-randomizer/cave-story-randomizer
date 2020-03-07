@@ -20,10 +20,7 @@ script:
   - cp -r src target
   - cd target/src
   - zip -9 -r "${P}.love" .
-  - sudo timeout 60 xvfb-run --server-args="-screen 0 1024x768x24" love "${P}.love" --daily
-  - dir
-  - echo < daily.txt
-  - body=$(<daily.txt)
+  - body=$(<sudo timeout 60 xvfb-run --server-args="-screen 0 1024x768x24" love "${P}.love" --daily)
   - "curl -H \"Content-Type: application/json\" -X POST -d \"${body}\" \"${WEBHOOK}\""
 
 env:
