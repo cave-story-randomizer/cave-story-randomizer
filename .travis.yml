@@ -21,7 +21,7 @@ script:
   - cd target/src
   - zip -9 -r - . > "../${P}.love"
   - cd -
-  - xvfb-run --server-args="-screen 0 1024x768x24" love "target/${P}.love" --daily
+  - sudo timeout -t 60 xvfb-run --server-args="-screen 0 1024x768x24" love "target/${P}.love" --daily
   - read -r body <daily.txt
   - curl -H "Content-Type: application/json" -X POST -d "${body}" "${WEBHOOK}"
 
