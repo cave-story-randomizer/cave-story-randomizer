@@ -14,14 +14,7 @@ before_install:
   - sudo apt-get -y install love
 
 script:
-  - P="csrando"
-  - mkdir target
-  - mkdir target/src
-  - cp -r src target
-  - cd target/src
-  - zip -9 -r "${P}.love" .
-  - sudo xvfb-run --server-args="-screen 0 1024x768x24" love "${P}.love" --daily
-  - "curl -H \"Content-Type: application/json\" -X POST -d \"$(cat daily.txt)\" \"${WEBHOOK}\""
+  - ./daily.sh
 
 env:
   global:
