@@ -1,14 +1,11 @@
-language: bash
 image: shru/arch-love-release:latest
 
 script:
-  - P="csrando"
   - mkdir "target"
-  - cp -r src target	
-  - cd target/src
-  - "love-release -D -p ${P}"
+  - cd src
+  - "love-release -D"
   - cd releases
-  - xvfb-run {$P.deb} --daily
+  - xvfb-run 'Cave Story Randomizer.deb' --daily
   - read -r body <daily.txt
   - curl -H "Content-Type: application/json" -X POST -d "${body}" "${WEBHOOK}"
 
