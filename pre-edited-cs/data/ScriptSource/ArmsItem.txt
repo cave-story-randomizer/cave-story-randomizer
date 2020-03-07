@@ -164,6 +164,7 @@ From the condition it's in, it looks
 like it's been treasured for years.<WAI9999<END
 #6005
 <FLJ6002:8000
+<FLJ6004:8000
 <MSG<TURA sharp fang found at the
 Yamashita Farm. Is its owner still
 alive...?<WAI9999<END
