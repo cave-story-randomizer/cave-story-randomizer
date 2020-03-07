@@ -6,10 +6,10 @@ P="csrando"
 LV="11.2" # love version
 LZ="https://bitbucket.org/rude/love/downloads/love-${LV}-win32.zip"
 
-if [! TRAVIS_EVENT_TYPE -eq "cron"]
-then
-  exit
-fi
+#if [ TRAVIS_EVENT_TYPE != "cron"]
+#then
+#  exit
+#fi
 
 ##### build #####
 mkdir "target"
@@ -19,16 +19,16 @@ cp -r src target
 cd target/src
 
 # .love file
-zip -9 -r - . > "../${P}.love"
+7z a "../${P}.love" * -r
 cd -
 
 ### .exe
 if [ ! -f "target/love-win.zip" ]; then wget "$LZ" -O "target/love-win.zip"; fi
-unzip -o "target/love-win.zip" -d "target"
+7z e "target/love-win.zip" -o"target"
 tmp="target/tmp/"
 mkdir -p "$tmp/$P"
-cat "target/love-${LV}-win32/love.exe" "target/${P}.love" > "$tmp/${P}/${P}.exe"
-cp  target/love-"${LV}"-win32/*dll target/love-"${LV}"-win32/license* "$tmp/$P"
+cat "target/love-win/love.exe" "target/${P}.love" > "$tmp/${P}/${P}.exe"
+cp  target/love-win/*dll target/love-win/license* "$tmp/$P"
 cd "$tmp/$P"
 "${P}.exe" --daily
 read -r body <daily.txt
