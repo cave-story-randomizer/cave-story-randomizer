@@ -23,9 +23,15 @@ Screen = require 'ui.draw'
 
 local csdirectory
 
-function love.load()
+function love.load(args)
   Settings:init()
   Screen:setup()
+
+  if args[1] == "--daily" then
+    lf.write("daily.txt", Randomizer:generateDaily())
+    love.event.quit()
+    return
+  end
 
   if Settings.settings.csdirectory == "csdata" then
     Screen:setStatus("Cave story folder found!")
