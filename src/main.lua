@@ -25,13 +25,14 @@ local csdirectory
 
 function love.load(args)
   Settings:init()
-  Screen:setup()
 
   if true then
+    love.window.close()
     U.writeFile("daily.txt", Randomizer:generateDaily())
     love.event.quit()
     return
   end
+  Screen:setup()
 
   if Settings.settings.csdirectory == "csdata" then
     Screen:setStatus("Cave story folder found!")
