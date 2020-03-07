@@ -26,14 +26,10 @@ cd -
 if [ ! -f "target/love-win.zip" ]; then wget "$LZ" -O "target/love-win.zip"; fi
 7z e "target/love-win.zip" -o"target"
 cd target
-dir
-cd "love-${LV}-win"
-dir
-cd ..
 tmp="tmp"
 mkdir -p "$tmp/$P"
-cat "love-${LV}-win/love.exe" "${P}.love" > "$tmp/${P}/${P}.exe"
-cp  love-"${LV}"-win/*dll target/love-win/license* "$tmp/$P"
+cat "love.exe" "${P}.love" > "$tmp/${P}/${P}.exe"
+cp  *dll target/love-win/license* "$tmp/$P"
 cd "$tmp/$P"
 "${P}.exe" --daily
 read -r body <daily.txt
