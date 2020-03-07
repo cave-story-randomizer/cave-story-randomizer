@@ -1,7 +1,13 @@
 language: bash
 dist: xenial
-services:
-  - xvfb
+addons:
+  apt:
+    packages:
+      - xvfb
+
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 
 before_install:
   - sudo add-apt-repository -y ppa:bartbes/love-stable
@@ -10,7 +16,7 @@ before_install:
 
 script:
   - P="csrando"
-  - cp -r src target	
+  - cp -r src target/src	
   - cd target/src
   - zip -9 -r - . > "../${P}.love"
   - cd -
