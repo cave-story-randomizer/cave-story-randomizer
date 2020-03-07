@@ -1,5 +1,5 @@
 language: bash
-os: windows
+image: shru/arch-love-release:latest
 
 script: "./daily.sh"
 
