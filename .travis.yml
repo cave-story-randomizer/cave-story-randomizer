@@ -19,9 +19,8 @@ script:
   - mkdir target/src
   - cp -r src target/src	
   - cd target/src
-  - zip -9 -r - . > "../${P}.love"
-  - cd -
-  - sudo timeout 60 xvfb-run --server-args="-screen 0 1024x768x24" love "target/${P}.love" --daily
+  - zip -9 -r "${P}.love" .
+  - sudo timeout 60 xvfb-run --server-args="-screen 0 1024x768x24" love "${P}.love" --daily
   - read -r body <daily.txt
   - curl -H "Content-Type: application/json" -X POST -d "${body}" "${WEBHOOK}"
 
