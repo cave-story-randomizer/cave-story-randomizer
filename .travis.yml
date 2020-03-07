@@ -1,13 +1,4 @@
-image: shru/arch-love-release:latest
-
-script:
-  - mkdir "target"
-  - cd src
-  - "love-release -D"
-  - cd releases
-  - xvfb-run 'Cave Story Randomizer.deb' --daily
-  - read -r body <daily.txt
-  - curl -H "Content-Type: application/json" -X POST -d "${body}" "${WEBHOOK}"
+script: './daily.sh'
 
 env:
   global:
