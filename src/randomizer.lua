@@ -73,6 +73,7 @@ function C:randomize()
   local tscFiles = self:_createTscFiles(dirStage)
 
   self:_shuffleItems(tscFiles)
+  self:_generateHash()
   if self.shuffleMusic then self.music:shuffleMusic(tscFiles) end
 
   self:_writeModifiedData(tscFiles)
@@ -284,6 +285,12 @@ function C:_copyMyChar()
   local path = self:_getWritePath() .. '/myChar.bmp'
   local data = lf.read(self.mychar)
   U.writeFile(path, data)
+end
+
+function C:_generateHash()
+  local path = self:_getWritePath() .. '/hash.txt'
+  local h = {love.math.random(39), love.math.random(39), love.math.random(39), love.math.random(39), love.math.random(39)}
+  U.writeFile(path, ("%04d,%04d,%04d,%04d,%04d"):format(h[1], h[2], h[3], h[4], h[5]))
 end
 
 function C:_getWritePath()
