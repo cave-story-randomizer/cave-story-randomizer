@@ -425,7 +425,7 @@ function C:_getStatusMessage(seed, sharecode)
 end
 
 function C:generateDaily()
-  local json = [[{"embed": {"title": "**Daily Challenge: %s**","fields": [{"name": "Seed","value": "%s"},{"name": "Settings","value": "**Objective**: %s\\n**Spawn**: %s\\n**Puppysanity**: %s\\n**Sequence breaks**: %s\\n"},{"name": "Title Screen Code","value": "<%s> <%s> <%s> <%s> <%s> (%s/%s/%s/%s/%s)"},{"name": "<:rando:558942498668675072> Sharecode","value": "`%s`"}]}}]]
+  local json = [[{"embed": {"title": "**Daily Challenge: %s**","fields": [{"name": "Seed","value": "%s"},{"name": "Settings","value": "**Objective**: %s\n**Spawn**: %s\n**Puppysanity**: %s\n**Sequence breaks**: %s\n"},{"name": "Title Screen Code","value": "<%s> <%s> <%s> <%s> <%s> (%s/%s/%s/%s/%s)"},{"name": "<:rando:558942498668675072> Sharecode","value": "`%s`"}]}}]]
   
   local date = os.date("%B %d, %Y")
 
