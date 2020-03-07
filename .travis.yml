@@ -5,9 +5,8 @@ addons:
     packages:
       - xvfb
 
-install:
-  - export DISPLAY=':99.0'
-  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+services:
+  - xvfb
 
 before_install:
   - sudo add-apt-repository -y ppa:bartbes/love-stable
@@ -16,6 +15,8 @@ before_install:
 
 script:
   - P="csrando"
+  - mkdir target
+  - mkdir target/src
   - cp -r src target/src	
   - cd target/src
   - zip -9 -r - . > "../${P}.love"
