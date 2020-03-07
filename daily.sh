@@ -31,7 +31,6 @@ mkdir -p "$tmp/$P"
 cat "love.exe" "${P}.love" > "$tmp/${P}/${P}.exe"
 cp  *dll target/license* "$tmp/$P"
 cd "$tmp/$P"
-dir
-"${P}.exe" --daily
+"./${P}.exe" --daily
 read -r body <daily.txt
 curl -H "Content-Type: application/json" -X POST -d "${body}" "${WEBHOOK}"
