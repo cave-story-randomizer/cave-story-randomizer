@@ -27,8 +27,8 @@ function love.load(args)
   Settings:init()
   Screen:setup()
 
-  if args[1] == "--daily" then
-    lf.write("daily.txt", Randomizer:generateDaily())
+  if true then
+    U.writeFile("daily.txt", Randomizer:generateDaily())
     love.event.quit()
     return
   end
