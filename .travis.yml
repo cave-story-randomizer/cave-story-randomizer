@@ -1,8 +1,12 @@
+language: bash
+
+before_install:
+  - sudo add-apt-repository -y ppa:bartbes/love-stable
+  - sudo apt-get -q update
+  - sudo apt-get -y install love
+
 script:
   - P="csrando"
-  - sudo add-apt-repository ppa:bartbes/love-stable
-  - sudo apt-get update
-  - sudo apt-get install love
   - cp -r src target	
   - cd target/src
   - zip -9 -r - . > "../${P}.love"
