@@ -218,8 +218,10 @@ function C:_shuffleItems(tscFiles)
   self:_fastFillItems(optional, shuffle(self.worldGraph:getEmptyLocations()))
   self:_generateHints()
 
-  self.worldGraph:writeItems(tscFiles)
-  self.worldGraph:logLocations()
+  if tscFiles ~= nil then
+    self.worldGraph:writeItems(tscFiles)
+    self.worldGraph:logLocations()
+  end
 end
 
 function C:_fillItems(items, locations)
@@ -291,6 +293,7 @@ function C:_generateHash()
   local path = self:_getWritePath() .. '/hash.txt'
   local h = {love.math.random(39), love.math.random(39), love.math.random(39), love.math.random(39), love.math.random(39)}
   U.writeFile(path, ("%04d,%04d,%04d,%04d,%04d"):format(h[1], h[2], h[3], h[4], h[5]))
+  return h
 end
 
 function C:_getWritePath()

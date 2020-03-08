@@ -30,11 +30,11 @@ function love.conf(t)
     -- This is the name of your game's executable.
     package = 'Cave Story Randomizer',
     loveVersion = '11.2',
-    version = nil,
-    author = 'shru',
-    email = nil,
-    description = nil,
-    homepage = 'https://shru.itch.io/cave-story-randomizer',
+    version = 'v2.0-RC2',
+    author = 'duncathan',
+    email = 'dunc@duncathan.com',
+    description = 'A randomizer for Cave Story',
+    homepage = 'https://github.com/cave-story-randomizer/cave-story-randomizer',
     -- MacOS needs this.
     identifier = 'CaveStoryRandomizer',
     excludeFileList = {
