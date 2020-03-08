@@ -269,7 +269,7 @@ end)
 settings.importshare:onPress(function()
   local success, seed, sharesettings, seq = pcall(function()
     local packed = love.data.decode("data", "base64", settings.sharecode.value)
-    local seed, settings, seq = love.data.unpack("sBB", packed)
+    local seed, settings, seq = love.data.unpack("<s1BB", packed)
     assert(#seed == 20)
     return seed, settings, seq
   end)

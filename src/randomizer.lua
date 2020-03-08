@@ -399,7 +399,7 @@ function C:_updateSharecode(seed)
     seed = seed .. (" "):rep(20-#seed)
   end
 
-  local packed = love.data.pack("data", "sBB", seed, settings, seq)
+  local packed = love.data.pack("data", "<s1BB", seed, settings, seq)
   self.sharecode = love.data.encode("string", "base64", packed)
 
   logNotice(("Sharecode: %s"):format(self.sharecode))
