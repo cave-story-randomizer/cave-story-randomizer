@@ -40,9 +40,12 @@ if you own a =Blade=!<NOD<END
 off to...<NOD<CLRYou haven't seen my husband,
 have you?<NOD<EVE0212
 #0211
-<PRI<MSG<TURThank you for your help.<NOD<END
+<FLJ1372:0213
+<PRI<MSG<TURThank you for finding him.<NOD<EVE0212
 #0212
 <EVE0000
+#0213
+<PRI<MSG<TURThank you for your help.<NOD<END
 #0220
 <PRI<MSG<TURWho're you, mister?<NOD<END
 
