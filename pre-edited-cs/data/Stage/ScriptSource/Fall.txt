@@ -26,7 +26,7 @@
 <CMU0010Caught by Kazuma!<WAI0160<CLR<FAC0010Phew...<WAI0200<CLRI never thought you'd
 actually pull it off.<WAI0200<CLRBlowing up the core...<WAI0200<CLRWell, now the world ought
 to be free from any future
-incarnations of the Doctor.<WAI0200
+incarnations of the Doctor.<WAI0200<CLR
 Peace has been preserved!<WAI0200<CLR
 Now, let's go home.<WAI0200<CLO
 <KEY<FAO0004<HMC<TRA0000:0100:0001:0015
