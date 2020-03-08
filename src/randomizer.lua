@@ -425,7 +425,7 @@ function C:_getStatusMessage(seed, sharecode)
 end
 
 function C:generateDaily()
-  local json = [[{"embed": {"title": "**Daily Challenge: %s**","fields": [{"name": "Seed","value": "%s"},{"name": "Settings","value": "**Objective**: %s\n**Spawn**: %s\n**Puppysanity**: %s\n**Sequence breaks**: %s\n"},{"name": "Title Screen Code","value": "<%s> <%s> <%s> <%s> <%s> (%s/%s/%s/%s/%s)"},{"name": "<:rando:558942498668675072> Sharecode","value": "`%s`"}]}}]]
+  local json = [[{"embeds": [{"title": "**Daily Challenge: %s**","fields": [{"name": "Seed","value": "%s","inline": true},{"name": "Version","value": "%s","inline": true},{"name": "Settings","value": "**Objective**: %s\n**Spawn**: %s\n**Puppysanity**: %s\n**Sequence breaks**: %s\n"},{"name": "Title Screen Code","value": "<%s> <%s> <%s> <%s> <%s> (%s/%s/%s/%s/%s)"},{"name": "<:rando:558942498668675072> Sharecode","value": "`%s`"}]}]}]]
   
   local date = os.date("%B %d, %Y")
 
@@ -488,7 +488,7 @@ function C:generateDaily()
   local hash = self:_generateHash()
   local h = {itemdata[hash[1]], itemdata[hash[2]], itemdata[hash[3]], itemdata[hash[4]], itemdata[hash[5]]}
 
-  return json:format(date, seed, objective.name, spawn, puppies.name, sequence.name, h[1].emoji, h[2].emoji, h[3].emoji, h[4].emoji, h[5].emoji, h[1].name, h[2].name, h[3].name, h[4].name, h[5].name, self.sharecode)
+  return json:format(date, seed, VERSION, objective.name, spawn, puppies.name, sequence.name, h[1].emoji, h[2].emoji, h[3].emoji, h[4].emoji, h[5].emoji, h[1].name, h[2].name, h[3].name, h[4].name, h[5].name, self.sharecode)
 end
 
 return C
