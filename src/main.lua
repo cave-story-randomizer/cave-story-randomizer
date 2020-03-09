@@ -1,7 +1,7 @@
 require 'lib.strict'
 
-VERSION = '2.0-RC2'
-CSVERSION = 1
+VERSION = '2.0-RC3'
+CSVERSION = 2
 
 Class   = require 'lib.classic'
 _       = require 'lib.moses'
