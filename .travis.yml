@@ -4,28 +4,42 @@ addons:
   apt:
     update: true
     packages:
-      - xvfb
-      - libzip-dev
-
+    - xvfb
+    - libzip-dev
 services:
-  - xvfb
-
+- xvfb
 before_install:
-  - pip install hererocks
-  - hererocks env --luarocks 3.0 --lua latest
-  - export 'PATH='"$TRAVIS_BUILD_DIR"'/env/bin'":$PATH"
-  - luarocks install --server="http://luarocks.org/dev" lua-zip
-  - luarocks install love-release
-
+- pip install hererocks
+- hererocks env --luarocks 3.0 --lua latest
+- export 'PATH='"$TRAVIS_BUILD_DIR"'/env/bin'":$PATH"
+- luarocks install --server="http://luarocks.org/dev" lua-zip
+- luarocks install love-release
+install:
+- sudo add-apt-repository -y ppa:bartbes/love-stable
+- sudo apt-get -q update
+- sudo apt-get -y install love
 script:
-  - cd src
-  - love-release -W -M
-  - dir
-  - cd -
-  - chmod u+r+x daily.sh
-  - ./daily.sh
-
+- cd src
+- love-release -W -M
+- cd $TRAVIS_BUILD_DIR
+- mv pre-edited-cs "Cave Story"
+- zip -ur CaveStoryRandomizer-win64.zip "Cave Story"
+- zip -ur CaveStoryRandomizer-win32.zip "Cave Story"
+- zip -ur CaveStoryRandomizer-macosx.zip "Cave Story"
+- zip -r CaveStoryRandomizer-linux.zip CaveStoryRandomizer.love "Cave Story"
+- chmod u+r+x daily.sh
+- "./daily.sh"
 env:
   global:
-    # travis encrypt WEBHOOK=<url>
-  - secure: "DU2Mq4FPbOidv0Go4b+2r5Vy7v0bbQo40ZZPkiwm/6nAJYkwySwVn2DyZGwh/kV4o6ZG0IgtLxPvHiF8lVZptbtkHJTt/GeokwwvsfpHJntPC9jyvXklFkkln9h2AgWrhTmFf+EYE4Mlm7FAjsr/9ZZHCuGn7wDCOBk3g4Zy7eAyKGqpYMN3296eUiZPXWtOAexmbavFI07pmu4ZyJ8K6HMmjd8YSAQpui3zJn/hMTupQm+o5s/ehZ72QnUyjRWdKvLlJCzORrajJxgYXQqLdjXVMcq4kuR4pDRnLdW9XBlAWiHOvj7wlVOUyBq2ZyhkTTNEYiQp+9UsIua1gG0hdLiOGH2ODtrb6NvQIRUfs5jE6xHmw3hQCfIe9itT+SbVQmuuTovM/MQTS/vH7k+AHtnJCGykMjAD6evNi1EkOG5oxrL7xEGPz7lzyVISoz0O4YmMWGF0qIzb68R11+Eo1URFrEUDxZc7F2kMoeAbnTxfiGABrMXrgIN7ReJhfD1z4ik6KwKBFw9AwJfldyb5w0QgqFAkkihqKGp5VbTMR6LeSN0Tq/Ic3QRvLHYt43+eoRXS4d2lvSo/0Nf7FftQPurbLI6c/r9nckwOZmjFicwYJ0Ulrbd46og74FUQZFSMcrVsiXo1PG2yTwu9bUvTBUHWdWh0o2xPpfAHbA05++c="
+  - secure: DU2Mq4FPbOidv0Go4b+2r5Vy7v0bbQo40ZZPkiwm/6nAJYkwySwVn2DyZGwh/kV4o6ZG0IgtLxPvHiF8lVZptbtkHJTt/GeokwwvsfpHJntPC9jyvXklFkkln9h2AgWrhTmFf+EYE4Mlm7FAjsr/9ZZHCuGn7wDCOBk3g4Zy7eAyKGqpYMN3296eUiZPXWtOAexmbavFI07pmu4ZyJ8K6HMmjd8YSAQpui3zJn/hMTupQm+o5s/ehZ72QnUyjRWdKvLlJCzORrajJxgYXQqLdjXVMcq4kuR4pDRnLdW9XBlAWiHOvj7wlVOUyBq2ZyhkTTNEYiQp+9UsIua1gG0hdLiOGH2ODtrb6NvQIRUfs5jE6xHmw3hQCfIe9itT+SbVQmuuTovM/MQTS/vH7k+AHtnJCGykMjAD6evNi1EkOG5oxrL7xEGPz7lzyVISoz0O4YmMWGF0qIzb68R11+Eo1URFrEUDxZc7F2kMoeAbnTxfiGABrMXrgIN7ReJhfD1z4ik6KwKBFw9AwJfldyb5w0QgqFAkkihqKGp5VbTMR6LeSN0Tq/Ic3QRvLHYt43+eoRXS4d2lvSo/0Nf7FftQPurbLI6c/r9nckwOZmjFicwYJ0Ulrbd46og74FUQZFSMcrVsiXo1PG2yTwu9bUvTBUHWdWh0o2xPpfAHbA05++c=
+deploy:
+  provider: releases
+  api_key:
+    secure: bMinTly2BOZCNQw625Fz744hvVQlnwZiC6pQZZx1f5evs0gi4TXbqqft5UN3orGgRiNnVnbf2qYC7PnS1LzynHUimdVk8iqfRKz4ADuWXyf9/i1gojzzSAI87lxbGaHxzqjZLtzf1zRonPlY1oj9X3a1eAle6EEAn/Utnm/jqZPhTYm8cMowLWqcVTcDOw1lhBpgsVYdej1wCaq7r2KBDvrqWZCdt8pJ2lcaShJEqmBONDvu9KO+gbNXwmhBAz4bG0DTVFhO459ZNjfNz749eiU7KhbxvFgz7O+j8HEdhlXznYgmzveUmVmhOSe3z037YwCNv+2ar0FITGkmTpgog0z2XuxDMb28Eakoc0uzaowwB68JRfEeRpBGidhSGraZ5DnHOS3QdDaEQ4jImv97DagiVoqcKm3JDGhGuvbI4dfPsXHKMncJC8cqf86NwSg63boabcoUTwzVLZdd4tbiOBqYPBgEtEz4uFgKvkrrzE0DoP1Efi1aZqcnOW6xckHbC261rxB5QG8WGcb1tDnmQgbhbEEguPHuzKBWP6ktpjpFdeS3Wbqb0UMaXQXMCcaMpJfCLNsLxQ6iHOh+XQhJREDPTuXm4F1m0BzSjBvQpWQ4tpO+kF1KiJ4wiwzn9jTfJxhgMgxEoY75dtH+E0K2jXLRezychR22V+7R9ifNLns=
+  file: 
+    - releases/*.zip
+  file_glob: true
+  on:
+    repo: cave-story-randomizer/cave-story-randomizer
+    branch: stable
+  draft: true

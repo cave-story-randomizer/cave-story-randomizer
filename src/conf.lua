@@ -26,7 +26,7 @@ function love.conf(t)
 
   t.releases = {
     -- This is the name of the zip archive which contains your game.
-    title = 'Cave Story Randomizer',
+    title = 'CaveStoryRandomizer',
     -- This is the name of your game's executable.
     package = 'Cave Story Randomizer',
     loveVersion = '11.2',
