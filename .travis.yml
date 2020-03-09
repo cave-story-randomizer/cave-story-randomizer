@@ -11,14 +11,15 @@ services:
   - xvfb
 
 before_install:
-  - sudo pip install hererocks
+  - sudo su
+  - pip install hererocks
   - hererocks env --luarocks 3.0 --lua latest
   - cd env/bin
   - dir
-  - sudo activate
+  - source activate
   - cd -
-  - sudo luarocks install --server="http://luarocks.org/dev" lua-zip
-  - sudo luarocks install love-release
+  - luarocks install --server="http://luarocks.org/dev" lua-zip
+  - luarocks install love-release
 
 script:
   - cd src
@@ -26,7 +27,7 @@ script:
   - dir
   - cd -
   #- sudo chmod u+r+x daily.sh
-  - sudo ./daily.sh
+  - ./daily.sh
 
 env:
   global:
