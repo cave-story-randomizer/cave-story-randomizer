@@ -27,7 +27,7 @@ script:
 - zip -ur CaveStoryRandomizer-win64.zip "../../Cave Story"
 - zip -ur CaveStoryRandomizer-win32.zip "../../Cave Story"
 - zip -ur CaveStoryRandomizer-macosx.zip "../../Cave Story"
-- zip -r releases/CaveStoryRandomizer-linux.zip releases/CaveStoryRandomizer.love "../../Cave Story"
+- zip -r CaveStoryRandomizer-linux.zip CaveStoryRandomizer.love "../../Cave Story"
 - cd -
 - chmod u+r+x daily.sh
 - "./daily.sh"
