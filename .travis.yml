@@ -13,7 +13,7 @@ services:
 before_install:
   - sudo pip install hererocks
   - hererocks env --luarocks 3.0 --lua latest
-  - sudo source env/bin/activate
+  - env/bin/activate
   - sudo luarocks install --server="http://luarocks.org/dev" lua-zip
   - sudo luarocks install love-release
 
