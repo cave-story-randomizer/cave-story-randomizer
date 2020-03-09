@@ -13,7 +13,7 @@ services:
 before_install:
   - pip install hererocks
   - hererocks env --luarocks 3.0 --lua latest
-  - export 'PATH='"$(PWD)"'/env/bin'":$PATH"
+  - export 'PATH='"$TRAVIS_BUILD_DIR"'/env/bin'":$PATH"
   - luarocks install --server="http://luarocks.org/dev" lua-zip
   - luarocks install love-release
 
