@@ -11,8 +11,8 @@ services:
   - xvfb
 
 install:
-  - luarocks install --server="http://luarocks.org/dev" lua-zip
-  - luarocks install love-release
+  - sudo luarocks install --server="http://luarocks.org/dev" lua-zip
+  - sudo luarocks install love-release
 
 script:
   - cd src
