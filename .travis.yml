@@ -6,7 +6,7 @@ addons:
     packages:
       - xvfb
       - luarocks
-      - libzip
+      - libzip-dev
 
 services:
   - xvfb
