@@ -1,15 +1,19 @@
-language: bash
+language: python
 dist: xenial
 addons:
   apt:
     update: true
     packages:
       - xvfb
-      - luarocks
       - libzip-dev
 
 services:
   - xvfb
+
+before_install:
+  - sudo pip install hererocks
+  - hererocks env --luarocks 3.0 --lua latest
+  - source env/bin/activate
 
 install:
   - sudo luarocks install --server="http://luarocks.org/dev" lua-zip
