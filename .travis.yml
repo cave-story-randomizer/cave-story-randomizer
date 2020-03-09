@@ -1,4 +1,4 @@
-language: python
+language: bash
 dist: xenial
 addons:
   apt:
@@ -11,8 +11,8 @@ services:
   - xvfb
 
 install:
-  - lua-rocks install --server="http://luarocks.org/dev" lua-zip
-  - lua-rocks install love-release
+  - luarocks install --server="http://luarocks.org/dev" lua-zip
+  - luarocks install love-release
 
 script:
   - cd src
