@@ -24,12 +24,6 @@ function love.conf(t)
   t.modules.touch = false
   t.modules.video = false
 
-  for _,a in pairs(arg) do
-    if a == "--headless" then
-      t.window, t.modules.window, t.modules.graphics = false, false, false
-    end
-  end
-
   t.releases = {
     -- This is the name of the zip archive which contains your game.
     title = 'CaveStoryRandomizer',
