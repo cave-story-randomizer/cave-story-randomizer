@@ -11,7 +11,7 @@ before_install:
     if ! [ -x "$(command -v luarocks)" ]; then
       # install luarocks via hererocks via python
       pip install hererocks
-      hererocks --lua 5.1 --luarocks 3 $HOME/luarocks
+      hererocks --lua latest --luarocks 3.0 $HOME/luarocks
       bash $HOME/luarocks/bin/activate
     fi
     export PATH=$HOME/luarocks/bin:$PATH
