@@ -27,7 +27,6 @@ function love.load(args)
   Settings:init()
 
   if _.contains(args, "--daily") then
-    love.window.close()
     U.writeFile("daily.txt", generateDaily())
     love.event.quit()
     return
