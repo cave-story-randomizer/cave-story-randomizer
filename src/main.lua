@@ -1,6 +1,6 @@
 require 'lib.strict'
 
-VERSION = '2.0-RC3'
+VERSION = '2.0'
 CSVERSION = 2
 
 Class   = require 'lib.classic'
