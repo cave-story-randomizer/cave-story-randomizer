@@ -1,6 +1,6 @@
 set -ev
 
-# if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then exit 0; fi
+if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then exit 0; fi
 
 cd src
 love-release
