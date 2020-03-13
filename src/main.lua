@@ -118,6 +118,11 @@ function generateDaily()
   Randomizer.puppy = puppies.val
   Randomizer.worldGraph.seqbreak = sequence.val
 
+  -- no matter what time of day you run the daily, it'll be consistent throughout the day
+  local date = os.date("*t", os.time())
+  date = {year = date[year], month = date[month], day = date[day]}
+  Randomizer.customseed = tostring(os.time(date))
+
   local seed = Randomizer:_seedRngesus()
   Randomizer:_updateSharecode(seed)
   Randomizer:_shuffleItems()
