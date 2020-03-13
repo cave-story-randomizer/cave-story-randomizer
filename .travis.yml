@@ -8,22 +8,13 @@ addons:
       - libzip-dev
 before_install:
   - |
-    if ! [ -x "$(command -v luarocks)" ]; then
-      # install luarocks via hererocks via python
-      pip install hererocks
-      hererocks --lua latest --luarocks 3.0 $HOME/luarocks
-      bash $HOME/luarocks/bin/activate
-    fi
-    export PATH=$HOME/luarocks/bin:$PATH
+    pip install hererocks
+    hererocks env --luarocks 3.0 --lua latest
+    export 'PATH='"$TRAVIS_BUILD_DIR"'/env/bin'":$PATH"
 install: 
-  - luarocks install --server="http://luarocks.org/dev" lua-zip
-  - luarocks install love-release
-  - sudo add-apt-repository -y ppa:bartbes/love-stable
-  - sudo apt-get -q update
-  - sudo apt-get -y install love
-cache:
-  directories:
-    - $HOME/luarocks
+  - |
+    luarocks install --server="http://luarocks.org/dev" lua-zip
+    luarocks install love-release
 script:
   - bash daily.sh
 env:
@@ -32,7 +23,6 @@ env:
 before_deploy:
   - |
     cd src; love-release -M; cd -
-    bash reshacker.sh
     mv pre-edited-cs "src/releases/Cave Story"
     cd src/releases
     zip -9 -qur CaveStoryRandomizer-macos.zip "Cave Story"
