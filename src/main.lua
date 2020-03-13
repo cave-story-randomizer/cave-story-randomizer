@@ -105,7 +105,12 @@ end
 function generateDaily()
   local json = [[{"embeds": [{"title": "**Daily Challenge: %s**","color": 11323851,"fields": [{"name": "Seed","value": "%s","inline": true},{"name": "Version","value": "%s","inline": true},{"name": "Settings","value": "**Objective**: %s\n**Spawn**: %s\n**Puppysanity**: %s\n**Sequence breaks**: %s\n"},{"name": "Title Screen Code","value": "<%s> <%s> <%s> <%s> <%s> (%s/%s/%s/%s/%s)"},{"name": "<:rando:558942498668675072> Sharecode","value": "`%s`"}]}]}]]
   
-  local date = os.date("%B %d, %Y")
+  -- no matter what time of day you run the daily, it'll be consistent throughout the day
+  local date = os.date("*t", os.time())
+  Randomizer.customseed = tostring(os.time({year=date.year, month=date.month, day=date.day}))
+  Randomizer:_seedRngesus()
+
+  local datestring = os.date("%B %d, %Y")
 
   local function pick(t) return t[love.math.random(#t)] end
   local objective = pick({{name = "Bad Ending", val = "objBadEnd"}, {name = "Normal Ending", val = "objNormalEnd"}, {name = "Best Ending", val = "objBestEnd"}, {name = "All Bosses", val = "objAllBosses"}, {name = "100%", val = "obj100Percent"}})
@@ -118,6 +123,7 @@ function generateDaily()
   Randomizer.puppy = puppies.val
   Randomizer.worldGraph.seqbreak = sequence.val
 
+  -- reinitialize seed after pick()ing
   local seed = Randomizer:_seedRngesus()
   Randomizer:_updateSharecode(seed)
   Randomizer:_shuffleItems()
@@ -166,5 +172,5 @@ function generateDaily()
   local hash = Randomizer:_generateHash()
   local h = {itemdata[hash[1]], itemdata[hash[2]], itemdata[hash[3]], itemdata[hash[4]], itemdata[hash[5]]}
 
-  return json:format(date, seed, VERSION, objective.name, spawn, puppies.name, sequence.name, h[1].emoji, h[2].emoji, h[3].emoji, h[4].emoji, h[5].emoji, h[1].name, h[2].name, h[3].name, h[4].name, h[5].name, Randomizer.sharecode)
+  return json:format(datestring, seed, VERSION, objective.name, spawn, puppies.name, sequence.name, h[1].emoji, h[2].emoji, h[3].emoji, h[4].emoji, h[5].emoji, h[1].name, h[2].name, h[3].name, h[4].name, h[5].name, Randomizer.sharecode)
 end
