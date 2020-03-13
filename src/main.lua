@@ -120,8 +120,7 @@ function generateDaily()
 
   -- no matter what time of day you run the daily, it'll be consistent throughout the day
   local date = os.date("*t", os.time())
-  date = {year = date[year], month = date[month], day = date[day]}
-  Randomizer.customseed = tostring(os.time(date))
+  Randomizer.customseed = tostring(os.time({year=date.year, month=date.month, day=date.day}))
 
   local seed = Randomizer:_seedRngesus()
   Randomizer:_updateSharecode(seed)
