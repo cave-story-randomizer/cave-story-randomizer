@@ -41,7 +41,7 @@ settings.randoButton:onPress(function()
   Screen:loadObjective(love.math.random(4)-1)
   settings.seedselect.value = false
   settings.seedrandom.value = true
-  Screen:loadMyChar(love.math.random(7))
+  Screen:loadMyChar(love.math.random(8))
   Screen:loadSpawn(love.math.random(3)-1)
   Screen:loadSeqSettings(fifty(), {
   cthulhu = fifty(),
@@ -98,8 +98,10 @@ function C:loadMyChar(mychar)
     settings.mychar.index = 5
   elseif mychar == "assets/myChar/Kanpachi.bmp" then
     settings.mychar.index = 6
-  elseif mychar == "assets/myChar/Frog.bmp" then
+  elseif mychar == "assets/myChar/Misery.bmp" then
     settings.mychar.index = 7
+  elseif mychar == "assets/myChar/Frog.bmp" then
+    settings.mychar.index = 8
   end
   settings.mychar.value = "override"
 end
