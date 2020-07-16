@@ -510,6 +510,8 @@ function worldGraph:new(items)
   }
 
   self.hintregion = hintRegion(self)
+
+  self.noFallingBlocks = false
 end
 
 function worldGraph:_dboost(items, key)

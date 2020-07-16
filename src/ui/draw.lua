@@ -29,6 +29,7 @@ function C:setup()
   self:loadSpawn(Settings.settings.spawn)
   self:loadSeqSettings(Settings.settings.seqbreaks, Settings.settings.dboosts)
   self:loadMusicSettings(Settings.settings.musicShuffle, Settings.settings.musicBeta, Settings.settings.musicFlavor)
+  self:loadNoFallingBlocks(Settings.settings.noFallingBlocks)
 
   background = lg.newImage('assets/background.png')
   self:draw()
@@ -54,6 +55,7 @@ settings.randoButton:onPress(function()
   rocket = fifty()
   })
   Screen:loadMusicSettings(fifty(), fifty(), love.math.random(3))
+  Screen:loadNoFallingBlocks(fifty())
 end)
 
 function C:loadPuppy(puppy)
@@ -151,6 +153,10 @@ function C:loadMusicSettings(shuffle, beta, flavor)
   end
 end
 
+function C:loadNoFallingBlocks(noFallingBlocks)
+  settings.noFallingBlocks.value = noFallingBlocks
+end
+
 layout.version.text = 'Cave Story Randomizer v' .. VERSION
 layout.author.text  = 'by duncathan'
 layout.twitter.text = '(@duncathan_salt)'
@@ -206,6 +212,8 @@ layout.go:onPress(function()
     if music.shuffle.value then Randomizer.music.flavor = "Shuffle" end
     if music.random.value then Randomizer.music.flavor = "Random" end
     if music.chaos.value then Randomizer.music.flavor = "Chaos" end
+
+    Randomizer.worldGraph.noFallingBlocks = settings.noFallingBlocks.value
 
     C:setStatus(Randomizer:randomize())
 
@@ -271,18 +279,18 @@ end)
 settings.importshare:onPress(function()
   local success, seed, sharesettings, seq = pcall(function()
     local packed = love.data.decode("data", "base64", settings.sharecode.value)
-    local seed, settings, seq = love.data.unpack("<s1BB", packed)
+    local seed, settings, seq = love.data.unpack("<s1I2B", packed)
     assert(#seed == 20)
     return seed, settings, seq
   end)
 
   if success then 
     settings.importshare.text = "Sharecode Imported"
-    Screen:loadPuppy(bit.band(sharesettings, 1) ~= 0) -- settings & 0b00000001
-    Screen:loadObjective(bit.brshift(bit.band(sharesettings, 14), 1)) -- (settings & 0b00001110) >> 1
-    Screen:loadSpawn(bit.brshift(bit.band(sharesettings, 112), 4)) -- (settings & 0b01110000) >> 4
+    Screen:loadPuppy(bit.band(sharesettings, 1) ~= 0) -- settings & 0b000000001
+    Screen:loadObjective(bit.brshift(bit.band(sharesettings, 14), 1)) -- (settings & 0b000001110) >> 1
+    Screen:loadSpawn(bit.brshift(bit.band(sharesettings, 112), 4)) -- (settings & 0b001110000) >> 4
     Screen:loadSeed(seed:gsub("^%s*(.-)%s*$", "%1")) -- trim any leading or trailing whitespace
-    Screen:loadSeqSettings(bit.band(sharesettings, 128) ~= 0, { -- (settings & 0b10000000)
+    Screen:loadSeqSettings(bit.band(sharesettings, 128) ~= 0, { -- (settings & 0b010000000)
       cthulhu = bit.band(seq, 1) ~= 0,
       chaco = bit.band(seq, 2) ~= 0,
       paxChaco = bit.band(seq, 4) ~= 0,
@@ -292,6 +300,7 @@ settings.importshare:onPress(function()
       plantation = bit.band(seq, 64) ~= 0,
       rocket = bit.band(seq, 128) ~= 0
     })
+    Screen:loadNoFallingBlocks(bit.band(sharesettings, 256) ~= 0) -- (settings & 0b100000000)
   else
     settings.importshare.text = "Invalid Sharecode!"
   end
