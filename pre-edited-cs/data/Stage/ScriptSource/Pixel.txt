@@ -15,11 +15,9 @@
 <FLJ1042:0097<END
 #0097
 <DNP0836<END
-
 #0100
 <KEY<ANP0100:0000:0002<SOU0011
 <FAO0004<CSS<TRA0048:0094:0153:0016
-
 #0200
 <KEY<SAT
 <FLJ1441:0203
@@ -27,21 +25,16 @@
 <FLJ0835:0201
 <MSG<TURWords light up the screen.<NOD<CLR
 04-08-08 Wife bore child.<NOD<END
-
 #0201
 <KEY<MSG<TURWords light up the screen.<NOD<CLR
 <TURWhy don't you take a rest?<NOD<END
-
 #0202
 <KEY<FL+1445<MSG<TURWords light up the screen.<NOD<CLR<TURYou know, I often recorded what
 I learned in that notebook...<NOD<END
-
 #0203
 <KEY<MSGWords light up the screen.<NOD<CLR
 <TURI pray for your victory.<NOD<END
-
 #0210
-
 #0220
 <KEY<MSGYou find nothing of interest...<NOD<END
 #0221
@@ -55,11 +48,9 @@ robots!<WAI0160<NOD<RMU<END
 #0223
 <KEY<MSGNothing else here appears
 especially useful...<NOD<END
-
 #0240
-<KEY<MSG<TURGo back to the labyrinth?<YNJ0000
+<KEY<MSG<TURGo back to the labyrinth?<WAI0040<YNJ0000
 <PRI<FAO0004<TRA0046:0094:0008:0009
-
 #0250
 <KEY
 <SAT
@@ -91,6 +82,4 @@ from Curly?<YNJ0000<CLO
 <KEY<CNP0260:0259:0000<FL+0836<FL+1042<FL-1440<FL+1444<WAI0010<END
 #0257
 <KEY<MSGThe bed's sopping wet.<NOD<END
-
 #0260
-
