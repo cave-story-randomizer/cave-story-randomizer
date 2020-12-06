@@ -3,7 +3,7 @@ local function lifeCapsule3()
     name = "Life Capsule",
     script = "<EVE0012",
     attributes = {"nonProgressive", "hp3", "helpful"},
-    hints = {"a Life Capsule", "some health", "a little HP"}
+    hints = {"a Life Capsule", "a little HP"}
   }
 end
 local function lifeCapsule4()
@@ -11,7 +11,7 @@ local function lifeCapsule4()
     name = "Life Capsule",
     script = "<EVE0013",
     attributes = {"nonProgressive", "hp4", "helpful"},
-    hints = {"a Life Capsule", "some health", "some decent HP"}
+    hints = {"a Life Capsule", "some decent HP"}
   }
 end
 local function lifeCapsule5()
@@ -19,7 +19,7 @@ local function lifeCapsule5()
     name = "Life Capsule",
     script = "<EVE0014",
     attributes = {"nonProgressive", "hp5", "helpful"},
-    hints = {"a Life Capsule", "some health", "a lot of HP"}
+    hints = {"a Life Capsule", "a lot of HP"}
   }
 end
 
@@ -119,13 +119,13 @@ local function _itemData()
       name = "Map System",
       script = "<EVE0052",
       attributes = {"nonProgressive", "map"},
-      hints = {"the Map System", "a map", "an electronic device"}
+      hints = {"a map", "an electronic device"}
     },
     locket = {
       name = "Silver Locket",
       script = "<EVE0054",
       attributes = {"mandatory"},
-      hints = {"the Silver Locket", "some fishy jewelry", "a Mimiga's item"}
+      hints = {"some fishy jewelry", "a Mimiga's item"}
     },
     arthurKey = {
       name = "Arthur's Key",
@@ -149,13 +149,13 @@ local function _itemData()
       name = "Chaco's Lipstick",
       script = "<EVE0087",
       attributes = {"nonProgressive", "useless"},
-      hints = {"Chaco's Lipstick", "some lipstick", "a Mimiga's item", "a lewd item"}
+      hints = {"some lipstick", "a Mimiga's item", "a lewd item"}
     },
     juice = {
       name = "Jellyfish Juice",
       script = "<EVE0058",
       attributes = {"mandatory"},
-      hints = {"some Jellyfish Juice", "a bomb ingredient"}
+      hints = {"some juice", "a bomb ingredient"}
     },
     charcoal = {
       name = "Charcoal",
@@ -414,14 +414,14 @@ local function _itemData()
   }
 
   local hintArray = {
-    mandatory = {"a required item"},
-    puppy = {"a required item", "a puppy", "a living being"},
-    helpful = {"a helpful item"},
-    useless = {"a useless item"},
+    --mandatory = {"a required item"},
+    puppy = {"a puppy", "a living being"},
+    --helpful = {"a helpful item"},
+    --useless = {"a useless item"},
     weapon = {"a weapon"},
-    weaponSN = {"a weapon that breaks blocks"},
-    weaponStrong = {"a strong weapon"},
-    flight = {"a pair of wings", "a method of flight", "flight"},
+    --weaponSN = {"a weapon that breaks blocks"},
+    --weaponStrong = {"a strong weapon"},
+    flight = {"a method of flight", "flight"},
     missileLauncher = {"a Missile upgrade"}
   }
 
@@ -496,7 +496,7 @@ function C:unplacedString()
 end
 
 local function _hint(message, l)
-  local MSGBOXLIMIT = 42
+  local MSGBOXLIMIT = 35
   local PATTERN = " [^ ]*$"
   local line1, line2, line3 = "", "", ""
 
@@ -510,7 +510,7 @@ local function _hint(message, l)
 
     if line2:find(PATTERN) and #message > MSGBOXLIMIT*2 then
       line2 = line2:sub(1, line2:find(PATTERN))
-      split = line2:find(PATTERN)+split
+      split = line2:find(PATTERN)+split-2
       line3 = "\r\n" .. message:sub(split, split+MSGBOXLIMIT)
     end
   end
