@@ -284,7 +284,7 @@ function C:_writeLog()
 end
 
 function C:_copyMyChar()
-  local path = self:_getWritePath() .. '/myChar.bmp'
+  local path = self:_getWritePath() .. '/MyChar.bmp'
   local data = lf.read(self.mychar)
   U.writeFile(path, data)
 end
