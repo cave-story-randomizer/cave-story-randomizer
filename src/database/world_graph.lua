@@ -428,7 +428,7 @@ function lastCave:new(worldGraph)
     redDemon = Location("Red Demon Boss", "Priso2", "0300", self)
   }
 
-  self.requirements = function(self, items) return _has(items, "weaponBoss") and _count(items, "booster", 2) and (_has(items, "eventRocket") or (self.world:_dboost(items, 'rocket') and _has(items, "machineGun"))) end
+  self.requirements = function(self, items) return _has(items, "weaponBoss") and _count(items, "booster", 2) and (_has(items, "eventRocket") or (self.world:_dboost(items, 'rocket') and _has(items, "machineGun") and self.world.regions.plantation:canAccess(items))) end
 end
 
 local endgame = Region:extend()
@@ -513,7 +513,7 @@ function worldGraph:new(items)
 end
 
 function worldGraph:_dboost(items, key)
-  return (self.seqbreak or self.dboosts[key].enabled) and _hp(items) > self.dboosts[key].hp
+  return self.seqbreak and self.dboosts[key].enabled and _hp(items) > self.dboosts[key].hp
 end
 
 function worldGraph:StartPoint() return self.spawn == "Start Point" end
