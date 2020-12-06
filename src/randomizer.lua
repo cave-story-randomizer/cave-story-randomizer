@@ -169,6 +169,7 @@ function C:_shuffleItems(tscFiles)
   obj.name = obj.name .. (", %s"):format(self.worldGraph.spawn)
   obj.script = obj.script .. self.worldGraph:getSpawnScript()
   if self.worldGraph.seqbreak and self.worldGraph.dboosts.rocket.enabled then obj.script = "<FL+6400" .. obj.script end
+  if self.worldGraph.noFallingBlocks then obj.script = "<FL+1351" .. obj.script end
   -- place the objective scripts in Start Point
   self:_fastFillItems({obj}, self.worldGraph:getObjectiveSpot())
 
@@ -349,6 +350,7 @@ function C:_updateSettings()
   Settings.settings.musicShuffle = self.shuffleMusic
   Settings.settings.musicBeta = self.music.betaEnabled
   Settings.settings.musicFlavor = self.music.flavor
+  Settings.settings.noFallingBlocks = self.worldGraph.noFallingBlocks
   Settings:update()
 end
 
@@ -358,13 +360,15 @@ function C:_updateSharecode(seed)
   -- O: three bits used for objective
   -- S: three bits used for spawn location
   -- B: single bit used for sequence breaks
-  -- 0bBSSSOOOP
+  -- F: single bit used for falling blocks in Hell
+  -- 0bFBSSSOOOP
 
   -- bitshift intervals
   local obj = 1
   local pup = 0
   local spn = 4
   local brk = 7
+  local nfb = 8
 
   if self.obj == "objBadEnd" then
     settings = bit.bor(settings, bit.blshift(1, obj))
@@ -398,11 +402,15 @@ function C:_updateSharecode(seed)
     if self.worldGraph.dboosts.rocket.enabled then seq = bit.bor(seq, 128) end
   end
 
+  if self.worldGraph.noFallingBlocks then
+    settings = bit.bor(settings, bit.blshift(1, nfb))
+  end
+
   if #seed < 20 then
     seed = seed .. (" "):rep(20-#seed)
   end
 
-  local packed = love.data.pack("data", "<s1BB", seed, settings, seq)
+  local packed = love.data.pack("data", "<s1I2B", seed, settings, seq)
   self.sharecode = love.data.encode("string", "base64", packed)
 
   logNotice(("Sharecode: %s"):format(self.sharecode))

@@ -52,7 +52,8 @@ return { style = 'dialog',
           { text = "  Start\r\n  Point", value = "Start Point", icon = "assets/icon/StartPoint2.png" },
           { text = "  Arthur's\r\n  House", value = "Arthur's House", icon = "assets/icon/Arthur2.png" },
           { text = "  Camp", value = "Camp", icon = "assets/icon/Camp.png" }
-        }
+        },
+        { type = 'check', value = false, id = 'noFallingBlocks', text = "No Falling Blocks in Hell", minheight = 27 }
       },
     },
     {

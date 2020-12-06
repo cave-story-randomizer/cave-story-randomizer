@@ -39,6 +39,7 @@ function C:getDefaults()
     musicShuffle = false,
     musicBeta = false,
     musicFlavor = "Shuffle",
+    noFallingBlocks = false,
     csversion = 0
   }
 end
@@ -69,6 +70,7 @@ function C:serialize()
   line = line .. tab .. ("musicShuffle = %s,\r\n"):format(self.settings.musicShuffle)
   line = line .. tab .. ("musicBeta = %s,\r\n"):format(self.settings.musicBeta)
   line = line .. tab .. ("musicFlavor = %q,\r\n"):format(self.settings.musicFlavor)
+  line = line .. tab .. ("noFallingBlocks = %s,\r\n"):format(self.settings.noFallingBlocks)
   line = line .. tab .. ("csversion = %s,\r\n"):format(self.settings.csversion)
   
   return line .. "}"
