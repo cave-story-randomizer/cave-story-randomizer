@@ -43,6 +43,7 @@ return { style = 'dialog',
           { text = "  Sue", value = "assets/myChar/Sue.bmp", icon = "assets/icon/Sue.png" },
           { text = "  Toroko", value = "assets/myChar/Toroko.bmp", icon = "assets/icon/Toroko.png" },
           { text = "  King", value = "assets/myChar/King.bmp", icon = "assets/icon/King.png" },
+          { text = "  Chaco", value = "assets/myChar/Chaco.bmp", icon = "assets/icon/Chaco.png" },
           { text = "  Kanpachi", value = "assets/myChar/Kanpachi.bmp", icon = "assets/icon/Kanpachi.png" },
           { text = "  Misery", value = "assets/myChar/Misery.bmp", icon = "assets/icon/Misery.png" },
           { text = "  Frog", value = "assets/myChar/Frog.bmp", icon = "assets/icon/Frog.png" }
