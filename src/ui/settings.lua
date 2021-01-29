@@ -15,7 +15,7 @@ return { style = 'dialog',
           }
         },
         { type = 'label', text = 'Randomization Options', minheight = 32 },
-        { type = 'check', value = false, id = 'puppy', text = "Puppysanity", minheight = 27 },
+        { type = 'check', value = false, id = 'puppy', text = "Puppies outside Sand Zone", minheight = 27 },
         { flow = 'x', height = 32,
           { type = 'check', value = false, id = 'seqbreak', text = "Sequence breaks", minheight = 32, width =  170},
           { type = 'button', style = 'dialogButton', text = "Modify", id = 'seqButton', width = 70, align = 'center' },
