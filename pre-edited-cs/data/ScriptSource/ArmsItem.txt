@@ -635,5 +635,5 @@ Will you check it?<YNJ8200<CLR
 Show map?<YNJ0000<EVE7002
 #9101
 <KEY<MSGItems collected:
-    0/66
+    <NUM0000/66
 Show map?<YNJ0000<EVE7002
