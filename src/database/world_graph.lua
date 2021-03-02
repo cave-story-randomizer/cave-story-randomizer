@@ -37,12 +37,12 @@ function firstCave:new(worldGraph)
 
   -- individual location access requirement overrides
   self.locations.firstCapsule.canAccess = function(self, items)
-    if self.region.world:StartPoint() then return true end
+    if self.region.world:StartPoint() then return true end -- TODO remember to add a check for Entrance Rando here
     return Location.canAccess(self, items)
   end
 
   self.locations.gunsmithChest.canAccess = function(self, items)
-    if self.region.world:StartPoint() then return true end
+    if self.region.world:StartPoint() then return true end -- TODO remember to add a check for Entrance Rando here
     return Location.canAccess(self, items)
   end
 end
