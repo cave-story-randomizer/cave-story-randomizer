@@ -28,15 +28,22 @@ function firstCave:new(worldGraph)
   }
 
   self.requirements = function(self, items)
-    if self.world:StartPoint() then
-      return true
-    elseif self.world:Arthur() or self.world:Camp() then
-      return _has(items, "flight") and _has(items, "weaponSN") and self.world.regions.mimigaVillage:canAccess(items)
-    end
+    return _has(items, "flight") and _has(items, "weaponSN") and self.world.regions.mimigaVillage:canAccess(items)
   end
 
   self.locations.gunsmith.requirements = function(self, items)
-    return _has(items, "flight") and _has(items, "polarStar") and _has(items, "eventCore") and self.region.world.regions.mimigaVillage:canAccess(items)
+    return _has(items, "polarStar") and _has(items, "eventCore")
+  end
+
+  -- individual location access requirement overrides
+  self.locations.firstCapsule.canAccess = function(self, items)
+    if self.region.world:StartPoint() then return true end
+    return Location.canAccess(self, items)
+  end
+
+  self.locations.gunsmithChest.canAccess = function(self, items)
+    if self.region.world:StartPoint() then return true end
+    return Location.canAccess(self, items)
   end
 end
 
