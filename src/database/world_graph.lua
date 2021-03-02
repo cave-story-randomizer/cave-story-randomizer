@@ -217,9 +217,9 @@ function lowerSandZone:new(worldGraph)
     darkPup = Location("Puppy (Dark)", "Dark", "0401", self, {"where a puppy once was"}),
     runPup = Location("Puppy (Run)", "Sand", "0422", self, {"where a puppy once was", "with a puppy"}),
     sleepyPup = Location("Puppy (Sleep)", "Sand", "0421", self, {"where a puppy once was", "at the far end of Sand Zone"}),
-    pawCapsule = Location("Pawprint Spot", "Sand", "0503", self, {"with a fallen hero..", "in a garden", "behind a boss", "behind Toroko+"}),
+    pawCapsule = Location("Pawprint Spot", "Sand", "0503", self),
     jenka = Location("Jenka", "Jenka2", "0221", self, {"with Jenka", "at someone's house", "where a puppy once was"}),
-    king = Location("King", "Gard", "0602", self),
+    king = Location("King", "Gard", "0602", self, {"with a fallen hero..", "in a garden", "behind a boss", "behind Toroko+"}),
     eventToroko = Location("Defeated Toroko+", nil, nil, self)
   }
 
