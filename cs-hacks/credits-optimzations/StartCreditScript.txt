@@ -1,0 +1,131 @@
+offset 40d440
+
+#define
+Strip_addr=0049D628
+MAX_STRIP=7F
+sizeof=50
+
+fp=EBP-4
+path=EBP-110
+Credit.pData=49D614
+Credit.size=49d610
+Credit.offset=49d618
+Credit.wait=49d61c
+Credit.mode=49d620
+Illust.x=49d60c
+Illust.act_no=49d608
+grcGame.left=48f91c
+#enddefine
+
+PUSH EBP
+MOV EBP,ESP
+SUB ESP,110
+MOV EAX,[498B20]
+MOV [EBP-8],EAX
+
+CMP [Credit.pData],0
+JE :openfile
+MOV EAX,[Credit.pData]
+PUSH EAX
+CALL 0048128B
+ADD ESP,4
+MOV [Credit.pData],0
+
+:openfile
+MOV ECX,[48F918]
+PUSH ECX
+PUSH 0049E220
+PUSH 0048C374
+LEA EDX,[path]
+PUSH EDX
+CALL 00481010
+ADD ESP,10
+
+LEA EDX,[path]
+PUSH EDX
+CALL 00410D80
+ADD ESP,4
+MOV [Credit.size],EAX
+CMP EAX,-1
+JNE :allocatebuffer
+XOR EAX,EAX
+JMP :end
+
+:allocatebuffer
+MOV ECX,[Credit.size]
+PUSH ECX
+CALL 004813A3
+ADD ESP,4
+MOV [Credit.pData],EAX
+CMP EAX,0
+JNE :fopen
+JMP :end //EAX must be 0, return false
+
+:fopen
+PUSH 0048C37C
+LEA EAX,[path]
+PUSH EAX
+CALL 00480FFD
+ADD ESP,8
+MOV [fp],EAX
+CMP EAX,0
+JNE :readdata
+MOV EDX,[Credit.pData]
+PUSH EDX
+CALL 0048128B
+ADD ESP,4
+JMP :end //EAX must be 0, return false
+
+:readdata
+MOV ECX,[fp]
+PUSH ECX
+MOV EDX,[Credit.size]
+PUSH EDX
+PUSH 1
+MOV EAX,[Credit.pData]
+PUSH EAX
+CALL 00480F55
+ADD ESP,8
+
+MOV EDX,[Credit.size]
+PUSH EDX
+MOV ECX,[Credit.pData]
+PUSH ECX
+CALL 004215C0
+ADD ESP,8
+
+MOV [Credit.offset],0
+MOV [Credit.wait],0
+MOv [Credit.mode],1
+MOV [Illust.x],FFFEC000
+MOV [Illust.act_no],0
+
+MOV [grcGame.left],0A0
+
+PUSH 25
+PUSH 0048C380
+CALL 0040BFD0
+ADD ESP,8
+TEST EAX,EAX
+JNE :clearcasts
+JMP :end //EAX is 0, return false
+
+:clearcasts
+MOV EDX,sizeof
+IMUL EDX,EDX,MAX_STRIP
+PUSH EDX
+PUSH 0
+MOV EAX,[Strip_addr]
+PUSH EAX
+CALL 00480D30
+ADD ESP,0C
+
+MOV EAX,1
+
+:end
+MOV ECX,[EBP-8]
+CALL 00480DC1
+MOV ESP,EBP
+POP EBP
+RETN
+INT3

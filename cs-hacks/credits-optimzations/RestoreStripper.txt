@@ -1,0 +1,79 @@
+offset 40d240
+
+#define
+count=EBP-14
+Strip_addr=0049D628
+Credit=49D620
+MAX_STRIP=7F
+size=50
+
+rc = EBP-10
+rcleft=EBP-10
+rcright=EBP-8
+rctop=EBP-0C
+rcbottom=EBP-4
+#enddefine
+
+PUSH EBP
+MOV EBP,ESP
+SUB ESP,14
+MOV [count],0
+
+MOV ECX,[Strip_addr] // ECX = *Strip
+#define
+Strip.flag=ECX
+Strip.x=ECX+4
+Strip.y=ECX+8
+Strip.cast=ECX+0C
+Strip.str=ECX+10
+#enddefine
+
+JMP :loop
+
+:increment
+MOV EAX,[count]
+INC EAX
+MOV [count],EAX
+:loop
+CMP [count],MAX_STRIP
+JGE :end
+
+MOV EBX,[count]
+IMUL EBX,EBX,size
+
+MOV EDX,[EBX+Strip.flag]
+AND EDX,00000080
+JE :increment
+
+MOV [rcleft],0
+MOV [rcright],140
+MOV EAX,[count]
+SHL EAX,4
+MOV [rctop],EAX
+ADD EAX,10
+MOV [rcbottom],EAX
+
+PUSH 23
+PUSH 0
+LEA EDX,[rc]
+PUSH EDX
+CALL 0040CA80
+ADD ESP,0C
+
+PUSH 23
+PUSH 0FEFFFF
+LEA EAX,[EBX+Strip.str]
+PUSH EAX
+MOV EAX,[rctop]
+PUSH EAX
+PUSH 0
+CALL 0040CEB0
+ADD ESP,14
+
+JMP :increment
+
+:end
+MOV ESP,EBP
+POP EBP
+RETN
+INT3

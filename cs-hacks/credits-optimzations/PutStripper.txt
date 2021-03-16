@@ -1,0 +1,120 @@
+offset 40D010
+
+#define
+count=EBP-14
+Strip_addr=0049D628
+Credit=49D620
+MAX_STRIP=7F
+size=50
+grcFull=0048f92c
+
+rc = EBP-10
+rcleft=EBP-10
+rcright=EBP-8
+rctop=EBP-0C
+rcbottom=EBP-4
+
+DIV200=data 99 81 E2 FF 01 00 00 03 C2 C1 F8 09
+#enddefine
+
+PUSH EBP
+MOV EBP,ESP
+SUB ESP,14
+MOV [count],0 // s = 0
+
+MOV ECX,[Strip_addr] //ECX = *Strip
+#define
+Strip.flag=ECX
+Strip.x=ECX+4
+Strip.y=ECX+8
+Strip.cast=ECX+0C
+Strip.str=ECX+10
+#enddefine
+JMP :loop
+
+:increment
+MOV EBX,[count]
+INC EBX
+MOV [count],EBX
+:loop
+CMP EBX,MAX_STRIP
+JGE :end
+
+IMUL EBX,EBX,size //EBX = s * sizeof(STRIP)
+
+MOV EDX,[EBX+Strip.flag]
+AND EDX,00000080
+JE :increment
+
+//rects
+MOV [rcleft],0
+MOV [rcright],140
+MOV EAX,[count]
+SHL EAX,4
+MOV [rctop],EAX
+ADD EAX,10
+MOV [rcbottom],EAX
+
+//arg5 = SURFACE_ID_CREDIT_CAST
+PUSH 23
+//arg4 = &rc
+LEA EDX,[rc]
+PUSH EDX
+//arg3 = Strip[s].y / 0x200
+MOV EAX,[EBX+Strip.y]
+DIV200
+PUSH EAX
+//arg2 = Strip[s].x / 0x200
+MOV EAX,[EBX+Strip.x]
+DIV200
+PUSH EAX
+//arg1 = &grcFull
+PUSH grcFull
+//PutBitmap3()
+CALL 0040C3C0
+ADD ESP,14
+
+//rects
+MOV EAX,[EBX+Strip.cast]
+CDQ
+PUSH ECX
+MOV ECX,0D
+IDIV ECX
+POP ECX
+IMUL EDX,EDX,18
+MOV [rc.left],EDX
+ADD EDX,18
+MOV [rc.right],EDX
+IMUL EAX,EAX,18
+MOV [rc.top],EAX
+ADD EAX,18
+MOV [rc.bottom],EAX
+
+//arg5 = SURFACE_ID_CASTS
+PUSH 25
+//arg4 = &rc
+LEA EAX,[rc]
+PUSH EAX
+//arg3 = Strip[s].y / 0x200 - 8
+MOV EAX,[EBX+Strip.y]
+DIV200
+SUB EAX,8
+PUSH EAX
+//arg2 = Strip[s].x / 0x200 - 24
+MOV EAX,[EBX+Strip.x]
+DIV200
+SUB EAX,18
+PUSH EAX
+//arg1 = &grcFull
+PUSH grcFull
+//PutBitmap3()
+CALL 0040C3C0
+ADD ESP,14
+
+JMP :increment
+
+:end
+MOV ESP,EBP
+POP EBP
+RETN
+INT3
