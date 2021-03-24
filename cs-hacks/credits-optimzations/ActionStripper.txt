@@ -3,60 +3,41 @@ offset 40cf90
 #define
 count=EBP-4
 Strip_addr=0049D628
-Credit=49D620
+Credit.mode=49D620
 MAX_STRIP=7F
 size=50
+
+Strip.flag=EAX
+Strip.x=EAX+4
+Strip.y=EAX+8
+Strip.cast=EAX+0C
+Strip.str=EAX+10
 #enddefine
+push ebp
+mov ebp, esp
+push ecx
 
-:ActionStripper
-PUSH EBP
-MOV EBP,ESP
-PUSH ECX
-MOV [count],0 // s = 0
+mov eax, [Strip_addr]
+mov edx, MAX_STRIP
 
-MOV ECX,[Strip_addr] // ECX = *Strip
-#define
-Strip.flag=ECX
-Strip.x=ECX+4
-Strip.y=ECX+8
-Strip.cast=ECX+0C
-Strip.str=ECX+10
-#enddefine
+:$LL4@ActionStri
+test BYTE [Strip.flag], 80
+je :$LN5@ActionStri
+cmp [Credit.mode], 0
+je :$LN5@ActionStri
 
-JMP :loop
+sub [Strip.y], 100
 
-:increment
-MOV EAX,[count]
-ADD EAX,1
-MOV [count],EAX // s++
-:loop
-CMP [count],MAX_STRIP // s < MAX_STRIP
-JGE :end
+:$LN5@ActionStri
+cmp [Strip.y], -2000
+jg :$LN2@ActionStri
 
-MOV EBX,[count]
-IMUL EBX,EBX,size // EBX = s * sizeof(STRIP)
+and [Strip.flag], 0
 
-:move_up
-MOV EAX,[EBX+Strip.flag]
-AND EAX,00000080
-JE :remove_offscreen
-CMP [Credit],0
-JE :remove_offscreen
+:$LN2@ActionStri
+add eax, size
+sub edx, 1
+jne :$LL4@ActionStri
 
-MOV EAX,[EBX+Strip.y]
-SUB EAX,100
-MOV [EBX+Strip.y],EAX
-
-:remove_offscreen
-CMP [EBX+Strip.y],-2000
-JG :endloop
-
-MOV [EBX+Strip.flag],0
-
-:endloop
-JMP :increment
-:end
-MOV ESP,EBP
-POP EBP
-RETN
-INT3
+leave
+retn

@@ -1,12 +1,16 @@
 offset 40d440
 
 #define
-Strip_addr=0049D628
+; Constants
 MAX_STRIP=7F
-sizeof=50
+fullsize=27b0 ; 0x50 * 0x7f
 
-fp=EBP-4
-path=EBP-110
+; Locals
+path=EBP-108
+ArrayPad=EBP-4
+
+; References
+Strip_addr=0049D628
 Credit.pData=49D614
 Credit.size=49d610
 Credit.offset=49d618
@@ -15,117 +19,132 @@ Credit.mode=49d620
 Illust.x=49d60c
 Illust.act_no=49d608
 grcGame.left=48f91c
+gDataPath=0049E220
+
+; Functions
+GetFileSizeLong=00410d80
+EncryptionBinaryData2=004215c0
+ReloadBitmapFile=0040BFD0
+
+; Builtins
+___security_cookie=498b20
+__security_check_cookie=00480dc1
+_malloc=004813a3
+_free=0048128B
+_memset=00480d30
+_sprintf=00481010
+_fopen=00480FFD
+_fread=00480f55
+
+; Strings
+credit_script=48f918
+format=0048C374
+str_rb=0048C37C
+str_casts=0048c380
 #enddefine
 
-PUSH EBP
-MOV EBP,ESP
-SUB ESP,110
-MOV EAX,[498B20]
-MOV [EBP-8],EAX
+push ebp
+mov ebp, esp
+sub esp, 108 ; 00000108H
+mov eax, [___security_cookie]
+mov [ArrayPad], eax
+; Line 241
+mov eax, [Credit.pData]
+push esi
+xor esi, esi
+push edi
+test eax, eax
+je :$LN2@StartCredi
+; Line 243
+push eax
+call _free
+pop ecx
+; Line 244
+mov [Credit.pData], esi
 
-CMP [Credit.pData],0
-JE :openfile
-MOV EAX,[Credit.pData]
-PUSH EAX
-CALL 0048128B
-ADD ESP,4
-MOV [Credit.pData],0
+:$LN2@StartCredi
+; Line 248
+push [credit_script]
+lea eax, [path]
+push gDataPath
+push format
+push eax
+call _sprintf
+; Line 250
+lea eax, [path]
+push eax
+call GetFileSizeLong
+add esp, 14 ; 00000014H
+mov [Credit.size], eax
+; Line 251
+cmp eax, -1
+je :$LN8@StartCredi
+; Line 255
+push eax
+call _malloc
+mov [Credit.pData], eax
+pop ecx
+; Line 256
+test eax, eax
+je :$LN8@StartCredi
+; Line 259
+lea eax, [path]
+push str_rb
+push eax
+call _fopen
+pop ecx
+pop ecx
+; Line 260
+test eax, eax
+jne :$LN5@StartCredi
+; Line 262
+push [Credit.pData]
+call _free
+pop ecx
+:$LN8@StartCredi
+; Line 299
+xor eax, eax
+:$LN1@StartCredi
+pop edi
+pop esi
+mov ecx, [ArrayPad]
+call __security_check_cookie
+leave
+retn
+:$LN5@StartCredi
+; Line 267
+push eax
+push [Credit.size]
+xor edi, edi
+inc edi
+push edi
+push [Credit.pData]
+call _fread
+; Line 274
+push [Credit.size]
+push [Credit.pData]
+call EncryptionBinaryData2
+; Line 293
+push 25 ; 00000025H
+push str_casts
+mov [Credit.offset], esi
+mov [Credit.wait], esi
+mov [Credit.mode], edi
+mov [Illust.x], fffec000 ; fffec000H
+mov [Illust.act_no], esi
+mov [grcGame.left], 0a0 ; 000000a0H
+call ReloadBitmapFile
+add esp, 20 ; 00000020H
+test eax, eax
+je SHORT :$LN8@StartCredi
+; Line 297
+push fullsize
+push esi
+push [Strip_addr]
+call _memset
+add esp, 0c ; 0000000cH
+; Line 298
+mov eax, edi
+jmp :$LN1@StartCredi
 
-:openfile
-MOV ECX,[48F918]
-PUSH ECX
-PUSH 0049E220
-PUSH 0048C374
-LEA EDX,[path]
-PUSH EDX
-CALL 00481010
-ADD ESP,10
-
-LEA EDX,[path]
-PUSH EDX
-CALL 00410D80
-ADD ESP,4
-MOV [Credit.size],EAX
-CMP EAX,-1
-JNE :allocatebuffer
-XOR EAX,EAX
-JMP :end
-
-:allocatebuffer
-MOV ECX,[Credit.size]
-PUSH ECX
-CALL 004813A3
-ADD ESP,4
-MOV [Credit.pData],EAX
-CMP EAX,0
-JNE :fopen
-JMP :end //EAX must be 0, return false
-
-:fopen
-PUSH 0048C37C
-LEA EAX,[path]
-PUSH EAX
-CALL 00480FFD
-ADD ESP,8
-MOV [fp],EAX
-CMP EAX,0
-JNE :readdata
-MOV EDX,[Credit.pData]
-PUSH EDX
-CALL 0048128B
-ADD ESP,4
-JMP :end //EAX must be 0, return false
-
-:readdata
-MOV ECX,[fp]
-PUSH ECX
-MOV EDX,[Credit.size]
-PUSH EDX
-PUSH 1
-MOV EAX,[Credit.pData]
-PUSH EAX
-CALL 00480F55
-ADD ESP,8
-
-MOV EDX,[Credit.size]
-PUSH EDX
-MOV ECX,[Credit.pData]
-PUSH ECX
-CALL 004215C0
-ADD ESP,8
-
-MOV [Credit.offset],0
-MOV [Credit.wait],0
-MOv [Credit.mode],1
-MOV [Illust.x],FFFEC000
-MOV [Illust.act_no],0
-
-MOV [grcGame.left],0A0
-
-PUSH 25
-PUSH 0048C380
-CALL 0040BFD0
-ADD ESP,8
-TEST EAX,EAX
-JNE :clearcasts
-JMP :end //EAX is 0, return false
-
-:clearcasts
-MOV EDX,sizeof
-IMUL EDX,EDX,MAX_STRIP
-PUSH EDX
-PUSH 0
-MOV EAX,[Strip_addr]
-PUSH EAX
-CALL 00480D30
-ADD ESP,0C
-
-MOV EAX,1
-
-:end
-MOV ECX,[EBP-8]
-CALL 00480DC1
-MOV ESP,EBP
-POP EBP
-RETN
-INT3
+data cc cc cc cc cc cc cc cc

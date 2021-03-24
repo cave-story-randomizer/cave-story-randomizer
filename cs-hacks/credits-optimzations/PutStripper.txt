@@ -1,120 +1,135 @@
 offset 40D010
 
 #define
-count=EBP-14
-Strip_addr=0049D628
-Credit=49D620
+; Constants
 MAX_STRIP=7F
+MAX_STRIPx10=7f0
 size=50
+
+; Locals
+ArrayPad=EBP-4
+rc_addr=EBP-14
+rc.left=EBP-14
+rc.right=EBP-0C
+rc.top=EBP-10
+rc.bottom=EBP-8
+
+; References
+Strip_addr=0049D628
+Strip.flag=ecx
+Strip.x=ecx+4
+Strip.y=ecx+8
+Strip.cast=ecx+0c
+Strip.str=ecx+10
 grcFull=0048f92c
 
-rc = EBP-10
-rcleft=EBP-10
-rcright=EBP-8
-rctop=EBP-0C
-rcbottom=EBP-4
+; Functions
+PutBitmap3=0040c3c0
 
-DIV200=data 99 81 E2 FF 01 00 00 03 C2 C1 F8 09
+; Builtins
+___security_cookie=498b20
+__security_check_cookie=00480dc1
 #enddefine
 
-PUSH EBP
-MOV EBP,ESP
-SUB ESP,14
-MOV [count],0 // s = 0
+push ebp
+mov ebp,esp
+sub esp, 14 ; 00000018H
 
-MOV ECX,[Strip_addr] //ECX = *Strip
-#define
-Strip.flag=ECX
-Strip.x=ECX+4
-Strip.y=ECX+8
-Strip.cast=ECX+0C
-Strip.str=ECX+10
-#enddefine
-JMP :loop
+push ebx
+push esi
+push edi
+; Line 92
+xor esi, esi
+xor edi, edi
 
-:increment
-MOV EBX,[count]
-INC EBX
-MOV [count],EBX
-:loop
-CMP EBX,MAX_STRIP
-JGE :end
+:$LL4@PutStrippe
+; Line 94
+mov ecx, [Strip_addr]
+test BYTE [esi+Strip.flag], 80 ; 00000080H
+je :$LN2@PutStrippe
+; Line 97
+and [rc.left], 0
+mov [rc.right], 140 ; 00000140H
+mov [rc.top], edi
+lea eax, [edi+10]
+mov [rc.bottom], eax
 
-IMUL EBX,EBX,size //EBX = s * sizeof(STRIP)
+; Line 102
+push 23 ; 00000023H
 
-MOV EDX,[EBX+Strip.flag]
-AND EDX,00000080
-JE :increment
+lea eax, [rc_addr]
+push eax
 
-//rects
-MOV [rcleft],0
-MOV [rcright],140
-MOV EAX,[count]
-SHL EAX,4
-MOV [rctop],EAX
-ADD EAX,10
-MOV [rcbottom],EAX
+mov ebx, 1ff ; 000001ffH
+mov eax, [esi+Strip.y]
+cdq
+and edx, ebx
+add eax, edx
+sar eax, 9
+push eax
 
-//arg5 = SURFACE_ID_CREDIT_CAST
-PUSH 23
-//arg4 = &rc
-LEA EDX,[rc]
-PUSH EDX
-//arg3 = Strip[s].y / 0x200
-MOV EAX,[EBX+Strip.y]
-DIV200
-PUSH EAX
-//arg2 = Strip[s].x / 0x200
-MOV EAX,[EBX+Strip.x]
-DIV200
-PUSH EAX
-//arg1 = &grcFull
-PUSH grcFull
-//PutBitmap3()
-CALL 0040C3C0
-ADD ESP,14
+mov eax, [esi+Strip.x]
+cdq
+and edx, ebx
+add eax, edx
+sar eax, 9
+push eax
 
-//rects
-MOV EAX,[EBX+Strip.cast]
-CDQ
-PUSH ECX
-MOV ECX,0D
-IDIV ECX
-POP ECX
-IMUL EDX,EDX,18
-MOV [rc.left],EDX
-ADD EDX,18
-MOV [rc.right],EDX
-IMUL EAX,EAX,18
-MOV [rc.top],EAX
-ADD EAX,18
-MOV [rc.bottom],EAX
+push grcFull
 
-//arg5 = SURFACE_ID_CASTS
-PUSH 25
-//arg4 = &rc
-LEA EAX,[rc]
-PUSH EAX
-//arg3 = Strip[s].y / 0x200 - 8
-MOV EAX,[EBX+Strip.y]
-DIV200
-SUB EAX,8
-PUSH EAX
-//arg2 = Strip[s].x / 0x200 - 24
-MOV EAX,[EBX+Strip.x]
-DIV200
-SUB EAX,18
-PUSH EAX
-//arg1 = &grcFull
-PUSH grcFull
-//PutBitmap3()
-CALL 0040C3C0
-ADD ESP,14
+call PutBitmap3
 
-JMP :increment
+; Line 110
+push 25 ; 00000025H
 
-:end
-MOV ESP,EBP
-POP EBP
-RETN
-INT3
+mov ecx, [Strip_addr]
+mov eax, [esi+Strip.cast]
+cdq
+mov ebx, 0d
+idiv ebx
+imul edx, edx, 18
+imul eax, eax, 18
+mov [rc.left], edx
+add edx, 18 ; 00000018H
+mov [rc.right], edx
+mov [rc.top], eax
+add eax, 18
+mov [rc.bottom], eax
+lea eax, [rc_addr]
+push eax
+
+mov ebx, 1ff
+mov eax, [esi+Strip.y]
+cdq
+and edx, ebx
+add eax, edx
+sar eax, 9
+sub eax, 8
+push eax
+
+mov eax, [esi+Strip.x]
+cdq
+and edx, ebx
+add eax, edx
+sar eax, 9
+sub eax, 18 ; 00000018H
+push eax
+
+push grcFull
+
+call PutBitmap3
+add esp, 28 ; 00000028H
+
+:$LN2@PutStrippe
+; Line 92
+add edi, 10 ; 00000010H
+add esi, size ; 00000050H
+cmp edi, MAX_STRIPx10 ; 000007f0H
+jl :$LL4@PutStrippe
+
+; Line 113
+pop edi
+pop esi
+pop ebx
+leave
+retn

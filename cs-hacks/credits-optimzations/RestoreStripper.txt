@@ -1,79 +1,83 @@
 offset 40d240
 
 #define
-count=EBP-14
-Strip_addr=0049D628
+; Constants
+MAX_STRIPx10=7F0
+
+; Locals
+ArrayPad = EBP-4
+rc_addr = EBP-14
+rc.left=EBP-14
+rc.right=EBP-0c
+rc.top=EBP-10
+rc.bottom=EBP-8
+
+; References
 Credit=49D620
-MAX_STRIP=7F
-size=50
+Strip_addr=0049D628
+Strip.flag=0049D628
+Strip.x=0049D62C
+Strip.y=0049D630
+Strip.cast=0049D634
+Strip.str=0049D638
 
-rc = EBP-10
-rcleft=EBP-10
-rcright=EBP-8
-rctop=EBP-0C
-rcbottom=EBP-4
+; Functions
+CortBox2=0040ca80
+PutText2=0040ceb0
+
+; Builtins
+___security_cookie=498b20
+__security_check_cookie=00480dc1
 #enddefine
 
-PUSH EBP
-MOV EBP,ESP
-SUB ESP,14
-MOV [count],0
+push ebp
+mov ebp, esp
+sub esp, 14 ; 00000014H
+push esi
+push edi
+; Line 151
+xor edi, edi
+xor esi, esi
+:$LL4@RestoreStr
+; Line 153
+mov eax, [Strip_addr]
+test [edi+eax], 128 ; 00000080H
+je :$LN2@RestoreStr
+; Line 155
+and [rc.left], 0
+; Line 156
+mov [rc.right], 140 ; 00000140H
+; Line 157
+mov [rc.top], esi
+; Line 158
+lea eax, [esi+16]
+mov [rc.bottom], eax
+; Line 160
+push 23 ; 00000023H
+push 0
+lea eax, [rc_addr]
+push eax
 
-MOV ECX,[Strip_addr] // ECX = *Strip
-#define
-Strip.flag=ECX
-Strip.x=ECX+4
-Strip.y=ECX+8
-Strip.cast=ECX+0C
-Strip.str=ECX+10
-#enddefine
-
-JMP :loop
-
-:increment
-MOV EAX,[count]
-INC EAX
-MOV [count],EAX
-:loop
-CMP [count],MAX_STRIP
-JGE :end
-
-MOV EBX,[count]
-IMUL EBX,EBX,size
-
-MOV EDX,[EBX+Strip.flag]
-AND EDX,00000080
-JE :increment
-
-MOV [rcleft],0
-MOV [rcright],140
-MOV EAX,[count]
-SHL EAX,4
-MOV [rctop],EAX
-ADD EAX,10
-MOV [rcbottom],EAX
-
-PUSH 23
-PUSH 0
-LEA EDX,[rc]
-PUSH EDX
-CALL 0040CA80
-ADD ESP,0C
-
-PUSH 23
-PUSH 0FEFFFF
-LEA EAX,[EBX+Strip.str]
-PUSH EAX
-MOV EAX,[rctop]
-PUSH EAX
-PUSH 0
-CALL 0040CEB0
-ADD ESP,14
-
-JMP :increment
-
-:end
-MOV ESP,EBP
-POP EBP
-RETN
-INT3
+call CortBox2
+; Line 161
+push 23 ; 00000023H
+push 00feffff ; 00feffffH
+mov eax, [Strip_addr]
+add eax, 10 ; 00000010H
+add eax, edi
+push eax
+push [rc.top]
+push 0
+call PutText2
+add esp, 20 ; 00000020H
+:$LN2@RestoreStr
+; Line 151
+add esi, 10 ; 00000010H
+add edi, 50 ; 00000050H
+cmp esi, MAX_STRIPx10 ; 000007f0H
+jl :$LL4@RestoreStr
+; Line 164
+pop edi
+pop esi
+leave
+retn
