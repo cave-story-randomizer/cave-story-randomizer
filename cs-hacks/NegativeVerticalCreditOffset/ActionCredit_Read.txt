@@ -1,0 +1,108 @@
+; ActionCredit_Read
+
+offset 0040d684
+
+#define
+var_a=ebp-30
+len=ebp-34
+var_text=ebp-2c
+
+Credit.pData=49d614
+Credit.offset=49d618
+Credit.wait=49d61c
+Credit.start_x=49d624
+
+_memcpy=4813c0
+GetScriptNumber=40db00
+SetStripper=40d150
+IsShiftJIS=410e90
+#enddefine
+
+mov ecx,[Credit.offset]
+inc ecx
+mov [Credit.offset],ecx
+mov [var_a],ecx
+
+:loop
+mov eax,[Credit.pData]
+add eax,[var_a]
+movsx ecx,BYTE [eax]
+cmp ecx,5d
+je :break
+push ecx
+call IsShiftJIS
+pop ecx
+mov ecx,[var_a]
+test eax,eax
+je :notShiftJIS
+inc ecx
+:notShiftJIS
+inc ecx
+mov [var_a],ecx
+jmp :loop
+
+:break
+; len = a - Credit.offset
+mov edx,[var_a]
+sub edx,[Credit.offset]
+mov [len],edx
+
+push edx ; Arg3 = len
+
+mov ecx,[Credit.pData]
+add ecx,[Credit.offset]
+push ecx ; Arg2 = &Credit.pData[Credit.offset]
+
+lea ecx,[var_text]
+push ecx ; Arg1 = text
+
+call _memcpy
+add esp,0c
+
+; text[len] = '\0'
+mov ecx,[len]
+mov [ecx+var_text],0
+
+; Credit.offset = a+1
+mov eax,[var_a]
+inc eax
+mov [Credit.offset],eax
+
+
+add eax,[Credit.pData]
+push eax ; Arg1 = &Credit.pData[Credit.offset]
+call GetScriptNumber
+; len = GetScriptNumber
+mov [len],eax
+pop ecx
+
+push eax ; Arg4 = len
+
+lea eax,[var_text]
+push eax ; Arg3 = text
+
+mov edx,1f000
+mov eax,[Credit.wait]
+cmp eax,0
+jge :more
+imul eax,eax,200
+add edx,eax
+:more
+push edx
+
+mov eax,[Credit.start_x]
+push eax ; Arg1 = Credit.start_x
+
+call SetStripper
+add esp,10
+
+; Credit.wait = 0
+mov [Credit.wait],0
+
+; Credit.offset += 0
+mov eax,[Credit.offset]
+add eax,4
+mov [Credit.offset],eax
+jmp 0040da6a
+
+
