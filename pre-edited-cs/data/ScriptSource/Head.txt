@@ -1,120 +1,286 @@
-#00-0
+#0,00
 <END
-7 bit incrementer using 7 half adders
+7 bit + 3 bit adder using 2 full adders and 4 half adders
 
 yes i just implemented a full on logic circuit in tsc using negative event numbers in order to count how many items the player collected. just wait until i have to parse it in the god forsaken credits using credit tsc
 
-A B | S C
----------
-0 0 | 0 0
-0 1 | 1 0
-1 0 | 1 0
-1 1 | 0 1
+S = A^B       S = (A^B)^C
+C = A&B       C = (A&B) | (C&(A^B))
+A B | S C     A B C | S C
+---------     -----------
+0 0 | 0 0     0 0 0 | 0 0
+0 1 | 1 0     0 0 1 | 1 0
+1 0 | 1 0     0 1 0 | 1 0
+1 1 | 0 1     0 1 1 | 0 1
+              1 0 0 | 1 0
+              1 0 1 | 0 1
+              1 1 0 | 0 1
+              1 1 1 | 1 1
 
 Flags
--------
-1 |4001
-2 |4002
-4 |4003
-8 |4004
-16|4005
-32|4006
-64|4007
-C |4100
+  |item|regA|regB|life|dead
+---------------------------
+1 |4001|4201|4301|4011|4021
+2 |4002|4202|4302|4012|4022
+4 |4003|4203|4303|4013|4023
+8 |4004|4204|----|4014|4024
+16|4005|4205|----|4015|4025
+32|4006|4206|----|4016|4026
+64|4007|4207|----|----|4027
+F |4009|4100|----|4019|4029 (with the exception of carry flag 4100, these flags are used after addition to determine where to put the output)
 
-First bit: A = XXX1, B = 1
-A==0 : A=1, B=0 (change both)
-#00.'
-<FLJ4001:00.(<FL+4001<FL-4100<EVE00.)
-A==1 : A=0, B=1 (change both)
-#00.(
-<FL-4001<FL+4100<EVE00.)
+Not technically counters like these are but other relevant flags:
+ |pups|misl
+-|----|----
+1|5001|4031
+2|5002|4032
+3|5003|4033
+4|5004|4034
+5|5005|4035
+x|----|4036 (24-pack)
 
-Second bit: A = XXX2, B = 1XX1
-#00.)
-<FLJ4002:00.*<FLJ4100:00.+<EVE00.-
-A==0, B==0 : A=0, B=0 (no change)
-#00.*
-<FLJ4100:00.,<EVE00.-
-A==1, B==0 : A=1, B=0 (no change)
-#00.+
-<FL+4002<FL-4100<EVE00.-
-A==0, B==1 : A=1, B=0 (change both)
-#00.,
-<FL-4002<EVE00.-
-A==1, B==1 : A=0, B=1 (unset A)
+A==0, B==0 : S1=0, C=0
+#0-00
+<FL-4100<FLJ4201:0001<FLJ4301:0002<EVE0-10
+A==1, B==0 : S1=1, C=0
+#0-01
+<FLJ4301:0003<EVE0-10
+A==0, B==1 : S1=1, C=0
+#0-02
+<FL+4201<EVE0-10
+A==1, B==1 : S1=0, C=1
+#0-03
+<FL-4201<FL+4100<EVE0-10
 
-Third bit: A = XXX3, B = 1XX1
-#00.-
-<FLJ4003:00..<FLJ4100:00./<EVE00/'
-A==0, B==0 : A=0, B=0 (no change)
-#00..
-<FLJ4100:00.0<EVE00/'
-A==1, B==0 : A=1, B=0 (no change)
-#00./
-<FL+4003<FL-4100<EVE00/'
-A==0, B==1 : A=1, B=0 (change both)
-#00.0
-<FL-4003<EVE00/'
-A==1, B==1 : A=0, B=1 (unset A)
+A==0, B==0, C==0 : S2=0, C=0
+#0-10
+<FLJ4202:0011<FLJ4302:0012<FLJ4100:0013<EVE0-20
+A==1, B==0, C==0 : S2=1, C=0
+#0-11
+<FLJ4302:0014<FLJ4100:0015<EVE0-20
+A==0, B==1, C==0 : S2=1, C=0
+#0-12
+<FLJ4100:0016<FL+4202<EVE0-20
+A==0, B==0, C==1 : S2=1, C=0
+#0-13
+<FL+4202<FL-4100<EVE0-20
+A==1, B==1, C==0 : S2=0, C=1
+#0-14
+<FLJ4100:0017<FL-4202<FL+4100<EVE0-20
+A==1, B==0, C==1 : S2=0, C=1
+#0-15
+<FL-4202<EVE0-20
+A==0, B==1, C==1 : S2=0, C=1
+#0-16
+<EVE0-20
+A==1, B==1, C==0 : S2=0, C=1
+#0-17
+<FLJ4100:0018<FL-4202<FL+4100<EVE0-20
+A==1, B==1, C==1 : S2=1, C=1
+#0-18
+<EVE0-20
 
-Fourth bit: A = XXX4, B = 1XXX
-#00/'
-<FLJ4004:00/(<FLJ4100:00/)<EVE00/+
-A==0, B==0 : A=0, B=0 (no change)
-#00/(
-<FLJ4100:00/*<EVE00/+
-A==1, B==0 : A=1, B=0 (no change)
-#00/)
-<FL+4004<FL-4100<EVE00/+
-A==0, B==1 : A=1, B=0 (change both)
-#00/*
-<FL-4004<EVE00/+
-A==1, B==1 : A=0, B=1 (unset A)
+A==0, B==0, C==0 : S2=0, C=0
+#0-20
+<FLJ4203:0021<FLJ4303:0022<FLJ4100:0023<EVE0-30
+A==1, B==0, C==0 : S2=1, C=0
+#0-21
+<FLJ4303:0024<FLJ4100:0025<EVE0-30
+A==0, B==1, C==0 : S2=1, C=0
+#0-22
+<FLJ4100:0026<FL+4203<EVE0-30
+A==0, B==0, C==1 : S2=1, C=0
+#0-23
+<FL+4203<FL-4100<EVE0-30
+A==1, B==1, C==0 : S2=0, C=1
+#0-24
+<FLJ4100:0027<FL-4203<FL+4100<EVE0-30
+A==1, B==0, C==1 : S2=0, C=1
+#0-25
+<FL-4203<EVE0-30
+A==0, B==1, C==1 : S2=0, C=1
+#0-26
+<EVE0-30
+A==1, B==1, C==0 : S2=0, C=1
+#0-27
+<FLJ4100:0028<FL-4203<FL+4100<EVE0-30
+A==1, B==1, C==1 : S2=1, C=1
+#0-28
+<EVE0-30
 
-Fifth bit: A = XXX5, B = 1XXX
-#00/+
-<FLJ4005:00/,<FLJ4100:00/-<EVE00//
-A==0, B==0 : A=0, B=0 (no change)
-#00/,
-<FLJ4100:00/.<EVE00//
-A==1, B==0 : A=1, B=0 (no change)
-#00/-
-<FL+4005<FL-4100<EVE00//
-A==0, B==1 : A=1, B=0 (change both)
-#00/.
-<FL-4005<EVE00//
-A==1, B==1 : A=0, B=1 (unset A)
+A==0, C==0 : S3=0, C=0
+#0-30
+<FLJ4204:0031<FLJ4100:0032<EVE0-40
+A==1, C==0 : S3=1, C=0
+#0-31
+<FLJ4100:0033<EVE0-40
+A==0, C==1 : S3=1, C=0
+#0-32
+<FL+4204<FL-4100<EVE0-40
+A==1, C==1 : C3=0, C=1
+#0-33
+<FL-4204<EVE0-40
 
-Sixth bit: A = XXX6, B = 1XXX
-#00//
-<FLJ4006:00/0<FLJ4100:000'<EVE000)
-A==0, B==0 : A=0, B=0 (no change)
-#00/0
-<FLJ4100:000(<EVE000)
-A==1, B==0 : A=1, B=0 (no change)
-#000'
-<FL+4006<FL-4100<EVE000)
-A==0, B==1 : A=1, B=0 (change both)
-#000(
-<FL-4006<EVE000)
-A==1, B==1 : A=0, B=1 (unset A)
+same pattern proceeds
+#0-40
+<FLJ4205:0041<FLJ4100:0042<EVE0-50
+#0-41
+<FLJ4100:0043<EVE0-50
+#0-42
+<FL+4205<FL-4100<EVE0-50
+#0-43
+<FL-4205<EVE0-50
 
-Seventh bit: A = XXX7, B = 1XXX
-#000)
-<FLJ4007:000*<FLJ4100:000+<EVE000/
-A==0, B==0 : A=0, B=0 (no change)
-#000*
-<FLJ4100:000,<EVE000/
-A==1, B==0 : A=1, B=0 (no change)
-#000+
-<FL+4007<FL-4100<EVE000/
-A==0, B==1 : A=1, B=0 (change both)
-#000,
-<FL-4007<EVE000/
-A==1, B==1 : A=0, B=1 (unset A)
-#000/
-<END in case i want additional behavior after incrementing
+#0-50
+<FLJ4206:0051<FLJ4100:0052<EVE0-60
+#0-51
+<FLJ4100:0053<EVE0-60
+#0-52
+<FL+4206<FL-4100<EVE0-60
+#0-53
+<FL-4206<EVE0-60
+
+#0-60
+<FLJ4207:0061<FLJ4100:0062<EVE0-70
+#0-61
+<FLJ4100:0063<EVE0-70
+#0-62
+<FL+4207<FL-4100<EVE0-70
+#0-63
+<FL-4207<EVE0-70
+
+#0-70
+<FLJ4009:0.00<FLJ4019:0.20<FLJ4029:0.30<END
+
+#0.00
+<FLJ4201:0.01<FL-4001<EVE0.02
+#0.01
+<FL+4001<EVE0.02
+#0.02
+<FLJ4202:0.03<FL-4002<EVE0.04
+#0.03
+<FL+4002<EVE0.04
+#0.04
+<FLJ4203:0.05<FL-4003<EVE0.06
+#0.05
+<FL+4003<EVE0.06
+#0.06
+<FLJ4204:0.07<FL-4004<EVE0.08
+#0.07
+<FL+4004<EVE0.08
+#0.08
+<FLJ4205:0.09<FL-4005<EVE0.10
+#0.09
+<FL+4005<EVE0.10
+#0.10
+<FLJ4206:0.11<FL-4006<EVE0.12
+#0.11
+<FL+4006<EVE0.12
+#0.12
+<FLJ4207:0.13<FL-4007<EVE0.14
+#0.13
+<FL+4007<EVE0.14
+#0.14
+<FL-4009<END
+
+#0.20
+<FLJ4201:0.21<FL-4011<EVE0.22
+#0.21
+<FL+4011<EVE0.22
+#0.22
+<FLJ4202:0.23<FL-4012<EVE0.24
+#0.23
+<FL+4012<EVE0.24
+#0.24
+<FLJ4203:0.25<FL-4013<EVE0.26
+#0.25
+<FL+4013<EVE0.26
+#0.26
+<FLJ4204:0.27<FL-4014<EVE0.28
+#0.27
+<FL+4014<EVE0.28
+#0.28
+<FLJ4205:0.29<FL-4015<EVE0.30
+#0.29
+<FL+4015<EVE0.30
+#0.30
+<FLJ4206:0.31<FL-4016<EVE0.32
+#0.31
+<FL+4016<EVE0.32
+#0.32
+<FL-4019<EVE0015 Increment item counter after collecting HP
+
+#0/00
+<FL+4009<FL+4301<FL-4302<FL-4303
+<FLJ4001:0/01<FL-4201<EVE0/02
+#0/01
+<FL+4201<EVE0/02
+#0/02
+<FLJ4002:0/03<FL-4202<EVE0/04
+#0/03
+<FL+4202<EVE0/04
+#0/04
+<FLJ4003:0/05<FL-4203<EVE0/06
+#0/05
+<FL+4203<EVE0/06
+#0/06
+<FLJ4004:0/07<FL-4204<EVE0/08
+#0/07
+<FL+4204<EVE0/08
+#0/08
+<FLJ4005:0/09<FL-4205<EVE0/10
+#0/09
+<FL+4205<EVE0/10
+#0/10
+<FLJ4006:0/11<FL-4206<EVE0/12
+#0/11
+<FL+4206<EVE0/12
+#0/12
+<FLJ4007:0/13<FL-4207<EVE0/14
+#0/13
+<FL+4207<EVE0/14
+#0/14
+<EVE0-00
+
+#0/20
+<FL+4019
+<FLJ4011:0/21<FL-4201<EVE0/22
+#0/21
+<FL+4201<EVE0/22
+#0/22
+<FLJ4012:0/23<FL-4202<EVE0/24
+#0/23
+<FL+4202<EVE0/24
+#0/24
+<FLJ4013:0/25<FL-4203<EVE0/26
+#0/25
+<FL+4203<EVE0/26
+#0/26
+<FLJ4014:0/27<FL-4204<EVE0/28
+#0/27
+<FL+4204<EVE0/28
+#0/28
+<FLJ4015:0/29<FL-4205<EVE0/30
+#0/29
+<FL+4205<EVE0/30
+#0/30
+<FLJ4016:0/31<FL-4206<EVE0/32
+#0/31
+<FL+4206<EVE0/32
+#0/32
+<EVE0-00
+
+#0/40
+<FLJ4035:0000<FLJ4034:0/44<FLJ4033:0/43<FLJ4032:0/42<FLJ4031:0/41
+<FL+4031<EVE0015
+#0/41
+<FL+4032<EVE0015
+#0/42
+<FL+4033<EVE0015
+#0/43
+<FL+4034<EVE0015
+#0/44
+<FL+4035<EVE0015
 
 #0000
 <END
@@ -162,16 +328,16 @@ with the =Blade= and vice-versa
 at the computer in Arthur's House.<WAI0050<NOD<FL+2811<EVE0015
 #0012
 <PRI<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0003
-Max health increased by 3!<WAI0025<NOD<EVE0015
+Max health increased by 3!<WAI0025<NOD<FL+4301<FL+4302<FL-4303<EVE0028
 #0013
 <PRI<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0004
-Max health increased by 4!<WAI0025<NOD<EVE0015
+Max health increased by 4!<WAI0025<NOD<FL-4301<FL-4302<FL+4303<EVE0028
 #0014
 <PRI<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0005
-Max health increased by 5!<WAI0025<NOD<EVE0015
+Max health increased by 5!<WAI0025<NOD<FL+4301<FL-4302<FL+4303<EVE0028
 
 #0015
-<EVE00.' Shortcut to increment the item counter. much easier than remembering that ridiculous event number
+<EVE0/00 increment the item counter
 
 #0016
 <PRI<MSG<TUR
@@ -212,22 +378,26 @@ Got the last =Puppy=!<WAI0025<NOD<EVE0015
 #0026
 <CNP5274:0136:0000<EVE0021
 
+#0028
+<EVE0/20 Add to life counter
+#0029
+<EVE0/40 Set missile expansion count flags
 #0030
 <PRI<FLJ2420:0032<FLJ0201:0031<FL+0201<FL+7008<AM+0005:0010<MSG<TUR
-<GIT0005Got the =Missile Launcher=!<WAI0025<NOD<EVE0015
+<GIT0005Got the =Missile Launcher=!<WAI0025<NOD<EVE0029
 #0031
 <PRI<AM+0005:0005<MSG<TUR
-<GIT0006Max missiles increased by 5!<WAI0025<NOD<EVE0015
+<GIT0006Max missiles increased by 5!<WAI0025<NOD<EVE0029
 #0032
 <PRI<AM+0010:0005<MSG<TUR
-<GIT0011Max missiles increased by 5!<WAI0025<NOD<EVE0015
+<GIT0011Max missiles increased by 5!<WAI0025<NOD<EVE0029
 #0033
 <FL+2421<AMJ0005:0034<EVE0030
 #0034
 <PRI<FL+2420<FL-2421<FL+7009<MSG<TUR<GIT0010<TAM0005:0010:0000
 Your Missiles have been powered up!<WAI0025<NOD<EVE0015
 #0035
-<PRI<FLJ2420:0037<FLJ0201:0036<FL+0201<MSG<TUR<GIT0005<AM+0005:0029
+<PRI<FL+4036<FLJ2420:0037<FLJ0201:0036<FL+0201<MSG<TUR<GIT0005<AM+0005:0029
 Got the =Missile Launcher=!<WAI0025<NOD<EVE0015
 #0036
 <PRI<AM+0005:0024<MSG<TUR<GIT0006Max missiles increased by 24!<WAI0025<NOD<EVE0015
