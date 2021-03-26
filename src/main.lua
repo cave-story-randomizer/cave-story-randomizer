@@ -103,7 +103,7 @@ function love.draw()
 end
 
 function generateDaily()
-  local json = [[{"embeds": [{"title": "**Daily Challenge: %s**","color": 11323851,"fields": [{"name": "Seed","value": "%s","inline": true},{"name": "Version","value": "%s","inline": true},{"name": "Settings","value": "**Objective**: %s\n**Spawn**: %s\n**Puppysanity**: %s\n**Sequence breaks**: %s\n"},{"name": "Title Screen Code","value": "<%s> <%s> <%s> <%s> <%s> (%s/%s/%s/%s/%s)"},{"name": "<:rando:558942498668675072> Sharecode","value": "`%s`"}]}]}]]
+  local json = [[{"embeds": [{"title": "**Daily Challenge: %s**","color": 11323851,"fields": [{"name": "Seed","value": "%s","inline": true},{"name": "Version","value": "%s","inline": true},{"name": "Settings","value": "**Objective**: %s\n**Spawn**: %s\n**Puppies outside Sand Zone**: %s\n**Sequence breaks**: %s\n"},{"name": "Title Screen Code","value": "<%s> <%s> <%s> <%s> <%s> (%s/%s/%s/%s/%s)"},{"name": "<:rando:558942498668675072> Sharecode","value": "`%s`"}]}]}]]
   
   -- no matter what time of day you run the daily, it'll be consistent throughout the day
   local date = os.date("*t", os.time())
@@ -113,15 +113,24 @@ function generateDaily()
   local datestring = os.date("%B %d, %Y")
 
   local function pick(t) return t[love.math.random(#t)] end
-  local objective = pick({{name = "Bad Ending", val = "objBadEnd"}, {name = "Normal Ending", val = "objNormalEnd"}, {name = "Best Ending", val = "objBestEnd"}, {name = "All Bosses", val = "objAllBosses"}, {name = "100%", val = "obj100Percent"}})
-  local spawn = pick({"Start Point", "Arthur's House", "Camp"})
+  local objective = pick({{name = "Bad Ending", val = "objBadEnd"}, {name = "Normal Ending", val = "objNormalEnd"}, {name = "Best Ending", val = "objBestEnd"}, {name = "Bad Ending", val = "objBadEnd"}, {name = "Normal Ending", val = "objNormalEnd"}, {name = "Best Ending", val = "objBestEnd"}, {name = "All Bosses", val = "objAllBosses"}, {name = "100%", val = "obj100Percent"}})
+  local spawn = pick({"Start Point", "Arthur's House", "Start Point", "Arthur's House", "Camp"})
   local puppies = pick({{name = "Enabled", val = true}, {name = "Disabled", val = false}})
-  local sequence = pick({{name = "All", val = true}, {name = "None", val = false}})
+  local sequence = pick({{name = "All", val = true}, {name = "None", val = false}, {name = "None", val = false}})
 
   Randomizer.obj = objective.val
   Randomizer.worldGraph.spawn = spawn
   Randomizer.puppy = puppies.val
   Randomizer.worldGraph.seqbreak = sequence.val
+
+  Randomizer.worldGraph.dboosts.cthulhu.enabled = sequence.val
+  Randomizer.worldGraph.dboosts.chaco.enabled = sequence.val
+  Randomizer.worldGraph.dboosts.paxChaco.enabled = sequence.val
+  Randomizer.worldGraph.dboosts.flightlessHut.enabled = sequence.val
+  Randomizer.worldGraph.dboosts.camp.enabled = sequence.val
+  Randomizer.worldGraph.dboosts.sisters.enabled = sequence.val
+  Randomizer.worldGraph.dboosts.plantation.enabled = sequence.val
+  Randomizer.worldGraph.dboosts.rocket.enabled = sequence.val
 
   -- reinitialize seed after pick()ing
   local seed = Randomizer:_seedRngesus()
