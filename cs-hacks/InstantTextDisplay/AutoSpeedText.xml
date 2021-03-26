@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hack name="SpeedText" author="txin">
+	<panel>
+		<panel title="Description">
+		</panel>
+		<field type="info">
+			Causes message box text to scroll instantly, displaying = signs as circles.
+		</field>
+		<panel title="Data">
+		</panel>
+		<panel>
+			<field type="data" offset="0x421d01" col="0">
+				FE 45 D4 C3
+			</field>
+			<field type="data" offset="0x422573" col="1">
+				6A 01 5A B9 28 36 49 00 A1 10 E2 49 00 F6 C4 02
+				71 24 85 01 74 03 C1 F2 02 85 41 04 74 03 C1 F2
+				02 B9 FC 5A 4A 00 01 11 83 39 04 0F 8C 98 31 00
+				00 83 21 00 EB 1B 42 EB DD 90 90 90 90 90 90 90
+				90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+				90 C7 45 D4 00 00 00 00 83 7D D4 00 0F 85 9C 2F
+				00 00 8B 0D D8 5A 4A 00 03 0D E0 5A 4A 00 0F BE
+				11 83 FA 3C 0F 85 BF 2C 00 00 81 39 3C 45 4E 44
+				75 71 C6 05 DC 5A 4A 00 00 80 25 38 E6 49 00 FE
+				80 0D E8 E1 49 00 03 83 25 0C 5B 4A 00 00 6A 01
+				8F 45 D4 EB B3 90 90 90 90 90 90 90 90 B9 28 36
+				49 00 A1 10 E2 49 00 F6 C4 02 71 09 85 01 74 12
+				85 41 04 74 0D 6A 00 6A 00 E8 0F 00 00 00 89 45
+				D4 C3 6A 01 58 EB F7 90 90 90 90 90 90 B9 B1 37
+				49 00 8B 44 E4 08 80 09 01 9B C2 08 00 90 90 90
+				90 90 90
+			</field>
+			<field type="data" offset="0x423654" col="2">
+				00
+			</field>
+			<field type="data" offset="0x4236B4" col="2">
+				00
+			</field>
+			<field type="data" offset="0x425565" col="0">
+				E8 B6 D0 FF FF D9 D0 E9 5A D0 FF FF E9 C6 01 00 00
+			</field>
+			<field type="data" offset="0x425737" col="1">
+				E9 00 00 00 00 80 3D DC 5A 4A 00 00 75 0E 83 25 E8 E1 49 00 FB 
+				65 66 0F 19 C4
+			</field>
+		</panel>
+	</panel>
+</hack>
