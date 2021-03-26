@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hack name="noLoseFocus" author="Clownacy / txin">
+	<panel>
+		<field type="info">
+			Prevents the game stopping when in the background
+		</field>
+		<field type="data" offset="0x413593">
+			71
+		</field>
+		<field type="data" offset="0x412BC0">
+			C3
+		</field>
+		<field type="data" offset="0x412BF0">
+			C3
+		</field>
+	</panel>
+</hack>
