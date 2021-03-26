@@ -139,7 +139,8 @@ Got the =Snake=!<WAI0025<NOD<CLR
 #0006
 <PRI<MSG<TURYou may trade the =Fireball=
 with the =Snake= and vice-versa
-at the computer in Arthur's House.<WAI0050<NOD<FL+2802<EVE0015
+at the computer in Arthur's House.<WAI0050<NOD<FL+2802
+<CLRTrade now?<YNJ0015<AMJ0001:0043<TAM0003:0001:0000<EVE0015
 #0007
 <PRI<MSG<TUR<GIT0007<AM+0007:0100<FL+2820
 Got the =Bubbler=!<WAI0025<NOD<EVE0015
@@ -159,7 +160,8 @@ Got the =Nemesis=!<WAI0025<NOD<CLR
 #0011
 <PRI<MSG<TURYou may trade the =Nemesis=
 with the =Blade= and vice-versa
-at the computer in Arthur's House.<WAI0050<NOD<FL+2811<EVE0015
+at the computer in Arthur's House.<WAI0050<NOD<FL+2811
+<CLRTrade now?<YNJ0015<AMJ0009:0044<TAM0012:0009:0000<EVE0015
 #0012
 <PRI<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0003
 Max health increased by 3!<WAI0025<NOD<EVE0015
@@ -250,6 +252,12 @@ You have drowned.<NOD<CLRWant to retry?<YNJ0049<CLO
 <MSG<TUR<HMC
 You were never seen again...<NOD<CLRWant to retry?<YNJ0049<CLO
 <FAO0001<WAI0050<FLJ0431:0048<INI
+
+#0043
+<TAM0001:0003:0000<EVE0015 Snake/Fireball trade
+#0044
+<TAM0009:0012:0000<EVE0015 Blade/Nemesis trade
+
 #0048
 <SMC<LDP
 #0049
