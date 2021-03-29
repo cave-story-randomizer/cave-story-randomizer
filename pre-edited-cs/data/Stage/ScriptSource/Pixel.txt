@@ -49,7 +49,7 @@ robots!<WAI0160<NOD<RMU<END
 <KEY<MSGNothing else here appears
 especially useful...<NOD<END
 #0240
-<KEY<MSG<TURGo back to the labyrinth?<WAI0040<YNJ0000
+<KEY<MSG<TURGo back to the Labyrinth?<WAI0040<YNJ0000
 <PRI<FAO0004<TRA0046:0094:0008:0009
 #0250
 <KEY
