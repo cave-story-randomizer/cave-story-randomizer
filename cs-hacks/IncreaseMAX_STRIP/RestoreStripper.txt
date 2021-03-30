@@ -1,0 +1,83 @@
+offset 40d240
+
+#define
+; Constants
+MAX_STRIPx10=7F0
+
+; Locals
+ArrayPad = EBP-4
+rc_addr = EBP-14
+rc.left=EBP-14
+rc.right=EBP-0c
+rc.top=EBP-10
+rc.bottom=EBP-8
+
+; References
+Credit=49D620
+Strip_addr=0049D628
+Strip.flag=0049D628
+Strip.x=0049D62C
+Strip.y=0049D630
+Strip.cast=0049D634
+Strip.str=0049D638
+
+; Functions
+CortBox2=0040ca80
+PutText2=0040ceb0
+
+; Builtins
+___security_cookie=498b20
+__security_check_cookie=00480dc1
+#enddefine
+
+push ebp
+mov ebp, esp
+sub esp, 14 ; 00000014H
+push esi
+push edi
+; Line 151
+xor edi, edi
+xor esi, esi
+:$LL4@RestoreStr
+; Line 153
+mov eax, [Strip_addr]
+test [edi+eax], 128 ; 00000080H
+je :$LN2@RestoreStr
+; Line 155
+and [rc.left], 0
+; Line 156
+mov [rc.right], 140 ; 00000140H
+; Line 157
+mov [rc.top], esi
+; Line 158
+lea eax, [esi+16]
+mov [rc.bottom], eax
+; Line 160
+push 23 ; 00000023H
+push 0
+lea eax, [rc_addr]
+push eax
+
+call CortBox2
+; Line 161
+push 23 ; 00000023H
+push 00feffff ; 00feffffH
+mov eax, [Strip_addr]
+add eax, 10 ; 00000010H
+add eax, edi
+push eax
+push [rc.top]
+push 0
+call PutText2
+add esp, 20 ; 00000020H
+:$LN2@RestoreStr
+; Line 151
+add esi, 10 ; 00000010H
+add edi, 50 ; 00000050H
+cmp esi, MAX_STRIPx10 ; 000007f0H
+jl :$LL4@RestoreStr
+; Line 164
+pop edi
+pop esi
+leave
+retn

@@ -1,0 +1,43 @@
+offset 40cf90
+
+#define
+count=EBP-4
+Strip_addr=0049D628
+Credit.mode=49D620
+MAX_STRIP=7F
+size=50
+
+Strip.flag=EAX
+Strip.x=EAX+4
+Strip.y=EAX+8
+Strip.cast=EAX+0C
+Strip.str=EAX+10
+#enddefine
+push ebp
+mov ebp, esp
+push ecx
+
+mov eax, [Strip_addr]
+mov edx, MAX_STRIP
+
+:$LL4@ActionStri
+test BYTE [Strip.flag], 80
+je :$LN5@ActionStri
+cmp [Credit.mode], 0
+je :$LN5@ActionStri
+
+sub [Strip.y], 100
+
+:$LN5@ActionStri
+cmp [Strip.y], -2000
+jg :$LN2@ActionStri
+
+and [Strip.flag], 0
+
+:$LN2@ActionStri
+add eax, size
+sub edx, 1
+jne :$LL4@ActionStri
+
+leave
+retn

@@ -1,0 +1,32 @@
+offset 40d410
+
+#define
+Credit.pData=49d614
+Strip=49d628
+_free=0048128b
+#enddefine
+
+push ebp
+mov ebp,esp
+
+mov eax, [Credit.pData]
+test eax, eax
+je :$LN2@ReleaseCre
+
+push eax
+call _free
+pop ecx
+
+and [Credit.pData], 0
+
+:$LN2@ReleaseCre
+mov eax, [Strip]
+test eax, eax
+je :$LN3@ReleaseCre
+
+push eax
+call _free
+pop ecx
+
+:$LN3@ReleaseCre
+retn

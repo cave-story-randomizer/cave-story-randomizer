@@ -1,0 +1,116 @@
+offset 40d150
+
+#define
+; Constants
+MAX_STRIP=7F
+size=50
+
+; Locals
+ArrayPad=EBP-4
+rc_addr=EBP-14
+rc.left=EBP-14
+rc.right=EBP-0C
+rc.top=EBP-10
+rc.bottom=EBP-8
+
+; Arguments
+argx=EBP+8
+argy=EBP+0C
+argtext=EBP+10
+argcast=EBP+14
+
+; References
+Strip_addr=0049D628
+Strip.flag=edx
+Strip.x=edx+4
+Strip.y=edx+8
+Strip.cast=edx+0c
+Strip.str=edx+10
+
+; Functions
+CortBox2=0040ca80
+PutText2=0040ceb0
+
+; Builtins
+___security_cookie=498b20
+__security_check_cookie=00480dc1
+_strcpy=00481100
+#enddefine
+
+push ebp
+mov ebp, esp
+sub esp, 14 ; 00000014H
+mov eax, [___security_cookie]
+mov [ArrayPad], eax
+mov edx, [Strip_addr]
+mov eax, edx
+push esi
+push edi
+mov edi, [argtext]
+; Line 121
+xor esi, esi
+:$LL4@SetStrippe
+; Line 122
+test [eax], 80 ; 00000080H
+je :$LN13@SetStrippe
+; Line 121
+inc esi
+add eax, size ; 00000050H
+mov ecx, esi
+cmp esi, MAX_STRIP ; 0000007fH
+jl :$LL4@SetStrippe
+; Line 125
+cmp ecx, MAX_STRIP ; 0000007fH
+je :$LN1@SetStrippe
+:$LN13@SetStrippe
+; Line 129
+imul ecx, esi, size
+mov [ecx+Strip.flag], 80 ; 00000080H
+; Line 130
+mov eax, [argx]
+mov [ecx+Strip.x], eax
+; Line 131
+mov eax, [argy]
+mov [ecx+Strip.y], eax
+; Line 132
+mov eax, [argcast]
+mov [ecx+Strip.cast], eax
+; Line 133
+push edi
+lea eax, [Strip.str]
+add eax, ecx
+push eax
+call _strcpy
+; Line 136
+and [rc.left], 0
+; Line 137
+mov [rc.right], 140 ; 00000140H
+; Line 138
+shl esi, 4
+mov [rc.top], esi
+; Line 139
+lea eax, [esi+10]
+mov [rc.bottom], eax
+
+; Line 141
+push 23 ; 00000023H
+push 0
+lea eax, [rc_addr]
+push eax
+call CortBox2
+; Line 142
+push 23 ; 00000023H
+push 00feffff ; 00feffffH
+push edi
+push [rc.top]
+push 0
+call PutText2
+add esp, 28 ; 00000028H
+:$LN1@SetStrippe
+; Line 143
+pop edi
+pop esi
+mov ecx, [ArrayPad]
+call __security_check_cookie
+leave
+retn

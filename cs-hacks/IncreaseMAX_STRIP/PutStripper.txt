@@ -1,0 +1,135 @@
+offset 40D010
+
+#define
+; Constants
+MAX_STRIP=7F
+MAX_STRIPx10=7f0
+size=50
+
+; Locals
+ArrayPad=EBP-4
+rc_addr=EBP-14
+rc.left=EBP-14
+rc.right=EBP-0C
+rc.top=EBP-10
+rc.bottom=EBP-8
+
+; References
+Strip_addr=0049D628
+Strip.flag=ecx
+Strip.x=ecx+4
+Strip.y=ecx+8
+Strip.cast=ecx+0c
+Strip.str=ecx+10
+grcFull=0048f92c
+
+; Functions
+PutBitmap3=0040c3c0
+
+; Builtins
+___security_cookie=498b20
+__security_check_cookie=00480dc1
+#enddefine
+
+push ebp
+mov ebp,esp
+sub esp, 14 ; 00000018H
+
+push ebx
+push esi
+push edi
+; Line 92
+xor esi, esi
+xor edi, edi
+
+:$LL4@PutStrippe
+; Line 94
+mov ecx, [Strip_addr]
+test BYTE [esi+Strip.flag], 80 ; 00000080H
+je :$LN2@PutStrippe
+; Line 97
+and [rc.left], 0
+mov [rc.right], 140 ; 00000140H
+mov [rc.top], edi
+lea eax, [edi+10]
+mov [rc.bottom], eax
+
+; Line 102
+push 23 ; 00000023H
+
+lea eax, [rc_addr]
+push eax
+
+mov ebx, 1ff ; 000001ffH
+mov eax, [esi+Strip.y]
+cdq
+and edx, ebx
+add eax, edx
+sar eax, 9
+push eax
+
+mov eax, [esi+Strip.x]
+cdq
+and edx, ebx
+add eax, edx
+sar eax, 9
+push eax
+
+push grcFull
+
+call PutBitmap3
+
+; Line 110
+push 25 ; 00000025H
+
+mov ecx, [Strip_addr]
+mov eax, [esi+Strip.cast]
+cdq
+mov ebx, 0d
+idiv ebx
+imul edx, edx, 18
+imul eax, eax, 18
+mov [rc.left], edx
+add edx, 18 ; 00000018H
+mov [rc.right], edx
+mov [rc.top], eax
+add eax, 18
+mov [rc.bottom], eax
+lea eax, [rc_addr]
+push eax
+
+mov ebx, 1ff
+mov eax, [esi+Strip.y]
+cdq
+and edx, ebx
+add eax, edx
+sar eax, 9
+sub eax, 8
+push eax
+
+mov eax, [esi+Strip.x]
+cdq
+and edx, ebx
+add eax, edx
+sar eax, 9
+sub eax, 18 ; 00000018H
+push eax
+
+push grcFull
+
+call PutBitmap3
+add esp, 28 ; 00000028H
+
+:$LN2@PutStrippe
+; Line 92
+add edi, 10 ; 00000010H
+add esi, size ; 00000050H
+cmp edi, MAX_STRIPx10 ; 000007f0H
+jl :$LL4@PutStrippe
+
+; Line 113
+pop edi
+pop esi
+pop ebx
+leave
+retn
