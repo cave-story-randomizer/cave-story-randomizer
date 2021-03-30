@@ -2,7 +2,9 @@ local LOG_LEVEL, _logCounts, _logLines = 4, nil, nil
 local function _log(level, prefix, text, ...)
   if LOG_LEVEL >= level then
     local text = prefix .. text
-    print(text, ...)
+    if level ~= 4 then
+      print(text, ...)
+    end
     table.insert(_logLines, text)
   end
   _logCounts[level] = _logCounts[level] + 1
