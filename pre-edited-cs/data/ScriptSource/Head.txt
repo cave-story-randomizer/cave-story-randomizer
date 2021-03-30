@@ -241,7 +241,7 @@ same pattern proceeds
 #0.54
 <FL-4029
 <FL-7999<SVP<FL+7999
-<END Save the incremented death counter before continuing gameplay
+<MPJ0098<END Save the incremented death counter before continuing gameplay
 
 #0/00
 <FL+4009<FL+4301<FL-4302<FL-4303
@@ -353,7 +353,7 @@ same pattern proceeds
 <END
 #0000
 <FLJ7999:000/<FL+7999
-<SKJ0042:000.<END
+<SKJ0042:000.<MPJ0098<END MPJ is for loading saves in rooms with CMPs
 #0001
 <PRI<MSG<TUREmpty.<NOD<END
 #0002

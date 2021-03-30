@@ -20,52 +20,12 @@
 I've never seen you
 around before.<NOD
 If you bring me my
-five <GIT1014=Puppies=,
-perhaps I'll give you
-something in return...<NOD<END
+five <GIT1014=Puppies=,<NOD<CLR<EVE0201
 
 #0201
-<IT-0014
-<FLJ0594:0224
-<FLJ0593:0223
-<FLJ0592:0222
-<FLJ0591:0221
-<FLJ0590:0220
-<KEY<MSG<FAC0013Oh, my!<NOD<CLR<GIT1014My precious puppy!<NOD<CLR
-<GIT0000<FAC0000Gave her the =Puppy=.<NOD<CLR<CNP0300:0130:0000<DNP0401<FL-0274<FAC0013You brought him back,
-I take it?<NOD
-Many thanks.<NOD<CLRWhat's that?<NOD
-=Red flowers=?<NOD<FAC0000<CLR<CMU0000<MSGHuzzah!<NOD<CLO
-<CNP0400:0009:0000<WAI0010<MYD0002<CNP0300:0132:0002<ANP0300:0100:0002<WAI0120<CMU0011
-<CNP0400:0012:0000
-<MSG<FAC0005How's it going, Jenka?<NOD<CLR<FAC0013Ah, Balrog.<NOD<ANP0300:0120:0002
-You're doing well, I see.<NOD
-And how is my halfwit of
-a daughter faring?<NOD<CLR<FAC0014Hee-hee-hee!<NOD
-Halfwit? You mean Misery?<NOD
-She's fine, just fine.<NOD<CLRA new master has appeared.<NOD
-This time, the earth
-will be ours!<NOD<CLR<FAC0013So once again you two
-plot to...<NOD<CLR<FAC0005I'm not here to give
-you any trouble.<NOD
-I just came to collect the
-key to the storehouse.<NOD<CLRThe one where the flower
-seeds are kept!<NOD<CLR<FAC0013.....<NOD<CLRMy...<NOD
-What on earth are you
-talking about?<NOD<CLR
-<ANP0400:0030:0000<FAC0014Hoho!<NOD<CLRPlaying the fool, are
-you?!<NOD<CLR<FAC0005.....<NOD<CLRI see how it is.<NOD
-So you've chosen to
-betray us.<NOD<CLO<CMU0000
-<WAI0050<FAC0005<MSGYou'll regret it.<NOD<CLO
-<FAC0000<ANP0400:0010:0000<WAI0200<CMU0019
-<MSG<FAC0013<CNP0300:0130:0000A new master...<NOD
-That good-for-nothing.<NOD<MYD0200<CLR.....<NOD<CLRThere are actually four
-others.<NOD
-Four more puppies
-of mine...<NOD<CLRAnd my hips are so weak.<NOD<CLRCould this old woman
-trouble you to find her
-other puppies for her?<NOD<FL+0590<END
+<EVE0000
+
+
 
 #0210
 <KEY<MSG<FAC0013Still four left...<NOD

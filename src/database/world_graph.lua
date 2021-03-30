@@ -245,6 +245,8 @@ function lowerSandZone:new(worldGraph)
     return _count(items, "puppy", 5) and _has(items, "weaponBoss")
   end
   self.locations.eventToroko:setItem(self.world.items:getByKey("eventToroko"))
+
+  self.locations.jenka.getPrebuiltHint = function(self) return ("perhaps I'll give you %s in return..."):format(self.item.hints[love.math.random(#self.item.hints)]) end
 end
 
 local labyrinthW = Region:extend()
@@ -447,6 +449,13 @@ function endgame:new(worldGraph)
     hellB3 = Location("Hell B3 Chest", "Hell3", "0400", self)
   }
 
+  local function prebuilt(self)
+    local s = self.item.hints[love.math.random(#self.item.hints)]
+    return ("%s."):format(s:sub(1,1):upper() .. s:sub(2)) -- make first character uppercase
+  end
+  self.locations.hellB1.getPrebuiltHint = prebuilt
+  self.locations.hellB3.getPrebuiltHint = prebuilt
+
   self.requirements = function(self, items)
     return _has(items, "eventSue") and _has(items, "ironBond") and self.world.regions.lastCave:canAccess(items)
   end
@@ -466,12 +475,18 @@ function hintRegion:new(worldGraph)
     bluebotMaze = Location("Blue Robot (Labyrinth I #1)", "MazeI", "0500", self),
     bluebotMaze2 = Location("Blue Robot (Labyrinth I #2)", "MazeI", "0502", self),
     mrsLittle = Location("Mrs. Little", "Little", "0212", self),
-    malco = Location("MALCO", "Malco", "0306", self)
+    malco = Location("MALCO", "Malco", "0306", self),
+    jenka = Location("Jenka", "Jenka1", "0201", self),
+    numahachi1 = Location("Numahachi 1", "Statue", "0300", self),
+    numahachi2 = Location("Numahachi 2", "Statue", "0301", self)
   }
 
   -- they'll appear as filled so they get left out of the regular hints
   self.locations.mrsLittle.item = {}
   self.locations.malco.item = {}
+  self.locations.jenka.item = {}
+  self.locations.numahachi1.item = {}
+  self.locations.numahachi2.item = {}
 end
 
 local worldGraph = Class:extend()
@@ -531,10 +546,11 @@ function worldGraph:Camp() return self.spawn == "Camp" end
 
 function worldGraph:getSpawnScript()
   local initialHPCounter = "<FL+4011<FL+4012" -- initializes the HP counter to 3 HP
-  if self:StartPoint() then return initialHPCounter .. "<FL+6200<EVE0091" end
+  local mapFlags = "<MP+0040<MP+0043" -- Camp and Labyrinth B
+  if self:StartPoint() then return initialHPCounter .. mapFlags .. "<FL+6200<EVE0091" end
   local earlyGameFlags = "<FL+0301<FL+0302<FL+1641<FL+1642<FL+0320<FL+0321"
-  if self:Arthur() then return initialHPCounter .. "<FL+6201" .. earlyGameFlags .. "<TRA0001:0094:0008:0004" end
-  if self:Camp() then return initialHPCounter .. "<FL+6202" .. earlyGameFlags .. "<TRA0040:0094:0014:0009" end
+  if self:Arthur() then return initialHPCounter .. mapFlags .. "<FL+6201" .. earlyGameFlags .. "<TRA0001:0094:0008:0004" end
+  if self:Camp() then return initialHPCounter .. mapFlags .. "<FL+6202" .. earlyGameFlags .. "<TRA0040:0094:0014:0009" end
 end
 
 function worldGraph:getLocations()

@@ -1,0 +1,16 @@
+offset 415256
+
+#define
+gMC.air=49E6DC
+gMC.cond=49E638
+#enddefine
+
+CMP [gMC.air], 0
+JLE 00415495
+MOV AL, BYTE [gMC.cond]
+TEST AL, 00000080
+JE 00415270
+TEST AL, 00000002
+JE 00415275
+
+//data 90 90 90 90 ; 4 bytes were saved

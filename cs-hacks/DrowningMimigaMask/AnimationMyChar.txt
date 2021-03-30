@@ -1,0 +1,281 @@
+offset 414bf0
+
+#define
+rectMax=0D
+rectMaxx10=0D0
+
+rcLeft.left=EBP-0D0
+rcLeft.top=EBP-0CC
+rcLeft.right=EBP-0C8
+rcLeft.bottom=EBP-0C4
+
+rcRight.left=EBP-1A0
+rcRight.top=EBP-19C
+rcRight.right=EBP-198
+rcRight.bottom=EBP-194
+
+gMC.rect.left=49E69C
+gMC.rect.top=49E6A0
+gMC.rect.right=49E6A4
+gMC.rect.bottom=49E6A8
+
+gMC.cond=49E638
+gMC.flag=49E63C
+gMC.ani_no=49E678
+gMC.ani_wait=49E674
+gMC.up=49E644
+gMC.down=49E648
+gMC.ym=49E670
+gMC.direct=49E640
+gMC.air=49E6DC
+
+gKey_addr=49E210
+gKeyUp=493634
+gKeyLeft=493630
+gKeyRight=493638
+bKey=EBP+8
+
+PlaySoundObject=00420640
+#enddefine
+
+PUSH EBP
+MOV EBP,ESP
+SUB ESP,1A0 ; or whatever
+
+PUSH ESI
+PUSH EDI
+XOR ESI,ESI
+
+; FRAMERECTS
+
+; Push left framerects onto stack for ease of looping
+PUSH 0D0 ; DROWNING SPRITES
+
+PUSH 70
+PUSH 60
+PUSH 30
+PUSH 50
+PUSH 30
+PUSH 40
+PUSH 30
+PUSH 0
+PUSH 20
+PUSH 0
+PUSH 10
+PUSH 0
+
+MOV EAX, 0
+MOV ECX, 10
+MOV EDX, 20
+JMP :loopbody
+
+:looptop
+ADD ESI, 10
+CMP ESI, rectMaxx10
+JGE :loopend
+
+:loopbody
+; Left top = 0, Right top = 0x10
+MOV [rcLeft.top+ESI], EAX | MOV [rcRight.top+ESI], ECX
+; Left bottom = 0x10, Right bottom = 0x20
+MOV [rcLeft.bottom+ESI], ECX | MOV [rcRight.bottom+ESI], EDX
+
+POP EDI
+; Left/Right left = value from stack
+MOV [rcLeft.left+ESI], EDI | MOV [rcRight.left+ESI], EDI
+ADD EDI, 10
+; Left/Right right = value from stack + 0x10
+MOV [rcLeft.right+ESI], EDI | MOV [rcRight.right+ESI], EDI
+
+JMP :looptop
+
+:loopend
+
+; if (gMC.air <= 0)
+MOV EDX, [gMC.air]
+CMP EDX, 0
+JG :checkCond
+MOV [gMC.ani_no], 0C
+JMP :checkDir
+
+; if (gMC.cond & 2)
+:checkCond
+MOVZX EAX, BYTE [gMC.cond]
+TEST EAX, 00000002
+JNE :return
+
+; if (gMC.flag & 8)
+:checkFlag
+MOV ECX, [gMC.flag]
+TEST ECX, 00000008
+JE :checkUp
+
+; if (gMC.cond & 1)
+TEST EAX, 00000001
+JE :keycheckWalk
+MOV [gMC.ani_no], 0B
+JMP :checkDir
+
+; else if (gKey & (gKeyLeft | gKeyRight) && bKey)
+:keycheckWalk
+MOV ECX, [gKey_addr]
+MOV EDX, [gKeyLeft]
+OR EDX, [gKeyRight]
+TEST ECX, EDX ; gKey & (gKeyLeft | gKeyRight)
+JE :keycheckStop
+
+CMP [bKey], 0 ; bKey
+JE :keycheckStop
+
+; if (gKey & gKeyUp)
+TEST ECX, [gKeyUp]
+JE :WalkFrames
+
+:UpWalkFrames
+PUSH 6
+PUSH 9
+PUSH 9
+PUSH 7
+JMP :WalkAni
+:WalkFrames
+PUSH 1
+PUSH 4
+PUSH 4
+PUSH 2
+
+:WalkAni
+OR EAX, 00000004
+MOV BYTE [gMC.cond], AL ;gMC.cond |= 4
+
+POP EAX ; 7 if looking up, else 2
+POP ECX ; 9 if looking up, else 4
+
+MOV ESI, [gMC.ani_wait]
+INC ESI ; ++gMC.ani_wait
+
+MOV EDI, [gMC.ani_no]
+
+; if (++gMC.ani_wait > 4)
+CMP ESI, 4
+JLE :checkWalkAni
+
+XOR ESI,ESI ; gMC.ani_wait = 0
+
+INC EDI ; ++gMC.ani_no
+
+CMP EDI, EAX
+JE :playSound
+CMP EDI, ECX
+JNE :checkWalkAni
+
+:playSound
+PUSH 1
+PUSH 18
+CALL PlaySoundObject
+ADD ESP,8
+
+; UP:   if (gMC.ani_no > 9 || gMC.ani_no < 6)
+; ELSE: if (gMC.ani_no > 4 || gMC.ani_no < 1)
+:checkWalkAni
+MOV [gMC.ani_wait], ESI
+
+POP EAX ; 9 if looking up, else 4
+POP ECX ; 6 if looking up, else 1
+
+CMP EDI, EAX
+JG :resetWalkAni
+CMP EDI, ECX
+JGE :setAniNo
+
+:resetWalkAni
+MOV EDI, ECX
+
+:setAniNo
+MOV [gMC.ani_no], EDI
+JMP :checkDir
+
+:keyChecKStop
+TEST ECX, [gKeyUp]
+JE :StopFrame
+CMP [bKey], 0
+JE :StopFrame
+
+:UpStopFrame
+PUSH 5
+JMP :StopAni
+:StopFrame
+PUSH 0
+
+:StopAni
+TEST EAX, 00000004
+JE :SetStopAni
+PUSH 1
+PUSH 18
+CALL PlaySoundObject
+ADD ESP,8
+
+:SetStopAni
+MOVZX EAX, BYTE [gMC.cond]
+AND EAX, FFFFFFFB
+MOV BYTE [gMC.cond], AL
+
+POP ECX
+MOV [gMC.ani_no], ECX
+JMP :checkDir
+
+:checkUp
+LEA EAX, [gMC.ani_no]
+
+CMP [gMC.up], 0
+JE :checkDown
+MOV [EAX], 6
+JMP :checkDir
+
+:checkDown
+CMP [gMC.down], 0
+JE :checkYm
+MOV [EAX], 0A
+JMP :checkDir
+
+:checkYm
+CMP [gMC.ym], 0
+JLE :ymLess
+
+:ymMore
+MOV [EAX], 1
+JMP :checkDir
+
+:ymLess
+MOV [EAX], 3
+
+:checkDir
+MOV EAX, [gMC.ani_no]
+SHL EAX, 4
+
+CMP [gMC.direct], 0
+JNE :rectRight
+
+:rectLeft
+LEA EAX, [EAX+rcLeft.left]
+JMP :setrect
+:rectRight
+LEA EAX, [EAX+rcRight.left]
+
+:setrect
+MOV ECX, [EAX]
+MOV [gMC.rect.left], ECX
+MOV ECX, [EAX+4]
+MOV [gMC.rect.top], ECX
+MOV ECX, [EAX+8]
+MOV [gMC.rect.right], ECX
+MOV ECX, [EAX+0C]
+MOV [gMC.rect.bottom], ECX
+
+:return
+POP EDI
+POP ESI
+
+MOV ESP,EBP
+POP EBP
+RETN
+INT3
