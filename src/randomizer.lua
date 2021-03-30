@@ -253,6 +253,9 @@ function C:_generateHints()
   end
   self.worldGraph.hintregion.locations.mrsLittle.item = self.worldGraph.items:prebuiltHint(self.worldGraph.regions.outerWall.locations.littleHouse)
   self.worldGraph.hintregion.locations.malco.item = self.worldGraph.items:prebuiltHint(self.worldGraph.regions.grasstownEast.locations.malco)
+  self.worldGraph.hintregion.locations.numahachi1.item = self.worldGraph.items:prebuiltHint(self.worldGraph.regions.endgame.locations.hellB1, "<CLR<EVE0302")
+  self.worldGraph.hintregion.locations.numahachi2.item = self.worldGraph.items:prebuiltHint(self.worldGraph.regions.endgame.locations.hellB3, "<CLR<EVE0303")
+  self.worldGraph.hintregion.locations.jenka.item = self.worldGraph.items:prebuiltHint(self.worldGraph.regions.lowerSandZone.locations.jenka)
 end
 
 function C:_writeModifiedData(tscFiles)
