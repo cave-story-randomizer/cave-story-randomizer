@@ -621,12 +621,12 @@ end
 function worldGraph:getHintableLocations(obj)
   local locations = {}
   for k, location in pairs(_.shuffle(self:getFilledLocations(true))) do
-    if (obj == "objBadEnd" and location.item.name == "Rusty Key") or (obj ~= "objBadEnd" and location.item.name == "ID Card") then 
+    if location:getPrebuiltHint() ~= nil then
+      -- do nothing
+    elseif (obj == "objBadEnd" and location.item.name == "Rusty Key") or (obj ~= "objBadEnd" and location.item.name == "ID Card") then 
       table.insert(locations, 1, location) -- put that item on the top to guarantee a hint for it
     elseif (self:Camp() or self:Arthur()) and location.item.name == "Arthur's Key" then
       table.insert(locations, 1, location)
-    elseif location:getPrebuiltHint() ~= nil then
-      -- do nothing
     else
       table.insert(locations, location)
     end
