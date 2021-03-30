@@ -16,6 +16,9 @@
 #0097
 <MNA<CMU0025<FAI0002<FL+2414<EVE0096 Entered from Clock Room
 
+#0098
+<FLJ2414:0096<END
+
 #0100
 <KEY<FLJ2460:0101<MSG<TURIt's locked.
 An expert hacker could open it.<NOD<END
