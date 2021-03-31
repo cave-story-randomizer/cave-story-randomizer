@@ -1,0 +1,2834 @@
+Flag 100
+	<FL+ Eggs.tsc event #0500
+Flag 101
+	<FL+ Eggs.tsc event #0400
+	HideWhenFlagSet Eggs.pxe entity 10 (Sparkling Item)
+Flag 102
+	<FL+ Eggs.tsc event #0401
+	HideWhenFlagSet Eggs.pxe entity 14 (Sparkling Item)
+Flag 103
+	<FLJ Eggs.tsc event #0108
+	<FL+ Eggs.tsc event #0503
+	<FL- Eggs.tsc event #0600
+	HideWhenFlagSet Eggs.pxe entity 26 (Igor, standing)
+	HideWhenFlagSet Eggs.pxe entity 93 (H/V Trigger)
+Flag 105
+	<FLJ Eggs.tsc event #0094
+	<FLJ Eggs.tsc event #0110
+	<FL+ EggX.tsc event #0200
+Flag 106
+	<FL- Eggs.tsc event #0102
+	<FL+ EggX.tsc event #0200
+Flag 120
+	<FLJ EggX.tsc event #0094
+	<FL+ EggX.tsc event #0200
+	HideWhenFlagSet EggX.pxe entity 9 (Sue)
+	<FLJ Mimi.tsc event #0311
+	<FLJ EggX2.tsc event #0094
+Flag 140
+	<FLJ Egg6.tsc event #0200
+	<FL+ Egg6.tsc event #0200
+	HideWhenFlagSet Egg6.pxe entity 0 (Treasure Chest, closed)
+	AppearWhenFlagSet Egg6.pxe entity 2 (Treasure Chest, open)
+Flag 151
+	AppearWhenFlagSet Pens1.pxe entity 14 (Treasure Chest, closed)
+Flag 154
+	<FL+ EggX.tsc event #0200
+	<FL- Mimi.tsc event #0420
+Flag 155
+	<FL+ EggX.tsc event #0200
+	<FL- Mimi.tsc event #0400
+Flag 156
+	<FL+ Pens1.tsc event #0620
+	<FLJ Mimi.tsc event #0311
+	<FL- SandE.tsc event #0600
+Flag 157
+	<FL- Pens1.tsc event #0620
+	AppearWhenFlagSet Pens1.pxe entity 20 (Null)
+	AppearWhenFlagSet Pens1.pxe entity 21 (Null)
+	AppearWhenFlagSet Pens1.pxe entity 22 (Null)
+	AppearWhenFlagSet Pens1.pxe entity 23 (Null)
+	<FL+ Mimi.tsc event #0420
+Flag 158
+	<FLJ Pens1.tsc event #0621
+	<FLJ Pens1.tsc event #0622
+	<FLJ Pens1.tsc event #0624
+	<FLJ Pens1.tsc event #0625
+	<FL+ Pens1.tsc event #0625
+Flag 159
+	<FLJ Pens1.tsc event #6001
+	<FL+ Almond.tsc event #1100
+	<FL+ Eggs2.tsc event #0100
+Flag 160
+	<FL- Pens1.tsc event #0651
+	AppearWhenFlagSet Pens1.pxe entity 25 (H/V Trigger)
+	<FL+ Almond.tsc event #1100
+Flag 161
+	<FL+ Pens1.tsc event #0651
+	HideWhenFlagSet Pens1.pxe entity 24 (Null)
+	AppearWhenFlagSet Pens1.pxe entity 26 (Professor Booster)
+	<FLJ Prefa1.tsc event #0200
+Flag 162
+	<FL+ Pens1.tsc event #0651
+	AppearWhenFlagSet MazeW.pxe entity 76 (Gaudi, armor)
+	AppearWhenFlagSet MazeW.pxe entity 77 (Gaudi, armor)
+	AppearWhenFlagSet MazeW.pxe entity 78 (Gaudi, armor)
+	AppearWhenFlagSet MazeW.pxe entity 79 (Gaudi, armor)
+	AppearWhenFlagSet MazeW.pxe entity 80 (Gaudi, armor)
+	AppearWhenFlagSet MazeW.pxe entity 81 (Gaudi, armor)
+	AppearWhenFlagSet MazeW.pxe entity 82 (Gaudi, armor)
+	AppearWhenFlagSet MazeW.pxe entity 83 (Gaudi, armor)
+	<FLJ e_Jenk.tsc event #0100
+Flag 200
+	<FLJ EggR.tsc event #0300
+	<FL+ EggR.tsc event #0300
+	HideWhenFlagSet EggR.pxe entity 8 (Treasure Chest, closed)
+	AppearWhenFlagSet EggR.pxe entity 25 (Treasure Chest, open)
+	AppearWhenFlagSet Blcny1.pxe entity 27 (Missile)
+	AppearWhenFlagSet Blcny1.pxe entity 28 (Missile)
+	AppearWhenFlagSet Blcny1.pxe entity 29 (Missile)
+	AppearWhenFlagSet Blcny1.pxe entity 30 (Missile)
+	AppearWhenFlagSet Blcny1.pxe entity 31 (Missile)
+	AppearWhenFlagSet Blcny1.pxe entity 32 (Missile)
+	AppearWhenFlagSet Blcny1.pxe entity 33 (Missile)
+Flag 201
+	<FLJ Head.tsc event #0017
+	<FLJ Head.tsc event #0030
+	<FL+ Head.tsc event #0030
+	<FLJ Head.tsc event #0035
+	<FL+ Head.tsc event #0035
+	AppearWhenFlagSet Eggs.pxe entity 99 (Hidden Heart/Missile)
+	AppearWhenFlagSet Eggs.pxe entity 101 (Hidden Heart/Missile)
+	AppearWhenFlagSet EggR.pxe entity 26 (Missile)
+	AppearWhenFlagSet EggR.pxe entity 27 (Missile)
+	AppearWhenFlagSet EggR.pxe entity 31 (Missile)
+	AppearWhenFlagSet Weed.pxe entity 158 (Missile)
+	AppearWhenFlagSet Weed.pxe entity 159 (Missile)
+	AppearWhenFlagSet Sand.pxe entity 121 (Missile)
+	AppearWhenFlagSet Sand.pxe entity 122 (Missile)
+	AppearWhenFlagSet Sand.pxe entity 123 (Missile)
+	AppearWhenFlagSet Sand.pxe entity 142 (Missile)
+	AppearWhenFlagSet Sand.pxe entity 143 (Missile)
+	AppearWhenFlagSet Egg1.pxe entity 2 (Missile)
+	AppearWhenFlagSet River.pxe entity 89 (Hidden Heart/Missile)
+	AppearWhenFlagSet River.pxe entity 90 (Hidden Heart/Missile)
+	AppearWhenFlagSet River.pxe entity 91 (Hidden Heart/Missile)
+	AppearWhenFlagSet River.pxe entity 92 (Hidden Heart/Missile)
+	AppearWhenFlagSet River.pxe entity 93 (Hidden Heart/Missile)
+Flag 202
+	<FL+ MazeS.tsc event #0201
+Flag 210
+	<FL+ Weed.tsc event #0200
+	HideWhenFlagSet Weed.pxe entity 7 (Sparkling Item)
+Flag 211
+	<FLJ Weed.tsc event #0500
+	<FL+ Weed.tsc event #0500
+Flag 212
+	<FLJ Weed.tsc event #0101
+	<FL+ Weed.tsc event #0503
+	HideWhenFlagSet Weed.pxe entity 20 (Santa)
+	HideWhenFlagSet Weed.pxe entity 57 (H/V Trigger)
+Flag 213
+	HideWhenFlagSet Weed.pxe entity 106 (Grate)
+	<FL+ Chako.tsc event #0202
+Flag 214
+	<FLJ Weed.tsc event #0104
+	<FL+ Weed.tsc event #0105
+Flag 215
+	<FLJ Weed.tsc event #0220
+	<FLJ Weed.tsc event #0235
+	<FL+ Malco.tsc event #0203
+Flag 216
+	<FL+ Weed.tsc event #0230
+	HideWhenFlagSet Weed.pxe entity 58 (Null)
+Flag 217
+	HideWhenFlagSet Weed.pxe entity 4 (Teleporter lights)
+Flag 218
+	<FLJ Weed.tsc event #0302
+	<FL+ Weed.tsc event #0302
+	HideWhenFlagSet Weed.pxe entity 107 (Treasure Chest, closed)
+	AppearWhenFlagSet Weed.pxe entity 108 (Treasure Chest, open)
+Flag 219
+	<FL- Weed.tsc event #0130
+	<FL+ Weed.tsc event #0600
+Flag 220
+	HideWhenFlagSet Weed.pxe entity 94 (Sparkling Item)
+Flag 221
+	<FLJ Weed.tsc event #0220
+	<FL+ Malco.tsc event #0312
+Flag 222
+	<FLJ Weed.tsc event #0109
+	<FL+ Weed.tsc event #0110
+Flag 223
+	<FLJ Weed.tsc event #0236
+	<FL+ Weed.tsc event #0237
+	AppearWhenFlagSet Weed.pxe entity 169 (Treasure Chest, open)
+	HideWhenFlagSet Weed.pxe entity 170 (Treasure Chest, closed)
+Flag 224
+	<FL+ Weed.tsc event #0098
+	<FLJ Mimi.tsc event #0600
+	<FLJ Mimi.tsc event #0610
+Flag 225
+	<FL+ Weed.tsc event #0600
+	HideWhenFlagSet Weed.pxe entity 6 (Scooter)
+Flag 226
+	<FL+ Weed.tsc event #0250
+	AppearWhenFlagSet Weed.pxe entity 2 (Scooter, crashed)
+	<FL+ Shelt.tsc event #0104
+Flag 227
+	<FL- Weed.tsc event #0100
+	<FL- Weed.tsc event #0101
+	<FL+ Weed.tsc event #0250
+	AppearWhenFlagSet Weed.pxe entity 166 (Generator - Smoke/Underwater Current)
+	<FL+ Shelt.tsc event #0104
+Flag 240
+	<FLJ Santa.tsc event #0500
+	<FL+ Santa.tsc event #0500
+Flag 241
+	<FL+ Santa.tsc event #0500
+	<FLJ Chako.tsc event #0200
+	<FLJ Chako.tsc event #0210
+	<FLJ Chako.tsc event #0300
+Flag 242
+	<FLJ Santa.tsc event #0300
+	<FLJ Santa.tsc event #0301
+	<FL+ Santa.tsc event #0301
+Flag 243
+	<FL+ MazeI.tsc event #0610
+	<FLJ Sand.tsc event #0610
+	AppearWhenFlagSet Sand.pxe entity 161 (Teleporter lights)
+	<FL+ SandE.tsc event #0600
+Flag 261
+	AppearWhenFlagSet Weed.pxe entity 92 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 93 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 96 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 97 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 98 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 99 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 100 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 101 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 102 (Kulala (enemy))
+	AppearWhenFlagSet Weed.pxe entity 103 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 104 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 105 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 149 (Jelly (enemy))
+	AppearWhenFlagSet Weed.pxe entity 150 (Jelly (enemy))
+	<FL+ Chako.tsc event #0201
+	<FL+ Chako.tsc event #0303
+Flag 262
+	<FL+ SandE.tsc event #0600
+Flag 263
+	<FL- Chako.tsc event #0090
+	<FL- Chako.tsc event #0091
+	<FL- Chako.tsc event #0092
+	<FL- Chako.tsc event #0093
+	<FL- Chako.tsc event #0094
+	<FL+ Chako.tsc event #0201
+	<FL+ Chako.tsc event #0303
+Flag 270
+	HideWhenFlagSet Sand.pxe entity 51 (Sparkling Item)
+Flag 271
+	HideWhenFlagSet Sand.pxe entity 52 (Sparkling Item)
+Flag 272
+	<FLJ Sand.tsc event #0220
+	HideWhenFlagSet Sand.pxe entity 10 (H/V Trigger)
+Flag 273
+	<FL+ Sand.tsc event #0221
+	HideWhenFlagSet Sand.pxe entity 7 (Sunstone)
+	HideWhenFlagSet Sand.pxe entity 8 (Sunstone)
+	HideWhenFlagSet Sand.pxe entity 103 (H/V Trigger)
+	<FLJ Curly.tsc event #0202
+Flag 274
+	<FL+ Head.tsc event #0020
+	AppearWhenFlagSet Pens1.pxe entity 28 (Puppy, carried)
+	AppearWhenFlagSet Eggs.pxe entity 103 (Puppy, carried)
+	AppearWhenFlagSet EggX.pxe entity 10 (Puppy, carried)
+	AppearWhenFlagSet Egg6.pxe entity 4 (Puppy, carried)
+	AppearWhenFlagSet EggR.pxe entity 32 (Puppy, carried)
+	AppearWhenFlagSet Weed.pxe entity 171 (Puppy, carried)
+	AppearWhenFlagSet Santa.pxe entity 11 (Puppy, carried)
+	AppearWhenFlagSet Chako.pxe entity 9 (Puppy, carried)
+	AppearWhenFlagSet MazeI.pxe entity 42 (Puppy, carried)
+	<FLJ Sand.tsc event #0341
+	AppearWhenFlagSet Sand.pxe entity 132 (Puppy, carried)
+	AppearWhenFlagSet Mimi.pxe entity 35 (Puppy, carried)
+	AppearWhenFlagSet Cave.pxe entity 88 (Puppy, carried)
+	AppearWhenFlagSet Start.pxe entity 7 (Puppy, carried)
+	AppearWhenFlagSet Barr.pxe entity 15 (Puppy, carried)
+	AppearWhenFlagSet Pool.pxe entity 17 (Puppy, carried)
+	AppearWhenFlagSet Cemet.pxe entity 22 (Puppy, carried)
+	AppearWhenFlagSet Plant.pxe entity 23 (Puppy, carried)
+	AppearWhenFlagSet Shelt.pxe entity 21 (Puppy, carried)
+	AppearWhenFlagSet Comu.pxe entity 12 (Puppy, carried)
+	AppearWhenFlagSet MiBox.pxe entity 5 (Puppy, carried)
+	AppearWhenFlagSet EgEnd1.pxe entity 8 (Puppy, carried)
+	AppearWhenFlagSet Cthu.pxe entity 9 (Puppy, carried)
+	AppearWhenFlagSet Egg1.pxe entity 3 (Puppy, carried)
+	AppearWhenFlagSet Malco.pxe entity 10 (Puppy, carried)
+	AppearWhenFlagSet WeedS.pxe entity 3 (Puppy, carried)
+	AppearWhenFlagSet WeedD.pxe entity 5 (Puppy, carried)
+	AppearWhenFlagSet Frog.pxe entity 14 (Puppy, carried)
+	AppearWhenFlagSet Curly.pxe entity 13 (Puppy, carried)
+	AppearWhenFlagSet WeedB.pxe entity 9 (Puppy, carried)
+	AppearWhenFlagSet Stream.pxe entity 27 (Puppy, carried)
+	AppearWhenFlagSet CurlyS.pxe entity 7 (Puppy, carried)
+	<FL- Jenka1.tsc event #0220
+	<FL- Jenka1.tsc event #0221
+	<FL- Jenka1.tsc event #0222
+	AppearWhenFlagSet Jenka1.pxe entity 20 (Puppy, carried)
+	AppearWhenFlagSet Dark.pxe entity 7 (Puppy, carried)
+	<FL- Gard.tsc event #0502
+	AppearWhenFlagSet Gard.pxe entity 16 (Puppy, carried)
+	<FL- Jenka2.tsc event #0220
+	AppearWhenFlagSet Jenka2.pxe entity 11 (Puppy, carried)
+	AppearWhenFlagSet SandE.pxe entity 7 (Puppy, carried)
+	AppearWhenFlagSet MazeH.pxe entity 9 (Puppy, carried)
+	AppearWhenFlagSet MazeW.pxe entity 85 (Puppy, carried)
+	AppearWhenFlagSet MazeO.pxe entity 15 (Puppy, carried)
+	AppearWhenFlagSet MazeD.pxe entity 9 (Puppy, carried)
+	AppearWhenFlagSet MazeA.pxe entity 20 (Puppy, carried)
+	AppearWhenFlagSet MazeB.pxe entity 16 (Puppy, carried)
+	AppearWhenFlagSet MazeS.pxe entity 18 (Puppy, carried)
+	AppearWhenFlagSet MazeM.pxe entity 95 (Puppy, carried)
+	AppearWhenFlagSet Drain.pxe entity 13 (Puppy, carried)
+	AppearWhenFlagSet Almond.pxe entity 31 (Puppy, carried)
+	AppearWhenFlagSet River.pxe entity 88 (Puppy, carried)
+	AppearWhenFlagSet Eggs2.pxe entity 102 (Puppy, carried)
+	AppearWhenFlagSet Cthu2.pxe entity 17 (Puppy, carried)
+	AppearWhenFlagSet EggR2.pxe entity 17 (Puppy, carried)
+	AppearWhenFlagSet EggX2.pxe entity 11 (Puppy, carried)
+	AppearWhenFlagSet Oside.pxe entity 50 (Puppy, carried)
+	AppearWhenFlagSet EgEnd2.pxe entity 8 (Puppy, carried)
+	AppearWhenFlagSet Itoh.pxe entity 9 (Puppy, carried)
+	AppearWhenFlagSet Cent.pxe entity 145 (Puppy, carried)
+	AppearWhenFlagSet Jail1.pxe entity 14 (Puppy, carried)
+	AppearWhenFlagSet Momo.pxe entity 13 (Puppy, carried)
+	AppearWhenFlagSet Lounge.pxe entity 15 (Puppy, carried)
+	AppearWhenFlagSet CentW.pxe entity 12 (Puppy, carried)
+	AppearWhenFlagSet Jail2.pxe entity 16 (Puppy, carried)
+	AppearWhenFlagSet Blcny1.pxe entity 49 (Puppy, carried)
+	AppearWhenFlagSet Priso1.pxe entity 92 (Puppy, carried)
+	AppearWhenFlagSet Ring1.pxe entity 9 (Puppy, carried)
+	AppearWhenFlagSet Ring2.pxe entity 31 (Puppy, carried)
+	AppearWhenFlagSet Ring2.pxe entity 32 (Puppy, carried)
+	AppearWhenFlagSet Prefa1.pxe entity 4 (Puppy, carried)
+	AppearWhenFlagSet Priso2.pxe entity 102 (Puppy, carried)
+	AppearWhenFlagSet Ring3.pxe entity 16 (Puppy, carried)
+	AppearWhenFlagSet Little.pxe entity 9 (Puppy, carried)
+	<FL- Blcny2.tsc event #0400
+	AppearWhenFlagSet Blcny2.pxe entity 28 (Puppy, carried)
+	AppearWhenFlagSet Pixel.pxe entity 8 (Puppy, carried)
+	AppearWhenFlagSet Prefa2.pxe entity 6 (Puppy, carried)
+	AppearWhenFlagSet Hell1.pxe entity 42 (Puppy, carried)
+	AppearWhenFlagSet Hell2.pxe entity 40 (Puppy, carried)
+	AppearWhenFlagSet Hell3.pxe entity 113 (Puppy, carried)
+	AppearWhenFlagSet Mapi.pxe entity 13 (Puppy, carried)
+	AppearWhenFlagSet Hell4.pxe entity 5 (Puppy, carried)
+	AppearWhenFlagSet Hell42.pxe entity 6 (Puppy, carried)
+	AppearWhenFlagSet Statue.pxe entity 12 (Puppy, carried)
+	AppearWhenFlagSet Ballo1.pxe entity 13 (Puppy, carried)
+	AppearWhenFlagSet Ostep.pxe entity 6 (Puppy, carried)
+	AppearWhenFlagSet Pole.pxe entity 8 (Puppy, carried)
+	AppearWhenFlagSet Clock.pxe entity 4 (Puppy, carried)
+Flag 275
+	<FL+ Sand.tsc event #0401
+	HideWhenFlagSet Sand.pxe entity 125 (Sparkling Item)
+Flag 276
+	<FL+ Sand.tsc event #0402
+	HideWhenFlagSet Sand.pxe entity 124 (Puppy, running)
+Flag 277
+	HideWhenFlagSet Sand.pxe entity 134 (Puppy, barking)
+	HideWhenFlagSet Sand.pxe entity 135 (H/V Trigger)
+Flag 278
+	<FLJ Sand.tsc event #0230
+	HideWhenFlagSet Sand.pxe entity 20 (Doorway, closed doors)
+	HideWhenFlagSet Sand.pxe entity 21 (Doorway, closed doors)
+	<FL+ Jenka2.tsc event #0200
+Flag 279
+	<FLJ Sand.tsc event #0412
+	<FL+ Sand.tsc event #0412
+	HideWhenFlagSet Sand.pxe entity 136 (Treasure Chest, closed)
+	AppearWhenFlagSet Sand.pxe entity 164 (Treasure Chest, open)
+Flag 280
+	<FL+ Sand.tsc event #0342
+Flag 281
+	HideWhenFlagSet Sand.pxe entity 158 (H/V Trigger)
+	HideWhenFlagSet Sand.pxe entity 159 (Curly, standing)
+Flag 301
+	<FLJ Cave.tsc event #0102
+	HideWhenFlagSet Cave.pxe entity 5 (Evil Door (enemy))
+Flag 302
+	<FLJ Cave.tsc event #0102
+	<FL+ Cave.tsc event #0106
+Flag 303
+	AppearWhenFlagSet Cave.pxe entity 29 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 30 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 31 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 32 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 33 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 34 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 35 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 36 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 37 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 38 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 39 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 40 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 41 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 42 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 43 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 44 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 45 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 46 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 47 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 48 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 49 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 50 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 51 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 52 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 53 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 54 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 55 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 56 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 57 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 58 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 59 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 60 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 61 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 62 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 63 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 64 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 65 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 66 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 67 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 68 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 69 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 70 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 71 (Critter, Hopping Blue (enemy))
+	AppearWhenFlagSet Cave.pxe entity 72 (Bat, Blue Vertical (enemy))
+	AppearWhenFlagSet Cave.pxe entity 73 (Bat, Blue Vertical (enemy))
+	AppearWhenFlagSet Cave.pxe entity 74 (Bat, Blue Vertical (enemy))
+	AppearWhenFlagSet Cave.pxe entity 75 (Bat, Blue Vertical (enemy))
+	AppearWhenFlagSet Cave.pxe entity 76 (Bat, Blue Vertical (enemy))
+	AppearWhenFlagSet Cave.pxe entity 77 (Bat, Blue Vertical (enemy))
+	AppearWhenFlagSet Cave.pxe entity 78 (Bat, Blue Vertical (enemy))
+	AppearWhenFlagSet Cave.pxe entity 79 (Bat, Blue Vertical (enemy))
+	AppearWhenFlagSet Cave.pxe entity 80 (Bat, Blue Vertical (enemy))
+	<FL+ Pole.tsc event #0302
+Flag 304
+	<FLJ Cave.tsc event #0103
+	HideWhenFlagSet Cave.pxe entity 86 (Sparkling Item)
+Flag 320
+	<FL+ Mimi.tsc event #0301
+	<FL+ Mimi.tsc event #0302
+	HideWhenFlagSet Mimi.pxe entity 24 (Toroko)
+	HideWhenFlagSet Mimi.pxe entity 25 (King)
+Flag 321
+	<FL+ Mimi.tsc event #0302
+	AppearWhenFlagSet Mimi.pxe entity 26 (King)
+	<FL- Pool.tsc event #0300
+Flag 322
+	<FLJ Mimi.tsc event #0200
+	<FL+ Mimi.tsc event #0200
+	HideWhenFlagSet Mimi.pxe entity 16 (Treasure Chest, closed)
+	AppearWhenFlagSet Mimi.pxe entity 17 (Treasure Chest, open)
+Flag 323
+	<FLJ Mimi.tsc event #0301
+	<FL+ Mimi.tsc event #0301
+Flag 324
+	<FLJ Pens1.tsc event #0102
+	<FL+ Pens1.tsc event #0103
+	<FLJ Mimi.tsc event #0100
+	<FL+ Mimi.tsc event #0101
+Flag 325
+	<FLJ Pens1.tsc event #0600
+	<FLJ Mimi.tsc event #0600
+	<FL+ Mimi.tsc event #0600
+Flag 326
+	<FL- Barr.tsc event #1000
+	<FL+ Pool.tsc event #0300
+Flag 327
+	<FLJ Mimi.tsc event #0104
+	<FL+ Mimi.tsc event #0111
+	HideWhenFlagSet Mimi.pxe entity 22 (Jack)
+	<FLJ Comu.tsc event #0200
+Flag 329
+	<FL+ EggX.tsc event #0200
+	<FL- Weed.tsc event #0130
+Flag 340
+	HideWhenFlagSet Mimi.pxe entity 29 (Mahin)
+	<FL+ Almond.tsc event #1100
+Flag 341
+	<FLJ Pens1.tsc event #0094
+	<FLJ Pens1.tsc event #0099
+	<FLJ Mimi.tsc event #0090
+	<FLJ Mimi.tsc event #0091
+	<FLJ Mimi.tsc event #0092
+	<FLJ Mimi.tsc event #0093
+	<FLJ Mimi.tsc event #0094
+	<FLJ Pool.tsc event #0090
+	<FLJ Pool.tsc event #0091
+	<FLJ Pool.tsc event #0092
+	<FLJ Pool.tsc event #0093
+	<FLJ Pool.tsc event #0094
+	<FLJ Plant.tsc event #0090
+	<FLJ Plant.tsc event #0091
+	<FLJ Plant.tsc event #0092
+	<FLJ Plant.tsc event #0093
+	<FLJ Plant.tsc event #0094
+	<FLJ Comu.tsc event #0090
+	<FLJ Comu.tsc event #0091
+	<FLJ Comu.tsc event #0092
+	<FLJ Comu.tsc event #0093
+	<FLJ Comu.tsc event #0094
+	<FLJ Curly.tsc event #0090
+	<FLJ Curly.tsc event #0094
+	<FL+ Almond.tsc event #1000
+Flag 360
+	<FLJ Mimi.tsc event #0104
+	<FLJ Mimi.tsc event #0105
+	<FLJ Mimi.tsc event #0311
+	AppearWhenFlagSet Mimi.pxe entity 2 (Busted doorway)
+	HideWhenFlagSet Mimi.pxe entity 8 (Door)
+	<FLJ Barr.tsc event #0100
+	<FLJ Barr.tsc event #0291
+	<FL+ Barr.tsc event #1000
+	AppearWhenFlagSet Barr.pxe entity 2 (Busted doorway)
+	HideWhenFlagSet Barr.pxe entity 3 (Door)
+	HideWhenFlagSet Barr.pxe entity 6 (Null)
+	HideWhenFlagSet Barr.pxe entity 7 (Null)
+Flag 361
+	<FLJ Barr.tsc event #0100
+	<FL+ Barr.tsc event #0292
+	<FL- Barr.tsc event #0402
+	<FL+ Barr.tsc event #1000
+	<FL+ Barr.tsc event #1000
+	<FL- Barr.tsc event #1001
+Flag 362
+	<FL- Barr.tsc event #0402
+	<FL- Barr.tsc event #1001
+	<FL+ Pool.tsc event #0300
+Flag 370
+	HideWhenFlagSet Pool.pxe entity 9 (Sparkling Item)
+	HideWhenFlagSet Pool.pxe entity 11 (H/V Trigger)
+Flag 371
+	<FL- Mimi.tsc event #0308
+	<FL+ Pool.tsc event #0300
+	<FL+ Pool.tsc event #0401
+Flag 372
+	HideWhenFlagSet Pool.pxe entity 8 (Kanpachi)
+	<FL+ Almond.tsc event #1100
+Flag 390
+	<FLJ Cemet.tsc event #0300
+	<FL+ Cemet.tsc event #0300
+	AppearWhenFlagSet Cemet.pxe entity 5 (Null)
+	HideWhenFlagSet Cemet.pxe entity 6 (Sparkling Item)
+Flag 391
+	HideWhenFlagSet Cemet.pxe entity 21 (Little Family)
+Flag 410
+	<FL+ Plant.tsc event #0300
+	HideWhenFlagSet Plant.pxe entity 6 (Sparkling Item)
+Flag 411
+	HideWhenFlagSet Plant.pxe entity 4 (Sandaime's Pavillion)
+	AppearWhenFlagSet Plant.pxe entity 21 (Sandaime's Pavillion)
+	<FL+ Almond.tsc event #1100
+Flag 412
+	HideWhenFlagSet Plant.pxe entity 22 (Sparkling Item)
+Flag 430
+	<FL+ Start.tsc event #0200
+	HideWhenFlagSet Start.pxe entity 3 (Null)
+Flag 431
+	<FL+ Head.tsc event #0016
+	<FLJ Head.tsc event #0040
+	<FLJ Head.tsc event #0041
+	<FLJ Head.tsc event #0042
+Flag 440
+	<FL+ Barr.tsc event #1000
+	AppearWhenFlagSet Comu.pxe entity 9 (King)
+	<FL- Pens2.tsc event #0700
+Flag 441
+	<FL+ Pens1.tsc event #0103
+	<FL+ Mimi.tsc event #0101
+Flag 442
+	<FLJ Comu.tsc event #0300
+	<FLJ Comu.tsc event #0301
+	<FL+ Comu.tsc event #0301
+Flag 443
+	<FL+ Mimi.tsc event #0111
+	AppearWhenFlagSet Comu.pxe entity 10 (Jack)
+	<FL- Pens2.tsc event #0700
+Flag 444
+	<FL+ Pens1.tsc event #0620
+	AppearWhenFlagSet Comu.pxe entity 11 (Jack)
+	<FL- SandE.tsc event #0600
+Flag 470
+	HideWhenFlagSet Eggs.pxe entity 90 (Forcefield)
+	HideWhenFlagSet Eggs.pxe entity 91 (Forcefield)
+	<FLJ Egg1.tsc event #0200
+	<FL+ Egg1.tsc event #0201
+Flag 480
+	<FLJ Malco.tsc event #0100
+	<FL- Malco.tsc event #0203
+	<FL+ Malco.tsc event #0204
+Flag 481
+	AppearWhenFlagSet Weed.pxe entity 21 (Fan, up)
+	HideWhenFlagSet Weed.pxe entity 22 (Fan, up)
+	AppearWhenFlagSet Weed.pxe entity 59 (Fan, left)
+	HideWhenFlagSet Weed.pxe entity 60 (Fan, left)
+	AppearWhenFlagSet Weed.pxe entity 61 (Fan, up)
+	HideWhenFlagSet Weed.pxe entity 62 (Fan, up)
+	HideWhenFlagSet Weed.pxe entity 70 (Fan, up)
+	AppearWhenFlagSet Weed.pxe entity 72 (Fan, right)
+	AppearWhenFlagSet Weed.pxe entity 73 (Fan, right)
+	HideWhenFlagSet Weed.pxe entity 74 (Fan, right)
+	AppearWhenFlagSet Weed.pxe entity 85 (Fan, up)
+	AppearWhenFlagSet Weed.pxe entity 86 (Fan, up)
+	HideWhenFlagSet Weed.pxe entity 87 (Fan, up)
+	HideWhenFlagSet Weed.pxe entity 88 (Fan, up)
+	HideWhenFlagSet Weed.pxe entity 114 (Fan, right)
+	HideWhenFlagSet Weed.pxe entity 115 (Fan, up)
+	AppearWhenFlagSet Weed.pxe entity 116 (Fan, up)
+	AppearWhenFlagSet Weed.pxe entity 151 (Fan, up)
+	<FLJ Malco.tsc event #0094
+	<FLJ Malco.tsc event #0200
+	<FL+ Malco.tsc event #0200
+	<FLJ Malco.tsc event #0300
+Flag 482
+	<FL+ Malco.tsc event #0203
+	<FLJ Malco.tsc event #0301
+Flag 483
+	<FLJ Malco.tsc event #0300
+	<FL+ Malco.tsc event #0302
+	HideWhenFlagSet Malco.pxe entity 2 (Malco)
+Flag 484
+	<FLJ Weed.tsc event #0220
+	<FL+ Malco.tsc event #0302
+Flag 485
+	<FL+ Malco.tsc event #0302
+	AppearWhenFlagSet Malco.pxe entity 9 (Malco, damaged)
+Flag 486
+	<FLJ Malco.tsc event #0303
+	<FL+ Malco.tsc event #0312
+Flag 500
+	<FLJ Frog.tsc event #0100
+	<FL+ Frog.tsc event #0202
+	<FL- Frog.tsc event #1000
+Flag 501
+	<FLJ Frog.tsc event #0200
+	<FL+ Frog.tsc event #0200
+	HideWhenFlagSet Frog.pxe entity 8 (Treasure Chest, closed)
+	AppearWhenFlagSet Frog.pxe entity 10 (Treasure Chest, open)
+Flag 520
+	<FL+ Weed.tsc event #0250
+	HideWhenFlagSet Weed.pxe entity 69 (Door)
+	AppearWhenFlagSet Weed.pxe entity 152 (Null)
+	<FLJ Shelt.tsc event #0100
+	<FL+ Shelt.tsc event #0104
+	HideWhenFlagSet Shelt.pxe entity 3 (Door)
+Flag 521
+	<FL+ Weed.tsc event #0250
+	<FL+ Shelt.tsc event #0104
+	HideWhenFlagSet Shelt.pxe entity 10 (Kazuma, facing away)
+Flag 522
+	<FL+ Weed.tsc event #0250
+	<FL- Weed.tsc event #0250
+	<FL+ Shelt.tsc event #0104
+	<FL- Shelt.tsc event #0104
+	AppearWhenFlagSet Shelt.pxe entity 12 (Kazuma)
+Flag 523
+	<FL+ Weed.tsc event #0250
+	<FL- Weed.tsc event #0600
+	AppearWhenFlagSet Weed.pxe entity 164 (Kazuma)
+	AppearWhenFlagSet Weed.pxe entity 165 (Professor Booster)
+	<FL+ Shelt.tsc event #0104
+	<FL- MazeB.tsc event #0500
+Flag 524
+	<FL+ Jail2.tsc event #0200
+Flag 525
+	<FL+ Weed.tsc event #0250
+	<FL+ Shelt.tsc event #0104
+	AppearWhenFlagSet Shelt.pxe entity 16 (Save Point)
+	HideWhenFlagSet Shelt.pxe entity 17 (Null)
+	HideWhenFlagSet Shelt.pxe entity 19 (Null)
+	AppearWhenFlagSet Shelt.pxe entity 20 (Health/Ammo Refill)
+Flag 540
+	HideWhenFlagSet WeedD.pxe entity 4 (Sparkling Item)
+Flag 550
+	<FLJ WeedB.tsc event #0202
+	<FLJ WeedB.tsc event #0300
+	<FL+ WeedB.tsc event #0300
+	AppearWhenFlagSet WeedB.pxe entity 1 (Treasure Chest, open)
+	HideWhenFlagSet WeedB.pxe entity 2 (Treasure Chest, closed)
+	HideWhenFlagSet WeedB.pxe entity 5 (Null)
+Flag 560
+	HideWhenFlagSet Curly.pxe entity 14 (H/V Trigger)
+	HideWhenFlagSet Curly.pxe entity 15 (Null)
+	HideWhenFlagSet Curly.pxe entity 16 (Null)
+	HideWhenFlagSet Curly.pxe entity 17 (Null)
+	HideWhenFlagSet Curly.pxe entity 18 (Null)
+	HideWhenFlagSet Curly.pxe entity 19 (Null)
+Flag 561
+	<FLJ Curly.tsc event #0100
+	<FLJ Curly.tsc event #0101
+	<FL+ Curly.tsc event #0300
+	<FL- Curly.tsc event #0400
+Flag 562
+	<FLJ Curly.tsc event #0200
+	<FL+ Curly.tsc event #0400
+	<FL+ Curly.tsc event #0410
+	<FL+ Curly.tsc event #0510
+Flag 563
+	<FL+ Curly.tsc event #0415
+	<FLJ Curly.tsc event #0500
+	<FL+ Curly.tsc event #0517
+Flag 564
+	<FLJ Curly.tsc event #0200
+	<FL+ Curly.tsc event #0206
+Flag 565
+	<FL- Curly.tsc event #0400
+	HideWhenFlagSet Curly.pxe entity 9 (Colon, 2)
+	HideWhenFlagSet Curly.pxe entity 10 (Colon, 2)
+	HideWhenFlagSet Curly.pxe entity 11 (Colon, 1)
+	HideWhenFlagSet Curly.pxe entity 12 (Colon, 1)
+	<FL+ SandE.tsc event #0600
+Flag 580
+	HideWhenFlagSet CurlyS.pxe entity 4 (Sparkling Item)
+Flag 581
+	HideWhenFlagSet CurlyS.pxe entity 8 (Null)
+Flag 590
+	<FLJ Jenka1.tsc event #0300
+	AppearWhenFlagSet Jenka1.pxe entity 9 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka1.pxe entity 18 (Null)
+Flag 591
+	<FL+ Jenka1.tsc event #0220
+	<FLJ Jenka1.tsc event #0301
+	AppearWhenFlagSet Jenka1.pxe entity 10 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka1.pxe entity 17 (Null)
+Flag 592
+	<FL+ Jenka1.tsc event #0221
+	<FLJ Jenka1.tsc event #0302
+	AppearWhenFlagSet Jenka1.pxe entity 11 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka1.pxe entity 16 (Null)
+Flag 593
+	<FL+ Head.tsc event #0025
+	<FLJ Sand.tsc event #0103
+	<FLJ Sand.tsc event #0340
+	<FL+ Jenka1.tsc event #0222
+	<FLJ Jenka1.tsc event #0303
+	AppearWhenFlagSet Jenka1.pxe entity 12 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka1.pxe entity 15 (Null)
+Flag 594
+	<FLJ Jenka1.tsc event #0304
+	AppearWhenFlagSet Jenka1.pxe entity 13 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka1.pxe entity 14 (Null)
+	<FL+ Gard.tsc event #0502
+	<FL+ Jenka2.tsc event #0220
+	HideWhenFlagSet Jenka2.pxe entity 9 (Null)
+	AppearWhenFlagSet Jenka2.pxe entity 13 (Puppy, wagging tail)
+	AppearWhenFlagSet Jenka2.pxe entity 14 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka2.pxe entity 15 (Null)
+	AppearWhenFlagSet Jenka2.pxe entity 16 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka2.pxe entity 17 (Null)
+	AppearWhenFlagSet Jenka2.pxe entity 18 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka2.pxe entity 19 (Null)
+	AppearWhenFlagSet Jenka2.pxe entity 20 (Puppy, wagging tail)
+	HideWhenFlagSet Jenka2.pxe entity 21 (Null)
+Flag 595
+	<FLJ Jenka2.tsc event #0094
+	<FL+ Jenka2.tsc event #0200
+	HideWhenFlagSet Jenka2.pxe entity 10 (Balrog, standing)
+Flag 596
+	<FL+ Gard.tsc event #0502
+	<FLJ Jenka2.tsc event #0220
+	<FL+ Jenka2.tsc event #0220
+	HideWhenFlagSet Jenka2.pxe entity 8 (Jenka, collapsed)
+	AppearWhenFlagSet Jenka2.pxe entity 12 (Jenka)
+Flag 610
+	<FLJ Dark.tsc event #0400
+	<FL+ Dark.tsc event #0400
+	<FL- Dark.tsc event #0451
+	AppearWhenFlagSet Dark.pxe entity 5 (Treasure Chest, open)
+	HideWhenFlagSet Dark.pxe entity 9 (H/V Trigger)
+	HideWhenFlagSet Dark.pxe entity 10 (Treasure Chest, open)
+	HideWhenFlagSet Dark.pxe entity 11 (H/V Trigger)
+	HideWhenFlagSet Dark.pxe entity 12 (Puppy, barking)
+Flag 620
+	<FLJ Sand.tsc event #0230
+	<FL+ Gard.tsc event #0502
+	HideWhenFlagSet Gard.pxe entity 9 (Doctor, with crown)
+	HideWhenFlagSet Gard.pxe entity 10 (Null)
+	HideWhenFlagSet Gard.pxe entity 11 (Misery, Standing)
+	HideWhenFlagSet Gard.pxe entity 14 (Null)
+	HideWhenFlagSet Gard.pxe entity 15 (Null)
+Flag 621
+	<FLJ Gard.tsc event #0100
+	<FL+ Gard.tsc event #0502
+	<FL- Gard.tsc event #0601
+Flag 622
+	<FLJ Gard.tsc event #0100
+	<FLJ Gard.tsc event #0505
+	<FL+ Gard.tsc event #0600
+	<FL- SandE.tsc event #0600
+Flag 623
+	<FL+ Gard.tsc event #0503
+	<FLJ Gard.tsc event #0505
+Flag 640
+	<FL- MazeI.tsc event #0400
+	AppearWhenFlagSet MazeI.pxe entity 35 (Quote)
+	<FL+ SandE.tsc event #0600
+Flag 641
+	<FLJ MazeI.tsc event #0202
+	<FLJ MazeI.tsc event #0402
+	<FL+ MazeI.tsc event #0402
+	HideWhenFlagSet MazeI.pxe entity 5 (Doorway, closed doors)
+	HideWhenFlagSet MazeI.pxe entity 6 (Doorway, closed doors)
+Flag 642
+	HideWhenFlagSet MazeI.pxe entity 11 (Sparkling Item)
+Flag 680
+	<FL- MazeW.tsc event #0301
+	<FL+ MazeW.tsc event #1000
+	HideWhenFlagSet MazeW.pxe entity 14 (H/V Trigger)
+	HideWhenFlagSet MazeW.pxe entity 15 (H/V Trigger)
+	HideWhenFlagSet MazeW.pxe entity 20 (Null)
+	HideWhenFlagSet MazeW.pxe entity 21 (Null)
+	HideWhenFlagSet MazeW.pxe entity 22 (Null)
+	HideWhenFlagSet MazeW.pxe entity 23 (Null)
+	HideWhenFlagSet MazeW.pxe entity 24 (Null)
+	HideWhenFlagSet MazeW.pxe entity 25 (Null)
+	HideWhenFlagSet MazeW.pxe entity 26 (Null)
+	HideWhenFlagSet MazeW.pxe entity 27 (Null)
+	HideWhenFlagSet MazeW.pxe entity 28 (Null)
+	HideWhenFlagSet MazeW.pxe entity 29 (Null)
+	HideWhenFlagSet MazeW.pxe entity 30 (Null)
+	HideWhenFlagSet MazeW.pxe entity 31 (Null)
+	HideWhenFlagSet MazeW.pxe entity 84 (H/V Trigger)
+Flag 681
+	<FLJ MazeW.tsc event #0103
+	<FL+ MazeW.tsc event #0104
+Flag 700
+	<FLJ MazeO.tsc event #0300
+	<FL+ MazeO.tsc event #0300
+Flag 701
+	<FLJ MazeO.tsc event #0310
+	<FLJ MazeO.tsc event #0320
+	<FL+ MazeO.tsc event #0320
+Flag 702
+	<FLJ MazeO.tsc event #0301
+	<FL+ MazeO.tsc event #0302
+	<FLJ MazeO.tsc event #0310
+	<FLJ MazeO.tsc event #0320
+Flag 703
+	<FLJ MazeO.tsc event #0100
+	<FL+ MazeO.tsc event #0302
+	<FL+ MazeO.tsc event #0322
+Flag 704
+	<FL+ MazeO.tsc event #0101
+	<FLJ MazeO.tsc event #0301
+	<FLJ MazeO.tsc event #0310
+	HideWhenFlagSet MazeO.pxe entity 12 (Curly, sleeping)
+Flag 705
+	<FLJ MazeO.tsc event #0400
+	<FL+ MazeO.tsc event #0400
+	HideWhenFlagSet MazeO.pxe entity 6 (Treasure Chest, closed)
+	AppearWhenFlagSet MazeO.pxe entity 14 (Treasure Chest, open)
+Flag 710
+	<FLJ MazeD.tsc event #0100
+	<FL+ MazeD.tsc event #0200
+	<FL- MazeD.tsc event #0300
+Flag 711
+	<FLJ MazeD.tsc event #0200
+	<FL+ MazeD.tsc event #0200
+	HideWhenFlagSet MazeD.pxe entity 1 (Treasure Chest, closed)
+	HideWhenFlagSet MazeD.pxe entity 3 (Treasure Chest, closed)
+	AppearWhenFlagSet MazeD.pxe entity 4 (Treasure Chest, open)
+	HideWhenFlagSet MazeD.pxe entity 5 (Null)
+Flag 720
+	<FLJ MazeA.tsc event #0240
+	<FL+ MazeM.tsc event #0310
+Flag 721
+	<FLJ MazeA.tsc event #0400
+	<FL+ MazeA.tsc event #0401
+	<FL+ MazeA.tsc event #0402
+	<FL+ MazeA.tsc event #0404
+Flag 722
+	<FLJ ArmsItem.tsc event #6038
+	<FL+ ArmsItem.tsc event #6038
+	<FL- ArmsItem.tsc event #7038
+	<FL+ Head.tsc event #0088
+	<FL+ MazeA.tsc event #0404
+Flag 740
+	<FL+ MazeB.tsc event #0500
+Flag 741
+	<FL+ Pens1.tsc event #0651
+Flag 742
+	<FLJ ArmsItem.tsc event #6018
+	<FL+ ArmsItem.tsc event #6018
+	<FL- ArmsItem.tsc event #6023
+	<FL- ArmsItem.tsc event #7018
+	<FL+ Head.tsc event #0068
+	<FL- Head.tsc event #0073
+Flag 743
+	<FL- ArmsItem.tsc event #6018
+	<FLJ ArmsItem.tsc event #6023
+	<FL+ ArmsItem.tsc event #6023
+	<FL- ArmsItem.tsc event #7023
+	<FL+ Head.tsc event #0073
+Flag 744
+	<FL+ Pens1.tsc event #0651
+Flag 750
+	<FLJ MazeB.tsc event #0501
+	<FL+ MazeB.tsc event #0501
+	HideWhenFlagSet MazeB.pxe entity 9 (Treasure Chest, closed)
+	AppearWhenFlagSet MazeB.pxe entity 15 (Treasure Chest, open)
+Flag 760
+	<FL+ MazeO.tsc event #0302
+	<FL+ MazeO.tsc event #0322
+	<FL- MazeS.tsc event #0600
+	AppearWhenFlagSet MazeS.pxe entity 10 (Curly, standing)
+Flag 761
+	<FLJ MazeS.tsc event #0092
+	<FLJ MazeS.tsc event #0300
+	<FL+ MazeS.tsc event #0300
+	<FLJ MazeS.tsc event #0320
+	<FLJ MazeS.tsc event #0500
+Flag 762
+	<FLJ MazeS.tsc event #0300
+	<FLJ MazeS.tsc event #0320
+	<FL+ MazeS.tsc event #0321
+	<FLJ MazeS.tsc event #0500
+Flag 763
+	<FLJ MazeS.tsc event #0100
+	<FL+ MazeS.tsc event #0321
+	<FL- MazeS.tsc event #0600
+Flag 764
+	<FLJ MazeS.tsc event #0110
+	<FLJ MazeS.tsc event #0300
+	<FL+ MazeS.tsc event #0600
+	AppearWhenFlagSet MazeS.pxe entity 3 (Boulder)
+	HideWhenFlagSet MazeS.pxe entity 5 (Boulder)
+	HideWhenFlagSet MazeS.pxe entity 9 (Null)
+	AppearWhenFlagSet MazeS.pxe entity 11 (Save Point)
+	HideWhenFlagSet MazeS.pxe entity 12 (Null)
+	<FLJ MazeM.tsc event #0100
+Flag 765
+	<FL- MazeS.tsc event #0201
+	<FL+ MazeS.tsc event #0600
+	AppearWhenFlagSet MazeS.pxe entity 14 (Treasure Chest, closed)
+	HideWhenFlagSet MazeS.pxe entity 15 (Null)
+Flag 766
+	<FLJ MazeS.tsc event #0201
+	<FL+ MazeS.tsc event #0201
+	AppearWhenFlagSet MazeS.pxe entity 13 (Treasure Chest, open)
+Flag 780
+	<FLJ MazeM.tsc event #0093
+	<FLJ MazeM.tsc event #0094
+	<FL+ MazeM.tsc event #0111
+	<FLJ Drain.tsc event #0110
+Flag 781
+	<FL+ MazeS.tsc event #0600
+	<FLJ MazeM.tsc event #0110
+	<FL- MazeM.tsc event #0111
+	AppearWhenFlagSet MazeM.pxe entity 94 (Curly, AI)
+Flag 782
+	<FLJ MazeM.tsc event #0090
+	<FLJ MazeM.tsc event #0092
+	<FLJ MazeM.tsc event #0301
+	<FLJ MazeM.tsc event #0330
+	<FL+ MazeM.tsc event #0330
+Flag 783
+	<FL+ Almond.tsc event #1000
+Flag 800
+	<FLJ MazeM.tsc event #0110
+	<FLJ Drain.tsc event #0090
+	<FLJ Drain.tsc event #0092
+	<FLJ Drain.tsc event #0094
+	<FLJ Almond.tsc event #0100
+	<FL+ Almond.tsc event #1100
+Flag 801
+	HideWhenFlagSet Drain.pxe entity 6 (Save Point)
+	AppearWhenFlagSet Drain.pxe entity 10 (Save Point)
+	<FL+ Almond.tsc event #1100
+Flag 820
+	<FL+ Drain.tsc event #0150
+	<FL- Almond.tsc event #0200
+	AppearWhenFlagSet Almond.pxe entity 21 (Curly, standing)
+Flag 821
+	<FLJ Almond.tsc event #0200
+	<FL+ Almond.tsc event #0200
+	HideWhenFlagSet Almond.pxe entity 10 (Shutter, small)
+	HideWhenFlagSet Almond.pxe entity 11 (Shutter, small)
+	HideWhenFlagSet Almond.pxe entity 12 (Shutter, small)
+Flag 822
+	<FLJ Almond.tsc event #0092
+	<FL+ Almond.tsc event #0200
+	<FL- Almond.tsc event #0340
+	<FL- Almond.tsc event #0351
+	AppearWhenFlagSet Almond.pxe entity 22 (Curly, standing)
+Flag 823
+	<FLJ Almond.tsc event #0200
+	<FLJ Almond.tsc event #0301
+	<FL+ Almond.tsc event #0340
+	HideWhenFlagSet Almond.pxe entity 13 (Shutter, small)
+	HideWhenFlagSet Almond.pxe entity 32 (Shutter, stuck (enemy))
+Flag 824
+	<FLJ Almond.tsc event #0200
+	<FL+ Almond.tsc event #0202
+	<FL- Almond.tsc event #0452
+	HideWhenFlagSet Almond.pxe entity 8 (Lift Block)
+	AppearWhenFlagSet Almond.pxe entity 9 (Lift Block)
+Flag 825
+	<FLJ Almond.tsc event #0210
+	<FL+ Almond.tsc event #0210
+	<FLJ Almond.tsc event #0350
+	HideWhenFlagSet Almond.pxe entity 14 (Shutter, large)
+Flag 826
+	<FL+ Almond.tsc event #0340
+	<FL- Almond.tsc event #0351
+	AppearWhenFlagSet Almond.pxe entity 24 (Curly, standing)
+Flag 827
+	<FL+ Almond.tsc event #0351
+	<FL- Almond.tsc event #1100
+	AppearWhenFlagSet Almond.pxe entity 25 (Curly, standing)
+	HideWhenFlagSet Almond.pxe entity 26 (Null)
+Flag 828
+	<FLJ Almond.tsc event #0240
+	<FLJ Almond.tsc event #0452
+	<FL+ Almond.tsc event #0452
+	<FL- Almond.tsc event #1000
+Flag 829
+	<FLJ Almond.tsc event #0092
+	<FL- Almond.tsc event #0307
+	<FL+ Almond.tsc event #1100
+	<FLJ Almond.tsc event #1200
+Flag 830
+	<FLJ Malco.tsc event #0095
+	<FLJ Jenka2.tsc event #0230
+	<FLJ Almond.tsc event #0210
+	<FLJ Almond.tsc event #0240
+	<FLJ Almond.tsc event #0360
+	<FL+ Almond.tsc event #1100
+	HideWhenFlagSet Almond.pxe entity 17 (Surface Robot)
+Flag 831
+	HideWhenFlagSet Almond.pxe entity 20 (H/V Trigger)
+Flag 832
+	<FL+ MazeM.tsc event #0113
+	AppearWhenFlagSet Drain.pxe entity 11 (Water Level)
+	HideWhenFlagSet Drain.pxe entity 12 (Water Level)
+	<FL+ Almond.tsc event #0103
+	<FLJ Almond.tsc event #0200
+	HideWhenFlagSet Almond.pxe entity 18 (Water Level)
+	AppearWhenFlagSet Almond.pxe entity 36 (Water Level)
+Flag 834
+	HideWhenFlagSet Almond.pxe entity 5 (Sparkling Item)
+Flag 835
+	<FL+ Almond.tsc event #0307
+	<FLJ Pixel.tsc event #0200
+Flag 836
+	<FLJ Stream.tsc event #1002
+	<FL- Stream.tsc event #1003
+	AppearWhenFlagSet Stream.pxe entity 31 (Curly, carried)
+	AppearWhenFlagSet Drain.pxe entity 14 (Curly, carried)
+	<FL+ Almond.tsc event #0307
+	AppearWhenFlagSet Almond.pxe entity 38 (Curly, carried)
+	<FLJ River.tsc event #0090
+	<FLJ River.tsc event #0091
+	<FLJ River.tsc event #0092
+	<FLJ River.tsc event #0093
+	<FLJ River.tsc event #0094
+	<FL- River.tsc event #0111
+	<FLJ River.tsc event #0220
+	AppearWhenFlagSet River.pxe entity 99 (Curly, carried)
+	<FLJ Pixel.tsc event #0250
+	<FL- Pixel.tsc event #0251
+	<FL+ Pixel.tsc event #0254
+	AppearWhenFlagSet Pixel.pxe entity 11 (Curly, carried)
+Flag 837
+	<FLJ Almond.tsc event #0452
+	<FL+ Almond.tsc event #1000
+Flag 838
+	<FL+ Almond.tsc event #1100
+Flag 839
+	<FLJ Almond.tsc event #0100
+	<FL+ Almond.tsc event #0240
+	<FL- Almond.tsc event #1100
+Flag 850
+	<FLJ River.tsc event #0110
+	<FL+ River.tsc event #0110
+Flag 851
+	<FL+ River.tsc event #0221
+Flag 880
+	<FLJ Eggs2.tsc event #0320
+	<FL+ Eggs2.tsc event #0320
+	HideWhenFlagSet Eggs2.pxe entity 100 (Treasure Chest, closed)
+	AppearWhenFlagSet Eggs2.pxe entity 101 (Treasure Chest, open)
+Flag 920
+	<FLJ EggR2.tsc event #0302
+	<FL+ EggR2.tsc event #0302
+	AppearWhenFlagSet EggR2.pxe entity 6 (Save Point)
+	HideWhenFlagSet EggR2.pxe entity 7 (Treasure Chest, closed)
+	AppearWhenFlagSet EggR2.pxe entity 8 (Treasure Chest, open)
+	HideWhenFlagSet EggR2.pxe entity 9 (Null)
+	AppearWhenFlagSet EggR2.pxe entity 16 (Null)
+Flag 921
+	<FLJ EggR2.tsc event #0100
+	<FLJ EggR2.tsc event #0101
+	<FL+ EggR2.tsc event #0304
+	<FLJ EggR2.tsc event #0350
+	<FL- EggR2.tsc event #1000
+Flag 923
+	HideWhenFlagSet EggR2.pxe entity 10 (Spikes (small))
+	HideWhenFlagSet EggR2.pxe entity 11 (Spikes (small))
+	HideWhenFlagSet EggR2.pxe entity 12 (Spikes (small))
+	HideWhenFlagSet EggR2.pxe entity 13 (Spikes (small))
+	HideWhenFlagSet EggR2.pxe entity 14 (Spikes (small))
+Flag 940
+	<FLJ EggX2.tsc event #0110
+	<FL+ EggX2.tsc event #0501
+	<FL+ EggX2.tsc event #0503
+	HideWhenFlagSet EggX2.pxe entity 4 (Null)
+	AppearWhenFlagSet EggX2.pxe entity 10 (Door)
+	<FL+ Oside.tsc event #0101
+Flag 941
+	<FLJ EggX2.tsc event #0500
+	<FL+ EggX2.tsc event #0503
+	<FL+ Oside.tsc event #0101
+Flag 960
+	<FL+ EggX2.tsc event #0503
+Flag 961
+	<FL+ Momo.tsc event #0202
+Flag 1000
+	<FLJ Itoh.tsc event #0094
+	<FL+ Itoh.tsc event #0200
+Flag 1001
+	<FLJ Itoh.tsc event #0400
+	<FL+ Itoh.tsc event #0400
+Flag 1002
+	<FLJ Itoh.tsc event #0400
+	<FL+ Itoh.tsc event #0401
+Flag 1003
+	<FLJ Itoh.tsc event #0400
+	<FL+ Itoh.tsc event #0403
+Flag 1004
+	<FL+ Momo.tsc event #0281
+Flag 1020
+	<FLJ ArmsItem.tsc event #6024
+	<FL+ ArmsItem.tsc event #6024
+	<FL- ArmsItem.tsc event #7024
+	<FL+ Head.tsc event #0074
+	<FLJ 0.tsc event #0100
+	<FLJ Pens1.tsc event #0660
+	<FLJ Plant.tsc event #0220
+	<FLJ MazeA.tsc event #0220
+	<FLJ Cent.tsc event #0200
+	<FLJ Cent.tsc event #0210
+	<FLJ Cent.tsc event #0220
+	<FLJ Cent.tsc event #0230
+	<FLJ Cent.tsc event #0240
+	<FLJ Cent.tsc event #0250
+	<FLJ Cent.tsc event #0320
+	<FLJ Cent.tsc event #0322
+	<FLJ Cent.tsc event #0415
+	<FLJ Lounge.tsc event #0200
+	<FLJ Lounge.tsc event #0210
+	<FLJ Lounge.tsc event #0220
+	<FLJ Lounge.tsc event #0230
+	<FLJ Ring1.tsc event #0400
+	<FLJ Ring1.tsc event #0501
+	<FLJ Ring2.tsc event #0200
+	<FLJ Ring2.tsc event #0222
+Flag 1021
+	<FL+ Lounge.tsc event #0250
+Flag 1022
+	<FLJ Cent.tsc event #0260
+	<FLJ Cent.tsc event #0265
+	<FL+ Cent.tsc event #0266
+Flag 1023
+	<FLJ Cent.tsc event #0135
+	<FL+ Cent.tsc event #0136
+	<FLJ Cent.tsc event #0260
+	<FLJ CentW.tsc event #0100
+	<FL+ CentW.tsc event #0101
+	<FLJ CentW.tsc event #0150
+Flag 1024
+	<FL+ ArmsItem.tsc event #6026
+Flag 1025
+	<FL+ Itoh.tsc event #0200
+	AppearWhenFlagSet Cent.pxe entity 41 (Red Flowers, small)
+	AppearWhenFlagSet Cent.pxe entity 42 (Red Flowers, small)
+	AppearWhenFlagSet Cent.pxe entity 43 (Red Flowers, small)
+	AppearWhenFlagSet Cent.pxe entity 44 (Red Flowers, small)
+	<FL- Jail1.tsc event #0200
+Flag 1026
+	AppearWhenFlagSet Cent.pxe entity 45 (Red Flowers, large)
+	AppearWhenFlagSet Cent.pxe entity 46 (Red Flowers, large)
+	AppearWhenFlagSet Cent.pxe entity 47 (Red Flowers, large)
+	AppearWhenFlagSet Cent.pxe entity 48 (Red Flowers, large)
+	AppearWhenFlagSet Cent.pxe entity 49 (Red Flowers, small)
+	AppearWhenFlagSet Cent.pxe entity 50 (Red Flowers, small)
+	AppearWhenFlagSet Cent.pxe entity 51 (Red Flowers, small)
+	AppearWhenFlagSet Cent.pxe entity 52 (Red Flowers, small)
+	AppearWhenFlagSet Cent.pxe entity 53 (Red Flowers, small)
+	<FL+ Jail1.tsc event #0200
+	<FL- Momo.tsc event #0281
+Flag 1027
+	<FL+ Momo.tsc event #0202
+Flag 1028
+	<FL+ Momo.tsc event #0202
+Flag 1029
+	<FLJ Cent.tsc event #0250
+	<FL+ Cent.tsc event #0252
+Flag 1030
+	<FLJ Cent.tsc event #0150
+	AppearWhenFlagSet Cent.pxe entity 8 (Rocket)
+	<FL+ Momo.tsc event #0281
+Flag 1031
+	AppearWhenFlagSet Cent.pxe entity 67 (Itoh)
+	<FL+ Momo.tsc event #0281
+	<FL- Ring3.tsc event #0600
+Flag 1032
+	AppearWhenFlagSet Cent.pxe entity 66 (Momorin)
+	<FL+ Momo.tsc event #0281
+	<FL- Ring3.tsc event #0600
+Flag 1033
+	HideWhenFlagSet Cent.pxe entity 30 (Shovel Brigade, walking)
+	HideWhenFlagSet Cent.pxe entity 31 (Shovel Brigade, walking)
+	HideWhenFlagSet Cent.pxe entity 33 (Shovel Brigade, standing)
+	HideWhenFlagSet Cent.pxe entity 35 (Shovel Brigade, standing)
+	HideWhenFlagSet Cent.pxe entity 39 (Shovel Brigade, standing)
+	HideWhenFlagSet Cent.pxe entity 40 (Shovel Brigade, walking)
+	<FL+ Momo.tsc event #0281
+	<FLJ Lounge.tsc event #0210
+	HideWhenFlagSet Lounge.pxe entity 12 (Chie)
+	HideWhenFlagSet Lounge.pxe entity 14 (Mimiga, sleeping)
+	HideWhenFlagSet Jail2.pxe entity 8 (Mimiga (wandering))
+	HideWhenFlagSet Jail2.pxe entity 9 (Mimiga (wandering))
+	HideWhenFlagSet Jail2.pxe entity 10 (Mimiga (wandering))
+	HideWhenFlagSet Jail2.pxe entity 11 (Mimiga (wandering))
+	HideWhenFlagSet Jail2.pxe entity 12 (Mimiga (wandering))
+	HideWhenFlagSet Jail2.pxe entity 13 (Mimiga (wandering))
+Flag 1035
+	<FLJ Cent.tsc event #0260
+	<FL+ Cent.tsc event #0260
+Flag 1036
+	HideWhenFlagSet Cent.pxe entity 36 (Sprinkler)
+	AppearWhenFlagSet Cent.pxe entity 76 (Red Flowers, picked)
+	AppearWhenFlagSet Cent.pxe entity 77 (Red Flowers, picked)
+	AppearWhenFlagSet Cent.pxe entity 78 (Red Flowers, picked)
+	AppearWhenFlagSet Cent.pxe entity 79 (Red Flowers, picked)
+	<FL+ Momo.tsc event #0281
+Flag 1037
+	<FLJ Cent.tsc event #0240
+	<FL+ Cent.tsc event #0241
+Flag 1038
+	<FL+ Itoh.tsc event #0200
+	<FL+ Itoh.tsc event #0400
+	AppearWhenFlagSet Cent.pxe entity 28 (Droll (enemy))
+	AppearWhenFlagSet Cent.pxe entity 29 (Droll (enemy))
+	AppearWhenFlagSet Cent.pxe entity 110 (Droll (enemy))
+	AppearWhenFlagSet Cent.pxe entity 111 (Droll (enemy))
+	<FL- Momo.tsc event #0281
+Flag 1039
+	AppearWhenFlagSet Cent.pxe entity 112 (Puppy, sitting)
+	<FL+ Momo.tsc event #0281
+Flag 1040
+	<FLJ Cent.tsc event #0450
+	<FL+ Cent.tsc event #0450
+Flag 1041
+	<FL+ Cent.tsc event #0320
+Flag 1042
+	AppearWhenFlagSet Cent.pxe entity 122 (Curly, sleeping)
+	<FLJ Pixel.tsc event #0096
+	<FL+ Pixel.tsc event #0254
+	<FLJ Mapi.tsc event #0200
+Flag 1043
+	HideWhenFlagSet Cent.pxe entity 4 (Sparkling Item)
+Flag 1044
+	<FL+ Cent.tsc event #0311
+Flag 1045
+	<FLJ Cent.tsc event #0320
+	<FL+ Cent.tsc event #0322
+Flag 1046
+	<FLJ Cent.tsc event #0320
+	<FL+ Cent.tsc event #0322
+	<FLJ Prefa2.tsc event #0110
+Flag 1080
+	<FLJ Jail1.tsc event #0200
+	<FL+ Jail1.tsc event #0200
+Flag 1081
+	<FLJ Jail1.tsc event #0200
+	<FL+ Jail1.tsc event #0201
+Flag 1082
+	HideWhenFlagSet Jail1.pxe entity 9 (Sue)
+	HideWhenFlagSet Jail1.pxe entity 10 (Jack)
+	<FL+ CentW.tsc event #0151
+Flag 1100
+	<FLJ Momo.tsc event #0200
+	<FL+ Momo.tsc event #0202
+Flag 1101
+	<FL+ Momo.tsc event #0202
+Flag 1102
+	<FLJ Cent.tsc event #0400
+	<FLJ Cent.tsc event #0410
+	<FL+ Momo.tsc event #0205
+Flag 1103
+	<FLJ Momo.tsc event #0200
+	<FL+ Momo.tsc event #0210
+	<FLJ Momo.tsc event #0280
+	<FL- Momo.tsc event #0281
+Flag 1105
+	<FLJ Cent.tsc event #0120
+	<FL+ Momo.tsc event #0281
+	HideWhenFlagSet Momo.pxe entity 11 (Rocket)
+	HideWhenFlagSet Momo.pxe entity 12 (Momorin)
+Flag 1107
+	<FL+ Momo.tsc event #0210
+	AppearWhenFlagSet Momo.pxe entity 0 (Sprinkler)
+	HideWhenFlagSet Momo.pxe entity 1 (Null)
+Flag 1120
+	<FL+ Lounge.tsc event #0250
+Flag 1121
+	<FLJ Lounge.tsc event #0201
+	<FL+ Lounge.tsc event #0202
+	HideWhenFlagSet Lounge.pxe entity 13 (Sprinkler)
+Flag 1140
+	<FLJ CentW.tsc event #0150
+	<FL+ CentW.tsc event #0151
+	HideWhenFlagSet CentW.pxe entity 10 (Droll, guarding)
+Flag 1141
+	<FLJ CentW.tsc event #0151
+	<FL+ CentW.tsc event #0151
+Flag 1190
+	<FL- Blcny1.tsc event #0090
+	<FL+ Blcny1.tsc event #0091
+	<FL- Blcny1.tsc event #0094
+	<FL- Blcny2.tsc event #0090
+	<FL+ Blcny2.tsc event #0091
+	<FL- Blcny2.tsc event #0094
+	<FL- Blcny2.tsc event #0310
+Flag 1191
+	<FL- Blcny1.tsc event #0090
+	<FL- Blcny1.tsc event #0091
+	<FL+ Blcny1.tsc event #0094
+	<FLJ Blcny1.tsc event #0210
+	<FL- Blcny2.tsc event #0090
+	<FL- Blcny2.tsc event #0091
+	<FL+ Blcny2.tsc event #0094
+	<FLJ Blcny2.tsc event #0210
+	<FL- Blcny2.tsc event #0310
+Flag 1192
+	<FL+ Blcny1.tsc event #0090
+	<FL- Blcny1.tsc event #0091
+	<FL- Blcny1.tsc event #0094
+	<FLJ Blcny1.tsc event #0210
+	<FL+ Blcny2.tsc event #0090
+	<FL- Blcny2.tsc event #0091
+	<FL- Blcny2.tsc event #0094
+	<FLJ Blcny2.tsc event #0210
+	<FL+ Blcny2.tsc event #0310
+Flag 1250
+	<FLJ Ring1.tsc event #0092
+	<FLJ Ring1.tsc event #0093
+	HideWhenFlagSet Ring1.pxe entity 4 (Misery (boss))
+	HideWhenFlagSet Ring1.pxe entity 5 (H/V Trigger)
+Flag 1270
+	<FLJ Ring2.tsc event #0093
+	<FLJ Ring2.tsc event #0200
+	<FLJ Ring2.tsc event #0210
+	<FLJ Ring2.tsc event #0220
+	<FL- Ring2.tsc event #0410
+	<FL+ Ring2.tsc event #0420
+	<FL- Ring2.tsc event #0502
+	<FL- Ring2.tsc event #0501
+	HideWhenFlagSet Ring2.pxe entity 24 (H/V Trigger)
+	HideWhenFlagSet Ring2.pxe entity 25 (Doctor, facing away)
+	HideWhenFlagSet Ring2.pxe entity 26 (Null)
+	HideWhenFlagSet Ring2.pxe entity 27 (Null)
+Flag 1271
+	<FLJ Ring2.tsc event #0200
+	<FLJ Ring2.tsc event #0210
+	<FLJ Ring2.tsc event #0220
+	<FL+ Ring2.tsc event #0502
+	<FL+ Ring2.tsc event #0501
+Flag 1272
+	<FLJ Ring2.tsc event #0200
+	<FL+ Ring2.tsc event #0202
+Flag 1273
+	HideWhenFlagSet Ring2.pxe entity 4 (Shovel Brigade, caged)
+	HideWhenFlagSet Ring2.pxe entity 6 (Null)
+	HideWhenFlagSet Ring2.pxe entity 7 (Chie, caged)
+	HideWhenFlagSet Ring2.pxe entity 8 (Chaco, caged)
+	HideWhenFlagSet Ring2.pxe entity 9 (Shovel Brigade, caged)
+	HideWhenFlagSet Ring2.pxe entity 10 (Null)
+	HideWhenFlagSet Ring2.pxe entity 11 (Shovel Brigade, caged)
+	HideWhenFlagSet Ring2.pxe entity 12 (Shovel Brigade, caged)
+	HideWhenFlagSet Ring2.pxe entity 13 (Shovel Brigade, caged)
+	HideWhenFlagSet Ring2.pxe entity 14 (Null)
+	HideWhenFlagSet Ring2.pxe entity 15 (Santa, caged)
+	HideWhenFlagSet Ring2.pxe entity 16 (Shovel Brigade, caged)
+	HideWhenFlagSet Ring2.pxe entity 17 (Cage bars)
+	HideWhenFlagSet Ring2.pxe entity 18 (Cage bars)
+	HideWhenFlagSet Ring2.pxe entity 19 (Cage bars)
+	HideWhenFlagSet Ring2.pxe entity 20 (Cage bars)
+	HideWhenFlagSet Ring2.pxe entity 21 (Cage bars)
+	HideWhenFlagSet Ring2.pxe entity 22 (Cage bars)
+	HideWhenFlagSet Ring2.pxe entity 23 (Cage bars)
+	<FL+ Ring3.tsc event #0600
+Flag 1274
+	<FLJ Ring2.tsc event #0204
+	<FL+ Ring2.tsc event #0204
+Flag 1320
+	<FLJ Cent.tsc event #1320
+	<FLJ Cent.tsc event #1399
+	<FLJ Priso2.tsc event #0099
+	<FL- Priso2.tsc event #0241
+	<FLJ Priso2.tsc event #0251
+	<FL+ Priso2.tsc event #0251
+	HideWhenFlagSet Priso2.pxe entity 32 (Null)
+	AppearWhenFlagSet Priso2.pxe entity 103 (Treasure Chest, open)
+Flag 1340
+	<FL- Ring3.tsc event #0441
+	<FL+ Ring3.tsc event #1000
+	HideWhenFlagSet Ring3.pxe entity 7 (H/V Trigger)
+	HideWhenFlagSet Ring3.pxe entity 8 (Mini Undead Core, stationary)
+	HideWhenFlagSet Ring3.pxe entity 9 (Mini Undead Core, stationary)
+	HideWhenFlagSet Ring3.pxe entity 10 (Mini Undead Core, stationary)
+	HideWhenFlagSet Ring3.pxe entity 11 (Mini Undead Core, stationary)
+	HideWhenFlagSet Ring3.pxe entity 12 (H/V Trigger)
+Flag 1341
+	AppearWhenFlagSet Weed.pxe entity 167 (Camera Focus Marker)
+	AppearWhenFlagSet Weed.pxe entity 168 (Quake)
+	AppearWhenFlagSet Sand.pxe entity 156 (Quake)
+	AppearWhenFlagSet Sand.pxe entity 157 (Camera Focus Marker)
+	AppearWhenFlagSet MazeW.pxe entity 74 (Camera Focus Marker)
+	AppearWhenFlagSet MazeW.pxe entity 75 (Quake)
+	AppearWhenFlagSet Almond.pxe entity 34 (Camera Focus Marker)
+	AppearWhenFlagSet Almond.pxe entity 35 (Quake)
+	AppearWhenFlagSet Eggs2.pxe entity 98 (Camera Focus Marker)
+	AppearWhenFlagSet Eggs2.pxe entity 99 (Quake)
+	AppearWhenFlagSet Cent.pxe entity 123 (Camera Focus Marker)
+	AppearWhenFlagSet Cent.pxe entity 124 (Quake)
+	<FLJ Ring1.tsc event #0093
+	<FLJ Ring1.tsc event #0100
+	AppearWhenFlagSet Ring1.pxe entity 8 (Quake)
+	<FLJ Ring2.tsc event #0093
+	AppearWhenFlagSet Ring2.pxe entity 30 (Quake)
+	<FL+ Ring3.tsc event #0600
+	AppearWhenFlagSet Blcny2.pxe entity 23 (Quake)
+	AppearWhenFlagSet Blcny2.pxe entity 25 (Generator - Falling Block)
+	AppearWhenFlagSet Hell1.pxe entity 14 (Quake)
+	AppearWhenFlagSet Hell2.pxe entity 5 (Quake)
+	AppearWhenFlagSet Hell3.pxe entity 85 (Quake)
+	AppearWhenFlagSet Hell4.pxe entity 2 (Quake)
+	AppearWhenFlagSet Hell42.pxe entity 2 (Quake)
+	AppearWhenFlagSet Statue.pxe entity 9 (Quake)
+	AppearWhenFlagSet Statue.pxe entity 10 (Statue)
+	HideWhenFlagSet Statue.pxe entity 11 (Numahachi)
+	AppearWhenFlagSet Ballo1.pxe entity 1 (Quake)
+	AppearWhenFlagSet Ostep.pxe entity 5 (Quake)
+Flag 1351
+	HideWhenFlagSet Hell2.pxe entity 6 (Generator - Falling Block)
+Flag 1370
+	<FL+ Oside.tsc event #0131
+	<FLJ Little.tsc event #0210
+	AppearWhenFlagSet Little.pxe entity 6 (Little Family)
+Flag 1371
+	<FL+ Little.tsc event #0210
+Flag 1372
+	<FLJ Little.tsc event #0200
+	<FL+ Little.tsc event #0203
+	<FLJ Little.tsc event #0211
+Flag 1390
+	<FL+ Ring3.tsc event #0600
+	HideWhenFlagSet Blcny2.pxe entity 10 (Helicopter)
+	HideWhenFlagSet Blcny2.pxe entity 13 (Momorin)
+	HideWhenFlagSet Blcny2.pxe entity 14 (Null)
+	<FL+ Prefa2.tsc event #0200
+Flag 1391
+	<FL+ Ring3.tsc event #0600
+	<FL- Blcny2.tsc event #0310
+	AppearWhenFlagSet Blcny2.pxe entity 15 (Sue)
+	<FL+ Prefa2.tsc event #0200
+Flag 1392
+	<FL+ Ring3.tsc event #0600
+	<FL- Blcny2.tsc event #0330
+	AppearWhenFlagSet Blcny2.pxe entity 16 (Sue)
+	AppearWhenFlagSet Blcny2.pxe entity 17 (H/V Trigger)
+	<FL+ Prefa2.tsc event #0200
+Flag 1393
+	<FL+ Ring3.tsc event #1002
+	AppearWhenFlagSet Blcny2.pxe entity 3 (Door)
+	HideWhenFlagSet Blcny2.pxe entity 9 (Door)
+Flag 1440
+	<FLJ Pixel.tsc event #0200
+	<FLJ Pixel.tsc event #0250
+	<FL+ Pixel.tsc event #0251
+	<FL- Pixel.tsc event #0254
+	AppearWhenFlagSet Pixel.pxe entity 9 (Curly, sleeping)
+Flag 1441
+	<FLJ Pixel.tsc event #0200
+	<FLJ Pixel.tsc event #0221
+	<FL+ Pixel.tsc event #0222
+	<FLJ Pixel.tsc event #0250
+Flag 1442
+	<FLJ Pixel.tsc event #0250
+	<FL+ Pixel.tsc event #0253
+Flag 1444
+	<FLJ River.tsc event #0096
+	<FLJ River.tsc event #0220
+	<FLJ Pixel.tsc event #0250
+	<FL+ Pixel.tsc event #0254
+Flag 1445
+	<FL+ Pixel.tsc event #0202
+	<FLJ Pixel.tsc event #0221
+Flag 1460
+	<FL+ Fall.tsc event #0120
+Flag 1530
+	HideWhenFlagSet Hell1.pxe entity 36 (Sparkling Item)
+Flag 1531
+	<FL+ Prefa2.tsc event #0111
+	<FLJ Hell1.tsc event #0110
+	<FL- Hell1.tsc event #0500
+	AppearWhenFlagSet Hell1.pxe entity 43 (Curly, standing)
+Flag 1532
+	<FL+ Hell1.tsc event #0500
+	AppearWhenFlagSet Hell1.pxe entity 46 (Curly, carried)
+	AppearWhenFlagSet Hell2.pxe entity 41 (Curly, carried)
+	<FLJ Hell3.tsc event #0095
+	<FL- Hell3.tsc event #0200
+	AppearWhenFlagSet Hell3.pxe entity 114 (Curly, carried)
+Flag 1533
+	AppearWhenFlagSet Hell1.pxe entity 53 (Curly, carried, shooting)
+	AppearWhenFlagSet Hell2.pxe entity 44 (Curly, carried, shooting)
+	<FL+ Hell3.tsc event #0200
+	AppearWhenFlagSet Hell3.pxe entity 121 (Curly, carried, shooting)
+	AppearWhenFlagSet Hell4.pxe entity 7 (Curly, carried, shooting)
+	AppearWhenFlagSet Hell42.pxe entity 8 (Curly, carried, shooting)
+	AppearWhenFlagSet Statue.pxe entity 13 (Curly, carried, shooting)
+	AppearWhenFlagSet Ballo1.pxe entity 14 (Curly, carried, shooting)
+	AppearWhenFlagSet Ostep.pxe entity 7 (Curly, carried, shooting)
+Flag 1534
+	<FL+ Prefa2.tsc event #0110
+	AppearWhenFlagSet Hell2.pxe entity 12 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 13 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 14 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 15 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 16 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 17 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 18 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 19 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 20 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 21 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 22 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 23 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 24 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 25 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 26 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 27 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 28 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 29 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 30 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 31 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 32 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 33 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 34 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 35 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 36 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 37 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 38 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell2.pxe entity 39 (Bute, flying, 1 (enemy))
+	<FLJ Hell3.tsc event #0110
+	AppearWhenFlagSet Hell3.pxe entity 15 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 16 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 17 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 19 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 20 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 21 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 22 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 23 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 24 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 25 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 26 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 27 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 28 (Null)
+	AppearWhenFlagSet Hell3.pxe entity 29 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 30 (Heart)
+	AppearWhenFlagSet Hell3.pxe entity 35 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 36 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 37 (Mesa (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 38 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 39 (Mesa (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 40 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 41 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 42 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 43 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 44 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 45 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 46 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 47 (Mesa (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 48 (Mesa (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 49 (Mesa (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 50 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 51 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 52 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 53 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 54 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 55 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 56 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 57 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 58 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 59 (Mesa (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 60 (Mesa (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 61 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 62 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 63 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 64 (Press, Proximity (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 65 (Press, Proximity (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 66 (Press, Proximity (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 69 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 70 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 71 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 72 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 73 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 74 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 75 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 76 (Bute, sword (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 78 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 79 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 80 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 95 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 96 (Bute, archer (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 101 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 102 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 103 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 104 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 105 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 106 (Bute, flying, 1 (enemy))
+	AppearWhenFlagSet Hell3.pxe entity 107 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 108 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 109 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 110 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 111 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 112 (H/V Trigger)
+	<FLJ Statue.tsc event #0092
+	<FLJ Statue.tsc event #0100
+Flag 1550
+	<FL+ Prefa2.tsc event #0110
+	<FLJ Hell3.tsc event #0095
+	<FLJ Hell3.tsc event #0200
+	<FL- Hell3.tsc event #1000
+	AppearWhenFlagSet Hell3.pxe entity 87 (H/V Trigger)
+	AppearWhenFlagSet Hell3.pxe entity 89 (H/V Trigger)
+Flag 1551
+	<FLJ Hell3.tsc event #0390
+	<FL+ Hell3.tsc event #0390
+	HideWhenFlagSet Hell3.pxe entity 83 (Treasure Chest, closed)
+	AppearWhenFlagSet Hell3.pxe entity 84 (Treasure Chest, open)
+Flag 1560
+	HideWhenFlagSet Mapi.pxe entity 9 (Ma Pignon (boss))
+	HideWhenFlagSet Mapi.pxe entity 10 (Null)
+Flag 1561
+	<FLJ Mapi.tsc event #0400
+	<FL+ Mapi.tsc event #0402
+Flag 1562
+	<FLJ Mapi.tsc event #0400
+	<FL+ Mapi.tsc event #0410
+Flag 1563
+	<FL+ ArmsItem.tsc event #6033
+Flag 1564
+	<FLJ Mapi.tsc event #0100
+	<FLJ Mapi.tsc event #0200
+	<FL+ Mapi.tsc event #0420
+	<FL- Mapi.tsc event #0500
+Flag 1590
+	<FLJ Statue.tsc event #0210
+Flag 1591
+	<FLJ Statue.tsc event #0211
+Flag 1592
+	<FLJ Statue.tsc event #0212
+Flag 1593
+	<FLJ Statue.tsc event #0213
+Flag 1600
+	<FLJ Ballo1.tsc event #1000
+	<FL+ Ballo1.tsc event #1000
+Flag 1620
+	<FL+ Ostep.tsc event #0900
+Flag 1640
+	<FLJ Cave.tsc event #0105
+	<FLJ Pole.tsc event #0200
+	<FL+ Pole.tsc event #0200
+	HideWhenFlagSet Pole.pxe entity 1 (Treasure Chest, closed)
+	AppearWhenFlagSet Pole.pxe entity 2 (Treasure Chest, open)
+Flag 1641
+	<FL+ Cave.tsc event #0106
+	HideWhenFlagSet Pole.pxe entity 5 (Hermit Gunsmith)
+Flag 1642
+	<FL+ Cave.tsc event #0106
+	<FL- Almond.tsc event #1100
+	AppearWhenFlagSet Pole.pxe entity 6 (Signpost)
+Flag 1643
+	<FL+ Almond.tsc event #1100
+	AppearWhenFlagSet Pole.pxe entity 4 (Hermit Gunsmith)
+Flag 1644
+	<FLJ Pole.tsc event #0301
+	<FL+ Pole.tsc event #0302
+Flag 1700
+	<FLJ Clock.tsc event #0201
+	<FL+ Clock.tsc event #0201
+	AppearWhenFlagSet Clock.pxe entity 2 (Treasure Chest, open)
+	HideWhenFlagSet Clock.pxe entity 3 (Treasure Chest, closed)
+Flag 2000
+	<FLJ Credit.tsc event #N/A
+	<FLJ Credit.tsc event #0100
+	<FLJ Credit.tsc event #0200
+	<FLJ Credit.tsc event #0400
+	<FLJ 0.tsc event #0100
+	<FLJ 0.tsc event #1060
+	<FLJ 0.tsc event #1090
+	<FL+ Fall.tsc event #0120
+	<FLJ e_Maze.tsc event #0100
+	<FLJ e_Sky.tsc event #0100
+Flag 2403
+	<FLJ Chako.tsc event #0210
+	<FL+ Chako.tsc event #0211
+Flag 2404
+	<FLJ Pool.tsc event #0411
+	<FL+ Pool.tsc event #0411
+Flag 2406
+	<FLJ Mapi.tsc event #0200
+	<FLJ Mapi.tsc event #0201
+	<FL+ Mapi.tsc event #0201
+	HideWhenFlagSet Mapi.pxe entity 11 (Treasure Chest, closed)
+	AppearWhenFlagSet Mapi.pxe entity 12 (Treasure Chest, open)
+Flag 2407
+	<FLJ Cent.tsc event #0415
+	<FLJ Cent.tsc event #0416
+	<FL+ Cent.tsc event #0416
+	HideWhenFlagSet Cent.pxe entity 75 (Treasure Chest, closed)
+	AppearWhenFlagSet Cent.pxe entity 144 (Treasure Chest, open)
+Flag 2410
+	<FLJ Weed.tsc event #0090
+	<FLJ Weed.tsc event #0091
+	<FLJ Weed.tsc event #0092
+	<FLJ Weed.tsc event #0093
+	<FLJ Weed.tsc event #0094
+	<FL+ Weed.tsc event #0099
+Flag 2413
+	<FL+ MazeI.tsc event #0400
+	<FLJ MazeB.tsc event #0090
+	<FLJ MazeB.tsc event #0091
+	<FLJ MazeB.tsc event #0092
+	<FLJ MazeB.tsc event #0093
+	<FLJ MazeB.tsc event #0094
+	<FLJ MazeB.tsc event #0098
+	<FLJ MazeB.tsc event #0099
+Flag 2414
+	<FLJ Oside.tsc event #0090
+	<FLJ Oside.tsc event #0091
+	<FLJ Oside.tsc event #0092
+	<FLJ Oside.tsc event #0093
+	<FLJ Oside.tsc event #0094
+	<FL+ Oside.tsc event #0095
+	<FL+ Oside.tsc event #0097
+	<FLJ Oside.tsc event #0098
+Flag 2420
+	<FLJ Head.tsc event #0030
+	<FL+ Head.tsc event #0034
+	<FLJ Head.tsc event #0035
+Flag 2421
+	<FL+ Head.tsc event #0033
+	<FL- Head.tsc event #0034
+	<FLJ Head.tsc event #0038
+Flag 2430
+	<FLJ Weed.tsc event #0202
+	<FL+ Weed.tsc event #0202
+	<FLJ Chako.tsc event #0300
+Flag 2460
+	<FL+ Weed.tsc event #0250
+	<FL+ Shelt.tsc event #0104
+	<FLJ EggX2.tsc event #0500
+	<FLJ Oside.tsc event #0100
+	AppearWhenFlagSet Oside.pxe entity 16 (Kazuma)
+	AppearWhenFlagSet Oside.pxe entity 18 (Sky Dragon)
+Flag 2470
+	<FLJ Barr.tsc event #0292
+	<FL+ Barr.tsc event #0402
+Flag 2500
+	<FLJ MazeA.tsc event #0501
+	<FL+ MazeA.tsc event #0501
+	AppearWhenFlagSet MazeA.pxe entity 14 (Treasure Chest, open)
+	HideWhenFlagSet MazeA.pxe entity 17 (Treasure Chest, closed)
+Flag 2501
+	<FLJ MazeA.tsc event #0511
+	<FL+ MazeA.tsc event #0511
+	AppearWhenFlagSet MazeA.pxe entity 15 (Treasure Chest, open)
+	HideWhenFlagSet MazeA.pxe entity 18 (Treasure Chest, closed)
+Flag 2502
+	<FLJ MazeA.tsc event #0521
+	<FL+ MazeA.tsc event #0521
+	AppearWhenFlagSet MazeA.pxe entity 16 (Treasure Chest, open)
+	HideWhenFlagSet MazeA.pxe entity 19 (Treasure Chest, closed)
+Flag 2600
+	<FL+ MazeD.tsc event #0400
+	HideWhenFlagSet MazeD.pxe entity 6 (Null)
+	HideWhenFlagSet MazeD.pxe entity 7 (Null)
+	HideWhenFlagSet MazeD.pxe entity 8 (Null)
+Flag 2700
+	<FLJ Jail1.tsc event #0090
+	<FLJ Jail1.tsc event #0091
+	<FLJ Jail1.tsc event #0092
+	<FLJ Jail1.tsc event #0093
+	<FLJ Jail1.tsc event #0094
+	<FLJ Jail1.tsc event #0300
+	<FL+ Jail1.tsc event #0300
+	HideWhenFlagSet Jail1.pxe entity 12 (Treasure Chest, closed)
+	AppearWhenFlagSet Jail1.pxe entity 13 (Treasure Chest, open)
+Flag 2800
+	<FL+ EggX.tsc event #0200
+	<FLJ Cent.tsc event #0371
+	<FLJ Cent.tsc event #1300
+	<FLJ Blcny1.tsc event #0301
+Flag 2801
+	<FLJ Head.tsc event #0004
+	<FL+ Head.tsc event #0004
+	<FLJ Head.tsc event #0005
+	<FL+ Head.tsc event #0005
+Flag 2802
+	<FL+ Head.tsc event #0006
+	<FLJ Pens1.tsc event #0201
+	<FLJ MazeA.tsc event #0510
+Flag 2810
+	<FLJ Head.tsc event #0009
+	<FL+ Head.tsc event #0009
+	<FLJ Head.tsc event #0010
+	<FL+ Head.tsc event #0010
+Flag 2811
+	<FL+ Head.tsc event #0011
+	<FLJ Pens1.tsc event #0205
+	<FLJ Little.tsc event #0200
+Flag 2820
+	<FL+ Head.tsc event #0007
+	<FLJ Pens1.tsc event #0211
+Flag 2892
+	<FLJ StageSelect.tsc event #1001
+	<FLJ StageSelect.tsc event #1002
+	<FLJ StageSelect.tsc event #1003
+	<FLJ StageSelect.tsc event #1004
+	<FLJ StageSelect.tsc event #1005
+	<FL+ Pens1.tsc event #0200
+	<FL- Pens1.tsc event #0500
+Flag 2900
+	<FLJ ArmsItem.tsc event #6021
+	<FL+ ArmsItem.tsc event #6021
+	<FL- ArmsItem.tsc event #7021
+	<FL+ Head.tsc event #0071
+	<FL- Almond.tsc event #1000
+	<FL+ Almond.tsc event #1101
+Flag 2999
+	<FLJ Blcny1.tsc event #0299
+	HideWhenFlagSet Blcny1.pxe entity 44 (Forcefield)
+	HideWhenFlagSet Blcny1.pxe entity 45 (Forcefield)
+	HideWhenFlagSet Blcny1.pxe entity 46 (Forcefield)
+	HideWhenFlagSet Blcny1.pxe entity 47 (H/V Trigger)
+Flag 4000
+	<FL+ Almond.tsc event #1000
+	<FL- Almond.tsc event #1100
+Flag 4001
+	<FLJ ArmsItem.tsc event #9000
+	<FLJ Credit.tsc event #1000
+	<FLJ Credit.tsc event #2000
+	<FL- Head.tsc event #0.00
+	<FL+ Head.tsc event #0.01
+	<FLJ Head.tsc event #0/00
+	<FLJ Cent.tsc event #1319
+Flag 4002
+	<FLJ ArmsItem.tsc event #9000
+	<FLJ ArmsItem.tsc event #9001
+	<FLJ Credit.tsc event #1000
+	<FLJ Credit.tsc event #1001
+	<FLJ Credit.tsc event #2000
+	<FLJ Credit.tsc event #2001
+	<FL- Head.tsc event #0.02
+	<FL+ Head.tsc event #0.03
+	<FLJ Head.tsc event #0/02
+	<FLJ Cent.tsc event #1319
+	<FLJ Blcny1.tsc event #0551
+Flag 4003
+	<FLJ ArmsItem.tsc event #9000
+	<FLJ ArmsItem.tsc event #9001
+	<FLJ ArmsItem.tsc event #9002
+	<FLJ ArmsItem.tsc event #9008
+	<FLJ Credit.tsc event #1000
+	<FLJ Credit.tsc event #1001
+	<FLJ Credit.tsc event #1002
+	<FLJ Credit.tsc event #1008
+	<FLJ Credit.tsc event #2000
+	<FLJ Credit.tsc event #2001
+	<FLJ Credit.tsc event #2002
+	<FLJ Credit.tsc event #2008
+	<FL- Head.tsc event #0.04
+	<FL+ Head.tsc event #0.05
+	<FLJ Head.tsc event #0/04
+Flag 4004
+	<FLJ ArmsItem.tsc event #9000
+	<FLJ ArmsItem.tsc event #9001
+	<FLJ ArmsItem.tsc event #9002
+	<FLJ ArmsItem.tsc event #9003
+	<FLJ ArmsItem.tsc event #9008
+	<FLJ ArmsItem.tsc event #9009
+	<FLJ ArmsItem.tsc event #9014
+	<FLJ ArmsItem.tsc event #9026
+	<FLJ Credit.tsc event #1000
+	<FLJ Credit.tsc event #1001
+	<FLJ Credit.tsc event #1002
+	<FLJ Credit.tsc event #1003
+	<FLJ Credit.tsc event #1008
+	<FLJ Credit.tsc event #1009
+	<FLJ Credit.tsc event #1014
+	<FLJ Credit.tsc event #1026
+	<FLJ Credit.tsc event #2000
+	<FLJ Credit.tsc event #2001
+	<FLJ Credit.tsc event #2002
+	<FLJ Credit.tsc event #2003
+	<FLJ Credit.tsc event #2008
+	<FLJ Credit.tsc event #2009
+	<FLJ Credit.tsc event #2014
+	<FLJ Credit.tsc event #2026
+	<FL- Head.tsc event #0.06
+	<FL+ Head.tsc event #0.07
+	<FLJ Head.tsc event #0/06
+Flag 4005
+	<FLJ ArmsItem.tsc event #9000
+	<FLJ ArmsItem.tsc event #9001
+	<FLJ ArmsItem.tsc event #9002
+	<FLJ ArmsItem.tsc event #9003
+	<FLJ ArmsItem.tsc event #9004
+	<FLJ ArmsItem.tsc event #9008
+	<FLJ ArmsItem.tsc event #9009
+	<FLJ ArmsItem.tsc event #9010
+	<FLJ ArmsItem.tsc event #9014
+	<FLJ ArmsItem.tsc event #9015
+	<FLJ ArmsItem.tsc event #9019
+	<FLJ ArmsItem.tsc event #9026
+	<FLJ ArmsItem.tsc event #9027
+	<FLJ ArmsItem.tsc event #9031
+	<FLJ ArmsItem.tsc event #9038
+	<FLJ ArmsItem.tsc event #9048
+	<FLJ Credit.tsc event #1000
+	<FLJ Credit.tsc event #1001
+	<FLJ Credit.tsc event #1002
+	<FLJ Credit.tsc event #1003
+	<FLJ Credit.tsc event #1004
+	<FLJ Credit.tsc event #1008
+	<FLJ Credit.tsc event #1009
+	<FLJ Credit.tsc event #1010
+	<FLJ Credit.tsc event #1014
+	<FLJ Credit.tsc event #1015
+	<FLJ Credit.tsc event #1019
+	<FLJ Credit.tsc event #1026
+	<FLJ Credit.tsc event #1027
+	<FLJ Credit.tsc event #1031
+	<FLJ Credit.tsc event #1038
+	<FLJ Credit.tsc event #1048
+	<FLJ Credit.tsc event #2000
+	<FLJ Credit.tsc event #2001
+	<FLJ Credit.tsc event #2002
+	<FLJ Credit.tsc event #2003
+	<FLJ Credit.tsc event #2004
+	<FLJ Credit.tsc event #2008
+	<FLJ Credit.tsc event #2009
+	<FLJ Credit.tsc event #2010
+	<FLJ Credit.tsc event #2014
+	<FLJ Credit.tsc event #2015
+	<FLJ Credit.tsc event #2019
+	<FLJ Credit.tsc event #2026
+	<FLJ Credit.tsc event #2027
+	<FLJ Credit.tsc event #2031
+	<FLJ Credit.tsc event #2038
+	<FLJ Credit.tsc event #2048
+	<FL- Head.tsc event #0.08
+	<FL+ Head.tsc event #0.09
+	<FLJ Head.tsc event #0/08
+Flag 4006
+	<FLJ ArmsItem.tsc event #9000
+	<FLJ ArmsItem.tsc event #9001
+	<FLJ ArmsItem.tsc event #9002
+	<FLJ ArmsItem.tsc event #9003
+	<FLJ ArmsItem.tsc event #9004
+	<FLJ ArmsItem.tsc event #9005
+	<FLJ ArmsItem.tsc event #9008
+	<FLJ ArmsItem.tsc event #9009
+	<FLJ ArmsItem.tsc event #9010
+	<FLJ ArmsItem.tsc event #9011
+	<FLJ ArmsItem.tsc event #9014
+	<FLJ ArmsItem.tsc event #9015
+	<FLJ ArmsItem.tsc event #9016
+	<FLJ ArmsItem.tsc event #9019
+	<FLJ ArmsItem.tsc event #9020
+	<FLJ ArmsItem.tsc event #9023
+	<FLJ ArmsItem.tsc event #9026
+	<FLJ ArmsItem.tsc event #9027
+	<FLJ ArmsItem.tsc event #9028
+	<FLJ ArmsItem.tsc event #9031
+	<FLJ ArmsItem.tsc event #9032
+	<FLJ ArmsItem.tsc event #9035
+	<FLJ ArmsItem.tsc event #9038
+	<FLJ ArmsItem.tsc event #9039
+	<FLJ ArmsItem.tsc event #9041
+	<FLJ ArmsItem.tsc event #9044
+	<FLJ ArmsItem.tsc event #9048
+	<FLJ ArmsItem.tsc event #9049
+	<FLJ ArmsItem.tsc event #9051
+	<FLJ ArmsItem.tsc event #9054
+	<FLJ ArmsItem.tsc event #9058
+	<FLJ ArmsItem.tsc event #9062
+	<FLJ Credit.tsc event #1000
+	<FLJ Credit.tsc event #1001
+	<FLJ Credit.tsc event #1002
+	<FLJ Credit.tsc event #1003
+	<FLJ Credit.tsc event #1004
+	<FLJ Credit.tsc event #1005
+	<FLJ Credit.tsc event #1008
+	<FLJ Credit.tsc event #1009
+	<FLJ Credit.tsc event #1010
+	<FLJ Credit.tsc event #1011
+	<FLJ Credit.tsc event #1014
+	<FLJ Credit.tsc event #1015
+	<FLJ Credit.tsc event #1016
+	<FLJ Credit.tsc event #1019
+	<FLJ Credit.tsc event #1020
+	<FLJ Credit.tsc event #1023
+	<FLJ Credit.tsc event #1026
+	<FLJ Credit.tsc event #1027
+	<FLJ Credit.tsc event #1028
+	<FLJ Credit.tsc event #1031
+	<FLJ Credit.tsc event #1032
+	<FLJ Credit.tsc event #1035
+	<FLJ Credit.tsc event #1038
+	<FLJ Credit.tsc event #1039
+	<FLJ Credit.tsc event #1041
+	<FLJ Credit.tsc event #1044
+	<FLJ Credit.tsc event #1048
+	<FLJ Credit.tsc event #1049
+	<FLJ Credit.tsc event #1051
+	<FLJ Credit.tsc event #1054
+	<FLJ Credit.tsc event #1058
+	<FLJ Credit.tsc event #1062
+	<FLJ Credit.tsc event #2000
+	<FLJ Credit.tsc event #2001
+	<FLJ Credit.tsc event #2002
+	<FLJ Credit.tsc event #2003
+	<FLJ Credit.tsc event #2004
+	<FLJ Credit.tsc event #2005
+	<FLJ Credit.tsc event #2008
+	<FLJ Credit.tsc event #2009
+	<FLJ Credit.tsc event #2010
+	<FLJ Credit.tsc event #2011
+	<FLJ Credit.tsc event #2014
+	<FLJ Credit.tsc event #2015
+	<FLJ Credit.tsc event #2016
+	<FLJ Credit.tsc event #2019
+	<FLJ Credit.tsc event #2020
+	<FLJ Credit.tsc event #2023
+	<FLJ Credit.tsc event #2026
+	<FLJ Credit.tsc event #2027
+	<FLJ Credit.tsc event #2028
+	<FLJ Credit.tsc event #2031
+	<FLJ Credit.tsc event #2032
+	<FLJ Credit.tsc event #2035
+	<FLJ Credit.tsc event #2038
+	<FLJ Credit.tsc event #2039
+	<FLJ Credit.tsc event #2041
+	<FLJ Credit.tsc event #2044
+	<FLJ Credit.tsc event #2048
+	<FLJ Credit.tsc event #2049
+	<FLJ Credit.tsc event #2051
+	<FLJ Credit.tsc event #2054
+	<FLJ Credit.tsc event #2058
+	<FLJ Credit.tsc event #2062
+	<FL- Head.tsc event #0.10
+	<FL+ Head.tsc event #0.11
+	<FLJ Head.tsc event #0/10
+Flag 4007
+	<FLJ ArmsItem.tsc event #9000
+	<FLJ ArmsItem.tsc event #9001
+	<FLJ ArmsItem.tsc event #9002
+	<FLJ ArmsItem.tsc event #9003
+	<FLJ ArmsItem.tsc event #9008
+	<FLJ ArmsItem.tsc event #9009
+	<FLJ Credit.tsc event #1000
+	<FLJ Credit.tsc event #1001
+	<FLJ Credit.tsc event #1002
+	<FLJ Credit.tsc event #1003
+	<FLJ Credit.tsc event #1008
+	<FLJ Credit.tsc event #1009
+	<FLJ Credit.tsc event #2000
+	<FLJ Credit.tsc event #2001
+	<FLJ Credit.tsc event #2002
+	<FLJ Credit.tsc event #2003
+	<FLJ Credit.tsc event #2008
+	<FLJ Credit.tsc event #2009
+	<FL- Head.tsc event #0.12
+	<FL+ Head.tsc event #0.13
+	<FLJ Head.tsc event #0/12
+	<FLJ Cent.tsc event #1318
+	<FLJ Blcny1.tsc event #0550
+Flag 4009
+	<FLJ Head.tsc event #0-70
+	<FL- Head.tsc event #0.14
+	<FL+ Head.tsc event #0/00
+Flag 4011
+	<FLJ Credit.tsc event #5700
+	<FL- Head.tsc event #0.20
+	<FL+ Head.tsc event #0.21
+	<FLJ Head.tsc event #0/20
+Flag 4012
+	<FLJ Credit.tsc event #5700
+	<FLJ Credit.tsc event #5701
+	<FL- Head.tsc event #0.22
+	<FL+ Head.tsc event #0.23
+	<FLJ Head.tsc event #0/22
+Flag 4013
+	<FLJ Credit.tsc event #5700
+	<FLJ Credit.tsc event #5701
+	<FLJ Credit.tsc event #5702
+	<FLJ Credit.tsc event #5708
+	<FL- Head.tsc event #0.24
+	<FL+ Head.tsc event #0.25
+	<FLJ Head.tsc event #0/24
+Flag 4014
+	<FLJ Credit.tsc event #5700
+	<FLJ Credit.tsc event #5701
+	<FLJ Credit.tsc event #5702
+	<FLJ Credit.tsc event #5703
+	<FLJ Credit.tsc event #5708
+	<FLJ Credit.tsc event #5709
+	<FLJ Credit.tsc event #5714
+	<FLJ Credit.tsc event #5726
+	<FL- Head.tsc event #0.26
+	<FL+ Head.tsc event #0.27
+	<FLJ Head.tsc event #0/26
+Flag 4015
+	<FLJ Credit.tsc event #5700
+	<FLJ Credit.tsc event #5701
+	<FLJ Credit.tsc event #5702
+	<FLJ Credit.tsc event #5703
+	<FLJ Credit.tsc event #5704
+	<FLJ Credit.tsc event #5708
+	<FLJ Credit.tsc event #5709
+	<FLJ Credit.tsc event #5710
+	<FLJ Credit.tsc event #5714
+	<FLJ Credit.tsc event #5715
+	<FLJ Credit.tsc event #5719
+	<FLJ Credit.tsc event #5726
+	<FLJ Credit.tsc event #5727
+	<FLJ Credit.tsc event #5731
+	<FLJ Credit.tsc event #5738
+	<FLJ Credit.tsc event #5748
+	<FL- Head.tsc event #0.28
+	<FL+ Head.tsc event #0.29
+	<FLJ Head.tsc event #0/28
+Flag 4016
+	<FLJ Credit.tsc event #5700
+	<FLJ Credit.tsc event #5701
+	<FLJ Credit.tsc event #5702
+	<FLJ Credit.tsc event #5703
+	<FLJ Credit.tsc event #5704
+	<FLJ Credit.tsc event #5705
+	<FLJ Credit.tsc event #5708
+	<FLJ Credit.tsc event #5709
+	<FLJ Credit.tsc event #5710
+	<FLJ Credit.tsc event #5711
+	<FLJ Credit.tsc event #5714
+	<FLJ Credit.tsc event #5715
+	<FLJ Credit.tsc event #5716
+	<FLJ Credit.tsc event #5719
+	<FLJ Credit.tsc event #5720
+	<FLJ Credit.tsc event #5726
+	<FLJ Credit.tsc event #5727
+	<FLJ Credit.tsc event #5728
+	<FLJ Credit.tsc event #5731
+	<FLJ Credit.tsc event #5732
+	<FLJ Credit.tsc event #5738
+	<FLJ Credit.tsc event #5739
+	<FLJ Credit.tsc event #5748
+	<FLJ Credit.tsc event #5749
+	<FL- Head.tsc event #0.30
+	<FL+ Head.tsc event #0.31
+	<FLJ Head.tsc event #0/30
+Flag 4019
+	<FLJ Head.tsc event #0-70
+	<FL- Head.tsc event #0.32
+	<FL+ Head.tsc event #0/20
+Flag 4021
+	<FLJ Credit.tsc event #2100
+	<FL- Head.tsc event #0.40
+	<FL+ Head.tsc event #0.41
+	<FLJ Head.tsc event #0/50
+Flag 4022
+	<FLJ Credit.tsc event #2100
+	<FLJ Credit.tsc event #2101
+	<FL- Head.tsc event #0.42
+	<FL+ Head.tsc event #0.43
+	<FLJ Head.tsc event #0/52
+Flag 4023
+	<FLJ Credit.tsc event #2100
+	<FLJ Credit.tsc event #2101
+	<FLJ Credit.tsc event #2102
+	<FLJ Credit.tsc event #2108
+	<FL- Head.tsc event #0.44
+	<FL+ Head.tsc event #0.45
+	<FLJ Head.tsc event #0/54
+Flag 4024
+	<FLJ Credit.tsc event #2100
+	<FLJ Credit.tsc event #2101
+	<FLJ Credit.tsc event #2102
+	<FLJ Credit.tsc event #2103
+	<FLJ Credit.tsc event #2108
+	<FLJ Credit.tsc event #2109
+	<FLJ Credit.tsc event #2114
+	<FLJ Credit.tsc event #2126
+	<FL- Head.tsc event #0.46
+	<FL+ Head.tsc event #0.47
+	<FLJ Head.tsc event #0/56
+Flag 4025
+	<FLJ Credit.tsc event #2100
+	<FLJ Credit.tsc event #2101
+	<FLJ Credit.tsc event #2102
+	<FLJ Credit.tsc event #2103
+	<FLJ Credit.tsc event #2104
+	<FLJ Credit.tsc event #2108
+	<FLJ Credit.tsc event #2109
+	<FLJ Credit.tsc event #2110
+	<FLJ Credit.tsc event #2114
+	<FLJ Credit.tsc event #2115
+	<FLJ Credit.tsc event #2119
+	<FLJ Credit.tsc event #2126
+	<FLJ Credit.tsc event #2127
+	<FLJ Credit.tsc event #2131
+	<FLJ Credit.tsc event #2138
+	<FLJ Credit.tsc event #2148
+	<FL- Head.tsc event #0.48
+	<FL+ Head.tsc event #0.49
+	<FLJ Head.tsc event #0/58
+Flag 4026
+	<FLJ Credit.tsc event #2100
+	<FLJ Credit.tsc event #2101
+	<FLJ Credit.tsc event #2102
+	<FLJ Credit.tsc event #2103
+	<FLJ Credit.tsc event #2104
+	<FLJ Credit.tsc event #2105
+	<FLJ Credit.tsc event #2108
+	<FLJ Credit.tsc event #2109
+	<FLJ Credit.tsc event #2110
+	<FLJ Credit.tsc event #2111
+	<FLJ Credit.tsc event #2114
+	<FLJ Credit.tsc event #2115
+	<FLJ Credit.tsc event #2116
+	<FLJ Credit.tsc event #2119
+	<FLJ Credit.tsc event #2120
+	<FLJ Credit.tsc event #2123
+	<FLJ Credit.tsc event #2126
+	<FLJ Credit.tsc event #2127
+	<FLJ Credit.tsc event #2128
+	<FLJ Credit.tsc event #2131
+	<FLJ Credit.tsc event #2132
+	<FLJ Credit.tsc event #2135
+	<FLJ Credit.tsc event #2138
+	<FLJ Credit.tsc event #2139
+	<FLJ Credit.tsc event #2141
+	<FLJ Credit.tsc event #2144
+	<FLJ Credit.tsc event #2148
+	<FLJ Credit.tsc event #2149
+	<FLJ Credit.tsc event #2151
+	<FLJ Credit.tsc event #2154
+	<FLJ Credit.tsc event #2158
+	<FLJ Credit.tsc event #2162
+	<FL- Head.tsc event #0.50
+	<FL+ Head.tsc event #0.51
+	<FLJ Head.tsc event #0/60
+Flag 4027
+	<FLJ Credit.tsc event #2100
+	<FLJ Credit.tsc event #2101
+	<FLJ Credit.tsc event #2102
+	<FLJ Credit.tsc event #2103
+	<FLJ Credit.tsc event #2104
+	<FLJ Credit.tsc event #2105
+	<FLJ Credit.tsc event #2106
+	<FLJ Credit.tsc event #2108
+	<FLJ Credit.tsc event #2109
+	<FLJ Credit.tsc event #2110
+	<FLJ Credit.tsc event #2111
+	<FLJ Credit.tsc event #2112
+	<FLJ Credit.tsc event #2114
+	<FLJ Credit.tsc event #2115
+	<FLJ Credit.tsc event #2116
+	<FLJ Credit.tsc event #2117
+	<FLJ Credit.tsc event #2119
+	<FLJ Credit.tsc event #2120
+	<FLJ Credit.tsc event #2121
+	<FLJ Credit.tsc event #2123
+	<FLJ Credit.tsc event #2124
+	<FLJ Credit.tsc event #2125
+	<FLJ Credit.tsc event #2126
+	<FLJ Credit.tsc event #2127
+	<FLJ Credit.tsc event #2128
+	<FLJ Credit.tsc event #2129
+	<FLJ Credit.tsc event #2131
+	<FLJ Credit.tsc event #2132
+	<FLJ Credit.tsc event #2133
+	<FLJ Credit.tsc event #2135
+	<FLJ Credit.tsc event #2136
+	<FLJ Credit.tsc event #2137
+	<FLJ Credit.tsc event #2138
+	<FLJ Credit.tsc event #2139
+	<FLJ Credit.tsc event #2140
+	<FLJ Credit.tsc event #2141
+	<FLJ Credit.tsc event #2142
+	<FLJ Credit.tsc event #2143
+	<FLJ Credit.tsc event #2144
+	<FLJ Credit.tsc event #2145
+	<FLJ Credit.tsc event #2146
+	<FLJ Credit.tsc event #2147
+	<FLJ Credit.tsc event #2148
+	<FLJ Credit.tsc event #2149
+	<FLJ Credit.tsc event #2150
+	<FLJ Credit.tsc event #2151
+	<FLJ Credit.tsc event #2152
+	<FLJ Credit.tsc event #2153
+	<FLJ Credit.tsc event #2154
+	<FLJ Credit.tsc event #2155
+	<FLJ Credit.tsc event #2156
+	<FLJ Credit.tsc event #2157
+	<FLJ Credit.tsc event #2158
+	<FLJ Credit.tsc event #2159
+	<FLJ Credit.tsc event #2160
+	<FLJ Credit.tsc event #2161
+	<FLJ Credit.tsc event #2162
+	<FLJ Credit.tsc event #2163
+	<FLJ Credit.tsc event #2164
+	<FLJ Credit.tsc event #2165
+	<FLJ Credit.tsc event #2166
+	<FLJ Credit.tsc event #2167
+	<FLJ Credit.tsc event #2168
+	<FLJ Credit.tsc event #2169
+	<FL- Head.tsc event #0.52
+	<FL+ Head.tsc event #0.53
+	<FLJ Head.tsc event #0/62
+Flag 4029
+	<FLJ Head.tsc event #0-70
+	<FL- Head.tsc event #0.54
+	<FL+ Head.tsc event #0/50
+Flag 4031
+	<FLJ Credit.tsc event #e Co
+	<FLJ Head.tsc event #0/40
+	<FL+ Head.tsc event #0/40
+Flag 4032
+	<FLJ Credit.tsc event #e Co
+	<FLJ Head.tsc event #0/40
+	<FL+ Head.tsc event #0/41
+Flag 4033
+	<FLJ Credit.tsc event #e Co
+	<FLJ Head.tsc event #0/40
+	<FL+ Head.tsc event #0/42
+Flag 4034
+	<FLJ Credit.tsc event #e Co
+	<FLJ Head.tsc event #0/40
+	<FL+ Head.tsc event #0/43
+Flag 4035
+	<FLJ Credit.tsc event #e Co
+	<FLJ Head.tsc event #0/40
+	<FL+ Head.tsc event #0/44
+Flag 4036
+	<FLJ Credit.tsc event #e Co
+	<FLJ Credit.tsc event #6701
+	<FLJ Credit.tsc event #6702
+	<FLJ Credit.tsc event #6703
+	<FLJ Credit.tsc event #6704
+	<FLJ Credit.tsc event #6705
+	<FL+ Head.tsc event #0035
+Flag 4100
+	<FL- Head.tsc event #0-00
+	<FL+ Head.tsc event #0-03
+	<FLJ Head.tsc event #0-10
+	<FLJ Head.tsc event #0-11
+	<FLJ Head.tsc event #0-12
+	<FL- Head.tsc event #0-13
+	<FLJ Head.tsc event #0-14
+	<FL+ Head.tsc event #0-14
+	<FLJ Head.tsc event #0-17
+	<FL+ Head.tsc event #0-17
+	<FLJ Head.tsc event #0-20
+	<FLJ Head.tsc event #0-21
+	<FLJ Head.tsc event #0-22
+	<FL- Head.tsc event #0-23
+	<FLJ Head.tsc event #0-24
+	<FL+ Head.tsc event #0-24
+	<FLJ Head.tsc event #0-27
+	<FL+ Head.tsc event #0-27
+	<FLJ Head.tsc event #0-30
+	<FLJ Head.tsc event #0-31
+	<FL- Head.tsc event #0-32
+	<FLJ Head.tsc event #0-40
+	<FLJ Head.tsc event #0-41
+	<FL- Head.tsc event #0-42
+	<FLJ Head.tsc event #0-50
+	<FLJ Head.tsc event #0-51
+	<FL- Head.tsc event #0-52
+	<FLJ Head.tsc event #0-60
+	<FLJ Head.tsc event #0-61
+	<FL- Head.tsc event #0-62
+Flag 4201
+	<FLJ Head.tsc event #0-00
+	<FL+ Head.tsc event #0-02
+	<FL- Head.tsc event #0-03
+	<FLJ Head.tsc event #0.00
+	<FLJ Head.tsc event #0.20
+	<FLJ Head.tsc event #0.40
+	<FL- Head.tsc event #0/00
+	<FL+ Head.tsc event #0/01
+	<FL- Head.tsc event #0/20
+	<FL+ Head.tsc event #0/21
+	<FL- Head.tsc event #0/50
+	<FL+ Head.tsc event #0/51
+Flag 4202
+	<FLJ Head.tsc event #0-10
+	<FL+ Head.tsc event #0-12
+	<FL+ Head.tsc event #0-13
+	<FL- Head.tsc event #0-14
+	<FL- Head.tsc event #0-15
+	<FL- Head.tsc event #0-17
+	<FLJ Head.tsc event #0.02
+	<FLJ Head.tsc event #0.22
+	<FLJ Head.tsc event #0.42
+	<FL- Head.tsc event #0/02
+	<FL+ Head.tsc event #0/03
+	<FL- Head.tsc event #0/22
+	<FL+ Head.tsc event #0/23
+	<FL- Head.tsc event #0/52
+	<FL+ Head.tsc event #0/53
+Flag 4203
+	<FLJ Head.tsc event #0-20
+	<FL+ Head.tsc event #0-22
+	<FL+ Head.tsc event #0-23
+	<FL- Head.tsc event #0-24
+	<FL- Head.tsc event #0-25
+	<FL- Head.tsc event #0-27
+	<FLJ Head.tsc event #0.04
+	<FLJ Head.tsc event #0.24
+	<FLJ Head.tsc event #0.44
+	<FL- Head.tsc event #0/04
+	<FL+ Head.tsc event #0/05
+	<FL- Head.tsc event #0/24
+	<FL+ Head.tsc event #0/25
+	<FL- Head.tsc event #0/54
+	<FL+ Head.tsc event #0/55
+Flag 4204
+	<FLJ Head.tsc event #0-30
+	<FL+ Head.tsc event #0-32
+	<FL- Head.tsc event #0-33
+	<FLJ Head.tsc event #0.06
+	<FLJ Head.tsc event #0.26
+	<FLJ Head.tsc event #0.46
+	<FL- Head.tsc event #0/06
+	<FL+ Head.tsc event #0/07
+	<FL- Head.tsc event #0/26
+	<FL+ Head.tsc event #0/27
+	<FL- Head.tsc event #0/56
+	<FL+ Head.tsc event #0/57
+Flag 4205
+	<FLJ Head.tsc event #0-40
+	<FL+ Head.tsc event #0-42
+	<FL- Head.tsc event #0-43
+	<FLJ Head.tsc event #0.08
+	<FLJ Head.tsc event #0.28
+	<FLJ Head.tsc event #0.48
+	<FL- Head.tsc event #0/08
+	<FL+ Head.tsc event #0/09
+	<FL- Head.tsc event #0/28
+	<FL+ Head.tsc event #0/29
+	<FL- Head.tsc event #0/58
+	<FL+ Head.tsc event #0/59
+Flag 4206
+	<FLJ Head.tsc event #0-50
+	<FL+ Head.tsc event #0-52
+	<FL- Head.tsc event #0-53
+	<FLJ Head.tsc event #0.10
+	<FLJ Head.tsc event #0.30
+	<FLJ Head.tsc event #0.50
+	<FL- Head.tsc event #0/10
+	<FL+ Head.tsc event #0/11
+	<FL- Head.tsc event #0/30
+	<FL+ Head.tsc event #0/31
+	<FL- Head.tsc event #0/60
+	<FL+ Head.tsc event #0/61
+Flag 4207
+	<FLJ Head.tsc event #0-60
+	<FL+ Head.tsc event #0-62
+	<FL- Head.tsc event #0-63
+	<FLJ Head.tsc event #0.12
+	<FLJ Head.tsc event #0.52
+	<FL- Head.tsc event #0/12
+	<FL+ Head.tsc event #0/13
+	<FL- Head.tsc event #0/62
+	<FL+ Head.tsc event #0/63
+Flag 4301
+	<FLJ Head.tsc event #0-00
+	<FLJ Head.tsc event #0-01
+	<FL+ Head.tsc event #0/00
+	<FL+ Head.tsc event #0/50
+	<FL+ Head.tsc event #0012
+	<FL- Head.tsc event #0013
+	<FL+ Head.tsc event #0014
+Flag 4302
+	<FLJ Head.tsc event #0-10
+	<FLJ Head.tsc event #0-11
+	<FL- Head.tsc event #0/00
+	<FL- Head.tsc event #0/50
+	<FL+ Head.tsc event #0012
+	<FL- Head.tsc event #0013
+	<FL- Head.tsc event #0014
+Flag 4303
+	<FLJ Head.tsc event #0-20
+	<FLJ Head.tsc event #0-21
+	<FL- Head.tsc event #0/00
+	<FL- Head.tsc event #0/50
+	<FL- Head.tsc event #0012
+	<FL+ Head.tsc event #0013
+	<FL+ Head.tsc event #0014
+Flag 5001
+	<FLJ ArmsItem.tsc event #5014
+	<FLJ ArmsItem.tsc event #6014
+	<FLJ Credit.tsc event #3200
+	<FLJ Head.tsc event #0021
+	<FL+ Head.tsc event #0021
+Flag 5002
+	<FLJ ArmsItem.tsc event #5014
+	<FLJ ArmsItem.tsc event #6014
+	<FLJ Credit.tsc event #3200
+	<FLJ Head.tsc event #0021
+	<FL+ Head.tsc event #0022
+Flag 5003
+	<FLJ ArmsItem.tsc event #5014
+	<FLJ ArmsItem.tsc event #6014
+	<FLJ Credit.tsc event #3200
+	<FLJ Head.tsc event #0021
+	<FL+ Head.tsc event #0023
+Flag 5004
+	<FLJ ArmsItem.tsc event #5014
+	<FLJ ArmsItem.tsc event #6014
+	<FLJ Credit.tsc event #3200
+	<FLJ Head.tsc event #0021
+	<FL+ Head.tsc event #0024
+Flag 5005
+	<FLJ ArmsItem.tsc event #5014
+	<FLJ ArmsItem.tsc event #6014
+	<FLJ Credit.tsc event #3200
+	<FL+ Head.tsc event #0025
+Flag 5006
+	<FLJ Head.tsc event #0020
+	<FL+ Drain.tsc event #0111
+	<FL- Almond.tsc event #0104
+Flag 6000
+	<FLJ ArmsItem.tsc event #9100
+	<FLJ Cent.tsc event #1301
+	<FLJ Blcny1.tsc event #0300
+Flag 6001
+	<FLJ Cent.tsc event #0371
+	<FLJ Cent.tsc event #0372
+	<FLJ Cent.tsc event #0373
+	<FLJ Cent.tsc event #1303
+	<FLJ Blcny1.tsc event #0300
+	<FLJ Blcny1.tsc event #0302
+	<FLJ Blcny1.tsc event #0303
+	<FLJ Blcny2.tsc event #0120
+Flag 6002
+	<FLJ ArmsItem.tsc event #6005
+	<FLJ Stream.tsc event #1011
+	<FLJ Cent.tsc event #0371
+	<FLJ Cent.tsc event #0372
+	<FLJ Cent.tsc event #0373
+	<FLJ Cent.tsc event #0376
+	<FLJ Cent.tsc event #0377
+	<FLJ Cent.tsc event #1317
+	<FLJ Blcny1.tsc event #0300
+	<FLJ Blcny1.tsc event #0302
+	<FLJ Blcny1.tsc event #0303
+	<FLJ Blcny1.tsc event #0403
+	<FLJ Blcny1.tsc event #0404
+	<FLJ Blcny2.tsc event #0120
+Flag 6003
+	<FLJ ArmsItem.tsc event #9100
+	<FLJ Credit.tsc event #N/A
+	<FLJ Oside.tsc event #0400
+	<FLJ Cent.tsc event #0371
+	<FLJ Cent.tsc event #1300
+Flag 6004
+	<FLJ ArmsItem.tsc event #6005
+	<FLJ Cent.tsc event #0371
+	<FLJ Cent.tsc event #0372
+	<FLJ Cent.tsc event #0373
+	<FLJ Cent.tsc event #0376
+	<FLJ Cent.tsc event #0377
+	<FLJ Cent.tsc event #0378
+	<FLJ Blcny1.tsc event #0300
+	<FLJ Blcny1.tsc event #0302
+	<FLJ Blcny1.tsc event #0303
+	<FLJ Blcny1.tsc event #0403
+	<FLJ Blcny1.tsc event #0404
+	<FLJ Blcny1.tsc event #0516
+	<FLJ Blcny1.tsc event #0517
+Flag 6100
+	<FLJ ArmsItem.tsc event #8000
+	<FL+ Barr.tsc event #0402
+	<FLJ Cent.tsc event #1303
+	<FLJ Blcny1.tsc event #0501
+Flag 6101
+	<FLJ ArmsItem.tsc event #8001
+	<FL+ Eggs.tsc event #0503
+	<FLJ Cent.tsc event #1304
+	<FLJ Blcny1.tsc event #0502
+Flag 6102
+	<FLJ ArmsItem.tsc event #8002
+	<FL+ Malco.tsc event #0203
+	<FLJ Cent.tsc event #1305
+	<FLJ Blcny1.tsc event #0503
+Flag 6103
+	<FLJ ArmsItem.tsc event #8003
+	<FL+ Frog.tsc event #1000
+	<FLJ Cent.tsc event #1306
+	<FLJ Blcny1.tsc event #0504
+Flag 6104
+	<FLJ ArmsItem.tsc event #8004
+	<FL+ Sand.tsc event #0210
+	<FLJ Cent.tsc event #1307
+	<FLJ Blcny1.tsc event #0505
+Flag 6105
+	<FLJ ArmsItem.tsc event #8005
+	<FL+ Gard.tsc event #0503
+	<FLJ Cent.tsc event #1308
+	<FLJ Blcny1.tsc event #0506
+Flag 6106
+	<FLJ ArmsItem.tsc event #8006
+	<FL+ MazeW.tsc event #1000
+	<FLJ Cent.tsc event #1309
+	<FLJ Blcny1.tsc event #0507
+Flag 6107
+	<FLJ ArmsItem.tsc event #8007
+	<FL+ MazeS.tsc event #0310
+	<FLJ Cent.tsc event #1310
+	<FLJ Blcny1.tsc event #0508
+Flag 6108
+	<FLJ ArmsItem.tsc event #8008
+	<FL+ Almond.tsc event #1000
+	<FLJ Oside.tsc event #0401
+	<FLJ Cent.tsc event #1311
+	<FLJ Blcny1.tsc event #0509
+Flag 6109
+	<FLJ ArmsItem.tsc event #8009
+	AppearWhenFlagSet Pool.pxe entity 16 (Debug Cat)
+	<FL+ Stream.tsc event #1000
+	<FLJ Cent.tsc event #1312
+	<FLJ Blcny1.tsc event #0510
+	<FLJ Pixel.tsc event #0094
+Flag 6110
+	<FLJ ArmsItem.tsc event #8010
+	<FLJ EggR2.tsc event #0094
+	<FLJ EggR2.tsc event #0350
+	<FL+ EggR2.tsc event #1000
+	<FLJ Cent.tsc event #1313
+	<FLJ Blcny1.tsc event #0511
+Flag 6111
+	<FLJ ArmsItem.tsc event #8011
+	<FLJ Blcny1.tsc event #0512
+	<FLJ Priso2.tsc event #0099
+	<FL+ Priso2.tsc event #0250
+	HideWhenFlagSet Priso2.pxe entity 31 (Red Demon (boss))
+	HideWhenFlagSet Priso2.pxe entity 98 (H/V Trigger)
+	HideWhenFlagSet Priso2.pxe entity 99 (H/V Trigger)
+Flag 6112
+	<FLJ ArmsItem.tsc event #8012
+	<FL+ Curly.tsc event #0400
+	<FLJ Cent.tsc event #1314
+	<FLJ Blcny1.tsc event #0513
+Flag 6113
+	<FLJ ArmsItem.tsc event #8013
+	<FL+ MazeD.tsc event #0300
+	<FLJ Cent.tsc event #1315
+	<FLJ Blcny1.tsc event #0514
+Flag 6114
+	<FLJ ArmsItem.tsc event #8014
+	<FLJ Cent.tsc event #1316
+	<FLJ Blcny1.tsc event #0515
+	<FL+ Mapi.tsc event #0500
+Flag 6200
+	<FLJ Stream.tsc event #1004
+Flag 6201
+	<FLJ CurlyS.tsc event #0500
+	<FLJ Jenka1.tsc event #0500
+	<FLJ Jenka2.tsc event #0500
+Flag 6202
+	<FLJ CurlyS.tsc event #0500
+	<FLJ Jenka1.tsc event #0500
+	<FLJ Jenka2.tsc event #0500
+	<FLJ MazeO.tsc event #0090
+	<FLJ MazeO.tsc event #0091
+	<FLJ MazeO.tsc event #0092
+	<FLJ MazeO.tsc event #0093
+	<FLJ MazeO.tsc event #0094
+	<FLJ MazeO.tsc event #0098
+	<FLJ MazeB.tsc event #0090
+	<FLJ MazeB.tsc event #0091
+	<FLJ MazeB.tsc event #0092
+	<FLJ MazeB.tsc event #0093
+	<FLJ MazeB.tsc event #0094
+	<FLJ MazeB.tsc event #0098
+	<FLJ MazeB.tsc event #0099
+Flag 6300
+	<FL+ Stream.tsc event #1004
+Flag 6400
+	<FLJ Cent.tsc event #0150
+Flag 7000
+	<FLJ Credit.tsc event #ar S
+	<FL+ Head.tsc event #0002
+Flag 7001
+	<FLJ Credit.tsc event #ar S
+	<FL+ Head.tsc event #0003
+Flag 7002
+	<FL+ Head.tsc event #0004
+Flag 7003
+	<FLJ Credit.tsc event #4700
+	<FL+ Head.tsc event #0005
+Flag 7004
+	<FLJ Credit.tsc event #er
+
+	<FL+ Head.tsc event #0007
+Flag 7005
+	<FLJ Credit.tsc event #3800
+	<FL+ Head.tsc event #0008
+Flag 7006
+	<FLJ Credit.tsc event #ade
+	<FL+ Head.tsc event #0009
+Flag 7007
+	<FLJ Credit.tsc event #4900
+	<FL+ Head.tsc event #0010
+Flag 7008
+	<FLJ Credit.tsc event #e La
+	<FL+ Head.tsc event #0030
+	<FL+ Head.tsc event #0035
+Flag 7009
+	<FLJ Credit.tsc event #e La
+	<FLJ Credit.tsc event #e Co
+	<FL+ Head.tsc event #0034
+Flag 7100
+	<FLJ Credit.tsc event #3000
+	<FL+ Head.tsc event #0051
+Flag 7101
+	<FLJ Credit.tsc event #3500
+	<FL+ Head.tsc event #0052
+Flag 7102
+	<FLJ Credit.tsc event #4000
+	<FL+ Head.tsc event #0053
+Flag 7103
+	<FLJ Credit.tsc event #ver 
+	<FL+ Head.tsc event #0054
+Flag 7104
+	<FL+ Head.tsc event #0055
+Flag 7105
+	<FLJ Credit.tsc event #4100
+	<FL+ Head.tsc event #0057
+Flag 7106
+	<FLJ Credit.tsc event #lyFi
+	<FL+ Head.tsc event #0058
+Flag 7107
+	<FLJ Credit.tsc event #5000
+	<FL+ Head.tsc event #0059
+Flag 7108
+	<FLJ Credit.tsc event #6000
+	<FL+ Head.tsc event #0060
+Flag 7109
+	<FLJ Credit.tsc event #6100
+	<FL+ Head.tsc event #0061
+Flag 7110
+	<FL+ Head.tsc event #0062
+Flag 7111
+	<FLJ Credit.tsc event #8100
+	<FL+ Head.tsc event #0063
+Flag 7113
+	<FLJ Credit.tsc event #4200
+	<FL+ Head.tsc event #0065
+Flag 7114
+	<FL+ Head.tsc event #0066
+Flag 7115
+	<FLJ Credit.tsc event #inic
+	<FL+ Head.tsc event #0067
+Flag 7116
+	<FLJ Credit.tsc event #3400
+	<FL+ Head.tsc event #0068
+Flag 7117
+	<FLJ Credit.tsc event #7400
+	<FL+ Head.tsc event #0069
+Flag 7118
+	<FLJ Credit.tsc event #6400
+	<FL+ Head.tsc event #0070
+Flag 7119
+	<FLJ Credit.tsc event #y's 
+	<FL+ Head.tsc event #0071
+Flag 7120
+	<FLJ Credit.tsc event #8300
+	<FL+ Head.tsc event #0072
+Flag 7121
+	<FLJ Credit.tsc event #3400
+	<FL+ Head.tsc event #0073
+Flag 7122
+	<FLJ Credit.tsc event #4400
+	<FL+ Head.tsc event #0074
+Flag 7123
+	<FLJ Credit.tsc event #epor
+	<FL+ Head.tsc event #0075
+Flag 7124
+	<FLJ Credit.tsc event #5200
+	<FL+ Head.tsc event #0076
+Flag 7125
+	<FLJ Credit.tsc event #ler
+	<FL+ Head.tsc event #0077
+Flag 7126
+	<FLJ Credit.tsc event #er
+
+	<FL+ Head.tsc event #0078
+Flag 7127
+	<FLJ Credit.tsc event #er
+
+	<FL+ Head.tsc event #0079
+Flag 7128
+	<FLJ Credit.tsc event #4300
+	<FL+ Head.tsc event #0080
+Flag 7129
+	<FL+ Head.tsc event #0081
+Flag 7130
+	<FL+ Head.tsc event #0082
+Flag 7131
+	<FLJ Credit.tsc event #5300
+	<FL+ Head.tsc event #0083
+Flag 7132
+	<FLJ Credit.tsc event #6300
+	<FL+ Head.tsc event #0084
+Flag 7133
+	<FLJ Credit.tsc event #7500
+	<FL+ Head.tsc event #0085
+Flag 7134
+	<FL+ Head.tsc event #0086
+Flag 7135
+	<FLJ Credit.tsc event #6500
+	<FL+ Head.tsc event #0087
+Flag 7136
+	<FLJ Credit.tsc event # Sta
+	<FL+ Head.tsc event #0088
+Flag 7137
+	<FLJ Credit.tsc event #7300
+	<FL+ Head.tsc event #0089
+Flag 7999
+	<FL- Head.tsc event #0.54
+	<FL+ Head.tsc event #0.54
+	<FLJ Head.tsc event #0000
+	<FL+ Head.tsc event #0000
+	<FL- Head.tsc event #0016
+	<FL+ Head.tsc event #0016
