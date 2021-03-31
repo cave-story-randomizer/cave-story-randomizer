@@ -1,3 +1,34 @@
-offset 416A15
+offset 4169EB
 
-JMP 416A52
+#define
+GetNPCFlag=40E930
+StartTextScript=421990
+
+setDeathCond=416A52
+computeAirGet=416A65
+
+gMC.air=49E6DC
+#enddefine
+
+PUSH 0FA0 ; 4000
+CALL GetNPCFlag
+POP ECX
+
+TEST EAX,EAX ; if (GetNPCFlag(4000))
+JE :drown
+
+:core
+PUSH 44C ; 1100
+CALL StartTextScript
+POP ECX
+
+MOV [gMC.air], 3E8 ; gMC.air = 1000
+
+JMP computeAirGet
+
+:drown
+PUSH 29 ; 41
+CALL StartTextScript
+POP ECX
+
+JMP setDeathCond
