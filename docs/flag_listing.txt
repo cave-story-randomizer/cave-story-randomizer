@@ -2318,27 +2318,27 @@ Flag 4029
 	<FL- Head.tsc event #0.54
 	<FL+ Head.tsc event #0/50
 Flag 4031
-	<FLJ Credit.tsc event #e Co
+	<FLJ Credit.tsc event #6700
 	<FLJ Head.tsc event #0/40
 	<FL+ Head.tsc event #0/40
 Flag 4032
-	<FLJ Credit.tsc event #e Co
+	<FLJ Credit.tsc event #6700
 	<FLJ Head.tsc event #0/40
 	<FL+ Head.tsc event #0/41
 Flag 4033
-	<FLJ Credit.tsc event #e Co
+	<FLJ Credit.tsc event #6700
 	<FLJ Head.tsc event #0/40
 	<FL+ Head.tsc event #0/42
 Flag 4034
-	<FLJ Credit.tsc event #e Co
+	<FLJ Credit.tsc event #6700
 	<FLJ Head.tsc event #0/40
 	<FL+ Head.tsc event #0/43
 Flag 4035
-	<FLJ Credit.tsc event #e Co
+	<FLJ Credit.tsc event #6700
 	<FLJ Head.tsc event #0/40
 	<FL+ Head.tsc event #0/44
 Flag 4036
-	<FLJ Credit.tsc event #e Co
+	<FLJ Credit.tsc event #6700
 	<FLJ Credit.tsc event #6701
 	<FLJ Credit.tsc event #6702
 	<FLJ Credit.tsc event #6703
@@ -2687,10 +2687,10 @@ Flag 6300
 Flag 6400
 	<FLJ Cent.tsc event #0150
 Flag 7000
-	<FLJ Credit.tsc event #ar S
+	<FLJ Credit.tsc event #3600
 	<FL+ Head.tsc event #0002
 Flag 7001
-	<FLJ Credit.tsc event #ar S
+	<FLJ Credit.tsc event #3600
 	<FL+ Head.tsc event #0003
 Flag 7002
 	<FL+ Head.tsc event #0004
@@ -2698,25 +2698,24 @@ Flag 7003
 	<FLJ Credit.tsc event #4700
 	<FL+ Head.tsc event #0005
 Flag 7004
-	<FLJ Credit.tsc event #er
-
+	<FLJ Credit.tsc event #3900
 	<FL+ Head.tsc event #0007
 Flag 7005
 	<FLJ Credit.tsc event #3800
 	<FL+ Head.tsc event #0008
 Flag 7006
-	<FLJ Credit.tsc event #ade
+	<FLJ Credit.tsc event #4800
 	<FL+ Head.tsc event #0009
 Flag 7007
 	<FLJ Credit.tsc event #4900
 	<FL+ Head.tsc event #0010
 Flag 7008
-	<FLJ Credit.tsc event #e La
+	<FLJ Credit.tsc event #3700
 	<FL+ Head.tsc event #0030
 	<FL+ Head.tsc event #0035
 Flag 7009
-	<FLJ Credit.tsc event #e La
-	<FLJ Credit.tsc event #e Co
+	<FLJ Credit.tsc event #3700
+	<FLJ Credit.tsc event #6600
 	<FL+ Head.tsc event #0034
 Flag 7100
 	<FLJ Credit.tsc event #3000
@@ -2728,7 +2727,7 @@ Flag 7102
 	<FLJ Credit.tsc event #4000
 	<FL+ Head.tsc event #0053
 Flag 7103
-	<FLJ Credit.tsc event #ver 
+	<FLJ Credit.tsc event #3100
 	<FL+ Head.tsc event #0054
 Flag 7104
 	<FL+ Head.tsc event #0055
@@ -2736,7 +2735,7 @@ Flag 7105
 	<FLJ Credit.tsc event #4100
 	<FL+ Head.tsc event #0057
 Flag 7106
-	<FLJ Credit.tsc event #lyFi
+	<FLJ Credit.tsc event #5100
 	<FL+ Head.tsc event #0058
 Flag 7107
 	<FLJ Credit.tsc event #5000
@@ -2758,7 +2757,7 @@ Flag 7113
 Flag 7114
 	<FL+ Head.tsc event #0066
 Flag 7115
-	<FLJ Credit.tsc event #inic
+	<FLJ Credit.tsc event #7000
 	<FL+ Head.tsc event #0067
 Flag 7116
 	<FLJ Credit.tsc event #3400
@@ -2770,7 +2769,7 @@ Flag 7118
 	<FLJ Credit.tsc event #6400
 	<FL+ Head.tsc event #0070
 Flag 7119
-	<FLJ Credit.tsc event #y's 
+	<FLJ Credit.tsc event #5400
 	<FL+ Head.tsc event #0071
 Flag 7120
 	<FLJ Credit.tsc event #8300
@@ -2782,21 +2781,19 @@ Flag 7122
 	<FLJ Credit.tsc event #4400
 	<FL+ Head.tsc event #0074
 Flag 7123
-	<FLJ Credit.tsc event #epor
+	<FLJ Credit.tsc event #8000
 	<FL+ Head.tsc event #0075
 Flag 7124
 	<FLJ Credit.tsc event #5200
 	<FL+ Head.tsc event #0076
 Flag 7125
-	<FLJ Credit.tsc event #ler
+	<FLJ Credit.tsc event #6200
 	<FL+ Head.tsc event #0077
 Flag 7126
-	<FLJ Credit.tsc event #er
-
+	<FLJ Credit.tsc event #7200
 	<FL+ Head.tsc event #0078
 Flag 7127
-	<FLJ Credit.tsc event #er
-
+	<FLJ Credit.tsc event #8200
 	<FL+ Head.tsc event #0079
 Flag 7128
 	<FLJ Credit.tsc event #4300
@@ -2820,7 +2817,7 @@ Flag 7135
 	<FLJ Credit.tsc event #6500
 	<FL+ Head.tsc event #0087
 Flag 7136
-	<FLJ Credit.tsc event # Sta
+	<FLJ Credit.tsc event #8400
 	<FL+ Head.tsc event #0088
 Flag 7137
 	<FLJ Credit.tsc event #7300
