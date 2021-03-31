@@ -495,7 +495,8 @@ function C:unplacedString()
   return s
 end
 
-local function _hint(message, l)
+local function _hint(message, l, ending)
+  ending = ending or "<END"
   local MSGBOXLIMIT = 35
   local PATTERN = " [^ ]*$"
   local line1, line2, line3 = "", "", ""
@@ -517,7 +518,7 @@ local function _hint(message, l)
     end
   end
 
-  local s = "<PRI<MSG<TUR" .. line1 .. line2 .. line3 .. "<NOD<END"
+  local s = "<PRI<MSG<TUR" .. line1 .. line2 .. line3 .. "<NOD" .. ending
 
   return {
     name = ("%q [%s] [%s]"):format(message, l.item.name, l.name),
@@ -527,7 +528,7 @@ local function _hint(message, l)
   }
 end
 
-function C:createHint(l)
+function C:createHint(l, ending)
   local function pick(t) return t[love.math.random(#t)] end
 
   local location, item = l:getHint()
@@ -535,11 +536,11 @@ function C:createHint(l)
   local mids = {" can be found ", " is ", " is hidden "}
   local message = (pick(starts) or "") .. (pick(item) or "") .. (pick(mids) or "") .. (pick(location) or "") .. "."
 
-  return _hint(message, l)
+  return _hint(message, l, ending)
 end
 
-function C:prebuiltHint(l)
-  return _hint(l:getPrebuiltHint(), l)
+function C:prebuiltHint(l, ending)
+  return _hint(l:getPrebuiltHint(), l, ending)
 end
   
 return C
