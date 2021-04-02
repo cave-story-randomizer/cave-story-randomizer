@@ -4,7 +4,7 @@ offset 40cf90
 count=EBP-4
 Strip_addr=0049D628
 Credit.mode=49D620
-MAX_STRIP=7F
+MAX_STRIP=40
 size=50
 
 Strip.flag=EAX

@@ -2,8 +2,8 @@ offset 40D010
 
 #define
 ; Constants
-MAX_STRIP=7F
-MAX_STRIPx10=7f0
+MAX_STRIP=40
+MAX_STRIPx10=400
 size=50
 
 ; Locals

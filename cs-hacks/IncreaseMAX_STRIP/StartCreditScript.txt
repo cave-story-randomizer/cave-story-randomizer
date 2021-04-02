@@ -2,8 +2,8 @@ offset 40d440
 
 #define
 ; Constants
-MAX_STRIP=7F
-fullsize=27b0 ; 0x50 * 0x7f
+MAX_STRIP=40
+size=50
 
 ; Locals
 path=EBP-108
@@ -30,6 +30,7 @@ ReloadBitmapFile=0040BFD0
 ___security_cookie=498b20
 __security_check_cookie=00480dc1
 _malloc=004813a3
+_calloc=00487701
 _free=0048128B
 _memset=00480d30
 _sprintf=00481010
@@ -138,11 +139,11 @@ add esp, 20 ; 00000020H
 test eax, eax
 je SHORT :$LN8@StartCredi
 ; Line 297
-push fullsize
-push esi
-push [Strip_addr]
-call _memset
-add esp, 0c ; 0000000cH
+push size
+push MAX_STRIP
+call _calloc
+add ESP,8
+mov [Strip_addr],EAX
 ; Line 298
 mov eax, edi
 jmp :$LN1@StartCredi

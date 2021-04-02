@@ -2,7 +2,7 @@ offset 40d150
 
 #define
 ; Constants
-MAX_STRIP=7F
+MAX_STRIP=40
 size=50
 
 ; Locals

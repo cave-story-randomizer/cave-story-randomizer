@@ -2,7 +2,7 @@ offset 40d240
 
 #define
 ; Constants
-MAX_STRIPx10=7F0
+MAX_STRIPx10=400
 
 ; Locals
 ArrayPad = EBP-4
