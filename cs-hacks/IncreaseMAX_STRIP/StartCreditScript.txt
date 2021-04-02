@@ -139,6 +139,15 @@ add esp, 20 ; 00000020H
 test eax, eax
 je SHORT :$LN8@StartCredi
 ; Line 297
+mov eax, [Strip_addr]
+test eax, eax
+je :blah
+
+push eax
+call _free
+pop ecx
+
+:blah
 push size
 push MAX_STRIP
 call _calloc
