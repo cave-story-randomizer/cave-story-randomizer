@@ -1,0 +1,36 @@
+offset 414b50
+
+PUSH EBP
+MOV EBP, ESP
+
+PUSH 0B4
+PUSH 0
+PUSH 0049E638
+CALL 00480D30
+ADD ESP,0C ; memset(&gMC, 0, sizeof(MYCHAR))
+
+MOV BYTE [49E638],80 ; gMC.cond = 0x80
+MOV [49E640],2 ; gMC.direct = 2
+
+MOV EAX,1000
+MOV [49E694],EAX ; gMC.view.back =   8 * 0x200
+MOV [49E690],EAX ; gMC.view.top =    8 * 0x200
+MOV [49E68C],EAX ; gMC.view.front =  8 * 0x200
+MOV [49E698],EAX ; gMC.view.bottom = 8 * 0x200
+
+MOV ECX,0A00
+MOV [49E684],ECX ; gMC.hit.back =   5 * 0x200
+MOV [49E680],EAX ; gMC.hit.top =    8 * 0x200
+MOV [49E67C],ECX ; gMC.hit.front =  5 * 0x200
+MOV [49e688],EAX ; gMC.hit.bottom = 8 * 0x200
+
+MOV WORD [49E6CC],3 ; gMC.life = 3
+MOV WORD [49E6D0],3 ; gMC.max_life = 3
+MOV [49E64C],0      ; gMC.unit = 0
+
+MOV [49E6DC],3E8 ; gMC.air = 1000
+
+POP EBP
+RETN
+INT3
+
