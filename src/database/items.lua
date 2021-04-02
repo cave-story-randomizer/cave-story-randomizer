@@ -413,6 +413,21 @@ local function _itemData()
     obj100Percent = objective("100%", "<FL+6004<IT+0005")
   }
 
+  local array = {}
+  for k, t in pairs(data) do
+    t.key = k
+    t.placed = t.placed or false
+    t.attributes = t.attributes or {}
+    table.insert(t.attributes, k)
+    table.insert(array, t)
+
+    initializeHints(t)
+  end
+
+  return array
+end
+
+local function initializeHints(item)
   local hintArray = {
     --mandatory = {"a required item"},
     puppy = {"a puppy", "a living being"},
@@ -425,26 +440,15 @@ local function _itemData()
     missileLauncher = {"a Missile upgrade"}
   }
 
-  local array = {}
-  for k, t in pairs(data) do
-    t.key = k
-    t.placed = t.placed or false
-    t.attributes = t.attributes or {}
-    table.insert(t.attributes, k)
-    table.insert(array, t)
+  item.hints = item.hints or {} -- initialize item's hints array if not already
 
-    t.hints = t.hints or {}
-    for k,v in ipairs(t.attributes) do
-      for k2,v2 in ipairs(hintArray[v] or {}) do
-        table.insert(t.hints, v2)
-      end
+  -- loop through item's attributes and add any matching hints from the hintArray table
+  for k,v in ipairs(t.attributes) do
+    for k2,v2 in ipairs(hintArray[v] or {}) do
+      table.insert(t.hints, v2)
     end
   end
-
-  return array
 end
-
-
 
 local C = Class:extend()
 

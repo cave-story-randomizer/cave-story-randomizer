@@ -2,7 +2,7 @@ offset 40d3e0
 
 #define
 size=50
-MAX_STRIP=7F
+MAX_STRIP=40
 Strip_addr=0049d628
 #enddefine
 
@@ -21,14 +21,15 @@ PUSH 0
 PUSH 0049D628
 CALL 00480D30
 ADD ESP,0C
-*/
 
 PUSH size
 PUSH MAX_STRIP
 CALL 00487701
 ADD ESP,8
 MOV [Strip_addr],EAX
-
+*/
+XOR EAX,EAX
+MOV [Strip_addr],EAX
 
 POP EBP
 RETN

@@ -477,8 +477,8 @@ function hintRegion:new(worldGraph)
     mrsLittle = Location("Mrs. Little", "Little", "0212", self),
     malco = Location("MALCO", "Malco", "0306", self),
     jenka = Location("Jenka", "Jenka1", "0201", self),
-    numahachi1 = Location("Numahachi 1", "Statue", "0300", self),
-    numahachi2 = Location("Numahachi 2", "Statue", "0301", self)
+    numahachi1 = Location("Numahachi 1", "Statue", "0301", self),
+    numahachi2 = Location("Numahachi 2", "Statue", "0302", self)
   }
 
   -- they'll appear as filled so they get left out of the regular hints
@@ -546,11 +546,18 @@ function worldGraph:Camp() return self.spawn == "Camp" end
 
 function worldGraph:getSpawnScript()
   local initialHPCounter = "<FL+4011<FL+4012" -- initializes the HP counter to 3 HP
-  local mapFlags = "<MP+0040<MP+0043" -- Camp and Labyrinth B
-  if self:StartPoint() then return initialHPCounter .. mapFlags .. "<FL+6200<EVE0091" end
-  local earlyGameFlags = "<FL+0301<FL+0302<FL+1641<FL+1642<FL+0320<FL+0321"
-  if self:Arthur() then return initialHPCounter .. mapFlags .. "<FL+6201" .. earlyGameFlags .. "<TRA0001:0094:0008:0004" end
-  if self:Camp() then return initialHPCounter .. mapFlags .. "<FL+6202" .. earlyGameFlags .. "<TRA0040:0094:0014:0009" end
+  local mapFlagsCMP = "<MP+0040<MP+0043" -- Camp and Labyrinth B
+  local mapFlagsSoftlock = "<MP+0032<MP+0033<MP+0036" -- Small Room (Curly), Jenka's House (both)
+
+  local baseStartScript = initialHPCounter .. mapFlagsCMP .. mapFlagsSoftlock -- TODO: remove mapFlagsSoftlock when playing ER
+
+  if self:StartPoint() then return baseStartScript .. "<FL+6200<EVE0091" end
+
+  local earlyGameFlags = "<FL+0301<FL+0302<FL+1641<FL+1642<FL+0320<FL+0321" -- flags set during first cave in normal gameplay
+  baseStartScript = baseStartScript .. earlyGameFlags
+
+  if self:Arthur() then return baseStartScript .. "<FL+6201<TRA0001:0094:0008:0004" end
+  if self:Camp() then return baseStartScript .. "<FL+6202<TRA0040:0094:0014:0009" end
 end
 
 function worldGraph:getLocations()
