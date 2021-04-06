@@ -47,6 +47,7 @@ function C:new()
   self.sharecode = ""
   self.mychar = ""
   self.shuffleMusic = false
+  self.completableLogic = true
 end
 
 function C:setPath(path)
@@ -194,7 +195,9 @@ function C:_shuffleItems(tscFiles)
   end
   
   -- next fill hell chests, which cannot have mandatory items
-  self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
+  if not self.completableLogic then
+    self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
+  end
 
   -- add map system AFTER filling hell chests so that it gets placed somewhere accessible in every objective
   optional = _.append(optional, self.itemDeck:getByKey("mapSystem"))
@@ -225,8 +228,15 @@ function C:_fillItems(items, locations)
   repeat
     local item = _.pop(itemsLeft)
     local assumed = self.worldGraph:collect(itemsLeft)
+
+    local filter = function(k,v) return not v:hasItem() and v:canAccess(assumed) end
+
+    if self.completableLogic and self.worldGraph:canBeatGame(assumed) then
+      filter = function(k,v) return not v:hasItem() end
+    end
+
+    local fillable = _.filter(locations, filter)
     
-    local fillable = _.filter(locations, function(k,v) return not v:hasItem() and v:canAccess(assumed) end)
     if #fillable > 0 then
       logDebug(("Placing %s at %s"):format(item.name, fillable[1].name))
       fillable[1]:setItem(item)
@@ -356,6 +366,7 @@ function C:_updateSettings()
   Settings.settings.musicBeta = self.music.betaEnabled
   Settings.settings.musicFlavor = self.music.flavor
   Settings.settings.noFallingBlocks = self.worldGraph.noFallingBlocks
+  Settings.settings.completableLogic = self.completableLogic
   Settings:update()
 end
 

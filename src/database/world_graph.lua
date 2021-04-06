@@ -457,7 +457,7 @@ function endgame:new(worldGraph)
   self.locations.hellB3.getPrebuiltHint = prebuilt
 
   self.requirements = function(self, items)
-    return _has(items, "eventSue") and _has(items, "ironBond") and self.world.regions.lastCave:canAccess(items)
+    return self.world:canBeatGame(items)
   end
 end
 
@@ -558,6 +558,39 @@ function worldGraph:getSpawnScript()
 
   if self:Arthur() then return baseStartScript .. "<FL+6201<TRA0001:0094:0008:0004" end
   if self:Camp() then return baseStartScript .. "<FL+6202<TRA0040:0094:0014:0009" end
+end
+
+function worldGraph:canBeatGame(items, obj)
+  if obj == "objBadEnd" then
+
+  end
+  local function normalReqs(self, items) return _has(items, "eventRocket") and _has(items, "eventSue") and self.regions.plantation:canAccess(items) end
+  if obj == "objNormalEnd" then return normalReqs(self, items) end
+
+  local function bestReqs(self, items) return normalReqs(self, items) and _has(items, "ironBond") and _count(items, "booster", 2) end
+  if obj == "objBestEnd" then return bestReqs(self, items) end
+
+  local function bossReqs(self, items)
+    if not (bestReqs(self, items) and _has(items, "weaponBoss")) then return false end
+    -- Igor, Balrog 1, Balrog 3, Core, Sisters
+    if not (_has(items, "eventSue") and _has(items, "eventToroko") and _has(items, "eventCore")) then return false end
+    -- Balrog 2, Balfrog
+    if not (_has(items, "rustyKey") and _has(items, "gumKey") and self.regions.grasstownEast:canAccess(items)) then return false end
+    -- Curly, Omega
+    if not (self.regions.upperSandZone:canAccess(items)) then return false end
+    -- Toroko+
+    if not self.regions.lowerSandZone.king:canAccess(items) then return false end
+    -- Puu Black, Monster X
+    if not (self.regions.labyrinthW:canAccess(items) and _has(items, "clinicKey")) then return false end
+    -- Ironhead
+    if not self.regions.waterway:canAccess(items) then return false end
+    -- Ma Pignon
+    if not self.regions.mimigaVillage.maPignon:canAccess(items) then return false end
+    -- Remaining bosses are all covered by the normal requirements
+    return true
+  end
+  if obj == "objAllBosses" then return bossReqs(self, items) end
+  return false -- removing ANY items from 100% makes a seed uncompletable
 end
 
 function worldGraph:getLocations()

@@ -40,6 +40,7 @@ function C:getDefaults()
     musicBeta = false,
     musicFlavor = "Shuffle",
     noFallingBlocks = false,
+    completableLogic = true, --TODO: MAKE FALSE BY DEFAULT AFTER TESTING
     csversion = 0
   }
 end
@@ -71,6 +72,7 @@ function C:serialize()
   line = line .. tab .. ("musicBeta = %s,\r\n"):format(self.settings.musicBeta)
   line = line .. tab .. ("musicFlavor = %q,\r\n"):format(self.settings.musicFlavor)
   line = line .. tab .. ("noFallingBlocks = %s,\r\n"):format(self.settings.noFallingBlocks)
+  line = line .. tab .. ("completableLogic = %s,\r\n"):format(self.settings.completableLogic)
   line = line .. tab .. ("csversion = %s,\r\n"):format(self.settings.csversion)
   
   return line .. "}"

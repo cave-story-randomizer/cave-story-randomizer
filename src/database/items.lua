@@ -413,6 +413,29 @@ local function _itemData()
     obj100Percent = objective("100%", "<FL+6004<IT+0005")
   }
 
+  local function initializeHints(item)
+    local hintArray = {
+      --mandatory = {"a required item"},
+      puppy = {"a puppy", "a living being"},
+      --helpful = {"a helpful item"},
+      --useless = {"a useless item"},
+      weapon = {"a weapon"},
+      --weaponSN = {"a weapon that breaks blocks"},
+      --weaponStrong = {"a strong weapon"},
+      flight = {"a method of flight", "flight"},
+      missileLauncher = {"a Missile upgrade"}
+    }
+  
+    item.hints = item.hints or {} -- initialize item's hints array if not already
+  
+    -- loop through item's attributes and add any matching hints from the hintArray table
+    for k,v in ipairs(item.attributes) do
+      for k2,v2 in ipairs(hintArray[v] or {}) do
+        table.insert(item.hints, v2)
+      end
+    end
+  end
+
   local array = {}
   for k, t in pairs(data) do
     t.key = k
@@ -425,29 +448,6 @@ local function _itemData()
   end
 
   return array
-end
-
-local function initializeHints(item)
-  local hintArray = {
-    --mandatory = {"a required item"},
-    puppy = {"a puppy", "a living being"},
-    --helpful = {"a helpful item"},
-    --useless = {"a useless item"},
-    weapon = {"a weapon"},
-    --weaponSN = {"a weapon that breaks blocks"},
-    --weaponStrong = {"a strong weapon"},
-    flight = {"a method of flight", "flight"},
-    missileLauncher = {"a Missile upgrade"}
-  }
-
-  item.hints = item.hints or {} -- initialize item's hints array if not already
-
-  -- loop through item's attributes and add any matching hints from the hintArray table
-  for k,v in ipairs(t.attributes) do
-    for k2,v2 in ipairs(hintArray[v] or {}) do
-      table.insert(t.hints, v2)
-    end
-  end
 end
 
 local C = Class:extend()
