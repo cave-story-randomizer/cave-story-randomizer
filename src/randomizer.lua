@@ -286,8 +286,18 @@ function C:_copyMyChar()
 end
 
 function C:_generateHash()
+  local serialized = self.worldGraph:serialize():concat()
+  local hashed = ld.encode('string', 'hex', ld.hash('sha256', serialized))
+  hashed = tonumber(hashed:sub(-8,  -1), 16)
+  hashed = hashed % (39^5)
+  
+  local h = {}
+  for i=1,5 do
+    h:insert((hashed%39)+1)
+    hashed = math.floor(hashed / 39)
+  end
+
   local path = self:_getWritePath() .. '/hash.txt'
-  local h = {love.math.random(39), love.math.random(39), love.math.random(39), love.math.random(39), love.math.random(39)}
   U.writeFile(path, ("%04d,%04d,%04d,%04d,%04d"):format(h[1], h[2], h[3], h[4], h[5]))
   return h
 end
