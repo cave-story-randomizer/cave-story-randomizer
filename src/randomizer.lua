@@ -48,6 +48,7 @@ function C:new()
   self.mychar = ""
   self.shuffleMusic = false
   self.completableLogic = true
+  self.spheres = {}
 end
 
 function C:setPath(path)
@@ -77,7 +78,7 @@ function C:randomize()
   self:_generateHash()
   if self.shuffleMusic then self.music:shuffleMusic(tscFiles) end
 
-  self:_analyzeSpheres()
+  self:_logSpheres()
   self:_generateRoute()
 
   self:_writeModifiedData(tscFiles)
@@ -259,29 +260,54 @@ function C:_fastFillItems(items, locations)
   end
 end
 
-function C:_analyzeSpheres()
-  local spheres = {}
+function C:_analyzeSpheres(forceUpdate)
+  if not forceUpdate and #self.spheres > 0 then
+    return self.spheres
+  end
+  self.spheres = {}
+
   local items = {}
   local locations
 
-  local i = 0
   repeat
-    i = i+1
-    
     local collected
     collected, locations = self.worldGraph:collect(items, locations, true)
     local sphereItems = _.difference(collected, items)
     items = collected
 
-    if #sphereItems == 0 then break end
-
-    logSphere(("Sphere %i"):format(i))
+    local sphere = {}
     for k,v in pairs(sphereItems) do
-      if not self.worldGraph:_has({v}, "abstract") then
-        logSphere(("\t %s: %s"):format(v.location_name, v.name))
+      table.insert(sphere, v)
+    end
+    if #sphere == 0 then break end
+
+    table.insert(self.spheres, sphere)
+  until false
+  if self.obj ~= "objBadEnd" and self.obj ~= "objNormalEnd" then
+    -- add the hell sphere at the very end, shh it works trust me
+    local sphere = {}
+    table.insert(sphere, self.worldGraph.regions.endgame.locations.hellB1.item)
+    table.insert(sphere, self.worldGraph.regions.endgame.locations.hellB3.item)
+    table.insert(self.spheres, sphere)
+  end
+
+  return self.spheres
+end
+
+function C:_logSpheres()
+  local total = 0
+  for i,sphere in ipairs(self:_analyzeSpheres()) do
+    logSphere(("Sphere %i"):format(i))
+    for i2,item in ipairs(sphere) do
+      if not _.contains(item.attributes, "abstract") then
+        total = total + 1
+      end
+      if not _.contains(item.attributes, "objective") then
+        logSphere(("\t %s: %s"):format(item.location_name, item.name))
       end
     end
-  until false
+  end
+  logSphere(("Maximum items to collect: %i"):format(total))
 end
 
 function C:_generateRoute()

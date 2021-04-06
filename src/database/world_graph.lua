@@ -456,9 +456,7 @@ function endgame:new(worldGraph)
   self.locations.hellB1.getPrebuiltHint = prebuilt
   self.locations.hellB3.getPrebuiltHint = prebuilt
 
-  self.requirements = function(self, items)
-    return self.world:canBeatGame(items)
-  end
+  self.requirements = function(self, items) return false end -- just pretend you never get here
 end
 
 local hintRegion = Region:extend()
@@ -590,7 +588,8 @@ function worldGraph:canBeatGame(items, obj)
     return true
   end
   if obj == "objAllBosses" then return bossReqs(self, items) end
-  return false -- removing ANY items from 100% makes a seed uncompletable
+  return false -- I don't actually think the check below works as intended, false is sufficient for now since 100% and completable logic should be mutually exclusive anyway
+  --return #items > #self:getLocations() - #self:getHintLocations() - 2 -- removing ANY items (besides in hell) from 100% makes a seed uncompletable
 end
 
 function worldGraph:getLocations()
@@ -664,7 +663,7 @@ function worldGraph:getFilledLocations(realOnly)
   local locations = {}
   for key, region in pairs(self.regions) do
     for k, location in pairs(region:getFilledLocations()) do
-      if not realOnly or not (_.find(location.item.attributes,"abstract") or _.find(location.item.attributes,"mrLittle")) then table.insert(locations, location) end
+      if not realOnly or not _.find(location.item.attributes,"abstract") then table.insert(locations, location) end
     end
   end
   return locations
