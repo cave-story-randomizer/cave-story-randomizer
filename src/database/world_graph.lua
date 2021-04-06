@@ -695,9 +695,11 @@ function worldGraph:writeItems(tscFiles)
   self.hintregion:writeItems(tscFiles)
 end
 
-function worldGraph:collect(preCollectedItems)
-  local collected = _.clone(preCollectedItems) or {}
-  local availableLocations = self:getFilledLocations()
+function worldGraph:collect(preCollectedItems, locations, singleSphere)
+  local collected = _.clone(preCollectedItems, singleSphere) or {}
+  local availableLocations = locations or self:getFilledLocations()
+
+  local inventory = (singleSphere and preCollectedItems) or collected
 
   local foundItems = 0
   repeat
@@ -707,7 +709,7 @@ function worldGraph:collect(preCollectedItems)
     local j, n = 1, #availableLocations
     for i = 1, n do
       local location = availableLocations[i]
-      if location:canAccess(collected) then
+      if location:canAccess(inventory) then
         table.insert(collected, location.item)
         foundItems = foundItems + 1
         availableLocations[i] = nil
@@ -724,7 +726,7 @@ function worldGraph:collect(preCollectedItems)
   --[[local s = "Collected items: "
   for k,v in ipairs(collected) do s = s .. v.name .. ", " end
   logDebug(s)]]
-  return collected
+  return collected, availableLocations
 end
 
 function worldGraph.locationsArray(locations)

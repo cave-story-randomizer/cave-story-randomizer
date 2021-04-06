@@ -77,6 +77,9 @@ function C:randomize()
   self:_generateHash()
   if self.shuffleMusic then self.music:shuffleMusic(tscFiles) end
 
+  self:_analyzeSpheres()
+  self:_generateRoute()
+
   self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
   self:_writeLog()
@@ -231,7 +234,7 @@ function C:_fillItems(items, locations)
 
     local filter = function(k,v) return not v:hasItem() and v:canAccess(assumed) end
 
-    if self.completableLogic and self.worldGraph:canBeatGame(assumed) then
+    if self.completableLogic and self.worldGraph:canBeatGame(assumed, self.obj) then
       filter = function(k,v) return not v:hasItem() end
     end
 
@@ -254,6 +257,35 @@ function C:_fastFillItems(items, locations)
     if item == nil then break end -- no items left to place, but there are still locations open
     location:setItem(item)
   end
+end
+
+function C:_analyzeSpheres()
+  local spheres = {}
+  local items = {}
+  local locations
+
+  local i = 0
+  repeat
+    i = i+1
+    
+    local collected
+    collected, locations = self.worldGraph:collect(items, locations, true)
+    local sphereItems = _.difference(collected, items)
+    items = collected
+
+    if #sphereItems == 0 then break end
+
+    logSphere(("Sphere %i"):format(i))
+    for k,v in pairs(sphereItems) do
+      if not self.worldGraph:_has({v}, "abstract") then
+        logSphere(("\t %s: %s"):format(v.location_name, v.name))
+      end
+    end
+  until false
+end
+
+function C:_generateRoute()
+  return
 end
 
 function C:_generateHints()
