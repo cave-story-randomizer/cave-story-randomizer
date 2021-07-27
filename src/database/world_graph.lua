@@ -750,11 +750,11 @@ function worldGraph:serialize()
 
   for k,r in ipairs(_.sort(array,sort)) do
     if next(r.locations) then
-      lines:insert("")
-      lines:insert("Region: " .. r.name)
+      table.insert(lines, "")
+      table.insert(lines, "Region: " .. r.name)
       for k2,l in pairs(r.locations) do
         if l.item ~= nil and not _has({l.item}, "event") then
-          lines:insert("\t " .. l.name .. ": " .. l.item.name)
+          table.insert(lines, "\t " .. l.name .. ": " .. l.item.name)
         end
       end
     end
@@ -764,7 +764,7 @@ function worldGraph:serialize()
 end
 
 function worldGraph:logLocations()
-  for k,v in ipairs(worldGraph:serialize()) do
+  for k,v in ipairs(self:serialize()) do
     logSpoiler(v)
   end
 end
