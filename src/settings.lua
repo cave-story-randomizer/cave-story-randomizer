@@ -39,7 +39,7 @@ function C:getDefaults()
     musicShuffle = false,
     musicVanilla = true,
     musicBeta = false,
-    musicSecret = false,
+    musicKero = false,
     musicFlavor = "Shuffle",
     noFallingBlocks = false,
     completableLogic = false,
@@ -73,7 +73,7 @@ function C:serialize()
   line = line .. tab .. ("musicShuffle = %s,\r\n"):format(self.settings.musicShuffle)
   line = line .. tab .. ("musicVanilla = %s,\r\n"):format(self.settings.musicVanilla)
   line = line .. tab .. ("musicBeta = %s,\r\n"):format(self.settings.musicBeta)
-  line = line .. tab .. ("musicSecret = %s,\r\n"):format(self.settings.musicSecret)
+  line = line .. tab .. ("musicKero = %s,\r\n"):format(self.settings.musicKero)
   line = line .. tab .. ("musicFlavor = %q,\r\n"):format(self.settings.musicFlavor)
   line = line .. tab .. ("noFallingBlocks = %s,\r\n"):format(self.settings.noFallingBlocks)
   line = line .. tab .. ("completableLogic = %s,\r\n"):format(self.settings.completableLogic)

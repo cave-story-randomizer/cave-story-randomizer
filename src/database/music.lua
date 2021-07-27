@@ -1,9 +1,9 @@
 local song = Class:extend()
-function song:new(name, id, jingle, beta)
+function song:new(name, id, jingle, game)
   self.name = name
   self.id = id
   self.jingle = jingle or false
-  self.beta = beta or false
+  self.game = game or "vanilla"
 end
 
 local songs = {
@@ -49,11 +49,37 @@ local songs = {
   sealChamber = song("Seal Chamber", "0039"),
   torokosTheme = song("Toroko's Theme", "0040"),
   white = song('"White"', "0041"),
-  windFortress = song("Wind Fortress", "0042", false, true),
+  windFortress = song("Wind Fortress", "0042", false, "beta"),
   halloween2 = song("Halloween 2", "0043", false, true),
-  peopleOfTheRoot = song("People of the Root", "0044", false, true),
-  pierWalk = song("Pier Walk", "0045", false, true),
-  snoopyCake = song("Snoopy Cake", "0046", false, true)
+  peopleOfTheRoot = song("People of the Root", "0044", false, "beta"),
+  pierWalk = song("Pier Walk", "0045", false, "beta"),
+  snoopyCake = song("Snoopy Cake", "0046", false, "beta"),
+  dataSlots = song("Data Slots", "0047", false, "kero"),
+  catAndFrog = song("Cat & Frog Corp.", "0048", false, "kero"),
+  --itsMyBlaster = song("It's My Blaster!", "0049", false, "kero"),
+  shoppingCart = song("Shopping Cart", "0050", false, "kero"),
+  prothallium = song("Prothallium", "0051", false, "kero"),
+  hardCording = song("Hard Cording", "0052", false, "kero"),
+  newItem = song("New Item!", "0053", false, "kero"), --kind of jingle, kind of not?
+  checkinOut = song("Check'IN Out", "0054", false, "kero"),
+  sukima = song("SUKIMA", "0055", false, "kero"),
+  relaxation = song("Relaxation", "0056", false, "kero"),
+  chemistry = song("Chemistry", "0057", false, "kero"),
+  --arrival = song("Arrival", "0058", false, "kero"),
+  freezeDraft = song("Freeze Draft", "0059", false, "kero"),
+  magicNumber = song("Magic Number", "0060", false, "kero"),
+  --timeTable = song("Time Table", "0061", false, "kero"),
+  --number1119 = song("Number 1119", "0061", false, "kero"),
+  trainStation = song("Train Station", "0062", false, "kero"),
+  --totoStation = song("ToTo Station", "0063", false, "kero"),
+  kaishaMan = song("Kaisha Man", "0064", false, "kero"),
+  zombeat = song("Zombeat", "0065", false, "kero"),
+  --oyasumiSong = song("Oyasumi Song", "0066", false, "kero"),
+  --changeSpec = song("Change Spec", "0067", false, "kero"),
+  --curtainRise = song("Curtain Rise", "0068", false, "kero"),
+  --creditsOfKero = song("Credits of Kero", "0069", false, "kero"),
+  --myPreciousDays = song("My Precious Days", "0070", false, "kero"),
+  --excuseMe = song("Excuse Me...", "0071", false, "kero"),
 }
 
 local cue = Class:extend()
@@ -181,18 +207,22 @@ local music = Class:extend()
 function music:new()
   self.vanillaEnabled = true
   self.betaEnabled = false
-  self.secretEnabled = false
+  self.keroEnabled = false
   self.songs = songs
   self.cues = cues
   self.flavor = "Shuffle"
 end
 
-local _isValid =  function(key, song, self)
-  return not song.jingle and (not song.beta or self.betaEnabled)
+local _isValid =  function(key, song, self, canRemap)
+  if song.jingle then return false end
+  if song.game == "vanilla" and (canRemap or self.vanillaEnabled) then return true end
+  if song.game == "beta" and self.betaEnabled then return true end
+  if song.game == "kero" and self.keroEnabled then return true end
+  return false
 end
 
 function music:getShuffledSongs()
- return _.shuffle(_.filter(self.songs, _isValid, self))
+  return _.shuffle(_.filter(self.songs, _isValid, self))
 end
 
 function music:getCues()
@@ -211,7 +241,8 @@ function music:_shuffle(tscFiles)
 
   local idmap = _.map(self.songs, function (k,v)
     -- don't remap any invalid songs
-    if not _isValid(k,v,self) then return v.id, v.id end
+    if not _isValid(k,v,self,true) then return v.id, v.id end
+    if #shuffled == 0 then shuffled = self:getShuffledSongs() end
     return v.id, _.pop(shuffled).id
   end)
 
