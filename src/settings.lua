@@ -37,10 +37,12 @@ function C:getDefaults()
       rocket = true
     },
     musicShuffle = false,
+    musicVanilla = true,
     musicBeta = false,
+    musicSecret = false,
     musicFlavor = "Shuffle",
     noFallingBlocks = false,
-    completableLogic = true, --TODO: MAKE FALSE BY DEFAULT AFTER TESTING
+    completableLogic = false,
     csversion = 0
   }
 end
@@ -69,7 +71,9 @@ function C:serialize()
   line = line .. tab .. ("seqbreaks = %s,\r\n"):format(self.settings.seqbreaks)
   line = line .. tab .. ("dboosts = %s,\r\n"):format(dboost)
   line = line .. tab .. ("musicShuffle = %s,\r\n"):format(self.settings.musicShuffle)
+  line = line .. tab .. ("musicVanilla = %s,\r\n"):format(self.settings.musicVanilla)
   line = line .. tab .. ("musicBeta = %s,\r\n"):format(self.settings.musicBeta)
+  line = line .. tab .. ("musicSecret = %s,\r\n"):format(self.settings.musicSecret)
   line = line .. tab .. ("musicFlavor = %q,\r\n"):format(self.settings.musicFlavor)
   line = line .. tab .. ("noFallingBlocks = %s,\r\n"):format(self.settings.noFallingBlocks)
   line = line .. tab .. ("completableLogic = %s,\r\n"):format(self.settings.completableLogic)

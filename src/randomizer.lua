@@ -429,13 +429,14 @@ function C:_updateSettings()
 end
 
 function C:_updateSharecode(seed)
-  local settings = 0 -- 0b00000000
+  local settings = 0 -- 0b0000000000000000
   -- P: single bit used for puppysanity
   -- O: three bits used for objective
   -- S: three bits used for spawn location
   -- B: single bit used for sequence breaks
   -- F: single bit used for falling blocks in Hell
-  -- 0bFBSSSOOOP
+  -- C: single bit used for completeable logic
+  -- 0b000000CFBSSSOOOP
 
   -- bitshift intervals
   local obj = 1
@@ -443,6 +444,7 @@ function C:_updateSharecode(seed)
   local spn = 4
   local brk = 7
   local nfb = 8
+  local cpl = 9
 
   if self.obj == "objBadEnd" then
     settings = bit.bor(settings, bit.blshift(1, obj))
@@ -478,6 +480,9 @@ function C:_updateSharecode(seed)
 
   if self.worldGraph.noFallingBlocks then
     settings = bit.bor(settings, bit.blshift(1, nfb))
+  end
+  if self.completableLogic then
+    settings = bit.bor(settings, bit.blshift(1, cpl))
   end
 
   if #seed < 20 then
