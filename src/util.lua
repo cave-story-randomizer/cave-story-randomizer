@@ -15,4 +15,14 @@ function U.writeFile(path, data)
   file:close()
 end
 
+function U.eraseFile(path)
+  logDebug('erasing file: ' .. path)
+
+  local file, err = io.open(path, 'r')
+  if file ~= nil then
+    io.close(file)
+    os.remove(path)
+  end
+end
+
 return U

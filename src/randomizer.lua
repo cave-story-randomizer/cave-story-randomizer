@@ -349,8 +349,12 @@ end
 
 function C:_copyMyChar()
   local path = self:_getWritePath() .. '/MyChar.bmp'
-  local data = lf.read(self.mychar)
-  U.writeFile(path, data)
+  if self.mychar then 
+    local data = lf.read(self.mychar)
+    U.writeFile(path, data)
+  else
+    U.eraseFile(path)
+  end
 end
 
 function C:_generateHash()

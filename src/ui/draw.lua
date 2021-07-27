@@ -112,6 +112,21 @@ function C:loadMyChar(mychar)
   mc.value = "override"
 end
 
+function C.numToMyChar(num)
+  local mychars = {
+    "assets/myChar/Quote.bmp",
+    "assets/myChar/Curly.bmp",
+    "assets/myChar/Sue.bmp",
+    "assets/myChar/Toroko.bmp",
+    "assets/myChar/King.bmp",
+    "assets/myChar/Chaco.bmp",
+    "assets/myChar/Kanpachi.bmp",
+    "assets/myChar/Misery.bmp",
+    "assets/myChar/Frog.bmp",
+  }
+  return mychars[num]
+end
+
 function C:loadSpawn(spawn)
   if spawn == "Start Point" or spawn == 0 then
     settings.spawn.index = 1
@@ -196,7 +211,11 @@ layout.go:onPress(function()
 
     Randomizer.obj = settings.objective.value
     Randomizer.puppy = settings.puppy.value
-    Randomizer.mychar = music.mychar.value
+    if music.mychar.value == "random" then
+      Randomizer.mychar = Screen.numToMyChar(love.math.random(9))
+    else
+      Randomizer.mychar = music.mychar.value
+    end
     Randomizer.worldGraph.spawn = settings.spawn.value
 
     Randomizer.worldGraph.seqbreak = settings.seqbreak.value
