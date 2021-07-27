@@ -35,7 +35,7 @@ return { style = 'dialog',
       ]]
       { type = 'check', id = 'cavestory', value = true, text = 'Enable Cave Story music', minheight = 27 },
       { type = 'check', id = 'beta', value = false, text = 'Enable beta music', minheight = 27, status = "Only compatible with the included Doukutsu.exe - no other platforms." },
-      --{ type = 'check', id = 'secret', value = false, text = 'Enable [redacted] music', minheight = 27, status = "Only compatible with the included Doukutsu.exe - no other platforms." },
+      { type = 'check', id = 'kero', value = false, text = 'Enable Kero Blaster music', minheight = 27, status = "Only compatible with the included Doukutsu.exe - no other platforms." },
     },
     { type = 'sash' },
     {

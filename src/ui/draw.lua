@@ -28,7 +28,7 @@ function C:setup()
   self:loadMyChar(Settings.settings.mychar)
   self:loadSpawn(Settings.settings.spawn)
   self:loadSeqSettings(Settings.settings.seqbreaks, Settings.settings.dboosts)
-  self:loadMusicSettings(Settings.settings.musicShuffle, Settings.settings.musicFlavor, Settings.settings.musicVanilla, Settings.settings.musicBeta, Settings.settings.musicSecret)
+  self:loadMusicSettings(Settings.settings.musicShuffle, Settings.settings.musicFlavor, Settings.settings.musicVanilla, Settings.settings.musicBeta, Settings.settings.musicKero)
   self:loadNoFallingBlocks(Settings.settings.noFallingBlocks)
   self:loadCompleteableLogic(Settings.settings.completableLogic)
 
@@ -43,7 +43,7 @@ settings.randoButton:onPress(function()
   Screen:loadObjective(love.math.random(4)-1)
   settings.seedselect.value = false
   settings.seedrandom.value = true
-  Screen:loadMyChar(love.math.random(9))
+  --Screen:loadMyChar(love.math.random(9))
   Screen:loadSpawn(love.math.random(3)-1)
   Screen:loadSeqSettings(fifty(), {
   cthulhu = fifty(),
@@ -55,7 +55,7 @@ settings.randoButton:onPress(function()
   plantation = fifty(),
   rocket = fifty()
   })
-  Screen:loadMusicSettings(fifty(), fifty(), love.math.random(3))
+  --Screen:loadMusicSettings(fifty(), love.math.random(3), fifty())
   Screen:loadNoFallingBlocks(fifty())
 end)
 
@@ -152,11 +152,11 @@ function C:loadSeqSettings(breaks, seq)
   end
 end
 
-function C:loadMusicSettings(shuffle, flavor, cs, beta, secret)
+function C:loadMusicSettings(shuffle, flavor, cs, beta, kero)
   music.music.value = shuffle
   music.cavestory.value = cs
   music.beta.value = beta
-  --music.secret.value = secret
+  music.kero.value = kero
   if flavor == "Shuffle" or flavor == 1 then 
     music.shuffle.value = true
     music.random.value = false
@@ -231,7 +231,7 @@ layout.go:onPress(function()
     Randomizer.shuffleMusic = music.music.value
     Randomizer.music.vanillaEnabled = music.cavestory.value
     Randomizer.music.betaEnabled = music.beta.value
-    -- Randomizer.music.secretEnabled = music.secret.value
+    Randomizer.music.keroEnabled = music.kero.value
     if music.shuffle.value then Randomizer.music.flavor = "Shuffle" end
     if music.random.value then Randomizer.music.flavor = "Random" end
     if music.chaos.value then Randomizer.music.flavor = "Chaos" end
