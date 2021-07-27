@@ -179,7 +179,9 @@ local cues = {
 
 local music = Class:extend()
 function music:new()
+  self.vanillaEnabled = true
   self.betaEnabled = false
+  self.secretEnabled = false
   self.songs = songs
   self.cues = cues
   self.flavor = "Shuffle"

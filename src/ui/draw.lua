@@ -28,8 +28,9 @@ function C:setup()
   self:loadMyChar(Settings.settings.mychar)
   self:loadSpawn(Settings.settings.spawn)
   self:loadSeqSettings(Settings.settings.seqbreaks, Settings.settings.dboosts)
-  self:loadMusicSettings(Settings.settings.musicShuffle, Settings.settings.musicBeta, Settings.settings.musicFlavor)
+  self:loadMusicSettings(Settings.settings.musicShuffle, Settings.settings.musicFlavor, Settings.settings.musicVanilla, Settings.settings.musicBeta, Settings.settings.musicSecret)
   self:loadNoFallingBlocks(Settings.settings.noFallingBlocks)
+  self:loadCompleteableLogic(Settings.settings.completableLogic)
 
   background = lg.newImage('assets/background.png')
   self:draw()
@@ -86,28 +87,29 @@ function C:loadSeed(seed)
 end
 
 function C:loadMyChar(mychar)
+  local mc = music.mychar
   if type(mychar) == "number" then
-    settings.mychar.index = mychar
+    mc.index = mychar
   elseif mychar == "assets/myChar/Quote.bmp" then
-    settings.mychar.index = 1
+    mc.index = 1
   elseif mychar == "assets/myChar/Curly.bmp" then
-    settings.mychar.index = 2
+    mc.index = 2
   elseif mychar == "assets/myChar/Sue.bmp" then
-    settings.mychar.index = 3
+    mc.index = 3
   elseif mychar == "assets/myChar/Toroko.bmp" then
-    settings.mychar.index = 4
+    mc.index = 4
   elseif mychar == "assets/myChar/King.bmp" then
-    settings.mychar.index = 5
+    mc.index = 5
   elseif mychar == "assets/myChar/Chaco.bmp" then
-    settings.mychar.index = 6
+    mc.index = 6
   elseif mychar == "assets/myChar/Kanpachi.bmp" then
-    settings.mychar.index = 7
+    mc.index = 7
   elseif mychar == "assets/myChar/Misery.bmp" then
-    settings.mychar.index = 8
+    mc.index = 8
   elseif mychar == "assets/myChar/Frog.bmp" then
-    settings.mychar.index = 9
+    mc.index = 9
   end
-  settings.mychar.value = "override"
+  mc.value = "override"
 end
 
 function C:loadSpawn(spawn)
@@ -135,9 +137,11 @@ function C:loadSeqSettings(breaks, seq)
   end
 end
 
-function C:loadMusicSettings(shuffle, beta, flavor)
-  settings.music.value = shuffle
+function C:loadMusicSettings(shuffle, flavor, cs, beta, secret)
+  music.music.value = shuffle
+  music.cavestory.value = cs
   music.beta.value = beta
+  --music.secret.value = secret
   if flavor == "Shuffle" or flavor == 1 then 
     music.shuffle.value = true
     music.random.value = false
@@ -159,6 +163,10 @@ function C:loadNoFallingBlocks(noFallingBlocks)
   settings.noFallingBlocks.value = noFallingBlocks
 end
 
+function C:loadCompleteableLogic(completableLogic)
+  settings.completable.value = not completableLogic
+end
+
 layout.version.text = 'Cave Story Randomizer v' .. VERSION
 layout.author.text  = 'by duncathan'
 layout.twitter.text = '(@duncathan_salt)'
@@ -178,14 +186,6 @@ end)
 
 layout.footershru.text = 'Original randomizer by @shruuu'
 
-music.panel.text = [[Shuffle: remap every song to a new song. For example, all instances of Mischievous Robot become Pulse. Songs may remap to themselves.
-
-Random: remap every cue to a new song. For example, entering the Egg Corridor by any means plays Meltdown 2.
-
-Chaos: remap every <CMU to a new song. For example, teleporting to the Egg Corridor plays Charge, but entering Egg Corridor from Cthulhu's Abode plays Run!
-
-Beta music: include Wind Fortress, Halloween 2, People of the Root, Pier Walk, and Snoopy Cake in the potential songs. Only compatible with the included Doukutsu.exe - no other platforms.]]
-
 layout.go:onPress(function()
   Randomizer:new()
 
@@ -196,7 +196,7 @@ layout.go:onPress(function()
 
     Randomizer.obj = settings.objective.value
     Randomizer.puppy = settings.puppy.value
-    Randomizer.mychar = settings.mychar.value
+    Randomizer.mychar = music.mychar.value
     Randomizer.worldGraph.spawn = settings.spawn.value
 
     Randomizer.worldGraph.seqbreak = settings.seqbreak.value
@@ -209,13 +209,16 @@ layout.go:onPress(function()
     Randomizer.worldGraph.dboosts.plantation.enabled = sequence.plantation.value
     Randomizer.worldGraph.dboosts.rocket.enabled = sequence.rocket.value
 
-    Randomizer.shuffleMusic = settings.music.value
+    Randomizer.shuffleMusic = music.music.value
+    Randomizer.music.vanillaEnabled = music.cavestory.value
     Randomizer.music.betaEnabled = music.beta.value
+    -- Randomizer.music.secretEnabled = music.secret.value
     if music.shuffle.value then Randomizer.music.flavor = "Shuffle" end
     if music.random.value then Randomizer.music.flavor = "Random" end
     if music.chaos.value then Randomizer.music.flavor = "Chaos" end
 
     Randomizer.worldGraph.noFallingBlocks = settings.noFallingBlocks.value
+    Randomizer.completableLogic = not settings.completable.value
 
     C:setStatus(Randomizer:randomize())
 
@@ -303,6 +306,7 @@ settings.importshare:onPress(function()
       rocket = bit.band(seq, 128) ~= 0
     })
     Screen:loadNoFallingBlocks(bit.band(sharesettings, 256) ~= 0) -- (settings & 0b100000000)
+    Screen:loadCompleteableLogic(bit.band(sharesettings, 512) ~= 0) -- (settings & 0b1000000000)
   else
     settings.importshare.text = "Invalid Sharecode!"
   end

@@ -28,6 +28,7 @@ end
 
 function C:setItem(item)
   item.placed = true
+  item.location_name = self.name
   self.item = item
 end
 

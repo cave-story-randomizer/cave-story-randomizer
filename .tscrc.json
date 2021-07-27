@@ -1,0 +1,8 @@
+{
+    "setup": {
+      "looseChecking": {
+        "events": true,
+        "arguments": true
+      }
+    }
+}

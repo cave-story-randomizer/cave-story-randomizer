@@ -456,9 +456,7 @@ function endgame:new(worldGraph)
   self.locations.hellB1.getPrebuiltHint = prebuilt
   self.locations.hellB3.getPrebuiltHint = prebuilt
 
-  self.requirements = function(self, items)
-    return _has(items, "eventSue") and _has(items, "ironBond") and self.world.regions.lastCave:canAccess(items)
-  end
+  self.requirements = function(self, items) return false end -- just pretend you never get here
 end
 
 local hintRegion = Region:extend()
@@ -560,6 +558,40 @@ function worldGraph:getSpawnScript()
   if self:Camp() then return baseStartScript .. "<FL+6202<TRA0040:0094:0014:0009" end
 end
 
+function worldGraph:canBeatGame(items, obj)
+  if obj == "objBadEnd" then
+
+  end
+  local function normalReqs(self, items) return _has(items, "eventRocket") and _has(items, "eventSue") and self.regions.plantation:canAccess(items) end
+  if obj == "objNormalEnd" then return normalReqs(self, items) end
+
+  local function bestReqs(self, items) return normalReqs(self, items) and _has(items, "ironBond") and _count(items, "booster", 2) end
+  if obj == "objBestEnd" then return bestReqs(self, items) end
+
+  local function bossReqs(self, items)
+    if not (bestReqs(self, items) and _has(items, "weaponBoss")) then return false end
+    -- Igor, Balrog 1, Balrog 3, Core, Sisters
+    if not (_has(items, "eventSue") and _has(items, "eventToroko") and _has(items, "eventCore")) then return false end
+    -- Balrog 2, Balfrog
+    if not (_has(items, "rustyKey") and _has(items, "gumKey") and self.regions.grasstownEast:canAccess(items)) then return false end
+    -- Curly, Omega
+    if not (self.regions.upperSandZone:canAccess(items)) then return false end
+    -- Toroko+
+    if not self.regions.lowerSandZone.king:canAccess(items) then return false end
+    -- Puu Black, Monster X
+    if not (self.regions.labyrinthW:canAccess(items) and _has(items, "clinicKey")) then return false end
+    -- Ironhead
+    if not self.regions.waterway:canAccess(items) then return false end
+    -- Ma Pignon
+    if not self.regions.mimigaVillage.maPignon:canAccess(items) then return false end
+    -- Remaining bosses are all covered by the normal requirements
+    return true
+  end
+  if obj == "objAllBosses" then return bossReqs(self, items) end
+  return false -- I don't actually think the check below works as intended, false is sufficient for now since 100% and completable logic should be mutually exclusive anyway
+  --return #items > #self:getLocations() - #self:getHintLocations() - 2 -- removing ANY items (besides in hell) from 100% makes a seed uncompletable
+end
+
 function worldGraph:getLocations()
   local locations = {}
   for key, region in pairs(self.regions) do
@@ -631,7 +663,7 @@ function worldGraph:getFilledLocations(realOnly)
   local locations = {}
   for key, region in pairs(self.regions) do
     for k, location in pairs(region:getFilledLocations()) do
-      if not realOnly or not (_.find(location.item.attributes,"abstract") or _.find(location.item.attributes,"mrLittle")) then table.insert(locations, location) end
+      if not realOnly or not _.find(location.item.attributes,"abstract") then table.insert(locations, location) end
     end
   end
   return locations
@@ -662,9 +694,11 @@ function worldGraph:writeItems(tscFiles)
   self.hintregion:writeItems(tscFiles)
 end
 
-function worldGraph:collect(preCollectedItems)
-  local collected = _.clone(preCollectedItems) or {}
-  local availableLocations = self:getFilledLocations()
+function worldGraph:collect(preCollectedItems, locations, singleSphere)
+  local collected = _.clone(preCollectedItems, singleSphere) or {}
+  local availableLocations = locations or self:getFilledLocations()
+
+  local inventory = (singleSphere and preCollectedItems) or collected
 
   local foundItems = 0
   repeat
@@ -674,7 +708,7 @@ function worldGraph:collect(preCollectedItems)
     local j, n = 1, #availableLocations
     for i = 1, n do
       local location = availableLocations[i]
-      if location:canAccess(collected) then
+      if location:canAccess(inventory) then
         table.insert(collected, location.item)
         foundItems = foundItems + 1
         availableLocations[i] = nil
@@ -691,7 +725,7 @@ function worldGraph:collect(preCollectedItems)
   --[[local s = "Collected items: "
   for k,v in ipairs(collected) do s = s .. v.name .. ", " end
   logDebug(s)]]
-  return collected
+  return collected, availableLocations
 end
 
 function worldGraph.locationsArray(locations)

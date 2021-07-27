@@ -47,6 +47,8 @@ function C:new()
   self.sharecode = ""
   self.mychar = ""
   self.shuffleMusic = false
+  self.completableLogic = true
+  self.spheres = {}
 end
 
 function C:setPath(path)
@@ -75,6 +77,9 @@ function C:randomize()
   self:_shuffleItems(tscFiles)
   self:_generateHash()
   if self.shuffleMusic then self.music:shuffleMusic(tscFiles) end
+
+  self:_logSpheres()
+  self:_generateRoute()
 
   self:_writeModifiedData(tscFiles)
   self:_writePlaintext(tscFiles)
@@ -194,7 +199,9 @@ function C:_shuffleItems(tscFiles)
   end
   
   -- next fill hell chests, which cannot have mandatory items
-  self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
+  if not self.completableLogic then
+    self:_fastFillItems(optional, _.shuffle(self.worldGraph:getHellSpots()))
+  end
 
   -- add map system AFTER filling hell chests so that it gets placed somewhere accessible in every objective
   optional = _.append(optional, self.itemDeck:getByKey("mapSystem"))
@@ -225,8 +232,15 @@ function C:_fillItems(items, locations)
   repeat
     local item = _.pop(itemsLeft)
     local assumed = self.worldGraph:collect(itemsLeft)
+
+    local filter = function(k,v) return not v:hasItem() and v:canAccess(assumed) end
+
+    if self.completableLogic and self.worldGraph:canBeatGame(assumed, self.obj) then
+      filter = function(k,v) return not v:hasItem() end
+    end
+
+    local fillable = _.filter(locations, filter)
     
-    local fillable = _.filter(locations, function(k,v) return not v:hasItem() and v:canAccess(assumed) end)
     if #fillable > 0 then
       logDebug(("Placing %s at %s"):format(item.name, fillable[1].name))
       fillable[1]:setItem(item)
@@ -244,6 +258,60 @@ function C:_fastFillItems(items, locations)
     if item == nil then break end -- no items left to place, but there are still locations open
     location:setItem(item)
   end
+end
+
+function C:_analyzeSpheres(forceUpdate)
+  if not forceUpdate and #self.spheres > 0 then
+    return self.spheres
+  end
+  self.spheres = {}
+
+  local items = {}
+  local locations
+
+  repeat
+    local collected
+    collected, locations = self.worldGraph:collect(items, locations, true)
+    local sphereItems = _.difference(collected, items)
+    items = collected
+
+    local sphere = {}
+    for k,v in pairs(sphereItems) do
+      table.insert(sphere, v)
+    end
+    if #sphere == 0 then break end
+
+    table.insert(self.spheres, sphere)
+  until false
+  if self.obj ~= "objBadEnd" and self.obj ~= "objNormalEnd" then
+    -- add the hell sphere at the very end, shh it works trust me
+    local sphere = {}
+    table.insert(sphere, self.worldGraph.regions.endgame.locations.hellB1.item)
+    table.insert(sphere, self.worldGraph.regions.endgame.locations.hellB3.item)
+    table.insert(self.spheres, sphere)
+  end
+
+  return self.spheres
+end
+
+function C:_logSpheres()
+  local total = 0
+  for i,sphere in ipairs(self:_analyzeSpheres()) do
+    logSphere(("Sphere %i"):format(i))
+    for i2,item in ipairs(sphere) do
+      if not _.contains(item.attributes, "abstract") then
+        total = total + 1
+      end
+      if not _.contains(item.attributes, "objective") then
+        logSphere(("\t %s: %s"):format(item.location_name, item.name))
+      end
+    end
+  end
+  logSphere(("Maximum items to collect: %i"):format(total))
+end
+
+function C:_generateRoute()
+  return
 end
 
 function C:_generateHints()
@@ -356,17 +424,19 @@ function C:_updateSettings()
   Settings.settings.musicBeta = self.music.betaEnabled
   Settings.settings.musicFlavor = self.music.flavor
   Settings.settings.noFallingBlocks = self.worldGraph.noFallingBlocks
+  Settings.settings.completableLogic = self.completableLogic
   Settings:update()
 end
 
 function C:_updateSharecode(seed)
-  local settings = 0 -- 0b00000000
+  local settings = 0 -- 0b0000000000000000
   -- P: single bit used for puppysanity
   -- O: three bits used for objective
   -- S: three bits used for spawn location
   -- B: single bit used for sequence breaks
   -- F: single bit used for falling blocks in Hell
-  -- 0bFBSSSOOOP
+  -- C: single bit used for completeable logic
+  -- 0b000000CFBSSSOOOP
 
   -- bitshift intervals
   local obj = 1
@@ -374,6 +444,7 @@ function C:_updateSharecode(seed)
   local spn = 4
   local brk = 7
   local nfb = 8
+  local cpl = 9
 
   if self.obj == "objBadEnd" then
     settings = bit.bor(settings, bit.blshift(1, obj))
@@ -409,6 +480,9 @@ function C:_updateSharecode(seed)
 
   if self.worldGraph.noFallingBlocks then
     settings = bit.bor(settings, bit.blshift(1, nfb))
+  end
+  if self.completableLogic then
+    settings = bit.bor(settings, bit.blshift(1, cpl))
   end
 
   if #seed < 20 then
