@@ -1,0 +1,3358 @@
+Flag	Source	Filename	Type	TSC Event	TSC Command	Entity Index	Entity Type	Entity Name	Entity Bits	Entity Oversight Warning
+5005	TSC	ArmsItem.tsc	Read	#5014	<FLJ					
+5004	TSC	ArmsItem.tsc	Read	#5014	<FLJ					
+5003	TSC	ArmsItem.tsc	Read	#5014	<FLJ					
+5002	TSC	ArmsItem.tsc	Read	#5014	<FLJ					
+5001	TSC	ArmsItem.tsc	Read	#5014	<FLJ					
+6002	TSC	ArmsItem.tsc	Read	#6005	<FLJ					
+6004	TSC	ArmsItem.tsc	Read	#6005	<FLJ					
+5005	TSC	ArmsItem.tsc	Read	#6014	<FLJ					
+5004	TSC	ArmsItem.tsc	Read	#6014	<FLJ					
+5003	TSC	ArmsItem.tsc	Read	#6014	<FLJ					
+5002	TSC	ArmsItem.tsc	Read	#6014	<FLJ					
+5001	TSC	ArmsItem.tsc	Read	#6014	<FLJ					
+742	TSC	ArmsItem.tsc	Read	#6018	<FLJ					
+742	TSC	ArmsItem.tsc	Write	#6018	<FL+					
+743	TSC	ArmsItem.tsc	Write	#6018	<FL-					
+2900	TSC	ArmsItem.tsc	Read	#6021	<FLJ					
+2900	TSC	ArmsItem.tsc	Write	#6021	<FL+					
+743	TSC	ArmsItem.tsc	Read	#6023	<FLJ					
+743	TSC	ArmsItem.tsc	Write	#6023	<FL+					
+742	TSC	ArmsItem.tsc	Write	#6023	<FL-					
+1020	TSC	ArmsItem.tsc	Read	#6024	<FLJ					
+1020	TSC	ArmsItem.tsc	Write	#6024	<FL+					
+1024	TSC	ArmsItem.tsc	Write	#6026	<FL+					
+1563	TSC	ArmsItem.tsc	Write	#6033	<FL+					
+722	TSC	ArmsItem.tsc	Read	#6038	<FLJ					
+722	TSC	ArmsItem.tsc	Write	#6038	<FL+					
+742	TSC	ArmsItem.tsc	Write	#7018	<FL-					
+2900	TSC	ArmsItem.tsc	Write	#7021	<FL-					
+743	TSC	ArmsItem.tsc	Write	#7023	<FL-					
+1020	TSC	ArmsItem.tsc	Write	#7024	<FL-					
+722	TSC	ArmsItem.tsc	Write	#7038	<FL-					
+6100	TSC	ArmsItem.tsc	Read	#8000	<FLJ					
+6101	TSC	ArmsItem.tsc	Read	#8001	<FLJ					
+6102	TSC	ArmsItem.tsc	Read	#8002	<FLJ					
+6103	TSC	ArmsItem.tsc	Read	#8003	<FLJ					
+6104	TSC	ArmsItem.tsc	Read	#8004	<FLJ					
+6105	TSC	ArmsItem.tsc	Read	#8005	<FLJ					
+6106	TSC	ArmsItem.tsc	Read	#8006	<FLJ					
+6107	TSC	ArmsItem.tsc	Read	#8007	<FLJ					
+6108	TSC	ArmsItem.tsc	Read	#8008	<FLJ					
+6109	TSC	ArmsItem.tsc	Read	#8009	<FLJ					
+6110	TSC	ArmsItem.tsc	Read	#8010	<FLJ					
+6111	TSC	ArmsItem.tsc	Read	#8011	<FLJ					
+6112	TSC	ArmsItem.tsc	Read	#8012	<FLJ					
+6113	TSC	ArmsItem.tsc	Read	#8013	<FLJ					
+6114	TSC	ArmsItem.tsc	Read	#8014	<FLJ					
+4001	TSC	ArmsItem.tsc	Read	#9000	<FLJ					
+4002	TSC	ArmsItem.tsc	Read	#9000	<FLJ					
+4003	TSC	ArmsItem.tsc	Read	#9000	<FLJ					
+4004	TSC	ArmsItem.tsc	Read	#9000	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9000	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9000	<FLJ					
+4007	TSC	ArmsItem.tsc	Read	#9000	<FLJ					
+4002	TSC	ArmsItem.tsc	Read	#9001	<FLJ					
+4003	TSC	ArmsItem.tsc	Read	#9001	<FLJ					
+4004	TSC	ArmsItem.tsc	Read	#9001	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9001	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9001	<FLJ					
+4007	TSC	ArmsItem.tsc	Read	#9001	<FLJ					
+4003	TSC	ArmsItem.tsc	Read	#9002	<FLJ					
+4004	TSC	ArmsItem.tsc	Read	#9002	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9002	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9002	<FLJ					
+4007	TSC	ArmsItem.tsc	Read	#9002	<FLJ					
+4004	TSC	ArmsItem.tsc	Read	#9003	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9003	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9003	<FLJ					
+4007	TSC	ArmsItem.tsc	Read	#9003	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9004	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9004	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9005	<FLJ					
+4003	TSC	ArmsItem.tsc	Read	#9008	<FLJ					
+4004	TSC	ArmsItem.tsc	Read	#9008	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9008	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9008	<FLJ					
+4007	TSC	ArmsItem.tsc	Read	#9008	<FLJ					
+4004	TSC	ArmsItem.tsc	Read	#9009	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9009	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9009	<FLJ					
+4007	TSC	ArmsItem.tsc	Read	#9009	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9010	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9010	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9011	<FLJ					
+4004	TSC	ArmsItem.tsc	Read	#9014	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9014	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9014	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9015	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9015	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9016	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9019	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9019	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9020	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9023	<FLJ					
+4004	TSC	ArmsItem.tsc	Read	#9026	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9026	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9026	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9027	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9027	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9028	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9031	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9031	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9032	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9035	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9038	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9038	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9039	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9041	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9044	<FLJ					
+4005	TSC	ArmsItem.tsc	Read	#9048	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9048	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9049	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9051	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9054	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9058	<FLJ					
+4006	TSC	ArmsItem.tsc	Read	#9062	<FLJ					
+6000	TSC	ArmsItem.tsc	Read	#9100	<FLJ					
+6003	TSC	ArmsItem.tsc	Read	#9100	<FLJ					
+6003	TSC	Credit.tsc	Read	N/A	<FLJ					
+2000	TSC	Credit.tsc	Read	N/A	<FLJ					
+2000	TSC	Credit.tsc	Read	0100	<FLJ					
+2000	TSC	Credit.tsc	Read	0200	<FLJ					
+2000	TSC	Credit.tsc	Read	0400	<FLJ					
+4001	TSC	Credit.tsc	Read	1000	<FLJ					
+4002	TSC	Credit.tsc	Read	1000	<FLJ					
+4003	TSC	Credit.tsc	Read	1000	<FLJ					
+4004	TSC	Credit.tsc	Read	1000	<FLJ					
+4005	TSC	Credit.tsc	Read	1000	<FLJ					
+4006	TSC	Credit.tsc	Read	1000	<FLJ					
+4007	TSC	Credit.tsc	Read	1000	<FLJ					
+4002	TSC	Credit.tsc	Read	1001	<FLJ					
+4003	TSC	Credit.tsc	Read	1001	<FLJ					
+4004	TSC	Credit.tsc	Read	1001	<FLJ					
+4005	TSC	Credit.tsc	Read	1001	<FLJ					
+4006	TSC	Credit.tsc	Read	1001	<FLJ					
+4007	TSC	Credit.tsc	Read	1001	<FLJ					
+4003	TSC	Credit.tsc	Read	1002	<FLJ					
+4004	TSC	Credit.tsc	Read	1002	<FLJ					
+4005	TSC	Credit.tsc	Read	1002	<FLJ					
+4006	TSC	Credit.tsc	Read	1002	<FLJ					
+4007	TSC	Credit.tsc	Read	1002	<FLJ					
+4004	TSC	Credit.tsc	Read	1003	<FLJ					
+4005	TSC	Credit.tsc	Read	1003	<FLJ					
+4006	TSC	Credit.tsc	Read	1003	<FLJ					
+4007	TSC	Credit.tsc	Read	1003	<FLJ					
+4005	TSC	Credit.tsc	Read	1004	<FLJ					
+4006	TSC	Credit.tsc	Read	1004	<FLJ					
+4006	TSC	Credit.tsc	Read	1005	<FLJ					
+4003	TSC	Credit.tsc	Read	1008	<FLJ					
+4004	TSC	Credit.tsc	Read	1008	<FLJ					
+4005	TSC	Credit.tsc	Read	1008	<FLJ					
+4006	TSC	Credit.tsc	Read	1008	<FLJ					
+4007	TSC	Credit.tsc	Read	1008	<FLJ					
+4004	TSC	Credit.tsc	Read	1009	<FLJ					
+4005	TSC	Credit.tsc	Read	1009	<FLJ					
+4006	TSC	Credit.tsc	Read	1009	<FLJ					
+4007	TSC	Credit.tsc	Read	1009	<FLJ					
+4005	TSC	Credit.tsc	Read	1010	<FLJ					
+4006	TSC	Credit.tsc	Read	1010	<FLJ					
+4006	TSC	Credit.tsc	Read	1011	<FLJ					
+4004	TSC	Credit.tsc	Read	1014	<FLJ					
+4005	TSC	Credit.tsc	Read	1014	<FLJ					
+4006	TSC	Credit.tsc	Read	1014	<FLJ					
+4005	TSC	Credit.tsc	Read	1015	<FLJ					
+4006	TSC	Credit.tsc	Read	1015	<FLJ					
+4006	TSC	Credit.tsc	Read	1016	<FLJ					
+4005	TSC	Credit.tsc	Read	1019	<FLJ					
+4006	TSC	Credit.tsc	Read	1019	<FLJ					
+4006	TSC	Credit.tsc	Read	1020	<FLJ					
+4006	TSC	Credit.tsc	Read	1023	<FLJ					
+4004	TSC	Credit.tsc	Read	1026	<FLJ					
+4005	TSC	Credit.tsc	Read	1026	<FLJ					
+4006	TSC	Credit.tsc	Read	1026	<FLJ					
+4005	TSC	Credit.tsc	Read	1027	<FLJ					
+4006	TSC	Credit.tsc	Read	1027	<FLJ					
+4006	TSC	Credit.tsc	Read	1028	<FLJ					
+4005	TSC	Credit.tsc	Read	1031	<FLJ					
+4006	TSC	Credit.tsc	Read	1031	<FLJ					
+4006	TSC	Credit.tsc	Read	1032	<FLJ					
+4006	TSC	Credit.tsc	Read	1035	<FLJ					
+4005	TSC	Credit.tsc	Read	1038	<FLJ					
+4006	TSC	Credit.tsc	Read	1038	<FLJ					
+4006	TSC	Credit.tsc	Read	1039	<FLJ					
+4006	TSC	Credit.tsc	Read	1041	<FLJ					
+4006	TSC	Credit.tsc	Read	1044	<FLJ					
+4005	TSC	Credit.tsc	Read	1048	<FLJ					
+4006	TSC	Credit.tsc	Read	1048	<FLJ					
+4006	TSC	Credit.tsc	Read	1049	<FLJ					
+4006	TSC	Credit.tsc	Read	1051	<FLJ					
+4006	TSC	Credit.tsc	Read	1054	<FLJ					
+4006	TSC	Credit.tsc	Read	1058	<FLJ					
+4006	TSC	Credit.tsc	Read	1062	<FLJ					
+4001	TSC	Credit.tsc	Read	2000	<FLJ					
+4002	TSC	Credit.tsc	Read	2000	<FLJ					
+4003	TSC	Credit.tsc	Read	2000	<FLJ					
+4004	TSC	Credit.tsc	Read	2000	<FLJ					
+4005	TSC	Credit.tsc	Read	2000	<FLJ					
+4006	TSC	Credit.tsc	Read	2000	<FLJ					
+4007	TSC	Credit.tsc	Read	2000	<FLJ					
+4002	TSC	Credit.tsc	Read	2001	<FLJ					
+4003	TSC	Credit.tsc	Read	2001	<FLJ					
+4004	TSC	Credit.tsc	Read	2001	<FLJ					
+4005	TSC	Credit.tsc	Read	2001	<FLJ					
+4006	TSC	Credit.tsc	Read	2001	<FLJ					
+4007	TSC	Credit.tsc	Read	2001	<FLJ					
+4003	TSC	Credit.tsc	Read	2002	<FLJ					
+4004	TSC	Credit.tsc	Read	2002	<FLJ					
+4005	TSC	Credit.tsc	Read	2002	<FLJ					
+4006	TSC	Credit.tsc	Read	2002	<FLJ					
+4007	TSC	Credit.tsc	Read	2002	<FLJ					
+4004	TSC	Credit.tsc	Read	2003	<FLJ					
+4005	TSC	Credit.tsc	Read	2003	<FLJ					
+4006	TSC	Credit.tsc	Read	2003	<FLJ					
+4007	TSC	Credit.tsc	Read	2003	<FLJ					
+4005	TSC	Credit.tsc	Read	2004	<FLJ					
+4006	TSC	Credit.tsc	Read	2004	<FLJ					
+4006	TSC	Credit.tsc	Read	2005	<FLJ					
+4003	TSC	Credit.tsc	Read	2008	<FLJ					
+4004	TSC	Credit.tsc	Read	2008	<FLJ					
+4005	TSC	Credit.tsc	Read	2008	<FLJ					
+4006	TSC	Credit.tsc	Read	2008	<FLJ					
+4007	TSC	Credit.tsc	Read	2008	<FLJ					
+4004	TSC	Credit.tsc	Read	2009	<FLJ					
+4005	TSC	Credit.tsc	Read	2009	<FLJ					
+4006	TSC	Credit.tsc	Read	2009	<FLJ					
+4007	TSC	Credit.tsc	Read	2009	<FLJ					
+4005	TSC	Credit.tsc	Read	2010	<FLJ					
+4006	TSC	Credit.tsc	Read	2010	<FLJ					
+4006	TSC	Credit.tsc	Read	2011	<FLJ					
+4004	TSC	Credit.tsc	Read	2014	<FLJ					
+4005	TSC	Credit.tsc	Read	2014	<FLJ					
+4006	TSC	Credit.tsc	Read	2014	<FLJ					
+4005	TSC	Credit.tsc	Read	2015	<FLJ					
+4006	TSC	Credit.tsc	Read	2015	<FLJ					
+4006	TSC	Credit.tsc	Read	2016	<FLJ					
+4005	TSC	Credit.tsc	Read	2019	<FLJ					
+4006	TSC	Credit.tsc	Read	2019	<FLJ					
+4006	TSC	Credit.tsc	Read	2020	<FLJ					
+4006	TSC	Credit.tsc	Read	2023	<FLJ					
+4004	TSC	Credit.tsc	Read	2026	<FLJ					
+4005	TSC	Credit.tsc	Read	2026	<FLJ					
+4006	TSC	Credit.tsc	Read	2026	<FLJ					
+4005	TSC	Credit.tsc	Read	2027	<FLJ					
+4006	TSC	Credit.tsc	Read	2027	<FLJ					
+4006	TSC	Credit.tsc	Read	2028	<FLJ					
+4005	TSC	Credit.tsc	Read	2031	<FLJ					
+4006	TSC	Credit.tsc	Read	2031	<FLJ					
+4006	TSC	Credit.tsc	Read	2032	<FLJ					
+4006	TSC	Credit.tsc	Read	2035	<FLJ					
+4005	TSC	Credit.tsc	Read	2038	<FLJ					
+4006	TSC	Credit.tsc	Read	2038	<FLJ					
+4006	TSC	Credit.tsc	Read	2039	<FLJ					
+4006	TSC	Credit.tsc	Read	2041	<FLJ					
+4006	TSC	Credit.tsc	Read	2044	<FLJ					
+4005	TSC	Credit.tsc	Read	2048	<FLJ					
+4006	TSC	Credit.tsc	Read	2048	<FLJ					
+4006	TSC	Credit.tsc	Read	2049	<FLJ					
+4006	TSC	Credit.tsc	Read	2051	<FLJ					
+4006	TSC	Credit.tsc	Read	2054	<FLJ					
+4006	TSC	Credit.tsc	Read	2058	<FLJ					
+4006	TSC	Credit.tsc	Read	2062	<FLJ					
+4021	TSC	Credit.tsc	Read	2100	<FLJ					
+4022	TSC	Credit.tsc	Read	2100	<FLJ					
+4023	TSC	Credit.tsc	Read	2100	<FLJ					
+4024	TSC	Credit.tsc	Read	2100	<FLJ					
+4025	TSC	Credit.tsc	Read	2100	<FLJ					
+4026	TSC	Credit.tsc	Read	2100	<FLJ					
+4027	TSC	Credit.tsc	Read	2100	<FLJ					
+4022	TSC	Credit.tsc	Read	2101	<FLJ					
+4023	TSC	Credit.tsc	Read	2101	<FLJ					
+4024	TSC	Credit.tsc	Read	2101	<FLJ					
+4025	TSC	Credit.tsc	Read	2101	<FLJ					
+4026	TSC	Credit.tsc	Read	2101	<FLJ					
+4027	TSC	Credit.tsc	Read	2101	<FLJ					
+4023	TSC	Credit.tsc	Read	2102	<FLJ					
+4024	TSC	Credit.tsc	Read	2102	<FLJ					
+4025	TSC	Credit.tsc	Read	2102	<FLJ					
+4026	TSC	Credit.tsc	Read	2102	<FLJ					
+4027	TSC	Credit.tsc	Read	2102	<FLJ					
+4024	TSC	Credit.tsc	Read	2103	<FLJ					
+4025	TSC	Credit.tsc	Read	2103	<FLJ					
+4026	TSC	Credit.tsc	Read	2103	<FLJ					
+4027	TSC	Credit.tsc	Read	2103	<FLJ					
+4025	TSC	Credit.tsc	Read	2104	<FLJ					
+4026	TSC	Credit.tsc	Read	2104	<FLJ					
+4027	TSC	Credit.tsc	Read	2104	<FLJ					
+4026	TSC	Credit.tsc	Read	2105	<FLJ					
+4027	TSC	Credit.tsc	Read	2105	<FLJ					
+4027	TSC	Credit.tsc	Read	2106	<FLJ					
+4023	TSC	Credit.tsc	Read	2108	<FLJ					
+4024	TSC	Credit.tsc	Read	2108	<FLJ					
+4025	TSC	Credit.tsc	Read	2108	<FLJ					
+4026	TSC	Credit.tsc	Read	2108	<FLJ					
+4027	TSC	Credit.tsc	Read	2108	<FLJ					
+4024	TSC	Credit.tsc	Read	2109	<FLJ					
+4025	TSC	Credit.tsc	Read	2109	<FLJ					
+4026	TSC	Credit.tsc	Read	2109	<FLJ					
+4027	TSC	Credit.tsc	Read	2109	<FLJ					
+4025	TSC	Credit.tsc	Read	2110	<FLJ					
+4026	TSC	Credit.tsc	Read	2110	<FLJ					
+4027	TSC	Credit.tsc	Read	2110	<FLJ					
+4026	TSC	Credit.tsc	Read	2111	<FLJ					
+4027	TSC	Credit.tsc	Read	2111	<FLJ					
+4027	TSC	Credit.tsc	Read	2112	<FLJ					
+4024	TSC	Credit.tsc	Read	2114	<FLJ					
+4025	TSC	Credit.tsc	Read	2114	<FLJ					
+4026	TSC	Credit.tsc	Read	2114	<FLJ					
+4027	TSC	Credit.tsc	Read	2114	<FLJ					
+4025	TSC	Credit.tsc	Read	2115	<FLJ					
+4026	TSC	Credit.tsc	Read	2115	<FLJ					
+4027	TSC	Credit.tsc	Read	2115	<FLJ					
+4026	TSC	Credit.tsc	Read	2116	<FLJ					
+4027	TSC	Credit.tsc	Read	2116	<FLJ					
+4027	TSC	Credit.tsc	Read	2117	<FLJ					
+4025	TSC	Credit.tsc	Read	2119	<FLJ					
+4026	TSC	Credit.tsc	Read	2119	<FLJ					
+4027	TSC	Credit.tsc	Read	2119	<FLJ					
+4026	TSC	Credit.tsc	Read	2120	<FLJ					
+4027	TSC	Credit.tsc	Read	2120	<FLJ					
+4027	TSC	Credit.tsc	Read	2121	<FLJ					
+4026	TSC	Credit.tsc	Read	2123	<FLJ					
+4027	TSC	Credit.tsc	Read	2123	<FLJ					
+4027	TSC	Credit.tsc	Read	2124	<FLJ					
+4027	TSC	Credit.tsc	Read	2125	<FLJ					
+4024	TSC	Credit.tsc	Read	2126	<FLJ					
+4025	TSC	Credit.tsc	Read	2126	<FLJ					
+4026	TSC	Credit.tsc	Read	2126	<FLJ					
+4027	TSC	Credit.tsc	Read	2126	<FLJ					
+4025	TSC	Credit.tsc	Read	2127	<FLJ					
+4026	TSC	Credit.tsc	Read	2127	<FLJ					
+4027	TSC	Credit.tsc	Read	2127	<FLJ					
+4026	TSC	Credit.tsc	Read	2128	<FLJ					
+4027	TSC	Credit.tsc	Read	2128	<FLJ					
+4027	TSC	Credit.tsc	Read	2129	<FLJ					
+4025	TSC	Credit.tsc	Read	2131	<FLJ					
+4026	TSC	Credit.tsc	Read	2131	<FLJ					
+4027	TSC	Credit.tsc	Read	2131	<FLJ					
+4026	TSC	Credit.tsc	Read	2132	<FLJ					
+4027	TSC	Credit.tsc	Read	2132	<FLJ					
+4027	TSC	Credit.tsc	Read	2133	<FLJ					
+4026	TSC	Credit.tsc	Read	2135	<FLJ					
+4027	TSC	Credit.tsc	Read	2135	<FLJ					
+4027	TSC	Credit.tsc	Read	2136	<FLJ					
+4027	TSC	Credit.tsc	Read	2137	<FLJ					
+4025	TSC	Credit.tsc	Read	2138	<FLJ					
+4026	TSC	Credit.tsc	Read	2138	<FLJ					
+4027	TSC	Credit.tsc	Read	2138	<FLJ					
+4026	TSC	Credit.tsc	Read	2139	<FLJ					
+4027	TSC	Credit.tsc	Read	2139	<FLJ					
+4027	TSC	Credit.tsc	Read	2140	<FLJ					
+4026	TSC	Credit.tsc	Read	2141	<FLJ					
+4027	TSC	Credit.tsc	Read	2141	<FLJ					
+4027	TSC	Credit.tsc	Read	2142	<FLJ					
+4027	TSC	Credit.tsc	Read	2143	<FLJ					
+4026	TSC	Credit.tsc	Read	2144	<FLJ					
+4027	TSC	Credit.tsc	Read	2144	<FLJ					
+4027	TSC	Credit.tsc	Read	2145	<FLJ					
+4027	TSC	Credit.tsc	Read	2146	<FLJ					
+4027	TSC	Credit.tsc	Read	2147	<FLJ					
+4025	TSC	Credit.tsc	Read	2148	<FLJ					
+4026	TSC	Credit.tsc	Read	2148	<FLJ					
+4027	TSC	Credit.tsc	Read	2148	<FLJ					
+4026	TSC	Credit.tsc	Read	2149	<FLJ					
+4027	TSC	Credit.tsc	Read	2149	<FLJ					
+4027	TSC	Credit.tsc	Read	2150	<FLJ					
+4026	TSC	Credit.tsc	Read	2151	<FLJ					
+4027	TSC	Credit.tsc	Read	2151	<FLJ					
+4027	TSC	Credit.tsc	Read	2152	<FLJ					
+4027	TSC	Credit.tsc	Read	2153	<FLJ					
+4026	TSC	Credit.tsc	Read	2154	<FLJ					
+4027	TSC	Credit.tsc	Read	2154	<FLJ					
+4027	TSC	Credit.tsc	Read	2155	<FLJ					
+4027	TSC	Credit.tsc	Read	2156	<FLJ					
+4027	TSC	Credit.tsc	Read	2157	<FLJ					
+4026	TSC	Credit.tsc	Read	2158	<FLJ					
+4027	TSC	Credit.tsc	Read	2158	<FLJ					
+4027	TSC	Credit.tsc	Read	2159	<FLJ					
+4027	TSC	Credit.tsc	Read	2160	<FLJ					
+4027	TSC	Credit.tsc	Read	2161	<FLJ					
+4026	TSC	Credit.tsc	Read	2162	<FLJ					
+4027	TSC	Credit.tsc	Read	2162	<FLJ					
+4027	TSC	Credit.tsc	Read	2163	<FLJ					
+4027	TSC	Credit.tsc	Read	2164	<FLJ					
+4027	TSC	Credit.tsc	Read	2165	<FLJ					
+4027	TSC	Credit.tsc	Read	2166	<FLJ					
+4027	TSC	Credit.tsc	Read	2167	<FLJ					
+4027	TSC	Credit.tsc	Read	2168	<FLJ					
+4027	TSC	Credit.tsc	Read	2169	<FLJ					
+7100	TSC	Credit.tsc	Read	3000	<FLJ					
+7103	TSC	Credit.tsc	Read	3100	<FLJ					
+5005	TSC	Credit.tsc	Read	3200	<FLJ					
+5004	TSC	Credit.tsc	Read	3200	<FLJ					
+5003	TSC	Credit.tsc	Read	3200	<FLJ					
+5002	TSC	Credit.tsc	Read	3200	<FLJ					
+5001	TSC	Credit.tsc	Read	3200	<FLJ					
+7121	TSC	Credit.tsc	Read	3400	<FLJ					
+7116	TSC	Credit.tsc	Read	3400	<FLJ					
+7101	TSC	Credit.tsc	Read	3500	<FLJ					
+7001	TSC	Credit.tsc	Read	3600	<FLJ					
+7000	TSC	Credit.tsc	Read	3600	<FLJ					
+7009	TSC	Credit.tsc	Read	3700	<FLJ					
+7008	TSC	Credit.tsc	Read	3700	<FLJ					
+7005	TSC	Credit.tsc	Read	3800	<FLJ					
+7004	TSC	Credit.tsc	Read	3900	<FLJ					
+7102	TSC	Credit.tsc	Read	4000	<FLJ					
+7105	TSC	Credit.tsc	Read	4100	<FLJ					
+7113	TSC	Credit.tsc	Read	4200	<FLJ					
+7128	TSC	Credit.tsc	Read	4300	<FLJ					
+7122	TSC	Credit.tsc	Read	4400	<FLJ					
+7003	TSC	Credit.tsc	Read	4700	<FLJ					
+7006	TSC	Credit.tsc	Read	4800	<FLJ					
+7007	TSC	Credit.tsc	Read	4900	<FLJ					
+7107	TSC	Credit.tsc	Read	5000	<FLJ					
+7106	TSC	Credit.tsc	Read	5100	<FLJ					
+7124	TSC	Credit.tsc	Read	5200	<FLJ					
+7131	TSC	Credit.tsc	Read	5300	<FLJ					
+7119	TSC	Credit.tsc	Read	5400	<FLJ					
+4011	TSC	Credit.tsc	Read	5700	<FLJ					
+4012	TSC	Credit.tsc	Read	5700	<FLJ					
+4013	TSC	Credit.tsc	Read	5700	<FLJ					
+4014	TSC	Credit.tsc	Read	5700	<FLJ					
+4015	TSC	Credit.tsc	Read	5700	<FLJ					
+4016	TSC	Credit.tsc	Read	5700	<FLJ					
+4012	TSC	Credit.tsc	Read	5701	<FLJ					
+4013	TSC	Credit.tsc	Read	5701	<FLJ					
+4014	TSC	Credit.tsc	Read	5701	<FLJ					
+4015	TSC	Credit.tsc	Read	5701	<FLJ					
+4016	TSC	Credit.tsc	Read	5701	<FLJ					
+4013	TSC	Credit.tsc	Read	5702	<FLJ					
+4014	TSC	Credit.tsc	Read	5702	<FLJ					
+4015	TSC	Credit.tsc	Read	5702	<FLJ					
+4016	TSC	Credit.tsc	Read	5702	<FLJ					
+4014	TSC	Credit.tsc	Read	5703	<FLJ					
+4015	TSC	Credit.tsc	Read	5703	<FLJ					
+4016	TSC	Credit.tsc	Read	5703	<FLJ					
+4015	TSC	Credit.tsc	Read	5704	<FLJ					
+4016	TSC	Credit.tsc	Read	5704	<FLJ					
+4016	TSC	Credit.tsc	Read	5705	<FLJ					
+4013	TSC	Credit.tsc	Read	5708	<FLJ					
+4014	TSC	Credit.tsc	Read	5708	<FLJ					
+4015	TSC	Credit.tsc	Read	5708	<FLJ					
+4016	TSC	Credit.tsc	Read	5708	<FLJ					
+4014	TSC	Credit.tsc	Read	5709	<FLJ					
+4015	TSC	Credit.tsc	Read	5709	<FLJ					
+4016	TSC	Credit.tsc	Read	5709	<FLJ					
+4015	TSC	Credit.tsc	Read	5710	<FLJ					
+4016	TSC	Credit.tsc	Read	5710	<FLJ					
+4016	TSC	Credit.tsc	Read	5711	<FLJ					
+4014	TSC	Credit.tsc	Read	5714	<FLJ					
+4015	TSC	Credit.tsc	Read	5714	<FLJ					
+4016	TSC	Credit.tsc	Read	5714	<FLJ					
+4015	TSC	Credit.tsc	Read	5715	<FLJ					
+4016	TSC	Credit.tsc	Read	5715	<FLJ					
+4016	TSC	Credit.tsc	Read	5716	<FLJ					
+4015	TSC	Credit.tsc	Read	5719	<FLJ					
+4016	TSC	Credit.tsc	Read	5719	<FLJ					
+4016	TSC	Credit.tsc	Read	5720	<FLJ					
+4014	TSC	Credit.tsc	Read	5726	<FLJ					
+4015	TSC	Credit.tsc	Read	5726	<FLJ					
+4016	TSC	Credit.tsc	Read	5726	<FLJ					
+4015	TSC	Credit.tsc	Read	5727	<FLJ					
+4016	TSC	Credit.tsc	Read	5727	<FLJ					
+4016	TSC	Credit.tsc	Read	5728	<FLJ					
+4015	TSC	Credit.tsc	Read	5731	<FLJ					
+4016	TSC	Credit.tsc	Read	5731	<FLJ					
+4016	TSC	Credit.tsc	Read	5732	<FLJ					
+4015	TSC	Credit.tsc	Read	5738	<FLJ					
+4016	TSC	Credit.tsc	Read	5738	<FLJ					
+4016	TSC	Credit.tsc	Read	5739	<FLJ					
+4015	TSC	Credit.tsc	Read	5748	<FLJ					
+4016	TSC	Credit.tsc	Read	5748	<FLJ					
+4016	TSC	Credit.tsc	Read	5749	<FLJ					
+7108	TSC	Credit.tsc	Read	6000	<FLJ					
+7109	TSC	Credit.tsc	Read	6100	<FLJ					
+7125	TSC	Credit.tsc	Read	6200	<FLJ					
+7132	TSC	Credit.tsc	Read	6300	<FLJ					
+7118	TSC	Credit.tsc	Read	6400	<FLJ					
+7135	TSC	Credit.tsc	Read	6500	<FLJ					
+7009	TSC	Credit.tsc	Read	6600	<FLJ					
+4035	TSC	Credit.tsc	Read	6700	<FLJ					
+4034	TSC	Credit.tsc	Read	6700	<FLJ					
+4033	TSC	Credit.tsc	Read	6700	<FLJ					
+4032	TSC	Credit.tsc	Read	6700	<FLJ					
+4031	TSC	Credit.tsc	Read	6700	<FLJ					
+4036	TSC	Credit.tsc	Read	6700	<FLJ					
+4036	TSC	Credit.tsc	Read	6701	<FLJ					
+4036	TSC	Credit.tsc	Read	6702	<FLJ					
+4036	TSC	Credit.tsc	Read	6703	<FLJ					
+4036	TSC	Credit.tsc	Read	6704	<FLJ					
+4036	TSC	Credit.tsc	Read	6705	<FLJ					
+7115	TSC	Credit.tsc	Read	7000	<FLJ					
+7126	TSC	Credit.tsc	Read	7200	<FLJ					
+7137	TSC	Credit.tsc	Read	7300	<FLJ					
+7117	TSC	Credit.tsc	Read	7400	<FLJ					
+7133	TSC	Credit.tsc	Read	7500	<FLJ					
+7123	TSC	Credit.tsc	Read	8000	<FLJ					
+7111	TSC	Credit.tsc	Read	8100	<FLJ					
+7127	TSC	Credit.tsc	Read	8200	<FLJ					
+7120	TSC	Credit.tsc	Read	8300	<FLJ					
+7136	TSC	Credit.tsc	Read	8400	<FLJ					
+4100	TSC	Head.tsc	Write	#0-00	<FL-					
+4201	TSC	Head.tsc	Read	#0-00	<FLJ					
+4301	TSC	Head.tsc	Read	#0-00	<FLJ					
+4301	TSC	Head.tsc	Read	#0-01	<FLJ					
+4201	TSC	Head.tsc	Write	#0-02	<FL+					
+4201	TSC	Head.tsc	Write	#0-03	<FL-					
+4100	TSC	Head.tsc	Write	#0-03	<FL+					
+4202	TSC	Head.tsc	Read	#0-10	<FLJ					
+4302	TSC	Head.tsc	Read	#0-10	<FLJ					
+4100	TSC	Head.tsc	Read	#0-10	<FLJ					
+4302	TSC	Head.tsc	Read	#0-11	<FLJ					
+4100	TSC	Head.tsc	Read	#0-11	<FLJ					
+4100	TSC	Head.tsc	Read	#0-12	<FLJ					
+4202	TSC	Head.tsc	Write	#0-12	<FL+					
+4202	TSC	Head.tsc	Write	#0-13	<FL+					
+4100	TSC	Head.tsc	Write	#0-13	<FL-					
+4100	TSC	Head.tsc	Read	#0-14	<FLJ					
+4202	TSC	Head.tsc	Write	#0-14	<FL-					
+4100	TSC	Head.tsc	Write	#0-14	<FL+					
+4202	TSC	Head.tsc	Write	#0-15	<FL-					
+4100	TSC	Head.tsc	Read	#0-17	<FLJ					
+4202	TSC	Head.tsc	Write	#0-17	<FL-					
+4100	TSC	Head.tsc	Write	#0-17	<FL+					
+4203	TSC	Head.tsc	Read	#0-20	<FLJ					
+4303	TSC	Head.tsc	Read	#0-20	<FLJ					
+4100	TSC	Head.tsc	Read	#0-20	<FLJ					
+4303	TSC	Head.tsc	Read	#0-21	<FLJ					
+4100	TSC	Head.tsc	Read	#0-21	<FLJ					
+4100	TSC	Head.tsc	Read	#0-22	<FLJ					
+4203	TSC	Head.tsc	Write	#0-22	<FL+					
+4203	TSC	Head.tsc	Write	#0-23	<FL+					
+4100	TSC	Head.tsc	Write	#0-23	<FL-					
+4100	TSC	Head.tsc	Read	#0-24	<FLJ					
+4203	TSC	Head.tsc	Write	#0-24	<FL-					
+4100	TSC	Head.tsc	Write	#0-24	<FL+					
+4203	TSC	Head.tsc	Write	#0-25	<FL-					
+4100	TSC	Head.tsc	Read	#0-27	<FLJ					
+4203	TSC	Head.tsc	Write	#0-27	<FL-					
+4100	TSC	Head.tsc	Write	#0-27	<FL+					
+4204	TSC	Head.tsc	Read	#0-30	<FLJ					
+4100	TSC	Head.tsc	Read	#0-30	<FLJ					
+4100	TSC	Head.tsc	Read	#0-31	<FLJ					
+4204	TSC	Head.tsc	Write	#0-32	<FL+					
+4100	TSC	Head.tsc	Write	#0-32	<FL-					
+4204	TSC	Head.tsc	Write	#0-33	<FL-					
+4205	TSC	Head.tsc	Read	#0-40	<FLJ					
+4100	TSC	Head.tsc	Read	#0-40	<FLJ					
+4100	TSC	Head.tsc	Read	#0-41	<FLJ					
+4205	TSC	Head.tsc	Write	#0-42	<FL+					
+4100	TSC	Head.tsc	Write	#0-42	<FL-					
+4205	TSC	Head.tsc	Write	#0-43	<FL-					
+4206	TSC	Head.tsc	Read	#0-50	<FLJ					
+4100	TSC	Head.tsc	Read	#0-50	<FLJ					
+4100	TSC	Head.tsc	Read	#0-51	<FLJ					
+4206	TSC	Head.tsc	Write	#0-52	<FL+					
+4100	TSC	Head.tsc	Write	#0-52	<FL-					
+4206	TSC	Head.tsc	Write	#0-53	<FL-					
+4207	TSC	Head.tsc	Read	#0-60	<FLJ					
+4100	TSC	Head.tsc	Read	#0-60	<FLJ					
+4100	TSC	Head.tsc	Read	#0-61	<FLJ					
+4207	TSC	Head.tsc	Write	#0-62	<FL+					
+4100	TSC	Head.tsc	Write	#0-62	<FL-					
+4207	TSC	Head.tsc	Write	#0-63	<FL-					
+4009	TSC	Head.tsc	Read	#0-70	<FLJ					
+4019	TSC	Head.tsc	Read	#0-70	<FLJ					
+4029	TSC	Head.tsc	Read	#0-70	<FLJ					
+4201	TSC	Head.tsc	Read	#0.00	<FLJ					
+4001	TSC	Head.tsc	Write	#0.00	<FL-					
+4001	TSC	Head.tsc	Write	#0.01	<FL+					
+4202	TSC	Head.tsc	Read	#0.02	<FLJ					
+4002	TSC	Head.tsc	Write	#0.02	<FL-					
+4002	TSC	Head.tsc	Write	#0.03	<FL+					
+4203	TSC	Head.tsc	Read	#0.04	<FLJ					
+4003	TSC	Head.tsc	Write	#0.04	<FL-					
+4003	TSC	Head.tsc	Write	#0.05	<FL+					
+4204	TSC	Head.tsc	Read	#0.06	<FLJ					
+4004	TSC	Head.tsc	Write	#0.06	<FL-					
+4004	TSC	Head.tsc	Write	#0.07	<FL+					
+4205	TSC	Head.tsc	Read	#0.08	<FLJ					
+4005	TSC	Head.tsc	Write	#0.08	<FL-					
+4005	TSC	Head.tsc	Write	#0.09	<FL+					
+4206	TSC	Head.tsc	Read	#0.10	<FLJ					
+4006	TSC	Head.tsc	Write	#0.10	<FL-					
+4006	TSC	Head.tsc	Write	#0.11	<FL+					
+4207	TSC	Head.tsc	Read	#0.12	<FLJ					
+4007	TSC	Head.tsc	Write	#0.12	<FL-					
+4007	TSC	Head.tsc	Write	#0.13	<FL+					
+4009	TSC	Head.tsc	Write	#0.14	<FL-					
+4201	TSC	Head.tsc	Read	#0.20	<FLJ					
+4011	TSC	Head.tsc	Write	#0.20	<FL-					
+4011	TSC	Head.tsc	Write	#0.21	<FL+					
+4202	TSC	Head.tsc	Read	#0.22	<FLJ					
+4012	TSC	Head.tsc	Write	#0.22	<FL-					
+4012	TSC	Head.tsc	Write	#0.23	<FL+					
+4203	TSC	Head.tsc	Read	#0.24	<FLJ					
+4013	TSC	Head.tsc	Write	#0.24	<FL-					
+4013	TSC	Head.tsc	Write	#0.25	<FL+					
+4204	TSC	Head.tsc	Read	#0.26	<FLJ					
+4014	TSC	Head.tsc	Write	#0.26	<FL-					
+4014	TSC	Head.tsc	Write	#0.27	<FL+					
+4205	TSC	Head.tsc	Read	#0.28	<FLJ					
+4015	TSC	Head.tsc	Write	#0.28	<FL-					
+4015	TSC	Head.tsc	Write	#0.29	<FL+					
+4206	TSC	Head.tsc	Read	#0.30	<FLJ					
+4016	TSC	Head.tsc	Write	#0.30	<FL-					
+4016	TSC	Head.tsc	Write	#0.31	<FL+					
+4019	TSC	Head.tsc	Write	#0.32	<FL-					
+4201	TSC	Head.tsc	Read	#0.40	<FLJ					
+4021	TSC	Head.tsc	Write	#0.40	<FL-					
+4021	TSC	Head.tsc	Write	#0.41	<FL+					
+4202	TSC	Head.tsc	Read	#0.42	<FLJ					
+4022	TSC	Head.tsc	Write	#0.42	<FL-					
+4022	TSC	Head.tsc	Write	#0.43	<FL+					
+4203	TSC	Head.tsc	Read	#0.44	<FLJ					
+4023	TSC	Head.tsc	Write	#0.44	<FL-					
+4023	TSC	Head.tsc	Write	#0.45	<FL+					
+4204	TSC	Head.tsc	Read	#0.46	<FLJ					
+4024	TSC	Head.tsc	Write	#0.46	<FL-					
+4024	TSC	Head.tsc	Write	#0.47	<FL+					
+4205	TSC	Head.tsc	Read	#0.48	<FLJ					
+4025	TSC	Head.tsc	Write	#0.48	<FL-					
+4025	TSC	Head.tsc	Write	#0.49	<FL+					
+4206	TSC	Head.tsc	Read	#0.50	<FLJ					
+4026	TSC	Head.tsc	Write	#0.50	<FL-					
+4026	TSC	Head.tsc	Write	#0.51	<FL+					
+4207	TSC	Head.tsc	Read	#0.52	<FLJ					
+4027	TSC	Head.tsc	Write	#0.52	<FL-					
+4027	TSC	Head.tsc	Write	#0.53	<FL+					
+4029	TSC	Head.tsc	Write	#0.54	<FL-					
+7999	TSC	Head.tsc	Write	#0.54	<FL-					
+7999	TSC	Head.tsc	Write	#0.54	<FL+					
+4009	TSC	Head.tsc	Write	#0/00	<FL+					
+4301	TSC	Head.tsc	Write	#0/00	<FL+					
+4302	TSC	Head.tsc	Write	#0/00	<FL-					
+4303	TSC	Head.tsc	Write	#0/00	<FL-					
+4001	TSC	Head.tsc	Read	#0/00	<FLJ					
+4201	TSC	Head.tsc	Write	#0/00	<FL-					
+4201	TSC	Head.tsc	Write	#0/01	<FL+					
+4002	TSC	Head.tsc	Read	#0/02	<FLJ					
+4202	TSC	Head.tsc	Write	#0/02	<FL-					
+4202	TSC	Head.tsc	Write	#0/03	<FL+					
+4003	TSC	Head.tsc	Read	#0/04	<FLJ					
+4203	TSC	Head.tsc	Write	#0/04	<FL-					
+4203	TSC	Head.tsc	Write	#0/05	<FL+					
+4004	TSC	Head.tsc	Read	#0/06	<FLJ					
+4204	TSC	Head.tsc	Write	#0/06	<FL-					
+4204	TSC	Head.tsc	Write	#0/07	<FL+					
+4005	TSC	Head.tsc	Read	#0/08	<FLJ					
+4205	TSC	Head.tsc	Write	#0/08	<FL-					
+4205	TSC	Head.tsc	Write	#0/09	<FL+					
+4006	TSC	Head.tsc	Read	#0/10	<FLJ					
+4206	TSC	Head.tsc	Write	#0/10	<FL-					
+4206	TSC	Head.tsc	Write	#0/11	<FL+					
+4007	TSC	Head.tsc	Read	#0/12	<FLJ					
+4207	TSC	Head.tsc	Write	#0/12	<FL-					
+4207	TSC	Head.tsc	Write	#0/13	<FL+					
+4019	TSC	Head.tsc	Write	#0/20	<FL+					
+4011	TSC	Head.tsc	Read	#0/20	<FLJ					
+4201	TSC	Head.tsc	Write	#0/20	<FL-					
+4201	TSC	Head.tsc	Write	#0/21	<FL+					
+4012	TSC	Head.tsc	Read	#0/22	<FLJ					
+4202	TSC	Head.tsc	Write	#0/22	<FL-					
+4202	TSC	Head.tsc	Write	#0/23	<FL+					
+4013	TSC	Head.tsc	Read	#0/24	<FLJ					
+4203	TSC	Head.tsc	Write	#0/24	<FL-					
+4203	TSC	Head.tsc	Write	#0/25	<FL+					
+4014	TSC	Head.tsc	Read	#0/26	<FLJ					
+4204	TSC	Head.tsc	Write	#0/26	<FL-					
+4204	TSC	Head.tsc	Write	#0/27	<FL+					
+4015	TSC	Head.tsc	Read	#0/28	<FLJ					
+4205	TSC	Head.tsc	Write	#0/28	<FL-					
+4205	TSC	Head.tsc	Write	#0/29	<FL+					
+4016	TSC	Head.tsc	Read	#0/30	<FLJ					
+4206	TSC	Head.tsc	Write	#0/30	<FL-					
+4206	TSC	Head.tsc	Write	#0/31	<FL+					
+4035	TSC	Head.tsc	Read	#0/40	<FLJ					
+4034	TSC	Head.tsc	Read	#0/40	<FLJ					
+4033	TSC	Head.tsc	Read	#0/40	<FLJ					
+4032	TSC	Head.tsc	Read	#0/40	<FLJ					
+4031	TSC	Head.tsc	Read	#0/40	<FLJ					
+4031	TSC	Head.tsc	Write	#0/40	<FL+					
+4032	TSC	Head.tsc	Write	#0/41	<FL+					
+4033	TSC	Head.tsc	Write	#0/42	<FL+					
+4034	TSC	Head.tsc	Write	#0/43	<FL+					
+4035	TSC	Head.tsc	Write	#0/44	<FL+					
+4029	TSC	Head.tsc	Write	#0/50	<FL+					
+4301	TSC	Head.tsc	Write	#0/50	<FL+					
+4302	TSC	Head.tsc	Write	#0/50	<FL-					
+4303	TSC	Head.tsc	Write	#0/50	<FL-					
+4021	TSC	Head.tsc	Read	#0/50	<FLJ					
+4201	TSC	Head.tsc	Write	#0/50	<FL-					
+4201	TSC	Head.tsc	Write	#0/51	<FL+					
+4022	TSC	Head.tsc	Read	#0/52	<FLJ					
+4202	TSC	Head.tsc	Write	#0/52	<FL-					
+4202	TSC	Head.tsc	Write	#0/53	<FL+					
+4023	TSC	Head.tsc	Read	#0/54	<FLJ					
+4203	TSC	Head.tsc	Write	#0/54	<FL-					
+4203	TSC	Head.tsc	Write	#0/55	<FL+					
+4024	TSC	Head.tsc	Read	#0/56	<FLJ					
+4204	TSC	Head.tsc	Write	#0/56	<FL-					
+4204	TSC	Head.tsc	Write	#0/57	<FL+					
+4025	TSC	Head.tsc	Read	#0/58	<FLJ					
+4205	TSC	Head.tsc	Write	#0/58	<FL-					
+4205	TSC	Head.tsc	Write	#0/59	<FL+					
+4026	TSC	Head.tsc	Read	#0/60	<FLJ					
+4206	TSC	Head.tsc	Write	#0/60	<FL-					
+4206	TSC	Head.tsc	Write	#0/61	<FL+					
+4027	TSC	Head.tsc	Read	#0/62	<FLJ					
+4207	TSC	Head.tsc	Write	#0/62	<FL-					
+4207	TSC	Head.tsc	Write	#0/63	<FL+					
+7999	TSC	Head.tsc	Read	#0000	<FLJ					
+7999	TSC	Head.tsc	Write	#0000	<FL+					
+7000	TSC	Head.tsc	Write	#0002	<FL+					
+7001	TSC	Head.tsc	Write	#0003	<FL+					
+7002	TSC	Head.tsc	Write	#0004	<FL+					
+2801	TSC	Head.tsc	Read	#0004	<FLJ					
+2801	TSC	Head.tsc	Write	#0004	<FL+					
+7003	TSC	Head.tsc	Write	#0005	<FL+					
+2801	TSC	Head.tsc	Read	#0005	<FLJ					
+2801	TSC	Head.tsc	Write	#0005	<FL+					
+2802	TSC	Head.tsc	Write	#0006	<FL+					
+2820	TSC	Head.tsc	Write	#0007	<FL+					
+7004	TSC	Head.tsc	Write	#0007	<FL+					
+7005	TSC	Head.tsc	Write	#0008	<FL+					
+7006	TSC	Head.tsc	Write	#0009	<FL+					
+2810	TSC	Head.tsc	Read	#0009	<FLJ					
+2810	TSC	Head.tsc	Write	#0009	<FL+					
+7007	TSC	Head.tsc	Write	#0010	<FL+					
+2810	TSC	Head.tsc	Read	#0010	<FLJ					
+2810	TSC	Head.tsc	Write	#0010	<FL+					
+2811	TSC	Head.tsc	Write	#0011	<FL+					
+4301	TSC	Head.tsc	Write	#0012	<FL+					
+4302	TSC	Head.tsc	Write	#0012	<FL+					
+4303	TSC	Head.tsc	Write	#0012	<FL-					
+4301	TSC	Head.tsc	Write	#0013	<FL-					
+4302	TSC	Head.tsc	Write	#0013	<FL-					
+4303	TSC	Head.tsc	Write	#0013	<FL+					
+4301	TSC	Head.tsc	Write	#0014	<FL+					
+4302	TSC	Head.tsc	Write	#0014	<FL-					
+4303	TSC	Head.tsc	Write	#0014	<FL+					
+431	TSC	Head.tsc	Write	#0016	<FL+					
+7999	TSC	Head.tsc	Write	#0016	<FL-					
+7999	TSC	Head.tsc	Write	#0016	<FL+					
+201	TSC	Head.tsc	Read	#0017	<FLJ					
+274	TSC	Head.tsc	Write	#0020	<FL+					
+5006	TSC	Head.tsc	Read	#0020	<FLJ					
+5004	TSC	Head.tsc	Read	#0021	<FLJ					
+5003	TSC	Head.tsc	Read	#0021	<FLJ					
+5002	TSC	Head.tsc	Read	#0021	<FLJ					
+5001	TSC	Head.tsc	Read	#0021	<FLJ					
+5001	TSC	Head.tsc	Write	#0021	<FL+					
+5002	TSC	Head.tsc	Write	#0022	<FL+					
+5003	TSC	Head.tsc	Write	#0023	<FL+					
+5004	TSC	Head.tsc	Write	#0024	<FL+					
+5005	TSC	Head.tsc	Write	#0025	<FL+					
+593	TSC	Head.tsc	Write	#0025	<FL+					
+2420	TSC	Head.tsc	Read	#0030	<FLJ					
+201	TSC	Head.tsc	Read	#0030	<FLJ					
+201	TSC	Head.tsc	Write	#0030	<FL+					
+7008	TSC	Head.tsc	Write	#0030	<FL+					
+2421	TSC	Head.tsc	Write	#0033	<FL+					
+2420	TSC	Head.tsc	Write	#0034	<FL+					
+2421	TSC	Head.tsc	Write	#0034	<FL-					
+7009	TSC	Head.tsc	Write	#0034	<FL+					
+4036	TSC	Head.tsc	Write	#0035	<FL+					
+2420	TSC	Head.tsc	Read	#0035	<FLJ					
+201	TSC	Head.tsc	Read	#0035	<FLJ					
+201	TSC	Head.tsc	Write	#0035	<FL+					
+7008	TSC	Head.tsc	Write	#0035	<FL+					
+2421	TSC	Head.tsc	Read	#0038	<FLJ					
+431	TSC	Head.tsc	Read	#0040	<FLJ					
+431	TSC	Head.tsc	Read	#0041	<FLJ					
+431	TSC	Head.tsc	Read	#0042	<FLJ					
+7100	TSC	Head.tsc	Write	#0051	<FL+					
+7101	TSC	Head.tsc	Write	#0052	<FL+					
+7102	TSC	Head.tsc	Write	#0053	<FL+					
+7103	TSC	Head.tsc	Write	#0054	<FL+					
+7104	TSC	Head.tsc	Write	#0055	<FL+					
+7105	TSC	Head.tsc	Write	#0057	<FL+					
+7106	TSC	Head.tsc	Write	#0058	<FL+					
+7107	TSC	Head.tsc	Write	#0059	<FL+					
+7108	TSC	Head.tsc	Write	#0060	<FL+					
+7109	TSC	Head.tsc	Write	#0061	<FL+					
+7110	TSC	Head.tsc	Write	#0062	<FL+					
+7111	TSC	Head.tsc	Write	#0063	<FL+					
+7113	TSC	Head.tsc	Write	#0065	<FL+					
+7114	TSC	Head.tsc	Write	#0066	<FL+					
+7115	TSC	Head.tsc	Write	#0067	<FL+					
+742	TSC	Head.tsc	Write	#0068	<FL+					
+7116	TSC	Head.tsc	Write	#0068	<FL+					
+7117	TSC	Head.tsc	Write	#0069	<FL+					
+7118	TSC	Head.tsc	Write	#0070	<FL+					
+2900	TSC	Head.tsc	Write	#0071	<FL+					
+7119	TSC	Head.tsc	Write	#0071	<FL+					
+7120	TSC	Head.tsc	Write	#0072	<FL+					
+743	TSC	Head.tsc	Write	#0073	<FL+					
+742	TSC	Head.tsc	Write	#0073	<FL-					
+7121	TSC	Head.tsc	Write	#0073	<FL+					
+1020	TSC	Head.tsc	Write	#0074	<FL+					
+7122	TSC	Head.tsc	Write	#0074	<FL+					
+7123	TSC	Head.tsc	Write	#0075	<FL+					
+7124	TSC	Head.tsc	Write	#0076	<FL+					
+7125	TSC	Head.tsc	Write	#0077	<FL+					
+7126	TSC	Head.tsc	Write	#0078	<FL+					
+7127	TSC	Head.tsc	Write	#0079	<FL+					
+7128	TSC	Head.tsc	Write	#0080	<FL+					
+7129	TSC	Head.tsc	Write	#0081	<FL+					
+7130	TSC	Head.tsc	Write	#0082	<FL+					
+7131	TSC	Head.tsc	Write	#0083	<FL+					
+7132	TSC	Head.tsc	Write	#0084	<FL+					
+7133	TSC	Head.tsc	Write	#0085	<FL+					
+7134	TSC	Head.tsc	Write	#0086	<FL+					
+7135	TSC	Head.tsc	Write	#0087	<FL+					
+722	TSC	Head.tsc	Write	#0088	<FL+					
+7136	TSC	Head.tsc	Write	#0088	<FL+					
+7137	TSC	Head.tsc	Write	#0089	<FL+					
+2892	TSC	StageSelect.tsc	Read	#1001	<FLJ					
+2892	TSC	StageSelect.tsc	Read	#1002	<FLJ					
+2892	TSC	StageSelect.tsc	Read	#1003	<FLJ					
+2892	TSC	StageSelect.tsc	Read	#1004	<FLJ					
+2892	TSC	StageSelect.tsc	Read	#1005	<FLJ					
+2000	TSC	0.tsc	Read	#0100	<FLJ					
+1020	TSC	0.tsc	Read	#0100	<FLJ					
+2000	TSC	0.tsc	Read	#1060	<FLJ					
+2000	TSC	0.tsc	Read	#1090	<FLJ					
+151	Entity	Pens1.pxe	Read			14	15	Treasure Chest, closed	AppearWhenFlagSet	
+157	Entity	Pens1.pxe	Read			20	0	Null	AppearWhenFlagSet	
+157	Entity	Pens1.pxe	Read			21	0	Null	AppearWhenFlagSet	
+157	Entity	Pens1.pxe	Read			22	0	Null	AppearWhenFlagSet	
+157	Entity	Pens1.pxe	Read			23	0	Null	AppearWhenFlagSet	
+161	Entity	Pens1.pxe	Read			24	0	Null	HideWhenFlagSet	
+160	Entity	Pens1.pxe	Read			25	46	H/V Trigger	AppearWhenFlagSet	
+161	Entity	Pens1.pxe	Read			26	113	Professor Booster	AppearWhenFlagSet	
+274	Entity	Pens1.pxe	Read			28	136	Puppy, carried	AppearWhenFlagSet	
+341	TSC	Pens1.tsc	Read	#0094	<FLJ					
+0	Both	Pens1.tsc	Write	#0098	<DNP	19	0	Null	IgnoreSolidity	
+341	TSC	Pens1.tsc	Read	#0099	<FLJ					
+0	Both	Pens1.tsc	Write	#0099	<DNP	19	0	Null	IgnoreSolidity	
+324	TSC	Pens1.tsc	Read	#0102	<FLJ					
+324	TSC	Pens1.tsc	Write	#0103	<FL+					
+441	TSC	Pens1.tsc	Write	#0103	<FL+					
+0	Both	Pens1.tsc	Write	#0104	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+2892	TSC	Pens1.tsc	Write	#0200	<FL+					
+2802	TSC	Pens1.tsc	Read	#0201	<FLJ					
+2811	TSC	Pens1.tsc	Read	#0205	<FLJ					
+2820	TSC	Pens1.tsc	Read	#0211	<FLJ					
+2892	TSC	Pens1.tsc	Write	#0500	<FL-					
+325	TSC	Pens1.tsc	Read	#0600	<FLJ					
+156	TSC	Pens1.tsc	Write	#0620	<FL+					
+444	TSC	Pens1.tsc	Write	#0620	<FL+					
+0	Both	Pens1.tsc	Write	#0620	<DNP	19	0	Null	IgnoreSolidity	
+157	TSC	Pens1.tsc	Write	#0620	<FL-					
+158	TSC	Pens1.tsc	Read	#0621	<FLJ					
+158	TSC	Pens1.tsc	Read	#0622	<FLJ					
+158	TSC	Pens1.tsc	Read	#0624	<FLJ					
+158	TSC	Pens1.tsc	Read	#0625	<FLJ					
+158	TSC	Pens1.tsc	Write	#0625	<FL+					
+160	Both	Pens1.tsc	Write	#0651	<DNP	25	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+744	TSC	Pens1.tsc	Write	#0651	<FL+					
+162	TSC	Pens1.tsc	Write	#0651	<FL+					
+160	TSC	Pens1.tsc	Write	#0651	<FL-					
+161	TSC	Pens1.tsc	Write	#0651	<FL+					
+741	TSC	Pens1.tsc	Write	#0651	<FL+					
+1020	TSC	Pens1.tsc	Read	#0660	<FLJ					
+159	TSC	Pens1.tsc	Read	#6001	<FLJ					
+101	Entity	Eggs.pxe	Read			10	70	Sparkling Item	HideWhenFlagSet	
+102	Entity	Eggs.pxe	Read			14	70	Sparkling Item	HideWhenFlagSet	
+103	Entity	Eggs.pxe	Read			26	83	Igor, standing	HideWhenFlagSet	
+0	Entity	Eggs.pxe	Write			29	2	Behemoth (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			30	2	Behemoth (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			31	2	Behemoth (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			32	2	Behemoth (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			33	2	Behemoth (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			34	2	Behemoth (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			36	58	Basu, 1 (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			37	58	Basu, 1 (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			38	58	Basu, 1 (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			39	2	Behemoth (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			40	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			41	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			42	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			43	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			44	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			45	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			46	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			47	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			48	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			49	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			50	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			51	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			52	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			53	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			54	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			55	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			56	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			57	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			58	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			59	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			60	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			61	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			62	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			63	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			64	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			65	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			66	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			67	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			68	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			69	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			70	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			71	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			72	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			73	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			74	58	Basu, 1 (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			75	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			76	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			77	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			78	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			79	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			80	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			81	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			82	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			83	6	Beetle, Horizontal Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			84	2	Behemoth (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			85	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			86	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			87	5	Critter, Hopping Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			88	8	Beetle, Follow Green (enemy)	Shootable	
+0	Entity	Eggs.pxe	Write			89	8	Beetle, Follow Green (enemy)	Shootable	
+470	Entity	Eggs.pxe	Read			90	13	Forcefield	HideWhenFlagSet	
+470	Entity	Eggs.pxe	Read			91	13	Forcefield	HideWhenFlagSet	
+0	Entity	Eggs.pxe	Write			92	5	Critter, Hopping Green (enemy)	Shootable	
+103	Entity	Eggs.pxe	Read			93	46	H/V Trigger	HideWhenFlagSet	
+0	Entity	Eggs.pxe				98	125	Hidden Heart/Missile		
+201	Entity	Eggs.pxe	Read			99	125	Hidden Heart/Missile	AppearWhenFlagSet	SpecialEntityNoWriteFlag
+0	Entity	Eggs.pxe				100	125	Hidden Heart/Missile		
+201	Entity	Eggs.pxe	Read			101	125	Hidden Heart/Missile	AppearWhenFlagSet	SpecialEntityNoWriteFlag
+274	Entity	Eggs.pxe	Read			103	136	Puppy, carried	AppearWhenFlagSet	
+105	TSC	Eggs.tsc	Read	#0094	<FLJ					
+0	Both	Eggs.tsc	Write	#0099	<DNP	96	0	Null	IgnoreSolidity	
+106	TSC	Eggs.tsc	Write	#0102	<FL-					
+0	Both	Eggs.tsc	Write	#0106	<DNP	12	18	Door	IgnoreSolidity, Interactable	
+103	TSC	Eggs.tsc	Read	#0108	<FLJ					
+0	Both	Eggs.tsc	Write	#0109	<DNP	20	18	Door	IgnoreSolidity, Interactable	
+105	TSC	Eggs.tsc	Read	#0110	<FLJ					
+0	Both	Eggs.tsc	Write	#0111	<DNP	21	18	Door	IgnoreSolidity, Interactable	
+101	TSC	Eggs.tsc	Write	#0400	<FL+					
+101	Both	Eggs.tsc	Write	#0400	<DNP	10	70	Sparkling Item	Interactable, HideWhenFlagSet	
+102	TSC	Eggs.tsc	Write	#0401	<FL+					
+102	Both	Eggs.tsc	Write	#0401	<DNP	14	70	Sparkling Item	Interactable, HideWhenFlagSet	
+100	TSC	Eggs.tsc	Write	#0500	<FL+					
+103	TSC	Eggs.tsc	Write	#0503	<FL+					
+6101	TSC	Eggs.tsc	Write	#0503	<FL+					
+0	Both	Eggs.tsc	Write	#0600	<DNA	36	58	Basu, 1 (enemy)	Shootable, ShowDamage	
+0	Both	Eggs.tsc	Write	#0600	<DNA	37	58	Basu, 1 (enemy)	Shootable, ShowDamage	
+0	Both	Eggs.tsc	Write	#0600	<DNA	38	58	Basu, 1 (enemy)	Shootable, ShowDamage	
+0	Both	Eggs.tsc	Write	#0600	<DNA	74	58	Basu, 1 (enemy)	Shootable, SpawnInOtherDirection, ShowDamage	
+103	Both	Eggs.tsc	Write	#0600	<DNP	93	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+103	TSC	Eggs.tsc	Write	#0600	<FL-					
+120	Entity	EggX.pxe	Read			9	42	Sue	HideWhenFlagSet	
+274	Entity	EggX.pxe	Read			10	136	Puppy, carried	AppearWhenFlagSet	
+120	TSC	EggX.tsc	Read	#0094	<FLJ					
+0	Both	EggX.tsc	Write	#0100	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+120	TSC	EggX.tsc	Write	#0200	<FL+					
+105	TSC	EggX.tsc	Write	#0200	<FL+					
+154	TSC	EggX.tsc	Write	#0200	<FL+					
+155	TSC	EggX.tsc	Write	#0200	<FL+					
+329	TSC	EggX.tsc	Write	#0200	<FL+					
+106	TSC	EggX.tsc	Write	#0200	<FL+					
+2800	TSC	EggX.tsc	Write	#0200	<FL+					
+120	Both	EggX.tsc	Write	#0200	<DNP	9	42	Sue	Interactable, HideWhenFlagSet	
+140	Entity	Egg6.pxe	Read			0	15	Treasure Chest, closed	HideWhenFlagSet	
+140	Entity	Egg6.pxe	Read			2	21	Treasure Chest, open	AppearWhenFlagSet	
+0	Entity	Egg6.pxe				3	125	Hidden Heart/Missile		
+274	Entity	Egg6.pxe	Read			4	136	Puppy, carried	AppearWhenFlagSet	
+140	TSC	Egg6.tsc	Read	#0200	<FLJ					
+140	TSC	Egg6.tsc	Write	#0200	<FL+					
+200	Entity	EggR.pxe	Read			8	15	Treasure Chest, closed	HideWhenFlagSet	
+200	Entity	EggR.pxe	Read			25	21	Treasure Chest, open	AppearWhenFlagSet	
+201	Entity	EggR.pxe	Read			26	86	Missile	AppearWhenFlagSet	
+201	Entity	EggR.pxe	Read			27	86	Missile	AppearWhenFlagSet	
+201	Entity	EggR.pxe	Read			31	86	Missile	AppearWhenFlagSet	
+274	Entity	EggR.pxe	Read			32	136	Puppy, carried	AppearWhenFlagSet	
+200	TSC	EggR.tsc	Read	#0300	<FLJ					
+200	TSC	EggR.tsc	Write	#0300	<FL+					
+226	Entity	Weed.pxe	Read			2	193	Scooter, crashed	AppearWhenFlagSet	
+217	Entity	Weed.pxe	Read			4	23	Teleporter lights	HideWhenFlagSet	
+225	Entity	Weed.pxe	Read			6	192	Scooter	HideWhenFlagSet	
+210	Entity	Weed.pxe	Read			7	70	Sparkling Item	HideWhenFlagSet	
+212	Entity	Weed.pxe	Read			20	40	Santa	HideWhenFlagSet	
+481	Entity	Weed.pxe	Read			21	97	Fan, up	AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			22	97	Fan, up	HideWhenFlagSet	
+0	Entity	Weed.pxe	Write			23	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			24	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			25	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			26	24	Power Critter (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			27	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			28	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			29	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			30	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			31	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			32	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			33	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			34	24	Power Critter (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			35	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			36	24	Power Critter (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			37	24	Power Critter (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			38	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			39	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			40	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			41	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			42	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			43	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			44	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			45	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			46	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			47	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			48	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			49	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			50	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			51	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			52	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			53	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			54	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			55	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			56	26	Bat, Black Circling (enemy)	Shootable	
+212	Entity	Weed.pxe	Read			57	46	H/V Trigger	HideWhenFlagSet	
+216	Entity	Weed.pxe	Read			58	0	Null	HideWhenFlagSet	
+481	Entity	Weed.pxe	Read			59	96	Fan, left	AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			60	96	Fan, left	HideWhenFlagSet	
+481	Entity	Weed.pxe	Read			61	97	Fan, up	AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			62	97	Fan, up	HideWhenFlagSet	
+0	Entity	Weed.pxe				64	35	Mannan (enemy)		
+0	Entity	Weed.pxe				65	35	Mannan (enemy)		
+0	Entity	Weed.pxe				68	35	Mannan (enemy)		
+520	Entity	Weed.pxe	Read			69	18	Door	HideWhenFlagSet	
+481	Entity	Weed.pxe	Read			70	97	Fan, up	HideWhenFlagSet	
+0	Entity	Weed.pxe				71	35	Mannan (enemy)		
+481	Entity	Weed.pxe	Read			72	98	Fan, right	AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			73	98	Fan, right	AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			74	98	Fan, right	HideWhenFlagSet	
+0	Entity	Weed.pxe	Write			76	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			77	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			78	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			79	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			80	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			81	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			82	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			83	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			84	26	Bat, Black Circling (enemy)	Shootable	
+481	Entity	Weed.pxe	Read			85	97	Fan, up	AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			86	97	Fan, up	AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			87	97	Fan, up	HideWhenFlagSet	
+481	Entity	Weed.pxe	Read			88	97	Fan, up	HideWhenFlagSet	
+0	Entity	Weed.pxe	Write			89	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			90	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe				91	35	Mannan (enemy)		
+261	Entity	Weed.pxe	Read, Write			92	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			93	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+220	Entity	Weed.pxe	Read			94	70	Sparkling Item	HideWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			96	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			97	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			98	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			99	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			100	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			101	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read			102	94	Kulala (enemy)	AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			103	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			104	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			105	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+213	Entity	Weed.pxe	Read			106	100	Grate	HideWhenFlagSet	
+218	Entity	Weed.pxe	Read			107	15	Treasure Chest, closed	HideWhenFlagSet	
+218	Entity	Weed.pxe	Read			108	21	Treasure Chest, open	AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			114	98	Fan, right	HideWhenFlagSet	
+481	Entity	Weed.pxe	Read			115	97	Fan, up	HideWhenFlagSet	
+481	Entity	Weed.pxe	Read			116	97	Fan, up	AppearWhenFlagSet	
+0	Entity	Weed.pxe				117	35	Mannan (enemy)		
+0	Entity	Weed.pxe				118	35	Mannan (enemy)		
+0	Entity	Weed.pxe				119	35	Mannan (enemy)		
+0	Entity	Weed.pxe				120	35	Mannan (enemy)		
+0	Entity	Weed.pxe				121	35	Mannan (enemy)		
+0	Entity	Weed.pxe				128	35	Mannan (enemy)		
+0	Entity	Weed.pxe	Write			130	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			131	104	Frog (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			132	104	Frog (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			133	104	Frog (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			134	104	Frog (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			135	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			136	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			137	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			138	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			139	104	Frog (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			140	104	Frog (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			141	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			142	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			143	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			144	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			145	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			146	26	Bat, Black Circling (enemy)	Shootable	
+0	Entity	Weed.pxe	Write			147	26	Bat, Black Circling (enemy)	Shootable	
+261	Entity	Weed.pxe	Read, Write			149	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+261	Entity	Weed.pxe	Read, Write			150	95	Jelly (enemy)	Shootable, AppearWhenFlagSet	
+481	Entity	Weed.pxe	Read			151	97	Fan, up	AppearWhenFlagSet	
+520	Entity	Weed.pxe	Read			152	0	Null	AppearWhenFlagSet	
+0	Entity	Weed.pxe				155	35	Mannan (enemy)		
+0	Entity	Weed.pxe				156	35	Mannan (enemy)		
+0	Entity	Weed.pxe				157	35	Mannan (enemy)		
+201	Entity	Weed.pxe	Read			158	86	Missile	AppearWhenFlagSet	
+201	Entity	Weed.pxe	Read			159	86	Missile	AppearWhenFlagSet	
+523	Entity	Weed.pxe	Read			164	55	Kazuma	AppearWhenFlagSet	
+523	Entity	Weed.pxe	Read			165	113	Professor Booster	AppearWhenFlagSet	
+227	Entity	Weed.pxe	Read			166	219	Generator - Smoke/Underwater Current	AppearWhenFlagSet	
+1341	Entity	Weed.pxe	Read			167	302	Camera Focus Marker	AppearWhenFlagSet	
+1341	Entity	Weed.pxe	Read			168	292	Quake	AppearWhenFlagSet	
+223	Entity	Weed.pxe	Read			169	21	Treasure Chest, open	AppearWhenFlagSet	
+223	Entity	Weed.pxe	Read			170	15	Treasure Chest, closed	HideWhenFlagSet	
+274	Entity	Weed.pxe	Read			171	136	Puppy, carried	AppearWhenFlagSet	
+2410	TSC	Weed.tsc	Read	#0090	<FLJ					
+2410	TSC	Weed.tsc	Read	#0091	<FLJ					
+2410	TSC	Weed.tsc	Read	#0092	<FLJ					
+2410	TSC	Weed.tsc	Read	#0093	<FLJ					
+2410	TSC	Weed.tsc	Read	#0094	<FLJ					
+224	TSC	Weed.tsc	Write	#0098	<FL+					
+0	Both	Weed.tsc	Write	#0098	<DNP	153	0	Null	IgnoreSolidity	
+2410	TSC	Weed.tsc	Write	#0099	<FL+					
+227	TSC	Weed.tsc	Write	#0100	<FL-					
+227	TSC	Weed.tsc	Write	#0101	<FL-					
+212	TSC	Weed.tsc	Read	#0101	<FLJ					
+0	Both	Weed.tsc	Write	#0102	<DNP	5	18	Door	IgnoreSolidity, Interactable	
+0	Both	Weed.tsc	Write	#0103	<DNP	8	18	Door	IgnoreSolidity, Interactable	
+214	TSC	Weed.tsc	Read	#0104	<FLJ					
+214	TSC	Weed.tsc	Write	#0105	<FL+					
+0	Both	Weed.tsc	Write	#0106	<DNP	75	18	Door	IgnoreSolidity, Interactable	
+0	Both	Weed.tsc	Write	#0107	<DNP	127	18	Door	IgnoreSolidity, Interactable	
+0	Both	Weed.tsc	Write	#0108	<DNP	1	18	Door	IgnoreSolidity, Interactable	
+222	TSC	Weed.tsc	Read	#0109	<FLJ					
+222	TSC	Weed.tsc	Write	#0110	<FL+					
+0	Both	Weed.tsc	Write	#0111	<DNP	111	18	Door	IgnoreSolidity, Interactable	
+0	Both	Weed.tsc	Write	#0113	<DNP	63	18	Door	IgnoreSolidity, Interactable	
+329	TSC	Weed.tsc	Write	#0130	<FL-					
+219	TSC	Weed.tsc	Write	#0130	<FL-					
+210	Both	Weed.tsc	Write	#0200	<DNP	7	70	Sparkling Item	Interactable, HideWhenFlagSet	
+210	TSC	Weed.tsc	Write	#0200	<FL+					
+2430	TSC	Weed.tsc	Read	#0202	<FLJ					
+261	Both	Weed.tsc	Write	#0202	<DNP	102	94	Kulala (enemy)	Shootable, RunEventWhenKilled, AppearWhenFlagSet, ShowDamage	
+2430	TSC	Weed.tsc	Write	#0202	<FL+					
+221	TSC	Weed.tsc	Read	#0220	<FLJ					
+484	TSC	Weed.tsc	Read	#0220	<FLJ					
+215	TSC	Weed.tsc	Read	#0220	<FLJ					
+216	TSC	Weed.tsc	Write	#0230	<FL+					
+216	Both	Weed.tsc	Write	#0230	<DNP	58	0	Null	IgnoreSolidity, Interactable, HideWhenFlagSet	
+215	TSC	Weed.tsc	Read	#0235	<FLJ					
+223	TSC	Weed.tsc	Read	#0236	<FLJ					
+223	TSC	Weed.tsc	Write	#0237	<FL+					
+521	TSC	Weed.tsc	Write	#0250	<FL+					
+522	TSC	Weed.tsc	Write	#0250	<FL+					
+520	TSC	Weed.tsc	Write	#0250	<FL+					
+522	TSC	Weed.tsc	Write	#0250	<FL-					
+523	TSC	Weed.tsc	Write	#0250	<FL+					
+525	TSC	Weed.tsc	Write	#0250	<FL+					
+226	TSC	Weed.tsc	Write	#0250	<FL+					
+227	TSC	Weed.tsc	Write	#0250	<FL+					
+2460	TSC	Weed.tsc	Write	#0250	<FL+					
+218	TSC	Weed.tsc	Read	#0302	<FLJ					
+218	TSC	Weed.tsc	Write	#0302	<FL+					
+220	Both	Weed.tsc	Write	#0305	<DNP	94	70	Sparkling Item	Interactable, HideWhenFlagSet	
+211	TSC	Weed.tsc	Read	#0500	<FLJ					
+211	TSC	Weed.tsc	Write	#0500	<FL+					
+212	TSC	Weed.tsc	Write	#0503	<FL+					
+212	Both	Weed.tsc	Write	#0503	<DNP	20	40	Santa	IgnoreSolidity, SpawnInOtherDirection, Interactable, HideWhenFlagSet	
+212	Both	Weed.tsc	Write	#0503	<DNP	57	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+219	TSC	Weed.tsc	Write	#0600	<FL+					
+523	Both	Weed.tsc	Write	#0600	<DNP	164	55	Kazuma	AppearWhenFlagSet	
+523	Both	Weed.tsc	Write	#0600	<DNP	165	113	Professor Booster	AppearWhenFlagSet, SpawnInOtherDirection	
+225	Both	Weed.tsc	Write	#0600	<DNP	6	192	Scooter	IgnoreSolidity, Interactable, HideWhenFlagSet	
+523	TSC	Weed.tsc	Write	#0600	<FL-					
+225	TSC	Weed.tsc	Write	#0600	<FL+					
+274	Entity	Santa.pxe	Read			11	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Santa.tsc	Write	#0100	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+242	TSC	Santa.tsc	Read	#0300	<FLJ					
+0	Both	Santa.tsc	Write	#0301	<DNP	6	38	Fireplace	Interactable	
+242	TSC	Santa.tsc	Read	#0301	<FLJ					
+242	TSC	Santa.tsc	Write	#0301	<FL+					
+240	TSC	Santa.tsc	Read	#0500	<FLJ					
+241	TSC	Santa.tsc	Write	#0500	<FL+					
+240	TSC	Santa.tsc	Write	#0500	<FL+					
+274	Entity	Chako.pxe	Read			9	136	Puppy, carried	AppearWhenFlagSet	
+263	TSC	Chako.tsc	Write	#0090	<FL-					
+263	TSC	Chako.tsc	Write	#0091	<FL-					
+263	TSC	Chako.tsc	Write	#0092	<FL-					
+263	TSC	Chako.tsc	Write	#0093	<FL-					
+263	TSC	Chako.tsc	Write	#0094	<FL-					
+0	Both	Chako.tsc	Write	#0100	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+241	TSC	Chako.tsc	Read	#0200	<FLJ					
+261	TSC	Chako.tsc	Write	#0201	<FL+					
+263	TSC	Chako.tsc	Write	#0201	<FL+					
+213	TSC	Chako.tsc	Write	#0202	<FL+					
+2403	TSC	Chako.tsc	Read	#0210	<FLJ					
+241	TSC	Chako.tsc	Read	#0210	<FLJ					
+2403	TSC	Chako.tsc	Write	#0211	<FL+					
+2430	TSC	Chako.tsc	Read	#0300	<FLJ					
+241	TSC	Chako.tsc	Read	#0300	<FLJ					
+261	TSC	Chako.tsc	Write	#0303	<FL+					
+263	TSC	Chako.tsc	Write	#0303	<FL+					
+641	Entity	MazeI.pxe	Read			5	138	Doorway, closed doors	HideWhenFlagSet	
+641	Entity	MazeI.pxe	Read			6	138	Doorway, closed doors	HideWhenFlagSet	
+642	Entity	MazeI.pxe	Read			11	70	Sparkling Item	HideWhenFlagSet	
+0	Entity	MazeI.pxe	Write			18	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			19	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			20	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			21	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			22	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			23	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			24	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			25	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			26	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeI.pxe	Write			27	147	Critter, Hovering Purple (enemy)	Shootable	
+640	Entity	MazeI.pxe	Read			35	150	Quote	AppearWhenFlagSet	
+274	Entity	MazeI.pxe	Read			42	136	Puppy, carried	AppearWhenFlagSet	
+641	TSC	MazeI.tsc	Read	#0202	<FLJ					
+642	Both	MazeI.tsc	Write	#0300	<DNP	11	70	Sparkling Item	Interactable, HideWhenFlagSet	
+640	Both	MazeI.tsc	Write	#0400	<DNP	35	150	Quote	AppearWhenFlagSet	
+640	TSC	MazeI.tsc	Write	#0400	<FL-					
+2413	TSC	MazeI.tsc	Write	#0400	<FL+					
+641	TSC	MazeI.tsc	Read	#0402	<FLJ					
+641	TSC	MazeI.tsc	Write	#0402	<FL+					
+641	Both	MazeI.tsc	Write	#0402	<DNP	5	138	Doorway, closed doors	HideWhenFlagSet	
+641	Both	MazeI.tsc	Write	#0402	<DNP	6	138	Doorway, closed doors	SpawnInOtherDirection, HideWhenFlagSet	
+0	Both	MazeI.tsc	Write	#0601	<DNP	40	0	Null	IgnoreSolidity	
+243	TSC	MazeI.tsc	Write	#0610	<FL+					
+273	Entity	Sand.pxe	Read			7	124	Sunstone	HideWhenFlagSet	
+273	Entity	Sand.pxe	Read			8	124	Sunstone	HideWhenFlagSet	
+272	Entity	Sand.pxe	Read			10	46	H/V Trigger	HideWhenFlagSet	
+0	Entity	Sand.pxe	Write			14	47	Sandcroc, Green (enemy)	Shootable	
+278	Entity	Sand.pxe	Read			20	138	Doorway, closed doors	HideWhenFlagSet	
+278	Entity	Sand.pxe	Read			21	138	Doorway, closed doors	HideWhenFlagSet	
+0	Entity	Sand.pxe	Write			23	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			24	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			25	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			26	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			27	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			28	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			29	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			30	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			31	47	Sandcroc, Green (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			36	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			37	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			38	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			39	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			40	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			41	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			42	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			43	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			44	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			45	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			46	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			47	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			48	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			49	56	Beetle, Horizontal Brown (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			50	56	Beetle, Horizontal Brown (enemy)	Shootable	
+270	Entity	Sand.pxe	Read			51	70	Sparkling Item	HideWhenFlagSet	
+271	Entity	Sand.pxe	Read			52	70	Sparkling Item	HideWhenFlagSet	
+0	Entity	Sand.pxe	Write			54	49	Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			55	49	Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			56	49	Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			57	49	Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			59	54	Skullstep (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			60	54	Skullstep (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			61	54	Skullstep (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			62	54	Skullstep (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			63	54	Skullstep (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			64	54	Skullstep (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			65	51	Crow & Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			66	51	Crow & Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			67	51	Crow & Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			68	51	Crow & Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			69	51	Crow & Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			70	51	Crow & Skullhead (enemy)	Shootable	
+0	Entity	Sand.pxe				71	44	Polish (enemy)		
+0	Entity	Sand.pxe				72	44	Polish (enemy)		
+0	Entity	Sand.pxe				73	44	Polish (enemy)		
+0	Entity	Sand.pxe				74	44	Polish (enemy)		
+0	Entity	Sand.pxe				75	44	Polish (enemy)		
+0	Entity	Sand.pxe				76	44	Polish (enemy)		
+0	Entity	Sand.pxe				77	44	Polish (enemy)		
+0	Entity	Sand.pxe				78	44	Polish (enemy)		
+0	Entity	Sand.pxe				79	44	Polish (enemy)		
+0	Entity	Sand.pxe				80	44	Polish (enemy)		
+0	Entity	Sand.pxe				81	44	Polish (enemy)		
+0	Entity	Sand.pxe	Write			82	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			83	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			84	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			85	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			86	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			87	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			88	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			89	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			90	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			91	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			92	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			93	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			94	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			95	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			96	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			97	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			98	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			99	57	Crow (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			100	57	Crow (enemy)	Shootable	
+273	Entity	Sand.pxe	Read			103	46	H/V Trigger	HideWhenFlagSet	
+0	Entity	Sand.pxe				104	125	Hidden Heart/Missile		
+0	Entity	Sand.pxe				105	125	Hidden Heart/Missile		
+0	Entity	Sand.pxe				107	125	Hidden Heart/Missile		
+0	Entity	Sand.pxe	Write			111	114	Press (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			112	114	Press (enemy)	Shootable	
+201	Entity	Sand.pxe	Read			121	86	Missile	AppearWhenFlagSet	
+201	Entity	Sand.pxe	Read			122	86	Missile	AppearWhenFlagSet	
+201	Entity	Sand.pxe	Read			123	86	Missile	AppearWhenFlagSet	
+276	Entity	Sand.pxe	Read			124	126	Puppy, running	HideWhenFlagSet	
+275	Entity	Sand.pxe	Read			125	70	Sparkling Item	HideWhenFlagSet	
+0	Entity	Sand.pxe	Write			127	134	Armadillo (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			128	134	Armadillo (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			129	134	Armadillo (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			130	134	Armadillo (enemy)	Shootable	
+0	Entity	Sand.pxe	Write			131	135	Skeleton (enemy)	Shootable	
+274	Entity	Sand.pxe	Read			132	136	Puppy, carried	AppearWhenFlagSet	
+277	Entity	Sand.pxe	Read			134	132	Puppy, barking	HideWhenFlagSet	
+277	Entity	Sand.pxe	Read			135	46	H/V Trigger	HideWhenFlagSet	
+279	Entity	Sand.pxe	Read			136	15	Treasure Chest, closed	HideWhenFlagSet	
+0	Entity	Sand.pxe	Write			137	135	Skeleton (enemy)	Shootable	
+201	Entity	Sand.pxe	Read			142	86	Missile	AppearWhenFlagSet	
+201	Entity	Sand.pxe	Read			143	86	Missile	AppearWhenFlagSet	
+0	Entity	Sand.pxe				153	125	Hidden Heart/Missile		
+0	Entity	Sand.pxe				154	125	Hidden Heart/Missile		
+0	Entity	Sand.pxe				155	125	Hidden Heart/Missile		
+1341	Entity	Sand.pxe	Read			156	292	Quake	AppearWhenFlagSet	
+1341	Entity	Sand.pxe	Read			157	302	Camera Focus Marker	AppearWhenFlagSet	
+281	Entity	Sand.pxe	Read			158	46	H/V Trigger	HideWhenFlagSet	
+281	Entity	Sand.pxe	Read			159	117	Curly, standing	HideWhenFlagSet	
+243	Entity	Sand.pxe	Read			161	23	Teleporter lights	AppearWhenFlagSet	
+279	Entity	Sand.pxe	Read			164	21	Treasure Chest, open	AppearWhenFlagSet	
+0	Both	Sand.tsc	Write	#0099	<DNP	101	0	Null	IgnoreSolidity	
+0	Both	Sand.tsc	Write	#0101	<DNP	5	18	Door	IgnoreSolidity, Interactable	
+0	Both	Sand.tsc	Write	#0102	<DNP	5	18	Door	IgnoreSolidity, Interactable	
+0	Both	Sand.tsc	Write	#0103	<DNP	16	18	Door	IgnoreSolidity, Interactable	
+593	TSC	Sand.tsc	Read	#0103	<FLJ					
+272	Both	Sand.tsc	Write	#0202	<DNP	10	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+6104	TSC	Sand.tsc	Write	#0210	<FL+					
+272	TSC	Sand.tsc	Read	#0220	<FLJ					
+273	Both	Sand.tsc	Write	#0221	<DNP	103	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+273	Both	Sand.tsc	Write	#0221	<DNP	7	124	Sunstone	Invulnerable, HardSolid, HideWhenFlagSet	
+273	Both	Sand.tsc	Write	#0221	<DNP	8	124	Sunstone	Invulnerable, HardSolid, HideWhenFlagSet	
+273	TSC	Sand.tsc	Write	#0221	<FL+					
+620	TSC	Sand.tsc	Read	#0230	<FLJ					
+278	TSC	Sand.tsc	Read	#0230	<FLJ					
+278	Both	Sand.tsc	Write	#0231	<DNP	21	138	Doorway, closed doors	HideWhenFlagSet	
+278	Both	Sand.tsc	Write	#0231	<DNP	20	138	Doorway, closed doors	SpawnInOtherDirection, HideWhenFlagSet	
+281	Both	Sand.tsc	Write	#0320	<DNP	158	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+281	Both	Sand.tsc	Write	#0320	<DNP	159	117	Curly, standing	HideWhenFlagSet	
+593	TSC	Sand.tsc	Read	#0340	<FLJ					
+274	TSC	Sand.tsc	Read	#0341	<FLJ					
+280	TSC	Sand.tsc	Write	#0342	<FL+					
+275	Both	Sand.tsc	Write	#0401	<DNP	125	70	Sparkling Item	SpawnInOtherDirection, Interactable, HideWhenFlagSet	
+275	TSC	Sand.tsc	Write	#0401	<FL+					
+276	Both	Sand.tsc	Write	#0402	<DNP	124	126	Puppy, running	HideWhenFlagSet	
+276	TSC	Sand.tsc	Write	#0402	<FL+					
+277	Both	Sand.tsc	Write	#0411	<DNP	134	132	Puppy, barking	SpawnInOtherDirection, HideWhenFlagSet	
+277	Both	Sand.tsc	Write	#0411	<DNP	135	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+279	TSC	Sand.tsc	Read	#0412	<FLJ					
+279	TSC	Sand.tsc	Write	#0412	<FL+					
+270	Both	Sand.tsc	Write	#0500	<DNP	51	70	Sparkling Item	Interactable, HideWhenFlagSet	
+271	Both	Sand.tsc	Write	#0501	<DNP	52	70	Sparkling Item	Interactable, HideWhenFlagSet	
+0	Both	Sand.tsc	Write	#0601	<DNP	163	0	Null	IgnoreSolidity	
+243	TSC	Sand.tsc	Read	#0610	<FLJ					
+360	Entity	Mimi.pxe	Read			2	41	Busted doorway	AppearWhenFlagSet	
+360	Entity	Mimi.pxe	Read			8	18	Door	HideWhenFlagSet	
+322	Entity	Mimi.pxe	Read			16	15	Treasure Chest, closed	HideWhenFlagSet	
+322	Entity	Mimi.pxe	Read			17	21	Treasure Chest, open	AppearWhenFlagSet	
+327	Entity	Mimi.pxe	Read			22	74	Jack	HideWhenFlagSet	
+320	Entity	Mimi.pxe	Read			24	60	Toroko	HideWhenFlagSet	
+320	Entity	Mimi.pxe	Read			25	61	King	HideWhenFlagSet	
+321	Entity	Mimi.pxe	Read			26	61	King	AppearWhenFlagSet	
+340	Entity	Mimi.pxe	Read			29	79	Mahin	HideWhenFlagSet	
+274	Entity	Mimi.pxe	Read			35	136	Puppy, carried	AppearWhenFlagSet	
+341	TSC	Mimi.tsc	Read	#0090	<FLJ					
+341	TSC	Mimi.tsc	Read	#0091	<FLJ					
+341	TSC	Mimi.tsc	Read	#0092	<FLJ					
+341	TSC	Mimi.tsc	Read	#0093	<FLJ					
+341	TSC	Mimi.tsc	Read	#0094	<FLJ					
+324	TSC	Mimi.tsc	Read	#0100	<FLJ					
+324	TSC	Mimi.tsc	Write	#0101	<FL+					
+441	TSC	Mimi.tsc	Write	#0101	<FL+					
+327	TSC	Mimi.tsc	Read	#0104	<FLJ					
+360	TSC	Mimi.tsc	Read	#0104	<FLJ					
+360	TSC	Mimi.tsc	Read	#0105	<FLJ					
+327	TSC	Mimi.tsc	Write	#0111	<FL+					
+443	TSC	Mimi.tsc	Write	#0111	<FL+					
+327	Both	Mimi.tsc	Write	#0111	<DNP	22	74	Jack	HideWhenFlagSet	
+322	TSC	Mimi.tsc	Read	#0200	<FLJ					
+322	TSC	Mimi.tsc	Write	#0200	<FL+					
+323	TSC	Mimi.tsc	Read	#0301	<FLJ					
+320	TSC	Mimi.tsc	Write	#0301	<FL+					
+323	TSC	Mimi.tsc	Write	#0301	<FL+					
+320	TSC	Mimi.tsc	Write	#0302	<FL+					
+321	TSC	Mimi.tsc	Write	#0302	<FL+					
+320	Both	Mimi.tsc	Write	#0302	<DNP	24	60	Toroko	HideWhenFlagSet	
+0	Both	Mimi.tsc	Write	#0302	<DNP	32	0	Null	IgnoreSolidity	
+371	TSC	Mimi.tsc	Write	#0308	<FL-					
+156	TSC	Mimi.tsc	Read	#0311	<FLJ					
+120	TSC	Mimi.tsc	Read	#0311	<FLJ					
+360	TSC	Mimi.tsc	Read	#0311	<FLJ					
+155	TSC	Mimi.tsc	Write	#0400	<FL-					
+154	TSC	Mimi.tsc	Write	#0420	<FL-					
+157	TSC	Mimi.tsc	Write	#0420	<FL+					
+224	TSC	Mimi.tsc	Read	#0600	<FLJ					
+325	TSC	Mimi.tsc	Read	#0600	<FLJ					
+325	TSC	Mimi.tsc	Write	#0600	<FL+					
+224	TSC	Mimi.tsc	Read	#0610	<FLJ					
+301	Entity	Cave.pxe	Read, Write			5	59	Evil Door (enemy)	Shootable, HideWhenFlagSet	
+0	Entity	Cave.pxe	Write			9	64	Critter, Hopping Blue (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			10	64	Critter, Hopping Blue (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			11	64	Critter, Hopping Blue (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			12	65	Bat, Blue Vertical (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			13	65	Bat, Blue Vertical (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			14	65	Bat, Blue Vertical (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			15	64	Critter, Hopping Blue (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			16	65	Bat, Blue Vertical (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			17	65	Bat, Blue Vertical (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			18	64	Critter, Hopping Blue (enemy)	Shootable	
+0	Entity	Cave.pxe	Write			28	65	Bat, Blue Vertical (enemy)	Shootable	
+303	Entity	Cave.pxe	Read, Write			29	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			30	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			31	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			32	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			33	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			34	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			35	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			36	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			37	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			38	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			39	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			40	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			41	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			42	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			43	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			44	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			45	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			46	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			47	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			48	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			49	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			50	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			51	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			52	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			53	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			54	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			55	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			56	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			57	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			58	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			59	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			60	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			61	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			62	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			63	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			64	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			65	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			66	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			67	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			68	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			69	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			70	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			71	64	Critter, Hopping Blue (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			72	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			73	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			74	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			75	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			76	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			77	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			78	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			79	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+303	Entity	Cave.pxe	Read, Write			80	65	Bat, Blue Vertical (enemy)	Shootable, AppearWhenFlagSet	
+304	Entity	Cave.pxe	Read			86	70	Sparkling Item	HideWhenFlagSet	
+274	Entity	Cave.pxe	Read			88	136	Puppy, carried	AppearWhenFlagSet	
+302	TSC	Cave.tsc	Read	#0102	<FLJ					
+301	TSC	Cave.tsc	Read	#0102	<FLJ					
+304	TSC	Cave.tsc	Read	#0103	<FLJ					
+1640	TSC	Cave.tsc	Read	#0105	<FLJ					
+302	TSC	Cave.tsc	Write	#0106	<FL+					
+1641	TSC	Cave.tsc	Write	#0106	<FL+					
+1642	TSC	Cave.tsc	Write	#0106	<FL+					
+304	Both	Cave.tsc	Write	#0400	<DNP	86	70	Sparkling Item	Interactable, HideWhenFlagSet	
+430	Entity	Start.pxe	Read			3	0	Null	HideWhenFlagSet	
+274	Entity	Start.pxe	Read			7	136	Puppy, carried	AppearWhenFlagSet	
+430	TSC	Start.tsc	Write	#0200	<FL+					
+360	Entity	Barr.pxe	Read			2	41	Busted doorway	AppearWhenFlagSet	
+360	Entity	Barr.pxe	Read			3	18	Door	HideWhenFlagSet	
+360	Entity	Barr.pxe	Read			6	0	Null	HideWhenFlagSet	
+360	Entity	Barr.pxe	Read			7	0	Null	HideWhenFlagSet	
+274	Entity	Barr.pxe	Read			15	136	Puppy, carried	AppearWhenFlagSet	
+361	TSC	Barr.tsc	Read	#0100	<FLJ					
+360	TSC	Barr.tsc	Read	#0100	<FLJ					
+0	Both	Barr.tsc	Write	#0291	<DNP	5	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+360	TSC	Barr.tsc	Read	#0291	<FLJ					
+2470	TSC	Barr.tsc	Read	#0292	<FLJ					
+361	TSC	Barr.tsc	Write	#0292	<FL+					
+361	TSC	Barr.tsc	Write	#0402	<FL-					
+362	TSC	Barr.tsc	Write	#0402	<FL-					
+2470	TSC	Barr.tsc	Write	#0402	<FL+					
+6100	TSC	Barr.tsc	Write	#0402	<FL+					
+360	TSC	Barr.tsc	Write	#1000	<FL+					
+361	TSC	Barr.tsc	Write	#1000	<FL+					
+440	TSC	Barr.tsc	Write	#1000	<FL+					
+326	TSC	Barr.tsc	Write	#1000	<FL-					
+361	TSC	Barr.tsc	Write	#1000	<FL+					
+362	TSC	Barr.tsc	Write	#1001	<FL-					
+361	TSC	Barr.tsc	Write	#1001	<FL-					
+372	Entity	Pool.pxe	Read			8	75	Kanpachi	HideWhenFlagSet	
+370	Entity	Pool.pxe	Read			9	70	Sparkling Item	HideWhenFlagSet	
+0	Entity	Pool.pxe	Write			10	71	Chinfish (enemy)	Shootable	
+370	Entity	Pool.pxe	Read			11	46	H/V Trigger	HideWhenFlagSet	
+6109	Entity	Pool.pxe	Read			16	216	Debug Cat	AppearWhenFlagSet	
+274	Entity	Pool.pxe	Read			17	136	Puppy, carried	AppearWhenFlagSet	
+341	TSC	Pool.tsc	Read	#0090	<FLJ					
+341	TSC	Pool.tsc	Read	#0091	<FLJ					
+341	TSC	Pool.tsc	Read	#0092	<FLJ					
+341	TSC	Pool.tsc	Read	#0093	<FLJ					
+341	TSC	Pool.tsc	Read	#0094	<FLJ					
+326	TSC	Pool.tsc	Write	#0300	<FL+					
+371	TSC	Pool.tsc	Write	#0300	<FL+					
+321	TSC	Pool.tsc	Write	#0300	<FL-					
+362	TSC	Pool.tsc	Write	#0300	<FL+					
+370	Both	Pool.tsc	Write	#0300	<DNP	9	70	Sparkling Item	Interactable, HideWhenFlagSet	
+370	Both	Pool.tsc	Write	#0401	<DNP	11	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+371	Both	Pool.tsc	Write	#0401	<DNP	12	0	Null	IgnoreSolidity	
+371	TSC	Pool.tsc	Write	#0401	<FL+					
+0	Both	Pool.tsc	Write	#0410	<DNP	13	0	Null	IgnoreSolidity	
+2404	TSC	Pool.tsc	Read	#0411	<FLJ					
+2404	TSC	Pool.tsc	Write	#0411	<FL+					
+390	Entity	Cemet.pxe	Read			5	0	Null	AppearWhenFlagSet	
+390	Entity	Cemet.pxe	Read			6	70	Sparkling Item	HideWhenFlagSet	
+0	Entity	Cemet.pxe	Write			7	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			8	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			9	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			10	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			11	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			13	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			14	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			15	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			16	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			17	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			18	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			19	69	Pignon (enemy)	Shootable	
+0	Entity	Cemet.pxe	Write			20	81	Giant Pignon (enemy)	Shootable	
+391	Entity	Cemet.pxe	Read			21	278	Little Family	HideWhenFlagSet	
+274	Entity	Cemet.pxe	Read			22	136	Puppy, carried	AppearWhenFlagSet	
+391	Both	Cemet.tsc	Write	#0200	<DNP	21	278	Little Family	Interactable, HideWhenFlagSet	
+390	TSC	Cemet.tsc	Read	#0300	<FLJ					
+390	TSC	Cemet.tsc	Write	#0300	<FL+					
+411	Entity	Plant.pxe	Read			4	77	Sandaime's Pavillion	HideWhenFlagSet	
+410	Entity	Plant.pxe	Read			6	70	Sparkling Item	HideWhenFlagSet	
+411	Entity	Plant.pxe	Read			21	77	Sandaime's Pavillion	AppearWhenFlagSet	
+412	Entity	Plant.pxe	Read			22	70	Sparkling Item	HideWhenFlagSet	
+274	Entity	Plant.pxe	Read			23	136	Puppy, carried	AppearWhenFlagSet	
+341	TSC	Plant.tsc	Read	#0090	<FLJ					
+341	TSC	Plant.tsc	Read	#0091	<FLJ					
+341	TSC	Plant.tsc	Read	#0092	<FLJ					
+341	TSC	Plant.tsc	Read	#0093	<FLJ					
+341	TSC	Plant.tsc	Read	#0094	<FLJ					
+1020	TSC	Plant.tsc	Read	#0220	<FLJ					
+410	TSC	Plant.tsc	Write	#0300	<FL+					
+410	Both	Plant.tsc	Write	#0300	<DNP	6	70	Sparkling Item	Interactable, HideWhenFlagSet	
+412	Both	Plant.tsc	Write	#0400	<DNP	22	70	Sparkling Item	Interactable, HideWhenFlagSet	
+520	Entity	Shelt.pxe	Read			3	18	Door	HideWhenFlagSet	
+521	Entity	Shelt.pxe	Read			10	62	Kazuma, facing away	HideWhenFlagSet	
+522	Entity	Shelt.pxe	Read			12	55	Kazuma	AppearWhenFlagSet	
+525	Entity	Shelt.pxe	Read			16	16	Save Point	AppearWhenFlagSet	
+525	Entity	Shelt.pxe	Read			17	0	Null	HideWhenFlagSet	
+525	Entity	Shelt.pxe	Read			19	0	Null	HideWhenFlagSet	
+525	Entity	Shelt.pxe	Read			20	17	Health/Ammo Refill	AppearWhenFlagSet	
+274	Entity	Shelt.pxe	Read			21	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Shelt.tsc	Write	#0099	<DNP	15	0	Null	IgnoreSolidity	
+520	TSC	Shelt.tsc	Read	#0100	<FLJ					
+521	TSC	Shelt.tsc	Write	#0104	<FL+					
+522	TSC	Shelt.tsc	Write	#0104	<FL+					
+520	TSC	Shelt.tsc	Write	#0104	<FL+					
+522	TSC	Shelt.tsc	Write	#0104	<FL-					
+523	TSC	Shelt.tsc	Write	#0104	<FL+					
+525	TSC	Shelt.tsc	Write	#0104	<FL+					
+226	TSC	Shelt.tsc	Write	#0104	<FL+					
+227	TSC	Shelt.tsc	Write	#0104	<FL+					
+2460	TSC	Shelt.tsc	Write	#0104	<FL+					
+440	Entity	Comu.pxe	Read			9	61	King	AppearWhenFlagSet	
+443	Entity	Comu.pxe	Read			10	74	Jack	AppearWhenFlagSet	
+444	Entity	Comu.pxe	Read			11	74	Jack	AppearWhenFlagSet	
+274	Entity	Comu.pxe	Read			12	136	Puppy, carried	AppearWhenFlagSet	
+341	TSC	Comu.tsc	Read	#0090	<FLJ					
+341	TSC	Comu.tsc	Read	#0091	<FLJ					
+341	TSC	Comu.tsc	Read	#0092	<FLJ					
+341	TSC	Comu.tsc	Read	#0093	<FLJ					
+341	TSC	Comu.tsc	Read	#0094	<FLJ					
+440	Both	Comu.tsc	Write	#0099	<DNP	9	61	King	AppearWhenFlagSet, SpawnInOtherDirection, Interactable	
+443	Both	Comu.tsc	Write	#0099	<DNP	10	74	Jack	AppearWhenFlagSet, Interactable	
+444	Both	Comu.tsc	Write	#0099	<DNP	11	74	Jack	AppearWhenFlagSet, SpawnInOtherDirection, Interactable	
+0	Both	Comu.tsc	Write	#0100	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+327	TSC	Comu.tsc	Read	#0200	<FLJ					
+442	TSC	Comu.tsc	Read	#0300	<FLJ					
+442	TSC	Comu.tsc	Read	#0301	<FLJ					
+442	TSC	Comu.tsc	Write	#0301	<FL+					
+0	Both	Comu.tsc	Write	#0301	<DNP	4	38	Fireplace	Interactable	
+0	Both	Comu.tsc	Write	#0302	<DNP	4	38	Fireplace	Interactable	
+274	Entity	MiBox.pxe	Read			5	136	Puppy, carried	AppearWhenFlagSet	
+274	Entity	EgEnd1.pxe	Read			8	136	Puppy, carried	AppearWhenFlagSet	
+0	Entity	Cthu.pxe				8	125	Hidden Heart/Missile		
+274	Entity	Cthu.pxe	Read			9	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Cthu.tsc	Write	#0101	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+201	Entity	Egg1.pxe	Read			2	86	Missile	AppearWhenFlagSet	
+274	Entity	Egg1.pxe	Read			3	136	Puppy, carried	AppearWhenFlagSet	
+470	TSC	Egg1.tsc	Read	#0200	<FLJ					
+470	TSC	Egg1.tsc	Write	#0201	<FL+					
+440	TSC	Pens2.tsc	Write	#0700	<FL-					
+443	TSC	Pens2.tsc	Write	#0700	<FL-					
+483	Entity	Malco.pxe	Read			2	107	Malco	HideWhenFlagSet	
+485	Entity	Malco.pxe	Read			9	109	Malco, damaged	AppearWhenFlagSet	
+274	Entity	Malco.pxe	Read			10	136	Puppy, carried	AppearWhenFlagSet	
+481	TSC	Malco.tsc	Read	#0094	<FLJ					
+830	TSC	Malco.tsc	Read	#0095	<FLJ					
+480	TSC	Malco.tsc	Read	#0100	<FLJ					
+0	Both	Malco.tsc	Write	#0100	<DNP	5	18	Door	IgnoreSolidity, Interactable	
+481	TSC	Malco.tsc	Read	#0200	<FLJ					
+481	TSC	Malco.tsc	Write	#0200	<FL+					
+480	TSC	Malco.tsc	Write	#0203	<FL-					
+482	TSC	Malco.tsc	Write	#0203	<FL+					
+215	TSC	Malco.tsc	Write	#0203	<FL+					
+6102	TSC	Malco.tsc	Write	#0203	<FL+					
+480	TSC	Malco.tsc	Write	#0204	<FL+					
+483	TSC	Malco.tsc	Read	#0300	<FLJ					
+481	TSC	Malco.tsc	Read	#0300	<FLJ					
+482	TSC	Malco.tsc	Read	#0301	<FLJ					
+483	TSC	Malco.tsc	Write	#0302	<FL+					
+485	TSC	Malco.tsc	Write	#0302	<FL+					
+484	TSC	Malco.tsc	Write	#0302	<FL+					
+486	TSC	Malco.tsc	Read	#0303	<FLJ					
+486	TSC	Malco.tsc	Write	#0312	<FL+					
+221	TSC	Malco.tsc	Write	#0312	<FL+					
+274	Entity	WeedS.pxe	Read			3	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	WeedS.tsc	Write	#0100	<DNP	1	18	Door	IgnoreSolidity, Interactable	
+0	Entity	WeedD.pxe	Write			1	114	Press (enemy)	Shootable	
+0	Entity	WeedD.pxe	Write			2	114	Press (enemy)	Shootable	
+540	Entity	WeedD.pxe	Read			4	70	Sparkling Item	HideWhenFlagSet	
+274	Entity	WeedD.pxe	Read			5	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	WeedD.tsc	Write	#0100	<DNP	0	18	Door	IgnoreSolidity, Interactable	
+540	Both	WeedD.tsc	Write	#0304	<DNP	4	70	Sparkling Item	Interactable, HideWhenFlagSet	
+501	Entity	Frog.pxe	Read			8	15	Treasure Chest, closed	HideWhenFlagSet	
+501	Entity	Frog.pxe	Read			10	21	Treasure Chest, open	AppearWhenFlagSet	
+274	Entity	Frog.pxe	Read			14	136	Puppy, carried	AppearWhenFlagSet	
+500	TSC	Frog.tsc	Read	#0100	<FLJ					
+501	TSC	Frog.tsc	Read	#0200	<FLJ					
+501	TSC	Frog.tsc	Write	#0200	<FL+					
+0	Both	Frog.tsc	Write	#0202	<DNP	11	0	Null	IgnoreSolidity	
+500	TSC	Frog.tsc	Write	#0202	<FL+					
+0	Both	Frog.tsc	Write	#0400	<DNP	12	0	Null	IgnoreSolidity	
+0	Both	Frog.tsc	Write	#0400	<DNP	13	0	Null	IgnoreSolidity	
+500	TSC	Frog.tsc	Write	#1000	<FL-					
+6103	TSC	Frog.tsc	Write	#1000	<FL+					
+565	Entity	Curly.pxe	Read			9	121	Colon, 2	HideWhenFlagSet	
+565	Entity	Curly.pxe	Read			10	121	Colon, 2	HideWhenFlagSet	
+565	Entity	Curly.pxe	Read			11	120	Colon, 1	HideWhenFlagSet	
+565	Entity	Curly.pxe	Read			12	120	Colon, 1	HideWhenFlagSet	
+274	Entity	Curly.pxe	Read			13	136	Puppy, carried	AppearWhenFlagSet	
+560	Entity	Curly.pxe	Read			14	46	H/V Trigger	HideWhenFlagSet	
+560	Entity	Curly.pxe	Read			15	0	Null	HideWhenFlagSet	
+560	Entity	Curly.pxe	Read			16	0	Null	HideWhenFlagSet	
+560	Entity	Curly.pxe	Read			17	0	Null	HideWhenFlagSet	
+560	Entity	Curly.pxe	Read			18	0	Null	HideWhenFlagSet	
+560	Entity	Curly.pxe	Read			19	0	Null	HideWhenFlagSet	
+341	TSC	Curly.tsc	Read	#0090	<FLJ					
+341	TSC	Curly.tsc	Read	#0094	<FLJ					
+561	TSC	Curly.tsc	Read	#0100	<FLJ					
+561	TSC	Curly.tsc	Read	#0101	<FLJ					
+564	TSC	Curly.tsc	Read	#0200	<FLJ					
+562	TSC	Curly.tsc	Read	#0200	<FLJ					
+273	TSC	Curly.tsc	Read	#0202	<FLJ					
+564	TSC	Curly.tsc	Write	#0206	<FL+					
+560	Both	Curly.tsc	Write	#0300	<DNP	14	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+561	TSC	Curly.tsc	Write	#0300	<FL+					
+565	Both	Curly.tsc	Write	#0300	<DNP	12	120	Colon, 1	SpawnInOtherDirection, Interactable, HideWhenFlagSet	
+565	Both	Curly.tsc	Write	#0300	<DNP	9	121	Colon, 2	Interactable, HideWhenFlagSet	
+565	Both	Curly.tsc	Write	#0300	<DNP	11	120	Colon, 1	Interactable, HideWhenFlagSet	
+565	Both	Curly.tsc	Write	#0300	<DNP	10	121	Colon, 2	SpawnInOtherDirection, Interactable, HideWhenFlagSet	
+565	Both	Curly.tsc	Write	#0300	<DNP	8	117	Curly, standing	SpawnInOtherDirection, Interactable	
+561	TSC	Curly.tsc	Write	#0400	<FL-					
+565	TSC	Curly.tsc	Write	#0400	<FL-					
+562	TSC	Curly.tsc	Write	#0400	<FL+					
+6112	TSC	Curly.tsc	Write	#0400	<FL+					
+562	TSC	Curly.tsc	Write	#0410	<FL+					
+563	TSC	Curly.tsc	Write	#0415	<FL+					
+563	TSC	Curly.tsc	Read	#0500	<FLJ					
+562	TSC	Curly.tsc	Write	#0510	<FL+					
+563	TSC	Curly.tsc	Write	#0517	<FL+					
+550	Entity	WeedB.pxe	Read			1	21	Treasure Chest, open	AppearWhenFlagSet	
+550	Entity	WeedB.pxe	Read			2	15	Treasure Chest, closed	HideWhenFlagSet	
+550	Entity	WeedB.pxe	Read			5	0	Null	HideWhenFlagSet	
+274	Entity	WeedB.pxe	Read			9	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	WeedB.tsc	Write	#0100	<DNP	0	18	Door	IgnoreSolidity, Interactable	
+550	TSC	WeedB.tsc	Read	#0202	<FLJ					
+550	TSC	WeedB.tsc	Read	#0300	<FLJ					
+550	TSC	WeedB.tsc	Write	#0300	<FL+					
+0	Both	WeedB.tsc	Write	#0302	<DNP	8	0	Null	IgnoreSolidity	
+274	Entity	Stream.pxe	Read			27	136	Puppy, carried	AppearWhenFlagSet	
+836	Entity	Stream.pxe	Read			31	259	Curly, carried	AppearWhenFlagSet	
+6109	TSC	Stream.tsc	Write	#1000	<FL+					
+836	TSC	Stream.tsc	Read	#1002	<FLJ					
+836	TSC	Stream.tsc	Write	#1003	<FL-					
+6200	TSC	Stream.tsc	Read	#1004	<FLJ					
+6300	TSC	Stream.tsc	Write	#1004	<FL+					
+6002	TSC	Stream.tsc	Read	#1011	<FLJ					
+580	Entity	CurlyS.pxe	Read			4	70	Sparkling Item	HideWhenFlagSet	
+274	Entity	CurlyS.pxe	Read			7	136	Puppy, carried	AppearWhenFlagSet	
+581	Entity	CurlyS.pxe	Read			8	0	Null	HideWhenFlagSet	
+0	Both	CurlyS.tsc	Write	#0100	<DNP	1	18	Door	IgnoreSolidity, Interactable	
+580	Both	CurlyS.tsc	Write	#0400	<DNP	4	70	Sparkling Item	Interactable, HideWhenFlagSet	
+581	Both	CurlyS.tsc	Write	#0420	<DNP	8	0	Null	IgnoreSolidity, Interactable, HideWhenFlagSet	
+6201	TSC	CurlyS.tsc	Read	#0500	<FLJ					
+6202	TSC	CurlyS.tsc	Read	#0500	<FLJ					
+590	Entity	Jenka1.pxe	Read			9	130	Puppy, wagging tail	AppearWhenFlagSet	
+591	Entity	Jenka1.pxe	Read			10	130	Puppy, wagging tail	AppearWhenFlagSet	
+592	Entity	Jenka1.pxe	Read			11	130	Puppy, wagging tail	AppearWhenFlagSet	
+593	Entity	Jenka1.pxe	Read			12	130	Puppy, wagging tail	AppearWhenFlagSet	
+594	Entity	Jenka1.pxe	Read			13	130	Puppy, wagging tail	AppearWhenFlagSet	
+594	Entity	Jenka1.pxe	Read			14	0	Null	HideWhenFlagSet	
+593	Entity	Jenka1.pxe	Read			15	0	Null	HideWhenFlagSet	
+592	Entity	Jenka1.pxe	Read			16	0	Null	HideWhenFlagSet	
+591	Entity	Jenka1.pxe	Read			17	0	Null	HideWhenFlagSet	
+590	Entity	Jenka1.pxe	Read			18	0	Null	HideWhenFlagSet	
+274	Entity	Jenka1.pxe	Read			20	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Jenka1.tsc	Write	#0100	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+274	Both	Jenka1.tsc	Write	#0220	<DNP	20	136	Puppy, carried	IgnoreSolidity, AppearWhenFlagSet	
+274	TSC	Jenka1.tsc	Write	#0220	<FL-					
+591	TSC	Jenka1.tsc	Write	#0220	<FL+					
+274	Both	Jenka1.tsc	Write	#0221	<DNP	20	136	Puppy, carried	IgnoreSolidity, AppearWhenFlagSet	
+274	TSC	Jenka1.tsc	Write	#0221	<FL-					
+592	TSC	Jenka1.tsc	Write	#0221	<FL+					
+274	Both	Jenka1.tsc	Write	#0222	<DNP	20	136	Puppy, carried	IgnoreSolidity, AppearWhenFlagSet	
+274	TSC	Jenka1.tsc	Write	#0222	<FL-					
+593	TSC	Jenka1.tsc	Write	#0222	<FL+					
+590	TSC	Jenka1.tsc	Read	#0300	<FLJ					
+591	TSC	Jenka1.tsc	Read	#0301	<FLJ					
+592	TSC	Jenka1.tsc	Read	#0302	<FLJ					
+593	TSC	Jenka1.tsc	Read	#0303	<FLJ					
+594	TSC	Jenka1.tsc	Read	#0304	<FLJ					
+6201	TSC	Jenka1.tsc	Read	#0500	<FLJ					
+6202	TSC	Jenka1.tsc	Read	#0500	<FLJ					
+610	Entity	Dark.pxe	Read			5	21	Treasure Chest, open	AppearWhenFlagSet	
+0	Entity	Dark.pxe	Write			6	47	Sandcroc, Green (enemy)	Shootable	
+274	Entity	Dark.pxe	Read			7	136	Puppy, carried	AppearWhenFlagSet	
+610	Entity	Dark.pxe	Read			9	46	H/V Trigger	HideWhenFlagSet	
+610	Entity	Dark.pxe	Read			10	21	Treasure Chest, open	HideWhenFlagSet	
+610	Entity	Dark.pxe	Read			11	46	H/V Trigger	HideWhenFlagSet	
+610	Entity	Dark.pxe	Read			12	132	Puppy, barking	HideWhenFlagSet	
+610	TSC	Dark.tsc	Read	#0400	<FLJ					
+610	TSC	Dark.tsc	Write	#0400	<FL+					
+610	Both	Dark.tsc	Write	#0451	<DNP	9	46	H/V Trigger	SpawnInOtherDirection, HideWhenFlagSet	
+610	Both	Dark.tsc	Write	#0451	<DNP	11	46	H/V Trigger	SpawnInOtherDirection, HideWhenFlagSet	
+610	Both	Dark.tsc	Write	#0451	<DNP	12	132	Puppy, barking	HideWhenFlagSet	
+610	TSC	Dark.tsc	Write	#0451	<FL-					
+620	Entity	Gard.pxe	Read			9	139	Doctor, with crown	HideWhenFlagSet	
+620	Entity	Gard.pxe	Read			10	0	Null	HideWhenFlagSet	
+620	Entity	Gard.pxe	Read			11	82	Misery, Standing	HideWhenFlagSet	
+620	Entity	Gard.pxe	Read			14	0	Null	HideWhenFlagSet	
+620	Entity	Gard.pxe	Read			15	0	Null	HideWhenFlagSet	
+274	Entity	Gard.pxe	Read			16	136	Puppy, carried	AppearWhenFlagSet	
+621	TSC	Gard.tsc	Read	#0100	<FLJ					
+622	TSC	Gard.tsc	Read	#0100	<FLJ					
+596	TSC	Gard.tsc	Write	#0502	<FL+					
+594	TSC	Gard.tsc	Write	#0502	<FL+					
+274	TSC	Gard.tsc	Write	#0502	<FL-					
+620	TSC	Gard.tsc	Write	#0502	<FL+					
+621	TSC	Gard.tsc	Write	#0502	<FL+					
+623	TSC	Gard.tsc	Write	#0503	<FL+					
+6105	TSC	Gard.tsc	Write	#0503	<FL+					
+622	TSC	Gard.tsc	Read	#0505	<FLJ					
+623	TSC	Gard.tsc	Read	#0505	<FLJ					
+622	TSC	Gard.tsc	Write	#0600	<FL+					
+621	TSC	Gard.tsc	Write	#0601	<FL-					
+620	Both	Gard.tsc	Write	#0601	<DNP	14	0	Null	IgnoreSolidity, SpawnInOtherDirection, Interactable, HideWhenFlagSet	
+596	Entity	Jenka2.pxe	Read			8	143	Jenka, collapsed	HideWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			9	0	Null	HideWhenFlagSet	
+595	Entity	Jenka2.pxe	Read			10	12	Balrog, standing	HideWhenFlagSet	
+274	Entity	Jenka2.pxe	Read			11	136	Puppy, carried	AppearWhenFlagSet	
+596	Entity	Jenka2.pxe	Read			12	133	Jenka	AppearWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			13	130	Puppy, wagging tail	AppearWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			14	130	Puppy, wagging tail	AppearWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			15	0	Null	HideWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			16	130	Puppy, wagging tail	AppearWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			17	0	Null	HideWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			18	130	Puppy, wagging tail	AppearWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			19	0	Null	HideWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			20	130	Puppy, wagging tail	AppearWhenFlagSet	
+594	Entity	Jenka2.pxe	Read			21	0	Null	HideWhenFlagSet	
+595	TSC	Jenka2.tsc	Read	#0094	<FLJ					
+0	Both	Jenka2.tsc	Write	#0100	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+595	TSC	Jenka2.tsc	Write	#0200	<FL+					
+278	TSC	Jenka2.tsc	Write	#0200	<FL+					
+596	TSC	Jenka2.tsc	Read	#0220	<FLJ					
+596	TSC	Jenka2.tsc	Write	#0220	<FL+					
+594	TSC	Jenka2.tsc	Write	#0220	<FL+					
+274	Both	Jenka2.tsc	Write	#0220	<DNP	11	136	Puppy, carried	IgnoreSolidity, AppearWhenFlagSet	
+274	TSC	Jenka2.tsc	Write	#0220	<FL-					
+830	TSC	Jenka2.tsc	Read	#0230	<FLJ					
+6201	TSC	Jenka2.tsc	Read	#0500	<FLJ					
+6202	TSC	Jenka2.tsc	Read	#0500	<FLJ					
+274	Entity	SandE.pxe	Read			7	136	Puppy, carried	AppearWhenFlagSet	
+156	TSC	SandE.tsc	Write	#0600	<FL-					
+565	TSC	SandE.tsc	Write	#0600	<FL+					
+243	TSC	SandE.tsc	Write	#0600	<FL+					
+262	TSC	SandE.tsc	Write	#0600	<FL+					
+444	TSC	SandE.tsc	Write	#0600	<FL-					
+622	TSC	SandE.tsc	Write	#0600	<FL-					
+640	TSC	SandE.tsc	Write	#0600	<FL+					
+0	Entity	MazeH.pxe	Write			8	153	Gaudi (enemy)	Shootable	
+274	Entity	MazeH.pxe	Read			9	136	Puppy, carried	AppearWhenFlagSet	
+680	Entity	MazeW.pxe	Read			14	46	H/V Trigger	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			15	46	H/V Trigger	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			20	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			21	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			22	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			23	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			24	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			25	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			26	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			27	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			28	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			29	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			30	0	Null	HideWhenFlagSet	
+680	Entity	MazeW.pxe	Read			31	0	Null	HideWhenFlagSet	
+0	Entity	MazeW.pxe	Write			32	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			33	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			34	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			35	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			36	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			37	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			38	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			39	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			40	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			41	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			42	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			43	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			44	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			45	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			46	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			47	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			48	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			49	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			50	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			51	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			52	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			53	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			54	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			55	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			58	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			59	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			60	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			61	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			62	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			63	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			64	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			65	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			66	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			67	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			68	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			69	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			70	155	Gaudi, flying (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			71	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeW.pxe	Write			72	153	Gaudi (enemy)	Shootable	
+1341	Entity	MazeW.pxe	Read			74	302	Camera Focus Marker	AppearWhenFlagSet	
+1341	Entity	MazeW.pxe	Read			75	292	Quake	AppearWhenFlagSet	
+162	Entity	MazeW.pxe	Read, Write			76	173	Gaudi, armor	Shootable, AppearWhenFlagSet	
+162	Entity	MazeW.pxe	Read, Write			77	173	Gaudi, armor	Shootable, AppearWhenFlagSet	
+162	Entity	MazeW.pxe	Read, Write			78	173	Gaudi, armor	Shootable, AppearWhenFlagSet	
+162	Entity	MazeW.pxe	Read, Write			79	173	Gaudi, armor	Shootable, AppearWhenFlagSet	
+162	Entity	MazeW.pxe	Read, Write			80	173	Gaudi, armor	Shootable, AppearWhenFlagSet	
+162	Entity	MazeW.pxe	Read, Write			81	173	Gaudi, armor	Shootable, AppearWhenFlagSet	
+162	Entity	MazeW.pxe	Read, Write			82	173	Gaudi, armor	Shootable, AppearWhenFlagSet	
+162	Entity	MazeW.pxe	Read, Write			83	173	Gaudi, armor	Shootable, AppearWhenFlagSet	
+680	Entity	MazeW.pxe	Read			84	46	H/V Trigger	HideWhenFlagSet	
+274	Entity	MazeW.pxe	Read			85	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	MazeW.tsc	Write	#0102	<DNP	10	18	Door	IgnoreSolidity, Interactable	
+681	TSC	MazeW.tsc	Read	#0103	<FLJ					
+681	TSC	MazeW.tsc	Write	#0104	<FL+					
+0	Both	MazeW.tsc	Write	#0105	<DNP	8	18	Door	IgnoreSolidity, Interactable	
+680	Both	MazeW.tsc	Write	#0301	<DNP	14	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+680	Both	MazeW.tsc	Write	#0301	<DNP	84	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+680	TSC	MazeW.tsc	Write	#0301	<FL-					
+680	Both	MazeW.tsc	Write	#0302	<DNP	15	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+6106	TSC	MazeW.tsc	Write	#1000	<FL+					
+680	TSC	MazeW.tsc	Write	#1000	<FL+					
+705	Entity	MazeO.pxe	Read			6	15	Treasure Chest, closed	HideWhenFlagSet	
+704	Entity	MazeO.pxe	Read			12	165	Curly, sleeping	HideWhenFlagSet	
+705	Entity	MazeO.pxe	Read			14	21	Treasure Chest, open	AppearWhenFlagSet	
+274	Entity	MazeO.pxe	Read			15	136	Puppy, carried	AppearWhenFlagSet	
+6202	TSC	MazeO.tsc	Read	#0090	<FLJ					
+6202	TSC	MazeO.tsc	Read	#0091	<FLJ					
+6202	TSC	MazeO.tsc	Read	#0092	<FLJ					
+6202	TSC	MazeO.tsc	Read	#0093	<FLJ					
+6202	TSC	MazeO.tsc	Read	#0094	<FLJ					
+6202	TSC	MazeO.tsc	Read	#0098	<FLJ					
+703	TSC	MazeO.tsc	Read	#0100	<FLJ					
+704	TSC	MazeO.tsc	Write	#0101	<FL+					
+700	TSC	MazeO.tsc	Read	#0300	<FLJ					
+700	TSC	MazeO.tsc	Write	#0300	<FL+					
+704	TSC	MazeO.tsc	Read	#0301	<FLJ					
+702	TSC	MazeO.tsc	Read	#0301	<FLJ					
+702	TSC	MazeO.tsc	Write	#0302	<FL+					
+760	TSC	MazeO.tsc	Write	#0302	<FL+					
+703	TSC	MazeO.tsc	Write	#0302	<FL+					
+704	TSC	MazeO.tsc	Read	#0310	<FLJ					
+702	TSC	MazeO.tsc	Read	#0310	<FLJ					
+701	TSC	MazeO.tsc	Read	#0310	<FLJ					
+702	TSC	MazeO.tsc	Read	#0320	<FLJ					
+701	TSC	MazeO.tsc	Read	#0320	<FLJ					
+701	TSC	MazeO.tsc	Write	#0320	<FL+					
+760	TSC	MazeO.tsc	Write	#0322	<FL+					
+703	TSC	MazeO.tsc	Write	#0322	<FL+					
+705	TSC	MazeO.tsc	Read	#0400	<FLJ					
+705	TSC	MazeO.tsc	Write	#0400	<FL+					
+711	Entity	MazeD.pxe	Read			1	15	Treasure Chest, closed	HideWhenFlagSet	
+711	Entity	MazeD.pxe	Read			3	15	Treasure Chest, closed	HideWhenFlagSet	
+711	Entity	MazeD.pxe	Read			4	21	Treasure Chest, open	AppearWhenFlagSet	
+711	Entity	MazeD.pxe	Read			5	0	Null	HideWhenFlagSet	
+2600	Entity	MazeD.pxe	Read			6	0	Null	HideWhenFlagSet	
+2600	Entity	MazeD.pxe	Read			7	0	Null	HideWhenFlagSet	
+2600	Entity	MazeD.pxe	Read			8	0	Null	HideWhenFlagSet	
+274	Entity	MazeD.pxe	Read			9	136	Puppy, carried	AppearWhenFlagSet	
+710	TSC	MazeD.tsc	Read	#0100	<FLJ					
+711	TSC	MazeD.tsc	Read	#0200	<FLJ					
+710	TSC	MazeD.tsc	Write	#0200	<FL+					
+711	TSC	MazeD.tsc	Write	#0200	<FL+					
+710	TSC	MazeD.tsc	Write	#0300	<FL-					
+6113	TSC	MazeD.tsc	Write	#0300	<FL+					
+2600	Both	MazeD.tsc	Write	#0400	<DNP	6	0	Null	IgnoreSolidity, SpawnInOtherDirection, HideWhenFlagSet	
+2600	Both	MazeD.tsc	Write	#0400	<DNP	7	0	Null	IgnoreSolidity, SpawnInOtherDirection, HideWhenFlagSet	
+2600	Both	MazeD.tsc	Write	#0400	<DNP	8	0	Null	IgnoreSolidity, SpawnInOtherDirection, HideWhenFlagSet	
+2600	TSC	MazeD.tsc	Write	#0400	<FL+					
+0	Entity	MazeA.pxe	Write			8	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeA.pxe	Write			9	153	Gaudi (enemy)	Shootable	
+2500	Entity	MazeA.pxe	Read			14	21	Treasure Chest, open	AppearWhenFlagSet	
+2501	Entity	MazeA.pxe	Read			15	21	Treasure Chest, open	AppearWhenFlagSet	
+2502	Entity	MazeA.pxe	Read			16	21	Treasure Chest, open	AppearWhenFlagSet	
+2500	Entity	MazeA.pxe	Read			17	15	Treasure Chest, closed	HideWhenFlagSet	
+2501	Entity	MazeA.pxe	Read			18	15	Treasure Chest, closed	HideWhenFlagSet	
+2502	Entity	MazeA.pxe	Read			19	15	Treasure Chest, closed	HideWhenFlagSet	
+274	Entity	MazeA.pxe	Read			20	136	Puppy, carried	AppearWhenFlagSet	
+1020	TSC	MazeA.tsc	Read	#0220	<FLJ					
+720	TSC	MazeA.tsc	Read	#0240	<FLJ					
+0	Both	MazeA.tsc	Write	#0301	<DNP	12	0	Null	IgnoreSolidity	
+721	TSC	MazeA.tsc	Read	#0400	<FLJ					
+721	TSC	MazeA.tsc	Write	#0401	<FL+					
+721	TSC	MazeA.tsc	Write	#0402	<FL+					
+721	TSC	MazeA.tsc	Write	#0404	<FL+					
+722	TSC	MazeA.tsc	Write	#0404	<FL+					
+2500	TSC	MazeA.tsc	Read	#0501	<FLJ					
+2500	TSC	MazeA.tsc	Write	#0501	<FL+					
+2802	TSC	MazeA.tsc	Read	#0510	<FLJ					
+2501	TSC	MazeA.tsc	Read	#0511	<FLJ					
+2501	TSC	MazeA.tsc	Write	#0511	<FL+					
+2502	TSC	MazeA.tsc	Read	#0521	<FLJ					
+2502	TSC	MazeA.tsc	Write	#0521	<FL+					
+750	Entity	MazeB.pxe	Read			9	15	Treasure Chest, closed	HideWhenFlagSet	
+750	Entity	MazeB.pxe	Read			15	21	Treasure Chest, open	AppearWhenFlagSet	
+274	Entity	MazeB.pxe	Read			16	136	Puppy, carried	AppearWhenFlagSet	
+2413	TSC	MazeB.tsc	Read	#0090	<FLJ					
+6202	TSC	MazeB.tsc	Read	#0090	<FLJ					
+2413	TSC	MazeB.tsc	Read	#0091	<FLJ					
+6202	TSC	MazeB.tsc	Read	#0091	<FLJ					
+2413	TSC	MazeB.tsc	Read	#0092	<FLJ					
+6202	TSC	MazeB.tsc	Read	#0092	<FLJ					
+2413	TSC	MazeB.tsc	Read	#0093	<FLJ					
+6202	TSC	MazeB.tsc	Read	#0093	<FLJ					
+2413	TSC	MazeB.tsc	Read	#0094	<FLJ					
+6202	TSC	MazeB.tsc	Read	#0094	<FLJ					
+2413	TSC	MazeB.tsc	Read	#0098	<FLJ					
+6202	TSC	MazeB.tsc	Read	#0098	<FLJ					
+0	Both	MazeB.tsc	Write	#0099	<DNP	13	0	Null	IgnoreSolidity	
+2413	TSC	MazeB.tsc	Read	#0099	<FLJ					
+6202	TSC	MazeB.tsc	Read	#0099	<FLJ					
+523	TSC	MazeB.tsc	Write	#0500	<FL-					
+740	TSC	MazeB.tsc	Write	#0500	<FL+					
+750	TSC	MazeB.tsc	Read	#0501	<FLJ					
+750	TSC	MazeB.tsc	Write	#0501	<FL+					
+764	Entity	MazeS.pxe	Read			3	168	Boulder	AppearWhenFlagSet	
+764	Entity	MazeS.pxe	Read			5	168	Boulder	HideWhenFlagSet	
+764	Entity	MazeS.pxe	Read			9	0	Null	HideWhenFlagSet	
+760	Entity	MazeS.pxe	Read			10	117	Curly, standing	AppearWhenFlagSet	
+764	Entity	MazeS.pxe	Read			11	16	Save Point	AppearWhenFlagSet	
+764	Entity	MazeS.pxe	Read			12	0	Null	HideWhenFlagSet	
+766	Entity	MazeS.pxe	Read			13	21	Treasure Chest, open	AppearWhenFlagSet	
+765	Entity	MazeS.pxe	Read			14	15	Treasure Chest, closed	AppearWhenFlagSet	
+765	Entity	MazeS.pxe	Read			15	0	Null	HideWhenFlagSet	
+274	Entity	MazeS.pxe	Read			18	136	Puppy, carried	AppearWhenFlagSet	
+761	TSC	MazeS.tsc	Read	#0092	<FLJ					
+763	TSC	MazeS.tsc	Read	#0100	<FLJ					
+764	TSC	MazeS.tsc	Read	#0110	<FLJ					
+766	TSC	MazeS.tsc	Read	#0201	<FLJ					
+766	TSC	MazeS.tsc	Write	#0201	<FL+					
+765	TSC	MazeS.tsc	Write	#0201	<FL-					
+202	TSC	MazeS.tsc	Write	#0201	<FL+					
+764	TSC	MazeS.tsc	Read	#0300	<FLJ					
+762	TSC	MazeS.tsc	Read	#0300	<FLJ					
+761	TSC	MazeS.tsc	Read	#0300	<FLJ					
+761	TSC	MazeS.tsc	Write	#0300	<FL+					
+6107	TSC	MazeS.tsc	Write	#0310	<FL+					
+762	TSC	MazeS.tsc	Read	#0320	<FLJ					
+761	TSC	MazeS.tsc	Read	#0320	<FLJ					
+762	TSC	MazeS.tsc	Write	#0321	<FL+					
+763	TSC	MazeS.tsc	Write	#0321	<FL+					
+762	TSC	MazeS.tsc	Read	#0500	<FLJ					
+761	TSC	MazeS.tsc	Read	#0500	<FLJ					
+763	TSC	MazeS.tsc	Write	#0600	<FL-					
+764	TSC	MazeS.tsc	Write	#0600	<FL+					
+760	TSC	MazeS.tsc	Write	#0600	<FL-					
+781	TSC	MazeS.tsc	Write	#0600	<FL+					
+765	TSC	MazeS.tsc	Write	#0600	<FL+					
+0	Entity	MazeM.pxe	Write			16	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			17	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			18	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			19	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			20	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			21	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			22	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			23	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			24	171	Fire Whirrr (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			25	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			26	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			27	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			28	171	Fire Whirrr (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			29	171	Fire Whirrr (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			30	171	Fire Whirrr (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			31	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			32	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			33	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			34	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			35	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			36	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			37	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			38	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			39	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			40	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			41	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			42	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			43	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			44	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			45	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			46	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			47	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			48	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			49	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			50	176	Buyobuyo Base (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			51	176	Buyobuyo Base (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			52	176	Buyobuyo Base (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			53	176	Buyobuyo Base (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			54	176	Buyobuyo Base (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			55	176	Buyobuyo Base (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			56	176	Buyobuyo Base (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			58	171	Fire Whirrr (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			59	187	Fuzz Core (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			60	187	Fuzz Core (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			61	187	Fuzz Core (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			62	187	Fuzz Core (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			63	187	Fuzz Core (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			64	187	Fuzz Core (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			65	153	Gaudi (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			66	173	Gaudi, armor	Shootable	
+0	Entity	MazeM.pxe	Write			67	175	Gaudi Egg (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			68	173	Gaudi, armor	Shootable	
+0	Entity	MazeM.pxe	Write			69	173	Gaudi, armor	Shootable	
+0	Entity	MazeM.pxe	Write			70	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			71	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			72	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			73	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			74	173	Gaudi, armor	Shootable	
+0	Entity	MazeM.pxe	Write			75	171	Fire Whirrr (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			76	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			77	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			78	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			79	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			80	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			81	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			82	173	Gaudi, armor	Shootable	
+0	Entity	MazeM.pxe	Write			83	173	Gaudi, armor	Shootable	
+0	Entity	MazeM.pxe	Write			84	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			85	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			86	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			87	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			88	147	Critter, Hovering Purple (enemy)	Shootable	
+0	Entity	MazeM.pxe	Write			89	173	Gaudi, armor	Shootable	
+0	Entity	MazeM.pxe	Write			90	173	Gaudi, armor	Shootable	
+0	Entity	MazeM.pxe	Write			91	173	Gaudi, armor	Shootable	
+781	Entity	MazeM.pxe	Read			94	180	Curly, AI	AppearWhenFlagSet	
+274	Entity	MazeM.pxe	Read			95	136	Puppy, carried	AppearWhenFlagSet	
+782	TSC	MazeM.tsc	Read	#0090	<FLJ					
+782	TSC	MazeM.tsc	Read	#0092	<FLJ					
+780	TSC	MazeM.tsc	Read	#0093	<FLJ					
+780	TSC	MazeM.tsc	Read	#0094	<FLJ					
+764	TSC	MazeM.tsc	Read	#0100	<FLJ					
+781	TSC	MazeM.tsc	Read	#0110	<FLJ					
+800	TSC	MazeM.tsc	Read	#0110	<FLJ					
+780	TSC	MazeM.tsc	Write	#0111	<FL+					
+781	TSC	MazeM.tsc	Write	#0111	<FL-					
+832	TSC	MazeM.tsc	Write	#0113	<FL+					
+0	Both	MazeM.tsc	Write	#0301	<DNP	92	0	Null	IgnoreSolidity	
+782	TSC	MazeM.tsc	Read	#0301	<FLJ					
+720	TSC	MazeM.tsc	Write	#0310	<FL+					
+782	TSC	MazeM.tsc	Read	#0330	<FLJ					
+782	TSC	MazeM.tsc	Write	#0330	<FL+					
+801	Entity	Drain.pxe	Read			6	16	Save Point	HideWhenFlagSet	
+801	Entity	Drain.pxe	Read			10	16	Save Point	AppearWhenFlagSet	
+832	Entity	Drain.pxe	Read			11	191	Water Level	AppearWhenFlagSet	
+832	Entity	Drain.pxe	Read			12	191	Water Level	HideWhenFlagSet	
+274	Entity	Drain.pxe	Read			13	136	Puppy, carried	AppearWhenFlagSet	
+836	Entity	Drain.pxe	Read			14	259	Curly, carried	AppearWhenFlagSet	
+800	TSC	Drain.tsc	Read	#0090	<FLJ					
+800	TSC	Drain.tsc	Read	#0092	<FLJ					
+800	TSC	Drain.tsc	Read	#0094	<FLJ					
+780	TSC	Drain.tsc	Read	#0110	<FLJ					
+5006	TSC	Drain.tsc	Write	#0111	<FL+					
+0	Both	Drain.tsc	Write	#0150	<DNP	9	0	Null	IgnoreSolidity, SpawnInOtherDirection	
+820	TSC	Drain.tsc	Write	#0150	<FL+					
+834	Entity	Almond.pxe	Read			5	70	Sparkling Item	HideWhenFlagSet	
+824	Entity	Almond.pxe	Read			8	186	Lift Block	HideWhenFlagSet	
+824	Entity	Almond.pxe	Read			9	186	Lift Block	AppearWhenFlagSet	
+821	Entity	Almond.pxe	Read			10	185	Shutter, small	HideWhenFlagSet	
+821	Entity	Almond.pxe	Read			11	185	Shutter, small	HideWhenFlagSet	
+821	Entity	Almond.pxe	Read			12	185	Shutter, small	HideWhenFlagSet	
+823	Entity	Almond.pxe	Read			13	185	Shutter, small	HideWhenFlagSet	
+825	Entity	Almond.pxe	Read			14	184	Shutter, large	HideWhenFlagSet	
+830	Entity	Almond.pxe	Read			17	190	Surface Robot	HideWhenFlagSet	
+832	Entity	Almond.pxe	Read			18	191	Water Level	HideWhenFlagSet	
+831	Entity	Almond.pxe	Read			20	46	H/V Trigger	HideWhenFlagSet	
+820	Entity	Almond.pxe	Read			21	117	Curly, standing	AppearWhenFlagSet	
+822	Entity	Almond.pxe	Read			22	117	Curly, standing	AppearWhenFlagSet	
+826	Entity	Almond.pxe	Read			24	117	Curly, standing	AppearWhenFlagSet	
+827	Entity	Almond.pxe	Read			25	117	Curly, standing	AppearWhenFlagSet	
+827	Entity	Almond.pxe	Read			26	0	Null	HideWhenFlagSet	
+274	Entity	Almond.pxe	Read			31	136	Puppy, carried	AppearWhenFlagSet	
+823	Entity	Almond.pxe	Read			32	152	Shutter, stuck (enemy)	HideWhenFlagSet	
+1341	Entity	Almond.pxe	Read			34	302	Camera Focus Marker	AppearWhenFlagSet	
+1341	Entity	Almond.pxe	Read			35	292	Quake	AppearWhenFlagSet	
+832	Entity	Almond.pxe	Read			36	191	Water Level	AppearWhenFlagSet	
+836	Entity	Almond.pxe	Read			38	259	Curly, carried	AppearWhenFlagSet	
+829	TSC	Almond.tsc	Read	#0092	<FLJ					
+822	TSC	Almond.tsc	Read	#0092	<FLJ					
+839	TSC	Almond.tsc	Read	#0100	<FLJ					
+800	TSC	Almond.tsc	Read	#0100	<FLJ					
+832	TSC	Almond.tsc	Write	#0103	<FL+					
+5006	TSC	Almond.tsc	Write	#0104	<FL-					
+832	TSC	Almond.tsc	Read	#0200	<FLJ					
+824	TSC	Almond.tsc	Read	#0200	<FLJ					
+823	TSC	Almond.tsc	Read	#0200	<FLJ					
+821	TSC	Almond.tsc	Read	#0200	<FLJ					
+821	Both	Almond.tsc	Write	#0200	<DNP	10	185	Shutter, small	Invulnerable, HardSolid, HideWhenFlagSet	
+821	Both	Almond.tsc	Write	#0200	<DNP	11	185	Shutter, small	Invulnerable, HardSolid, HideWhenFlagSet	
+821	Both	Almond.tsc	Write	#0200	<DNP	12	185	Shutter, small	Invulnerable, HardSolid, HideWhenFlagSet	
+820	Both	Almond.tsc	Write	#0200	<DNP	21	117	Curly, standing	AppearWhenFlagSet, Interactable	
+820	TSC	Almond.tsc	Write	#0200	<FL-					
+821	TSC	Almond.tsc	Write	#0200	<FL+					
+822	TSC	Almond.tsc	Write	#0200	<FL+					
+824	TSC	Almond.tsc	Write	#0202	<FL+					
+830	TSC	Almond.tsc	Read	#0210	<FLJ					
+825	TSC	Almond.tsc	Read	#0210	<FLJ					
+825	TSC	Almond.tsc	Write	#0210	<FL+					
+825	Both	Almond.tsc	Write	#0210	<DNP	14	184	Shutter, large	Invulnerable, HardSolid, HideWhenFlagSet	
+828	TSC	Almond.tsc	Read	#0240	<FLJ					
+834	Both	Almond.tsc	Write	#0240	<DNP	5	70	Sparkling Item	Interactable, HideWhenFlagSet	
+830	TSC	Almond.tsc	Read	#0240	<FLJ					
+839	TSC	Almond.tsc	Write	#0240	<FL+					
+823	TSC	Almond.tsc	Read	#0301	<FLJ					
+835	TSC	Almond.tsc	Write	#0307	<FL+					
+836	TSC	Almond.tsc	Write	#0307	<FL+					
+829	TSC	Almond.tsc	Write	#0307	<FL-					
+823	Both	Almond.tsc	Write	#0340	<DNP	32	152	Shutter, stuck (enemy)	Shootable, RunEventWhenKilled, SpawnInOtherDirection, HideWhenFlagSet	
+823	Both	Almond.tsc	Write	#0340	<DNP	13	185	Shutter, small	Invulnerable, HardSolid, HideWhenFlagSet	
+822	TSC	Almond.tsc	Write	#0340	<FL-					
+823	TSC	Almond.tsc	Write	#0340	<FL+					
+826	TSC	Almond.tsc	Write	#0340	<FL+					
+825	TSC	Almond.tsc	Read	#0350	<FLJ					
+0	Both	Almond.tsc	Write	#0351	<DNP	19	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+822	Both	Almond.tsc	Write	#0351	<DNP	22	117	Curly, standing	AppearWhenFlagSet, SpawnInOtherDirection, Interactable	
+0	Both	Almond.tsc	Write	#0351	<DNP	23	0	Null	IgnoreSolidity, Interactable	
+826	Both	Almond.tsc	Write	#0351	<DNP	24	117	Curly, standing	AppearWhenFlagSet, Interactable	
+822	TSC	Almond.tsc	Write	#0351	<FL-					
+826	TSC	Almond.tsc	Write	#0351	<FL-					
+827	TSC	Almond.tsc	Write	#0351	<FL+					
+830	TSC	Almond.tsc	Read	#0360	<FLJ					
+831	Both	Almond.tsc	Write	#0361	<DNP	20	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+837	TSC	Almond.tsc	Read	#0452	<FLJ					
+828	TSC	Almond.tsc	Read	#0452	<FLJ					
+828	TSC	Almond.tsc	Write	#0452	<FL+					
+824	TSC	Almond.tsc	Write	#0452	<FL-					
+828	TSC	Almond.tsc	Write	#1000	<FL-					
+4000	TSC	Almond.tsc	Write	#1000	<FL+					
+341	TSC	Almond.tsc	Write	#1000	<FL+					
+783	TSC	Almond.tsc	Write	#1000	<FL+					
+837	TSC	Almond.tsc	Write	#1000	<FL+					
+2900	TSC	Almond.tsc	Write	#1000	<FL-					
+6108	TSC	Almond.tsc	Write	#1000	<FL+					
+4000	TSC	Almond.tsc	Write	#1100	<FL-					
+827	Both	Almond.tsc	Write	#1100	<DNP	25	117	Curly, standing	AppearWhenFlagSet, SpawnInOtherDirection, Interactable	
+827	Both	Almond.tsc	Write	#1100	<DNP	26	0	Null	IgnoreSolidity, SpawnInOtherDirection, Interactable, HideWhenFlagSet	
+160	TSC	Almond.tsc	Write	#1100	<FL+					
+830	TSC	Almond.tsc	Write	#1100	<FL+					
+829	TSC	Almond.tsc	Write	#1100	<FL+					
+827	TSC	Almond.tsc	Write	#1100	<FL-					
+800	TSC	Almond.tsc	Write	#1100	<FL+					
+801	TSC	Almond.tsc	Write	#1100	<FL+					
+372	TSC	Almond.tsc	Write	#1100	<FL+					
+411	TSC	Almond.tsc	Write	#1100	<FL+					
+340	TSC	Almond.tsc	Write	#1100	<FL+					
+159	TSC	Almond.tsc	Write	#1100	<FL+					
+838	TSC	Almond.tsc	Write	#1100	<FL+					
+1642	TSC	Almond.tsc	Write	#1100	<FL-					
+1643	TSC	Almond.tsc	Write	#1100	<FL+					
+839	TSC	Almond.tsc	Write	#1100	<FL-					
+2900	TSC	Almond.tsc	Write	#1101	<FL+					
+836	Both	Almond.tsc	Write	#1200	<DNA	38	259	Curly, carried	IgnoreSolidity, AppearWhenFlagSet	
+829	TSC	Almond.tsc	Read	#1200	<FLJ					
+0	Entity	River.pxe	Write			28	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			29	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			30	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			31	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			32	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			33	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			34	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			35	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			36	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			37	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			38	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			39	28	Critter, Flying Green (enemy)	Shootable	
+0	Entity	River.pxe	Write			40	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			41	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			42	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			43	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			44	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			45	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			46	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			47	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			48	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			49	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			50	31	Bat, Black Hanging (enemy)	Shootable	
+0	Entity	River.pxe	Write			51	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			52	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			53	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			54	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			55	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			56	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			57	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			58	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			59	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			60	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			61	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			62	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			63	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			64	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			65	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			66	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe	Write			67	95	Jelly (enemy)	Shootable	
+0	Entity	River.pxe				68	125	Hidden Heart/Missile		
+0	Entity	River.pxe				69	125	Hidden Heart/Missile		
+0	Entity	River.pxe				70	125	Hidden Heart/Missile		
+0	Entity	River.pxe				71	125	Hidden Heart/Missile		
+0	Entity	River.pxe				72	125	Hidden Heart/Missile		
+0	Entity	River.pxe				73	125	Hidden Heart/Missile		
+0	Entity	River.pxe				74	125	Hidden Heart/Missile		
+0	Entity	River.pxe				75	125	Hidden Heart/Missile		
+0	Entity	River.pxe				76	125	Hidden Heart/Missile		
+0	Entity	River.pxe				77	125	Hidden Heart/Missile		
+0	Entity	River.pxe				78	125	Hidden Heart/Missile		
+0	Entity	River.pxe				79	125	Hidden Heart/Missile		
+0	Entity	River.pxe				80	125	Hidden Heart/Missile		
+0	Entity	River.pxe				81	125	Hidden Heart/Missile		
+0	Entity	River.pxe				82	125	Hidden Heart/Missile		
+0	Entity	River.pxe				83	125	Hidden Heart/Missile		
+0	Entity	River.pxe				84	125	Hidden Heart/Missile		
+0	Entity	River.pxe				85	125	Hidden Heart/Missile		
+0	Entity	River.pxe				86	125	Hidden Heart/Missile		
+0	Entity	River.pxe				87	125	Hidden Heart/Missile		
+274	Entity	River.pxe	Read			88	136	Puppy, carried	AppearWhenFlagSet	
+201	Entity	River.pxe	Read			89	125	Hidden Heart/Missile	AppearWhenFlagSet	SpecialEntityNoWriteFlag
+201	Entity	River.pxe	Read			90	125	Hidden Heart/Missile	AppearWhenFlagSet	SpecialEntityNoWriteFlag
+201	Entity	River.pxe	Read			91	125	Hidden Heart/Missile	AppearWhenFlagSet	SpecialEntityNoWriteFlag
+201	Entity	River.pxe	Read			92	125	Hidden Heart/Missile	AppearWhenFlagSet	SpecialEntityNoWriteFlag
+201	Entity	River.pxe	Read			93	125	Hidden Heart/Missile	AppearWhenFlagSet	SpecialEntityNoWriteFlag
+0	Entity	River.pxe	Write			98	31	Bat, Black Hanging (enemy)	Shootable	
+836	Entity	River.pxe	Read			99	259	Curly, carried	AppearWhenFlagSet	
+836	TSC	River.tsc	Read	#0090	<FLJ					
+836	TSC	River.tsc	Read	#0091	<FLJ					
+836	TSC	River.tsc	Read	#0092	<FLJ					
+836	TSC	River.tsc	Read	#0093	<FLJ					
+836	TSC	River.tsc	Read	#0094	<FLJ					
+1444	TSC	River.tsc	Read	#0096	<FLJ					
+850	TSC	River.tsc	Read	#0110	<FLJ					
+850	TSC	River.tsc	Write	#0110	<FL+					
+836	TSC	River.tsc	Write	#0111	<FL-					
+1444	TSC	River.tsc	Read	#0220	<FLJ					
+836	TSC	River.tsc	Read	#0220	<FLJ					
+851	TSC	River.tsc	Write	#0221	<FL+					
+0	Entity	Eggs2.pxe				16	200	Dragon Zombie (enemy)		
+0	Entity	Eggs2.pxe				17	200	Dragon Zombie (enemy)		
+0	Entity	Eggs2.pxe				18	200	Dragon Zombie (enemy)		
+0	Entity	Eggs2.pxe				19	200	Dragon Zombie (enemy)		
+0	Entity	Eggs2.pxe				20	200	Dragon Zombie (enemy)		
+0	Entity	Eggs2.pxe				21	200	Dragon Zombie (enemy)		
+0	Entity	Eggs2.pxe				22	200	Dragon Zombie (enemy)		
+0	Entity	Eggs2.pxe				32	200	Dragon Zombie (enemy)		
+0	Entity	Eggs2.pxe	Write			33	203	Critter, Hopping Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			34	203	Critter, Hopping Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			35	203	Critter, Hopping Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			36	203	Critter, Hopping Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			37	203	Critter, Hopping Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			38	203	Critter, Hopping Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			39	203	Critter, Hopping Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			40	203	Critter, Hopping Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			59	206	Counter Bomb (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			67	208	Basu, 2 (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			68	208	Basu, 2 (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			69	208	Basu, 2 (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			70	208	Basu, 2 (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			71	208	Basu, 2 (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			72	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			73	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			74	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			75	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			76	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			77	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			78	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			79	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			80	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			86	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			87	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			88	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			89	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			90	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			91	208	Basu, 2 (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			92	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			93	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			94	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			95	210	Beetle, Follow Aqua (enemy)	Shootable	
+0	Entity	Eggs2.pxe	Write			96	210	Beetle, Follow Aqua (enemy)	Shootable	
+1341	Entity	Eggs2.pxe	Read			98	302	Camera Focus Marker	AppearWhenFlagSet	
+1341	Entity	Eggs2.pxe	Read			99	292	Quake	AppearWhenFlagSet	
+880	Entity	Eggs2.pxe	Read			100	15	Treasure Chest, closed	HideWhenFlagSet	
+880	Entity	Eggs2.pxe	Read			101	21	Treasure Chest, open	AppearWhenFlagSet	
+274	Entity	Eggs2.pxe	Read			102	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Eggs2.tsc	Write	#0099	<DNP	8	0	Null	IgnoreSolidity	
+159	TSC	Eggs2.tsc	Write	#0100	<FL+					
+880	TSC	Eggs2.tsc	Read	#0320	<FLJ					
+880	TSC	Eggs2.tsc	Write	#0320	<FL+					
+0	Entity	Cthu2.pxe				8	125	Hidden Heart/Missile		
+0	Entity	Cthu2.pxe	Write			9	114	Press (enemy)	Shootable	
+0	Entity	Cthu2.pxe	Write			10	114	Press (enemy)	Shootable	
+274	Entity	Cthu2.pxe	Read			17	136	Puppy, carried	AppearWhenFlagSet	
+920	Entity	EggR2.pxe	Read			6	16	Save Point	AppearWhenFlagSet	
+920	Entity	EggR2.pxe	Read			7	15	Treasure Chest, closed	HideWhenFlagSet	
+920	Entity	EggR2.pxe	Read			8	21	Treasure Chest, open	AppearWhenFlagSet	
+920	Entity	EggR2.pxe	Read			9	0	Null	HideWhenFlagSet	
+923	Entity	EggR2.pxe	Read			10	211	Spikes (small)	HideWhenFlagSet	
+923	Entity	EggR2.pxe	Read			11	211	Spikes (small)	HideWhenFlagSet	
+923	Entity	EggR2.pxe	Read			12	211	Spikes (small)	HideWhenFlagSet	
+923	Entity	EggR2.pxe	Read			13	211	Spikes (small)	HideWhenFlagSet	
+923	Entity	EggR2.pxe	Read			14	211	Spikes (small)	HideWhenFlagSet	
+920	Entity	EggR2.pxe	Read			16	0	Null	AppearWhenFlagSet	
+274	Entity	EggR2.pxe	Read			17	136	Puppy, carried	AppearWhenFlagSet	
+6110	TSC	EggR2.tsc	Read	#0094	<FLJ					
+920	Both	EggR2.tsc	Write	#0095	<DNP	16	0	Null	IgnoreSolidity, AppearWhenFlagSet	
+921	TSC	EggR2.tsc	Read	#0100	<FLJ					
+921	TSC	EggR2.tsc	Read	#0101	<FLJ					
+920	TSC	EggR2.tsc	Read	#0302	<FLJ					
+920	TSC	EggR2.tsc	Write	#0302	<FL+					
+0	Both	EggR2.tsc	Write	#0304	<DNP	15	0	Null	IgnoreSolidity	
+921	TSC	EggR2.tsc	Write	#0304	<FL+					
+6110	TSC	EggR2.tsc	Read	#0350	<FLJ					
+921	TSC	EggR2.tsc	Read	#0350	<FLJ					
+920	Both	EggR2.tsc	Write	#0350	<DNP	16	0	Null	IgnoreSolidity, AppearWhenFlagSet	
+921	TSC	EggR2.tsc	Write	#1000	<FL-					
+6110	TSC	EggR2.tsc	Write	#1000	<FL+					
+940	Entity	EggX2.pxe	Read			4	0	Null	HideWhenFlagSet	
+940	Entity	EggX2.pxe	Read			10	18	Door	AppearWhenFlagSet	
+274	Entity	EggX2.pxe	Read			11	136	Puppy, carried	AppearWhenFlagSet	
+120	TSC	EggX2.tsc	Read	#0094	<FLJ					
+940	TSC	EggX2.tsc	Read	#0110	<FLJ					
+941	TSC	EggX2.tsc	Read	#0500	<FLJ					
+2460	TSC	EggX2.tsc	Read	#0500	<FLJ					
+940	TSC	EggX2.tsc	Write	#0501	<FL+					
+941	TSC	EggX2.tsc	Write	#0503	<FL+					
+960	TSC	EggX2.tsc	Write	#0503	<FL+					
+940	TSC	EggX2.tsc	Write	#0503	<FL+					
+2460	Entity	Oside.pxe	Read			16	55	Kazuma	AppearWhenFlagSet	
+2460	Entity	Oside.pxe	Read			18	212	Sky Dragon	AppearWhenFlagSet	
+0	Entity	Oside.pxe	Write			21	215	Sandcroc, White (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			22	215	Sandcroc, White (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			23	215	Sandcroc, White (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			24	215	Sandcroc, White (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			25	215	Sandcroc, White (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			26	215	Sandcroc, White (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			32	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			33	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			34	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			35	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			36	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			37	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			38	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			39	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			40	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			41	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			42	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			43	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			44	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			45	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			46	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			47	347	Hoppy (enemy)	Shootable	
+0	Entity	Oside.pxe	Write			48	347	Hoppy (enemy)	Shootable	
+274	Entity	Oside.pxe	Read			50	136	Puppy, carried	AppearWhenFlagSet	
+2414	TSC	Oside.tsc	Read	#0090	<FLJ					
+2414	TSC	Oside.tsc	Read	#0091	<FLJ					
+2414	TSC	Oside.tsc	Read	#0092	<FLJ					
+2414	TSC	Oside.tsc	Read	#0093	<FLJ					
+2414	TSC	Oside.tsc	Read	#0094	<FLJ					
+2414	TSC	Oside.tsc	Write	#0095	<FL+					
+2414	TSC	Oside.tsc	Write	#0097	<FL+					
+2414	TSC	Oside.tsc	Read	#0098	<FLJ					
+2460	TSC	Oside.tsc	Read	#0100	<FLJ					
+940	TSC	Oside.tsc	Write	#0101	<FL+					
+941	TSC	Oside.tsc	Write	#0101	<FL+					
+1370	TSC	Oside.tsc	Write	#0131	<FL+					
+6003	TSC	Oside.tsc	Read	#0400	<FLJ					
+6108	TSC	Oside.tsc	Read	#0401	<FLJ					
+2460	Both	Oside.tsc	Write	#0402	<DNP	16	55	Kazuma	AppearWhenFlagSet, Interactable	
+0	Both	Oside.tsc	Write	#0402	<DNP	17	0	Null	IgnoreSolidity, SpawnInOtherDirection	
+274	Entity	EgEnd2.pxe	Read			8	136	Puppy, carried	AppearWhenFlagSet	
+274	Entity	Itoh.pxe	Read			9	136	Puppy, carried	AppearWhenFlagSet	
+1000	TSC	Itoh.tsc	Read	#0094	<FLJ					
+1000	TSC	Itoh.tsc	Write	#0200	<FL+					
+1025	TSC	Itoh.tsc	Write	#0200	<FL+					
+1038	TSC	Itoh.tsc	Write	#0200	<FL+					
+1003	TSC	Itoh.tsc	Read	#0400	<FLJ					
+1002	TSC	Itoh.tsc	Read	#0400	<FLJ					
+1001	TSC	Itoh.tsc	Read	#0400	<FLJ					
+1001	TSC	Itoh.tsc	Write	#0400	<FL+					
+1038	TSC	Itoh.tsc	Write	#0400	<FL+					
+1002	TSC	Itoh.tsc	Write	#0401	<FL+					
+1003	TSC	Itoh.tsc	Write	#0403	<FL+					
+1043	Entity	Cent.pxe	Read			4	70	Sparkling Item	HideWhenFlagSet	
+1030	Entity	Cent.pxe	Read			8	231	Rocket	AppearWhenFlagSet	
+1038	Entity	Cent.pxe	Read, Write			28	274	Droll (enemy)	Shootable, AppearWhenFlagSet	
+1038	Entity	Cent.pxe	Read, Write			29	274	Droll (enemy)	Shootable, AppearWhenFlagSet	
+1033	Entity	Cent.pxe	Read			30	221	Shovel Brigade, walking	HideWhenFlagSet	
+1033	Entity	Cent.pxe	Read			31	221	Shovel Brigade, walking	HideWhenFlagSet	
+1033	Entity	Cent.pxe	Read			33	220	Shovel Brigade, standing	HideWhenFlagSet	
+1033	Entity	Cent.pxe	Read			35	220	Shovel Brigade, standing	HideWhenFlagSet	
+1036	Entity	Cent.pxe	Read			36	72	Sprinkler	HideWhenFlagSet	
+1033	Entity	Cent.pxe	Read			39	220	Shovel Brigade, standing	HideWhenFlagSet	
+1033	Entity	Cent.pxe	Read			40	221	Shovel Brigade, walking	HideWhenFlagSet	
+1025	Entity	Cent.pxe	Read			41	229	Red Flowers, small	AppearWhenFlagSet	
+1025	Entity	Cent.pxe	Read			42	229	Red Flowers, small	AppearWhenFlagSet	
+1025	Entity	Cent.pxe	Read			43	229	Red Flowers, small	AppearWhenFlagSet	
+1025	Entity	Cent.pxe	Read			44	229	Red Flowers, small	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			45	230	Red Flowers, large	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			46	230	Red Flowers, large	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			47	230	Red Flowers, large	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			48	230	Red Flowers, large	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			49	229	Red Flowers, small	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			50	229	Red Flowers, small	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			51	229	Red Flowers, small	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			52	229	Red Flowers, small	AppearWhenFlagSet	
+1026	Entity	Cent.pxe	Read			53	229	Red Flowers, small	AppearWhenFlagSet	
+0	Entity	Cent.pxe	Write			54	236	Gunfish (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			55	236	Gunfish (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			56	236	Gunfish (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			57	236	Gunfish (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			58	236	Gunfish (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			59	232	Orangebell (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			60	235	Midorin (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			61	235	Midorin (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			62	235	Midorin (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			63	235	Midorin (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			64	235	Midorin (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			65	235	Midorin (enemy)	Shootable	
+1032	Entity	Cent.pxe	Read			66	223	Momorin	AppearWhenFlagSet	
+1031	Entity	Cent.pxe	Read			67	217	Itoh	AppearWhenFlagSet	
+0	Entity	Cent.pxe	Write			74	232	Orangebell (enemy)	Shootable	
+2407	Entity	Cent.pxe	Read			75	15	Treasure Chest, closed	HideWhenFlagSet	
+1036	Entity	Cent.pxe	Read			76	234	Red Flowers, picked	AppearWhenFlagSet	
+1036	Entity	Cent.pxe	Read			77	234	Red Flowers, picked	AppearWhenFlagSet	
+1036	Entity	Cent.pxe	Read			78	234	Red Flowers, picked	AppearWhenFlagSet	
+1036	Entity	Cent.pxe	Read			79	234	Red Flowers, picked	AppearWhenFlagSet	
+1038	Entity	Cent.pxe	Read, Write			110	274	Droll (enemy)	Shootable, AppearWhenFlagSet	
+1038	Entity	Cent.pxe	Read, Write			111	274	Droll (enemy)	Shootable, AppearWhenFlagSet	
+1039	Entity	Cent.pxe	Read			112	275	Puppy, sitting	AppearWhenFlagSet	
+1042	Entity	Cent.pxe	Read			122	165	Curly, sleeping	AppearWhenFlagSet	
+1341	Entity	Cent.pxe	Read			123	302	Camera Focus Marker	AppearWhenFlagSet	
+1341	Entity	Cent.pxe	Read			124	292	Quake	AppearWhenFlagSet	
+0	Entity	Cent.pxe	Write			125	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			126	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			127	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			128	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			129	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			132	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			133	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			134	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			135	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			136	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			137	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			138	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			139	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			140	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			141	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			142	308	Stumpy (enemy)	Shootable	
+0	Entity	Cent.pxe	Write			143	308	Stumpy (enemy)	Shootable	
+2407	Entity	Cent.pxe	Read			144	21	Treasure Chest, open	AppearWhenFlagSet	
+274	Entity	Cent.pxe	Read			145	136	Puppy, carried	AppearWhenFlagSet	
+1105	TSC	Cent.tsc	Read	#0120	<FLJ					
+1023	TSC	Cent.tsc	Read	#0135	<FLJ					
+1023	TSC	Cent.tsc	Write	#0136	<FL+					
+1030	TSC	Cent.tsc	Read	#0150	<FLJ					
+6400	TSC	Cent.tsc	Read	#0150	<FLJ					
+1020	TSC	Cent.tsc	Read	#0200	<FLJ					
+1020	TSC	Cent.tsc	Read	#0210	<FLJ					
+1020	TSC	Cent.tsc	Read	#0220	<FLJ					
+1020	TSC	Cent.tsc	Read	#0230	<FLJ					
+1037	TSC	Cent.tsc	Read	#0240	<FLJ					
+1020	TSC	Cent.tsc	Read	#0240	<FLJ					
+1037	TSC	Cent.tsc	Write	#0241	<FL+					
+1029	TSC	Cent.tsc	Read	#0250	<FLJ					
+1020	TSC	Cent.tsc	Read	#0250	<FLJ					
+1029	TSC	Cent.tsc	Write	#0252	<FL+					
+1023	TSC	Cent.tsc	Read	#0260	<FLJ					
+1022	TSC	Cent.tsc	Read	#0260	<FLJ					
+1035	TSC	Cent.tsc	Read	#0260	<FLJ					
+1035	TSC	Cent.tsc	Write	#0260	<FL+					
+1022	TSC	Cent.tsc	Read	#0265	<FLJ					
+1022	TSC	Cent.tsc	Write	#0266	<FL+					
+1044	TSC	Cent.tsc	Write	#0311	<FL+					
+1046	TSC	Cent.tsc	Read	#0320	<FLJ					
+1045	TSC	Cent.tsc	Read	#0320	<FLJ					
+1020	TSC	Cent.tsc	Read	#0320	<FLJ					
+1041	TSC	Cent.tsc	Write	#0320	<FL+					
+1046	TSC	Cent.tsc	Write	#0322	<FL+					
+1045	TSC	Cent.tsc	Write	#0322	<FL+					
+1020	TSC	Cent.tsc	Read	#0322	<FLJ					
+6003	TSC	Cent.tsc	Read	#0371	<FLJ					
+2800	TSC	Cent.tsc	Read	#0371	<FLJ					
+6001	TSC	Cent.tsc	Read	#0371	<FLJ					
+6002	TSC	Cent.tsc	Read	#0371	<FLJ					
+6004	TSC	Cent.tsc	Read	#0371	<FLJ					
+6001	TSC	Cent.tsc	Read	#0372	<FLJ					
+6002	TSC	Cent.tsc	Read	#0372	<FLJ					
+6004	TSC	Cent.tsc	Read	#0372	<FLJ					
+6001	TSC	Cent.tsc	Read	#0373	<FLJ					
+6002	TSC	Cent.tsc	Read	#0373	<FLJ					
+6004	TSC	Cent.tsc	Read	#0373	<FLJ					
+6002	TSC	Cent.tsc	Read	#0376	<FLJ					
+6004	TSC	Cent.tsc	Read	#0376	<FLJ					
+6002	TSC	Cent.tsc	Read	#0377	<FLJ					
+6004	TSC	Cent.tsc	Read	#0377	<FLJ					
+6004	TSC	Cent.tsc	Read	#0378	<FLJ					
+1102	TSC	Cent.tsc	Read	#0400	<FLJ					
+1102	TSC	Cent.tsc	Read	#0410	<FLJ					
+2407	TSC	Cent.tsc	Read	#0415	<FLJ					
+1020	TSC	Cent.tsc	Read	#0415	<FLJ					
+2407	TSC	Cent.tsc	Read	#0416	<FLJ					
+2407	TSC	Cent.tsc	Write	#0416	<FL+					
+1040	TSC	Cent.tsc	Read	#0450	<FLJ					
+1040	TSC	Cent.tsc	Write	#0450	<FL+					
+1043	Both	Cent.tsc	Write	#0500	<DNP	4	70	Sparkling Item	Interactable, HideWhenFlagSet	
+6003	TSC	Cent.tsc	Read	#1300	<FLJ					
+2800	TSC	Cent.tsc	Read	#1300	<FLJ					
+6000	TSC	Cent.tsc	Read	#1301	<FLJ					
+6001	TSC	Cent.tsc	Read	#1303	<FLJ					
+6100	TSC	Cent.tsc	Read	#1303	<FLJ					
+6101	TSC	Cent.tsc	Read	#1304	<FLJ					
+6102	TSC	Cent.tsc	Read	#1305	<FLJ					
+6103	TSC	Cent.tsc	Read	#1306	<FLJ					
+6104	TSC	Cent.tsc	Read	#1307	<FLJ					
+6105	TSC	Cent.tsc	Read	#1308	<FLJ					
+6106	TSC	Cent.tsc	Read	#1309	<FLJ					
+6107	TSC	Cent.tsc	Read	#1310	<FLJ					
+6108	TSC	Cent.tsc	Read	#1311	<FLJ					
+6109	TSC	Cent.tsc	Read	#1312	<FLJ					
+6110	TSC	Cent.tsc	Read	#1313	<FLJ					
+6112	TSC	Cent.tsc	Read	#1314	<FLJ					
+6113	TSC	Cent.tsc	Read	#1315	<FLJ					
+6114	TSC	Cent.tsc	Read	#1316	<FLJ					
+6002	TSC	Cent.tsc	Read	#1317	<FLJ					
+4007	TSC	Cent.tsc	Read	#1318	<FLJ					
+4002	TSC	Cent.tsc	Read	#1319	<FLJ					
+4001	TSC	Cent.tsc	Read	#1319	<FLJ					
+1320	TSC	Cent.tsc	Read	#1320	<FLJ					
+1320	TSC	Cent.tsc	Read	#1399	<FLJ					
+1082	Entity	Jail1.pxe	Read			9	42	Sue	HideWhenFlagSet	
+1082	Entity	Jail1.pxe	Read			10	74	Jack	HideWhenFlagSet	
+2700	Entity	Jail1.pxe	Read			12	15	Treasure Chest, closed	HideWhenFlagSet	
+2700	Entity	Jail1.pxe	Read			13	21	Treasure Chest, open	AppearWhenFlagSet	
+274	Entity	Jail1.pxe	Read			14	136	Puppy, carried	AppearWhenFlagSet	
+2700	TSC	Jail1.tsc	Read	#0090	<FLJ					
+2700	TSC	Jail1.tsc	Read	#0091	<FLJ					
+2700	TSC	Jail1.tsc	Read	#0092	<FLJ					
+2700	TSC	Jail1.tsc	Read	#0093	<FLJ					
+2700	TSC	Jail1.tsc	Read	#0094	<FLJ					
+1081	TSC	Jail1.tsc	Read	#0200	<FLJ					
+1080	TSC	Jail1.tsc	Read	#0200	<FLJ					
+1080	TSC	Jail1.tsc	Write	#0200	<FL+					
+1025	TSC	Jail1.tsc	Write	#0200	<FL-					
+1026	TSC	Jail1.tsc	Write	#0200	<FL+					
+1081	TSC	Jail1.tsc	Write	#0201	<FL+					
+0	Both	Jail1.tsc	Write	#0220	<DNP	8	0	Null	IgnoreSolidity	
+2700	TSC	Jail1.tsc	Read	#0300	<FLJ					
+2700	TSC	Jail1.tsc	Write	#0300	<FL+					
+1107	Entity	Momo.pxe	Read			0	72	Sprinkler	AppearWhenFlagSet	
+1107	Entity	Momo.pxe	Read			1	0	Null	HideWhenFlagSet	
+1105	Entity	Momo.pxe	Read			11	231	Rocket	HideWhenFlagSet	
+1105	Entity	Momo.pxe	Read			12	223	Momorin	HideWhenFlagSet	
+274	Entity	Momo.pxe	Read			13	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Momo.tsc	Write	#0100	<DNP	2	18	Door	IgnoreSolidity, Interactable	
+1103	TSC	Momo.tsc	Read	#0200	<FLJ					
+1100	TSC	Momo.tsc	Read	#0200	<FLJ					
+1100	TSC	Momo.tsc	Write	#0202	<FL+					
+961	TSC	Momo.tsc	Write	#0202	<FL+					
+1101	TSC	Momo.tsc	Write	#0202	<FL+					
+1027	TSC	Momo.tsc	Write	#0202	<FL+					
+1028	TSC	Momo.tsc	Write	#0202	<FL+					
+1102	TSC	Momo.tsc	Write	#0205	<FL+					
+1107	TSC	Momo.tsc	Write	#0210	<FL+					
+1103	TSC	Momo.tsc	Write	#0210	<FL+					
+1103	TSC	Momo.tsc	Read	#0280	<FLJ					
+1103	TSC	Momo.tsc	Write	#0281	<FL-					
+1105	TSC	Momo.tsc	Write	#0281	<FL+					
+1030	TSC	Momo.tsc	Write	#0281	<FL+					
+1031	TSC	Momo.tsc	Write	#0281	<FL+					
+1032	TSC	Momo.tsc	Write	#0281	<FL+					
+1033	TSC	Momo.tsc	Write	#0281	<FL+					
+1004	TSC	Momo.tsc	Write	#0281	<FL+					
+1038	TSC	Momo.tsc	Write	#0281	<FL-					
+1039	TSC	Momo.tsc	Write	#0281	<FL+					
+1026	TSC	Momo.tsc	Write	#0281	<FL-					
+1036	TSC	Momo.tsc	Write	#0281	<FL+					
+1105	Both	Momo.tsc	Write	#0281	<DNP	12	223	Momorin	SpawnInOtherDirection, Interactable, HideWhenFlagSet	
+1105	Both	Momo.tsc	Write	#0281	<DNP	11	231	Rocket	Invulnerable, HardSolid, Interactable, HideWhenFlagSet	
+1033	Entity	Lounge.pxe	Read			12	224	Chie	HideWhenFlagSet	
+1121	Entity	Lounge.pxe	Read			13	72	Sprinkler	HideWhenFlagSet	
+1033	Entity	Lounge.pxe	Read			14	258	Mimiga, sleeping	HideWhenFlagSet	
+274	Entity	Lounge.pxe	Read			15	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Lounge.tsc	Write	#0100	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+1020	TSC	Lounge.tsc	Read	#0200	<FLJ					
+1121	TSC	Lounge.tsc	Read	#0201	<FLJ					
+1121	TSC	Lounge.tsc	Write	#0202	<FL+					
+1121	Both	Lounge.tsc	Write	#0202	<DNP	13	72	Sprinkler	SpawnInOtherDirection, HideWhenFlagSet	
+1033	TSC	Lounge.tsc	Read	#0210	<FLJ					
+1020	TSC	Lounge.tsc	Read	#0210	<FLJ					
+1020	TSC	Lounge.tsc	Read	#0220	<FLJ					
+1020	TSC	Lounge.tsc	Read	#0230	<FLJ					
+1120	TSC	Lounge.tsc	Write	#0250	<FL+					
+1021	TSC	Lounge.tsc	Write	#0250	<FL+					
+1140	Entity	CentW.pxe	Read			10	228	Droll, guarding	HideWhenFlagSet	
+274	Entity	CentW.pxe	Read			12	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	CentW.tsc	Write	#0099	<DNP	5	0	Null	IgnoreSolidity	
+1023	TSC	CentW.tsc	Read	#0100	<FLJ					
+1023	TSC	CentW.tsc	Write	#0101	<FL+					
+1140	TSC	CentW.tsc	Read	#0150	<FLJ					
+1023	TSC	CentW.tsc	Read	#0150	<FLJ					
+1082	TSC	CentW.tsc	Write	#0151	<FL+					
+1140	TSC	CentW.tsc	Write	#0151	<FL+					
+1141	TSC	CentW.tsc	Read	#0151	<FLJ					
+1141	TSC	CentW.tsc	Write	#0151	<FL+					
+1033	Entity	Jail2.pxe	Read			8	240	Mimiga (wandering)	HideWhenFlagSet	
+1033	Entity	Jail2.pxe	Read			9	240	Mimiga (wandering)	HideWhenFlagSet	
+1033	Entity	Jail2.pxe	Read			10	240	Mimiga (wandering)	HideWhenFlagSet	
+1033	Entity	Jail2.pxe	Read			11	240	Mimiga (wandering)	HideWhenFlagSet	
+1033	Entity	Jail2.pxe	Read			12	240	Mimiga (wandering)	HideWhenFlagSet	
+1033	Entity	Jail2.pxe	Read			13	240	Mimiga (wandering)	HideWhenFlagSet	
+274	Entity	Jail2.pxe	Read			16	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Jail2.tsc	Write	#0099	<DNP	6	0	Null	IgnoreSolidity	
+524	TSC	Jail2.tsc	Write	#0200	<FL+					
+0	Entity	Blcny1.pxe	Write			12	268	Igor (enemy)	Shootable	
+0	Entity	Blcny1.pxe	Write			13	115	Ravil (enemy)	Shootable	
+0	Entity	Blcny1.pxe	Write			14	115	Ravil (enemy)	Shootable	
+19	Entity	Blcny1.pxe				15	253	Energy Capsule 		SpecialEntityNoWriteFlag
+19	Entity	Blcny1.pxe				16	253	Energy Capsule 		SpecialEntityNoWriteFlag
+19	Entity	Blcny1.pxe				17	253	Energy Capsule 		SpecialEntityNoWriteFlag
+19	Entity	Blcny1.pxe				18	253	Energy Capsule 		SpecialEntityNoWriteFlag
+200	Entity	Blcny1.pxe	Read			27	86	Missile	AppearWhenFlagSet	
+200	Entity	Blcny1.pxe	Read			28	86	Missile	AppearWhenFlagSet	
+200	Entity	Blcny1.pxe	Read			29	86	Missile	AppearWhenFlagSet	
+200	Entity	Blcny1.pxe	Read			30	86	Missile	AppearWhenFlagSet	
+200	Entity	Blcny1.pxe	Read			31	86	Missile	AppearWhenFlagSet	
+200	Entity	Blcny1.pxe	Read			32	86	Missile	AppearWhenFlagSet	
+200	Entity	Blcny1.pxe	Read			33	86	Missile	AppearWhenFlagSet	
+0	Entity	Blcny1.pxe	Write			37	115	Ravil (enemy)	Shootable	
+19	Entity	Blcny1.pxe				39	253	Energy Capsule 		SpecialEntityNoWriteFlag
+19	Entity	Blcny1.pxe				40	253	Energy Capsule 		SpecialEntityNoWriteFlag
+19	Entity	Blcny1.pxe				41	253	Energy Capsule 		SpecialEntityNoWriteFlag
+19	Entity	Blcny1.pxe				42	253	Energy Capsule 		SpecialEntityNoWriteFlag
+2999	Entity	Blcny1.pxe	Read			44	13	Forcefield	HideWhenFlagSet	
+2999	Entity	Blcny1.pxe	Read			45	13	Forcefield	HideWhenFlagSet	
+2999	Entity	Blcny1.pxe	Read			46	13	Forcefield	HideWhenFlagSet	
+2999	Entity	Blcny1.pxe	Read			47	46	H/V Trigger	HideWhenFlagSet	
+274	Entity	Blcny1.pxe	Read			49	136	Puppy, carried	AppearWhenFlagSet	
+1190	TSC	Blcny1.tsc	Write	#0090	<FL-					
+1191	TSC	Blcny1.tsc	Write	#0090	<FL-					
+1192	TSC	Blcny1.tsc	Write	#0090	<FL+					
+1190	TSC	Blcny1.tsc	Write	#0091	<FL+					
+1191	TSC	Blcny1.tsc	Write	#0091	<FL-					
+1192	TSC	Blcny1.tsc	Write	#0091	<FL-					
+1190	TSC	Blcny1.tsc	Write	#0094	<FL-					
+1191	TSC	Blcny1.tsc	Write	#0094	<FL+					
+1192	TSC	Blcny1.tsc	Write	#0094	<FL-					
+0	Both	Blcny1.tsc	Write	#0200	<DNP	34	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+1191	TSC	Blcny1.tsc	Read	#0210	<FLJ					
+1192	TSC	Blcny1.tsc	Read	#0210	<FLJ					
+0	Both	Blcny1.tsc	Write	#0299	<DNP	48	46	H/V Trigger	SpawnInOtherDirection	
+2999	TSC	Blcny1.tsc	Read	#0299	<FLJ					
+6000	TSC	Blcny1.tsc	Read	#0300	<FLJ					
+6001	TSC	Blcny1.tsc	Read	#0300	<FLJ					
+6002	TSC	Blcny1.tsc	Read	#0300	<FLJ					
+6004	TSC	Blcny1.tsc	Read	#0300	<FLJ					
+2800	TSC	Blcny1.tsc	Read	#0301	<FLJ					
+6001	TSC	Blcny1.tsc	Read	#0302	<FLJ					
+6002	TSC	Blcny1.tsc	Read	#0302	<FLJ					
+6004	TSC	Blcny1.tsc	Read	#0302	<FLJ					
+6001	TSC	Blcny1.tsc	Read	#0303	<FLJ					
+6002	TSC	Blcny1.tsc	Read	#0303	<FLJ					
+6004	TSC	Blcny1.tsc	Read	#0303	<FLJ					
+6002	TSC	Blcny1.tsc	Read	#0403	<FLJ					
+6004	TSC	Blcny1.tsc	Read	#0403	<FLJ					
+6002	TSC	Blcny1.tsc	Read	#0404	<FLJ					
+6004	TSC	Blcny1.tsc	Read	#0404	<FLJ					
+6100	TSC	Blcny1.tsc	Read	#0501	<FLJ					
+6101	TSC	Blcny1.tsc	Read	#0502	<FLJ					
+6102	TSC	Blcny1.tsc	Read	#0503	<FLJ					
+6103	TSC	Blcny1.tsc	Read	#0504	<FLJ					
+6104	TSC	Blcny1.tsc	Read	#0505	<FLJ					
+6105	TSC	Blcny1.tsc	Read	#0506	<FLJ					
+6106	TSC	Blcny1.tsc	Read	#0507	<FLJ					
+6107	TSC	Blcny1.tsc	Read	#0508	<FLJ					
+6108	TSC	Blcny1.tsc	Read	#0509	<FLJ					
+6109	TSC	Blcny1.tsc	Read	#0510	<FLJ					
+6110	TSC	Blcny1.tsc	Read	#0511	<FLJ					
+6111	TSC	Blcny1.tsc	Read	#0512	<FLJ					
+6112	TSC	Blcny1.tsc	Read	#0513	<FLJ					
+6113	TSC	Blcny1.tsc	Read	#0514	<FLJ					
+6114	TSC	Blcny1.tsc	Read	#0515	<FLJ					
+6004	TSC	Blcny1.tsc	Read	#0516	<FLJ					
+6004	TSC	Blcny1.tsc	Read	#0517	<FLJ					
+4007	TSC	Blcny1.tsc	Read	#0550	<FLJ					
+4002	TSC	Blcny1.tsc	Read	#0551	<FLJ					
+2999	Both	Blcny1.tsc	Write	#0600	<DNA	44	13	Forcefield	Invulnerable, HardSolid, HideWhenFlagSet	
+2999	Both	Blcny1.tsc	Write	#0600	<DNA	45	13	Forcefield	Invulnerable, HardSolid, HideWhenFlagSet	
+2999	Both	Blcny1.tsc	Write	#0600	<DNA	46	13	Forcefield	Invulnerable, HardSolid, HideWhenFlagSet	
+0	Both	Blcny1.tsc	Write	#0600	<DNP	48	46	H/V Trigger	SpawnInOtherDirection	
+2999	Both	Blcny1.tsc	Write	#0600	<DNP	47	46	H/V Trigger	SpawnInOtherDirection, HideWhenFlagSet	
+0	Entity	Priso1.pxe	Write			5	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			6	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			7	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			8	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			9	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			10	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			23	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			24	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			25	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			26	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			27	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			28	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			29	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			30	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			31	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			32	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			33	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			34	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			35	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			36	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			37	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			38	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			39	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			40	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			41	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			42	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			43	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			44	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			52	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			53	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			54	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			55	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			56	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			57	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			58	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			59	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			60	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			61	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			62	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			63	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			64	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			65	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			66	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			67	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			68	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			69	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			70	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			71	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			72	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			73	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			74	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			75	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			76	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			77	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			78	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			79	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			80	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			81	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			82	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			83	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			84	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			85	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			86	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			87	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			88	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			89	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			90	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso1.pxe	Write			91	241	Critter, Hopping Red (enemy)	Shootable	
+274	Entity	Priso1.pxe	Read			92	136	Puppy, carried	AppearWhenFlagSet	
+0	Both	Priso1.tsc	Write	#0100	<DNP	3	18	Door	IgnoreSolidity, Interactable	
+0	Both	Priso1.tsc	Write	#0110	<DNP	4	18	Door	IgnoreSolidity, Interactable	
+1250	Entity	Ring1.pxe	Read			4	247	Misery (boss)	HideWhenFlagSet	
+1250	Entity	Ring1.pxe	Read			5	46	H/V Trigger	HideWhenFlagSet	
+1341	Entity	Ring1.pxe	Read			8	292	Quake	AppearWhenFlagSet	
+274	Entity	Ring1.pxe	Read			9	136	Puppy, carried	AppearWhenFlagSet	
+1250	TSC	Ring1.tsc	Read	#0092	<FLJ					
+1341	TSC	Ring1.tsc	Read	#0093	<FLJ					
+1250	TSC	Ring1.tsc	Read	#0093	<FLJ					
+1341	TSC	Ring1.tsc	Read	#0100	<FLJ					
+1020	TSC	Ring1.tsc	Read	#0400	<FLJ					
+1020	TSC	Ring1.tsc	Read	#0501	<FLJ					
+1250	Both	Ring1.tsc	Write	#0502	<DNP	5	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1250	Both	Ring1.tsc	Write	#0503	<DNP	5	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			4	260	Shovel Brigade, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			6	0	Null	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			7	261	Chie, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			8	262	Chaco, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			9	260	Shovel Brigade, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			10	0	Null	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			11	260	Shovel Brigade, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			12	260	Shovel Brigade, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			13	260	Shovel Brigade, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			14	0	Null	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			15	307	Santa, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			16	260	Shovel Brigade, caged	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			17	239	Cage bars	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			18	239	Cage bars	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			19	239	Cage bars	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			20	239	Cage bars	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			21	239	Cage bars	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			22	239	Cage bars	HideWhenFlagSet	
+1273	Entity	Ring2.pxe	Read			23	239	Cage bars	HideWhenFlagSet	
+1270	Entity	Ring2.pxe	Read			24	46	H/V Trigger	HideWhenFlagSet	
+1270	Entity	Ring2.pxe	Read			25	256	Doctor, facing away	HideWhenFlagSet	
+1270	Entity	Ring2.pxe	Read			26	0	Null	HideWhenFlagSet	
+1270	Entity	Ring2.pxe	Read			27	0	Null	HideWhenFlagSet	
+1341	Entity	Ring2.pxe	Read			30	292	Quake	AppearWhenFlagSet	
+274	Entity	Ring2.pxe	Read			31	136	Puppy, carried	AppearWhenFlagSet	
+274	Entity	Ring2.pxe	Read			32	136	Puppy, carried	AppearWhenFlagSet	
+1341	TSC	Ring2.tsc	Read	#0093	<FLJ					
+1270	TSC	Ring2.tsc	Read	#0093	<FLJ					
+1272	TSC	Ring2.tsc	Read	#0200	<FLJ					
+1270	TSC	Ring2.tsc	Read	#0200	<FLJ					
+1271	TSC	Ring2.tsc	Read	#0200	<FLJ					
+1020	TSC	Ring2.tsc	Read	#0200	<FLJ					
+1272	TSC	Ring2.tsc	Write	#0202	<FL+					
+1274	TSC	Ring2.tsc	Read	#0204	<FLJ					
+1274	TSC	Ring2.tsc	Write	#0204	<FL+					
+1270	TSC	Ring2.tsc	Read	#0210	<FLJ					
+1271	TSC	Ring2.tsc	Read	#0210	<FLJ					
+1270	TSC	Ring2.tsc	Read	#0220	<FLJ					
+1271	TSC	Ring2.tsc	Read	#0220	<FLJ					
+1020	TSC	Ring2.tsc	Read	#0222	<FLJ					
+1270	Both	Ring2.tsc	Write	#0410	<DNP	26	0	Null	IgnoreSolidity, RunEventWhenKilled, HideWhenFlagSet	
+1270	TSC	Ring2.tsc	Write	#0410	<FL-					
+1270	TSC	Ring2.tsc	Write	#0420	<FL+					
+1270	Both	Ring2.tsc	Write	#0420	<DNP	27	0	Null	IgnoreSolidity, RunEventWhenKilled, HideWhenFlagSet	
+1270	Both	Ring2.tsc	Write	#0500	<DNP	24	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1270	Both	Ring2.tsc	Write	#0502	<DNP	25	256	Doctor, facing away	HideWhenFlagSet	
+1270	TSC	Ring2.tsc	Write	#0502	<FL-					
+1271	TSC	Ring2.tsc	Write	#0502	<FL+					
+1270	Both	Ring2.tsc	Write	#0501	<DNP	24	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1270	Both	Ring2.tsc	Write	#0501	<DNP	25	256	Doctor, facing away	HideWhenFlagSet	
+1270	TSC	Ring2.tsc	Write	#0501	<FL-					
+1271	TSC	Ring2.tsc	Write	#0501	<FL+					
+274	Entity	Prefa1.pxe	Read			4	136	Puppy, carried	AppearWhenFlagSet	
+161	TSC	Prefa1.tsc	Read	#0200	<FLJ					
+0	Entity	Priso2.pxe	Write			7	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			8	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			9	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			10	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			11	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			12	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			13	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			14	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			15	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			16	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			17	241	Critter, Hopping Red (enemy)	Shootable	
+19	Entity	Priso2.pxe				18	253	Energy Capsule 		SpecialEntityNoWriteFlag
+0	Entity	Priso2.pxe	Write			19	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			21	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			22	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			23	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			24	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			25	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			26	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			27	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			28	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			30	241	Critter, Hopping Red (enemy)	Shootable	
+6111	Entity	Priso2.pxe	Read			31	276	Red Demon (boss)	HideWhenFlagSet	
+1320	Entity	Priso2.pxe	Read			32	0	Null	HideWhenFlagSet	
+0	Entity	Priso2.pxe	Write			33	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			34	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			35	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			36	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			37	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			38	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			39	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			40	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			41	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			42	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			43	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			44	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			45	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			46	246	Press, Proximity (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			47	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			48	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			49	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			50	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			51	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			52	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			53	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			54	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			55	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			56	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			57	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			58	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			59	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			60	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			61	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			62	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			63	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			64	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			65	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			74	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			75	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			76	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			90	241	Critter, Hopping Red (enemy)	Shootable	
+0	Entity	Priso2.pxe	Write			91	241	Critter, Hopping Red (enemy)	Shootable	
+19	Entity	Priso2.pxe				92	253	Energy Capsule 		SpecialEntityNoWriteFlag
+29	Entity	Priso2.pxe				93	253	Energy Capsule 		SpecialEntityNoWriteFlag
+19	Entity	Priso2.pxe				94	253	Energy Capsule 		SpecialEntityNoWriteFlag
+99	Entity	Priso2.pxe				95	253	Energy Capsule 		SpecialEntityNoWriteFlag
+4	Entity	Priso2.pxe				96	253	Energy Capsule 		SpecialEntityNoWriteFlag
+8	Entity	Priso2.pxe				97	253	Energy Capsule 		SpecialEntityNoWriteFlag
+6111	Entity	Priso2.pxe	Read			98	46	H/V Trigger	HideWhenFlagSet	
+6111	Entity	Priso2.pxe	Read			99	46	H/V Trigger	HideWhenFlagSet	
+9	Entity	Priso2.pxe				100	253	Energy Capsule 		SpecialEntityNoWriteFlag
+274	Entity	Priso2.pxe	Read			102	136	Puppy, carried	AppearWhenFlagSet	
+1320	Entity	Priso2.pxe	Read			103	21	Treasure Chest, open	AppearWhenFlagSet	
+1320	TSC	Priso2.tsc	Read	#0099	<FLJ					
+6111	TSC	Priso2.tsc	Read	#0099	<FLJ					
+0	Both	Priso2.tsc	Write	#0100	<DNP	1	18	Door	IgnoreSolidity, Interactable	
+0	Both	Priso2.tsc	Write	#0110	<DNP	0	18	Door	IgnoreSolidity, Interactable	
+6111	Both	Priso2.tsc	Write	#0241	<DNP	98	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+6111	Both	Priso2.tsc	Write	#0241	<DNP	99	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1320	TSC	Priso2.tsc	Write	#0241	<FL-					
+6111	TSC	Priso2.tsc	Write	#0250	<FL+					
+1320	TSC	Priso2.tsc	Read	#0251	<FLJ					
+1320	TSC	Priso2.tsc	Write	#0251	<FL+					
+1340	Entity	Ring3.pxe	Read			7	46	H/V Trigger	HideWhenFlagSet	
+1340	Entity	Ring3.pxe	Read			8	291	Mini Undead Core, stationary	HideWhenFlagSet	
+1340	Entity	Ring3.pxe	Read			9	291	Mini Undead Core, stationary	HideWhenFlagSet	
+1340	Entity	Ring3.pxe	Read			10	291	Mini Undead Core, stationary	HideWhenFlagSet	
+1340	Entity	Ring3.pxe	Read			11	291	Mini Undead Core, stationary	HideWhenFlagSet	
+1340	Entity	Ring3.pxe	Read			12	46	H/V Trigger	HideWhenFlagSet	
+274	Entity	Ring3.pxe	Read			16	136	Puppy, carried	AppearWhenFlagSet	
+1340	Both	Ring3.tsc	Write	#0441	<DNP	12	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1340	TSC	Ring3.tsc	Write	#0441	<FL-					
+1340	Both	Ring3.tsc	Write	#0451	<DNP	7	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1340	Both	Ring3.tsc	Write	#0451	<DNP	12	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1340	Both	Ring3.tsc	Write	#0502	<DNP	7	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1340	Both	Ring3.tsc	Write	#0502	<DNP	12	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection, HideWhenFlagSet	
+1340	Both	Ring3.tsc	Write	#0502	<DNP	8	291	Mini Undead Core, stationary	IgnoreSolidity, HardSolid, SpawnInOtherDirection, HideWhenFlagSet	
+1340	Both	Ring3.tsc	Write	#0502	<DNP	9	291	Mini Undead Core, stationary	IgnoreSolidity, HardSolid, SpawnInOtherDirection, HideWhenFlagSet	
+1340	Both	Ring3.tsc	Write	#0502	<DNP	10	291	Mini Undead Core, stationary	IgnoreSolidity, HardSolid, HideWhenFlagSet	
+1340	Both	Ring3.tsc	Write	#0502	<DNP	11	291	Mini Undead Core, stationary	IgnoreSolidity, HardSolid, HideWhenFlagSet	
+0	Both	Ring3.tsc	Write	#0600	<DNP	13	0	Null	IgnoreSolidity	
+0	Both	Ring3.tsc	Write	#0600	<DNP	14	0	Null	IgnoreSolidity	
+1273	TSC	Ring3.tsc	Write	#0600	<FL+					
+1341	TSC	Ring3.tsc	Write	#0600	<FL+					
+1390	TSC	Ring3.tsc	Write	#0600	<FL+					
+1391	TSC	Ring3.tsc	Write	#0600	<FL+					
+1392	TSC	Ring3.tsc	Write	#0600	<FL+					
+1031	TSC	Ring3.tsc	Write	#0600	<FL-					
+1032	TSC	Ring3.tsc	Write	#0600	<FL-					
+1340	TSC	Ring3.tsc	Write	#1000	<FL+					
+1393	TSC	Ring3.tsc	Write	#1002	<FL+					
+1370	Entity	Little.pxe	Read			6	278	Little Family	AppearWhenFlagSet	
+274	Entity	Little.pxe	Read			9	136	Puppy, carried	AppearWhenFlagSet	
+1372	TSC	Little.tsc	Read	#0200	<FLJ					
+2811	TSC	Little.tsc	Read	#0200	<FLJ					
+1372	TSC	Little.tsc	Write	#0203	<FL+					
+1370	TSC	Little.tsc	Read	#0210	<FLJ					
+1371	TSC	Little.tsc	Write	#0210	<FL+					
+1372	TSC	Little.tsc	Read	#0211	<FLJ					
+1393	Entity	Blcny2.pxe	Read			3	18	Door	AppearWhenFlagSet	
+1393	Entity	Blcny2.pxe	Read			9	18	Door	HideWhenFlagSet	
+1390	Entity	Blcny2.pxe	Read			10	254	Helicopter	HideWhenFlagSet	
+1390	Entity	Blcny2.pxe	Read			13	223	Momorin	HideWhenFlagSet	
+1390	Entity	Blcny2.pxe	Read			14	0	Null	HideWhenFlagSet	
+1391	Entity	Blcny2.pxe	Read			15	42	Sue	AppearWhenFlagSet	
+1392	Entity	Blcny2.pxe	Read			16	42	Sue	AppearWhenFlagSet	
+1392	Entity	Blcny2.pxe	Read			17	46	H/V Trigger	AppearWhenFlagSet	
+1341	Entity	Blcny2.pxe	Read			23	292	Quake	AppearWhenFlagSet	
+1341	Entity	Blcny2.pxe	Read			25	294	Generator - Falling Block	AppearWhenFlagSet	
+274	Entity	Blcny2.pxe	Read			28	136	Puppy, carried	AppearWhenFlagSet	
+1190	TSC	Blcny2.tsc	Write	#0090	<FL-					
+1191	TSC	Blcny2.tsc	Write	#0090	<FL-					
+1192	TSC	Blcny2.tsc	Write	#0090	<FL+					
+1190	TSC	Blcny2.tsc	Write	#0091	<FL+					
+1191	TSC	Blcny2.tsc	Write	#0091	<FL-					
+1192	TSC	Blcny2.tsc	Write	#0091	<FL-					
+1190	TSC	Blcny2.tsc	Write	#0094	<FL-					
+1191	TSC	Blcny2.tsc	Write	#0094	<FL+					
+1192	TSC	Blcny2.tsc	Write	#0094	<FL-					
+6001	TSC	Blcny2.tsc	Read	#0120	<FLJ					
+6002	TSC	Blcny2.tsc	Read	#0120	<FLJ					
+0	Both	Blcny2.tsc	Write	#0200	<DNP	18	0	Null	IgnoreSolidity, RunEventOnTouch, SpawnInOtherDirection	
+1191	TSC	Blcny2.tsc	Read	#0210	<FLJ					
+1192	TSC	Blcny2.tsc	Read	#0210	<FLJ					
+1190	TSC	Blcny2.tsc	Write	#0310	<FL-					
+1191	TSC	Blcny2.tsc	Write	#0310	<FL-					
+1192	TSC	Blcny2.tsc	Write	#0310	<FL+					
+1391	Both	Blcny2.tsc	Write	#0310	<DNP	15	42	Sue	AppearWhenFlagSet, SpawnInOtherDirection	
+1391	TSC	Blcny2.tsc	Write	#0310	<FL-					
+1392	Both	Blcny2.tsc	Write	#0330	<DNP	17	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1392	TSC	Blcny2.tsc	Write	#0330	<FL-					
+0	Both	Blcny2.tsc	Write	#0400	<DNP	11	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+1341	Both	Blcny2.tsc	Write	#0400	<DNP	23	292	Quake	AppearWhenFlagSet	
+0	Both	Blcny2.tsc	Write	#0400	<DNP	26	302	Camera Focus Marker	IgnoreSolidity	
+274	Both	Blcny2.tsc	Write	#0400	<DNP	28	136	Puppy, carried	IgnoreSolidity, AppearWhenFlagSet	
+274	TSC	Blcny2.tsc	Write	#0400	<FL-					
+0	Both	Fall.tsc	Write	#0100	<DNP	2	296	Generator - Cloud		
+0	Both	Fall.tsc	Write	#0100	<DNP	0	150	Quote		
+0	Both	Fall.tsc	Write	#0120	<DNP	2	296	Generator - Cloud		
+2000	TSC	Fall.tsc	Write	#0120	<FL+					
+1460	TSC	Fall.tsc	Write	#0120	<FL+					
+274	Entity	Pixel.pxe	Read			8	136	Puppy, carried	AppearWhenFlagSet	
+1440	Entity	Pixel.pxe	Read			9	165	Curly, sleeping	AppearWhenFlagSet	
+836	Entity	Pixel.pxe	Read			11	259	Curly, carried	AppearWhenFlagSet	
+6109	TSC	Pixel.tsc	Read	#0094	<FLJ					
+1042	TSC	Pixel.tsc	Read	#0096	<FLJ					
+1441	TSC	Pixel.tsc	Read	#0200	<FLJ					
+1440	TSC	Pixel.tsc	Read	#0200	<FLJ					
+835	TSC	Pixel.tsc	Read	#0200	<FLJ					
+1445	TSC	Pixel.tsc	Write	#0202	<FL+					
+1441	TSC	Pixel.tsc	Read	#0221	<FLJ					
+1445	TSC	Pixel.tsc	Read	#0221	<FLJ					
+1441	TSC	Pixel.tsc	Write	#0222	<FL+					
+1444	TSC	Pixel.tsc	Read	#0250	<FLJ					
+1442	TSC	Pixel.tsc	Read	#0250	<FLJ					
+1441	TSC	Pixel.tsc	Read	#0250	<FLJ					
+1440	TSC	Pixel.tsc	Read	#0250	<FLJ					
+836	TSC	Pixel.tsc	Read	#0250	<FLJ					
+836	Both	Pixel.tsc	Write	#0251	<DNP	11	259	Curly, carried	IgnoreSolidity, AppearWhenFlagSet	
+836	TSC	Pixel.tsc	Write	#0251	<FL-					
+1440	TSC	Pixel.tsc	Write	#0251	<FL+					
+1442	TSC	Pixel.tsc	Write	#0253	<FL+					
+836	TSC	Pixel.tsc	Write	#0254	<FL+					
+1042	TSC	Pixel.tsc	Write	#0254	<FL+					
+1440	TSC	Pixel.tsc	Write	#0254	<FL-					
+1444	TSC	Pixel.tsc	Write	#0254	<FL+					
+0	Entity	e_Maze.pxe	Write			1	306	Balrog, nurse	Shootable	
+2000	TSC	e_Maze.tsc	Read	#0100	<FLJ					
+162	TSC	e_Jenk.tsc	Read	#0100	<FLJ					
+2000	TSC	e_Sky.tsc	Read	#0100	<FLJ					
+274	Entity	Prefa2.pxe	Read			6	136	Puppy, carried	AppearWhenFlagSet	
+1534	TSC	Prefa2.tsc	Write	#0110	<FL+					
+1550	TSC	Prefa2.tsc	Write	#0110	<FL+					
+1046	TSC	Prefa2.tsc	Read	#0110	<FLJ					
+1531	TSC	Prefa2.tsc	Write	#0111	<FL+					
+1390	TSC	Prefa2.tsc	Write	#0200	<FL+					
+1391	TSC	Prefa2.tsc	Write	#0200	<FL+					
+1392	TSC	Prefa2.tsc	Write	#0200	<FL+					
+1341	Entity	Hell1.pxe	Read			14	292	Quake	AppearWhenFlagSet	
+1530	Entity	Hell1.pxe	Read			36	70	Sparkling Item	HideWhenFlagSet	
+274	Entity	Hell1.pxe	Read			42	136	Puppy, carried	AppearWhenFlagSet	
+1531	Entity	Hell1.pxe	Read			43	117	Curly, standing	AppearWhenFlagSet	
+16	Entity	Hell1.pxe				44	253	Energy Capsule 		SpecialEntityNoWriteFlag
+16	Entity	Hell1.pxe				45	253	Energy Capsule 		SpecialEntityNoWriteFlag
+1532	Entity	Hell1.pxe	Read			46	259	Curly, carried	AppearWhenFlagSet	
+10	Entity	Hell1.pxe				47	253	Energy Capsule 		SpecialEntityNoWriteFlag
+10	Entity	Hell1.pxe				48	253	Energy Capsule 		SpecialEntityNoWriteFlag
+10	Entity	Hell1.pxe				49	253	Energy Capsule 		SpecialEntityNoWriteFlag
+10	Entity	Hell1.pxe				50	253	Energy Capsule 		SpecialEntityNoWriteFlag
+1533	Entity	Hell1.pxe	Read			53	320	Curly, carried, shooting	AppearWhenFlagSet	
+1531	TSC	Hell1.tsc	Read	#0110	<FLJ					
+1530	Both	Hell1.tsc	Write	#0400	<DNP	36	70	Sparkling Item	Interactable, HideWhenFlagSet	
+0	Both	Hell1.tsc	Write	#0420	<DNP	37	46	H/V Trigger	RunEventOnTouch	
+1531	TSC	Hell1.tsc	Write	#0500	<FL-					
+1532	TSC	Hell1.tsc	Write	#0500	<FL+					
+0	Both	Hell1.tsc	Write	#0900	<DNP	51	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+0	Both	Hell1.tsc	Write	#0901	<DNP	52	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+1341	Entity	Hell2.pxe	Read			5	292	Quake	AppearWhenFlagSet	
+1351	Entity	Hell2.pxe	Read			6	294	Generator - Falling Block	HideWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			12	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			13	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			14	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			15	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			16	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			17	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			18	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			19	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			20	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			21	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			22	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			23	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			24	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			25	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			26	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			27	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			28	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			29	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			30	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			31	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			32	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			33	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			34	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			35	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			36	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			37	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			38	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell2.pxe	Read			39	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+274	Entity	Hell2.pxe	Read			40	136	Puppy, carried	AppearWhenFlagSet	
+1532	Entity	Hell2.pxe	Read			41	259	Curly, carried	AppearWhenFlagSet	
+1533	Entity	Hell2.pxe	Read			44	320	Curly, carried, shooting	AppearWhenFlagSet	
+0	Both	Hell2.tsc	Write	#0900	<DNP	42	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+0	Both	Hell2.tsc	Write	#0901	<DNP	43	46	H/V Trigger	RunEventOnTouch	
+0	Entity	Hell3.pxe	Write			7	322	Deleet (enemy)	Shootable	
+0	Entity	Hell3.pxe	Write			8	322	Deleet (enemy)	Shootable	
+0	Entity	Hell3.pxe	Write			10	322	Deleet (enemy)	Shootable	
+0	Entity	Hell3.pxe	Write			11	322	Deleet (enemy)	Shootable	
+0	Entity	Hell3.pxe	Write			14	322	Deleet (enemy)	Shootable	
+1534	Entity	Hell3.pxe	Read			15	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			16	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			17	87	Heart	AppearWhenFlagSet	
+19	Entity	Hell3.pxe				18	253	Energy Capsule 		SpecialEntityNoWriteFlag
+1534	Entity	Hell3.pxe	Read			19	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			20	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			21	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			22	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			23	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			24	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			25	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			26	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			27	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			28	0	Null	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			29	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			30	87	Heart	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			35	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			36	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			37	317	Mesa (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			38	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			39	317	Mesa (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			40	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			41	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			42	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			43	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			44	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			45	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			46	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			47	317	Mesa (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			48	317	Mesa (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			49	317	Mesa (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			50	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			51	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			52	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			53	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			54	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			55	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			56	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			57	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			58	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			59	317	Mesa (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			60	317	Mesa (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			61	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			62	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			63	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			64	246	Press, Proximity (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			65	246	Press, Proximity (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			66	246	Press, Proximity (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			69	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			70	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			71	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			72	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			73	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			74	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			75	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			76	310	Bute, sword (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			78	46	H/V Trigger	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			79	46	H/V Trigger	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			80	46	H/V Trigger	AppearWhenFlagSet	
+1551	Entity	Hell3.pxe	Read			83	15	Treasure Chest, closed	HideWhenFlagSet	
+1551	Entity	Hell3.pxe	Read			84	21	Treasure Chest, open	AppearWhenFlagSet	
+1341	Entity	Hell3.pxe	Read			85	292	Quake	AppearWhenFlagSet	
+1550	Entity	Hell3.pxe	Read			87	46	H/V Trigger	AppearWhenFlagSet	
+1550	Entity	Hell3.pxe	Read			89	46	H/V Trigger	AppearWhenFlagSet	
+0	Entity	Hell3.pxe	Write			90	322	Deleet (enemy)	Shootable	
+0	Entity	Hell3.pxe	Write			91	322	Deleet (enemy)	Shootable	
+0	Entity	Hell3.pxe	Write			92	322	Deleet (enemy)	Shootable	
+0	Entity	Hell3.pxe	Write			93	322	Deleet (enemy)	Shootable	
+0	Entity	Hell3.pxe	Write			94	322	Deleet (enemy)	Shootable	
+1534	Entity	Hell3.pxe	Read, Write			95	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read, Write			96	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			101	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			102	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			103	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			104	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			105	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			106	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			107	46	H/V Trigger	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			108	46	H/V Trigger	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			109	46	H/V Trigger	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			110	46	H/V Trigger	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			111	46	H/V Trigger	AppearWhenFlagSet	
+1534	Entity	Hell3.pxe	Read			112	46	H/V Trigger	AppearWhenFlagSet	
+274	Entity	Hell3.pxe	Read			113	136	Puppy, carried	AppearWhenFlagSet	
+1532	Entity	Hell3.pxe	Read			114	259	Curly, carried	AppearWhenFlagSet	
+1533	Entity	Hell3.pxe	Read			121	320	Curly, carried, shooting	AppearWhenFlagSet	
+1532	TSC	Hell3.tsc	Read	#0095	<FLJ					
+1550	TSC	Hell3.tsc	Read	#0095	<FLJ					
+1534	TSC	Hell3.tsc	Read	#0110	<FLJ					
+1532	TSC	Hell3.tsc	Write	#0200	<FL-					
+1533	TSC	Hell3.tsc	Write	#0200	<FL+					
+1550	TSC	Hell3.tsc	Read	#0200	<FLJ					
+1550	Both	Hell3.tsc	Write	#0201	<DNP	89	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0241	<DNP	80	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0243	<DNP	79	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0245	<DNP	78	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0251	<DNP	110	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0253	<DNP	108	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0255	<DNP	109	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0257	<DNP	107	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0290	<DNP	111	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0291	<DNP	112	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1550	Both	Hell3.tsc	Write	#0300	<DNP	87	46	H/V Trigger	RunEventOnTouch, AppearWhenFlagSet, SpawnInOtherDirection	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	101	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	102	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	103	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	104	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	105	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	106	309	Bute, flying, 1 (enemy)	AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	35	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	36	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	38	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	40	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	41	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	42	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	43	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	44	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	45	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	46	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	50	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	51	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	52	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	53	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	54	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	55	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	56	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	57	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	58	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	63	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	95	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	96	311	Bute, archer (enemy)	Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	37	317	Mesa (enemy)	SoftSolid, Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	39	317	Mesa (enemy)	SoftSolid, Shootable, AppearWhenFlagSet, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	47	317	Mesa (enemy)	SoftSolid, Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	48	317	Mesa (enemy)	SoftSolid, Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	49	317	Mesa (enemy)	SoftSolid, Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	59	317	Mesa (enemy)	SoftSolid, Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1534	Both	Hell3.tsc	Write	#0300	<DNA	60	317	Mesa (enemy)	SoftSolid, Shootable, AppearWhenFlagSet, SpawnInOtherDirection, ShowDamage	
+1551	TSC	Hell3.tsc	Read	#0390	<FLJ					
+1551	TSC	Hell3.tsc	Write	#0390	<FL+					
+0	Both	Hell3.tsc	Write	#0900	<DNP	115	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+0	Both	Hell3.tsc	Write	#0901	<DNP	116	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+1550	TSC	Hell3.tsc	Write	#1000	<FL-					
+1560	Entity	Mapi.pxe	Read			9	313	Ma Pignon (boss)	HideWhenFlagSet	
+1560	Entity	Mapi.pxe	Read			10	0	Null	HideWhenFlagSet	
+2406	Entity	Mapi.pxe	Read			11	15	Treasure Chest, closed	HideWhenFlagSet	
+2406	Entity	Mapi.pxe	Read			12	21	Treasure Chest, open	AppearWhenFlagSet	
+274	Entity	Mapi.pxe	Read			13	136	Puppy, carried	AppearWhenFlagSet	
+1564	TSC	Mapi.tsc	Read	#0100	<FLJ					
+2406	TSC	Mapi.tsc	Read	#0200	<FLJ					
+1564	TSC	Mapi.tsc	Read	#0200	<FLJ					
+1042	TSC	Mapi.tsc	Read	#0200	<FLJ					
+2406	TSC	Mapi.tsc	Read	#0201	<FLJ					
+2406	TSC	Mapi.tsc	Write	#0201	<FL+					
+1562	TSC	Mapi.tsc	Read	#0400	<FLJ					
+1561	TSC	Mapi.tsc	Read	#0400	<FLJ					
+1561	TSC	Mapi.tsc	Write	#0402	<FL+					
+1562	TSC	Mapi.tsc	Write	#0410	<FL+					
+1564	TSC	Mapi.tsc	Write	#0420	<FL+					
+1560	Both	Mapi.tsc	Write	#0420	<DNP	9	313	Ma Pignon (boss)	Interactable, HideWhenFlagSet, ShowDamage	
+1564	TSC	Mapi.tsc	Write	#0500	<FL-					
+6114	TSC	Mapi.tsc	Write	#0500	<FL+					
+1560	Both	Mapi.tsc	Write	#0500	<DNP	10	0	Null	IgnoreSolidity, RunEventWhenKilled, SpawnInOtherDirection, HideWhenFlagSet	
+1341	Entity	Hell4.pxe	Read			2	292	Quake	AppearWhenFlagSet	
+274	Entity	Hell4.pxe	Read			5	136	Puppy, carried	AppearWhenFlagSet	
+1533	Entity	Hell4.pxe	Read			7	320	Curly, carried, shooting	AppearWhenFlagSet	
+1341	Entity	Hell42.pxe	Read			2	292	Quake	AppearWhenFlagSet	
+274	Entity	Hell42.pxe	Read			6	136	Puppy, carried	AppearWhenFlagSet	
+1533	Entity	Hell42.pxe	Read			8	320	Curly, carried, shooting	AppearWhenFlagSet	
+0	Both	Hell42.tsc	Write	#0900	<DNP	7	46	H/V Trigger	RunEventOnTouch	
+1341	Entity	Statue.pxe	Read			9	292	Quake	AppearWhenFlagSet	
+1341	Entity	Statue.pxe	Read			10	349	Statue	AppearWhenFlagSet	
+1341	Entity	Statue.pxe	Read			11	337	Numahachi	HideWhenFlagSet	
+274	Entity	Statue.pxe	Read			12	136	Puppy, carried	AppearWhenFlagSet	
+1533	Entity	Statue.pxe	Read			13	320	Curly, carried, shooting	AppearWhenFlagSet	
+1534	TSC	Statue.tsc	Read	#0092	<FLJ					
+1534	TSC	Statue.tsc	Read	#0100	<FLJ					
+1590	TSC	Statue.tsc	Read	#0210	<FLJ					
+1591	TSC	Statue.tsc	Read	#0211	<FLJ					
+1592	TSC	Statue.tsc	Read	#0212	<FLJ					
+1593	TSC	Statue.tsc	Read	#0213	<FLJ					
+1341	Entity	Ballo1.pxe	Read			1	292	Quake	AppearWhenFlagSet	
+274	Entity	Ballo1.pxe	Read			13	136	Puppy, carried	AppearWhenFlagSet	
+1533	Entity	Ballo1.pxe	Read			14	320	Curly, carried, shooting	AppearWhenFlagSet	
+0	Both	Ballo1.tsc	Write	#0500	<DNP	2	46	H/V Trigger	RunEventOnTouch, SpawnInOtherDirection	
+1600	TSC	Ballo1.tsc	Read	#1000	<FLJ					
+1600	TSC	Ballo1.tsc	Write	#1000	<FL+					
+1341	Entity	Ostep.pxe	Read			5	292	Quake	AppearWhenFlagSet	
+274	Entity	Ostep.pxe	Read			6	136	Puppy, carried	AppearWhenFlagSet	
+1533	Entity	Ostep.pxe	Read			7	320	Curly, carried, shooting	AppearWhenFlagSet	
+1620	TSC	Ostep.tsc	Write	#0900	<FL+					
+1640	Entity	Pole.pxe	Read			1	15	Treasure Chest, closed	HideWhenFlagSet	
+1640	Entity	Pole.pxe	Read			2	21	Treasure Chest, open	AppearWhenFlagSet	
+1643	Entity	Pole.pxe	Read			4	30	Hermit Gunsmith	AppearWhenFlagSet	
+1641	Entity	Pole.pxe	Read			5	30	Hermit Gunsmith	HideWhenFlagSet	
+1642	Entity	Pole.pxe	Read			6	37	Signpost	AppearWhenFlagSet	
+274	Entity	Pole.pxe	Read			8	136	Puppy, carried	AppearWhenFlagSet	
+1640	TSC	Pole.tsc	Read	#0200	<FLJ					
+1640	TSC	Pole.tsc	Write	#0200	<FL+					
+1644	TSC	Pole.tsc	Read	#0301	<FLJ					
+1644	TSC	Pole.tsc	Write	#0302	<FL+					
+303	TSC	Pole.tsc	Write	#0302	<FL+					
+1700	Entity	Clock.pxe	Read			2	21	Treasure Chest, open	AppearWhenFlagSet	
+1700	Entity	Clock.pxe	Read			3	15	Treasure Chest, closed	HideWhenFlagSet	
+274	Entity	Clock.pxe	Read			4	136	Puppy, carried	AppearWhenFlagSet	
+1700	TSC	Clock.tsc	Read	#0201	<FLJ					
+1700	TSC	Clock.tsc	Write	#0201	<FL+					
