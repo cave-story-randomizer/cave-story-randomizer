@@ -29,4 +29,6 @@ call _free
 pop ecx
 
 :$LN3@ReleaseCre
+mov esp, ebp
+pop ebp
 retn
