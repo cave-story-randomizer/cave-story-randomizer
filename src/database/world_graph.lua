@@ -577,13 +577,13 @@ function worldGraph:canBeatGame(items, obj)
     -- Curly, Omega
     if not (self.regions.upperSandZone:canAccess(items)) then return false end
     -- Toroko+
-    if not self.regions.lowerSandZone.king:canAccess(items) then return false end
+    if not self.regions.lowerSandZone.locations.king:canAccess(items) then return false end
     -- Puu Black, Monster X
     if not (self.regions.labyrinthW:canAccess(items) and _has(items, "clinicKey")) then return false end
     -- Ironhead
     if not self.regions.waterway:canAccess(items) then return false end
     -- Ma Pignon
-    if not self.regions.mimigaVillage.maPignon:canAccess(items) then return false end
+    if not self.regions.mimigaVillage.locations.maPignon:canAccess(items) then return false end
     -- Remaining bosses are all covered by the normal requirements
     return true
   end
