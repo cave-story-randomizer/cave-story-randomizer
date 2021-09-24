@@ -216,11 +216,11 @@ of weapon energy lost will be halved.<WAI9999<END
 <MSG<TURIncreases the rate at which the
 machine gun replenishes ammo.<WAI9999<END
 #6021
-<FLJ2900:7021
+<FLJ2950:7021
 <KEY<MSG<TURYou can breathe underwater with
 this. Curly used to use it.<NOD<CLR
 Do you want to equip it?
-<YNJ0000<EQ+0016<FL+2900<MSG<TUR
+<YNJ0000<EQ+0016<FL+2950<MSG<TUR
 Equipped Curly's Air Tank.<NOD<WAI0003<FRE<EVE5021
 #6022
 <MSG<TURA fully automatic stopwatch.
@@ -327,7 +327,7 @@ Surely you will meet again one day...<WAI9999<END
 Deequipped Booster v0.8.<NOD<WAI0003<FRE<EVE5018
 #7021
 <KEY<MSG<TURDo you want to remove it?
-<YNJ0000<EQ-0016<FL-2900<MSG<TUR
+<YNJ0000<EQ-0016<FL-2950<MSG<TUR
 Deequipped Curly's Air Tank.<NOD<WAI0003<FRE<EVE5021
 #7023
 <KEY<MSG<TURDo you want to remove it?

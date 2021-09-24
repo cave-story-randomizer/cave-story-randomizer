@@ -1,6 +1,6 @@
 Author: Enlight
 
-DUNC NOTE: flag range changed from 4008 through 4015 to 2888 through 2895 in rando
+DUNC NOTE: flag range changed from 4008 through 4015 to 2888 through 2919 in rando
 also: skip the second patch it's not needed and also bugged
 
 Instructions:
