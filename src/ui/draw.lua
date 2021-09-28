@@ -12,6 +12,8 @@ local music = Luigi(require 'ui.music')
 local style = require 'ui.style'
 local theme = require 'lib.luigi.theme.dark'
 
+local utf8 = require("utf8")
+
 layout:setStyle(style)
 settings:setStyle(style)
 sequence:setStyle(style)
@@ -295,7 +297,12 @@ end)
 
 settings.customseed:onChange(function()
   if #settings.customseed.value > 20 then
-    settings.customseed.value = settings.customseed.value:sub(1, 20)
+    local str = settings.customseed.value:sub(1, 20)
+    local length, invalidPos = utf8.len(str)
+    if not length then -- produced invalid sequence, need to adjust
+      str = str:sub(1, invalidPos - 1)
+    end
+    settings.customseed.value = str
   end
   settings.seedcount.text = ("%s/20"):format(#settings.customseed.value)
 end)
