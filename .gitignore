@@ -10,3 +10,12 @@ pre-edited-cs/window\.rect
 *Copy/
 
 venv/
+
+build/
+
+dist/
+
+cave_story_randomizer.egg-info/
+
+*/__pycache__
+caver/version.py
