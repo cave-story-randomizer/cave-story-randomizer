@@ -1,8 +1,11 @@
 local TscFile = {}
 
-function TscFile:new(contents, py_logging)
-  self.log = py_logging
+function TscFile:new(contents)
+  o = {}
+  setmetatable(o, self)
+  self.__index = self
   self._text = self:_codec(contents, 'decode')
+  return o
 end
 
 function TscFile:placeItemAtLocation(script, event, mapname)
@@ -10,7 +13,7 @@ function TscFile:placeItemAtLocation(script, event, mapname)
   self._text, wasChanged = self:_stringReplace(self._text, "<EVE....", script, event)
   if not wasChanged then
     local template = 'Unable to place script "%s" at [%s] event "%s".'
-    self.log.error(template:format(script, mapname, event))
+    error(template:format(script, mapname, event))
   end
 end
 
@@ -19,12 +22,16 @@ function TscFile:placeSongAtCue(songid, event, originalid, mapname)
   self._text, wasChanged = self:_stringReplace(self._text, "<CMU" .. originalid, "<CMU" .. songid, event, {"<CMU0015", "<CMU0000"})
   if not wasChanged then
     local template = "Unable to replace [%s] event #%s's music cue with %q."
-    self.log.warning(template:format(mapname, event, songid))
+    error(template:format(mapname, event, songid))
   end
 end
 
 function TscFile:placeTraAtEntrance(script, event, mapname)
   return -- TODO for entrance rando
+end
+
+function TscFile:placeHintAtEvent(script, event, mapname)
+  return -- TODO
 end
 
 function TscFile:_stringReplace(text, needle, replacement, label, overrides)
@@ -37,11 +44,11 @@ function TscFile:_stringReplace(text, needle, replacement, label, overrides)
     i = text:find(needle, pStart)
 
     if i == nil then
-      self.log.debug(('Unable to replace "%s" with "%s"'):format(needle, replacement))
+      -- print(('Unable to replace "%s" with "%s"'):format(needle, replacement))
       return text, false
     elseif i > pEnd then
       -- This is totally normal and can be ignored.
-      self.log.debug(('Found "%s", but was outside of label.'):format(needle, replacement))
+      -- print(('Found "%s", but was outside of label.'):format(needle, replacement))
       return text, false
     end
 
@@ -112,7 +119,7 @@ function TscFile:_getLabelPositionRange(label)
   end
 
   if labelStart == nil then
-    self.log.error(("%s: Could not find label: %s"):format(self.mapName, label))
+    error(("%s: Could not find label: %s"):format(self.mapName, label))
     labelStart = 1
   end
 
@@ -147,20 +154,23 @@ function TscFile:_codec(text, mode)
     error('Unknown codec mode: ' .. tostring(mode))
   end
 
-  self.log.debug("  filesize", #chars)
-  self.log.debug("  encoding char:", encodingChar)
-  self.log.debug("  encoding char position:", encodingCharPosition)
-
   -- Encode or decode.
   for pos, char in ipairs(chars) do
     if pos ~= encodingCharPosition then
       local byte = (char:byte() + encodingChar) % 256
-      chars[pos] = string.char(byte)
+      if mode == 'decode' then
+        chars[pos] = string.char(byte)
+      else
+        chars[pos] = byte
+      end
+    elseif mode == 'encode' then
+      chars[pos] = char:byte()
     end
   end
-  local decoded = table.concat(chars)
-
-  return decoded
+  if mode == 'encode' then
+    return chars
+  end
+  return table.concat(chars)
 end
 
 return TscFile
