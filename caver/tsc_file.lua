@@ -1,49 +1,33 @@
-local C = Class:extend()
+local TscFile = {}
 
--- local ITEM_DATA = require 'database.items'
-
-local OPTIONAL_REPLACES = {
-  'Max health increased by ',
-  'Max life increased by ',
-  '<ACH0041', -- Cave Story+ only, trigger achievement.
-}
-
-function C:new(path)
-  logInfo('reading TSC: ' .. path)
-
-  local file = lf.newFile(path)
-  assert(file:open('r'))
-
-  local contents, size = file:read()
+function TscFile:new(contents, py_logging)
+  self.log = py_logging
   self._text = self:_codec(contents, 'decode')
-
-  assert(file:close())
-  assert(file:release())
 end
 
-function C:hasUnreplacedItems()
-  return #self._unreplaced >= 1
-end
-
-function C:placeItemAtLocation(item, location)
+function TscFile:placeItemAtLocation(script, event, mapname)
   local wasChanged
-  self._text, wasChanged = self:_stringReplace(self._text, "<EVE....", item.script, location.event)
+  self._text, wasChanged = self:_stringReplace(self._text, "<EVE....", script, event)
   if not wasChanged then
-    local template = 'Unable to place [%s] "%s" at "%s".'
-    logError(template:format(location.map, item.name, location.name))
+    local template = 'Unable to place script "%s" at [%s] event "%s".'
+    self.log.error(template:format(script, mapname, event))
   end
 end
 
-function C:placeSongAtCue(songid, event, map, originalid)
+function TscFile:placeSongAtCue(songid, event, originalid, mapname)
   local wasChanged
   self._text, wasChanged = self:_stringReplace(self._text, "<CMU" .. originalid, "<CMU" .. songid, event, {"<CMU0015", "<CMU0000"})
   if not wasChanged then
     local template = "Unable to replace [%s] event #%s's music cue with %q."
-    logWarning(template:format(map, event, songid))
+    self.log.warning(template:format(mapname, event, songid))
   end
 end
 
-function C:_stringReplace(text, needle, replacement, label, overrides)
+function TscFile:placeTraAtEntrance(script, event, mapname)
+  return -- TODO for entrance rando
+end
+
+function TscFile:_stringReplace(text, needle, replacement, label, overrides)
   overrides = overrides or {}
   local pStart, pEnd = self:_getLabelPositionRange(label)
 
@@ -53,11 +37,11 @@ function C:_stringReplace(text, needle, replacement, label, overrides)
     i = text:find(needle, pStart)
 
     if i == nil then
-      logDebug(('Unable to replace "%s" with "%s"'):format(needle, replacement))
+      self.log.debug(('Unable to replace "%s" with "%s"'):format(needle, replacement))
       return text, false
     elseif i > pEnd then
       -- This is totally normal and can be ignored.
-      logDebug(('Found "%s", but was outside of label.'):format(needle, replacement))
+      self.log.debug(('Found "%s", but was outside of label.'):format(needle, replacement))
       return text, false
     end
 
@@ -88,7 +72,7 @@ function C:_stringReplace(text, needle, replacement, label, overrides)
   return a .. replacement .. b, true
 end
 
-function C:_getLabelPositionRange(label)
+function TscFile:_getLabelPositionRange(label)
   local labelStart, labelEnd
 
   -- Recursive shit for when label is a table...
@@ -128,7 +112,7 @@ function C:_getLabelPositionRange(label)
   end
 
   if labelStart == nil then
-    logError(("%s: Could not find label: %s"):format(self.mapName, label))
+    self.log.error(("%s: Could not find label: %s"):format(self.mapName, label))
     labelStart = 1
   end
 
@@ -139,18 +123,15 @@ function C:_getLabelPositionRange(label)
   return labelStart, labelEnd
 end
 
-function C:writePlaintextTo(path)
-  logInfo('writing Plaintext TSC to: ' .. path)
-  U.writeFile(path, self._text)
+function TscFile:getPlaintext()
+  return self._text
 end
 
-function C:writeTo(path)
-  logInfo('writing TSC to: ' .. path)
-  local encoded = self:_codec(self._text, 'encode')
-  U.writeFile(path, encoded)
+function TscFile:getText()
+  return self:_codec(self._text, 'encode')
 end
 
-function C:_codec(text, mode)
+function TscFile:_codec(text, mode)
   -- Create array of chars.
   local chars = {}
   text:gsub(".", function(c) table.insert(chars, c) end)
@@ -166,9 +147,9 @@ function C:_codec(text, mode)
     error('Unknown codec mode: ' .. tostring(mode))
   end
 
-  logDebug("  filesize", #chars)
-  logDebug("  encoding char:", encodingChar)
-  logDebug("  encoding char position:", encodingCharPosition)
+  self.log.debug("  filesize", #chars)
+  self.log.debug("  encoding char:", encodingChar)
+  self.log.debug("  encoding char position:", encodingCharPosition)
 
   -- Encode or decode.
   for pos, char in ipairs(chars) do
@@ -182,4 +163,4 @@ function C:_codec(text, mode)
   return decoded
 end
 
-return C
+return TscFile
