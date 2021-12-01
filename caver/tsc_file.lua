@@ -8,9 +8,10 @@ function TscFile:new(contents)
   return o
 end
 
-function TscFile:placeItemAtLocation(script, event, mapname)
+function TscFile:placeScriptAtEvent(script, event, mapname, needle)
+  needle = needle or "<EVE...."
   local wasChanged
-  self._text, wasChanged = self:_stringReplace(self._text, "<EVE....", script, event)
+  self._text, wasChanged = self:_stringReplace(self._text, needle, script, event)
   if not wasChanged then
     local template = 'Unable to place script "%s" at [%s] event "%s".'
     error(template:format(script, mapname, event))
@@ -24,14 +25,6 @@ function TscFile:placeSongAtCue(songid, event, originalid, mapname)
     local template = "Unable to replace [%s] event #%s's music cue with %q."
     error(template:format(mapname, event, songid))
   end
-end
-
-function TscFile:placeTraAtEntrance(script, event, mapname)
-  return -- TODO for entrance rando
-end
-
-function TscFile:placeHintAtEvent(script, event, mapname)
-  return -- TODO
 end
 
 function TscFile:_stringReplace(text, needle, replacement, label, overrides)

@@ -3,6 +3,7 @@ from typing import Callable, Optional
 from lupa import LuaRuntime
 import logging
 import shutil
+import re
 pre_edited_cs = __import__("pre-edited-cs")
 
 
@@ -52,16 +53,18 @@ def patch_map(mapname: str, mapdata: dict[str, dict], TscFile, output_dir: Path)
     tsc_file = TscFile.new(TscFile, mappath.read_bytes(), logging.getLogger("caver"))
 
     for event, script in mapdata["pickups"].items():
-        TscFile.placeItemAtLocation(tsc_file, script, event, mapname)
+        TscFile.placeScriptAtEvent(tsc_file, script, event, mapname)
     
     for event, song in mapdata["music"].items():
         TscFile.placeSongAtCue(tsc_file, song["song_id"], event, song["original_id"], mapname)
     
     for event, script in mapdata["entrances"].items():
-        TscFile.placeTraAtEntrance(tsc_file, script, event, mapname)
+        needle = "<EVE...." # TODO: create a proper pattern
+        TscFile.placeScriptAtEvent(tsc_file, script, event, mapname, needle)
     
-    for event, script in mapdata["hints"].items():
-        TscFile.placeHintAtEvent(tsc_file, script, event, mapname)
+    for event, hint in mapdata["hints"].items():
+        script = create_hint_script(hint["text"], hint.get("facepic", "0000"), hint.get("ending", "<END"))
+        TscFile.placeScriptAtEvent(tsc_file, script, event, mapname)
 
     chars = TscFile.getText(tsc_file).values()
     mappath.write_bytes(bytes(chars))
@@ -77,3 +80,37 @@ def patch_hash(hash: list[int], output_dir: Path):
     hash_strings = [f"{num:04d}" for num in hash]
     hash_string = ",".join(hash_strings)
     output_dir.joinpath("data", "hash.txt").write_text(hash_string)
+
+def create_hint_script(text: str, facepic: str, ending: str) -> str:
+    """
+    A desperate attempt to generate valid <MSG text. Fills one text box (up to three lines). Attempts to wrap words elegantly.
+    """
+    hard_limit = 35
+    msgbox_limit = hard_limit if facepic == "0000" else 26
+    pattern = r' [^ ]*$'
+    line1, line2, line3 = "", "", ""
+
+    split = 0
+    line1 = text[split:split+msgbox_limit]
+
+    match = next(re.finditer(pattern, line1), None)
+    if match is not None and len(text) > msgbox_limit:
+        line1 = line1[:match.start]
+        split += match.start
+        if split % hard_limit != 0:
+            line2 = "\r\n"
+        line2 += text[split:split+msgbox_limit]
+
+        match = next(re.finditer(pattern, line2), None)
+        if match is not None and len(text) > msgbox_limit*2:
+            line2 = line2[:match.start]
+            if split % hard_limit != 0:
+                split -= 2
+            split += match.start
+            if split % hard_limit != 0:
+                line3 = "\r\n"
+            line3 += text[split:split+msgbox_limit]
+    
+    return f"<PRI<MSG<TUR<FAC{facepic}{line1}{line2}{line3}<NOD{ending}"
+
+    
