@@ -4,7 +4,8 @@ from lupa import LuaRuntime
 import logging
 import shutil
 import re
-pre_edited_cs = __import__("pre-edited-cs")
+
+import pre_edited_cs
 
 
 CSVERSION = 3
