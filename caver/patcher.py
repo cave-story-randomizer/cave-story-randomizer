@@ -18,8 +18,8 @@ def get_path() -> Path:
     if getattr(sys, "frozen", False):
         file_dir = Path(getattr(sys, "_MEIPASS"))
     else:
-        file_dir = Path(__file__).parent
-    return file_dir
+        file_dir = Path(__file__).parent.parent
+    return file_dir.joinpath("caver")
 
 def patch_files(patch_data: dict, output_dir: Path, progress_update: Callable[[str, float], None]):
     progress_update("Copying base files...", -1)
@@ -54,11 +54,7 @@ def ensure_base_files_exist(output_dir: Path):
         return base
     
     try:
-        shutil.copytree(internal_copy.joinpath("data"), output_dir.joinpath("data"), ignore=should_ignore, dirs_exist_ok=True)
-        root_files = ["Doukutsu.exe", "DoConfig.exe", "Config.dat"]
-        root_files = [f for f in root_files if not f in should_ignore(str(output_dir), root_files)]
-        for f in root_files:
-            shutil.copyfile(internal_copy.joinpath(f), output_dir.joinpath(f))
+        shutil.copytree(internal_copy, output_dir, ignore=should_ignore, dirs_exist_ok=True)
     except shutil.Error:
         raise CaverException("Error copying base files. Ensure the directory is not read-only, and that Doukutsu.exe is closed.")
     output_dir.joinpath("data", "Plaintext").mkdir(exist_ok=True)
