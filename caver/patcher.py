@@ -56,7 +56,7 @@ def ensure_base_files_exist(output_dir: Path):
     try:
         shutil.copytree(internal_copy, output_dir, ignore=should_ignore, dirs_exist_ok=True)
     except shutil.Error:
-        raise CaverException("Error copying base files. Ensure the directory is not read-only, and that Doukutsu.exe is closed.")
+        raise CaverException("Error copying base files. Ensure the directory is not read-only, and that Doukutsu.exe is closed")
     output_dir.joinpath("data", "Plaintext").mkdir(exist_ok=True)
 
 def patch_map(mapname: str, mapdata: dict[str, dict], TscFile, output_dir: Path):
