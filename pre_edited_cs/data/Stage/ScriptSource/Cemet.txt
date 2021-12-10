@@ -30,8 +30,8 @@
 <EVE0051
 
 #0302
-<PRI<MSGArthur's grave.<NOD
+<PRI<MSGKenzo's grave.<NOD
 There's writing on the
-tombstone:<NOD<CLR<MSG<TURHere sleeps the noble Arthur,
-true hero to the Mimigas.<NOD<CLR<END
+tombstone:<NOD<CLR<MSG<TURHere sleeps the noble Kenzo,
+true hero to the CSMC.<NOD<CLR<END
 
