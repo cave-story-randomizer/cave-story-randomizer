@@ -25,19 +25,26 @@ def patch_files(patch_data: dict, output_dir: Path, progress_update: Callable[[s
     progress_update("Copying base files...", -1)
     ensure_base_files_exist(output_dir)
 
-    mapcount = len(patch_data["maps"].keys())
+    total = len(patch_data["maps"].keys()) + len(patch_data["other_tsc"].keys()) + 2
 
     lua_file = get_path().joinpath("tsc_file.lua").read_text()
     TscFile = LuaRuntime().execute(lua_file)
 
     for i, (mapname, mapdata) in enumerate(patch_data["maps"].items()):
-        progress_update(f"Patching {mapname}...", i/mapcount)
+        progress_update(f"Patching {mapname}...", i/total)
         patch_map(mapname, mapdata, TscFile, output_dir)
     
-    progress_update("Copying MyChar...", 1.0)
+    for filename, scripts in patch_data["other_tsc"].items():
+        i += 1
+        progress_update(f"Patching {filename}.tsc...", i/total)
+        patch_other(filename, scripts, TscFile, output_dir)
+
+    i += 1
+    progress_update("Copying MyChar...", i/total)
     patch_mychar(patch_data["mychar"], output_dir)
 
-    progress_update("Copying hash...", 1.0)
+    i += 1
+    progress_update("Copying hash...", i/total)
     patch_hash(patch_data["hash"], output_dir)
 
 def ensure_base_files_exist(output_dir: Path):
@@ -80,6 +87,17 @@ def patch_map(mapname: str, mapdata: dict[str, dict], TscFile, output_dir: Path)
     chars = TscFile.getText(tsc_file).values()
     mappath.write_bytes(bytes(chars))
     output_dir.joinpath("data", "Plaintext", f"{mapname}.txt").write_text(TscFile.getPlaintext(tsc_file))
+
+def patch_other(filename: str, scripts: dict[str, str], TscFile, output_dir: Path):
+    filepath = output_dir.joinpath("data", f"{filename}.tsc")
+    tsc_file = TscFile.new(TscFile, filepath.read_bytes(), logging.getLogger("caver"))
+
+    for event, script in scripts.items():
+        TscFile.placeScriptAtEvent(tsc_file, script, event, filename)
+    
+    chars = TscFile.getText(tsc_file).values()
+    filepath.write_bytes(bytes(chars))
+    output_dir.joinpath("data", "Plaintext", f"{filename}.txt").write_text(TscFile.getPlaintext(tsc_file))
 
 def patch_mychar(mychar: Optional[str], output_dir: Path):
     if mychar is None:
