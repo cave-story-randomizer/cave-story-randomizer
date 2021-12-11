@@ -88,12 +88,12 @@ def patch_map(mapname: str, mapdata: dict[str, dict], TscFile, output_dir: Path)
     mappath.write_bytes(bytes(chars))
     output_dir.joinpath("data", "Plaintext", f"{mapname}.txt").write_text(TscFile.getPlaintext(tsc_file))
 
-def patch_other(filename: str, scripts: dict[str, str], TscFile, output_dir: Path):
+def patch_other(filename: str, scripts: dict[str, dict[str, str]], TscFile, output_dir: Path):
     filepath = output_dir.joinpath("data", f"{filename}.tsc")
     tsc_file = TscFile.new(TscFile, filepath.read_bytes(), logging.getLogger("caver"))
 
     for event, script in scripts.items():
-        TscFile.placeScriptAtEvent(tsc_file, script, event, filename)
+        TscFile.placeScriptAtEvent(tsc_file, script["script"], event, filename, script.get("needle", "<EVE...."))
     
     chars = TscFile.getText(tsc_file).values()
     filepath.write_bytes(bytes(chars))
