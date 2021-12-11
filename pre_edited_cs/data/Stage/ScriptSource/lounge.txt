@@ -29,7 +29,7 @@ of new ones ready.<NOD<END
 
 #0202
 <KEY<MSG<TUR<FL+1121<GIT1028<IT-0028Handed over the =Broken
-Sprinkler=.<NOD<DNP0280<EVE0204
+Sprinkler=.<NOD<DNP0280<ITJ0043:0205<EVE0204
 
 #0203
 <KEY<MSG<TURLooks like we had just enough
@@ -37,6 +37,8 @@ sprinklers...<NOD<END
 
 #0204
 <EVE0079
+#0205
+<IT-0043<IT+0029<EVE0204
 
 
 #0210

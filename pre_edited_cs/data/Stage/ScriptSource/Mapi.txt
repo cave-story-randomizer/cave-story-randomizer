@@ -34,6 +34,7 @@ with amnesia.<NOD<CLRWho needs it, right?<NOD<CLO<END
 #0400
 <KEY<MYB0002<WAI0020
 <ITJ0033:0420
+<ITJ0044:0420
 <FLJ1562:0411
 <FLJ1561:0403<MSGYou got some business with me?<YNJ0401<CLRHah!<NOD
 I doubt that.<NOD<END
