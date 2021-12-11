@@ -1,5 +1,6 @@
 #0000
 <FRE<WAI9999<END
+
 #1000
 <MSG<TURNo weapon.<WAI9999<END
 #1001
@@ -43,6 +44,7 @@ For advanced players.<WAI9999<END
 <MSG<TUR- Spur -
 Hold down the button to
 fire a laser.<WAI9999<END
+
 #1100
 <MSG<TURPuppy<WAI9999<END
 #1101
@@ -53,6 +55,7 @@ fire a laser.<WAI9999<END
 <MSG<TURPuppies (4)<WAI9999<END
 #1104
 <MSG<TURPuppies (5)<WAI9999<END
+
 #1200
 <MSG<TURJenka's pet dog.<WAI9999<END
 #1201
@@ -63,6 +66,7 @@ fire a laser.<WAI9999<END
 <MSG<TURJenka's pet dogs. You have found 4.<WAI9999<END
 #1204
 <MSG<TURJenka's pet dogs. You have found 5!<WAI9999<END
+
 #5000
 <MSG<TURNo item.<WAI9999<END
 #5001
@@ -148,6 +152,16 @@ fire a laser.<WAI9999<END
 <MSG<TURWhimsical Star<WAI9999<END
 #5039
 <MSG<TURIron Bond<WAI9999<END
+#5040
+<MSG<TURKeyring<WAI9999<END
+#5041
+<MSG<TURVictory Medals<WAI9999<END
+#5042
+<MSG<TURLewd Items<WAI9999<END
+#5043
+<MSG<TURSprinklers<WAI9999<END
+#5044
+<MSG<TURMushrooms<WAI9999<END
 #6000
 <MSG<TURNo item.<WAI9999<END
 #6001
@@ -319,6 +333,23 @@ Equipped the Whimsical Star.<NOD<WAI0003<FRE<EVE5038
 <MSG<TURYour tie to Curly Brace, the only
 warrior you would trust your back to.
 Surely you will meet again one day...<WAI9999<END
+#6040
+<EVE8300
+#6041
+<MSG<TUROne is small and profoundly heavy.
+One is engraved with the silhouette
+of an alien. They have no use.<WAI9999<END
+#6042
+<MSG<TURRed lipstick and yellow-green
+panties with a cute little insignia.
+They have no use.<WAI9999<END
+#6043
+<MSG<TURTwo sprinklers. One is busted;
+one is brand-new. ...Perhaps.<WAI9999<END
+#6044
+<MSG<TURA mushroom with the power to restore
+memories, and the useless badge it
+gives out.<WAI9999<END
 #7002
 <MLP<END
 #7018
@@ -454,6 +485,41 @@ Will you check it?<YNJ8200<CLR
 
 #8200
 <FRE<EVE5005
+
+#8300
+<KEY<MSG<TURHolds several keys. Check it?<YNJ8400
+<FLJ7100:8301<EVE8302
+#8301
+<KEY<MSG<TUR<GIT1001
+Arthur's Key<NOD<EVE8302
+#8302
+<FLJ7102:8303<EVE8304
+#8303
+<KEY<MSG<TUR<GIT1003
+Santa's Key<NOD<EVE8304
+#8304
+<FLJ7107:8305<EVE8306
+#8305
+<KEY<MSG<TUR<GIT1009
+Rusty Key<NOD<EVE8306
+#8306
+<FLJ7108:8307<EVE8308
+#8307
+<KEY<MSG<TUR<GIT1010
+Gum Key<NOD<EVE8308
+#8308
+<FLJ7115:8309<EVE8310
+#8309
+<KEY<MSG<TUR<GIT1017
+Clinic Key<NOD<EVE8310
+#8310
+<FLJ7123:8311<EVE8400
+#8311
+<KEY<MSG<TUR<GIT1025
+Teleporter Room Key<NOD<EVE8400
+
+#8400
+<FRE<GIT0000<EVE5040
 
 #9000
 <FLJ4001:9001<FLJ4002:9002<FLJ4003:9003<FLJ4004:9004<FLJ4005:9005<FLJ4006:9006<FLJ4007:9007
