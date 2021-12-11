@@ -337,19 +337,19 @@ Surely you will meet again one day...<WAI9999<END
 <EVE8300
 #6041
 <MSG<TUROne is small and profoundly heavy.
-One is engraved with the silhouette
-of an alien. They have no use.<WAI9999<END
+The other is engraved with the
+silhouette of an alien. Useless.<WAI9999<END
 #6042
 <MSG<TURRed lipstick and yellow-green
-panties with a cute little insignia.
-They have no use.<WAI9999<END
+panties with a cute little
+insignia. They have no use.<WAI9999<END
 #6043
-<MSG<TURTwo sprinklers. One is busted;
-one is brand-new. ...Perhaps.<WAI9999<END
+<MSG<TURTwo sprinklers. One is busted.
+One is brand-new. ...Perhaps.<WAI9999<END
 #6044
-<MSG<TURA mushroom with the power to restore
-memories, and the useless badge it
-gives out.<WAI9999<END
+<MSG<TURA mushroom with the power to
+restore memories, and the useless
+badge it gives out.<WAI9999<END
 #7002
 <MLP<END
 #7018
