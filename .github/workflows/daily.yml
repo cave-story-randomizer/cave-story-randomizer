@@ -3,6 +3,7 @@ name: MALCO's Daily Challenge
 on:
   schedule:
     - cron: '53 15 * * *' # 9:53 AM, UTC-6
+  workflow_dispatch:
 
 jobs:
   Build:
@@ -28,7 +29,6 @@ jobs:
           luarocks install --server="http://luarocks.org/dev" lua-zip
           luarocks install love-release
       - name: Generate Daily
-        if: github.event_name == 'schedule'
         env:
           WEBHOOK: ${{ secrets.WEBHOOK }}
         run: |
