@@ -18,6 +18,8 @@ jobs:
         with:
           luarocksVersion: 3.0
       - uses: actions/checkout@v2
+        with:
+          ref: 'stable'
       - name: Install dependencies (Ubuntu)
         if: runner.os == 'Linux'
         run: |
@@ -32,6 +34,7 @@ jobs:
         env:
           WEBHOOK: ${{ secrets.WEBHOOK }}
         run: |
+          cd $GITHUB_WORKSPACE
           cd src
           love-release
           sudo xvfb-run -a --server-args="-screen 0 1024x768x24" love "releases/CaveStoryRandomizer.love" --daily
