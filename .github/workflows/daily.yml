@@ -1,4 +1,4 @@
-name: MALCO's Daily Challenge
+name: "MALCO's Daily Challenge"
 
 on:
   schedule:
@@ -16,7 +16,7 @@ jobs:
       - uses: leafo/gh-actions-lua@v8.0.0
       - uses: leafo/gh-actions-luarocks@v4.0.0
         with:
-          luarocksVersion: 3.0
+          luarocksVersion: "3.0.4"
       - uses: actions/checkout@v2
         with:
           ref: 'stable'
