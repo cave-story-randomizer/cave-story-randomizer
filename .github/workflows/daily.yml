@@ -28,9 +28,8 @@ jobs:
           sudo add-apt-repository -y ppa:bartbes/love-stable
           sudo apt-get -q update
           sudo apt-get -y install love
-          PATH=$PATH:$GITHUB_WORKSPACE/.luarocks/bin
-          sudo luarocks install --server="http://luarocks.org/dev" lua-zip
-          sudo luarocks install love-release
+          $GITHUB_WORKSPACE/.luarocks/bin/luarocks install --server="http://luarocks.org/dev" lua-zip
+          $GITHUB_WORKSPACE/.luarocks/bin/luarocks install love-release
       - name: Generate Daily
         env:
           WEBHOOK: ${{ secrets.WEBHOOK }}
