@@ -450,14 +450,14 @@ with the =Blade= and vice-versa
 at the computer in Arthur's House.<WAI0050<NOD<FL+2811
 <CLRTrade now?<YNJ0015<AMJ0009:0044<TAM0012:0009:0000<EVE0015
 #0012
-<PRI<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0003
-Max health increased by 3!<WAI0025<NOD<FL+4301<FL+4302<FL-4303<EVE0028
+<PRI<MSG<TUR<GIT1006Got a =Life Capsule=!
+Max health increased by 3!<ML+0003<WAI0025<NOD<FL+4301<FL+4302<FL-4303<EVE0028
 #0013
-<PRI<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0004
-Max health increased by 4!<WAI0025<NOD<FL-4301<FL-4302<FL+4303<EVE0028
+<PRI<MSG<TUR<GIT1006Got a =Life Capsule=!
+Max health increased by 4!<ML+0004<WAI0025<NOD<FL-4301<FL-4302<FL+4303<EVE0028
 #0014
-<PRI<MSG<TUR<GIT1006Got a =Life Capsule=!<ML+0005
-Max health increased by 5!<WAI0025<NOD<FL+4301<FL-4302<FL+4303<EVE0028
+<PRI<MSG<TUR<GIT1006Got a =Life Capsule=!
+Max health increased by 5!<ML+0005<WAI0025<NOD<FL+4301<FL-4302<FL+4303<EVE0028
 
 #0015
 <EVE0/00 increment the item counter
