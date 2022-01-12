@@ -34,7 +34,7 @@ function TscFile:_stringReplace(text, needle, replacement, label, overrides)
   local i, o = -1, -1
   while(o <= i) do
     o = nil
-    i = text:find(needle, pStart)
+    i, i2 = text:find(needle, pStart)
 
     if i == nil then
       local err = ('No match for "%s".'):format(needle)
@@ -63,12 +63,12 @@ function TscFile:_stringReplace(text, needle, replacement, label, overrides)
     pStart = o+1
   end
 
-  local len = needle:len()
+  local len = i2-i+1
   local j = i + len - 1
   assert((i % 1 == 0) and (i > 0) and (i <= j), tostring(i))
   assert((j % 1 == 0), tostring(j))
   local a = text:sub(1, i - 1)
-  local b = text:sub(j)
+  local b = text:sub(j + 1)
   return a .. replacement .. b, nil
 end
 
