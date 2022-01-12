@@ -68,7 +68,7 @@ function TscFile:_stringReplace(text, needle, replacement, label, overrides)
   assert((i % 1 == 0) and (i > 0) and (i <= j), tostring(i))
   assert((j % 1 == 0), tostring(j))
   local a = text:sub(1, i - 1)
-  local b = text:sub(j + 1)
+  local b = text:sub(j)
   return a .. replacement .. b, nil
 end
 
