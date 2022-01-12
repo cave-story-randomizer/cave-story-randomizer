@@ -3,7 +3,7 @@ from typing import Callable, Optional
 from lupa import LuaRuntime
 import logging
 import shutil
-import re
+import textwrap
 import sys
 
 import pre_edited_cs
@@ -116,28 +116,11 @@ def create_hint_script(text: str, facepic: bool, ending: str) -> str:
     """
     hard_limit = 35
     msgbox_limit = 26 if facepic else hard_limit
-    pattern = r' [^ ]*$'
-    line1, line2, line3 = "", "", ""
-
-    split = 0
-    line1 = text[split:split+msgbox_limit]
-
-    match = next(re.finditer(pattern, line1), None)
-    if match is not None and len(text) > msgbox_limit:
-        line1 = line1[:match.start(0)]
-        split += match.start(0)+1
-        if split % hard_limit != 0:
-            line2 = "\r\n"
-        line2 += text[split:split+msgbox_limit]
-
-        match = next(re.finditer(pattern, line2), None)
-        if match is not None and len(text) > msgbox_limit*2:
-            line2 = line2[:match.start(0)]
-            if split % hard_limit != 0:
-                split -= 2
-            split += match.start(0)+1
-            if split % hard_limit != 0:
-                line3 = "\r\n"
-            line3 += text[split:split+msgbox_limit]
     
-    return f"<PRI<MSG<TUR{line1}{line2}{line3}<NOD{ending}"
+    lines = textwrap.wrap(text, width=msgbox_limit, max_lines=3)
+    text = ""
+    for i, l in enumerate(lines):
+        text += l
+        if len(l) != hard_limit and i < len(lines)-1:
+            text += "\r\n"
+    return f"<PRI<MSG<TUR{text}<NOD{ending}"
