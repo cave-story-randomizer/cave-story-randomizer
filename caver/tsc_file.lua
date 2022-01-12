@@ -10,20 +10,20 @@ end
 
 function TscFile:placeScriptAtEvent(script, event, mapname, needle)
   needle = needle or "<EVE...."
-  local wasChanged
-  self._text, wasChanged = self:_stringReplace(self._text, needle, script, event)
-  if not wasChanged then
-    local template = 'Unable to place script "%s" at [%s] event "%s".'
-    error(template:format(script, mapname, event))
+  local err
+  self._text, err = self:_stringReplace(self._text, needle, script, event)
+  if err ~= nil then
+    local template = 'Unable to place script "%s" at [%s] event "%s".\nCause: %s'
+    error(template:format(script, mapname, event, err))
   end
 end
 
 function TscFile:placeSongAtCue(songid, event, originalid, mapname)
-  local wasChanged
-  self._text, wasChanged = self:_stringReplace(self._text, "<CMU" .. originalid, "<CMU" .. songid, event, {"<CMU0015", "<CMU0000"})
-  if not wasChanged then
-    local template = "Unable to replace [%s] event #%s's music cue with %q."
-    error(template:format(mapname, event, songid))
+  local err
+  self._text, err = self:_stringReplace(self._text, "<CMU" .. originalid, "<CMU" .. songid, event, {"<CMU0015", "<CMU0000"})
+  if err ~= nil then
+    local template = "Unable to replace [%s] event #%s's music cue with %q.\nCause: %s"
+    error(template:format(mapname, event, songid, err))
   end
 end
 
@@ -37,12 +37,12 @@ function TscFile:_stringReplace(text, needle, replacement, label, overrides)
     i = text:find(needle, pStart)
 
     if i == nil then
-      -- print(('Unable to replace "%s" with "%s"'):format(needle, replacement))
-      return text, false
+      local err = ('No match for "%s".'):format(needle)
+      return text, err
     elseif i > pEnd then
       -- This is totally normal and can be ignored.
-      -- print(('Found "%s", but was outside of label.'):format(needle, replacement))
-      return text, false
+      local err = ('Found "%s", but was outside of label (%d, %d) at index %d.'):format(needle, pStart, pEnd, i)
+      return text, err
     end
 
     -- find the earliest occurence of an override
@@ -69,7 +69,7 @@ function TscFile:_stringReplace(text, needle, replacement, label, overrides)
   assert((j % 1 == 0), tostring(j))
   local a = text:sub(1, i - 1)
   local b = text:sub(j + 1)
-  return a .. replacement .. b, true
+  return a .. replacement .. b, nil
 end
 
 function TscFile:_getLabelPositionRange(label)
