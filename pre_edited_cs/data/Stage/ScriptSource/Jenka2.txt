@@ -81,13 +81,6 @@ place my faith in you...<NOD<END
 your weapons, you might be stuck.<NOD
 Go back to the start?<WAI0040<YNJ0000<CLO
 <LI+1000<SOU0020<AE+
-<FLJ6201:0501
-<FLJ6202:0502
-<TRA0013:0091:0010:0008
-Start Point (Default)
+<EVE0501
 #0501
-<TRA0001:0094:0008:0004
-Arthur's House
-#0502
-<TRA0040:0094:0014:0009
-Camp
+<EVE0000
