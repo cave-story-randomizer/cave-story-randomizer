@@ -9,7 +9,7 @@ import sys
 import pre_edited_cs
 
 
-CSVERSION = 3
+CSVERSION = 4
 
 class CaverException(Exception):
     pass
