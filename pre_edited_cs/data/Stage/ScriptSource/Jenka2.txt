@@ -77,7 +77,7 @@ place my faith in you...<NOD<END
 #0401
 
 #0500
-<MSG<TURLooks like you're in a pinch. With
+<KEY<MSG<TURLooks like you're in a pinch. With
 your weapons, you might be stuck.<NOD
 Go back to the start?<WAI0040<YNJ0000<CLO
 <LI+1000<SOU0020<AE+
