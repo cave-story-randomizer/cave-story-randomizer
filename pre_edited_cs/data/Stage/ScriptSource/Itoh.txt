@@ -44,7 +44,7 @@ stranded little man.<NOD<END
 
 
 #0403
-<KEY<MSG<FL+1003<EVE0405
+<KEY<MSG<FL+1003<FL+7349<EVE0405
 #0404
 <KEY<MSG<TUR<FAC0028Give Ms. Sakamoto my
 regards.<NOD<END

@@ -157,7 +157,7 @@ the other robots...<NOD<CLO
 to meet that gunsmith...<NOD<END
 
 #0517
-<FL+0563<EVE0518
+<FL+0563<FL+7362<EVE0518
 
 #0518
 <EVE0008

@@ -73,7 +73,7 @@ the number-two around here.<NOD<END
 
 
 #0200
-<PRI<FLJ0322:0201<FL+0322<SOU0022<CNP0200:0021:0000<EVE0202
+<PRI<FLJ0322:0201<FL+0322<SOU0022<CNP0200:0021:0000<FL+7335<EVE0202
 #0201
 <PRI<MSGSomething's written here...<NOD<CLR<TURSo long as you retain your spirit
 of exploration, surely you shall
