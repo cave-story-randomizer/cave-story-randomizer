@@ -54,7 +54,7 @@ Got the =Beast Fang=.<WAI0160<NOD<CLO
 <RMU<END -- shuffle into item pool to replace a junk item? could be fun
 
 #0400
-<PRI<DNP0400<EVE0401
+<PRI<DNP0400<FL+7336<EVE0401
 
 #0401
 <EVE0012

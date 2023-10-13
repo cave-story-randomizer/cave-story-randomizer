@@ -1,3 +1,8 @@
+#0*00
+<END
+#0*01
+<FL-7410<SVP<FL+7410<FL+7999<CLRGame saved.<NOD<END
+
 #0+00
 <AMJ0013:0+01<PRI<MSG<TUR<GIT0002<AM+0002:0000<FL+7000
 Got the =Polar Star=!<WAI0025<NOD<EVE0015
@@ -427,6 +432,7 @@ Got the =Snake=!<WAI0025<NOD<CLR
 <PRI<MSG<TURYou may trade the =Fireball=
 with the =Snake= and vice-versa
 at the computer in Arthur's House.<WAI0050<NOD<FL+2802
+<FLJ7998:0000
 <CLRTrade now?<YNJ0015<AMJ0001:0043<TAM0003:0001:0000<EVE0015
 #0007
 <PRI<MSG<TUR<GIT0007<AM+0007:0100<FL+2820<FL+7004
@@ -448,6 +454,7 @@ Got the =Nemesis=!<WAI0025<NOD<CLR
 <PRI<MSG<TURYou may trade the =Nemesis=
 with the =Blade= and vice-versa
 at the computer in Arthur's House.<WAI0050<NOD<FL+2811
+<FLJ7998:0000
 <CLRTrade now?<YNJ0015<AMJ0009:0044<TAM0012:0009:0000<EVE0015
 #0012
 <PRI<MSG<TUR<GIT1006Got a =Life Capsule=!
@@ -460,11 +467,13 @@ Max health increased by 4!<ML+0004<WAI0025<NOD<FL-4301<FL-4302<FL+4303<EVE0028
 Max health increased by 5!<ML+0005<WAI0025<NOD<FL+4301<FL-4302<FL+4303<EVE0028
 
 #0015
+//skip the item counter if receiving a multiworld item
+<FLJ7998:0*00
 <EVE0/00 increment the item counter
 
 #0016
 <PRI<MSG<TUR
-Do you want to save?<YNJ0000<FL+0431<FL-7999<SVP<FL+7999<CLRGame saved.<NOD<END
+Do you want to save?<YNJ0000<FL+0431<FL-7999<FLJ7410:0*01<SVP<FL+7999<CLRGame saved.<NOD<END
 #0017
 <PRI<SAT<FLJ0201:0018
 <LI+1000<SOU0020<AE+<MSG

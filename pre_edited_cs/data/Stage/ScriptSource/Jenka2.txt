@@ -42,6 +42,7 @@ Spawn Softlock Debug Cat if only weapons to break blocks are Bubbler or Missiles
 <CNP0303:0130:0000
 <CNP0304:0130:0000
 <DNP0401<FL-0274<CLR
+<FL+7365
 <EVE0221
 #0221
 <EVE0065

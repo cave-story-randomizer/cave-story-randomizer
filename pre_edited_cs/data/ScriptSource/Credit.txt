@@ -154,12 +154,12 @@ l0100
 [ The crusher: Power Critter]0050-0048
 [ White mold ghost: Mannan]0051-0048
 [ Tiny frog: Puchi]0054-0048
-[ Big croaker: Frog]0055-0048
+[ BigCroaker: Frog]0055-0048
 [ Floats about: Jelly]0052-0048
 [ Queen Jelly: Kulala]0053-0048
 [ Violent Mimiga: Rabil]0057-0048
 [ Instant deathtrap: Press]0056-0048
-[ Sudden chomper: Sandcroc]0061-0048
+[ SuddenChomper: Sandcroc]0061-0048
 [ Wandering skull: Skullhead]0063-0048
 [ Sand runner: Skullstep]0065-0048
 [ White foe: Skeleton]0062-0048
@@ -168,7 +168,7 @@ l0100
 [ From one, many: Polish]0059-0048
 [ Scattering everywhere: Baby]0058-0048
 [ From Frenzied Toroko: Flowercub]0066-0048
-[ Labyrinth dweller: Gaudi]0067-0048
+[ RoachClip: Gaudi]0067-0048
 [ Labyrinth warrior: Armor]0068-0048
 [ Labyrinth baby: Gaudi Egg]0069-0048
 [ Fiery fan: Fire Whirrr]0071-0048
@@ -309,7 +309,7 @@ l0400
 [  duncathan salt]0112-0040
 [Original Rando Author]0000-0016
 [  shru]0113-0040
-[Contributor]0000-0016
+[Multiworld Dev]0000-0016
 [  periwinkle]0114-0040
 [Contributor]0000-0016
 [  Velosareon]0115-0040
