@@ -41,6 +41,8 @@ xor esi, esi
 :$LL4@RestoreStr
 ; Line 153
 mov eax, [Strip_addr]
+test eax, eax
+je :return
 test [edi+eax], 128 ; 00000080H
 je :$LN2@RestoreStr
 ; Line 155
@@ -77,6 +79,7 @@ add edi, 50 ; 00000050H
 cmp esi, MAX_STRIPx10 ; 000007f0H
 jl :$LL4@RestoreStr
 ; Line 164
+:return
 pop edi
 pop esi
 leave

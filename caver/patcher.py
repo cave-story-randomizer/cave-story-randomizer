@@ -118,7 +118,7 @@ def patch_hash(hash: list[int], output_dir: Path):
 def patch_uuid(uuid: str, output_dir: Path):
     output_dir.joinpath("data", "uuid.txt").write_text(uuid)
 
-def wrap_msg_text(text: str, facepic: bool, max_text_boxes: int | None = 1) -> str:
+def wrap_msg_text(text: str, facepic: bool, *, ending: str = "<NOD", max_text_boxes: int | None = 1) -> str:
     hard_limit = 35
     msgbox_limit = 26 if facepic else hard_limit
 
@@ -133,7 +133,7 @@ def wrap_msg_text(text: str, facepic: bool, max_text_boxes: int | None = 1) -> s
                 text += "<NOD"
             if len(l) != hard_limit:
                 text += "\r\n"
-    text += "<NOD"
+    text += ending
 
     return text
 
@@ -141,4 +141,4 @@ def create_hint_script(text: str, facepic: bool, ending: str) -> str:
     """
     A desperate attempt to generate valid <MSG text. Fills one text box (up to three lines). Attempts to wrap words elegantly.
     """
-    return f"<PRI<MSG<TUR{wrap_msg_text(text, facepic)}{ending}"
+    return f"<PRI<MSG<TUR{wrap_msg_text(text, facepic, ending=ending)}"
