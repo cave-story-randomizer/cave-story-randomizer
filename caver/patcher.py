@@ -21,9 +21,9 @@ def get_path() -> Path:
         file_dir = Path(__file__).parent.parent
     return file_dir.joinpath("caver")
 
-def patch_files(patch_data: dict, output_dir: Path, progress_update: Callable[[str, float], None]):
+def patch_files(patch_data: dict, output_dir: Path, platform: str, progress_update: Callable[[str, float], None]):
     progress_update("Copying base files...", -1)
-    ensure_base_files_exist(output_dir)
+    ensure_base_files_exist(platform, output_dir)
 
     total = len(patch_data["maps"].keys()) + len(patch_data["other_tsc"].keys()) + 3
 
@@ -51,10 +51,10 @@ def patch_files(patch_data: dict, output_dir: Path, progress_update: Callable[[s
     progress_update("Copying UUID...", i/total)
     patch_uuid(patch_data["uuid"], output_dir)
 
-def ensure_base_files_exist(output_dir: Path):
+def ensure_base_files_exist(platform: str, output_dir: Path):
     internal_copy = pre_edited_cs.get_path()
 
-    version = output_dir.joinpath("data", "Stage", "_version.txt")
+    version = output_dir.joinpath(platform, "data", "Stage", "_version.txt")
     keep_existing_files = version.exists() and int(version.read_text()) >= CSVERSION
 
     def should_ignore(path: str, names: list[str]):
