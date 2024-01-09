@@ -41,7 +41,7 @@ def patch_files(patch_data: dict, output_dir: Path, platform: str, progress_upda
 
     i += 1
     progress_update("Copying MyChar...", i/total)
-    patch_mychar(patch_data["mychar"], output_dir)
+    patch_mychar(patch_data["mychar"], output_dir, patch_data["platform"] == "tweaked")
 
     i += 1
     progress_update("Copying hash...", i/total)
@@ -65,7 +65,7 @@ def ensure_base_files_exist(platform: str, output_dir: Path):
         return base
 
     try:
-        shutil.copytree(internal_copy, output_dir, ignore=should_ignore, dirs_exist_ok=True)
+        shutil.copytree(internal_copy.joinpath(platform), output_dir, ignore=should_ignore, dirs_exist_ok=True)
     except shutil.Error:
         raise CaverException("Error copying base files. Ensure the directory is not read-only, and that Doukutsu.exe is closed")
     output_dir.joinpath("data", "Plaintext").mkdir(exist_ok=True)
@@ -103,11 +103,17 @@ def patch_other(filename: str, scripts: dict[str, dict[str, str]], TscFile, outp
     filepath.write_bytes(bytes(chars))
     output_dir.joinpath("data", "Plaintext", f"{filename}.txt").write_text(TscFile.getPlaintext(tsc_file))
 
-def patch_mychar(mychar: Optional[str], output_dir: Path):
+def patch_mychar(mychar: Optional[str], output_dir: Path, add_upscale: bool):
     if mychar is None:
         return
     mychar_img = Path(mychar).read_bytes()
     output_dir.joinpath("data", "MyChar.bmp").write_bytes(mychar_img)
+
+    if add_upscale:
+        mychar_name = Path(mychar).name
+        mychar_up_img = Path(mychar).parent.joinpath("2x", mychar_name).read_bytes()
+        output_dir.joinpath("data", "sprites_up", "MyChar.bmp").write_bytes(mychar_up_img)
+
 
 def patch_hash(hash: list[int], output_dir: Path):
     hash_strings = [f"{num:04d}" for num in hash]
