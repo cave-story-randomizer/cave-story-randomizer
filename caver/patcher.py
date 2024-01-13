@@ -1,3 +1,4 @@
+from enum import Enum
 from pathlib import Path
 from typing import Callable, Optional
 from lupa import LuaRuntime # type: ignore
@@ -14,6 +15,10 @@ CSVERSION = 5
 class CaverException(Exception):
     pass
 
+class CSPlatform(Enum):
+    FREEWARE = "freeware"
+    TWEAKED = "tweaked"
+
 def get_path() -> Path:
     if getattr(sys, "frozen", False):
         file_dir = Path(getattr(sys, "_MEIPASS"))
@@ -21,7 +26,7 @@ def get_path() -> Path:
         file_dir = Path(__file__).parent.parent
     return file_dir.joinpath("caver")
 
-def patch_files(patch_data: dict, output_dir: Path, platform: str, progress_update: Callable[[str, float], None]):
+def patch_files(patch_data: dict, output_dir: Path, platform: CSPlatform, progress_update: Callable[[str, float], None]):
     progress_update("Copying base files...", -1)
     ensure_base_files_exist(platform, output_dir)
 
@@ -41,7 +46,7 @@ def patch_files(patch_data: dict, output_dir: Path, platform: str, progress_upda
 
     i += 1
     progress_update("Copying MyChar...", i/total)
-    patch_mychar(patch_data["mychar"], output_dir, patch_data["platform"] == "tweaked")
+    patch_mychar(patch_data["mychar"], output_dir, platform is CSPlatform.TWEAKED)
 
     i += 1
     progress_update("Copying hash...", i/total)
@@ -51,10 +56,10 @@ def patch_files(patch_data: dict, output_dir: Path, platform: str, progress_upda
     progress_update("Copying UUID...", i/total)
     patch_uuid(patch_data["uuid"], output_dir)
 
-def ensure_base_files_exist(platform: str, output_dir: Path):
+def ensure_base_files_exist(platform: CSPlatform, output_dir: Path):
     internal_copy = pre_edited_cs.get_path()
 
-    version = output_dir.joinpath(platform, "data", "Stage", "_version.txt")
+    version = output_dir.joinpath(platform.value, "data", "Stage", "_version.txt")
     keep_existing_files = version.exists() and int(version.read_text()) >= CSVERSION
 
     def should_ignore(path: str, names: list[str]):
@@ -65,7 +70,7 @@ def ensure_base_files_exist(platform: str, output_dir: Path):
         return base
 
     try:
-        shutil.copytree(internal_copy.joinpath(platform), output_dir, ignore=should_ignore, dirs_exist_ok=True)
+        shutil.copytree(internal_copy.joinpath(platform.value), output_dir, ignore=should_ignore, dirs_exist_ok=True)
     except shutil.Error:
         raise CaverException("Error copying base files. Ensure the directory is not read-only, and that Doukutsu.exe is closed")
     output_dir.joinpath("data", "Plaintext").mkdir(exist_ok=True)
