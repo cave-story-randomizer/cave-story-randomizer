@@ -59,7 +59,7 @@ def patch_files(patch_data: dict, output_dir: Path, platform: CSPlatform, progre
 def ensure_base_files_exist(platform: CSPlatform, output_dir: Path):
     internal_copy = pre_edited_cs.get_path()
 
-    version = output_dir.joinpath(platform.value, "data", "Stage", "_version.txt")
+    version = output_dir.joinpath("data", "Stage", "_version.txt")
     keep_existing_files = version.exists() and int(version.read_text()) >= CSVERSION
 
     def should_ignore(path: str, names: list[str]):
@@ -71,6 +71,7 @@ def ensure_base_files_exist(platform: CSPlatform, output_dir: Path):
 
     try:
         shutil.copytree(internal_copy.joinpath(platform.value), output_dir, ignore=should_ignore, dirs_exist_ok=True)
+        shutil.copytree(internal_copy.joinpath("data"), output_dir.joinpath("data"), ignore=should_ignore, dirs_exist_ok=True)
     except shutil.Error:
         raise CaverException("Error copying base files. Ensure the directory is not read-only, and that Doukutsu.exe is closed")
     output_dir.joinpath("data", "Plaintext").mkdir(exist_ok=True)
