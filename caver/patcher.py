@@ -6,8 +6,10 @@ import logging
 import shutil
 import textwrap
 import sys
+import platform as pl
 
 import pre_edited_cs
+
 
 
 CSVERSION = 5
@@ -55,6 +57,12 @@ def patch_files(patch_data: dict, output_dir: Path, platform: CSPlatform, progre
     i += 1
     progress_update("Copying UUID...", i/total)
     patch_uuid(patch_data["uuid"], output_dir)
+
+    if platform == CSPlatform.TWEAKED:
+        if pl.system() == "Linux":
+            output_dir.joinpath("CSTweaked.exe").unlink()
+        else:
+            output_dir.joinpath("CSTweaked").unlink()
 
 def ensure_base_files_exist(platform: CSPlatform, output_dir: Path):
     internal_copy = pre_edited_cs.get_path()
