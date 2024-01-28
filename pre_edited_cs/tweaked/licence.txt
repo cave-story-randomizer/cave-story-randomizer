@@ -1,0 +1,81 @@
+==============
+= Cave Story =
+==============
+
+None of us are lawyers, but to my understanding...
+
+Being a decompilation, much of CSE2's code belongs to Daisuke "Pixel" Amaya.
+There was no licence supplied with the original freeware release, so presumably
+this code defaults to 'All Rights Reserved'.
+
+...I dunno - how many of *you* are fluent in international copyright law?
+
+
+====================================
+= Aeon Genesis Translation Project =
+====================================
+
+The English translation of Cave Story used here was created by Aeon Genesis.
+
+There doesn't appear to be any particular licence supplied with the translation,
+so it's likely all-rights-reserved.
+
+The supplied readme does contain these details:
+
+
+"Copyright 2005 Aeon Genesis"
+
+Also:
+
+"
+---------------
+3.Patch Credits
+---------------
+THE CAVE STORY TEAM
+Main Team:
+Gideon Zhi - Project leader, Hacker, Translation
+Shih Tzu - Lead script translator
+
+Special Thanks to...
+--Shih Tzu, for facilitating contact with Pixel himself
+--Pixel himself, for creating the game, allowing us to produce an
+  English version of it, and for putting up with what must have
+  seemed an awful amount of nagging questions on my part :) You've
+  got the patience of a saint, and this wouldn't be done without
+  you!
+--sandcrab, who produced an alternate translation of the text for
+  Pixel. It is, as yet, unpublished.
+--Tomato & Bugcatcher, for helping out on a couple tough bits in
+  the text. Cheers!
+"
+
+
+========
+= Cave Story: Tweaked =
+========
+
+MIT License
+
+Copyright (c) 2019 Regan "cuckydev" Green
+Copyright (c) 2019-2020 Clownacy
+Copyright (c) 2019-2020 Gabriel Ravier
+Copyright (c) 2020 Cameron Cawley
+Copyright (c) 2020-2024 Ema Alvarado
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

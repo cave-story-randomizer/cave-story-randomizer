@@ -1,3 +1,4 @@
+from enum import Enum
 from pathlib import Path
 from typing import Callable, Optional
 from lupa import LuaRuntime # type: ignore
@@ -5,14 +6,20 @@ import logging
 import shutil
 import textwrap
 import sys
+import platform as pl
 
 import pre_edited_cs
+
 
 
 CSVERSION = 5
 
 class CaverException(Exception):
     pass
+
+class CSPlatform(Enum):
+    FREEWARE = "freeware"
+    TWEAKED = "tweaked"
 
 def get_path() -> Path:
     if getattr(sys, "frozen", False):
@@ -21,9 +28,9 @@ def get_path() -> Path:
         file_dir = Path(__file__).parent.parent
     return file_dir.joinpath("caver")
 
-def patch_files(patch_data: dict, output_dir: Path, progress_update: Callable[[str, float], None]):
+def patch_files(patch_data: dict, output_dir: Path, platform: CSPlatform, progress_update: Callable[[str, float], None]):
     progress_update("Copying base files...", -1)
-    ensure_base_files_exist(output_dir)
+    ensure_base_files_exist(platform, output_dir)
 
     total = len(patch_data["maps"].keys()) + len(patch_data["other_tsc"].keys()) + 3
 
@@ -41,7 +48,7 @@ def patch_files(patch_data: dict, output_dir: Path, progress_update: Callable[[s
 
     i += 1
     progress_update("Copying MyChar...", i/total)
-    patch_mychar(patch_data["mychar"], output_dir)
+    patch_mychar(patch_data["mychar"], output_dir, platform is CSPlatform.TWEAKED)
 
     i += 1
     progress_update("Copying hash...", i/total)
@@ -51,7 +58,13 @@ def patch_files(patch_data: dict, output_dir: Path, progress_update: Callable[[s
     progress_update("Copying UUID...", i/total)
     patch_uuid(patch_data["uuid"], output_dir)
 
-def ensure_base_files_exist(output_dir: Path):
+    if platform == CSPlatform.TWEAKED:
+        if pl.system() == "Linux":
+            output_dir.joinpath("CSTweaked.exe").unlink()
+        else:
+            output_dir.joinpath("CSTweaked").unlink()
+
+def ensure_base_files_exist(platform: CSPlatform, output_dir: Path):
     internal_copy = pre_edited_cs.get_path()
 
     version = output_dir.joinpath("data", "Stage", "_version.txt")
@@ -65,7 +78,8 @@ def ensure_base_files_exist(output_dir: Path):
         return base
 
     try:
-        shutil.copytree(internal_copy, output_dir, ignore=should_ignore, dirs_exist_ok=True)
+        shutil.copytree(internal_copy.joinpath(platform.value), output_dir, ignore=should_ignore, dirs_exist_ok=True)
+        shutil.copytree(internal_copy.joinpath("data"), output_dir.joinpath("data"), ignore=should_ignore, dirs_exist_ok=True)
     except shutil.Error:
         raise CaverException("Error copying base files. Ensure the directory is not read-only, and that Doukutsu.exe is closed")
     output_dir.joinpath("data", "Plaintext").mkdir(exist_ok=True)
@@ -103,11 +117,17 @@ def patch_other(filename: str, scripts: dict[str, dict[str, str]], TscFile, outp
     filepath.write_bytes(bytes(chars))
     output_dir.joinpath("data", "Plaintext", f"{filename}.txt").write_text(TscFile.getPlaintext(tsc_file))
 
-def patch_mychar(mychar: Optional[str], output_dir: Path):
+def patch_mychar(mychar: Optional[str], output_dir: Path, add_upscale: bool):
     if mychar is None:
         return
     mychar_img = Path(mychar).read_bytes()
     output_dir.joinpath("data", "MyChar.bmp").write_bytes(mychar_img)
+
+    if add_upscale:
+        mychar_name = Path(mychar).name
+        mychar_up_img = Path(mychar).parent.joinpath("2x", mychar_name).read_bytes()
+        output_dir.joinpath("data", "sprites_up", "MyChar.bmp").write_bytes(mychar_up_img)
+
 
 def patch_hash(hash: list[int], output_dir: Path):
     hash_strings = [f"{num:04d}" for num in hash]
