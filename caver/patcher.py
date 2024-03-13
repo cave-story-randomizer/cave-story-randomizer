@@ -1,7 +1,7 @@
 from enum import Enum
 from pathlib import Path
 from typing import Callable, Optional
-from lupa import LuaRuntime # type: ignore
+from randovania_lupa import LuaRuntime # type: ignore
 import logging
 import shutil
 import textwrap
