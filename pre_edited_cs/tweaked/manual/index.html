@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Cave Story: Tweaked ~ Manual</title>
+<link rel="stylesheet" href="candy.css" />
+<style>
+body{
+	background: var(--candy-color-background1);
+	font-family: "ＭＳ Ｐゴシック";
+	font-size: 15px;
+}
+
+@font-face {
+    font-family: "monogram";
+    src: url("monogram_extended.ttf");
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+td{
+	padding: 0 1em;
+}
+
+table{
+	line-height: 1;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  padding-top: 1em;
+  width: 200px;
+  background:url('img/naoku_curly_2.png') no-repeat; 
+  background-position: bottom 1em left 0; 
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  border-right: 1px solid var(--candy-color-border1);
+  align-items: center;
+}
+
+.sidebar a{
+    display: block;
+    text-decoration-line: none;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 216px;
+  padding: 1px 16px;
+  min-height: 1000px;
+}
+
+section{
+    margin: 0 auto;
+    max-width: 100ch;
+}
+
+/* On screens that are less than 800px wide, make the sidebar into a topbar */
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: var(--candy-color-background4);
+    background:url('img/naoku_curly_2.png') no-repeat; 
+    background-position: top -3em left 0; 
+  }
+  .sidebar a {float: left; min-width: 200px;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.candy-root {
+  --candy-color-accent-background1: #5375a0;
+  --candy-color-accent-background2: #374e6b;
+  --candy-color-accent-border1: #374e6b;
+  --candy-color-accent-text1: #fcfcfc;
+  --candy-color-background1: #d0d0ff;
+  --candy-color-background2: hsl(0 0% 96%);
+  --candy-color-background3: hsl(0 0% 90%);
+  --candy-color-background4: #f0f0f0;
+  --candy-color-border1: hsl(0 0% 40%);
+  --candy-color-border2: #192142;
+  --candy-color-border3: hsl(0 0% 70%);
+  --candy-color-shadow1: hsl(0 0% 5% / 20%);
+  --candy-color-text1: hsl(0 0% 5%);
+  --candy-color-text2: hsl(0 0% 25%);
+  --candy-button-radius: 2px;
+  margin-left:0;
+}
+
+.site-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-columns-auto {
+  --gap: 1rem;
+  --grid-min: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
+  gap: var(--gap);
+}
+
+.big-image {
+    max-height:480px; 
+    max-width: 100%;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+<script>
+function openTab(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].className = tablinks[i].className.replace(" candy-primary", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+  evt.currentTarget.className += " candy-primary";
+}
+
+</script>
+</head>
+
+<body class="candy-root">
+	<div class="sidebar">
+        <div style="text-align: center;">
+            <a href="https://studiopixel.jp" target="_blank"> 
+                <img src="img/Title.png" border="0" alt="Studio Pixel's logo">
+            </a>
+            <p style="text-align: center;">
+            Exploration/action game<br>
+            Cave Story (Tweaked)
+            </p>
+            <p>
+                <strong>Screens shown may vary from final release</strong>
+            </p>
+        </div>
+		
+		<a class="tablinks candy-button" onclick="openTab(event, 'intro')">Introduction</a>
+		<a class="tablinks candy-button" onclick="openTab(event, 'display')">Display</a>
+		<a class="tablinks candy-button" onclick="openTab(event, 'items')">Items</a>
+		<a class="tablinks candy-button" onclick="openTab(event, 'options')">Options</a>
+		<a class="tablinks candy-button" onclick="openTab(event, 'tweaks')">Tweaks</a>
+		<a class="tablinks candy-button" onclick="openTab(event, 'downloads')">Downloads</a>
+	</div>
+	<div class="content">
+		<section class="tabcontent" id="intro" style="display: block">
+			<h2>Introduction</h2>
+            <hr class="candy-divider">
+			<img src="img/menu.png" class="big-image" alt="The main menu screen for Cave Story: Tweaked. The five selectable options read: New Game, Continue, Options, Boss Rush and Quit.">
+			<p><i>Cave Story: Tweaked</i> is a jumping-and-shooting action game.<br>
+			Explore the caves until you reach the ending.<br>
+			You can also save your game and continue from where you left off.<br>
+			</p>
+			<h4>Compatible Systems</h4>
+			<ul>
+				<li>Windows 7/8/10</li>
+				<li>Linux</li>
+				<li>Mac OS</li>
+				<li>Nintendo Wii U</li>
+				<li>Nintendo 3DS</li>
+				<li>RISC OS</li>
+			</ul>
+			<h4>Features</h4>
+			<ul>
+				<li>Gamepad support</li>
+				<li>Choose between full-screen and windowed mode, and resolution</li>
+				<li>Choose in-game font</li>
+				<li>Choose between 50 FPS (original) or 60 FPS (Cave Story+) framerate</li>
+			</ul>
+		</section>
+		<section class="tabcontent" id="display" >
+			<h2>In-game Display</h2>
+            <hr class="candy-divider">
+			<IMG class="big-image" SRC="img/snapDisplay.png">
+			<p style="line-height:1.2;">
+			This is a typical gameplay screen.</p>
+            <div class="site-flex-column" style="gap: 1rem;">
+                <div class="site-columns-auto">
+                    <div class="candy-card candy-texture-convex">
+                        <IMG SRC="img/MyChar.png">
+                        <p> The main character (you).</p>
+                    </div>
+                    <div class="candy-card candy-texture-convex">
+                        <IMG SRC="img/Enemy.png">
+                        <p>An enemy. There are many others as well.</p>
+                    </div>
+                    <div class="candy-card candy-texture-convex" style="min-width: 356px;">
+                        <IMG SRC="img/Status.png">
+                        <p>
+                        The current weapon and the number of shots left.<BR>
+                        The top meter shows your Weapon Energy.<BR>
+                        </p>
+                    </div>
+                </div>
+            </div>
+		</section>
+		<section class="tabcontent" id="items">
+            <h2>Items</h2>
+            <hr class="candy-divider">
+            <h4>Field Items</h4>
+            <div tabindex="0" class="candy-box candy-focus site-table-responsive" >
+                <table class="candy-table" style="width: 100%;">
+                    <tr>
+                        <td>
+                            <IMG SRC="img/itemDisk.png" style="height:32px; width:32px;">
+                        </td>
+                        <th style="min-width:150px">Disk</th>
+                        <td>Saves your game.</td>
+                        </tr>
+                    <tr>
+                        <td>
+                            <IMG SRC="img/itemEnergy.png" style="height:32px; width:32px;">
+                        </td>
+                        <th>Energy</th>
+                        <td>Collect these to level-up your weapon.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <IMG SRC="img/itemHeart.png"  style="height:32px; width:32px;" alt="A heart pickup">
+                        </td>
+                        <th>Life</th>
+                        <td>Restores your health.</td>
+                    </tr>
+                    <tr>
+                        <td><IMG SRC="img/itemMissile.png" style="height:32px; width:32px;" alt="A missile pickup"></td>
+                        <th>Missile</th>
+                        <td>Restores your missile ammunition.</td>
+                    </tr>
+                    <tr>
+                        <td><IMG SRC="img/itemServer.png" style="height:32px; width:32px;" alt="A Life refill station, pictured as a server"></td>
+                        <th>Server</th>
+                        <td>Fully restores your health and ammunition.</td>
+                    </tr>
+                    <tr>
+                        <td><IMG SRC="img/itemMax.png" style="height:32px; width:32px;" alt="a Life Capsule"></td>
+                        <th>Life Capsule</th>
+                        <td>Increases your maximum health.</td></tr>
+                    <tr>
+                        <td><IMG SRC="img/itemBox.png" style="height:32px; width:32px;" alt="a Treasure Chest"></td>
+                        <th>Treasure Chest</th>
+                        <td>All kinds of goodies lurk inside.</td>
+                    </tr>
+                </table>
+            </div>(There are many others.)
+            <h4>Event Items</h4>
+            <div tabindex="0" class="candy-box candy-focus site-table-responsive">
+                <table class="candy-table" style="width: 100%;">
+                    <tr><td><IMG SRC="img/mochiMap.png" style="width:64px; height:32px" alt="the Map System icon" ></td><th>Map System</th><td>Displays a map of the current stage.</td></tr>
+                    <tr><td><IMG SRC="img/mochiRocket.png" width=64 height=32></td><th>Silver Locket</th><td>Someone's pendant.</td></tr>
+                    <tr><td><IMG SRC="img/mochiKey.png" width=64 height=32></td><th>Arthur's Key</th><td>A key to open a door somewhere.</td></tr>
+                </table>
+            </div>
+            (For more details, try the game.)
+		</section>
+		<section class="tabcontent" id="options">
+            <h2>Options</h2>
+            <hr class="candy-divider">
+			<img src="img/snapOptions.png" class="big-image"  alt="The Options Menu screen.">
+            <p>
+                The <b>Options Menu</b> allows you to adjust the game's functions.</br>
+                You can change the font the game displays, the window size, and change your control method and mapping. </br>
+                Please visit the menu for more information.
+            </p>
+            <h2>Controls</h2>
+            <hr class="candy-divider">
+            <div tabindex="0" class="candy-box candy-focus site-table-responsive" >
+                <table class="candy-table" style="width: 100%;">
+                    <thead>
+                        <tr>
+                          <th>Action</th>
+                          <th>Keyboard</th>
+                          <th>Controller</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Up</td>
+                            <td>Up arrow</td>
+                            <td>
+                                <img src="img/buttons/button_11.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Down</td>
+                            <td>Down arrow</td>
+                            <td>
+                                <img src="img/buttons/button_12.png" style="width: 32px; height: 32px;">
+                            </td></tr>
+                        <tr>
+                            <td>Left</td>
+                            <td>Left arrow</td>
+                            <td>
+                                <img src="img/buttons/button_13.png" style="width: 32px; height: 32px;">
+                            </td></tr>
+                        <tr>
+                            <td>Right</td>
+                            <td>Right arrow</td>
+                            <td>
+                                <img src="img/buttons/button_14.png" style="width: 32px; height: 32px;">
+                            </td></tr>
+                        <tr>
+                            <td>Confirm/Select</td>
+                            <td>Z</td>
+                            <td>
+                                <img src="img/buttons/button_00.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cancel/Back</td>
+                            <td>X</td>
+                            <td>
+                                <img src="img/buttons/button_01.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jump</td>
+                            <td>Z</td>
+                            <td>
+                                <img src="img/buttons/button_00.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shoot</td>
+                            <td>X</td>
+                            <td>
+                                <img src="img/buttons/button_01.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cycle to Next Weapon</td>
+                            <td>A</td>
+                            <td>
+                                <img src="img/buttons/button_09.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cycle to previous weapon</td>
+                            <td>S</td>
+                            <td>
+                                <img src="img/buttons/button_10.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Inventory</td>
+                            <td>Q</td>
+                            <td>
+                                <img src="img/buttons/button_03.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Minimap</td>
+                            <td>W</td>
+                            <td>
+                                <img src="img/buttons/button_04.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pause Menu</td>
+                            <td>ESC</td>
+                            <td>
+                                <img src="img/buttons/button_06.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Strafe (Hold)</td>
+                            <td>C</td>
+                            <td>
+                                <img src="img/buttons/button_16.png" style="width: 32px; height: 32px;">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+		</section>
+		<section class="tabcontent" id="tweaks" style="margin-bottom: 2em;">
+            <h2>Tweaks</h2>
+            <hr class="candy-divider">
+			<img class="big-image" src="img/snapTweaks.png" alt="The Tweaks Menu screen.">
+            <p>
+                The <b>Tweaks Menu</b> allows you to modify the game at will.</br>
+                This includes options such as modifying game speed and boss HP, giving yourself items, or disabling EXP drops.</br>
+                I hope this menu allows players of all kinds to enjoy the game.
+            </p>
+            <h4>Tweaks List</h4>
+            <div tabindex="0" class="candy-box candy-focus site-table-responsive" >
+                <table class="candy-table" style="width: 100%;">
+                <tr>
+                    <th style="padding: 10px;">Damage Received</th>
+                    <td>Modifies how much damage your character takes when hit.</td>
+                </tr>
+                <tr>
+                    <th style="padding: 10px;">Boss Health</th>
+                    <td>Changes how much health bosses have when you fight them.</td>
+                </tr>
+                <tr>
+                    <th style="padding: 10px;">Autofire</th>
+                    <td>Allows you to hold or just press a button to shoot rapidly.</td>
+                </tr>
+                <tr>
+                    <th style="padding: 10px;">Infinite Ammo</th>
+                    <td>Weapons that use Ammo (such as Missiles) will never run out.</td>
+                </tr>
+                <tr>
+                    <th style="padding: 10px;">Default Booster</th>
+                    <td>Lets you equip yourself with a Booster to fly thru stages.</td>
+                </tr>
+                <tr>
+                    <th style="padding: 10px;">Infinite Booster</th>
+                    <td>Booster Fuel never runs out.</td>
+                </tr>
+                <tr>
+                    <th style="padding: 10px;">Grace Jumps</th>
+                    <td>Allows you to jump shortly after running off a ledge.</td>
+                </tr>
+                <tr>
+                    <th style="padding: 10px;">No Exp Drops</th>
+                    <td>Disables all sources of Weapon Energy.</td>
+                </tr>
+                <tr>
+                    <th style="padding: 10px;">Mirror Mode</th>
+                    <td>Flips the game horizontally.</td>
+                </tr>
+            </table>
+            </div>
+        </section>
+		<section class="tabcontent" id="downloads">
+            <h2>Downloads</h2>
+            <h4>v1.5 (Codename: <em>Scattered</em>)</h4>
+            <ul>
+				<li><a href="https://oneninefour.cl/tweaked/CST-1.5-Win.zip">Windows</a> (tested on Windows 10 and 11)</li>
+				<li><a href="https://oneninefour.cl/tweaked/CST-1.5-Linux.zip">Linux</a> (tested on Ubuntu 22.04 LTS and Arch Linux)</li>
+			</ul>
+		</section>
+    </DIV>
+</body>
+
+
+</html>
