@@ -1,0 +1,653 @@
+/**
+ * @license MIT
+ * candy.css v0.3.0
+ * Copyright 2024 Sage Fennel
+ * https://candy.wavebeem.com
+ */
+
+.candy-root {
+  /* Colors */
+  --candy-color-background1: hsl(80 35% 99%);
+  --candy-color-background2: hsl(80 35% 98%);
+  --candy-color-background3: hsl(80 35% 92%);
+  --candy-color-background4: hsl(80 35% 90%);
+  --candy-color-text1: hsl(80 35% 5%);
+  --candy-color-text2: hsl(80 35% 20%);
+  --candy-color-border1: hsl(80 35% 35%);
+  --candy-color-border2: hsl(80 35% 50%);
+  --candy-color-border3: hsl(80 35% 75%);
+  --candy-color-accent-background1: hsl(260 60% 50%);
+  --candy-color-accent-background2: hsl(260 60% 40%);
+  --candy-color-accent-border1: hsl(260 60% 20%);
+  --candy-color-accent-text1: hsl(260 60% 95%);
+  --candy-color-shadow1: hsl(80 100% 20% / 20%);
+
+  --candy-shadow-outset: 0 2px 4px var(--candy-color-shadow1);
+  --candy-shadow-inset: inset 0 2px 4px var(--candy-color-shadow1);
+
+  /* Radio buttons & checkboxes */
+  --candy-choice-item-radius: 0px;
+  --candy-choice-item-size: 1.5rem;
+  --candy-choice-gap: 0.5rem;
+  --candy-choice-padding-vertical: 0.5rem;
+  --candy-choice-padding-horizontal: 0.5rem;
+
+  /* Buttons */
+  --candy-button-padding-vertical: 0.5rem;
+  --candy-button-padding-horizontal: 1rem;
+  --candy-button-radius: 9999px;
+
+  /* Selects */
+  --candy-select-padding-vertical: 0.5rem;
+  --candy-select-padding-horizontal: 1rem;
+  --candy-select-radius: 6px;
+
+  /* Inputs */
+  --candy-field-gap: 0.25rem;
+  --candy-input-padding-vertical: 0.5rem;
+  --candy-input-padding-horizontal: 0.5rem;
+  --candy-input-radius: 2px;
+
+  /* Tables */
+  --candy-table-padding-vertical: 0.5rem;
+  --candy-table-padding-horizontal: 1rem;
+
+  /* Code */
+  --candy-code-padding-vertical: 1rem;
+  --candy-code-padding-horizontal: 1rem;
+  --candy-code-radius: 6px;
+
+  /* Cards */
+  --candy-card-padding-vertical: 1rem;
+  --candy-card-padding-horizontal: 1rem;
+  --candy-card-radius: 6px;
+
+  /* Wells */
+  --candy-well-padding-vertical: 1rem;
+  --candy-well-padding-horizontal: 1rem;
+  --candy-well-radius: 6px;
+
+  /* Fieldsets */
+  --candy-fieldset-padding-horizontal: 0.5rem;
+  --candy-fieldset-padding-vertical: 0.5rem;
+  --candy-fieldset-radius: 6px;
+
+  /* Legends */
+  --candy-legend-padding-horizontal: 0.5rem;
+  --candy-legend-padding-vertical: 0rem;
+
+  /* Dividers */
+  --candy-divider-margin-horizontal: 0rem;
+  --candy-divider-margin-vertical: 0.5rem;
+
+  /* Textures */
+  --candy-texture-striped-size: 3px;
+
+  /* Links */
+  --candy-link-radius: 2px;
+  --candy-link-underline: 1px;
+
+  background: var(--candy-color-background4);
+  color: var(--candy-color-text2);
+}
+
+/* Checkbox / Radio Button Field Container */
+
+.candy-choice {
+  border-radius: var(--candy-choice-item-radius);
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: var(--candy-choice-gap);
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  padding: var(--candy-choice-padding-vertical)
+    var(--candy-choice-padding-horizontal);
+  user-select: none;
+}
+
+.candy-choice
+  > :where(
+    :is(.candy-radio, .candy-checkbox):is(:disabled, [aria-disabled="true"]) + *
+  ) {
+  color: var(--candy-color-border1);
+}
+
+.candy-choice > :where(:is(.candy-radio, .candy-checkbox) + label) {
+  display: block;
+}
+
+/* Checkbox / Radio Button */
+
+.candy-checkbox {
+  border-radius: var(--candy-choice-item-radius);
+}
+
+.candy-radio {
+  border-radius: 9999px;
+}
+
+.candy-checkbox,
+.candy-radio {
+  --_candy-color-filled-background: var(--candy-color-accent-background1);
+  --_candy-color-filled-fill: var(--candy-color-accent-text1);
+  --_candy-color-filled-border: var(--candy-color-accent-border1);
+  align-self: start;
+  vertical-align: top;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+  width: var(--candy-choice-item-size);
+  height: var(--candy-choice-item-size);
+  margin: 0;
+  background: var(--candy-color-background1);
+  background-clip: padding-box;
+  padding: 2px;
+  color: var(--candy-color-border1);
+  border: 1px solid var(--candy-color-border1);
+  box-shadow: inset 0 2px 2px var(--candy-color-shadow1);
+}
+
+:is(.candy-checkbox, .candy-radio):is(:disabled, [aria-disabled="true"]) {
+  background: var(--candy-color-background4);
+  color: var(--candy-color-border3);
+  border-color: var(--candy-color-border3);
+  box-shadow: none;
+}
+
+:is(.candy-checkbox, .candy-radio):focus-visible {
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
+  outline-offset: -1px;
+  outline: 3px solid var(--candy-color-accent-background1);
+}
+
+:is(.candy-checkbox, .candy-radio):checked {
+  background: var(--candy-color-accent-background1);
+  box-shadow: inset 0 0 0 6px var(--_candy-color-filled-background);
+}
+
+.candy-radio:checked {
+  --_candy-radio-blur: 0.25px;
+  box-shadow: none;
+  background-clip: border-box;
+  background-color: var(--_candy-color-filled-background);
+  border-color: var(--_candy-color-filled-border);
+  background-image: radial-gradient(
+    var(--_candy-color-filled-fill),
+    var(--_candy-color-filled-fill) calc(25% - var(--_candy-radio-blur)),
+    var(--_candy-color-filled-background) calc(25% + var(--_candy-radio-blur)),
+    var(--_candy-color-filled-background)
+  );
+}
+
+.candy-checkbox:checked {
+  --_candy-checkbox-blur: 0.5px;
+  --_candy-checkbox-size: 0.125rem;
+  --_candy-checkbox-start: calc(50% - 0.5 * var(--_candy-checkbox-size));
+  --_candy-checkbox-end: calc(
+    var(--_candy-checkbox-start) + var(--_candy-checkbox-size)
+  );
+  border-color: var(--_candy-color-filled-border);
+  background-color: var(--_candy-color-filled-background);
+  background-image: linear-gradient(
+      45deg,
+      transparent,
+      transparent
+        calc(var(--_candy-checkbox-start) - var(--_candy-checkbox-blur)),
+      var(--_candy-color-filled-fill) var(--_candy-checkbox-start),
+      var(--_candy-color-filled-fill) var(--_candy-checkbox-end),
+      transparent calc(var(--_candy-checkbox-end) + var(--_candy-checkbox-blur)),
+      transparent
+    ),
+    linear-gradient(
+      -45deg,
+      transparent,
+      transparent
+        calc(var(--_candy-checkbox-start) - var(--_candy-checkbox-blur)),
+      var(--_candy-color-filled-fill) var(--_candy-checkbox-start),
+      var(--_candy-color-filled-fill) var(--_candy-checkbox-end),
+      transparent calc(var(--_candy-checkbox-end) + var(--_candy-checkbox-blur)),
+      transparent
+    );
+  box-shadow: inset 0 0 0 6px var(--_candy-color-filled-background);
+}
+
+:is(.candy-checkbox, .candy-radio):checked:focus-visible {
+  box-shadow:
+    inset 0 0 0 2px var(--candy-color-accent-text1),
+    inset 0 0 0 6px var(--candy-color-accent-background1);
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+}
+
+:is(.candy-checkbox, .candy-radio):checked:is(
+    :disabled,
+    [aria-disabled="true"]
+  ) {
+  --_candy-color-filled-background: var(--candy-color-background4);
+  --_candy-color-filled-fill: var(--candy-color-border2);
+  --_candy-color-filled-border: var(--candy-color-border3);
+}
+
+:is(.candy-checkbox, .candy-radio):checked:is(
+    :disabled,
+    [aria-disabled="true"]
+  ):focus-visible {
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    inset 0 0 0 6px var(--candy-color-background4),
+    0 0 0 3px var(--candy-color-background1);
+}
+
+/* Table */
+
+.candy-table {
+  box-sizing: border-box;
+  background: var(--candy-color-background1);
+  color: var(--candy-color-text2);
+  border-collapse: collapse;
+}
+
+.candy-table :where(th) {
+  padding: var(--candy-table-padding-vertical)
+    var(--candy-table-padding-horizontal);
+  text-align: left;
+}
+
+.candy-table :where(tbody tr:not(:last-of-type)) {
+  border-bottom: 1px solid var(--candy-color-border3);
+}
+
+.candy-table :where(td) {
+  background: var(--candy-color-background1);
+  color: var(--candy-color-text2);
+  padding: var(--candy-table-padding-vertical)
+    var(--candy-table-padding-horizontal);
+}
+
+.candy-table :where(tfoot, thead) :where(th, td) {
+  background: linear-gradient(
+    to bottom,
+    var(--candy-color-background2),
+    var(--candy-color-background3)
+  );
+  color: var(--candy-color-text2);
+  padding: var(--candy-table-padding-vertical)
+    var(--candy-table-padding-horizontal);
+}
+
+.candy-table :where(thead) {
+  border-top: 0;
+  border-bottom: 1px solid var(--candy-color-border2);
+}
+
+.candy-table :where(tfoot) {
+  border-top: 1px solid var(--candy-color-border2);
+  border-bottom: 0;
+}
+
+/* Button */
+
+.candy-button {
+  --_candy-button-text: var(--candy-color-text1);
+  --_candy-button-background1: var(--candy-color-background2);
+  --_candy-button-background2: var(--candy-color-background3);
+  --_candy-button-border: var(--candy-color-border1);
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    var(--_candy-button-background1) 0 50%,
+    var(--_candy-button-background2) 50%
+  );
+  box-shadow: var(--candy-shadow-outset);
+  color: var(--_candy-button-text);
+  padding: var(--candy-button-padding-vertical)
+    var(--candy-button-padding-horizontal);
+  font: inherit;
+  border: 1px solid var(--_candy-button-border);
+  border-radius: var(--candy-button-radius);
+}
+
+.candy-button:is(:disabled, [aria-disabled="true"]) {
+  background: var(--candy-color-background4);
+  transform: none;
+  box-shadow: none;
+  color: var(--candy-color-border1);
+  border-color: var(--candy-color-border3);
+}
+
+.candy-button:focus-visible {
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
+}
+
+.candy-button.candy-primary {
+  font-weight: bold;
+}
+
+.candy-button.candy-primary:where(:not(:disabled, [aria-disabled="true"])) {
+  --_candy-button-text: var(--candy-color-accent-text1);
+  --_candy-button-background1: var(--candy-color-accent-background1);
+  --_candy-button-background2: var(--candy-color-accent-background2);
+  --_candy-button-border: var(--candy-color-accent-border1);
+}
+
+.candy-button.candy-primary:focus-visible {
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow: inset 0 0 0 2px var(--candy-color-accent-text1);
+  box-shadow:
+    inset 0 0 0 2px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
+}
+
+/* Select */
+
+.candy-select {
+  --_candy-select-blur: 0.5px;
+  --_candy-select-handle-angle: 45deg;
+  --_candy-select-handle-size: 6px;
+  --_candy-select-handle-width: var(--_candy-select-handle-size);
+  --_candy-select-handle-height: var(--_candy-select-handle-size);
+  --_candy-select-handle-fg: var(--candy-color-text1);
+  --_candy-select-arrow: linear-gradient(
+        calc(-1 * var(--_candy-select-handle-angle)),
+        transparent 50%,
+        var(--_candy-select-handle-fg) calc(50% + var(--_candy-select-blur))
+      )
+      calc(100% - var(--candy-select-padding-horizontal) - 0.5px) 50% /
+      var(--_candy-select-handle-width) var(--_candy-select-handle-height)
+      no-repeat,
+    linear-gradient(
+        var(--_candy-select-handle-angle),
+        transparent 50%,
+        var(--_candy-select-handle-fg) calc(50% + var(--_candy-select-blur))
+      )
+      calc(
+        100% - var(--_candy-select-handle-width) -
+          var(--candy-select-padding-horizontal)
+      )
+      50% / var(--_candy-select-handle-width) var(--_candy-select-handle-height)
+      no-repeat;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--candy-color-text1);
+  background-color: var(--candy-color-background2);
+  background:
+    var(--_candy-select-arrow),
+    linear-gradient(
+        to bottom,
+        var(--candy-color-background2) 0 50%,
+        var(--candy-color-background3) 50%
+      )
+      0 0 / 100% 100% repeat var(--candy-color-background3);
+  box-shadow: var(--candy-shadow-outset);
+  padding: var(--candy-select-padding-vertical)
+    var(--candy-select-padding-horizontal);
+  padding-right: calc(
+    2 * var(--candy-select-padding-horizontal) + 2 *
+      var(--_candy-select-handle-width)
+  );
+  font: inherit;
+  border: 1px solid var(--candy-color-border1);
+  border-radius: var(--candy-select-radius);
+}
+
+.candy-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--candy-color-text2);
+}
+
+.candy-select:is(:disabled, [aria-disabled="true"]) {
+  background: var(--_candy-select-arrow);
+  --_candy-select-handle-fg: var(--candy-color-border1);
+  --_candy-select-handle-bg: var(--candy-color-background4);
+  color: var(--candy-color-border1);
+  border-color: var(--candy-color-border3);
+  border-style: solid;
+  box-shadow: none;
+}
+
+.candy-select:focus-visible {
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
+}
+
+/* Text styles */
+
+.candy-prose :where(h1, h2, h3, h4, h5, h6, b, i, em, strong, :not(pre) > code),
+.candy-bright {
+  color: var(--candy-color-text1);
+}
+
+/* Link */
+
+.candy-prose :where(a),
+.candy-link {
+  color: var(--candy-color-accent-background1);
+  border-radius: var(--candy-link-radius);
+  text-decoration-thickness: var(--candy-link-underline);
+}
+
+.candy-prose :where(a):focus-visible,
+.candy-link:focus-visible {
+  text-decoration-line: none;
+  outline: 2px solid var(--candy-color-accent-background1);
+  outline-offset: 1px;
+  box-shadow:
+    0 0 0 1px var(--candy-color-background1),
+    0 0 0 4px var(--candy-color-background1);
+}
+
+/* Input / Text Area */
+
+.candy-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--candy-field-gap);
+}
+
+.candy-input {
+  box-sizing: border-box;
+  background: var(--candy-color-background1);
+  color: var(--candy-color-text1);
+  font: inherit;
+  padding: var(--candy-input-padding-vertical)
+    var(--candy-input-padding-horizontal);
+  border: 1px solid var(--candy-color-border1);
+  box-shadow: var(--candy-shadow-inset);
+  border-radius: var(--candy-input-radius);
+}
+
+.candy-input:is(:disabled, [aria-disabled="true"]) {
+  background: var(--candy-color-background4);
+  box-shadow: none;
+  color: var(--candy-color-border1);
+  border-color: var(--candy-color-border3);
+}
+
+.candy-input:focus-visible {
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
+}
+
+.candy-input::placeholder {
+  opacity: unset;
+  color: var(--candy-color-border1);
+}
+
+.candy-input::selection {
+  background: var(--candy-color-text2);
+  color: var(--candy-color-background1);
+}
+
+/* Fieldset and legend */
+
+.candy-fieldset {
+  border: 1px solid var(--candy-color-border2);
+  padding: var(--candy-fieldset-padding-vertical)
+    var(--candy-fieldset-padding-horizontal);
+  margin: 0;
+  border-radius: var(--candy-fieldset-radius);
+}
+
+.candy-legend {
+  border: 0;
+  padding-top: var(--candy-legend-padding-vertical);
+  padding-right: var(--candy-legend-padding-horizontal);
+  padding-bottom: var(--candy-legend-padding-vertical);
+  padding-left: 0;
+  margin: 0;
+  margin-left: calc(-1 * var(--candy-fieldset-padding-vertical) - 1px);
+}
+
+/* Firefox nonsense */
+
+.candy-checkbox::-moz-focus-inner,
+.candy-radio::-moz-focus-inner,
+.candy-select::-moz-focus-inner,
+.candy-button::-moz-focus-inner,
+.candy-input::-moz-focus-inner {
+  border: 0;
+}
+
+/* Miscellaneous */
+
+/* Add a click effect to interactable elements */
+:is(.candy-button, .candy-radio, .candy-checkbox, .candy-select):active:where(
+    :not(:disabled, [aria-disabled="true"])
+  ) {
+  filter: brightness(0.9);
+}
+
+.candy-card {
+  box-sizing: border-box;
+  background: var(--candy-color-background3);
+  color: var(--candy-color-text2);
+  border: 1px solid var(--candy-color-border2);
+  padding: var(--candy-card-padding-vertical)
+    var(--candy-card-padding-horizontal);
+  box-shadow: var(--candy-shadow-outset);
+  border-radius: var(--candy-card-radius);
+}
+
+.candy-well {
+  box-sizing: border-box;
+  background: var(--candy-color-background3);
+  color: var(--candy-color-text2);
+  border: 1px solid var(--candy-color-border2);
+  padding: var(--candy-well-padding-vertical)
+    var(--candy-well-padding-horizontal);
+  box-shadow: var(--candy-shadow-inset);
+  border-radius: var(--candy-well-radius);
+}
+
+.candy-box {
+  box-sizing: border-box;
+  border: 1px solid var(--candy-color-border2);
+}
+
+.candy-scrollbar {
+  scrollbar-color: var(--candy-color-text2) var(--candy-color-background3);
+}
+
+.candy-svg {
+  fill: currentcolor;
+}
+
+.candy-prose :where(hr),
+.candy-divider {
+  box-sizing: border-box;
+  border: 0;
+  border-top: 1px solid var(--candy-color-border3);
+  margin: var(--candy-divider-margin-vertical)
+    var(--candy-divider-margin-horizontal);
+}
+
+.candy-prose :where(pre),
+.candy-code {
+  box-sizing: border-box;
+  background: var(--candy-color-background1);
+  color: var(--candy-color-text2);
+  border: 1px solid var(--candy-color-border2);
+  overflow-x: auto;
+  padding: var(--candy-code-padding-vertical)
+    var(--candy-code-padding-horizontal);
+  border-radius: var(--candy-code-radius);
+}
+
+.candy-focus:focus-visible {
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
+}
+
+/* Textures */
+
+.candy-texture-striped {
+  background: repeating-linear-gradient(
+      -45deg,
+      var(--candy-color-background3) 0
+        calc(0.5 * var(--candy-texture-striped-size)),
+      var(--candy-color-background2)
+        calc(0.5 * var(--candy-texture-striped-size) + 0.5px)
+        calc(1.5 * var(--candy-texture-striped-size) - 0.5px),
+      var(--candy-color-background3)
+        calc(1.5 * var(--candy-texture-striped-size))
+        calc(2 * var(--candy-texture-striped-size))
+    )
+    var(--candy-color-background3);
+}
+
+.candy-texture-convex {
+  background: linear-gradient(
+      to bottom,
+      var(--candy-color-background2),
+      var(--candy-color-background3) 50%
+    )
+    var(--candy-color-background2);
+}
+
+.candy-texture-concave {
+  background: linear-gradient(
+      to bottom,
+      var(--candy-color-background3),
+      var(--candy-color-background2) 75%
+    )
+    var(--candy-color-background3);
+}
+
+.candy-texture-glossy {
+  background: linear-gradient(
+      to bottom,
+      var(--candy-color-background2) 0 50%,
+      var(--candy-color-background3) 50% 100%
+    )
+    var(--candy-color-background2);
+}
+
+.candy-texture-paper {
+  background: var(--candy-color-background1);
+}
+
+.candy-texture-smooth {
+  background: var(--candy-color-background3);
+}
+
+.candy-texture-default {
+  background: var(--candy-color-background4);
+}
