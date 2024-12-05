@@ -1,0 +1,9 @@
+this file isn't a real hex patch; it's a copy and paste of peri's discord message on 5 dec 2024:
+
+---
+
+There is an undocumented hex edit to increase the size of the Casts.bmp surface (0x411569: F0 00 -> E0 01, which I presume we just used BL's hacks/intro/surface_bitmap_sizes.xml here);
+
+There is an undocumented hex edit to increase the TSC buffer size (0x421545: 00 50 00 -> 20 A1 07, again this was probably from the BL hack and we never wrote it down);
+
+Randomly the byte at 0x414B24 was changed from 0x80 to 0x5F, which is the number of bytes to memset when initializing the map flag array. Not sure why this was changed, but the multiworld DLL overwrites this function anyways so it doesn't really make a difference (anymore).
