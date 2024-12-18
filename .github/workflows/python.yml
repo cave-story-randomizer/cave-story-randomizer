@@ -1,6 +1,8 @@
 name: Python Package
 
 on:
+  workflow_dispatch:
+  pull_request:
   push:
     branches:
       - '*'
@@ -8,6 +10,74 @@ on:
       - '*'
 
 jobs:
+  mypy-required:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Workaround for worktree config
+        run: git config --unset-all extensions.worktreeConfig || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install Python packages
+        run: |
+          python -m pip install -e .
+          python -m pip install mypy
+
+      - name: Mypy on required files
+        uses: tsuyoshicho/action-mypy@v5
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
+          reporter: github-check
+          setup_method: nothing
+          target: --config-file=pyproject.toml
+          fail_on_error: true
+          install_types: false
+
+  mypy-modified:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Workaround for worktree config
+        run: git config --unset-all extensions.worktreeConfig || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install Python packages
+        run: |
+          python -m pip install -e .
+          python -m pip install mypy
+
+      - name: Mypy on modified files
+        uses: tsuyoshicho/action-mypy@v5
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
+          reporter: github-check
+          setup_method: nothing
+          level: warning
+          fail_on_error: false
+          install_types: false
+  
   build:
     runs-on: ubuntu-latest
     name: Wheel
@@ -42,7 +112,9 @@ jobs:
   pypi:
     runs-on: 'ubuntu-latest'
     needs:
+      - mypy-required
       - build
+    if: ${{ github.event_name != 'pull_request' }}
 
     steps:
       - name: Download all the dists
