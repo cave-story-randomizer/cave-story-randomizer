@@ -6,3 +6,18 @@ build-backend = "setuptools.build_meta"
 version_file_template = "v{version_tuple[0]}.{version_tuple[1]}.{version_tuple[2]}.{scm_version.distance}\n2019/03/07 - {scm_version.node_date.year:04}/{scm_version.node_date.month:02}/{scm_version.node_date.day:02}\nduncathan_salt"
 local_scheme = "no-local-version"
 version_file = "pre_edited_cs/data/Stage/_version.txt"
+
+[tool.ruff]
+line-length = 120
+lint.select = ["E", "F", "W", "C90", "I", "UP"]
+src = ["src"]
+
+# Version to target for generated code.
+target-version = "py310"
+
+[tool.mypy]
+files = [
+    "caver/patcher.py",
+]
+follow_imports = "silent"
+disallow_untyped_defs = true

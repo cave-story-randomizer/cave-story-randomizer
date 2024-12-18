@@ -1,0 +1,195 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "format": "uri"
+        },
+        "maps": {
+            "type": "object", 
+            "propertyNames": {
+                "$ref": "#/$defs/map_name"
+            },
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "pickups": {
+                        "type": "object",
+                        "propertyNames": {
+                            "$ref": "#/$defs/event_number"
+                        },
+                        "additionalProperties": {
+                            "$ref": "#/$defs/tsc_script"
+                        },
+                        "default": {}
+                    },
+                    "hints": {
+                        "type": "object",
+                        "propertyNames": {
+                            "$ref": "#/$defs/event_number"
+                        },
+                        "additionalProperties": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                },
+                                "facepic": {
+                                    "$ref": "#/$defs/tsc_value",
+                                    "default": "0000"
+                                },
+                                "ending": {
+                                    "$ref": "#/$defs/tsc_script",
+                                    "default": "<END"
+                                }
+                            },
+                            "required": [
+                                "text",
+                                "facepic",
+                                "ending"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "default": {}
+                    },
+                    "music": {
+                        "type": "object",
+                        "propertyNames": {
+                            "$ref": "#/$defs/event_number"
+                        },
+                        "additionalProperties": {
+                            "type": "object",
+                            "properties": {
+                                "original_id": {
+                                    "$ref": "#/$defs/tsc_value"
+                                },
+                                "song_id": {
+                                    "$ref": "#/$defs/tsc_value"
+                                }
+                            },
+                            "required": [
+                                "original_id",
+                                "song_id"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "default": {}
+                    },
+                    "entrances": {
+                        "type": "object",
+                        "propertyNames": {
+                            "$ref": "#/$defs/event_number"
+                        },
+                        "additionalProperties": {
+                            "$ref": "#/$defs/tsc_script"
+                        },
+                        "default": {}
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "pickups",
+                    "hints",
+                    "music",
+                    "entrances"
+                ]
+            },
+            "default": {}
+        },
+        "other_tsc": {
+            "type": "object",
+            "propertyNames": {
+                "$ref": "#/$defs/map_name"
+            },
+            "additionalProperties": {
+                "type": "object",
+                "propertyNames": {
+                    "$ref": "#/$defs/event_number"
+                },
+                "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                        "needle": {
+                            "type": "string",
+                            "description": "Lua pattern to search for and replace within the event"
+                        },
+                        "script": {
+                            "$ref": "#/$defs/tsc_script"
+                        }
+                    },
+                    "required": [
+                        "needle",
+                        "script"
+                    ],
+                    "additionalProperties": false
+                }
+            },
+            "default": {}
+        },
+        "mychar": {
+            "description": "A path to the mychar.bmp file to use (Optional)",
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string",
+                    "pattern": "^.*\\.bmp$"
+                }
+            ],
+            "default": null
+        },
+        "hash": {
+            "description": "An array of five item IDs to display on the title screen, within [1, 39]",
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 39
+            },
+            "minItems": 5,
+            "maxItems": 5,
+            "default": [1,1,1,1,1]
+        },
+        "uuid": {
+            "description": "The UUID for the world in a multiworld session, or the empty UUID if single player.",
+            "type": "string",
+            "pattern": "^\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}$",
+            "default": "{00000000-0000-0000-0000-000000000000}"
+        },
+        "platform": {
+            "description": "Which supported platform to export to.",
+            "$comment": "Not actually used by the patcher.",
+            "type": "string",
+            "enum": [
+                "freeware",
+                "tweaked"
+            ]
+        }
+    },
+    "required": [
+        "maps",
+        "other_tsc",
+        "mychar",
+        "hash",
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "tsc_value": {
+            "type": "string",
+            "pattern": "^[ -~]{4}$"
+        },
+        "event_number": {
+            "$ref": "#/$defs/tsc_value",
+            "$comment": "Semantic alias for tsc_value"
+        },
+        "map_name": {
+            "type": "string"
+        },
+        "tsc_script": {
+            "type": "string"
+        }
+    }
+}
