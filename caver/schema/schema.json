@@ -135,7 +135,7 @@
                 },
                 {
                     "type": "string",
-                    "pattern": "^*.bmp$"
+                    "pattern": "^.*\\.bmp$"
                 }
             ],
             "default": null
