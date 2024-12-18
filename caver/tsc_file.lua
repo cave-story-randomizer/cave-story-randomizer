@@ -112,7 +112,7 @@ function TscFile:_getLabelPositionRange(label)
   end
 
   if labelStart == nil then
-    error(("%s: Could not find label: %s"):format(self.mapName, label))
+    error(("Could not find label: %s"):format(label))
     labelStart = 1
   end
 
