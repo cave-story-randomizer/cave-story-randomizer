@@ -5,3 +5,18 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
 write_to = "caver/version.py"
+
+[tool.ruff]
+line-length = 120
+lint.select = ["E", "F", "W", "C90", "I", "UP"]
+src = ["src"]
+
+# Version to target for generated code.
+target-version = "py310"
+
+[tool.mypy]
+files = [
+    "caver/patcher.py",
+]
+follow_imports = "silent"
+disallow_untyped_defs = true
