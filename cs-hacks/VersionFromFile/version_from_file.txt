@@ -1,0 +1,103 @@
+; Reads version number from data\version.txt
+; The file must start with the version string in the format shown at the bottom of this file
+; Made by periwinkle
+
+#define
+gDataPath=49E220
+gVersionString=48C2BC
+sprintf=481010
+fopen=480FFD
+rb=48C28C
+fread=480F55
+fclose=480E1B
+sscanf=4817E8
+call VirtualProtect=data ff 15 84 c0 48 00
+filePath=[ebp-114]
+bufchk=[ebp-10]
+tmp=[ebp-c]
+oldProtect=[ebp-8]
+fp=[ebp-4]
+v1=[ebp+8]
+v2=[ebp+c]
+v3=[ebp+10]
+v4=[ebp+14]
+#enddefine
+
+offset 410990 ; GetCompileVersion
+push ebp
+mov ebp, esp
+sub esp, 114
+mov eax, [498B20]
+mov bufchk, eax
+
+; Get path to data\version.txt file
+push gDataPath
+push :VersionPath ; "%s\version.txt"
+lea edx, filePath
+push edx
+call sprintf
+add esp, c
+
+; Open file
+push rb ; "rb"
+lea ecx, filePath
+push ecx
+call fopen
+add esp, 8
+test eax, eax
+jz :ReadVersion
+mov fp, eax
+
+; Mark gVersionString as read/write (it's normally in a read-only segment)
+lea eax, oldProtect
+push eax
+push 4 ; PAGE_READWRITE
+push 40 ; Max size of gVersionString (including null character)
+push gVersionString
+call VirtualProtect
+test eax, eax
+jz :CloseFile
+
+; Read contents of file into gVersionString
+push fp
+
+push 3F ; count (excluding null character)
+push 1 ; size
+push gVersionString
+call fread
+add esp, 10
+mov byte [eax+gVersionString], 0 ; Write null terminator
+
+; Restore previous protection status
+lea eax, tmp
+push eax
+push oldProtect
+push 40
+push gVersionString
+call VirtualProtect
+
+:CloseFile
+push fp
+call fclose
+pop ecx
+
+:ReadVersion
+; Parse the version string
+push v4
+push v3
+push v2
+push v1
+push :VersionString
+push gVersionString
+call sscanf
+add esp, 18
+
+mov ecx, bufchk
+call 480DC1
+leave
+retn
+
+:VersionPath
+data 25 73 5C 76 65 72 73 69 6F 6E 2E 74 78 74 00 00 ; "%s\version.txt"
+:VersionString
+data 76 25 64 2E 25 64 2E 25 64 2E 25 64 00 ; "v%d.%d.%d.%d"

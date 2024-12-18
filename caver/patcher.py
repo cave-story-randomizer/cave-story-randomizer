@@ -29,8 +29,6 @@ if typing.TYPE_CHECKING:
         MapName,
     )
 
-CSVERSION = 5
-
 
 class CaverException(Exception):
     pass
@@ -100,8 +98,16 @@ def patch_files(
 def ensure_base_files_exist(platform: CSPlatform, output_dir: Path) -> None:
     internal_copy = pre_edited_cs.get_path()
 
-    version = output_dir.joinpath("data", "Stage", "_version.txt")
-    keep_existing_files = version.exists() and int(version.read_text()) >= CSVERSION
+    with internal_copy.joinpath("data", "version.txt").open() as version_file:
+        latest_version = version_file.readline()
+
+    version = output_dir.joinpath("data", "version.txt")
+    current_version = "v0.0.0.0"
+    if version.exists():
+        with version.open() as version_file:
+            current_version = version_file.readline()
+
+    keep_existing_files = current_version >= latest_version
 
     def should_ignore(path: str, names: list[str]) -> list[str]:
         base = ["__init__.py", "__pycache__", "ScriptSource", "__pyinstaller"]

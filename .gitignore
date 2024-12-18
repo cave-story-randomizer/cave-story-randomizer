@@ -1,12 +1,6 @@
 data/*
 notes/*
 
-pre_edited_cs/Doukutsu\.exe\.blbkp
-
-pre_edited_cs/Profile*
-
-pre_edited_cs/window\.rect
-
 *Copy/
 
 venv/
@@ -17,5 +11,12 @@ dist/
 
 cave_story_randomizer.egg-info/
 
-*/__pycache__
-caver/version.py
+**/__pycache__
+
+pre_edited_cs/**/Doukutsu\.exe\.blbkp
+pre_edited_cs/**/Profile*
+pre_edited_cs/**/window\.rect
+
+pre_edited_cs/data/version.txt
+
+pre_edited_cs/freeware/Doukutsu_backup.exe

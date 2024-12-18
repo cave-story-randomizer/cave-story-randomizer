@@ -3,8 +3,10 @@ requires = ["setuptools>=44.0.0", "setuptools_scm[toml]>=3.4.3"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
+version_file_template = "v{scm_version.tag}.{scm_version.distance}\n2019/03/07 - {scm_version.node_date.year:04}/{scm_version.node_date.month:02}/{scm_version.node_date.day:02}\nduncathan_salt"
 local_scheme = "no-local-version"
-write_to = "caver/version.py"
+version_scheme = "no-guess-dev"
+version_file = "pre_edited_cs/data/version.txt"
 
 [tool.ruff]
 line-length = 120
