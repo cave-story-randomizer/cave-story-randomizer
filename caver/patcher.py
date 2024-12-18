@@ -98,10 +98,10 @@ def patch_files(
 def ensure_base_files_exist(platform: CSPlatform, output_dir: Path) -> None:
     internal_copy = pre_edited_cs.get_path()
 
-    with internal_copy.joinpath("data", "Stage", "_version.txt").open() as version_file:
+    with internal_copy.joinpath("data", "version.txt").open() as version_file:
         latest_version = version_file.readline()
 
-    version = output_dir.joinpath("data", "Stage", "_version.txt")
+    version = output_dir.joinpath("data", "version.txt")
     current_version = "v0.0.0.0"
     if version.exists():
         with version.open() as version_file:
