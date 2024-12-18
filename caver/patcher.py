@@ -11,9 +11,6 @@ import platform as pl
 import pre_edited_cs
 
 
-
-CSVERSION = 5
-
 class CaverException(Exception):
     pass
 
@@ -67,8 +64,16 @@ def patch_files(patch_data: dict, output_dir: Path, platform: CSPlatform, progre
 def ensure_base_files_exist(platform: CSPlatform, output_dir: Path):
     internal_copy = pre_edited_cs.get_path()
 
+    with internal_copy.joinpath("data", "Stage", "_version.txt").open() as version_file:
+        latest_version = version_file.readline()
+    
     version = output_dir.joinpath("data", "Stage", "_version.txt")
-    keep_existing_files = version.exists() and int(version.read_text()) >= CSVERSION
+    current_version = "v0.0.0.0"
+    if version.exists():
+        with version.open() as version_file:
+            current_version = version_file.readline()
+
+    keep_existing_files = current_version >= latest_version
 
     def should_ignore(path: str, names: list[str]):
         base = ["__init__.py", "__pycache__", "ScriptSource", "__pyinstaller"]

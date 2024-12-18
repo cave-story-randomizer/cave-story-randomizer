@@ -19,3 +19,7 @@ cave_story_randomizer.egg-info/
 
 */__pycache__
 caver/version.py
+
+pre_edited_cs/data/Stage/_version.txt
+
+pre_edited_cs/freeware/window.rect
